@@ -24,7 +24,7 @@ export default function EditHymn() {
   const [loading, setLoading] = useState(!isNew);
   const [saving, setSaving] = useState(false);
   const [hymn, setHymn] = useState<Hymn | null>(null);
-  const [himnario, setHimnario] = useState<string>(GT);
+  const [himnario, setHimnario] = useState<Hymn['himnario']>(GT);
   const [numero, setNumero] = useState('');
   const [titulo, setTitulo] = useState('');
   const [blocks, setBlocks] = useState<BlockState[]>([]);
@@ -145,7 +145,7 @@ export default function EditHymn() {
         <ScrollView contentContainerStyle={{ padding: SPACING.lg, paddingBottom: 140 }} keyboardShouldPersistTaps="handled">
           <Label c={c}>Himnario</Label>
           <View style={{ flexDirection: 'row', gap: SPACING.sm }}>
-            {[GT, SN].map((h) => {
+            {([GT, SN] as Hymn['himnario'][]).map((h) => {
               const active = himnario === h;
               return (
                 <Pressable key={h} onPress={() => setHimnario(h)}

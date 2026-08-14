@@ -33,25 +33,6 @@ export default function Admin() {
 
   const logout = async () => { await api.logout(); router.replace('/(tabs)' as any); };
 
-  const doImport = async (dry: boolean) => {
-    setMsg(''); setImportResult(null);
-    const res = await DocumentPicker.getDocumentAsync({
-      type: ['text/csv', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'application/vnd.ms-excel', '*/*'],
-      copyToCacheDirectory: true,
-    });
-    if (res.canceled || !res.assets?.[0]) return;
-    const asset = res.assets[0];
-    setBusy(dry ? 'preview' : 'import');
-    try {
-      const out = await api.importFile(asset.uri, asset.name || 'import.csv', dry);
-      setImportResult(out);
-      setMsg(dry ? 'Vista previa generada' : `Importación completa: ${out.created} creados, ${out.updated} actualizados`);
-      if (!dry) load();
-    } catch (e: any) {
-      setMsg(e?.message || 'Error importando');
-    } finally { setBusy(''); }
-  };
-
   const doExport = async () => {
     setBusy('export'); setMsg('');
     try {
@@ -131,8 +112,6 @@ export default function Admin() {
 
         <Text style={[styles.section, { color: c.muted }]}>Importación / Exportación</Text>
         <View style={[styles.actionCard, { borderColor: c.border, backgroundColor: c.surfaceSecondary }]}>
-          <ActionBtn c={c} icon="eye" label="Vista previa de importación (CSV/XLSX)" onPress={() => doImport(true)} busy={busy === 'preview'} testID="admin-preview" />
-          <ActionBtn c={c} icon="upload" label="Importar himnos (CSV/XLSX)" onPress={() => doImport(false)} busy={busy === 'import'} testID="admin-import" />
           <ActionBtn c={c} icon="download" label="Exportar backup (JSON)" onPress={doExport} busy={busy === 'export'} testID="admin-export" />
           <ActionBtn c={c} icon="rotate-ccw" label="Restaurar backup (JSON)" onPress={doRestore} busy={busy === 'restore'} testID="admin-restore" />
         </View>

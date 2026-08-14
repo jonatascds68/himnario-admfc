@@ -21,15 +21,6 @@ export interface Hymn {
 }
 interface LocalDb { hymns: Hymn[]; categories: { id: string; name: string }[]; }
 
-const DEFAULT_CATEGORIES = [
-  "Adoración y Alabanza", "Espíritu Santo / Pentecostés", "Salvación",
-  "Evangelización", "Misiones", "Oración", "Consagración", "Santa Cena",
-  "Bautismo", "Segunda Venida de Cristo", "Cielo / Eternidad",
-  "Consolación y Esperanza", "Fe y Confianza", "Santidad / Vida Cristiana",
-  "Gratitud", "Palabra de Dios", "Iglesia / Comunión", "Servicio Cristiano",
-  "Hogar / Familia", "Apertura del Culto", "Cierre del Culto", "Invitación / Llamado",
-];
-
 const DB_KEY = 'admfc_local_db_v1';
 const ADMIN_EMAIL_KEY = 'admfc_local_admin_email';
 const ADMIN_PASS_KEY = 'admfc_local_admin_password';
@@ -39,26 +30,9 @@ function normalize(s: string) {
 }
 async function loadDb(): Promise<LocalDb> {
   const raw = await kv.get(DB_KEY);
-  if (raw) {
-    try {
-      const db = JSON.parse(raw) as LocalDb;
-      if (!Array.isArray(db.categories)) db.categories = [];
-      let changed = false;
-      for (const name of DEFAULT_CATEGORIES) {
-        if (!db.categories.some(c => normalize(c.name) === normalize(name))) {
-          db.categories.push({ id: `default-${normalize(name).replace(/[^a-z0-9]+/g, '-')}`, name });
-          changed = true;
-        }
-      }
-      if (changed) await saveDb(db);
-      return db;
-    } catch {}
-  }
+  if (raw) { try { return JSON.parse(raw); } catch {} }
   const hymns = ((seed as any).himnos || []) as Hymn[];
-  const db: LocalDb = {
-    hymns,
-    categories: DEFAULT_CATEGORIES.map((name, i) => ({ id: `default-${i + 1}`, name }))
-  };
+  const db: LocalDb = { hymns, categories: [] };
   await saveDb(db); return db;
 }
 async function saveDb(db: LocalDb) { await kv.set(DB_KEY, JSON.stringify(db)); }
