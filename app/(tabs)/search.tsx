@@ -94,15 +94,11 @@ export function HymnRow({ hymn, onPress }: { hymn: Hymn; onPress: () => void }) 
   const eq = hymn.numero_equivalente ? `${short === 'GT' ? 'SIÓN' : 'GT'} Nº ${hymn.numero_equivalente}` : null;
   return (
     <Pressable onPress={onPress} style={styles.row} testID={`hymn-row-${hymn.id}`}>
-      <View style={[styles.badge, { borderColor: c.borderStrong, backgroundColor: c.surfaceSecondary }]}>
-        <Text style={[styles.badgeTop, { color: c.muted }]}>{short}</Text>
-        <Text style={[styles.badgeNum, { color: c.brand }]}>{hymn.numero}</Text>
-      </View>
+<Text style={[styles.rowNumber, { color: c.brand }]}>{hymn.numero}</Text>
       <View style={{ flex: 1 }}>
         <Text style={[styles.rowTitle, { color: c.onSurface }]} numberOfLines={2}>{hymn.titulo}</Text>
-        <View style={{ flexDirection: 'row', gap: 8, marginTop: 2, flexWrap: 'wrap' }}>
-          <Text style={[styles.rowSub, { color: c.muted }]}>{hymn.himnario}</Text>
-          {eq ? <Text style={[styles.rowSub, { color: c.muted }]}>· {eq}</Text> : null}
+<View style={{ flexDirection: 'row', marginTop: eq ? 2 : 0, flexWrap: 'wrap' }}>
+{eq ? <Text style={[styles.rowSub, { color: c.muted, fontSize: 11 }]}>{eq}</Text> : null}
         </View>
       </View>
       <Feather name="chevron-right" size={20} color={c.muted} />
@@ -122,7 +118,8 @@ const styles = StyleSheet.create({
   himRow: { flexDirection: 'row', gap: SPACING.sm, paddingHorizontal: SPACING.lg, paddingTop: SPACING.md },
   himChip: { flex: 1, height: 40, borderRadius: RADIUS.pill, borderWidth: 1, alignItems: 'center', justifyContent: 'center' },
   sep: { height: StyleSheet.hairlineWidth },
-  row: { flexDirection: 'row', alignItems: 'center', gap: SPACING.md, paddingVertical: SPACING.md, minHeight: 64 },
+row: { flexDirection: 'row', alignItems: 'center', gap: SPACING.sm, paddingVertical: 8, minHeight: 50 },
+rowNumber: { width: 42, fontSize: 20, fontWeight: '800', textAlign: 'center' },
   badge: { width: 60, height: 56, borderRadius: RADIUS.md, borderWidth: 1.5, alignItems: 'center', justifyContent: 'center' },
   badgeTop: { fontSize: 10, fontWeight: '700', letterSpacing: 1 },
   badgeNum: { fontSize: 18, fontWeight: '800' },
