@@ -31,3 +31,25 @@ export const secureKv = {
     return SecureStore.deleteItemAsync(key);
   },
 };
+export type HymnFont = 'Lora' | 'Merriweather' | 'SourceSerif4' | 'PlayfairDisplay';
+
+const HYMN_FONT_KEY = 'admfc_hymn_font';
+
+export const hymnFontStorage = {
+  async get(): Promise<HymnFont> {
+    const saved = await kv.get(HYMN_FONT_KEY);
+    if (
+      saved === 'Lora' ||
+      saved === 'Merriweather' ||
+      saved === 'SourceSerif4' ||
+      saved === 'PlayfairDisplay'
+    ) {
+      return saved;
+    }
+    return 'Lora';
+  },
+
+  async set(font: HymnFont) {
+    await kv.set(HYMN_FONT_KEY, font);
+  },
+};

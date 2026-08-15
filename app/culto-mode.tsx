@@ -7,7 +7,7 @@ import { useTheme } from '@/src/theme/ThemeContext';
 import { SPACING, RADIUS, COLORS } from '@/src/theme/tokens';
 import { api, Hymn, getSections } from '@/src/lib/api';
 import { playlist } from '@/src/lib/collections';
-
+import { hymnFontStorage, HymnFont } from '@/src/lib/storage';
 export default function CultoMode() {
   const { id: initialId } = useLocalSearchParams<{ id: string }>();
   const router = useRouter();
@@ -22,6 +22,10 @@ export default function CultoMode() {
   const [pos, setPos] = useState(0);
   const [hymn, setHymn] = useState<Hymn | null>(null);
   const [loading, setLoading] = useState(true);
+const [hymnFont, setHymnFont] = useState<HymnFont>('Lora');
+useEffect(() => {
+  hymnFontStorage.get().then(setHymnFont);
+}, []);
   useEffect(() => { (async () => {
     const pl = await playlist.list();
     const cid = initialId || pl[0];
@@ -54,9 +58,9 @@ export default function CultoMode() {
           <View style={[styles.divider, { backgroundColor: gold }]} />
           {sections.map((s, i) => (
             <View key={i} style={{ marginBottom: SPACING.xl }}>
-              <Text style={{ color: gold, fontSize: 12, fontWeight: '800', letterSpacing: 1.5, marginBottom: SPACING.sm }}>{s.kind === 'chorus' ? 'CORO' : `${s.index ?? i + 1}ª ESTROFA`}</Text>
+              <Text style={{ color: gold, fontSize: 12, fontWeight: '800', letterSpacing: 1.5, marginBottom: SPACING.sm }}>{s.kind === 'chorus' ? 'CORO' : `${s.index ?? i + 1}ª `}</Text>
               <View style={s.kind === 'chorus' ? [styles.chorusBox, { borderLeftColor: gold, backgroundColor: dark.surfaceSecondary }] : undefined}>
-                <Text style={{ color: fg, fontSize: baseSize, lineHeight: baseSize * 1.5, fontStyle: s.kind === 'chorus' ? 'italic' : 'normal' }}>{s.text.replace(/\|+/g, '')}</Text>
+                <Text style={{ color: fg, fontSize: baseSize, lineHeight: baseSize * 1.5, fontFamily: hymnFont, fontStyle: s.kind === 'chorus' ? 'italic' : 'normal' }}>{s.text.replace(/\|+/g, '')}</Text>
               </View>
             </View>
           ))}
@@ -74,7 +78,7 @@ const styles = StyleSheet.create({
   topBar: { flexDirection: 'row', alignItems: 'center', paddingHorizontal: SPACING.md, paddingBottom: SPACING.sm },
   iconBtn: { padding: SPACING.sm },
   scroll: { padding: SPACING.xl, paddingBottom: 120 },
-  number: { fontSize: 56, fontWeight: '900', letterSpacing: 1, marginTop: 4 },
+  number: { fontSize: 38, fontWeight: '900', letterSpacing: 1, marginTop: 4 },
   title: { fontSize: 28, fontWeight: '700', marginTop: 4 },
   divider: { height: 2, width: 80, marginVertical: SPACING.xl, opacity: 0.8 },
   chorusBox: { padding: SPACING.lg, borderLeftWidth: 4, borderRadius: RADIUS.sm },

@@ -10,6 +10,7 @@ import * as Sharing from 'expo-sharing';
 import { useTheme } from '@/src/theme/ThemeContext';
 import { SPACING, RADIUS } from '@/src/theme/tokens';
 import { api, adminSession } from '@/src/lib/api';
+import { hymnFontStorage, HymnFont } from '@/src/lib/storage';
 
 export default function Admin() {
   const router = useRouter();
@@ -18,13 +19,15 @@ export default function Admin() {
   const [busy, setBusy] = useState('');
   const [msg, setMsg] = useState('');
   const [importResult, setImportResult] = useState<any>(null);
-
+const [hymnFont, setHymnFont] = useState<'Lora' | 'Merriweather' | 'SourceSerif4' | 'PlayfairDisplay'>('Lora');
   const load = useCallback(async () => {
     try {
       await api.me();
       const s = await api.stats();
+const savedFont = await hymnFontStorage.get();
       setStats(s);
-    } catch {
+setHymnFont(savedFont);    
+} catch {
       router.replace('/admin-login' as any);
     }
   }, [router]);
@@ -32,7 +35,11 @@ export default function Admin() {
   useFocusEffect(useCallback(() => { load(); }, [load]));
 
   const logout = async () => { await api.logout(); router.replace('/(tabs)' as any); };
-
+const changeHymnFont = async (font: HymnFont) => {
+  setHymnFont(font);
+  await hymnFontStorage.set(font);
+  setMsg(`Fuente de himnos: ${font}`);
+};
   const doExport = async () => {
     setBusy('export'); setMsg('');
     try {
@@ -81,8 +88,8 @@ export default function Admin() {
         <Pressable onPress={() => { adminSession.clear(); router.replace('/(tabs)/more' as any); }} hitSlop={10}>
           <Feather name="chevron-left" size={28} color={c.brand} />
         </Pressable>
-        <Text style={[styles.title, { color: c.brand }]}>Administración</Text>
-        <View style={{ flex: 1 }} />
+        <Text style={[styles.title, { color: c.brand }]}>Administración</Text>  
+      <View style={{ flex: 1 }} />
         <Pressable onPress={logout} testID="admin-logout" hitSlop={10}>
           <Feather name="log-out" size={22} color={c.error} />
         </Pressable>
@@ -110,6 +117,33 @@ export default function Admin() {
           <ActionBtn c={c} icon="edit-3" label="Editor de Himnos (título, letra, número, equivalencia)" onPress={() => router.push('/admin/hymns' as any)} testID="admin-editor" />
         </View>
 
+<Text style={[styles.section, { color: c.muted }]}>Fuente de los Himnos</Text>
+<View style={[styles.actionCard, { borderColor: c.border }]}>
+  {(['Lora', 'Merriweather', 'SourceSerif4', 'PlayfairDisplay'] as HymnFont[]).map((font) => (
+    <Pressable
+      key={font}
+      onPress={() => changeHymnFont(font)}
+      style={{
+        paddingVertical: 12,
+        paddingHorizontal: 14,
+        borderRadius: 10,
+        marginBottom: 8,
+        borderWidth: hymnFont === font ? 2 : 1,
+        borderColor: hymnFont === font ? c.brand : c.border,
+      }}
+    >
+      <Text
+        style={{
+          color: c.onSurface,
+          fontFamily: font,
+          fontSize: 18,
+        }}
+      >
+        {font === 'SourceSerif4' ? 'Source Serif 4' : font === 'PlayfairDisplay' ? 'Playfair Display' : font}
+      </Text>
+    </Pressable>
+  ))}
+</View>
         <Text style={[styles.section, { color: c.muted }]}>Importación / Exportación</Text>
         <View style={[styles.actionCard, { borderColor: c.border, backgroundColor: c.surfaceSecondary }]}>
           <ActionBtn c={c} icon="download" label="Exportar backup (JSON)" onPress={doExport} busy={busy === 'export'} testID="admin-export" />

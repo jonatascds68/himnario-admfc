@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState, useRef } from 'react';
 import { View, Text, StyleSheet, ScrollView, Pressable, ActivityIndicator, Share, Animated, Modal, Platform } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { useLocalSearchParams, useRouter } from 'expo-router';
+import { useFocusEffect, useLocalSearchParams, useRouter } from 'expo-router';
 import { Feather, Ionicons } from '@expo/vector-icons';
 import * as Haptics from 'expo-haptics';
 import { captureRef } from 'react-native-view-shot';
@@ -10,6 +10,7 @@ import { useTheme } from '@/src/theme/ThemeContext';
 import { SPACING, RADIUS, GOLD } from '@/src/theme/tokens';
 import { api, Hymn, getSections } from '@/src/lib/api';
 import { favorites, recents, playlist } from '@/src/lib/collections';
+import { hymnFontStorage, HymnFont } from '@/src/lib/storage';
 import { ShareCard, buildSharePages } from '@/src/components/ShareCard';
 
 // Limpia marcaciones internas (p.ej. "||...||") y normaliza saltos de línea.
@@ -35,7 +36,7 @@ function buildShareText(hymn: Hymn): string {
   lines.push(hymn.titulo);
   lines.push('');
   sections.forEach((s, i) => {
-    const label = s.kind === 'chorus' ? 'CORO' : `${s.index ?? i + 1}ª ESTROFA`;
+    const label = s.kind === 'chorus' ? 'CORO' : `${s.index ?? i + 1}ª `;
     const body = cleanBlockText(s.text);
     if (!body) return;
     lines.push(label);
@@ -64,6 +65,7 @@ export default function HymnDetail() {
   const [equivId, setEquivId] = useState<string | null>(null);
   const [shareOpen, setShareOpen] = useState(false);
   const [sharing, setSharing] = useState(false);
+const [hymnFont, setHymnFont] = useState<HymnFont>('Lora');
   const pageRefs = useRef<(View | null)[]>([]);
   const starScale = React.useRef(new Animated.Value(1)).current;
 
@@ -83,7 +85,11 @@ export default function HymnDetail() {
     } catch { setHymn(null); } finally { setLoading(false); }
   }, [id]);
   useEffect(() => { load(); }, [load]);
-
+useFocusEffect(
+  useCallback(() => {
+    hymnFontStorage.get().then(setHymnFont);
+  }, [])
+);
   const nav = async (delta: number) => {
     if (!hymn) return;
     const k = hymn.himnario === 'Gloria y Triunfo' ? 'gt' : 'sion';
@@ -172,7 +178,7 @@ export default function HymnDetail() {
               <View key={i} style={{ marginBottom: SPACING.lg }}>
                 <Text style={[styles.stanzaTitle, { color: c.brand }]}>{s.kind === 'chorus' ? 'CORO' : `${s.index ?? i + 1}ª ESTROFA`}</Text>
                 <View style={s.kind === 'chorus' ? [styles.chorusBox, { backgroundColor: c.surfaceSecondary, borderLeftColor: c.brandSecondary }] : undefined}>
-                  <Text style={[styles.verse, { color: c.onSurface, fontSize: baseSize, lineHeight: baseSize * 1.55, fontStyle: s.kind === 'chorus' ? 'italic' : 'normal' }]}>{s.text.replace(/\|+/g, '')}</Text>
+                  <Text style={[styles.verse, { color: c.onSurface, fontSize: baseSize, lineHeight: baseSize * 1.55, fontFamily: hymnFont, fontStyle: s.kind === 'chorus' ? 'italic' : 'normal' }]}>{s.text.replace(/\|+/g, '')}</Text>
                 </View>
               </View>
             ))}
@@ -232,7 +238,7 @@ const styles = StyleSheet.create({
   iconBtn: { padding: SPACING.sm },
   scroll: { padding: SPACING.lg, paddingBottom: 140 },
   himnario: { fontSize: 11, fontWeight: '800', letterSpacing: 2 },
-  number: { fontSize: 42, fontWeight: '900', letterSpacing: 1, marginTop: 4 },
+  number: { fontSize: 34, fontWeight: '900', letterSpacing: 1, marginTop: 4 },
   title: { fontSize: 24, fontWeight: '700', marginTop: 4 },
   equivBox: { flexDirection: 'row', alignItems: 'center', gap: SPACING.sm, padding: SPACING.md, borderRadius: RADIUS.md, borderWidth: 1, marginTop: SPACING.md },
   meta: { fontSize: 12, fontStyle: 'italic' },
