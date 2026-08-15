@@ -46,7 +46,7 @@ export const hymnFontStorage = {
     ) {
       return saved;
     }
-    return 'Lora';
+return 'Merriweather';
   },
 
   async set(font: HymnFont) {

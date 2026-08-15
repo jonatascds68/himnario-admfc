@@ -22,7 +22,7 @@ const KEY_FONT = 'admfc_font_scale';
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const system = useColorScheme();
   const [mode, setModeState] = useState<Mode>('system');
-  const [fontScale, setFontScaleState] = useState<number>(1);
+const [fontScale, setFontScaleState] = useState<number>(1.2);
 
   useEffect(() => {
     (async () => {
