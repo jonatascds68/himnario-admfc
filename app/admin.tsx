@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from 'react';
 import { View, Text, StyleSheet, ScrollView, Pressable, ActivityIndicator, Platform } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
 import { Feather } from '@expo/vector-icons';
 import { useFocusEffect } from '@react-navigation/native';
@@ -15,6 +15,7 @@ import { hymnFontStorage, HymnFont } from '@/src/lib/storage';
 export default function Admin() {
   const router = useRouter();
   const { c } = useTheme();
+const insets = useSafeAreaInsets();
   const [stats, setStats] = useState<any>(null);
   const [busy, setBusy] = useState('');
   const [msg, setMsg] = useState('');
@@ -94,7 +95,7 @@ const changeHymnFont = async (font: HymnFont) => {
           <Feather name="log-out" size={22} color={c.error} />
         </Pressable>
       </View>
-      <ScrollView contentContainerStyle={{ padding: SPACING.lg, paddingBottom: SPACING.xxxl }}>
+<ScrollView contentContainerStyle={{ padding: SPACING.lg, paddingBottom: SPACING.xxxl + insets.bottom }}>
         {stats ? (
           <View style={[styles.statCard, { borderColor: c.border, backgroundColor: c.surfaceSecondary }]}>
             <View style={styles.statRow}>
