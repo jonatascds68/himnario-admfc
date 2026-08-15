@@ -75,6 +75,41 @@ useEffect(() => {
   </View>
 </View>
           <Pressable onPress={() => setMode('system')} testID="pref-system">
+<View style={{ marginTop: SPACING.sm }}>
+  <Text style={[styles.prefLabel, { color: c.onSurface, marginBottom: SPACING.sm }]}>Fuente de los himnos</Text>
+
+  {(['Lora', 'Merriweather', 'SourceSerif4', 'PlayfairDisplay'] as HymnFont[]).map((font) => (
+    <Pressable
+      key={font}
+      onPress={async () => {
+        setHymnFont(font);
+        await hymnFontStorage.set(font);
+      }}
+      style={{
+        paddingVertical: 10,
+        paddingHorizontal: 12,
+        borderRadius: RADIUS.md,
+        marginBottom: 6,
+        borderWidth: hymnFont === font ? 2 : 1,
+        borderColor: hymnFont === font ? c.brand : c.border,
+      }}
+    >
+      <Text
+        style={{
+          color: c.onSurface,
+          fontFamily: font,
+          fontSize: 17,
+        }}
+      >
+        {font === 'SourceSerif4'
+          ? 'Source Serif 4'
+          : font === 'PlayfairDisplay'
+            ? 'Playfair Display'
+            : font}
+      </Text>
+    </Pressable>
+  ))}
+</View>
             <Text style={{ color: c.info, fontSize: 12, marginTop: SPACING.xs }}>Usar tema del sistema</Text>
           </Pressable>
         </View>
