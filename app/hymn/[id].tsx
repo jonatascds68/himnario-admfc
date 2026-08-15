@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState, useRef } from 'react';
 import { View, Text, StyleSheet, ScrollView, Pressable, ActivityIndicator, Share, Animated, Modal, Platform } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useFocusEffect, useLocalSearchParams, useRouter } from 'expo-router';
 import { Feather, Ionicons } from '@expo/vector-icons';
 import * as Haptics from 'expo-haptics';
@@ -58,6 +58,7 @@ export default function HymnDetail() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const router = useRouter();
   const { c, fontScale, bumpFont } = useTheme();
+const insets = useSafeAreaInsets();
   const [hymn, setHymn] = useState<Hymn | null>(null);
   const [loading, setLoading] = useState(true);
   const [isFav, setIsFav] = useState(false);
@@ -187,7 +188,7 @@ useFocusEffect(
         {hymn.fuente ? <Text style={[styles.meta, { color: c.muted, marginTop: SPACING.lg }]}>Fuente: {hymn.fuente}</Text> : null}
         {hymn.observacion ? <Text style={[styles.meta, { color: c.muted, marginTop: 4 }]}>Nota: {hymn.observacion}</Text> : null}
       </ScrollView>
-      <View style={[styles.controlBar, { backgroundColor: c.surface, borderTopColor: c.divider }]}>
+<View style={[styles.controlBar, { backgroundColor: c.surface, borderTopColor: c.divider, paddingBottom: 8 + insets.bottom }]}>
         <Pressable onPress={() => nav(-1)} style={[styles.ctrl, { borderColor: c.border }]} testID="hymn-prev"><Feather name="chevron-left" size={18} color={c.onSurface} /></Pressable>
         <Pressable onPress={() => bumpFont(-0.1)} style={[styles.ctrl, { borderColor: c.border }]} testID="hymn-font-minus"><Text style={{ color: c.onSurface, fontWeight: '700' }}>A−</Text></Pressable>
         <Pressable onPress={() => bumpFont(0.1)} style={[styles.ctrl, { borderColor: c.border }]} testID="hymn-font-plus"><Text style={{ color: c.onSurface, fontWeight: '700' }}>A+</Text></Pressable>
@@ -246,7 +247,7 @@ const styles = StyleSheet.create({
   stanzaTitle: { fontSize: 11, fontWeight: '800', letterSpacing: 1.5, marginBottom: SPACING.sm },
   verse: {},
 chorusClean: { paddingVertical: 8, marginTop: 6, marginBottom: 10 },
-  controlBar: { position: 'absolute', left: 0, right: 0, bottom: 0, flexDirection: 'row', padding: SPACING.md, gap: 6, borderTopWidth: 1 },
+controlBar: { position: 'absolute', left: 0, right: 0, bottom: 0, flexDirection: 'row', paddingHorizontal: SPACING.md, paddingTop: 6, gap: 6, borderTopWidth: 1 },
   ctrl: { minWidth: 44, height: 44, borderRadius: RADIUS.md, borderWidth: 1, alignItems: 'center', justifyContent: 'center', paddingHorizontal: 10 },
   ctrlWide: { flex: 1, flexDirection: 'row', height: 44, borderRadius: RADIUS.md, borderWidth: 1, alignItems: 'center', justifyContent: 'center', gap: 6, paddingHorizontal: 8 },
 });
