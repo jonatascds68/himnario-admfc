@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { View, Text, StyleSheet, ScrollView, Pressable, ActivityIndicator, Platform } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Feather } from '@expo/vector-icons';
 import { activateKeepAwakeAsync, deactivateKeepAwake } from 'expo-keep-awake';
 import { useTheme } from '@/src/theme/ThemeContext';
@@ -12,6 +13,7 @@ export default function CultoMode() {
   const { id: initialId } = useLocalSearchParams<{ id: string }>();
   const router = useRouter();
   const { fontScale, bumpFont } = useTheme();
+const insets = useSafeAreaInsets();
   useEffect(() => {
     if (Platform.OS === 'web') return;
     activateKeepAwakeAsync().catch(() => {});
@@ -66,7 +68,7 @@ useEffect(() => {
           ))}
         </ScrollView>
       ) : null}
-      <View style={[styles.navBar, { borderTopColor: dark.border }]}>
+<View style={[styles.navBar, { borderTopColor: dark.border, paddingBottom: 8 + insets.bottom }]}>
         <Pressable onPress={() => setPos((p) => Math.max(0, p - 1))} disabled={pos === 0} style={[styles.navBtn, { borderColor: dark.border, opacity: pos === 0 ? 0.4 : 1 }]} testID="culto-prev"><Feather name="chevron-left" size={26} color={fg} /><Text style={{ color: fg, fontWeight: '600' }}>Anterior</Text></Pressable>
         <Pressable onPress={() => setPos((p) => Math.min(queue.length - 1, p + 1))} disabled={pos >= queue.length - 1} style={[styles.navBtn, { borderColor: dark.border, opacity: pos >= queue.length - 1 ? 0.4 : 1 }]} testID="culto-next"><Text style={{ color: fg, fontWeight: '600' }}>Siguiente</Text><Feather name="chevron-right" size={26} color={fg} /></Pressable>
       </View>
@@ -83,6 +85,6 @@ const styles = StyleSheet.create({
   divider: { height: 2, width: 80, marginVertical: SPACING.xl, opacity: 0.8 },
   chorusBox: { padding: SPACING.lg, borderLeftWidth: 4, borderRadius: RADIUS.sm },
   ctrl: { paddingHorizontal: 14, height: 40, borderRadius: RADIUS.md, borderWidth: 1, alignItems: 'center', justifyContent: 'center' },
-  navBar: { flexDirection: 'row', padding: SPACING.md, gap: SPACING.md, borderTopWidth: 1 },
+navBar: { flexDirection: 'row', paddingHorizontal: SPACING.md, paddingTop: 6, gap: SPACING.sm, borderTopWidth: 1 },
   navBtn: { flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 6, height: 52, borderRadius: RADIUS.md, borderWidth: 1 },
 });
