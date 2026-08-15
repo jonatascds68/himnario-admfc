@@ -159,7 +159,7 @@ useFocusEffect(
       <ScrollView contentContainerStyle={styles.scroll}>
         <Text style={[styles.himnario, { color: c.muted }]}>{hymn.himnario.toUpperCase()}</Text>
         <Text style={[styles.number, { color: c.brand }]}>Nº {hymn.numero}</Text>
-        <Text style={[styles.title, { color: c.onSurface }]}>{hymn.titulo}</Text>
+<Text style={[styles.title, { color: c.onSurface, textAlign: 'center' }]}>{hymn.titulo}</Text>
         {equivId && hymn.numero_equivalente ? (
           <Pressable onPress={() => router.push(`/hymn/${equivId}`)} style={[styles.equivBox, { borderColor: c.borderStrong, backgroundColor: c.surfaceSecondary }]} testID="hymn-cross-ref">
             <Feather name="link" size={16} color={c.brand} />
@@ -175,10 +175,10 @@ useFocusEffect(
         ) : (
           <View testID="hymn-lyrics">
             {sections.map((s, i) => (
-              <View key={i} style={{ marginBottom: SPACING.lg }}>
-                <Text style={[styles.stanzaTitle, { color: c.brand }]}>{s.kind === 'chorus' ? 'CORO' : `${s.index ?? i + 1}ª ESTROFA`}</Text>
-                <View style={s.kind === 'chorus' ? [styles.chorusBox, { backgroundColor: c.surfaceSecondary, borderLeftColor: c.brandSecondary }] : undefined}>
-                  <Text style={[styles.verse, { color: c.onSurface, fontSize: baseSize, lineHeight: baseSize * 1.55, fontFamily: hymnFont, fontStyle: s.kind === 'chorus' ? 'italic' : 'normal' }]}>{s.text.replace(/\|+/g, '')}</Text>
+<View key={i} style={{ marginBottom: s.kind === 'chorus' ? SPACING.xxl : SPACING.xl }}>
+<Text style={[styles.stanzaTitle, { color: c.brand }]}>{s.kind === 'chorus' ? 'CORO' : `${s.index ?? i + 1}.`}</Text>
+<View style={s.kind === 'chorus' ? styles.chorusClean : undefined}>
+<Text style={[styles.verse, { color: c.onSurface, fontSize: baseSize, lineHeight: baseSize * 1.55, fontFamily: hymnFont, textAlign: 'center', fontStyle: s.kind === 'chorus' ? 'italic' : 'normal' }]}>{s.text.replace(/\|+/g, '')}</Text>
                 </View>
               </View>
             ))}
@@ -245,7 +245,7 @@ const styles = StyleSheet.create({
   divider: { height: 2, width: 60, marginVertical: SPACING.lg, opacity: 0.7 },
   stanzaTitle: { fontSize: 11, fontWeight: '800', letterSpacing: 1.5, marginBottom: SPACING.sm },
   verse: {},
-  chorusBox: { padding: SPACING.md, borderLeftWidth: 4, borderRadius: RADIUS.sm },
+chorusClean: { paddingVertical: 8, marginTop: 6, marginBottom: 10 },
   controlBar: { position: 'absolute', left: 0, right: 0, bottom: 0, flexDirection: 'row', padding: SPACING.md, gap: 6, borderTopWidth: 1 },
   ctrl: { minWidth: 44, height: 44, borderRadius: RADIUS.md, borderWidth: 1, alignItems: 'center', justifyContent: 'center', paddingHorizontal: 10 },
   ctrlWide: { flex: 1, flexDirection: 'row', height: 44, borderRadius: RADIUS.md, borderWidth: 1, alignItems: 'center', justifyContent: 'center', gap: 6, paddingHorizontal: 8 },
