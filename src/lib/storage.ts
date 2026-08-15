@@ -53,3 +53,17 @@ export const hymnFontStorage = {
     await kv.set(HYMN_FONT_KEY, font);
   },
 };
+export type HymnAlign = 'center' | 'left';
+
+const HYMN_ALIGN_KEY = 'admfc_hymn_align';
+
+export const hymnAlignStorage = {
+  async get(): Promise<HymnAlign> {
+    const saved = await kv.get(HYMN_ALIGN_KEY);
+    return saved === 'left' ? 'left' : 'center';
+  },
+
+  async set(align: HymnAlign) {
+    await kv.set(HYMN_ALIGN_KEY, align);
+  },
+};

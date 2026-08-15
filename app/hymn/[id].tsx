@@ -10,7 +10,7 @@ import { useTheme } from '@/src/theme/ThemeContext';
 import { SPACING, RADIUS, GOLD } from '@/src/theme/tokens';
 import { api, Hymn, getSections } from '@/src/lib/api';
 import { favorites, recents, playlist } from '@/src/lib/collections';
-import { hymnFontStorage, HymnFont } from '@/src/lib/storage';
+import { hymnFontStorage, HymnFont, hymnAlignStorage, HymnAlign } from '@/src/lib/storage';
 import { ShareCard, buildSharePages } from '@/src/components/ShareCard';
 
 // Limpia marcaciones internas (p.ej. "||...||") y normaliza saltos de línea.
@@ -67,6 +67,7 @@ const insets = useSafeAreaInsets();
   const [shareOpen, setShareOpen] = useState(false);
   const [sharing, setSharing] = useState(false);
 const [hymnFont, setHymnFont] = useState<HymnFont>('Lora');
+const [hymnAlign, setHymnAlign] = useState<HymnAlign>('center');
   const pageRefs = useRef<(View | null)[]>([]);
   const starScale = React.useRef(new Animated.Value(1)).current;
 
@@ -89,6 +90,7 @@ const [hymnFont, setHymnFont] = useState<HymnFont>('Lora');
 useFocusEffect(
   useCallback(() => {
     hymnFontStorage.get().then(setHymnFont);
+hymnAlignStorage.get().then(setHymnAlign);
   }, [])
 );
   const nav = async (delta: number) => {
@@ -179,7 +181,7 @@ useFocusEffect(
 <View key={i} style={{ marginBottom: s.kind === 'chorus' ? SPACING.xxl : SPACING.xl }}>
 <Text style={[styles.stanzaTitle, { color: c.brand }]}>{s.kind === 'chorus' ? 'CORO' : `${s.index ?? i + 1}.`}</Text>
 <View style={s.kind === 'chorus' ? styles.chorusClean : undefined}>
-<Text style={[styles.verse, { color: c.onSurface, fontSize: baseSize, lineHeight: baseSize * 1.55, fontFamily: hymnFont, textAlign: 'center', fontStyle: s.kind === 'chorus' ? 'italic' : 'normal' }]}>{s.text.replace(/\|+/g, '')}</Text>
+<Text style={[styles.verse, { color: c.onSurface, fontSize: baseSize, lineHeight: baseSize * 1.55, fontFamily: hymnFont, textAlign: hymnAlign, fontStyle: s.kind === 'chorus' ? 'italic' : 'normal' }]}>{s.text.replace(/\|+/g, '')}</Text>
                 </View>
               </View>
             ))}
