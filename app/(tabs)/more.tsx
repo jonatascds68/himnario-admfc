@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, ScrollView, Pressable, Switch } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
 import { Feather } from '@expo/vector-icons';
 import { useTheme } from '@/src/theme/ThemeContext';
+import { hymnFontStorage, HymnFont, hymnAlignStorage, HymnAlign } from '@/src/lib/storage';
 import { SPACING, RADIUS } from '@/src/theme/tokens';
 
 const LINKS: { key: string; label: string; icon: string; href: string }[] = [
@@ -19,6 +20,12 @@ const LINKS: { key: string; label: string; icon: string; href: string }[] = [
 export default function More() {
   const router = useRouter();
   const { c, mode, setMode, isDark, fontScale, bumpFont } = useTheme();
+const [hymnFont, setHymnFont] = useState<HymnFont>('Lora');
+const [hymnAlign, setHymnAlign] = useState<HymnAlign>('center');
+useEffect(() => {
+  hymnFontStorage.get().then(setHymnFont);
+  hymnAlignStorage.get().then(setHymnAlign);
+}, []);
   return (
     <SafeAreaView style={[styles.container, { backgroundColor: c.surface }]} edges={['top']} testID="more-screen">
       <ScrollView contentContainerStyle={styles.scroll}>
@@ -44,6 +51,29 @@ export default function More() {
               </Pressable>
             </View>
           </View>
+<View style={styles.pref}>
+  <Text style={[styles.prefLabel, { color: c.onSurface }]}>Alineación del texto</Text>
+  <View style={{ flexDirection: 'row', gap: SPACING.sm }}>
+    <Pressable
+      onPress={async () => {
+        setHymnAlign('center');
+        await hymnAlignStorage.set('center');
+      }}
+      style={[styles.fontBtn, { borderColor: hymnAlign === 'center' ? c.brand : c.border }]}
+    >
+      <Feather name="align-center" size={18} color={hymnAlign === 'center' ? c.brand : c.onSurface} />
+    </Pressable>
+    <Pressable
+      onPress={async () => {
+        setHymnAlign('left');
+        await hymnAlignStorage.set('left');
+      }}
+      style={[styles.fontBtn, { borderColor: hymnAlign === 'left' ? c.brand : c.border }]}
+    >
+      <Feather name="align-left" size={18} color={hymnAlign === 'left' ? c.brand : c.onSurface} />
+    </Pressable>
+  </View>
+</View>
           <Pressable onPress={() => setMode('system')} testID="pref-system">
             <Text style={{ color: c.info, fontSize: 12, marginTop: SPACING.xs }}>Usar tema del sistema</Text>
           </Pressable>
