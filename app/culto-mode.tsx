@@ -42,7 +42,7 @@ hymnAlignStorage.get().then(setHymnAlign);
   }, []);
   useEffect(() => { if (queue[pos]) load(queue[pos]); }, [queue, pos, load]);
 const bg = c.surface, fg = c.onSurface, gold = c.brand;
-  const baseSize = 22 * fontScale;
+const baseSize = 20 * fontScale;
   const sections = hymn ? getSections(hymn) : [];
   return (
     <View style={[styles.container, { backgroundColor: bg }]} testID="culto-mode-screen">
