@@ -62,10 +62,19 @@ hymnAlignStorage.get().then(setHymnAlign);
           <View style={[styles.divider, { backgroundColor: gold }]} />
           {sections.map((s, i) => (
             <View key={i} style={{ marginBottom: SPACING.xl }}>
-<Text style={{ color: gold, fontSize: 12, fontWeight: '800', letterSpacing: 1.5, marginBottom: SPACING.sm, textAlign: s.kind === 'chorus' ? hymnAlign : 'left' }}>{s.kind === 'chorus' ? 'CORO' : `${s.index ?? i + 1}ª `}</Text>
-<View style={s.kind === 'chorus' ? styles.chorusClean : undefined}>
-<Text style={{ color: fg, fontSize: baseSize, lineHeight: baseSize * 1.5, fontFamily: hymnFont, textAlign: hymnAlign, fontStyle: s.kind === 'chorus' ? 'italic' : 'normal' }}>{s.text.replace(/\|+/g, '')}</Text>
-              </View>
+{s.kind === 'chorus' ? (
+  <>
+    <Text style={{ color: gold, fontSize: 12, fontWeight: '800', letterSpacing: 1.5, marginBottom: SPACING.sm, textAlign: hymnAlign }}>CORO</Text>
+    <View style={styles.chorusClean}>
+      <Text style={{ color: fg, fontSize: baseSize, lineHeight: baseSize * 1.5, fontFamily: hymnFont, textAlign: hymnAlign, fontStyle: 'italic' }}>{s.text.replace(/\|+/g, '')}</Text>
+    </View>
+  </>
+) : (
+  <View style={{ flexDirection: 'row', alignItems: 'flex-start' }}>
+    <Text style={{ color: gold, width: 32, fontSize: 12, fontWeight: '800', marginTop: 5 }}>{`${s.index ?? i + 1}.`}</Text>
+    <Text style={{ flex: 1, color: fg, fontSize: baseSize, lineHeight: baseSize * 1.5, fontFamily: hymnFont, textAlign: hymnAlign }}>{s.text.replace(/\|+/g, '')}</Text>
+  </View>
+)}
             </View>
           ))}
         </ScrollView>
