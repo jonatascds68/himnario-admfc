@@ -74,7 +74,6 @@ useEffect(() => {
     </Pressable>
   </View>
 </View>
-          <Pressable onPress={() => setMode('system')} testID="pref-system">
 <View style={{ marginTop: SPACING.sm }}>
   <Text style={[styles.prefLabel, { color: c.onSurface, marginBottom: SPACING.sm }]}>Fuente de los himnos</Text>
 
@@ -98,7 +97,7 @@ useEffect(() => {
         style={{
           color: c.onSurface,
           fontFamily: font,
-          fontSize: 17,
+fontSize: 15,
         }}
       >
         {font === 'SourceSerif4'
@@ -110,8 +109,17 @@ useEffect(() => {
     </Pressable>
   ))}
 </View>
-            <Text style={{ color: c.info, fontSize: 12, marginTop: SPACING.xs }}>Usar tema del sistema</Text>
-          </Pressable>
+<Pressable
+  onPress={() => setMode('system')}
+  style={[styles.systemBtn, { borderColor: mode === 'system' ? c.brand : c.border }]}
+  testID="pref-system"
+>
+  <Feather name="smartphone" size={16} color={mode === 'system' ? c.brand : c.muted} />
+  <Text style={{ color: mode === 'system' ? c.brand : c.onSurface, fontSize: 13, fontWeight: '600', flex: 1 }}>
+    Usar tema del sistema
+  </Text>
+  {mode === 'system' ? <Feather name="check" size={16} color={c.brand} /> : null}
+</Pressable>
         </View>
 
         <View style={[styles.card, { backgroundColor: c.surfaceSecondary, borderColor: c.border, marginTop: SPACING.lg }]}>
@@ -143,6 +151,7 @@ const styles = StyleSheet.create({
   prefLabel: { fontSize: 15 },
   fontBtn: { paddingHorizontal: 14, height: 36, borderRadius: RADIUS.md, borderWidth: 1, alignItems: 'center', justifyContent: 'center' },
   fontValue: { paddingHorizontal: 8, alignItems: 'center', justifyContent: 'center' },
+systemBtn: { flexDirection: 'row', alignItems: 'center', gap: SPACING.sm, minHeight: 44, paddingHorizontal: 12, marginTop: SPACING.md, borderRadius: RADIUS.md, borderWidth: 1 },
   link: { flexDirection: 'row', alignItems: 'center', gap: SPACING.md, paddingVertical: SPACING.md, minHeight: 48 },
   linkText: { flex: 1, fontSize: 15, fontWeight: '600' },
 });
