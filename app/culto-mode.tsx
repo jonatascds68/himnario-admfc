@@ -63,8 +63,8 @@ hymnAlignStorage.get().then(setHymnAlign);
           {sections.map((s, i) => (
             <View key={i} style={{ marginBottom: SPACING.xl }}>
 <Text style={{ color: gold, fontSize: 12, fontWeight: '800', letterSpacing: 1.5, marginBottom: SPACING.sm, textAlign: s.kind === 'chorus' ? hymnAlign : 'left' }}>{s.kind === 'chorus' ? 'CORO' : `${s.index ?? i + 1}ª `}</Text>
-              <View style={s.kind === 'chorus' ? [styles.chorusBox, { borderLeftColor: gold, backgroundColor: dark.surfaceSecondary }] : undefined}>
-                <Text style={{ color: fg, fontSize: baseSize, lineHeight: baseSize * 1.5, fontFamily: hymnFont, fontStyle: s.kind === 'chorus' ? 'italic' : 'normal' }}>{s.text.replace(/\|+/g, '')}</Text>
+<View style={s.kind === 'chorus' ? styles.chorusClean : undefined}>
+<Text style={{ color: fg, fontSize: baseSize, lineHeight: baseSize * 1.5, fontFamily: hymnFont, textAlign: hymnAlign, fontStyle: s.kind === 'chorus' ? 'italic' : 'normal' }}>{s.text.replace(/\|+/g, '')}</Text>
               </View>
             </View>
           ))}
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
   number: { fontSize: 38, fontWeight: '900', letterSpacing: 1, marginTop: 4 },
   title: { fontSize: 28, fontWeight: '700', marginTop: 4 },
   divider: { height: 2, width: 80, marginVertical: SPACING.xl, opacity: 0.8 },
-  chorusBox: { padding: SPACING.lg, borderLeftWidth: 4, borderRadius: RADIUS.sm },
+chorusClean: { paddingVertical: 8, marginTop: 6, marginBottom: 10 },
   ctrl: { paddingHorizontal: 14, height: 40, borderRadius: RADIUS.md, borderWidth: 1, alignItems: 'center', justifyContent: 'center' },
 navBar: { flexDirection: 'row', paddingHorizontal: SPACING.md, paddingTop: 6, gap: SPACING.sm, borderTopWidth: 1 },
   navBtn: { flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 6, height: 52, borderRadius: RADIUS.md, borderWidth: 1 },
