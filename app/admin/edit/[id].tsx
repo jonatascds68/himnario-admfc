@@ -3,7 +3,7 @@ import {
   View, Text, StyleSheet, TextInput, Pressable, ScrollView, ActivityIndicator,
   KeyboardAvoidingView, Platform, Modal, FlatList,
 } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { Feather } from '@expo/vector-icons';
 import { useTheme } from '@/src/theme/ThemeContext';
@@ -19,6 +19,7 @@ export default function EditHymn() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const router = useRouter();
   const { c } = useTheme();
+const insets = useSafeAreaInsets();
   const isNew = id === 'new';
 
   const [loading, setLoading] = useState(!isNew);
@@ -252,7 +253,7 @@ export default function EditHymn() {
         </ScrollView>
       </KeyboardAvoidingView>
 
-      <View style={[styles.footer, { backgroundColor: c.surface, borderTopColor: c.divider }]}>
+<View style={[styles.footer, { backgroundColor: c.surface, borderTopColor: c.divider, paddingBottom: SPACING.md + insets.bottom }]}>
         {!isNew && (
           <Pressable onPress={() => setConfirm({ kind: 'delete' })} style={[styles.delBtn, { borderColor: c.error }]} testID="edit-delete">
             <Feather name="trash-2" size={18} color={c.error} />
