@@ -32,7 +32,7 @@ const DEFAULT_CATEGORIES = [
 
 const DB_KEY = 'admfc_local_db_v1';
 const DB_DATA_VERSION_KEY = 'admfc_local_db_data_version';
-const DB_DATA_VERSION = '2';
+const DB_DATA_VERSION = '3';
 const ADMIN_EMAIL_KEY = 'admfc_local_admin_email';
 const ADMIN_PASS_KEY = 'admfc_local_admin_password';
 
