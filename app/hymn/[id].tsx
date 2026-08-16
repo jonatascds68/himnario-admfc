@@ -179,10 +179,19 @@ hymnAlignStorage.get().then(setHymnAlign);
           <View testID="hymn-lyrics">
             {sections.map((s, i) => (
 <View key={i} style={{ marginBottom: s.kind === 'chorus' ? SPACING.xxl : SPACING.xl }}>
-<Text style={[styles.stanzaTitle, { color: c.brand }]}>{s.kind === 'chorus' ? 'CORO' : `${s.index ?? i + 1}.`}</Text>
-<View style={s.kind === 'chorus' ? styles.chorusClean : undefined}>
-<Text style={[styles.verse, { color: c.onSurface, fontSize: baseSize, lineHeight: baseSize * 1.55, fontFamily: hymnFont, textAlign: hymnAlign, fontStyle: s.kind === 'chorus' ? 'italic' : 'normal' }]}>{s.text.replace(/\|+/g, '')}</Text>
-                </View>
+{s.kind === 'chorus' ? (
+  <>
+    <Text style={[styles.stanzaTitle, { color: c.brand, textAlign: hymnAlign }]}>CORO</Text>
+    <View style={styles.chorusClean}>
+      <Text style={[styles.verse, { color: c.onSurface, fontSize: baseSize, lineHeight: baseSize * 1.55, fontFamily: hymnFont, textAlign: hymnAlign, fontStyle: 'italic' }]}>{s.text.replace(/\|+/g, '')}</Text>
+    </View>
+  </>
+) : (
+  <View style={{ flexDirection: 'row', alignItems: 'flex-start' }}>
+    <Text style={[styles.stanzaTitle, { color: c.brand, width: 28, marginTop: 3 }]}>{`${s.index ?? i + 1}.`}</Text>
+    <Text style={[styles.verse, { flex: 1, color: c.onSurface, fontSize: baseSize, lineHeight: baseSize * 1.55, fontFamily: hymnFont, textAlign: hymnAlign }]}>{s.text.replace(/\|+/g, '')}</Text>
+  </View>
+)}
               </View>
             ))}
           </View>
