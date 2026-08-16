@@ -183,7 +183,7 @@ hymnAlignStorage.get().then(setHymnAlign);
   <>
     <Text style={[styles.stanzaTitle, { color: c.brand, textAlign: hymnAlign }]}>CORO</Text>
     <View style={styles.chorusClean}>
-      <Text style={[styles.verse, { color: c.onSurface, fontSize: baseSize, lineHeight: baseSize * 1.55, fontFamily: hymnFont, textAlign: hymnAlign, fontStyle: 'italic' }]}>{s.text.replace(/\|+/g, '')}</Text>
+<Text style={[styles.verse, { color: c.onSurface, fontSize: baseSize, lineHeight: baseSize * 1.55, fontFamily: hymnFont, textAlign: hymnAlign, fontStyle: 'italic', fontWeight: '700', letterSpacing: 0.2 }]}>{s.text.replace(/\|+/g, '')}</Text>
     </View>
   </>
 ) : (
@@ -255,7 +255,7 @@ const styles = StyleSheet.create({
   equivBox: { flexDirection: 'row', alignItems: 'center', gap: SPACING.sm, padding: SPACING.md, borderRadius: RADIUS.md, borderWidth: 1, marginTop: SPACING.md },
   meta: { fontSize: 12, fontStyle: 'italic' },
   divider: { height: 2, width: 60, marginVertical: SPACING.lg, opacity: 0.7 },
-  stanzaTitle: { fontSize: 11, fontWeight: '800', letterSpacing: 1.5, marginBottom: SPACING.sm },
+stanzaTitle: { fontSize: 14, fontWeight: '800', fontStyle: 'italic', letterSpacing: 1.8, marginBottom: SPACING.md },
   verse: {},
 chorusClean: { paddingVertical: 8, marginTop: 6, marginBottom: 10 },
 controlBar: { position: 'absolute', left: 0, right: 0, bottom: 0, flexDirection: 'row', paddingHorizontal: SPACING.md, paddingTop: 6, gap: 6, borderTopWidth: 1 },
