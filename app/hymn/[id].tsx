@@ -183,7 +183,7 @@ hymnAlignStorage.get().then(setHymnAlign);
   <>
     <Text style={[styles.stanzaTitle, { color: c.brand, textAlign: hymnAlign }]}>CORO</Text>
     <View style={styles.chorusClean}>
-<Text style={[styles.verse, { color: c.onSurface, fontSize: baseSize, lineHeight: baseSize * 1.55, fontFamily: hymnFont, textAlign: hymnAlign, fontStyle: 'italic', fontWeight: '700', letterSpacing: 0.2 }]}>{s.text.replace(/\|+/g, '')}</Text>
+<Text style={[styles.verse, { color: c.muted, fontSize: baseSize, lineHeight: baseSize * 1.55, fontFamily: 'MerriweatherItalic', textAlign: hymnAlign }]}>{s.text.replace(/\|+/g, '')}</Text>
     </View>
   </>
 ) : (

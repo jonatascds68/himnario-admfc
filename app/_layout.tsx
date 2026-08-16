@@ -8,7 +8,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { useIconFonts } from '@/src/hooks/use-icon-fonts';
 import { useFonts } from 'expo-font';
 import { Lora_400Regular } from '@expo-google-fonts/lora';
-import { Merriweather_400Regular } from '@expo-google-fonts/merriweather';
+import { Merriweather_400Regular, Merriweather_400Regular_Italic } from '@expo-google-fonts/merriweather';
 import { SourceSerif4_400Regular } from '@expo-google-fonts/source-serif-4';
 import { PlayfairDisplay_400Regular } from '@expo-google-fonts/playfair-display';
 import { ThemeProvider } from '@/src/theme/ThemeContext';
@@ -21,6 +21,7 @@ export default function RootLayout() {
 const [textFontsLoaded, textFontsError] = useFonts({
   Lora: Lora_400Regular,
   Merriweather: Merriweather_400Regular,
+MerriweatherItalic: Merriweather_400Regular_Italic,
   SourceSerif4: SourceSerif4_400Regular,
   PlayfairDisplay: PlayfairDisplay_400Regular,
 });

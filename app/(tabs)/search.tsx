@@ -7,7 +7,7 @@ import { useTheme } from '@/src/theme/ThemeContext';
 import { SPACING, RADIUS } from '@/src/theme/tokens';
 import { api, Hymn } from '@/src/lib/api';
 
-let lastMode: '123' | 'abc' = 'abc';
+let lastMode: '123' | 'abc' = '123';
 
 export default function Search() {
   const router = useRouter();

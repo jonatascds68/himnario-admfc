@@ -21,7 +21,7 @@ const KEY_FONT = 'admfc_font_scale';
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const system = useColorScheme();
-  const [mode, setModeState] = useState<Mode>('system');
+const [mode, setModeState] = useState<Mode>('light');
 const [fontScale, setFontScaleState] = useState<number>(1.2);
 
   useEffect(() => {
