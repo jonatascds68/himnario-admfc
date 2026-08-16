@@ -31,6 +31,8 @@ const DEFAULT_CATEGORIES = [
 ];
 
 const DB_KEY = 'admfc_local_db_v1';
+const DB_DATA_VERSION_KEY = 'admfc_local_db_data_version';
+const DB_DATA_VERSION = '2';
 const ADMIN_EMAIL_KEY = 'admfc_local_admin_email';
 const ADMIN_PASS_KEY = 'admfc_local_admin_password';
 
@@ -39,6 +41,17 @@ function normalize(s: string) {
 }
 async function loadDb(): Promise<LocalDb> {
   const raw = await kv.get(DB_KEY);
+const dataVersion = await kv.get(DB_DATA_VERSION_KEY);
+if (raw && dataVersion !== DB_DATA_VERSION) {
+  try {
+    const db = JSON.parse(raw) as LocalDb;
+    const freshHymns = ((seed as any).himnos || []) as Hymn[];
+    db.hymns = freshHymns;
+    await saveDb(db);
+    await kv.set(DB_DATA_VERSION_KEY, DB_DATA_VERSION);
+    return db;
+  } catch {}
+}
   if (raw) {
     try {
       const db = JSON.parse(raw) as LocalDb;
@@ -59,7 +72,7 @@ async function loadDb(): Promise<LocalDb> {
     hymns,
     categories: DEFAULT_CATEGORIES.map((name, i) => ({ id: `default-${i + 1}`, name }))
   };
-  await saveDb(db); return db;
+await saveDb(db); await kv.set(DB_DATA_VERSION_KEY, DB_DATA_VERSION); return db;
 }
 async function saveDb(db: LocalDb) { await kv.set(DB_KEY, JSON.stringify(db)); }
 function keyToName(k?: 'gt'|'sion') { return k === 'gt' ? 'Gloria y Triunfo' : k === 'sion' ? 'Himnos de Sión' : undefined; }
