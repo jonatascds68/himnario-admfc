@@ -18,6 +18,7 @@ interface Ctx {
 const ThemeCtx = createContext<Ctx | null>(null);
 const KEY_MODE = 'admfc_theme_mode';
 const KEY_FONT = 'admfc_font_scale';
+const KEY_THEME_MIGRATION = 'admfc_theme_migration_v1';
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const system = useColorScheme();
@@ -26,7 +27,17 @@ const [fontScale, setFontScaleState] = useState<number>(1.2);
 
   useEffect(() => {
     (async () => {
-      const m = await kv.get(KEY_MODE);
+const m = await kv.get(KEY_MODE);
+const migrated = await kv.get(KEY_THEME_MIGRATION);
+
+if (!migrated && m === 'system') {
+  setModeState('light');
+  await kv.set(KEY_MODE, 'light');
+  await kv.set(KEY_THEME_MIGRATION, 'done');
+} else {
+  if (m === 'light' || m === 'dark' || m === 'system') setModeState(m);
+  if (!migrated) await kv.set(KEY_THEME_MIGRATION, 'done');
+}
       if (m === 'light' || m === 'dark' || m === 'system') setModeState(m);
       const f = await kv.get(KEY_FONT);
       if (f) setFontScaleState(Math.min(2.5, Math.max(0.85, parseFloat(f) || 1)));
