@@ -9,7 +9,7 @@ import { api, Hymn } from '@/src/lib/api';
 import { HymnRow } from './(tabs)/search';
 
 // Recordar modo elegido durante el uso de la app (módulo)
-let lastMode: '123' | 'abc' = 'abc';
+let lastMode: '123' | 'abc' = '123';
 
 export default function Collection() {
   const { type } = useLocalSearchParams<{ type: string }>();
