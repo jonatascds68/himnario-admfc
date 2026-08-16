@@ -4,7 +4,7 @@
     "slug": "himnario-admfc",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+"icon": "./assets/images/icon-admfc.png",
     "scheme": "himnarioadmfc",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
@@ -15,7 +15,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
+"foregroundImage": "./assets/images/icon-admfc.png",
         "backgroundColor": "#0B1B3D"
       },
       "edgeToEdgeEnabled": true,
@@ -32,7 +32,7 @@
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/splash-image.png",
+"image": "./assets/images/logo-admfc.png",
           "imageWidth": 220,
           "resizeMode": "contain",
           "backgroundColor": "#0B1B3D"

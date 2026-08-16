@@ -53,4 +53,4 @@ export const LOGO_URL =
   'https://customer-assets-m6fa6gv7.emergentagent.net/job_e9f59d18-8499-4230-8a3c-f50e27393604/artifacts/hnxedxn8_LOGO%20ADMFC-OFICIAL.png';
 
 // Logo local (funciona sin internet). Usar en todas las pantallas.
-export const LOGO_LOCAL = require('../../assets/logo/admfc.png');
+export const LOGO_LOCAL = require('../../assets/images/logo-admfc.png');
