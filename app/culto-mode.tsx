@@ -8,7 +8,8 @@ import { useTheme } from '@/src/theme/ThemeContext';
 import { SPACING, RADIUS, COLORS } from '@/src/theme/tokens';
 import { api, Hymn, getSections } from '@/src/lib/api';
 import { playlist } from '@/src/lib/collections';
-import { hymnFontStorage, HymnFont } from '@/src/lib/storage';
+import { hymnFontStorage, HymnFont, hymnAlignStorage, HymnAlign } from '@/src/lib/storage';
+const [hymnAlign, setHymnAlign] = useState<HymnAlign>('center');
 export default function CultoMode() {
   const { id: initialId } = useLocalSearchParams<{ id: string }>();
   const router = useRouter();
@@ -27,6 +28,7 @@ const insets = useSafeAreaInsets();
 const [hymnFont, setHymnFont] = useState<HymnFont>('Lora');
 useEffect(() => {
   hymnFontStorage.get().then(setHymnFont);
+hymnAlignStorage.get().then(setHymnAlign);
 }, []);
   useEffect(() => { (async () => {
     const pl = await playlist.list();
@@ -60,7 +62,7 @@ useEffect(() => {
           <View style={[styles.divider, { backgroundColor: gold }]} />
           {sections.map((s, i) => (
             <View key={i} style={{ marginBottom: SPACING.xl }}>
-              <Text style={{ color: gold, fontSize: 12, fontWeight: '800', letterSpacing: 1.5, marginBottom: SPACING.sm }}>{s.kind === 'chorus' ? 'CORO' : `${s.index ?? i + 1}ª `}</Text>
+<Text style={{ color: gold, fontSize: 12, fontWeight: '800', letterSpacing: 1.5, marginBottom: SPACING.sm, textAlign: s.kind === 'chorus' ? hymnAlign : 'left' }}>{s.kind === 'chorus' ? 'CORO' : `${s.index ?? i + 1}ª `}</Text>
               <View style={s.kind === 'chorus' ? [styles.chorusBox, { borderLeftColor: gold, backgroundColor: dark.surfaceSecondary }] : undefined}>
                 <Text style={{ color: fg, fontSize: baseSize, lineHeight: baseSize * 1.5, fontFamily: hymnFont, fontStyle: s.kind === 'chorus' ? 'italic' : 'normal' }}>{s.text.replace(/\|+/g, '')}</Text>
               </View>
