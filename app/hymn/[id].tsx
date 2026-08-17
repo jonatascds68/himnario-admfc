@@ -27,6 +27,105 @@ function cleanBlockText(raw: string): string {
 }
 
 // Construye TEXTO PURO y limpio para compartir (WhatsApp, etc.). Nunca imagen.
+const CHROMATIC_NOTES = [
+  'C', 'C#', 'D', 'D#', 'E', 'F',
+  'F#', 'G', 'G#', 'A', 'A#', 'B',
+];
+
+const NOTE_INDEX: Record<string, number> = {
+  C: 0,
+  'B#': 0,
+
+  'C#': 1,
+  Db: 1,
+
+  D: 2,
+
+  'D#': 3,
+  Eb: 3,
+
+  E: 4,
+  Fb: 4,
+
+  'E#': 5,
+  F: 5,
+
+  'F#': 6,
+  Gb: 6,
+
+  G: 7,
+
+  'G#': 8,
+  Ab: 8,
+
+  A: 9,
+
+  'A#': 10,
+  Bb: 10,
+
+  B: 11,
+  Cb: 11,
+};
+
+function transposeNote(
+  note: string,
+  steps: number
+): string {
+  const index = NOTE_INDEX[note];
+
+  if (index == null) {
+    return note;
+  }
+
+  const next =
+    (index + steps % 12 + 12) % 12;
+
+  return CHROMATIC_NOTES[next];
+}
+
+function transposeChord(
+  chord: string,
+  steps: number
+): string {
+  if (!chord || steps === 0) {
+    return chord;
+  }
+
+  const match = chord.match(
+    /^([A-G](?:#|b)?)(.*)$/i
+  );
+
+  if (!match) {
+    return chord;
+  }
+
+  const root =
+    match[1][0].toUpperCase() +
+    match[1].slice(1);
+
+  let suffix = match[2] || '';
+
+  suffix = suffix.replace(
+    /\/([A-G](?:#|b)?)/gi,
+    (_, bass: string) => {
+      const normalized =
+        bass[0].toUpperCase() +
+        bass.slice(1);
+
+      return '/' +
+        transposeNote(
+          normalized,
+          steps
+        );
+    }
+  );
+
+  return (
+    transposeNote(root, steps) +
+    suffix
+  );
+}
+
 function buildShareText(hymn: Hymn): string {
   const sections = getSections(hymn);
   const lines: string[] = [];
@@ -67,6 +166,7 @@ const insets = useSafeAreaInsets();
   const [shareOpen, setShareOpen] = useState(false);
   const [sharing, setSharing] = useState(false);
 const [contentMode, setContentMode] = useState<'lyrics' | 'chords' | 'audio'>('lyrics');
+const [transposeSteps, setTransposeSteps] = useState(0);
 const [hymnFont, setHymnFont] = useState<HymnFont>('Lora');
 const [hymnAlign, setHymnAlign] = useState<HymnAlign>('center');
   const pageRefs = useRef<(View | null)[]>([]);
@@ -88,6 +188,10 @@ const [hymnAlign, setHymnAlign] = useState<HymnAlign>('center');
     } catch { setHymn(null); } finally { setLoading(false); }
   }, [id]);
   useEffect(() => { load(); }, [load]);
+
+  useEffect(() => {
+    setTransposeSteps(0);
+  }, [id]);
 useFocusEffect(
   useCallback(() => {
     hymnFontStorage.get().then(setHymnFont);
@@ -260,11 +364,92 @@ hymnAlignStorage.get().then(setHymnAlign);
 
         {hymn.tom ? (
           <Text style={[styles.experimentalMeta, { color: c.muted }]}>
-            Tono: {hymn.tom}
+            Tono: {transposeChord(hymn.tom, transposeSteps)}
           </Text>
         ) : null}
       </View>
     </View>
+
+    {hymn.tom ? (
+      <View
+        style={[
+          styles.transposeBar,
+          {
+            backgroundColor:
+              c.surfaceSecondary,
+            borderColor: c.border,
+          },
+        ]}
+      >
+        <Pressable
+          onPress={() =>
+            setTransposeSteps((value) =>
+              Math.max(-11, value - 1)
+            )
+          }
+          style={[
+            styles.transposeBtn,
+            { borderColor: c.border },
+          ]}
+        >
+          <Feather
+            name="minus"
+            size={20}
+            color={c.brandSecondary}
+          />
+        </Pressable>
+
+        <Pressable
+          onPress={() =>
+            setTransposeSteps(0)
+          }
+          style={styles.transposeCenter}
+        >
+          <Text
+            style={[
+              styles.transposeTone,
+              { color: c.onSurface },
+            ]}
+          >
+            {transposeChord(
+              hymn.tom,
+              transposeSteps
+            )}
+          </Text>
+
+          <Text
+            style={[
+              styles.transposeCaption,
+              { color: c.muted },
+            ]}
+          >
+            {transposeSteps === 0
+              ? 'Tono original'
+              : transposeSteps > 0
+                ? `+${transposeSteps} semitono${transposeSteps === 1 ? '' : 's'}`
+                : `${transposeSteps} semitono${transposeSteps === -1 ? '' : 's'}`}
+          </Text>
+        </Pressable>
+
+        <Pressable
+          onPress={() =>
+            setTransposeSteps((value) =>
+              Math.min(11, value + 1)
+            )
+          }
+          style={[
+            styles.transposeBtn,
+            { borderColor: c.border },
+          ]}
+        >
+          <Feather
+            name="plus"
+            size={20}
+            color={c.brandSecondary}
+          />
+        </Pressable>
+      </View>
+    ) : null}
 
     {hymn.cifra_bloques?.length ? (
       <>
@@ -306,7 +491,12 @@ hymnAlignStorage.get().then(setHymnAlign);
                             },
                           ]}
                         >
-                          {segmento.acorde || '·'}
+                          {segmento.acorde
+  ? transposeChord(
+      segmento.acorde,
+      transposeSteps
+    )
+  : '·'}
                         </Text>
 
                         <Text
@@ -556,6 +746,43 @@ controlBar: { position: 'absolute', left: 0, right: 0, bottom: 0, flexDirection:
     lineHeight: 20,
     textAlign: 'center',
     marginTop: SPACING.md,
+  },
+
+  transposeBar: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    borderWidth: 1,
+    borderRadius: RADIUS.lg,
+    padding: 5,
+    marginBottom: SPACING.xl,
+  },
+
+  transposeBtn: {
+    width: 48,
+    height: 48,
+    borderRadius: RADIUS.md,
+    borderWidth: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+
+  transposeCenter: {
+    flex: 1,
+    minHeight: 48,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+
+  transposeTone: {
+    fontSize: 22,
+    fontWeight: '900',
+    lineHeight: 25,
+  },
+
+  transposeCaption: {
+    fontSize: 10,
+    marginTop: 2,
+    fontWeight: '600',
   },
 
   chordsWrap: {
