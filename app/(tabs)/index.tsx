@@ -509,7 +509,7 @@ backgroundColor:
             <MaterialCommunityIcons
               name="bookmark-outline"
               size={26}
-              color={c.brand}
+              color="#0B1B3D"
             />
           </View>
 
@@ -551,7 +551,7 @@ backgroundColor:
             <Feather
               name="chevron-right"
               size={22}
-              color={c.brand}
+              color="#0B1B3D"
             />
           </View>
         </Pressable>

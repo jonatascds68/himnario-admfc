@@ -40,3 +40,5 @@ yarn-error.*
 app-example
 .env
 assets/images/*ANTES_NOVA_IDENTIDADE*
+*.bak-*
+/assets/base_mestre.pre-cifras.json

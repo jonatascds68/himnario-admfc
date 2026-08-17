@@ -40,6 +40,7 @@ cifra?: string | null;
 cifra_bloques?: CifraBloque[] | null;
 cifra_url?: string | null;
 audio_url?: string | null;
+audio_local?: string | null;
 cifra_autorizada?: boolean;
 audio_autorizado?: boolean;
 }
