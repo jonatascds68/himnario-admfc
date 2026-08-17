@@ -4,6 +4,7 @@ import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context'
 import { useFocusEffect, useLocalSearchParams, useRouter } from 'expo-router';
 import { Feather, Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 import * as Haptics from 'expo-haptics';
+import { useAudioPlayer, useAudioPlayerStatus } from 'expo-audio';
 import { captureRef } from 'react-native-view-shot';
 import * as Sharing from 'expo-sharing';
 import { useTheme } from '@/src/theme/ThemeContext';
@@ -12,6 +13,17 @@ import { api, Hymn, getSections } from '@/src/lib/api';
 import { favorites, recents, playlist } from '@/src/lib/collections';
 import { hymnFontStorage, HymnFont, hymnAlignStorage, HymnAlign } from '@/src/lib/storage';
 import { ShareCard, buildSharePages } from '@/src/components/ShareCard';
+
+function formatAudioTime(seconds?: number): string {
+  const safe = Number.isFinite(seconds)
+    ? Math.max(0, seconds || 0)
+    : 0;
+
+  const minutes = Math.floor(safe / 60);
+  const secs = Math.floor(safe % 60);
+
+  return `${minutes}:${String(secs).padStart(2, '0')}`;
+}
 
 // Limpia marcaciones internas (p.ej. "||...||") y normaliza saltos de línea.
 function cleanBlockText(raw: string): string {
@@ -172,6 +184,52 @@ const [hymnAlign, setHymnAlign] = useState<HymnAlign>('center');
   const pageRefs = useRef<(View | null)[]>([]);
   const starScale = React.useRef(new Animated.Value(1)).current;
 
+  const audioSource =
+    hymn?.audio_url ||
+    hymn?.audio_local ||
+    null;
+
+  const audioPlayer = useAudioPlayer(audioSource, {
+    updateInterval: 500,
+  });
+
+  const audioStatus = useAudioPlayerStatus(audioPlayer);
+  const audioTrackWidth = useRef(0);
+  const [dragTime, setDragTime] = useState<number | null>(null);
+
+  const audioDisplayTime =
+    dragTime ?? audioStatus.currentTime;
+
+  const seekAudioFromX = (
+    x: number,
+    commit: boolean
+  ) => {
+    if (
+      audioTrackWidth.current <= 0 ||
+      audioStatus.duration <= 0
+    ) {
+      return;
+    }
+
+    const ratio = Math.max(
+      0,
+      Math.min(
+        1,
+        x / audioTrackWidth.current
+      )
+    );
+
+    const seconds =
+      ratio * audioStatus.duration;
+
+    setDragTime(seconds);
+
+    if (commit) {
+      audioPlayer.seekTo(seconds);
+      setDragTime(null);
+    }
+  };
+
   const load = useCallback(async () => {
     if (!id) return;
     setLoading(true);
@@ -288,7 +346,7 @@ hymnAlignStorage.get().then(setHymnAlign);
 
     const disabled =
       (tab.key === 'chords' && !hymn.cifra && !hymn.cifra_url) ||
-      (tab.key === 'audio' && !hymn.audio_url);
+      (tab.key === 'audio' && !hymn.audio_url && !hymn.audio_local);
 
     return (
       <Pressable
@@ -612,20 +670,226 @@ hymnAlignStorage.get().then(setHymnAlign);
     )}
   </View>
 ) : (
-  <View style={styles.experimentalBox}>
-    <MaterialCommunityIcons
-      name="headphones"
-      size={34}
-      color={c.brandSecondary}
-    />
+  <View style={styles.audioWrap}>
+    <View style={styles.audioHeader}>
+      <MaterialCommunityIcons
+        name="headphones"
+        size={32}
+        color={c.brandSecondary}
+      />
 
-    <Text style={[styles.experimentalTitle, { color: c.onSurface }]}>
-      Audio
-    </Text>
+      <View style={{ flex: 1 }}>
+        <Text
+          style={[
+            styles.experimentalTitle,
+            {
+              color: c.onSurface,
+              marginTop: 0,
+            },
+          ]}
+        >
+          Audio
+        </Text>
 
-    <Text style={[styles.experimentalText, { color: c.muted }]}>
-      La pista de audio aparecerá aquí cuando exista una fuente autorizada.
-    </Text>
+        <Text
+          style={[
+            styles.audioSource,
+            { color: c.muted },
+          ]}
+        >
+          {hymn.audio_url
+            ? 'Fuente remota'
+            : hymn.audio_local
+              ? 'Archivo local'
+              : 'Sin audio disponible'}
+        </Text>
+      </View>
+    </View>
+
+    {audioSource ? (
+      <View
+        style={[
+          styles.audioCard,
+          {
+            backgroundColor: c.surfaceSecondary,
+            borderColor: c.border,
+          },
+        ]}
+      >
+        <View style={styles.audioTimes}>
+          <Text style={[styles.audioTime, { color: c.muted }]}>
+            {formatAudioTime(audioDisplayTime)}
+          </Text>
+
+          <Text style={[styles.audioTime, { color: c.muted }]}>
+            {formatAudioTime(audioStatus.duration)}
+          </Text>
+        </View>
+
+        <View
+          style={styles.audioSeekArea}
+          onLayout={(event) => {
+            audioTrackWidth.current =
+              event.nativeEvent.layout.width;
+          }}
+          onStartShouldSetResponder={() => true}
+          onMoveShouldSetResponder={() => true}
+          onResponderGrant={(event) =>
+            seekAudioFromX(
+              event.nativeEvent.locationX,
+              false
+            )
+          }
+          onResponderMove={(event) =>
+            seekAudioFromX(
+              event.nativeEvent.locationX,
+              false
+            )
+          }
+          onResponderRelease={(event) =>
+            seekAudioFromX(
+              event.nativeEvent.locationX,
+              true
+            )
+          }
+          onResponderTerminate={() =>
+            setDragTime(null)
+          }
+        >
+          <View
+            style={[
+              styles.audioTrack,
+              { backgroundColor: c.border },
+            ]}
+          >
+            <View
+              style={[
+                styles.audioProgress,
+                {
+                  backgroundColor:
+                    c.brandSecondary,
+                  width:
+                    audioStatus.duration > 0
+                      ? `${Math.min(
+                          100,
+                          (audioDisplayTime /
+                            audioStatus.duration) *
+                            100
+                        )}%`
+                      : '0%',
+                },
+              ]}
+            />
+
+            {audioStatus.duration > 0 ? (
+              <View
+                pointerEvents="none"
+                style={[
+                  styles.audioThumb,
+                  {
+                    backgroundColor:
+                      c.brandSecondary,
+                    left: `${Math.min(
+                      100,
+                      (audioDisplayTime /
+                        audioStatus.duration) *
+                        100
+                    )}%`,
+                  },
+                ]}
+              />
+            ) : null}
+          </View>
+        </View>
+
+        <View style={styles.audioControls}>
+          <Pressable
+            onPress={() =>
+              audioPlayer.seekTo(
+                Math.max(
+                  0,
+                  audioStatus.currentTime - 10
+                )
+              )
+            }
+            style={[
+              styles.audioSmallBtn,
+              { borderColor: c.border },
+            ]}
+          >
+            <MaterialCommunityIcons
+              name="rewind-10"
+              size={24}
+              color={c.brand}
+            />
+          </Pressable>
+
+          <Pressable
+            onPress={() => {
+              if (audioStatus.playing) {
+                audioPlayer.pause();
+              } else {
+                audioPlayer.play();
+              }
+            }}
+            style={[
+              styles.audioPlayBtn,
+              { backgroundColor: c.brand },
+            ]}
+          >
+            <Feather
+              name={audioStatus.playing ? 'pause' : 'play'}
+              size={28}
+              color={c.onSurfaceInverse}
+            />
+          </Pressable>
+
+          <Pressable
+            onPress={() =>
+              audioPlayer.seekTo(
+                audioStatus.duration > 0
+                  ? Math.min(
+                      audioStatus.duration,
+                      audioStatus.currentTime + 10
+                    )
+                  : audioStatus.currentTime + 10
+              )
+            }
+            style={[
+              styles.audioSmallBtn,
+              { borderColor: c.border },
+            ]}
+          >
+            <MaterialCommunityIcons
+              name="fast-forward-10"
+              size={24}
+              color={c.brand}
+            />
+          </Pressable>
+        </View>
+
+        {audioStatus.isBuffering ? (
+          <View style={styles.audioLoading}>
+            <ActivityIndicator
+              size="small"
+              color={c.brandSecondary}
+            />
+            <Text style={{ color: c.muted, fontSize: 11 }}>
+              Cargando audio...
+            </Text>
+          </View>
+        ) : null}
+      </View>
+    ) : (
+      <Text
+        style={[
+          styles.experimentalText,
+          { color: c.muted },
+        ]}
+      >
+        No hay audio registrado para este himno.
+      </Text>
+    )}
   </View>
 )}
         {hymn.fuente ? <Text style={[styles.meta, { color: c.muted, marginTop: SPACING.lg }]}>Fuente: {hymn.fuente}</Text> : null}
@@ -720,6 +984,98 @@ controlBar: { position: 'absolute', left: 0, right: 0, bottom: 0, flexDirection:
     alignItems: 'center',
     justifyContent: 'center',
     gap: 6,
+  },
+
+  audioWrap: {
+    paddingVertical: SPACING.md,
+  },
+
+  audioHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: SPACING.md,
+    marginBottom: SPACING.xl,
+  },
+
+  audioSource: {
+    fontSize: 11.5,
+    marginTop: 3,
+  },
+
+  audioCard: {
+    borderWidth: 1,
+    borderRadius: RADIUS.lg,
+    padding: SPACING.lg,
+  },
+
+  audioTimes: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginBottom: 8,
+  },
+
+  audioTime: {
+    fontSize: 11,
+    fontWeight: '700',
+    fontVariant: ['tabular-nums'],
+  },
+
+  audioSeekArea: {
+    height: 32,
+    justifyContent: 'center',
+    marginBottom: SPACING.lg,
+  },
+
+  audioTrack: {
+    height: 6,
+    borderRadius: 6,
+    overflow: 'visible',
+  },
+
+  audioProgress: {
+    height: '100%',
+    borderRadius: 6,
+  },
+
+  audioThumb: {
+    position: 'absolute',
+    width: 16,
+    height: 16,
+    borderRadius: 8,
+    top: -5,
+    marginLeft: -8,
+  },
+
+  audioControls: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: SPACING.xl,
+  },
+
+  audioPlayBtn: {
+    width: 64,
+    height: 64,
+    borderRadius: 32,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+
+  audioSmallBtn: {
+    width: 48,
+    height: 48,
+    borderRadius: 24,
+    borderWidth: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+
+  audioLoading: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 7,
+    marginTop: SPACING.md,
   },
 
   experimentalBox: {

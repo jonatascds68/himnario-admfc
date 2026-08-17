@@ -7,6 +7,7 @@ import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context'
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { Feather } from '@expo/vector-icons';
 import * as DocumentPicker from 'expo-document-picker';
+import * as FileSystem from 'expo-file-system/legacy';
 import { useTheme } from '@/src/theme/ThemeContext';
 import { SPACING, RADIUS } from '@/src/theme/tokens';
 import { api, Hymn, Bloque, getSections } from '@/src/lib/api';
@@ -179,12 +180,36 @@ const insets = useSafeAreaInsets();
     try {
       const result = await DocumentPicker.getDocumentAsync({
         type: 'audio/*',
-        copyToCacheDirectory: false,
+        copyToCacheDirectory: true,
         multiple: false,
       });
 
       if (!result.canceled && result.assets?.[0]) {
-        setAudioLocal(result.assets[0].uri);
+        const asset = result.assets[0];
+
+        const dir = `${FileSystem.documentDirectory}audios/`;
+        const info = await FileSystem.getInfoAsync(dir);
+
+        if (!info.exists) {
+          await FileSystem.makeDirectoryAsync(dir, {
+            intermediates: true,
+          });
+        }
+
+        const safeName = asset.name.replace(
+          /[^a-zA-Z0-9._-]/g,
+          '_'
+        );
+
+        const destination =
+          `${dir}${Date.now()}-${safeName}`;
+
+        await FileSystem.copyAsync({
+          from: asset.uri,
+          to: destination,
+        });
+
+        setAudioLocal(destination);
       }
     } catch (e: any) {
       setMsg(e?.message || 'No se pudo seleccionar el audio');
