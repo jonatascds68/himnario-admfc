@@ -22,17 +22,40 @@ export interface Hymn {
 interface LocalDb { hymns: Hymn[]; categories: { id: string; name: string }[]; }
 
 const DEFAULT_CATEGORIES = [
-  "Adoración y Alabanza", "Espíritu Santo / Pentecostés", "Salvación",
-  "Evangelización", "Misiones", "Oración", "Consagración", "Santa Cena",
-  "Bautismo", "Segunda Venida de Cristo", "Cielo / Eternidad",
-  "Consolación y Esperanza", "Fe y Confianza", "Santidad / Vida Cristiana",
-  "Gratitud", "Palabra de Dios", "Iglesia / Comunión", "Servicio Cristiano",
-  "Hogar / Familia", "Apertura del Culto", "Cierre del Culto", "Invitación / Llamado",
+  "Actividad Cristiana",
+  "Alabanza a Dios",
+  "Amor y Gracia de Dios",
+  "Año Nuevo",
+  "Apertura de Cultos",
+  "Ayuda de Dios en las Pruebas",
+  "Bautismo en el Espíritu Santo",
+  "Bautismo en las Aguas",
+  "Bienvenidas",
+  "Bodas",
+  "Cena del Señor",
+  "Cielo - Gloriosa Esperanza",
+  "Consagración",
+  "Coros",
+  "Despedida",
+  "Escuela Dominical",
+  "Fe y Confianza",
+  "Gozo y Paz de los Creyentes",
+  "Iglesia",
+  "Invitación",
+  "Jesús Salvador y Amigo",
+  "Navidad",
+  "Oración - Culto",
+  "Pascua",
+  "Sagradas Escrituras",
+  "Sanidad Divina",
+  "Sangre, Redención, Salvación",
+  "Segunda Venida",
+  "Sufrimiento y Muerte de Jesús",
 ];
 
 const DB_KEY = 'admfc_local_db_v1';
 const DB_DATA_VERSION_KEY = 'admfc_local_db_data_version';
-const DB_DATA_VERSION = '3';
+const DB_DATA_VERSION = '4';
 const ADMIN_EMAIL_KEY = 'admfc_local_admin_email';
 const ADMIN_PASS_KEY = 'admfc_local_admin_password';
 
