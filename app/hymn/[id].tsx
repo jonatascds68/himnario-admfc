@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState, useRef } from 'react';
 import { View, Text, StyleSheet, ScrollView, Pressable, ActivityIndicator, Share, Animated, Modal, Platform } from 'react-native';
 import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useFocusEffect, useLocalSearchParams, useRouter } from 'expo-router';
-import { Feather, Ionicons } from '@expo/vector-icons';
+import { Feather, Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 import * as Haptics from 'expo-haptics';
 import { captureRef } from 'react-native-view-shot';
 import * as Sharing from 'expo-sharing';
@@ -66,6 +66,7 @@ const insets = useSafeAreaInsets();
   const [equivId, setEquivId] = useState<string | null>(null);
   const [shareOpen, setShareOpen] = useState(false);
   const [sharing, setSharing] = useState(false);
+const [contentMode, setContentMode] = useState<'lyrics' | 'chords' | 'audio'>('lyrics');
 const [hymnFont, setHymnFont] = useState<HymnFont>('Lora');
 const [hymnAlign, setHymnAlign] = useState<HymnAlign>('center');
   const pageRefs = useRef<(View | null)[]>([]);
@@ -173,7 +174,53 @@ hymnAlignStorage.get().then(setHymnAlign);
           </Pressable>
         ) : null}
         <View style={[styles.divider, { backgroundColor: c.borderStrong }]} />
-        {sections.length === 0 ? (
+<View style={[styles.modeTabs, { backgroundColor: c.surfaceSecondary, borderColor: c.border }]}>
+  {[
+    { key: 'lyrics', label: 'Letra', icon: 'file-text' },
+    { key: 'chords', label: 'Cifras', icon: 'music' },
+    { key: 'audio', label: 'Audio', icon: 'headphones' },
+  ].map((tab) => {
+    const active = contentMode === tab.key;
+
+    const disabled =
+      (tab.key === 'chords' && !hymn.cifra && !hymn.cifra_url) ||
+      (tab.key === 'audio' && !hymn.audio_url);
+
+    return (
+      <Pressable
+        key={tab.key}
+        disabled={disabled}
+        onPress={() =>
+          setContentMode(tab.key as 'lyrics' | 'chords' | 'audio')
+        }
+        style={[
+          styles.modeTab,
+          active && { backgroundColor: c.brand },
+          disabled && { opacity: 0.35 },
+        ]}
+      >
+        <Feather
+          name={tab.icon as any}
+          size={16}
+          color={active ? c.onSurfaceInverse : c.onSurface}
+        />
+
+        <Text
+          style={{
+            color: active ? c.onSurfaceInverse : c.onSurface,
+            fontSize: 12,
+            fontWeight: '700',
+          }}
+        >
+          {tab.label}
+        </Text>
+      </Pressable>
+    );
+  })}
+</View>
+       {contentMode === 'lyrics' ? (
+  <>
+    {sections.length === 0 ? (
           <Text style={{ color: c.muted, textAlign: 'center', marginTop: SPACING.xl }}>Letra no disponible</Text>
         ) : (
           <View testID="hymn-lyrics">
@@ -183,7 +230,7 @@ hymnAlignStorage.get().then(setHymnAlign);
   <>
     <Text style={[styles.stanzaTitle, { color: c.brand, textAlign: hymnAlign }]}>CORO</Text>
     <View style={styles.chorusClean}>
-<Text style={[styles.verse, { color: c.muted, fontSize: baseSize, lineHeight: baseSize * 1.55, fontFamily: 'MerriweatherItalic', textAlign: hymnAlign }]}>{s.text.replace(/\|+/g, '')}</Text>
+<Text style={[styles.verse, { color: '#0B6678', fontSize: baseSize, lineHeight: baseSize * 1.55, fontFamily: 'MerriweatherItalic', textAlign: hymnAlign }]}>{s.text.replace(/\|+/g, '')}</Text>
     </View>
   </>
 ) : (
@@ -196,6 +243,46 @@ hymnAlignStorage.get().then(setHymnAlign);
             ))}
           </View>
         )}
+  </>
+) : contentMode === 'chords' ? (
+  <View style={styles.experimentalBox}>
+    <MaterialCommunityIcons
+      name="music-clef-treble"
+      size={34}
+      color={c.brandSecondary}
+    />
+
+    <Text style={[styles.experimentalTitle, { color: c.onSurface }]}>
+      Cifras
+    </Text>
+
+    {hymn.tom ? (
+      <Text style={[styles.experimentalMeta, { color: c.muted }]}>
+        Tono: {hymn.tom}
+      </Text>
+    ) : null}
+
+    <Text style={[styles.experimentalText, { color: c.muted }]}>
+      La cifra estará disponible cuando tengamos una versión autorizada para este himno.
+    </Text>
+  </View>
+) : (
+  <View style={styles.experimentalBox}>
+    <MaterialCommunityIcons
+      name="headphones"
+      size={34}
+      color={c.brandSecondary}
+    />
+
+    <Text style={[styles.experimentalTitle, { color: c.onSurface }]}>
+      Audio
+    </Text>
+
+    <Text style={[styles.experimentalText, { color: c.muted }]}>
+      La pista de audio aparecerá aquí cuando exista una fuente autorizada.
+    </Text>
+  </View>
+)}
         {hymn.fuente ? <Text style={[styles.meta, { color: c.muted, marginTop: SPACING.lg }]}>Fuente: {hymn.fuente}</Text> : null}
         {hymn.observacion ? <Text style={[styles.meta, { color: c.muted, marginTop: 4 }]}>Nota: {hymn.observacion}</Text> : null}
       </ScrollView>
@@ -261,4 +348,47 @@ chorusClean: { paddingVertical: 8, marginTop: 6, marginBottom: 10 },
 controlBar: { position: 'absolute', left: 0, right: 0, bottom: 0, flexDirection: 'row', paddingHorizontal: SPACING.md, paddingTop: 6, gap: 6, borderTopWidth: 1 },
   ctrl: { minWidth: 44, height: 44, borderRadius: RADIUS.md, borderWidth: 1, alignItems: 'center', justifyContent: 'center', paddingHorizontal: 10 },
   ctrlWide: { flex: 1, flexDirection: 'row', height: 44, borderRadius: RADIUS.md, borderWidth: 1, alignItems: 'center', justifyContent: 'center', gap: 6, paddingHorizontal: 8 },
+  modeTabs: {
+    flexDirection: 'row',
+    borderWidth: 1,
+    borderRadius: RADIUS.lg,
+    padding: 4,
+    marginBottom: SPACING.xl,
+  },
+
+  modeTab: {
+    flex: 1,
+    height: 42,
+    borderRadius: RADIUS.md,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 6,
+  },
+
+  experimentalBox: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: SPACING.xxxl,
+    paddingHorizontal: SPACING.lg,
+  },
+
+  experimentalTitle: {
+    fontSize: 20,
+    fontWeight: '800',
+    marginTop: SPACING.md,
+  },
+
+  experimentalMeta: {
+    fontSize: 13,
+    marginTop: 6,
+    fontWeight: '700',
+  },
+
+  experimentalText: {
+    fontSize: 13,
+    lineHeight: 20,
+    textAlign: 'center',
+    marginTop: SPACING.md,
+  },
 });

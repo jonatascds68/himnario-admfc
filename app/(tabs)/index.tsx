@@ -88,7 +88,7 @@ const FEATURED = [
 
 export default function Home() {
   const router = useRouter();
-  const { c } = useTheme();
+const { c, isDark } = useTheme();
 
   const [categories, setCategories] =
     useState<CategoryItem[]>([]);
@@ -190,166 +190,96 @@ export default function Home() {
         </Pressable>
 
         {/* HIMNARIOS */}
-        <SectionTitle
-          title="Himnarios"
-          action="Ver todos"
-          onAction={() =>
-            router.push('/(tabs)/search')
-          }
-          c={c}
+<SectionTitle
+  title="Himnarios"
+  action="Ver todos"
+  onAction={() => router.push('/(tabs)/search')}
+  c={c}
+/>
+
+<View style={styles.hymnalsRow}>
+  {[
+    {
+      key: 'gt',
+      title: 'Gloria y Triunfo',
+      count: '400 himnos',
+      href: '/collection?type=gt',
+    },
+    {
+      key: 'sion',
+      title: 'Himnos de Sión',
+      count: '318 himnos',
+      href: '/collection?type=sion',
+    },
+  ].map((item) => (
+    <Pressable
+      key={item.key}
+      onPress={() => router.push(item.href as any)}
+      style={[
+        styles.hymnalCard,
+        {
+          backgroundColor: isDark ? '#0B1B3D' : c.brand,
+        },
+      ]}
+      testID={`home-tile-${item.key}`}
+    >
+      <View
+        style={[
+          styles.hymnalIcon,
+          {
+            borderColor: c.brandSecondary,
+          },
+        ]}
+      >
+        <MaterialCommunityIcons
+          name="book-open-page-variant"
+          size={26}
+          color={c.brandSecondary}
         />
+      </View>
 
-        <ScrollView
-          horizontal
-          showsHorizontalScrollIndicator={false}
-          contentContainerStyle={
-            styles.horizontalContent
-          }
+      <View style={styles.hymnalTextArea}>
+        <Text
+          style={[
+            styles.hymnalTitle,
+            {
+              color: isDark ? '#FFFFFF' : c.onSurfaceInverse,
+            },
+          ]}
+          numberOfLines={2}
         >
-          <Pressable
-            onPress={() =>
-              router.push(
-                '/collection?type=gt' as any
-              )
-            }
-            style={[
-              styles.hymnalCard,
-              { backgroundColor: c.brand },
-            ]}
-          >
-            <View
-              style={[
-                styles.hymnalIcon,
-                {
-                  borderColor:
-                    c.brandSecondary,
-                },
-              ]}
-            >
-              <MaterialCommunityIcons
-                name="book-open-page-variant"
-                size={26}
-                color={c.brandSecondary}
-              />
-            </View>
+          {item.title}
+        </Text>
 
-            <View style={styles.hymnalBottom}>
-              <View style={{ flex: 1 }}>
-                <Text
-                  style={[
-                    styles.hymnalTitle,
-                    {
-                      color:
-                        c.onSurfaceInverse,
-                    },
-                  ]}
-                >
-                  Gloria y Triunfo
-                </Text>
+        <Text
+          style={[
+            styles.hymnalCount,
+            {
+              color: isDark ? '#F0D77A' : c.brandTertiary,
+            },
+          ]}
+        >
+          {item.count}
+        </Text>
+      </View>
 
-                <Text
-                  style={[
-                    styles.hymnalCount,
-                    {
-                      color:
-                        c.brandTertiary,
-                    },
-                  ]}
-                >
-                  400 himnos
-                </Text>
-              </View>
-
-              <View
-                style={[
-                  styles.goldArrow,
-                  {
-                    backgroundColor:
-                      c.brandSecondary,
-                  },
-                ]}
-              >
-                <Feather
-                  name="chevron-right"
-                  size={22}
-                  color={c.brand}
-                />
-              </View>
-            </View>
-          </Pressable>
-
-          <Pressable
-            onPress={() =>
-              router.push(
-                '/collection?type=sion' as any
-              )
-            }
-            style={[
-              styles.hymnalCard,
-              { backgroundColor: c.brand },
-            ]}
-          >
-            <View
-              style={[
-                styles.hymnalIcon,
-                {
-                  borderColor:
-                    c.brandSecondary,
-                },
-              ]}
-            >
-              <MaterialCommunityIcons
-                name="book-open-page-variant"
-                size={26}
-                color={c.brandSecondary}
-              />
-            </View>
-
-            <View style={styles.hymnalBottom}>
-              <View style={{ flex: 1 }}>
-                <Text
-                  style={[
-                    styles.hymnalTitle,
-                    {
-                      color:
-                        c.onSurfaceInverse,
-                    },
-                  ]}
-                >
-                  Himnos de Sión
-                </Text>
-
-                <Text
-                  style={[
-                    styles.hymnalCount,
-                    {
-                      color:
-                        c.brandTertiary,
-                    },
-                  ]}
-                >
-                  318 himnos
-                </Text>
-              </View>
-
-              <View
-                style={[
-                  styles.goldArrow,
-                  {
-                    backgroundColor:
-                      c.brandSecondary,
-                  },
-                ]}
-              >
-                <Feather
-                  name="chevron-right"
-                  size={22}
-                  color={c.brand}
-                />
-              </View>
-            </View>
-          </Pressable>
-        </ScrollView>
+      <View
+        style={[
+          styles.goldArrow,
+          {
+            backgroundColor: c.brandSecondary,
+          },
+        ]}
+      >
+        <Feather
+          name="chevron-right"
+          size={22}
+          color="#0B1B3D"
+        />
+      </View>
+    </Pressable>
+  ))}
+</View>
 
         {/* CONTINUAR / RECENTES */}
         <SectionTitle
@@ -517,8 +447,8 @@ export default function Home() {
                 style={[
                   styles.categoryIcon,
                   {
-                    backgroundColor:
-                      c.brand,
+backgroundColor:
+  isDark ? '#0B1B3D' : c.brand,
                   },
                 ]}
               >
@@ -563,7 +493,7 @@ export default function Home() {
           }
           style={[
             styles.allCard,
-            { backgroundColor: c.brand },
+{ backgroundColor: isDark ? '#0B1B3D' : c.brand },
           ]}
           testID="home-cta-all"
         >
@@ -816,49 +746,57 @@ const styles = StyleSheet.create({
     gap: SPACING.md,
   },
 
-  hymnalCard: {
-    width: 245,
-    minHeight: 165,
-    borderRadius: RADIUS.lg,
-    padding: SPACING.lg,
-    justifyContent:
-      'space-between',
-  },
+hymnalsRow: {
+  flexDirection: 'row',
+  gap: SPACING.md,
+  paddingHorizontal: SPACING.lg,
+  marginBottom: SPACING.xl,
+},
 
-  hymnalIcon: {
-    width: 48,
-    height: 48,
-    borderRadius: 24,
-    borderWidth: 1.5,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+hymnalCard: {
+  flex: 1,
+  height: 190,
+  borderRadius: RADIUS.lg,
+  padding: SPACING.lg,
+  position: 'relative',
+  justifyContent: 'space-between',
+},
 
-  hymnalBottom: {
-    flexDirection: 'row',
-    alignItems: 'flex-end',
-    gap: SPACING.sm,
-  },
+hymnalIcon: {
+  width: 48,
+  height: 48,
+  borderRadius: 24,
+  borderWidth: 1.5,
+  alignItems: 'center',
+  justifyContent: 'center',
+},
 
-  hymnalTitle: {
-    fontSize: 18,
-    fontWeight: '800',
-  },
+hymnalTextArea: {
+  paddingRight: 46,
+},
 
-  hymnalCount: {
-    fontSize: 13,
-    marginTop: 5,
-    fontWeight: '700',
-  },
+hymnalTitle: {
+  fontSize: 18,
+  fontWeight: '800',
+  lineHeight: 23,
+},
 
-  goldArrow: {
-    width: 40,
-    height: 40,
-    borderRadius: 20,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+hymnalCount: {
+  fontSize: 13,
+  marginTop: 6,
+  fontWeight: '700',
+},
 
+goldArrow: {
+  position: 'absolute',
+  right: SPACING.md,
+  bottom: SPACING.md,
+  width: 40,
+  height: 40,
+  borderRadius: 20,
+  alignItems: 'center',
+  justifyContent: 'center',
+},
   featureCard: {
     marginHorizontal: SPACING.lg,
     marginBottom: SPACING.xl,
