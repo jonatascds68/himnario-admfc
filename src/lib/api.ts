@@ -41,6 +41,7 @@ cifra_bloques?: CifraBloque[] | null;
 cifra_url?: string | null;
 audio_url?: string | null;
 audio_local?: string | null;
+audio_external_url?: string | null;
 cifra_autorizada?: boolean;
 audio_autorizado?: boolean;
 }
@@ -158,9 +159,126 @@ export const api = {
   isAuth: async () => !!adminSession.get(),
 
   createHymn: async (payload:Partial<Hymn>) => { requireAuth(); const db=await loadDb(); const h={...payload,id:payload.id||`LOCAL-${Date.now()}`} as Hymn; db.hymns.push(h); await saveDb(db); return h; },
-  updateHymn: async (id:string,payload:Partial<Hymn>) => { requireAuth(); const db=await loadDb(); const i=db.hymns.findIndex(h=>h.id===id); if(i<0) throw new Error('Himno no encontrado'); db.hymns[i]={...db.hymns[i],...payload,id}; await saveDb(db); return db.hymns[i]; },
+  updateHymn: async (id:string,payload:Partial<Hymn>) => {
+    requireAuth();
+
+    const db = await loadDb();
+    const i = db.hymns.findIndex(h => h.id === id);
+
+    if (i < 0) {
+      throw new Error('Himno no encontrado');
+    }
+
+    db.hymns[i] = {
+      ...db.hymns[i],
+      ...payload,
+      id,
+    };
+
+    const updated = db.hymns[i];
+
+    if (
+      updated.numero_equivalente != null &&
+      updated.himnario_equivalente
+    ) {
+      const target = db.hymns.find(
+        h =>
+          h.himnario === updated.himnario_equivalente &&
+          h.numero === updated.numero_equivalente
+      );
+
+      if (target) {
+        const sharedKeys: (keyof Hymn)[] = [
+          'tom',
+          'cifra',
+          'cifra_bloques',
+          'cifra_url',
+          'audio_url',
+          'audio_local',
+          'audio_external_url',
+          'cifra_autorizada',
+          'audio_autorizado',
+        ];
+
+        for (const key of sharedKeys) {
+          if (
+            Object.prototype.hasOwnProperty.call(
+              payload,
+              key
+            )
+          ) {
+            (target as any)[key] =
+              (payload as any)[key];
+          }
+        }
+      }
+    }
+
+    await saveDb(db);
+    return updated;
+  },
   deleteHymn: async (id:string) => { requireAuth(); const db=await loadDb(); db.hymns=db.hymns.filter(h=>h.id!==id); await saveDb(db); return {ok:true}; },
-  setEquivalence: async (id:string,himnario:'gt'|'sion',numero:number) => { requireAuth(); const db=await loadDb(); const h=db.hymns.find(x=>x.id===id), target=db.hymns.find(x=>x.himnario===keyToName(himnario)&&x.numero===numero); if(!h||!target) throw new Error('Himno no encontrado'); h.numero_equivalente=target.numero; h.himnario_equivalente=target.himnario; target.numero_equivalente=h.numero; target.himnario_equivalente=h.himnario; await saveDb(db); return {hymn:h}; },
+  setEquivalence: async (
+    id:string,
+    himnario:'gt'|'sion',
+    numero:number
+  ) => {
+    requireAuth();
+
+    const db = await loadDb();
+
+    const h = db.hymns.find(x => x.id === id);
+    const target = db.hymns.find(
+      x =>
+        x.himnario === keyToName(himnario) &&
+        x.numero === numero
+    );
+
+    if (!h || !target) {
+      throw new Error('Himno no encontrado');
+    }
+
+    h.numero_equivalente = target.numero;
+    h.himnario_equivalente = target.himnario;
+
+    target.numero_equivalente = h.numero;
+    target.himnario_equivalente = h.himnario;
+
+    const sharedKeys: (keyof Hymn)[] = [
+      'tom',
+      'cifra',
+      'cifra_bloques',
+      'cifra_url',
+      'audio_url',
+      'audio_local',
+      'audio_external_url',
+      'cifra_autorizada',
+      'audio_autorizado',
+    ];
+
+    for (const key of sharedKeys) {
+      const sourceValue = (h as any)[key];
+      const targetValue = (target as any)[key];
+
+      const chosen =
+        sourceValue !== undefined &&
+        sourceValue !== null &&
+        sourceValue !== ''
+          ? sourceValue
+          : targetValue;
+
+      if (chosen !== undefined) {
+        (h as any)[key] = chosen;
+        (target as any)[key] = chosen;
+      }
+    }
+
+    await saveDb(db);
+
+    return {
+      hymn: h,
+    };
+  },
   removeEquivalence: async (id:string) => { requireAuth(); const db=await loadDb(); const h=db.hymns.find(x=>x.id===id); if(!h) throw new Error('Himno no encontrado'); const oldN=h.numero_equivalente, oldH=h.himnario_equivalente; h.numero_equivalente=null; h.himnario_equivalente=null; const target=db.hymns.find(x=>x.himnario===oldH&&x.numero===oldN); if(target&&target.numero_equivalente===h.numero){target.numero_equivalente=null;target.himnario_equivalente=null;} await saveDb(db); return {hymn:h}; },
   exportBackup: async () => { requireAuth(); const db=await loadDb(); return {schema_version:'local-1',release:'ADMFC_INDEPENDIENTE_1.0',total:db.hymns.length,himnos:db.hymns,categories:db.categories}; },
   restoreBackup: async (p:any) => { requireAuth(); const hymns=(p.himnos||p.hymns||[]) as Hymn[]; if(!Array.isArray(hymns)||!hymns.length) throw new Error('Backup inválido'); const categories=p.categories||p.categorias||[]; await saveDb({hymns,categories}); return {restored_hymns:hymns.length,restored_categories:categories.length}; },

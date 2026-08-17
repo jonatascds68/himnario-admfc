@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState, useRef } from 'react';
-import { View, Text, StyleSheet, ScrollView, Pressable, ActivityIndicator, Share, Animated, Modal, Platform } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, Pressable, ActivityIndicator, Linking, Share, Animated, Modal, Platform } from 'react-native';
 import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useFocusEffect, useLocalSearchParams, useRouter } from 'expo-router';
 import { Feather, Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
@@ -230,6 +230,17 @@ const [hymnAlign, setHymnAlign] = useState<HymnAlign>('center');
     }
   };
 
+  useFocusEffect(
+    useCallback(() => {
+      return () => {
+        try {
+          audioPlayer.pause();
+        } catch {}
+        setDragTime(null);
+      };
+    }, [audioPlayer])
+  );
+
   const load = useCallback(async () => {
     if (!id) return;
     setLoading(true);
@@ -327,7 +338,11 @@ hymnAlignStorage.get().then(setHymnAlign);
         <Text style={[styles.number, { color: c.brand }]}>Nº {hymn.numero}</Text>
 <Text style={[styles.title, { color: c.onSurface, textAlign: 'center' }]}>{hymn.titulo}</Text>
         {equivId && hymn.numero_equivalente ? (
-          <Pressable onPress={() => router.push(`/hymn/${equivId}`)} style={[styles.equivBox, { borderColor: c.borderStrong, backgroundColor: c.surfaceSecondary }]} testID="hymn-cross-ref">
+          <Pressable onPress={() => {
+              audioPlayer.pause();
+              setDragTime(null);
+              router.replace(`/hymn/${equivId}`);
+            }} style={[styles.equivBox, { borderColor: c.borderStrong, backgroundColor: c.surfaceSecondary }]} testID="hymn-cross-ref">
             <Feather name="link" size={16} color={c.brand} />
             <Text style={{ color: c.onSurface, fontSize: 13 }}>
               También en: <Text style={{ fontWeight: '700', color: c.brand }}>{shortOther} — Nº {hymn.numero_equivalente}</Text>
@@ -345,8 +360,8 @@ hymnAlignStorage.get().then(setHymnAlign);
     const active = contentMode === tab.key;
 
     const disabled =
-      (tab.key === 'chords' && !hymn.cifra && !hymn.cifra_url) ||
-      (tab.key === 'audio' && !hymn.audio_url && !hymn.audio_local);
+      (tab.key === 'chords' && !hymn.cifra && !hymn.cifra_url && !hymn.cifra_bloques?.length) ||
+      (tab.key === 'audio' && !hymn.audio_url && !hymn.audio_local && !hymn.audio_external_url);
 
     return (
       <Pressable
@@ -868,6 +883,39 @@ hymnAlignStorage.get().then(setHymnAlign);
           </Pressable>
         </View>
 
+        {hymn.audio_external_url ? (
+          <Pressable
+            onPress={async () => {
+              try {
+                await Linking.openURL(hymn.audio_external_url!);
+              } catch {
+                // enlace inválido ou sem aplicativo compatível
+              }
+            }}
+            style={[
+              styles.externalAudioBtn,
+              {
+                borderColor: c.brandSecondary,
+              },
+            ]}
+          >
+            <Feather
+              name="external-link"
+              size={18}
+              color={c.brandSecondary}
+            />
+            <Text
+              style={{
+                color: c.brandSecondary,
+                fontWeight: '800',
+                fontSize: 13,
+              }}
+            >
+              Abrir enlace externo
+            </Text>
+          </Pressable>
+        ) : null}
+
         {audioStatus.isBuffering ? (
           <View style={styles.audioLoading}>
             <ActivityIndicator
@@ -879,6 +927,47 @@ hymnAlignStorage.get().then(setHymnAlign);
             </Text>
           </View>
         ) : null}
+      </View>
+    ) : hymn.audio_external_url ? (
+      <View style={{ alignItems: 'center', gap: SPACING.md }}>
+        <Text
+          style={[
+            styles.experimentalText,
+            { color: c.muted },
+          ]}
+        >
+          Audio disponible mediante enlace externo.
+        </Text>
+
+        <Pressable
+          onPress={async () => {
+            try {
+              await Linking.openURL(hymn.audio_external_url!);
+            } catch {
+              // enlace inválido o aplicación no disponible
+            }
+          }}
+          style={[
+            styles.externalAudioBtn,
+            { borderColor: c.brandSecondary },
+          ]}
+        >
+          <Feather
+            name="external-link"
+            size={18}
+            color={c.brandSecondary}
+          />
+
+          <Text
+            style={{
+              color: c.brandSecondary,
+              fontWeight: '800',
+              fontSize: 13,
+            }}
+          >
+            Abrir enlace externo
+          </Text>
+        </Pressable>
       </View>
     ) : (
       <Text
@@ -1068,6 +1157,17 @@ controlBar: { position: 'absolute', left: 0, right: 0, bottom: 0, flexDirection:
     borderWidth: 1,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+
+  externalAudioBtn: {
+    minHeight: 46,
+    borderWidth: 1.5,
+    borderRadius: RADIUS.md,
+    marginTop: SPACING.lg,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: SPACING.sm,
   },
 
   audioLoading: {

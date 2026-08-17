@@ -109,7 +109,9 @@ const insets = useSafeAreaInsets();
   const [tom, setTom] = useState('');
   const [cifraUrl, setCifraUrl] = useState('');
   const [audioUrl, setAudioUrl] = useState('');
+  const [externalAudioUrl, setExternalAudioUrl] = useState('');
   const [audioLocal, setAudioLocal] = useState('');
+  const [originalAudioLocal, setOriginalAudioLocal] = useState('');
   const [cifraAutorizada, setCifraAutorizada] = useState(false);
   const [audioAutorizado, setAudioAutorizado] = useState(false);
 
@@ -135,7 +137,9 @@ const insets = useSafeAreaInsets();
       setTom(h.tom || '');
       setCifraUrl(h.cifra_url || '');
       setAudioUrl(h.audio_url || '');
-      setAudioLocal((h as any).audio_local || '');
+      setExternalAudioUrl(h.audio_external_url || '');
+      setAudioLocal(h.audio_local || '');
+      setOriginalAudioLocal(h.audio_local || '');
       setCifraAutorizada(!!h.cifra_autorizada);
       setAudioAutorizado(!!h.audio_autorizado);
       const secs = getSections(h);
@@ -176,6 +180,44 @@ const insets = useSafeAreaInsets();
   }, [id, isNew, router, loadCats]);
   useEffect(() => { load(); }, [load]);
 
+  const isManagedAudio = (uri?: string | null) => {
+    const base = FileSystem.documentDirectory;
+
+    return !!(
+      uri &&
+      base &&
+      uri.startsWith(`${base}audios/`)
+    );
+  };
+
+  const deleteManagedAudio = async (
+    uri?: string | null
+  ) => {
+    if (!isManagedAudio(uri)) return;
+
+    try {
+      const info = await FileSystem.getInfoAsync(uri!);
+
+      if (info.exists) {
+        await FileSystem.deleteAsync(uri!, {
+          idempotent: true,
+        });
+      }
+    } catch {}
+  };
+
+  const removeLocalAudio = async () => {
+    // Se é um arquivo novo ainda não salvo, pode apagar já.
+    if (
+      audioLocal &&
+      audioLocal !== originalAudioLocal
+    ) {
+      await deleteManagedAudio(audioLocal);
+    }
+
+    setAudioLocal('');
+  };
+
   const pickLocalAudio = async () => {
     try {
       const result = await DocumentPicker.getDocumentAsync({
@@ -209,6 +251,13 @@ const insets = useSafeAreaInsets();
           to: destination,
         });
 
+        if (
+          audioLocal &&
+          audioLocal !== originalAudioLocal
+        ) {
+          await deleteManagedAudio(audioLocal);
+        }
+
         setAudioLocal(destination);
       }
     } catch (e: any) {
@@ -230,6 +279,19 @@ const insets = useSafeAreaInsets();
     try {
       const n = parseInt(numero, 10);
       if (!n || !titulo.trim()) { setMsg('Número y título son obligatorios'); setSaving(false); return; }
+      const external = externalAudioUrl.trim();
+
+      if (
+        external &&
+        !/^https?:\/\//i.test(external)
+      ) {
+        setMsg(
+          'El enlace externo debe comenzar con http:// o https://'
+        );
+        setSaving(false);
+        return;
+      }
+
       const payload: Partial<Hymn> = {
         himnario, numero: n, titulo: titulo.trim(),
         categorias: selectedCats,
@@ -238,16 +300,27 @@ const insets = useSafeAreaInsets();
         tom: tom.trim() || null,
         cifra_url: cifraUrl.trim() || null,
         audio_url: audioUrl.trim() || null,
+        audio_external_url: external || null,
         cifra_autorizada: cifraAutorizada,
         audio_autorizado: audioAutorizado,
-        ...(audioLocal ? ({ audio_local: audioLocal } as any) : {}),
+        audio_local: audioLocal || null,
       };
       if (isNew) {
         const created = await api.createHymn(payload);
         setMsg('Himno creado'); router.replace(`/admin/edit/${created.id}` as any);
       } else {
         const updated = await api.updateHymn(hymn!.id, payload);
-        setHymn(updated); setMsg('Cambios guardados');
+
+        if (
+          originalAudioLocal &&
+          originalAudioLocal !== audioLocal
+        ) {
+          await deleteManagedAudio(originalAudioLocal);
+        }
+
+        setOriginalAudioLocal(audioLocal);
+        setHymn(updated);
+        setMsg('Cambios guardados');
       }
     } catch (e: any) { setMsg(e?.message || 'Error al guardar'); }
     finally { setSaving(false); }
@@ -481,7 +554,7 @@ const insets = useSafeAreaInsets();
               </Text>
             </Pressable>
 
-            <Text style={[styles.musicLabel, { color: c.onSurface }]}>URL / enlace de audio</Text>
+            <Text style={[styles.musicLabel, { color: c.onSurface }]}>URL directa de audio</Text>
             <TextInput
               value={audioUrl}
               onChangeText={setAudioUrl}
@@ -491,6 +564,32 @@ const insets = useSafeAreaInsets();
               keyboardType="url"
               style={[styles.input, { backgroundColor: c.surface, borderColor: c.border, color: c.onSurface }]}
             />
+
+            <Text style={[styles.musicLabel, { color: c.onSurface }]}>
+              Enlace externo (Spotify, YouTube, etc.)
+            </Text>
+
+            <TextInput
+              value={externalAudioUrl}
+              onChangeText={setExternalAudioUrl}
+              placeholder="https://open.spotify.com/..."
+              placeholderTextColor={c.muted}
+              autoCapitalize="none"
+              autoCorrect={false}
+              keyboardType="url"
+              style={[
+                styles.input,
+                {
+                  backgroundColor: c.surface,
+                  borderColor: c.border,
+                  color: c.onSurface,
+                },
+              ]}
+            />
+
+            <Text style={{ color: c.muted, fontSize: 10.5, lineHeight: 15 }}>
+              Este enlace se abrirá en Spotify, YouTube u otra aplicación externa; no se reproduce dentro del Hinario.
+            </Text>
 
             <Text style={[styles.musicLabel, { color: c.onSurface }]}>Archivo local de audio</Text>
 
@@ -511,10 +610,13 @@ const insets = useSafeAreaInsets();
                   numberOfLines={2}
                   style={{ color: c.muted, fontSize: 11, flex: 1 }}
                 >
-                  {audioLocal}
+                  {decodeURIComponent(
+                    audioLocal.split('/').pop() ||
+                    audioLocal
+                  )}
                 </Text>
 
-                <Pressable onPress={() => setAudioLocal('')} hitSlop={8}>
+                <Pressable onPress={removeLocalAudio} hitSlop={8}>
                   <Feather name="x" size={18} color={c.error} />
                 </Pressable>
               </View>
