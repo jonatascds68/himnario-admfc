@@ -10,9 +10,22 @@ import { api, Hymn } from '@/src/lib/api';
 import { favorites, recents } from '@/src/lib/collections';
 import { HymnRow } from '../../app/(tabs)/search';
 
-function ListScreen({ title, sub, empty, loader, testID }: {
-  title: string; sub: string; empty: string; testID: string;
+function ListScreen({
+  title,
+  sub,
+  empty,
+  testID,
+  loader,
+  action,
+  onAction,
+}: {
+  title: string;
+  sub: string;
+  empty: string;
+  testID: string;
   loader: () => Promise<Hymn[]>;
+  action?: string;
+  onAction?: () => Promise<void> | void;
 }) {
   const router = useRouter();
   const { c } = useTheme();
@@ -33,6 +46,35 @@ function ListScreen({ title, sub, empty, loader, testID }: {
           <Text style={[styles.title, { color: c.brand }]}>{title}</Text>
           <Text style={[styles.sub, { color: c.muted }]}>{sub}</Text>
         </View>
+
+        {action && onAction ? (
+          <Pressable
+            onPress={async () => {
+              await onAction();
+              await refresh();
+            }}
+            hitSlop={8}
+            style={[
+              styles.headerAction,
+              { borderColor: c.border },
+            ]}
+          >
+            <Feather
+              name="trash-2"
+              size={13}
+              color={c.muted}
+            />
+            <Text
+              style={{
+                color: c.muted,
+                fontSize: 11,
+                fontWeight: '700',
+              }}
+            >
+              {action}
+            </Text>
+          </Pressable>
+        ) : null}
       </View>
       {loading ? (
         <ActivityIndicator style={{ marginTop: SPACING.xl }} color={c.brand} />
@@ -64,10 +106,27 @@ export function RecentsScreen() {
   const load = useCallback(async () => {
     const ids = await recents.list();
     if (ids.length === 0) return [];
-    const items = await Promise.all(ids.map((id) => api.getHymn(id).catch(() => null)));
+    const items = await Promise.all(
+      ids.map((id) => api.getHymn(id).catch(() => null))
+    );
     return items.filter(Boolean) as Hymn[];
   }, []);
-  return <ListScreen title="Recientes" sub="Últimos abiertos" empty="Sin himnos recientes" testID="recents-screen" loader={load} />;
+
+  const clearRecents = async () => {
+    await recents.clear();
+  };
+
+  return (
+    <ListScreen
+      title="Recientes"
+      sub="Últimos abiertos"
+      empty="Sin himnos recientes"
+      testID="recents-screen"
+      loader={load}
+      action="Limpiar"
+      onAction={clearRecents}
+    />
+  );
 }
 
 const styles = StyleSheet.create({
@@ -75,4 +134,14 @@ const styles = StyleSheet.create({
   header: { flexDirection: 'row', alignItems: 'center', gap: SPACING.sm, paddingHorizontal: SPACING.md, paddingTop: SPACING.sm, paddingBottom: SPACING.md },
   title: { fontSize: 22, fontWeight: '800', letterSpacing: 1 },
   sub: { fontSize: 12, marginTop: 2 },
+
+  headerAction: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 5,
+    borderWidth: 1,
+    borderRadius: 14,
+    paddingHorizontal: 9,
+    paddingVertical: 6,
+  },
 });
