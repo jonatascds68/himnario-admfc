@@ -243,28 +243,183 @@ hymnAlignStorage.get().then(setHymnAlign);
             ))}
           </View>
         )}
-  </>
-) : contentMode === 'chords' ? (
-  <View style={styles.experimentalBox}>
-    <MaterialCommunityIcons
-      name="music-clef-treble"
-      size={34}
-      color={c.brandSecondary}
-    />
+      </>
+    ) : contentMode === 'chords' ? (
+  <View style={styles.chordsWrap}>
+    <View style={styles.chordsHeader}>
+      <MaterialCommunityIcons
+        name="music-clef-treble"
+        size={28}
+        color={c.brandSecondary}
+      />
 
-    <Text style={[styles.experimentalTitle, { color: c.onSurface }]}>
-      Cifras
-    </Text>
+      <View style={{ flex: 1 }}>
+        <Text style={[styles.experimentalTitle, { color: c.onSurface }]}>
+          Cifras
+        </Text>
 
-    {hymn.tom ? (
-      <Text style={[styles.experimentalMeta, { color: c.muted }]}>
-        Tono: {hymn.tom}
+        {hymn.tom ? (
+          <Text style={[styles.experimentalMeta, { color: c.muted }]}>
+            Tono: {hymn.tom}
+          </Text>
+        ) : null}
+      </View>
+    </View>
+
+    {hymn.cifra_bloques?.length ? (
+      <>
+        <View style={styles.chordsBlocks}>
+          {hymn.cifra_bloques.map((bloque, blocoIndex) => (
+            <View
+              key={`${bloque.tipo}-${blocoIndex}`}
+              style={styles.chordBlock}
+            >
+              <Text
+                style={[
+                  styles.chordBlockTitle,
+                  { color: c.brand },
+                ]}
+              >
+                {bloque.tipo === 'coro'
+                  ? 'CORO'
+                  : `${bloque.numero ?? blocoIndex + 1}.`}
+              </Text>
+
+              <View style={{ flex: 1 }}>
+                {bloque.lineas.map((linea, lineaIndex) => (
+                  <View
+                    key={lineaIndex}
+                    style={styles.chordLine}
+                  >
+                    {linea.segmentos.map((segmento, segmentoIndex) => (
+                      <View
+                        key={segmentoIndex}
+                        style={styles.chordSegment}
+                      >
+                        <Text
+                          style={[
+                            styles.chordName,
+                            {
+                              color: segmento.acorde
+                                ? c.brandSecondary
+                                : 'transparent',
+                            },
+                          ]}
+                        >
+                          {segmento.acorde || '·'}
+                        </Text>
+
+                        <Text
+                          style={[
+                            styles.chordLyrics,
+                            {
+                              color: c.onSurface,
+                              fontFamily: hymnFont,
+                              fontSize: baseSize,
+                              lineHeight: baseSize * 1.4,
+                            },
+                          ]}
+                        >
+                          {segmento.texto}
+                        </Text>
+                      </View>
+                    ))}
+                  </View>
+                ))}
+              </View>
+            </View>
+          ))}
+        </View>
+
+        {sections
+          .filter((sec, secIndex) => {
+            if (sec.kind === 'chorus') {
+              return !hymn.cifra_bloques?.some(
+                (b) => b.tipo === 'coro'
+              );
+            }
+
+            const numero = sec.index ?? secIndex + 1;
+
+            return !hymn.cifra_bloques?.some(
+              (b) =>
+                b.tipo === 'estrofa' &&
+                b.numero === numero
+            );
+          })
+          .map((sec, secIndex) => (
+            <View
+              key={`sin-cifra-${secIndex}`}
+              style={{
+                marginTop: SPACING.xl,
+                marginBottom: SPACING.md,
+              }}
+            >
+              <Text
+                style={[
+                  styles.chordBlockTitle,
+                  {
+                    color:
+                      sec.kind === 'chorus'
+                        ? '#0B6678'
+                        : c.brand,
+                    width: '100%',
+                    marginTop: 0,
+                    marginBottom: SPACING.sm,
+                  },
+                ]}
+              >
+                {sec.kind === 'chorus'
+                  ? 'CORO'
+                  : `${sec.index ?? secIndex + 1}.`}
+              </Text>
+
+              <Text
+                style={[
+                  styles.verse,
+                  {
+                    color:
+                      sec.kind === 'chorus'
+                        ? '#0B6678'
+                        : c.onSurface,
+                    fontSize: baseSize,
+                    lineHeight: baseSize * 1.55,
+                    fontFamily:
+                      sec.kind === 'chorus'
+                        ? 'MerriweatherItalic'
+                        : hymnFont,
+                    textAlign: 'left',
+                  },
+                ]}
+              >
+                {sec.text.replace(/\|+/g, '')}
+              </Text>
+            </View>
+          ))}
+      </>
+    ) : hymn.cifra ? (
+      <Text
+        style={[
+          styles.experimentalText,
+          {
+            color: c.onSurface,
+            fontFamily: 'monospace',
+            lineHeight: 24,
+          },
+        ]}
+      >
+        {hymn.cifra}
       </Text>
-    ) : null}
-
-    <Text style={[styles.experimentalText, { color: c.muted }]}>
-      La cifra estará disponible cuando tengamos una versión autorizada para este himno.
-    </Text>
+    ) : (
+      <Text
+        style={[
+          styles.experimentalText,
+          { color: c.muted },
+        ]}
+      >
+        Cifra todavía no disponible para este himno.
+      </Text>
+    )}
   </View>
 ) : (
   <View style={styles.experimentalBox}>
@@ -286,7 +441,18 @@ hymnAlignStorage.get().then(setHymnAlign);
         {hymn.fuente ? <Text style={[styles.meta, { color: c.muted, marginTop: SPACING.lg }]}>Fuente: {hymn.fuente}</Text> : null}
         {hymn.observacion ? <Text style={[styles.meta, { color: c.muted, marginTop: 4 }]}>Nota: {hymn.observacion}</Text> : null}
       </ScrollView>
-<View style={[styles.controlBar, { backgroundColor: c.surface, borderTopColor: c.divider, paddingBottom: 8 + insets.bottom }]}>
+<View
+  style={[
+    styles.controlBar,
+    {
+      backgroundColor: c.surface,
+      borderTopColor: c.divider,
+      paddingBottom: 8 + insets.bottom,
+      paddingLeft: SPACING.md + insets.left,
+      paddingRight: SPACING.md + insets.right,
+    },
+  ]}
+>
         <Pressable onPress={() => nav(-1)} style={[styles.ctrl, { borderColor: c.border }]} testID="hymn-prev"><Feather name="chevron-left" size={18} color={c.onSurface} /></Pressable>
         <Pressable onPress={() => bumpFont(-0.1)} style={[styles.ctrl, { borderColor: c.border }]} testID="hymn-font-minus"><Text style={{ color: c.onSurface, fontWeight: '700' }}>A−</Text></Pressable>
         <Pressable onPress={() => bumpFont(0.1)} style={[styles.ctrl, { borderColor: c.border }]} testID="hymn-font-plus"><Text style={{ color: c.onSurface, fontWeight: '700' }}>A+</Text></Pressable>
@@ -390,5 +556,55 @@ controlBar: { position: 'absolute', left: 0, right: 0, bottom: 0, flexDirection:
     lineHeight: 20,
     textAlign: 'center',
     marginTop: SPACING.md,
+  },
+
+  chordsWrap: {
+    paddingVertical: SPACING.md,
+  },
+
+  chordsHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: SPACING.md,
+    marginBottom: SPACING.xl,
+  },
+
+  chordsBlocks: {
+    gap: SPACING.xl,
+  },
+
+  chordBlock: {
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    gap: SPACING.sm,
+  },
+
+  chordBlockTitle: {
+    width: 40,
+    fontSize: 14,
+    fontWeight: '800',
+    marginTop: 18,
+  },
+
+  chordLine: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    alignItems: 'flex-start',
+    marginBottom: 12,
+  },
+
+  chordSegment: {
+    alignItems: 'flex-start',
+  },
+
+  chordName: {
+    fontSize: 13,
+    fontWeight: '800',
+    lineHeight: 18,
+    minHeight: 18,
+  },
+
+  chordLyrics: {
+    paddingRight: 1,
   },
 });

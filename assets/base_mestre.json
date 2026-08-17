@@ -4820,6 +4820,92 @@
       "observacion": "Letra transcrita y verificada visualmente del PDF de Sión; ortografía segura normalizada.",
       "categorias": [
         "Actividad Cristiana"
+      ],
+      "tom": "C",
+      "cifra": "[PILOTO DE INTERFAZ]\n\nC\nVe, ve, oh Sión, tu gran destino cumple;\n\nF\nQue Dios es luz, al mundo proclamad,\n\nG\nQue el Hacedor de las naciones quiere,\n\nC\nQue nadie muera en densa oscuridad.\n\nCORO\n\nF\n¡Alegres nuevas al mundo dad!\n\nC                 G\nNuevas de redención,\n\nC\nde amor y libertad.",
+      "cifra_bloques": [
+        {
+          "tipo": "estrofa",
+          "numero": 1,
+          "lineas": [
+            {
+              "segmentos": [
+                {
+                  "acorde": "C",
+                  "texto": "Ve, ve, oh Sión, "
+                },
+                {
+                  "texto": "tu gran destino cumple;"
+                }
+              ]
+            },
+            {
+              "segmentos": [
+                {
+                  "acorde": "F",
+                  "texto": "Que Dios es luz, "
+                },
+                {
+                  "texto": "al mundo proclamad,"
+                }
+              ]
+            },
+            {
+              "segmentos": [
+                {
+                  "acorde": "G",
+                  "texto": "Que el Hacedor de las naciones "
+                },
+                {
+                  "texto": "quiere,"
+                }
+              ]
+            },
+            {
+              "segmentos": [
+                {
+                  "acorde": "C",
+                  "texto": "Que nadie muera "
+                },
+                {
+                  "texto": "en densa oscuridad."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "tipo": "coro",
+          "lineas": [
+            {
+              "segmentos": [
+                {
+                  "acorde": "F",
+                  "texto": "¡Alegres nuevas "
+                },
+                {
+                  "texto": "al mundo dad!"
+                }
+              ]
+            },
+            {
+              "segmentos": [
+                {
+                  "acorde": "C",
+                  "texto": "Nuevas de "
+                },
+                {
+                  "acorde": "G",
+                  "texto": "redención, "
+                },
+                {
+                  "acorde": "C",
+                  "texto": "de amor y libertad."
+                }
+              ]
+            }
+          ]
+        }
       ]
     },
     {

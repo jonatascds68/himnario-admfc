@@ -13,11 +13,35 @@ export const adminSession = {
 
 export type Himnario = 'Gloria y Triunfo' | 'Himnos de Sión';
 export interface Bloque { tipo: 'estrofa' | 'coro'; numero?: number | null; texto: string; }
+export interface CifraSegmento {
+  texto: string;
+  acorde?: string | null;
+}
+
+export interface CifraLinea {
+  segmentos: CifraSegmento[];
+}
+
+export interface CifraBloque {
+  tipo: 'estrofa' | 'coro';
+  numero?: number | null;
+  lineas: CifraLinea[];
+}
 export interface Hymn {
   id: string; himnario: Himnario; numero: number; titulo: string; letra?: string;
   bloques?: Bloque[] | null; numero_equivalente?: number | null;
   himnario_equivalente?: string | null; estado?: string | null; fuente?: string | null;
-  observacion?: string | null; categorias?: string[]; has_lyrics?: boolean;
+observacion?: string | null;
+categorias?: string[];
+has_lyrics?: boolean;
+
+tom?: string | null;
+cifra?: string | null;
+cifra_bloques?: CifraBloque[] | null;
+cifra_url?: string | null;
+audio_url?: string | null;
+cifra_autorizada?: boolean;
+audio_autorizado?: boolean;
 }
 interface LocalDb { hymns: Hymn[]; categories: { id: string; name: string }[]; }
 
@@ -55,7 +79,7 @@ const DEFAULT_CATEGORIES = [
 
 const DB_KEY = 'admfc_local_db_v1';
 const DB_DATA_VERSION_KEY = 'admfc_local_db_data_version';
-const DB_DATA_VERSION = '4';
+const DB_DATA_VERSION = '6';
 const ADMIN_EMAIL_KEY = 'admfc_local_admin_email';
 const ADMIN_PASS_KEY = 'admfc_local_admin_password';
 

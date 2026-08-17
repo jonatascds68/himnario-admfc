@@ -6,6 +6,7 @@ import {
 import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { Feather } from '@expo/vector-icons';
+import * as DocumentPicker from 'expo-document-picker';
 import { useTheme } from '@/src/theme/ThemeContext';
 import { SPACING, RADIUS } from '@/src/theme/tokens';
 import { api, Hymn, Bloque, getSections } from '@/src/lib/api';
@@ -13,7 +14,78 @@ import { api, Hymn, Bloque, getSections } from '@/src/lib/api';
 const GT = 'Gloria y Triunfo';
 const SN = 'Himnos de Sión';
 
-interface BlockState { tipo: 'estrofa' | 'coro'; numero: string; texto: string; }
+interface BlockState {
+  tipo: 'estrofa' | 'coro';
+  numero: string;
+  texto: string;
+  cifras: string[];
+}
+
+function textLines(texto: string): string[] {
+  return (texto || '').replace(/\r\n/g, '\n').split('\n');
+}
+
+function chordLineFromSegments(
+  segmentos: { texto: string; acorde?: string | null }[]
+): string {
+  let out = '';
+  let pos = 0;
+
+  for (const seg of segmentos) {
+    if (seg.acorde) {
+      if (out.length < pos) {
+        out += ' '.repeat(pos - out.length);
+      }
+      out += seg.acorde;
+    }
+
+    pos += (seg.texto || '').length;
+  }
+
+  return out.replace(/\s+$/g, '');
+}
+
+function parseChordLine(
+  letra: string,
+  cifra: string
+): { texto: string; acorde?: string | null }[] {
+  const lyric = letra || '';
+
+  const chords = Array.from(
+    (cifra || '').matchAll(/\S+/g)
+  ).map((m) => ({
+    acorde: m[0],
+    pos: Math.min(m.index ?? 0, lyric.length),
+  }));
+
+  if (!chords.length) {
+    return [{ texto: lyric }];
+  }
+
+  const out: { texto: string; acorde?: string | null }[] = [];
+
+  if (chords[0].pos > 0) {
+    out.push({
+      texto: lyric.slice(0, chords[0].pos),
+    });
+  }
+
+  chords.forEach((item, index) => {
+    const nextPos =
+      index + 1 < chords.length
+        ? chords[index + 1].pos
+        : lyric.length;
+
+    out.push({
+      acorde: item.acorde,
+      texto: lyric.slice(item.pos, nextPos),
+    });
+  });
+
+  return out.filter(
+    (item) => item.texto.length > 0 || !!item.acorde
+  );
+}
 
 export default function EditHymn() {
   const { id } = useLocalSearchParams<{ id: string }>();
@@ -32,6 +104,13 @@ const insets = useSafeAreaInsets();
   const [selectedCats, setSelectedCats] = useState<string[]>([]);
   const [allCats, setAllCats] = useState<{ id: string; name: string }[]>([]);
   const [msg, setMsg] = useState('');
+
+  const [tom, setTom] = useState('');
+  const [cifraUrl, setCifraUrl] = useState('');
+  const [audioUrl, setAudioUrl] = useState('');
+  const [audioLocal, setAudioLocal] = useState('');
+  const [cifraAutorizada, setCifraAutorizada] = useState(false);
+  const [audioAutorizado, setAudioAutorizado] = useState(false);
 
   const [pickerOpen, setPickerOpen] = useState(false);
   const [pickerQ, setPickerQ] = useState('');
@@ -52,15 +131,65 @@ const insets = useSafeAreaInsets();
       const h = await api.getHymn(id!);
       setHymn(h); setHimnario(h.himnario); setNumero(String(h.numero));
       setTitulo(h.titulo); setSelectedCats(h.categorias || []);
+      setTom(h.tom || '');
+      setCifraUrl(h.cifra_url || '');
+      setAudioUrl(h.audio_url || '');
+      setAudioLocal((h as any).audio_local || '');
+      setCifraAutorizada(!!h.cifra_autorizada);
+      setAudioAutorizado(!!h.audio_autorizado);
       const secs = getSections(h);
-      setBlocks(secs.map((s) => ({
-        tipo: s.kind === 'chorus' ? 'coro' : 'estrofa',
-        numero: s.index != null ? String(s.index) : '',
-        texto: s.text,
-      })));
+      setBlocks(secs.map((sec, secIndex) => {
+        const tipo =
+          sec.kind === 'chorus' ? 'coro' : 'estrofa';
+
+        const numero =
+          sec.index != null ? String(sec.index) : '';
+
+        const cifraBlock = h.cifra_bloques?.find((cb) => {
+          if (tipo === 'coro') return cb.tipo === 'coro';
+
+          return (
+            cb.tipo === 'estrofa' &&
+            cb.numero === (sec.index ?? secIndex + 1)
+          );
+        });
+
+        const cifras = textLines(sec.text).map(
+          (_, lineIndex) => {
+            const linha = cifraBlock?.lineas?.[lineIndex];
+
+            return linha
+              ? chordLineFromSegments(linha.segmentos)
+              : '';
+          }
+        );
+
+        return {
+          tipo,
+          numero,
+          texto: sec.text,
+          cifras,
+        };
+      }));
     } catch { setMsg('No se pudo cargar'); } finally { setLoading(false); }
   }, [id, isNew, router, loadCats]);
   useEffect(() => { load(); }, [load]);
+
+  const pickLocalAudio = async () => {
+    try {
+      const result = await DocumentPicker.getDocumentAsync({
+        type: 'audio/*',
+        copyToCacheDirectory: false,
+        multiple: false,
+      });
+
+      if (!result.canceled && result.assets?.[0]) {
+        setAudioLocal(result.assets[0].uri);
+      }
+    } catch (e: any) {
+      setMsg(e?.message || 'No se pudo seleccionar el audio');
+    }
+  };
 
   const otherHim = himnario === GT ? SN : GT;
   const otherKey = himnario === GT ? 'sion' : 'gt';
@@ -78,7 +207,15 @@ const insets = useSafeAreaInsets();
       if (!n || !titulo.trim()) { setMsg('Número y título son obligatorios'); setSaving(false); return; }
       const payload: Partial<Hymn> = {
         himnario, numero: n, titulo: titulo.trim(),
-        categorias: selectedCats, bloques: toBloques(),
+        categorias: selectedCats,
+        bloques: toBloques(),
+        cifra_bloques: toCifraBloques(),
+        tom: tom.trim() || null,
+        cifra_url: cifraUrl.trim() || null,
+        audio_url: audioUrl.trim() || null,
+        cifra_autorizada: cifraAutorizada,
+        audio_autorizado: audioAutorizado,
+        ...(audioLocal ? ({ audio_local: audioLocal } as any) : {}),
       };
       if (isNew) {
         const created = await api.createHymn(payload);
@@ -99,8 +236,90 @@ const insets = useSafeAreaInsets();
 
   // block ops
   const updBlock = (i: number, patch: Partial<BlockState>) =>
-    setBlocks((prev) => prev.map((b, idx) => idx === i ? { ...b, ...patch } : b));
-  const addBlock = () => setBlocks((prev) => [...prev, { tipo: 'estrofa', numero: String(prev.filter((b) => b.tipo === 'estrofa').length + 1), texto: '' }]);
+    setBlocks((prev) =>
+      prev.map((b, idx) =>
+        idx === i ? { ...b, ...patch } : b
+      )
+    );
+
+  const updBlockText = (i: number, texto: string) =>
+    setBlocks((prev) =>
+      prev.map((b, idx) => {
+        if (idx !== i) return b;
+
+        const total = textLines(texto).length;
+
+        return {
+          ...b,
+          texto,
+          cifras: Array.from(
+            { length: total },
+            (_, lineIndex) => b.cifras?.[lineIndex] || ''
+          ),
+        };
+      })
+    );
+
+  const updChordLine = (
+    blockIndex: number,
+    lineIndex: number,
+    value: string
+  ) =>
+    setBlocks((prev) =>
+      prev.map((b, idx) => {
+        if (idx !== blockIndex) return b;
+
+        const cifras = [...(b.cifras || [])];
+
+        while (cifras.length < textLines(b.texto).length) {
+          cifras.push('');
+        }
+
+        cifras[lineIndex] = value;
+
+        return {
+          ...b,
+          cifras,
+        };
+      })
+    );
+
+  const toCifraBloques = (): NonNullable<Hymn['cifra_bloques']> =>
+    blocks.flatMap((b) => {
+      const hasChord = (b.cifras || []).some(
+        (line) => line.trim().length > 0
+      );
+
+      if (!hasChord) return [];
+
+      return [{
+        tipo: b.tipo,
+        numero:
+          b.tipo === 'estrofa' && b.numero
+            ? parseInt(b.numero, 10)
+            : null,
+        lineas: textLines(b.texto).map(
+          (letra, lineIndex) => ({
+            segmentos: parseChordLine(
+              letra,
+              b.cifras?.[lineIndex] || ''
+            ),
+          })
+        ),
+      }];
+    });
+  const addBlock = () =>
+    setBlocks((prev) => [
+      ...prev,
+      {
+        tipo: 'estrofa',
+        numero: String(
+          prev.filter((b) => b.tipo === 'estrofa').length + 1
+        ),
+        texto: '',
+        cifras: [''],
+      },
+    ]);
   const moveBlock = (i: number, dir: -1 | 1) => setBlocks((prev) => {
     const j = i + dir; if (j < 0 || j >= prev.length) return prev;
     const cp = [...prev]; const t = cp[i]; cp[i] = cp[j]; cp[j] = t; return cp;
@@ -194,6 +413,103 @@ const insets = useSafeAreaInsets();
             </Pressable>
           </View>
 
+          {/* MUSICA / CIFRAS / AUDIO */}
+          <Label c={c}>Música, cifras y audio</Label>
+
+          <View style={[styles.musicBox, { backgroundColor: c.surfaceSecondary, borderColor: c.border }]}>
+            <Text style={[styles.musicHelp, { color: c.muted }]}>
+              Guarda solo datos livianos. El audio puede quedar en una URL externa o como referencia a un archivo local del dispositivo.
+            </Text>
+
+            <Text style={[styles.musicLabel, { color: c.onSurface }]}>Tono original</Text>
+            <TextInput
+              value={tom}
+              onChangeText={setTom}
+              placeholder="Ej.: C, G, D, Am..."
+              placeholderTextColor={c.muted}
+              autoCapitalize="characters"
+              style={[styles.input, { backgroundColor: c.surface, borderColor: c.border, color: c.onSurface }]}
+            />
+
+            <Text style={[styles.musicLabel, { color: c.onSurface }]}>URL de la cifra</Text>
+            <TextInput
+              value={cifraUrl}
+              onChangeText={setCifraUrl}
+              placeholder="https://..."
+              placeholderTextColor={c.muted}
+              autoCapitalize="none"
+              keyboardType="url"
+              style={[styles.input, { backgroundColor: c.surface, borderColor: c.border, color: c.onSurface }]}
+            />
+
+            <Pressable
+              onPress={() => setCifraAutorizada((v) => !v)}
+              style={[styles.authRow, { borderColor: c.border }]}
+            >
+              <Feather
+                name={cifraAutorizada ? 'check-square' : 'square'}
+                size={19}
+                color={cifraAutorizada ? c.brand : c.muted}
+              />
+              <Text style={{ color: c.onSurface, fontSize: 13, fontWeight: '600' }}>
+                Cifra autorizada para uso
+              </Text>
+            </Pressable>
+
+            <Text style={[styles.musicLabel, { color: c.onSurface }]}>URL / enlace de audio</Text>
+            <TextInput
+              value={audioUrl}
+              onChangeText={setAudioUrl}
+              placeholder="https://..."
+              placeholderTextColor={c.muted}
+              autoCapitalize="none"
+              keyboardType="url"
+              style={[styles.input, { backgroundColor: c.surface, borderColor: c.border, color: c.onSurface }]}
+            />
+
+            <Text style={[styles.musicLabel, { color: c.onSurface }]}>Archivo local de audio</Text>
+
+            <Pressable
+              onPress={pickLocalAudio}
+              style={[styles.fileBtn, { borderColor: c.brand }]}
+            >
+              <Feather name="music" size={18} color={c.brand} />
+              <Text style={{ color: c.brand, fontWeight: '700' }}>
+                Seleccionar archivo
+              </Text>
+            </Pressable>
+
+            {audioLocal ? (
+              <View style={[styles.localFileBox, { borderColor: c.border }]}>
+                <Feather name="file" size={16} color={c.brand} />
+                <Text
+                  numberOfLines={2}
+                  style={{ color: c.muted, fontSize: 11, flex: 1 }}
+                >
+                  {audioLocal}
+                </Text>
+
+                <Pressable onPress={() => setAudioLocal('')} hitSlop={8}>
+                  <Feather name="x" size={18} color={c.error} />
+                </Pressable>
+              </View>
+            ) : null}
+
+            <Pressable
+              onPress={() => setAudioAutorizado((v) => !v)}
+              style={[styles.authRow, { borderColor: c.border }]}
+            >
+              <Feather
+                name={audioAutorizado ? 'check-square' : 'square'}
+                size={19}
+                color={audioAutorizado ? c.brand : c.muted}
+              />
+              <Text style={{ color: c.onSurface, fontSize: 13, fontWeight: '600' }}>
+                Audio autorizado para uso
+              </Text>
+            </Pressable>
+          </View>
+
           {/* STRUCTURE / BLOCKS */}
           <Label c={c}>Estructura de la letra</Label>
           <Text style={{ color: c.muted, fontSize: 12, marginBottom: SPACING.sm }}>
@@ -217,9 +533,81 @@ const insets = useSafeAreaInsets();
                 <Pressable onPress={() => moveBlock(i, 1)} hitSlop={6} disabled={i === blocks.length - 1} testID={`block-down-${i}`}><Feather name="chevron-down" size={20} color={i === blocks.length - 1 ? c.divider : c.muted} /></Pressable>
                 <Pressable onPress={() => setConfirm({ kind: 'delblock', idx: i })} hitSlop={6} testID={`block-del-${i}`}><Feather name="trash-2" size={18} color={c.error} /></Pressable>
               </View>
-              <TextInput value={b.texto} onChangeText={(v) => updBlock(i, { texto: v })} multiline textAlignVertical="top"
+              <TextInput value={b.texto} onChangeText={(v) => updBlockText(i, v)} multiline textAlignVertical="top"
                 placeholder="Texto del bloque…" placeholderTextColor={c.muted}
                 style={[styles.blockText, { color: c.onSurface }]} testID={`block-text-${i}`} />
+
+              <View
+                style={[
+                  styles.chordEditor,
+                  { borderTopColor: c.border },
+                ]}
+              >
+                <View style={styles.chordEditorHead}>
+                  <Feather
+                    name="music"
+                    size={15}
+                    color={c.brand}
+                  />
+                  <Text
+                    style={{
+                      color: c.onSurface,
+                      fontSize: 12,
+                      fontWeight: '800',
+                    }}
+                  >
+                    Cifra de este bloque
+                  </Text>
+                </View>
+
+                <Text
+                  style={[
+                    styles.chordHelp,
+                    { color: c.muted },
+                  ]}
+                >
+                  Escriba cada acorde encima de la posición exacta donde ocurre el cambio.
+                </Text>
+
+                {textLines(b.texto).map((linea, lineIndex) => (
+                  <View
+                    key={`cifra-${i}-${lineIndex}`}
+                    style={[
+                      styles.chordEditorLine,
+                      {
+                        backgroundColor: c.surface,
+                        borderColor: c.border,
+                      },
+                    ]}
+                  >
+                    <TextInput
+                      value={b.cifras?.[lineIndex] || ''}
+                      onChangeText={(value) =>
+                        updChordLine(i, lineIndex, value)
+                      }
+                      placeholder="C       G          D"
+                      placeholderTextColor={c.muted}
+                      autoCapitalize="characters"
+                      autoCorrect={false}
+                      multiline={false}
+                      style={[
+                        styles.chordInput,
+                        { color: c.brandSecondary },
+                      ]}
+                    />
+
+                    <Text
+                      selectable
+                      style={[
+                        styles.chordLyricPreview,
+                        { color: c.onSurface },
+                      ]}
+                    >
+                      {linea || ' '}
+                    </Text>
+                  </View>
+                ))}
+              </View>
             </View>
           ))}
           <Pressable onPress={addBlock} style={[styles.addBlockBtn, { borderColor: c.brand }]} testID="add-block">
@@ -334,6 +722,99 @@ const styles = StyleSheet.create({
   numInput: { width: 48, height: 34, borderRadius: RADIUS.sm, borderWidth: 1, textAlign: 'center', paddingVertical: 0 },
   blockText: { minHeight: 90, fontSize: 15, lineHeight: 22, paddingTop: 4 },
   addBlockBtn: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 6, height: 46, borderRadius: RADIUS.md, borderWidth: 1.5, marginTop: SPACING.xs },
+  chordEditor: {
+    marginTop: SPACING.md,
+    paddingTop: SPACING.md,
+    borderTopWidth: 1,
+    gap: SPACING.sm,
+  },
+
+  chordEditorHead: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+  },
+
+  chordHelp: {
+    fontSize: 10.5,
+    lineHeight: 15,
+  },
+
+  chordEditorLine: {
+    borderWidth: 1,
+    borderRadius: RADIUS.md,
+    paddingHorizontal: SPACING.sm,
+    paddingVertical: 7,
+  },
+
+  chordInput: {
+    minHeight: 28,
+    paddingVertical: 0,
+    paddingHorizontal: 0,
+    fontSize: 14,
+    lineHeight: 20,
+    fontFamily: Platform.OS === 'ios'
+      ? 'Courier'
+      : 'monospace',
+    fontWeight: '800',
+  },
+
+  chordLyricPreview: {
+    fontSize: 14,
+    lineHeight: 20,
+    fontFamily: Platform.OS === 'ios'
+      ? 'Courier'
+      : 'monospace',
+  },
+
+  musicBox: {
+    borderRadius: RADIUS.lg,
+    borderWidth: 1,
+    padding: SPACING.md,
+    gap: SPACING.sm,
+  },
+
+  musicHelp: {
+    fontSize: 11.5,
+    lineHeight: 17,
+    marginBottom: 2,
+  },
+
+  musicLabel: {
+    fontSize: 12.5,
+    fontWeight: '700',
+    marginTop: 4,
+  },
+
+  authRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: SPACING.sm,
+    minHeight: 42,
+    borderWidth: 1,
+    borderRadius: RADIUS.md,
+    paddingHorizontal: SPACING.md,
+  },
+
+  fileBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: SPACING.sm,
+    minHeight: 46,
+    borderWidth: 1.5,
+    borderRadius: RADIUS.md,
+  },
+
+  localFileBox: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: SPACING.sm,
+    padding: SPACING.sm,
+    borderWidth: 1,
+    borderRadius: RADIUS.md,
+  },
+
   equivBox: { borderRadius: RADIUS.md, borderWidth: 1, padding: SPACING.md, gap: SPACING.md },
   linkBtn: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 6, height: 44, borderRadius: RADIUS.md, borderWidth: 1 },
   smallBtn: { paddingHorizontal: 12, height: 32, borderRadius: RADIUS.md, borderWidth: 1, alignItems: 'center', justifyContent: 'center' },
