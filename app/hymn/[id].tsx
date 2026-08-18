@@ -351,6 +351,43 @@ hymnAlignStorage.get().then(setHymnAlign);
           </Pressable>
         ) : null}
         <View style={[styles.divider, { backgroundColor: c.borderStrong }]} />
+{hymn.cifra_url ? (
+  <Pressable
+    onPress={async () => {
+      try {
+        await Linking.openURL(hymn.cifra_url!);
+      } catch {}
+    }}
+    style={[
+      styles.externalChordBtn,
+      { borderColor: c.brandSecondary },
+    ]}
+    testID="hymn-external-chords"
+  >
+    <MaterialCommunityIcons
+      name="music-clef-treble"
+      size={18}
+      color={c.brandSecondary}
+    />
+
+    <Text
+      style={{
+        color: c.brandSecondary,
+        fontSize: 12,
+        fontWeight: '800',
+      }}
+    >
+      Cifra externa{hymn.tom ? ` · Tono: ${hymn.tom}` : ''}
+    </Text>
+
+    <Feather
+      name="external-link"
+      size={14}
+      color={c.brandSecondary}
+    />
+  </Pressable>
+) : null}
+
 <View style={[styles.modeTabs, { backgroundColor: c.surfaceSecondary, borderColor: c.border }]}>
   {[
     { key: 'lyrics', label: 'Letra', icon: 'file-text' },
@@ -360,7 +397,7 @@ hymnAlignStorage.get().then(setHymnAlign);
     const active = contentMode === tab.key;
 
     const disabled =
-      (tab.key === 'chords' && !hymn.cifra && !hymn.cifra_url && !hymn.cifra_bloques?.length) ||
+      (tab.key === 'chords' && !hymn.cifra && !hymn.cifra_bloques?.length) ||
       (tab.key === 'audio' && !hymn.audio_url && !hymn.audio_local && !hymn.audio_external_url);
 
     return (
@@ -407,7 +444,7 @@ hymnAlignStorage.get().then(setHymnAlign);
   <>
     <Text style={[styles.stanzaTitle, { color: c.brand, textAlign: hymnAlign }]}>CORO</Text>
     <View style={styles.chorusClean}>
-<Text style={[styles.verse, { color: '#0B6678', fontSize: baseSize, lineHeight: baseSize * 1.55, fontFamily: 'MerriweatherItalic', textAlign: hymnAlign }]}>{s.text.replace(/\|+/g, '')}</Text>
+<Text style={[styles.verse, { color: c.onSurface, fontSize: baseSize, lineHeight: baseSize * 1.55, fontFamily: hymnFont, textAlign: hymnAlign }]}>{s.text.replace(/\|+/g, '')}</Text>
     </View>
   </>
 ) : (
@@ -641,17 +678,11 @@ hymnAlignStorage.get().then(setHymnAlign);
                 style={[
                   styles.verse,
                   {
-                    color:
-                      sec.kind === 'chorus'
-                        ? '#0B6678'
-                        : c.onSurface,
+                    color: c.onSurface,
                     fontSize: baseSize,
                     lineHeight: baseSize * 1.55,
-                    fontFamily:
-                      sec.kind === 'chorus'
-                        ? 'MerriweatherItalic'
-                        : hymnFont,
-                    textAlign: 'left',
+                    fontFamily: hymnFont,
+                    textAlign: hymnAlign,
                   },
                 ]}
               >
@@ -1057,6 +1088,17 @@ chorusClean: { paddingVertical: 8, marginTop: 6, marginBottom: 10 },
 controlBar: { position: 'absolute', left: 0, right: 0, bottom: 0, flexDirection: 'row', paddingHorizontal: SPACING.md, paddingTop: 6, gap: 6, borderTopWidth: 1 },
   ctrl: { minWidth: 44, height: 44, borderRadius: RADIUS.md, borderWidth: 1, alignItems: 'center', justifyContent: 'center', paddingHorizontal: 10 },
   ctrlWide: { flex: 1, flexDirection: 'row', height: 44, borderRadius: RADIUS.md, borderWidth: 1, alignItems: 'center', justifyContent: 'center', gap: 6, paddingHorizontal: 8 },
+  externalChordBtn: {
+    minHeight: 42,
+    borderWidth: 1,
+    borderRadius: RADIUS.md,
+    marginBottom: SPACING.md,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 7,
+  },
+
   modeTabs: {
     flexDirection: 'row',
     borderWidth: 1,

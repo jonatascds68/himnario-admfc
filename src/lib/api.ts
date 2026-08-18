@@ -27,6 +27,20 @@ export interface CifraBloque {
   numero?: number | null;
   lineas: CifraLinea[];
 }
+export type MediaProvenanceType =
+  | 'propio'
+  | 'autorizado'
+  | 'dominio_publico'
+  | 'enlace_externo'
+  | 'desconocido';
+
+export interface MediaProvenance {
+  fuente?: string | null;
+  tipo?: MediaProvenanceType | null;
+  autorizado?: boolean;
+  notas?: string | null;
+}
+
 export interface Hymn {
   id: string; himnario: Himnario; numero: number; titulo: string; letra?: string;
   bloques?: Bloque[] | null; numero_equivalente?: number | null;
@@ -43,7 +57,9 @@ audio_url?: string | null;
 audio_local?: string | null;
 audio_external_url?: string | null;
 cifra_autorizada?: boolean;
+cifra_procedencia?: MediaProvenance | null;
 audio_autorizado?: boolean;
+audio_procedencia?: MediaProvenance | null;
 }
 interface LocalDb { hymns: Hymn[]; categories: { id: string; name: string }[]; }
 
@@ -81,7 +97,7 @@ const DEFAULT_CATEGORIES = [
 
 const DB_KEY = 'admfc_local_db_v1';
 const DB_DATA_VERSION_KEY = 'admfc_local_db_data_version';
-const DB_DATA_VERSION = '6';
+const DB_DATA_VERSION = '7';
 const ADMIN_EMAIL_KEY = 'admfc_local_admin_email';
 const ADMIN_PASS_KEY = 'admfc_local_admin_password';
 
@@ -252,6 +268,8 @@ export const api = {
       'audio_url',
       'audio_local',
       'audio_external_url',
+      'cifra_procedencia',
+      'audio_procedencia',
       'cifra_autorizada',
       'audio_autorizado',
     ];

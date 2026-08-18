@@ -10,7 +10,7 @@ import * as DocumentPicker from 'expo-document-picker';
 import * as FileSystem from 'expo-file-system/legacy';
 import { useTheme } from '@/src/theme/ThemeContext';
 import { SPACING, RADIUS } from '@/src/theme/tokens';
-import { api, Hymn, Bloque, getSections } from '@/src/lib/api';
+import { api, Hymn, Bloque, getSections, MediaProvenanceType } from '@/src/lib/api';
 
 const GT = 'Gloria y Triunfo';
 const SN = 'Himnos de Sión';
@@ -115,6 +115,16 @@ const insets = useSafeAreaInsets();
   const [cifraAutorizada, setCifraAutorizada] = useState(false);
   const [audioAutorizado, setAudioAutorizado] = useState(false);
 
+  const [cifraFuente, setCifraFuente] = useState('');
+  const [cifraTipo, setCifraTipo] =
+    useState<MediaProvenanceType>('desconocido');
+  const [cifraNotas, setCifraNotas] = useState('');
+
+  const [audioFuente, setAudioFuente] = useState('');
+  const [audioTipo, setAudioTipo] =
+    useState<MediaProvenanceType>('desconocido');
+  const [audioNotas, setAudioNotas] = useState('');
+
   const [pickerOpen, setPickerOpen] = useState(false);
   const [pickerQ, setPickerQ] = useState('');
   const [pickerResults, setPickerResults] = useState<Hymn[]>([]);
@@ -142,6 +152,18 @@ const insets = useSafeAreaInsets();
       setOriginalAudioLocal(h.audio_local || '');
       setCifraAutorizada(!!h.cifra_autorizada);
       setAudioAutorizado(!!h.audio_autorizado);
+
+      setCifraFuente(h.cifra_procedencia?.fuente || '');
+      setCifraTipo(
+        h.cifra_procedencia?.tipo || 'desconocido'
+      );
+      setCifraNotas(h.cifra_procedencia?.notas || '');
+
+      setAudioFuente(h.audio_procedencia?.fuente || '');
+      setAudioTipo(
+        h.audio_procedencia?.tipo || 'desconocido'
+      );
+      setAudioNotas(h.audio_procedencia?.notas || '');
       const secs = getSections(h);
       setBlocks(secs.map((sec, secIndex) => {
         const tipo =
@@ -303,6 +325,20 @@ const insets = useSafeAreaInsets();
         audio_external_url: external || null,
         cifra_autorizada: cifraAutorizada,
         audio_autorizado: audioAutorizado,
+
+        cifra_procedencia: {
+          fuente: cifraFuente.trim() || null,
+          tipo: cifraTipo,
+          autorizado: cifraAutorizada,
+          notas: cifraNotas.trim() || null,
+        },
+
+        audio_procedencia: {
+          fuente: audioFuente.trim() || null,
+          tipo: audioTipo,
+          autorizado: audioAutorizado,
+          notas: audioNotas.trim() || null,
+        },
         audio_local: audioLocal || null,
       };
       if (isNew) {
@@ -637,6 +673,196 @@ const insets = useSafeAreaInsets();
             </Pressable>
           </View>
 
+          {/* PROCEDENCIA / DERECHOS */}
+          <Label c={c}>Procedencia y derechos</Label>
+
+          <View
+            style={[
+              styles.provenanceBox,
+              {
+                backgroundColor: c.surfaceSecondary,
+                borderColor: c.border,
+              },
+            ]}
+          >
+            <Text
+              style={[
+                styles.provenanceTitle,
+                { color: c.brand },
+              ]}
+            >
+              Cifra
+            </Text>
+
+            <TextInput
+              value={cifraFuente}
+              onChangeText={setCifraFuente}
+              placeholder="Fuente de la cifra"
+              placeholderTextColor={c.muted}
+              style={[
+                styles.input,
+                {
+                  backgroundColor: c.surface,
+                  borderColor: c.border,
+                  color: c.onSurface,
+                },
+              ]}
+            />
+
+            <View style={styles.provenanceChips}>
+              {([
+                ['propio', 'Propio'],
+                ['autorizado', 'Autorizado'],
+                ['dominio_publico', 'Dominio público'],
+                ['enlace_externo', 'Enlace externo'],
+                ['desconocido', 'Por revisar'],
+              ] as [MediaProvenanceType, string][]).map(
+                ([value, label]) => {
+                  const active = cifraTipo === value;
+
+                  return (
+                    <Pressable
+                      key={value}
+                      onPress={() => setCifraTipo(value)}
+                      style={[
+                        styles.provenanceChip,
+                        {
+                          backgroundColor: active
+                            ? c.brand
+                            : c.surface,
+                          borderColor: active
+                            ? c.brand
+                            : c.border,
+                        },
+                      ]}
+                    >
+                      <Text
+                        style={{
+                          color: active
+                            ? c.onSurfaceInverse
+                            : c.onSurface,
+                          fontSize: 10.5,
+                          fontWeight: '700',
+                        }}
+                      >
+                        {label}
+                      </Text>
+                    </Pressable>
+                  );
+                }
+              )}
+            </View>
+
+            <TextInput
+              value={cifraNotas}
+              onChangeText={setCifraNotas}
+              placeholder="Notas sobre autorización, edición, origen..."
+              placeholderTextColor={c.muted}
+              multiline
+              style={[
+                styles.input,
+                styles.provenanceNotes,
+                {
+                  backgroundColor: c.surface,
+                  borderColor: c.border,
+                  color: c.onSurface,
+                },
+              ]}
+            />
+
+            <View
+              style={[
+                styles.provenanceDivider,
+                { backgroundColor: c.border },
+              ]}
+            />
+
+            <Text
+              style={[
+                styles.provenanceTitle,
+                { color: c.brand },
+              ]}
+            >
+              Audio
+            </Text>
+
+            <TextInput
+              value={audioFuente}
+              onChangeText={setAudioFuente}
+              placeholder="Fuente del audio"
+              placeholderTextColor={c.muted}
+              style={[
+                styles.input,
+                {
+                  backgroundColor: c.surface,
+                  borderColor: c.border,
+                  color: c.onSurface,
+                },
+              ]}
+            />
+
+            <View style={styles.provenanceChips}>
+              {([
+                ['propio', 'Propio'],
+                ['autorizado', 'Autorizado'],
+                ['dominio_publico', 'Dominio público'],
+                ['enlace_externo', 'Enlace externo'],
+                ['desconocido', 'Por revisar'],
+              ] as [MediaProvenanceType, string][]).map(
+                ([value, label]) => {
+                  const active = audioTipo === value;
+
+                  return (
+                    <Pressable
+                      key={value}
+                      onPress={() => setAudioTipo(value)}
+                      style={[
+                        styles.provenanceChip,
+                        {
+                          backgroundColor: active
+                            ? c.brand
+                            : c.surface,
+                          borderColor: active
+                            ? c.brand
+                            : c.border,
+                        },
+                      ]}
+                    >
+                      <Text
+                        style={{
+                          color: active
+                            ? c.onSurfaceInverse
+                            : c.onSurface,
+                          fontSize: 10.5,
+                          fontWeight: '700',
+                        }}
+                      >
+                        {label}
+                      </Text>
+                    </Pressable>
+                  );
+                }
+              )}
+            </View>
+
+            <TextInput
+              value={audioNotas}
+              onChangeText={setAudioNotas}
+              placeholder="Notas sobre grabación, licencia, enlace..."
+              placeholderTextColor={c.muted}
+              multiline
+              style={[
+                styles.input,
+                styles.provenanceNotes,
+                {
+                  backgroundColor: c.surface,
+                  borderColor: c.border,
+                  color: c.onSurface,
+                },
+              ]}
+            />
+          </View>
+
           {/* STRUCTURE / BLOCKS */}
           <Label c={c}>Estructura de la letra</Label>
           <Text style={{ color: c.muted, fontSize: 12, marginBottom: SPACING.sm }}>
@@ -892,6 +1118,43 @@ const styles = StyleSheet.create({
     fontFamily: Platform.OS === 'ios'
       ? 'Courier'
       : 'monospace',
+  },
+
+  provenanceBox: {
+    borderWidth: 1,
+    borderRadius: RADIUS.lg,
+    padding: SPACING.md,
+    gap: SPACING.sm,
+  },
+
+  provenanceTitle: {
+    fontSize: 14,
+    fontWeight: '900',
+    letterSpacing: 0.5,
+    marginTop: 2,
+  },
+
+  provenanceChips: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 6,
+  },
+
+  provenanceChip: {
+    borderWidth: 1,
+    borderRadius: 16,
+    paddingHorizontal: 10,
+    paddingVertical: 7,
+  },
+
+  provenanceNotes: {
+    minHeight: 74,
+    textAlignVertical: 'top',
+  },
+
+  provenanceDivider: {
+    height: 1,
+    marginVertical: SPACING.sm,
   },
 
   musicBox: {

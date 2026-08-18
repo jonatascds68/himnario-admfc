@@ -65,7 +65,7 @@ const baseSize = 20 * fontScale;
   <>
     <Text style={{ color: gold, fontSize: 12, fontWeight: '800', letterSpacing: 1.5, marginBottom: SPACING.sm, textAlign: hymnAlign }}>CORO</Text>
     <View style={styles.chorusClean}>
-<Text style={{ color: c.muted, fontSize: baseSize, lineHeight: baseSize * 1.5, fontFamily: 'MerriweatherItalic', textAlign: hymnAlign }}>{s.text.replace(/\|+/g, '')}</Text>
+<Text style={{ color: fg, fontSize: baseSize, lineHeight: baseSize * 1.5, fontFamily: hymnFont, textAlign: hymnAlign }}>{s.text.replace(/\|+/g, '')}</Text>
     </View>
   </>
 ) : (
