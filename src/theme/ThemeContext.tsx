@@ -21,12 +21,13 @@ const ThemeCtx = createContext<Ctx | null>(null);
 const KEY_MODE = 'admfc_theme_mode';
 const KEY_FONT = 'admfc_font_scale';
 const KEY_THEME_MIGRATION = 'admfc_theme_migration_v1';
+const KEY_HYMN_FONT_MIGRATION = 'admfc_hymn_font_montserrat_v1';
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const system = useColorScheme();
 const [mode, setModeState] = useState<Mode>('light');
 const [fontScale, setFontScaleState] = useState<number>(1.2);
-  const [hymnFont, setHymnFontState] = useState<HymnFont>('Merriweather');
+  const [hymnFont, setHymnFontState] = useState<HymnFont>('Montserrat');
 
   useEffect(() => {
     (async () => {
@@ -45,8 +46,18 @@ if (!migrated && m === 'system') {
       const f = await kv.get(KEY_FONT);
       if (f) setFontScaleState(Math.min(2.5, Math.max(0.85, parseFloat(f) || 1)));
 
-      const savedHymnFont = await hymnFontStorage.get();
-      setHymnFontState(savedHymnFont);
+      const fontMigrated = await kv.get(KEY_HYMN_FONT_MIGRATION);
+
+      if (!fontMigrated) {
+        // Migração única: todos os usuários atuais passam para Montserrat.
+        setHymnFontState('Montserrat');
+        await hymnFontStorage.set('Montserrat');
+        await kv.set(KEY_HYMN_FONT_MIGRATION, 'done');
+      } else {
+        // Depois da migração, respeita a escolha feita pelo usuário.
+        const savedHymnFont = await hymnFontStorage.get();
+        setHymnFontState(savedHymnFont);
+      }
     })();
   }, []);
 

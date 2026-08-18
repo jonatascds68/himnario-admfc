@@ -31,7 +31,13 @@ export const secureKv = {
     return SecureStore.deleteItemAsync(key);
   },
 };
-export type HymnFont = 'Lora' | 'Merriweather' | 'SourceSerif4' | 'PlayfairDisplay';
+export type HymnFont =
+  | 'Merriweather'
+  | 'Lora'
+  | 'Montserrat'
+  | 'AtkinsonHyperlegible'
+  | 'SourceSerif4'
+  | 'PlayfairDisplay';
 
 const HYMN_FONT_KEY = 'admfc_hymn_font';
 
@@ -42,11 +48,13 @@ export const hymnFontStorage = {
       saved === 'Lora' ||
       saved === 'Merriweather' ||
       saved === 'SourceSerif4' ||
-      saved === 'PlayfairDisplay'
+      saved === 'PlayfairDisplay' ||
+      saved === 'Montserrat' ||
+      saved === 'AtkinsonHyperlegible'
     ) {
       return saved;
     }
-return 'Merriweather';
+return 'Montserrat';
   },
 
   async set(font: HymnFont) {
@@ -65,5 +73,21 @@ export const hymnAlignStorage = {
 
   async set(align: HymnAlign) {
     await kv.set(HYMN_ALIGN_KEY, align);
+  },
+};
+
+const GUIDE_SEEN_KEY = 'admfc_guide_seen_v1';
+
+export const guideStorage = {
+  async hasSeen(): Promise<boolean> {
+    return (await kv.get(GUIDE_SEEN_KEY)) === 'yes';
+  },
+
+  async markSeen() {
+    await kv.set(GUIDE_SEEN_KEY, 'yes');
+  },
+
+  async reset() {
+    await kv.remove(GUIDE_SEEN_KEY);
   },
 };

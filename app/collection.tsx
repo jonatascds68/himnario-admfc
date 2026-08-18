@@ -1,15 +1,12 @@
 import React, { useEffect, useState, useCallback, useRef } from 'react';
 import { View, Text, StyleSheet, FlatList, Pressable, ActivityIndicator, TextInput, Keyboard } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { useLocalSearchParams, useRouter } from 'expo-router';
+import { useFocusEffect, useLocalSearchParams, useRouter } from 'expo-router';
 import { Feather } from '@expo/vector-icons';
 import { useTheme } from '@/src/theme/ThemeContext';
 import { SPACING, RADIUS } from '@/src/theme/tokens';
 import { api, Hymn } from '@/src/lib/api';
 import { HymnRow } from './(tabs)/search';
-
-// Recordar modo elegido durante el uso de la app (módulo)
-let lastMode: '123' | 'abc' = '123';
 
 export default function Collection() {
   const { type } = useLocalSearchParams<{ type: string }>();
@@ -24,8 +21,18 @@ export default function Collection() {
   const [items, setItems] = useState<Hymn[]>([]);
   const [loading, setLoading] = useState(true);
   const [q, setQ] = useState('');
-  const [mode, setMode] = useState<'123' | 'abc'>(lastMode);
+  const [mode, setMode] = useState<'123' | 'abc'>('123');
   const inputRef = useRef<TextInput>(null);
+
+  useFocusEffect(
+    useCallback(() => {
+      const timer = setTimeout(() => {
+        inputRef.current?.focus();
+      }, 250);
+
+      return () => clearTimeout(timer);
+    }, [])
+  );
 
   useEffect(() => {
     (async () => {
@@ -43,7 +50,12 @@ export default function Collection() {
 
   useEffect(() => { const t = setTimeout(() => runSearch(q), 200); return () => clearTimeout(t); }, [q, runSearch]);
 
-  const switchMode = (m: '123' | 'abc') => { setMode(m); lastMode = m; setQ(''); setItems(all); setTimeout(() => inputRef.current?.focus(), 50); };
+  const switchMode = (m: '123' | 'abc') => {
+    setMode(m);
+    setQ('');
+    setItems(all);
+    setTimeout(() => inputRef.current?.focus(), 80);
+  };
 
   return (
     <SafeAreaView style={[styles.container, { backgroundColor: c.surface }]} edges={['top']} testID="collection-screen">

@@ -37,13 +37,6 @@ const QUICK_ACCESS = [
     href: '/favorites',
   },
   {
-    key: 'recents',
-    title: 'Recientes',
-    subtitle: 'Últimos vistos',
-    icon: 'clock-outline',
-    href: '/recents',
-  },
-  {
     key: 'categories',
     title: 'Categorías',
     subtitle: 'Explora temas',
@@ -56,6 +49,13 @@ const QUICK_ACCESS = [
     subtitle: 'Organiza el culto',
     icon: 'format-list-bulleted',
     href: '/(tabs)/culto',
+  },
+  {
+    key: 'recents',
+    title: 'Recientes',
+    subtitle: 'Últimos vistos',
+    icon: 'clock-outline',
+    href: '/recents',
   },
 ] as const;
 

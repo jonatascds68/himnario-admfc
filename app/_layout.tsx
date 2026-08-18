@@ -7,7 +7,7 @@ import {
   StyleSheet,
   View,
 } from 'react-native';
-import { Stack } from 'expo-router';
+import { Stack, useRouter } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
@@ -20,12 +20,16 @@ import {
 } from '@expo-google-fonts/merriweather';
 import { SourceSerif4_400Regular } from '@expo-google-fonts/source-serif-4';
 import { PlayfairDisplay_400Regular } from '@expo-google-fonts/playfair-display';
+import { Montserrat_400Regular } from '@expo-google-fonts/montserrat';
+import { AtkinsonHyperlegible_400Regular } from '@expo-google-fonts/atkinson-hyperlegible';
 import { ThemeProvider } from '@/src/theme/ThemeContext';
+import { guideStorage } from '@/src/lib/storage';
 
 LogBox.ignoreAllLogs(true);
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
+  const router = useRouter();
   const [loaded, error] = useIconFonts();
 
   const [textFontsLoaded, textFontsError] = useFonts({
@@ -34,6 +38,8 @@ export default function RootLayout() {
     MerriweatherItalic: Merriweather_400Regular_Italic,
     SourceSerif4: SourceSerif4_400Regular,
     PlayfairDisplay: PlayfairDisplay_400Regular,
+    Montserrat: Montserrat_400Regular,
+    AtkinsonHyperlegible: AtkinsonHyperlegible_400Regular,
   });
 
   const [introVisible, setIntroVisible] = useState(true);
@@ -55,40 +61,47 @@ export default function RootLayout() {
       await SplashScreen.hideAsync();
 
       Animated.sequence([
-        // Duas voltas como moeda
+        // Uma única volta, mais suave e confortável visualmente
         Animated.timing(spin, {
-          toValue: 2,
-          duration: 3750,
+          toValue: 1,
+          duration: 1800,
           easing: Easing.inOut(Easing.cubic),
           useNativeDriver: true,
         }),
 
-        // Terceira volta crescendo para preencher a tela
+        // Depois da volta completa, o brasão expande
         Animated.parallel([
-          Animated.timing(spin, {
-            toValue: 3,
-            duration: 2100,
-            easing: Easing.out(Easing.cubic),
-            useNativeDriver: true,
-          }),
           Animated.timing(grow, {
             toValue: 6.5,
-            duration: 1400,
+            duration: 750,
             easing: Easing.in(Easing.cubic),
             useNativeDriver: true,
           }),
           Animated.sequence([
-            Animated.delay(900),
+            Animated.delay(330),
             Animated.timing(fade, {
               toValue: 0,
-              duration: 520,
+              duration: 380,
               easing: Easing.out(Easing.quad),
               useNativeDriver: true,
             }),
           ]),
         ]),
-      ]).start(() => {
-        if (active) setIntroVisible(false);
+      ]).start(async () => {
+        if (!active) return;
+
+        setIntroVisible(false);
+
+        try {
+
+          const hasSeenGuide = await guideStorage.hasSeen();
+
+          if (!hasSeenGuide && active) {
+            router.replace('/guide' as any);
+          }
+        } catch (error) {
+          console.warn('No se pudo verificar la guía inicial:', error);
+        }
       });
     };
 
@@ -97,24 +110,20 @@ export default function RootLayout() {
     return () => {
       active = false;
     };
-  }, [ready, spin, grow, fade]);
+  }, [ready, spin, grow, fade, router]);
 
   if (!ready) return null;
 
   const rotateY = spin.interpolate({
-    inputRange: [0, 1, 2, 3],
-    outputRange: ['0deg', '360deg', '720deg', '1080deg'],
+    inputRange: [0, 1],
+    outputRange: ['0deg', '360deg'],
   });
 
   const squash = spin.interpolate({
     inputRange: [
-      0, 0.25, 0.5, 0.75,
-      1, 1.25, 1.5, 1.75,
-      2, 2.25, 2.5, 2.75, 3,
+      0, 0.25, 0.5, 0.75, 1,
     ],
     outputRange: [
-      1, 0.18, 1, 0.18,
-      1, 0.18, 1, 0.18,
       1, 0.18, 1, 0.18, 1,
     ],
   });
