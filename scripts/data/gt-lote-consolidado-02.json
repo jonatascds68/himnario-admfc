@@ -1,0 +1,110 @@
+{
+  "registros": [
+    {
+      "numero": 1,
+      "titulo": "EL APOSENTO ALTO",
+      "tom": "F",
+      "cifra_url": "https://chordify.net/es/chords/himnos-de-gloria-n-1-el-aposento-alto-himnos-de-gloria-mas",
+      "cifra_notas": "Acordes externos confirmados para Himnos de Gloria Nº 1 - El Aposento Alto. Tom publicado: F.",
+      "cifra_autorizada": false
+    },
+    {
+      "numero": 4,
+      "titulo": "DULCE COMUNIÓN",
+      "tom": "D",
+      "cifra_url": "https://chordify.net/es/chords/dulce-comunion-libre-salvo-himnos-de-gloria-y-triunfo-egleyda-adoracion-cristiana-egleyda",
+      "audio_external_url": "https://www.youtube.com/watch?v=MMDgVdC1xx8",
+      "cifra_notas": "Acordes externos confirmados para Dulce Comunión, repertório Himnos de Gloria y Triunfo. Tom publicado: D.",
+      "audio_notas": "Gravação externa identificada como Dulce Comunión - Himnos de Gloria y Triunfo.",
+      "cifra_autorizada": false,
+      "audio_autorizado": false
+    },
+    {
+      "numero": 12,
+      "titulo": "ROCA DE LA ETERNIDAD",
+      "tom": "A",
+      "cifra_url": "https://chordify.net/es/chords/roca-de-la-eternidad-himno-12-el-brody",
+      "audio_external_url": "https://www.youtube.com/watch?v=kGsRCSjiZaY",
+      "cifra_notas": "Acordes externos confirmados para Roca de la Eternidad, Himno 12.",
+      "audio_notas": "Gravação externa identificada explicitamente como Himnos de Gloria y Triunfo Nº 12.",
+      "cifra_autorizada": false,
+      "audio_autorizado": false
+    },
+    {
+      "numero": 27,
+      "titulo": "¡PAZ! ¡PAZ! ¡CUAN DULCE PAZ!",
+      "audio_external_url": "https://open.spotify.com/track/4jRuJ8rVqi3gw5r7FwOCLc",
+      "audio_notas": "Faixa externa Paz Paz Cuan Dulce Paz, associada ao repertório Himnos de Gloria y Triunfo.",
+      "audio_autorizado": false
+    },
+    {
+      "numero": 30,
+      "titulo": "HAY PODER EN JESÚS",
+      "cifra_url": "https://chordify.net/es/chords/hay-poder-en-jesus-himnos-de-gloria-y-triunfo-numero-30-alex-david-music",
+      "cifra_notas": "Acordes externos confirmados para Hay Poder en Jesús - Himnos de Gloria y Triunfo - Número 30.",
+      "cifra_autorizada": false
+    },
+    {
+      "numero": 52,
+      "titulo": "CRISTO LA ROCA",
+      "tom": "G",
+      "cifra_url": "https://chordify.net/es/chords/es-cristo-la-roca-himnos-de-gloria-y-triunfo-pentecostes",
+      "cifra_notas": "Acordes externos confirmados para Es Cristo la Roca - Himnos de Gloria y Triunfo. Tom publicado: G.",
+      "cifra_autorizada": false
+    },
+    {
+      "numero": 74,
+      "titulo": "DILO A CRISTO",
+      "audio_external_url": "https://www.youtube.com/watch?v=Upmble5oBJI",
+      "audio_notas": "Gravação externa identificada explicitamente como Himno 74 Dilo a Cristo - Himnos de Gloria y Triunfo.",
+      "audio_autorizado": false
+    },
+    {
+      "numero": 107,
+      "titulo": "HUBO QUIEN POR MIS CULPAS",
+      "audio_external_url": "https://www.radiocristianadominicana.com/2018/06/himnos-de-gloria-y-triunfo-107-hubo.html",
+      "audio_notas": "Página externa identifica explicitamente Himnos de Gloria y Triunfo nº 107 e oferece reprodução externa.",
+      "audio_autorizado": false
+    },
+    {
+      "numero": 111,
+      "titulo": "LAS PISADAS DEL MAESTRO",
+      "tom": "C",
+      "cifra_url": "https://www.scribd.com/document/632477861/111-Las-pisadas-del-Maestro-pdf",
+      "cifra_notas": "Cifra externa identificada explicitamente como Himno 111 - Las Pisadas del Maestro. Tom publicado: C.",
+      "cifra_autorizada": false
+    },
+    {
+      "numero": 141,
+      "titulo": "VIENE OTRA VEZ",
+      "audio_external_url": "https://open.spotify.com/intl-pt/track/1PqJIzSMgIe1HOGhpm3wyy",
+      "audio_notas": "Faixa externa identificada como Viene Otra Vez - Himno 141, álbum Himnos de Gloria y Triunfo.",
+      "audio_autorizado": false
+    },
+    {
+      "numero": 204,
+      "titulo": "CRISTO ME AMA",
+      "audio_external_url": "https://www.youtube.com/watch?v=laHT9Ot6eYs",
+      "audio_notas": "Gravação externa identificada explicitamente como Cristo Me Ama - Himno 204, Himnos de Gloria y Triunfo.",
+      "audio_autorizado": false
+    },
+    {
+      "numero": 207,
+      "titulo": "SUENEN DULCES HIMNOS",
+      "audio_external_url": "https://www.youtube.com/watch?v=yRRk1407Uwg",
+      "audio_notas": "Gravação externa identificada explicitamente como Himnos de Gloria Nº 207 - Suenen dulces himnos.",
+      "audio_autorizado": false
+    },
+    {
+      "numero": 208,
+      "titulo": "LUGAR PARA CRISTO",
+      "tom": "E",
+      "cifra_url": "https://chordify.net/es/chords/himnos-de-gloria-n-208-lugar-para-cristo-himnos-de-gloria-mas",
+      "audio_external_url": "https://www.youtube.com/watch?v=VI43MsriNE0",
+      "cifra_notas": "Acordes externos confirmados para Himnos de Gloria Nº 208 - Lugar para Cristo. Tom publicado: E.",
+      "audio_notas": "Gravação externa identificada como Himno 208 - Lugar para Cristo.",
+      "cifra_autorizada": false,
+      "audio_autorizado": false
+    }
+  ]
+}

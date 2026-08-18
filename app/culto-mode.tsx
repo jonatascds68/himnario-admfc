@@ -8,11 +8,11 @@ import { useTheme } from '@/src/theme/ThemeContext';
 import { SPACING, RADIUS, COLORS } from '@/src/theme/tokens';
 import { api, Hymn, getSections } from '@/src/lib/api';
 import { playlist } from '@/src/lib/collections';
-import { hymnFontStorage, HymnFont, hymnAlignStorage, HymnAlign } from '@/src/lib/storage';
+import { hymnAlignStorage, HymnAlign } from '@/src/lib/storage';
 export default function CultoMode() {
   const { id: initialId } = useLocalSearchParams<{ id: string }>();
   const router = useRouter();
-const { c, fontScale, bumpFont } = useTheme();
+const { c, isDark, fontScale, bumpFont, hymnFont } = useTheme();
 const insets = useSafeAreaInsets();
   useEffect(() => {
     if (Platform.OS === 'web') return;
@@ -23,10 +23,10 @@ const insets = useSafeAreaInsets();
   const [pos, setPos] = useState(0);
   const [hymn, setHymn] = useState<Hymn | null>(null);
   const [loading, setLoading] = useState(true);
-const [hymnFont, setHymnFont] = useState<HymnFont>('Lora');
+
 const [hymnAlign, setHymnAlign] = useState<HymnAlign>('center');
 useEffect(() => {
-  hymnFontStorage.get().then(setHymnFont);
+  
 hymnAlignStorage.get().then(setHymnAlign);
 }, []);
   useEffect(() => { (async () => {
@@ -65,7 +65,17 @@ const baseSize = 20 * fontScale;
   <>
     <Text style={{ color: gold, fontSize: 12, fontWeight: '800', letterSpacing: 1.5, marginBottom: SPACING.sm, textAlign: hymnAlign }}>CORO</Text>
     <View style={styles.chorusClean}>
-<Text style={{ color: fg, fontSize: baseSize, lineHeight: baseSize * 1.5, fontFamily: hymnFont, textAlign: hymnAlign }}>{s.text.replace(/\|+/g, '')}</Text>
+<Text
+      style={{
+        color: isDark ? '#D6C59A' : '#75612F',
+        fontSize: baseSize,
+        lineHeight: baseSize * 1.5,
+        fontFamily: 'MerriweatherItalic',
+        textAlign: hymnAlign,
+      }}
+    >
+      {s.text.replace(/\|+/g, '')}
+    </Text>
     </View>
   </>
 ) : (

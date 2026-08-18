@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useState, useRef } from 'react';
 import { View, Text, StyleSheet, ScrollView, Pressable, ActivityIndicator, Linking, Share, Animated, Modal, Platform } from 'react-native';
+import { Gesture, GestureDetector } from 'react-native-gesture-handler';
 import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useFocusEffect, useLocalSearchParams, useRouter } from 'expo-router';
 import { Feather, Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
@@ -11,7 +12,7 @@ import { useTheme } from '@/src/theme/ThemeContext';
 import { SPACING, RADIUS, GOLD } from '@/src/theme/tokens';
 import { api, Hymn, getSections } from '@/src/lib/api';
 import { favorites, recents, playlist } from '@/src/lib/collections';
-import { hymnFontStorage, HymnFont, hymnAlignStorage, HymnAlign } from '@/src/lib/storage';
+import { hymnAlignStorage, HymnAlign } from '@/src/lib/storage';
 import { ShareCard, buildSharePages } from '@/src/components/ShareCard';
 
 function formatAudioTime(seconds?: number): string {
@@ -168,7 +169,7 @@ function buildShareText(hymn: Hymn): string {
 export default function HymnDetail() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const router = useRouter();
-  const { c, fontScale, bumpFont } = useTheme();
+  const { c, isDark, fontScale, setFontScale, bumpFont, hymnFont } = useTheme();
 const insets = useSafeAreaInsets();
   const [hymn, setHymn] = useState<Hymn | null>(null);
   const [loading, setLoading] = useState(true);
@@ -179,10 +180,26 @@ const insets = useSafeAreaInsets();
   const [sharing, setSharing] = useState(false);
 const [contentMode, setContentMode] = useState<'lyrics' | 'chords' | 'audio'>('lyrics');
 const [transposeSteps, setTransposeSteps] = useState(0);
-const [hymnFont, setHymnFont] = useState<HymnFont>('Lora');
+
 const [hymnAlign, setHymnAlign] = useState<HymnAlign>('center');
   const pageRefs = useRef<(View | null)[]>([]);
   const starScale = React.useRef(new Animated.Value(1)).current;
+
+  // Pinça fluida para aumentar/diminuir a letra em tempo real.
+  const pinchStartScale = React.useRef(fontScale);
+  const pinchTargetScale = React.useRef(fontScale);
+  const pinchLastApplied = React.useRef(fontScale);
+  const pinchLastUpdate = React.useRef(0);
+
+  // Mantém o valor atual da fonte disponível para o gesto
+  // sem obrigar a recriação do Gesture.Pinch a cada render.
+  const fontScaleRef = React.useRef(fontScale);
+
+  React.useEffect(() => {
+    fontScaleRef.current = fontScale;
+    pinchTargetScale.current = fontScale;
+    pinchLastApplied.current = fontScale;
+  }, [fontScale]);
 
   const audioSource =
     hymn?.audio_url ||
@@ -263,7 +280,7 @@ const [hymnAlign, setHymnAlign] = useState<HymnAlign>('center');
   }, [id]);
 useFocusEffect(
   useCallback(() => {
-    hymnFontStorage.get().then(setHymnFont);
+    
 hymnAlignStorage.get().then(setHymnAlign);
   }, [])
 );
@@ -287,6 +304,67 @@ hymnAlignStorage.get().then(setHymnAlign);
     if (!hymn) return; Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
     if (inList) { await playlist.remove(hymn.id); setInList(false); } else { await playlist.add(hymn.id); setInList(true); }
   };
+  const pinchGesture = React.useMemo(() => {
+    const pinch = Gesture.Pinch()
+      .runOnJS(true)
+      .onBegin(() => {
+        const currentScale = fontScaleRef.current;
+
+        pinchStartScale.current = currentScale;
+        pinchTargetScale.current = currentScale;
+        pinchLastApplied.current = currentScale;
+        pinchLastUpdate.current = 0;
+      })
+      .onUpdate((event) => {
+        const next = Math.min(
+          2.5,
+          Math.max(
+            0.85,
+            pinchStartScale.current * event.scale
+          )
+        );
+
+        const smoothNext = Math.round(next * 100) / 100;
+        pinchTargetScale.current = smoothNext;
+
+        const now = Date.now();
+
+        if (
+          now - pinchLastUpdate.current >= 32 &&
+          Math.abs(
+            smoothNext - pinchLastApplied.current
+          ) >= 0.01
+        ) {
+          pinchLastUpdate.current = now;
+          pinchLastApplied.current = smoothNext;
+          setFontScale(smoothNext);
+        }
+      })
+      .onEnd(() => {
+        const finalScale = pinchTargetScale.current;
+
+        pinchLastApplied.current = finalScale;
+        setFontScale(finalScale);
+      });
+
+    /*
+     * O ScrollView possui seu próprio gesto nativo.
+     * Com Gesture.Native() + Simultaneous, permitimos que o
+     * detector de pinça seja reconhecido sem precisar esperar
+     * o ScrollView perder a disputa pelos toques.
+     *
+     * Resultado esperado:
+     * - 1 dedo continua rolando normalmente;
+     * - 2 dedos podem iniciar a pinça imediatamente.
+     */
+    const nativeScroll = Gesture.Native();
+
+    return Gesture.Simultaneous(
+      nativeScroll,
+      pinch
+    );
+  }, [setFontScale]);
+
   const share = async () => {
     if (!hymn) return;
     try { await Share.share({ message: buildShareText(hymn) }); } catch {}
@@ -315,124 +393,201 @@ hymnAlignStorage.get().then(setHymnAlign);
 
   const sections = getSections(hymn);
   const baseSize = 17 * fontScale;
-  const shortOther = hymn.himnario === 'Gloria y Triunfo' ? 'Himnos de Sión' : 'Gloria y Triunfo';
+  const shortOther =
+    hymn.himnario === 'Gloria y Triunfo'
+      ? 'Himnos de Sión'
+      : 'Gloria y Triunfo';
+
   const sharePages = buildSharePages(sections);
-  const equivText = hymn.numero_equivalente ? `${shortOther} — Nº ${hymn.numero_equivalente}` : null;
+
+  const equivText =
+    hymn.numero_equivalente != null
+      ? `${shortOther} · n° ${hymn.numero_equivalente}`
+      : null;
 
   return (
     <SafeAreaView style={[styles.container, { backgroundColor: c.surface }]} edges={['top']} testID="hymn-detail-screen">
       <View style={styles.topBar}>
-        <Pressable onPress={() => router.back()} hitSlop={10} testID="hymn-back"><Feather name="chevron-left" size={28} color={c.brand} /></Pressable>
+        <Pressable
+          onPress={() => {
+            if (contentMode !== 'lyrics') {
+              try {
+                audioPlayer.pause();
+              } catch {}
+              setDragTime(null);
+              setContentMode('lyrics');
+              return;
+            }
+            router.back();
+          }}
+          hitSlop={10}
+          testID="hymn-back"
+        >
+          <Feather
+            name="chevron-left"
+            size={28}
+            color={contentMode !== 'lyrics' ? c.brand : c.muted}
+          />
+        </Pressable>
         <View style={{ flex: 1 }} />
+        {(hymn.cifra_url || hymn.cifra || hymn.cifra_bloques?.length) ? (
+          <Pressable
+            onPress={() => {
+              if (contentMode === 'chords') {
+                setContentMode('lyrics');
+              } else {
+                try {
+                  audioPlayer.pause();
+                } catch {}
+                setDragTime(null);
+                setContentMode('chords');
+              }
+            }}
+            hitSlop={10}
+            style={[
+              styles.iconBtn,
+              contentMode === 'chords' && {
+                backgroundColor: c.surfaceSecondary,
+              },
+            ]}
+            testID="hymn-open-chords"
+          >
+            <MaterialCommunityIcons
+              name="music-clef-treble"
+              size={23}
+              color={
+                contentMode === 'chords'
+                  ? c.brand
+                  : c.muted
+              }
+            />
+          </Pressable>
+        ) : null}
+
+        {(audioSource || hymn.audio_external_url) ? (
+          <Pressable
+            onPress={() => {
+              if (contentMode === 'audio') {
+                try {
+                  audioPlayer.pause();
+                } catch {}
+                setDragTime(null);
+                setContentMode('lyrics');
+              } else {
+                setContentMode('audio');
+              }
+            }}
+            hitSlop={10}
+            style={[
+              styles.iconBtn,
+              contentMode === 'audio' && {
+                backgroundColor: c.surfaceSecondary,
+              },
+            ]}
+            testID="hymn-open-audio"
+          >
+            <Feather
+              name="headphones"
+              size={22}
+              color={
+                contentMode === 'audio'
+                  ? c.brand
+                  : c.muted
+              }
+            />
+          </Pressable>
+        ) : null}
+
         <Pressable onPress={toggleFav} hitSlop={10} style={styles.iconBtn} testID="hymn-toggle-fav">
           <Animated.View style={{ transform: [{ scale: starScale }] }}>
             <Ionicons name={isFav ? 'star' : 'star-outline'} size={24} color={isFav ? GOLD : c.muted} />
           </Animated.View>
         </Pressable>
         <Pressable onPress={() => setShareOpen(true)} hitSlop={10} style={styles.iconBtn} testID="hymn-share">
-          {sharing ? <ActivityIndicator size="small" color={c.brand} /> : <Feather name="share-2" size={22} color={c.brand} />}
+          {sharing
+            ? <ActivityIndicator size="small" color={c.muted} />
+            : <Feather name="share-2" size={22} color={c.muted} />
+          }
         </Pressable>
       </View>
-      <ScrollView contentContainerStyle={styles.scroll}>
+      <GestureDetector gesture={pinchGesture}>
+        <ScrollView contentContainerStyle={styles.scroll}>
         <Text style={[styles.himnario, { color: c.muted }]}>{hymn.himnario.toUpperCase()}</Text>
         <Text style={[styles.number, { color: c.brand }]}>Nº {hymn.numero}</Text>
 <Text style={[styles.title, { color: c.onSurface, textAlign: 'center' }]}>{hymn.titulo}</Text>
-        {equivId && hymn.numero_equivalente ? (
-          <Pressable onPress={() => {
-              audioPlayer.pause();
-              setDragTime(null);
-              router.replace(`/hymn/${equivId}`);
-            }} style={[styles.equivBox, { borderColor: c.borderStrong, backgroundColor: c.surfaceSecondary }]} testID="hymn-cross-ref">
-            <Feather name="link" size={16} color={c.brand} />
-            <Text style={{ color: c.onSurface, fontSize: 13 }}>
-              También en: <Text style={{ fontWeight: '700', color: c.brand }}>{shortOther} — Nº {hymn.numero_equivalente}</Text>
-            </Text>
-            <Feather name="chevron-right" size={16} color={c.muted} />
-          </Pressable>
-        ) : null}
-        <View style={[styles.divider, { backgroundColor: c.borderStrong }]} />
-{hymn.cifra_url ? (
-  <Pressable
-    onPress={async () => {
-      try {
-        await Linking.openURL(hymn.cifra_url!);
-      } catch {}
-    }}
-    style={[
-      styles.externalChordBtn,
-      { borderColor: c.brandSecondary },
-    ]}
-    testID="hymn-external-chords"
-  >
-    <MaterialCommunityIcons
-      name="music-clef-treble"
-      size={18}
-      color={c.brandSecondary}
-    />
-
-    <Text
-      style={{
-        color: c.brandSecondary,
-        fontSize: 12,
-        fontWeight: '800',
-      }}
-    >
-      Cifra externa{hymn.tom ? ` · Tono: ${hymn.tom}` : ''}
-    </Text>
-
-    <Feather
-      name="external-link"
-      size={14}
-      color={c.brandSecondary}
-    />
-  </Pressable>
-) : null}
-
-<View style={[styles.modeTabs, { backgroundColor: c.surfaceSecondary, borderColor: c.border }]}>
-  {[
-    { key: 'lyrics', label: 'Letra', icon: 'file-text' },
-    { key: 'chords', label: 'Cifras', icon: 'music' },
-    { key: 'audio', label: 'Audio', icon: 'headphones' },
-  ].map((tab) => {
-    const active = contentMode === tab.key;
-
-    const disabled =
-      (tab.key === 'chords' && !hymn.cifra && !hymn.cifra_bloques?.length) ||
-      (tab.key === 'audio' && !hymn.audio_url && !hymn.audio_local && !hymn.audio_external_url);
-
-    return (
-      <Pressable
-        key={tab.key}
-        disabled={disabled}
-        onPress={() =>
-          setContentMode(tab.key as 'lyrics' | 'chords' | 'audio')
-        }
-        style={[
-          styles.modeTab,
-          active && { backgroundColor: c.brand },
-          disabled && { opacity: 0.35 },
-        ]}
-      >
-        <Feather
-          name={tab.icon as any}
-          size={16}
-          color={active ? c.onSurfaceInverse : c.onSurface}
-        />
-
-        <Text
-          style={{
-            color: active ? c.onSurfaceInverse : c.onSurface,
-            fontSize: 12,
-            fontWeight: '700',
+        {equivId && hymn.numero_equivalente != null ? (
+        <Pressable
+          onPress={() => {
+            audioPlayer.pause();
+            setDragTime(null);
+            router.replace(`/hymn/${equivId}`);
           }}
+          hitSlop={8}
+          style={styles.equivCompact}
+          testID="hymn-cross-ref"
         >
-          {tab.label}
-        </Text>
-      </Pressable>
-    );
-  })}
-</View>
-       {contentMode === 'lyrics' ? (
+          <Feather
+            name="link"
+            size={12}
+            color={c.muted}
+          />
+
+          <Text
+            style={[
+              styles.equivCompactText,
+              { color: c.muted },
+            ]}
+          >
+            También en:
+          </Text>
+
+          <Text
+            style={[
+              styles.equivCompactText,
+              {
+                color: c.brand,
+                fontWeight: '700',
+              },
+            ]}
+          >
+            {shortOther} · n° {String(hymn.numero_equivalente)}
+          </Text>
+
+          <Feather
+            name="chevron-right"
+            size={12}
+            color={c.muted}
+          />
+        </Pressable>
+      ) : null}
+        <View style={[styles.divider, { backgroundColor: c.borderStrong }]} />
+
+
+{contentMode !== 'lyrics' ? (
+        <Pressable
+          onPress={() => setContentMode('lyrics')}
+          hitSlop={8}
+          style={styles.backToLyrics}
+          testID="hymn-back-to-lyrics"
+        >
+          <Feather
+            name="chevron-left"
+            size={15}
+            color={c.brand}
+          />
+          <Text
+            style={{
+              color: c.brand,
+              fontSize: 12,
+              fontWeight: '700',
+            }}
+          >
+            Volver a la letra
+          </Text>
+        </Pressable>
+      ) : null}
+
+      {contentMode === 'lyrics' ? (
   <>
     {sections.length === 0 ? (
           <Text style={{ color: c.muted, textAlign: 'center', marginTop: SPACING.xl }}>Letra no disponible</Text>
@@ -444,7 +599,20 @@ hymnAlignStorage.get().then(setHymnAlign);
   <>
     <Text style={[styles.stanzaTitle, { color: c.brand, textAlign: hymnAlign }]}>CORO</Text>
     <View style={styles.chorusClean}>
-<Text style={[styles.verse, { color: c.onSurface, fontSize: baseSize, lineHeight: baseSize * 1.55, fontFamily: hymnFont, textAlign: hymnAlign }]}>{s.text.replace(/\|+/g, '')}</Text>
+<Text
+      style={[
+        styles.verse,
+        {
+          color: isDark ? '#D6C59A' : '#75612F',
+          fontSize: baseSize,
+          lineHeight: baseSize * 1.55,
+          fontFamily: 'MerriweatherItalic',
+          textAlign: hymnAlign,
+        },
+      ]}
+    >
+      {s.text.replace(/\|+/g, '')}
+    </Text>
     </View>
   </>
 ) : (
@@ -1014,7 +1182,8 @@ hymnAlignStorage.get().then(setHymnAlign);
 )}
         {hymn.fuente ? <Text style={[styles.meta, { color: c.muted, marginTop: SPACING.lg }]}>Fuente: {hymn.fuente}</Text> : null}
         {hymn.observacion ? <Text style={[styles.meta, { color: c.muted, marginTop: 4 }]}>Nota: {hymn.observacion}</Text> : null}
-      </ScrollView>
+        </ScrollView>
+      </GestureDetector>
 <View
   style={[
     styles.controlBar,
@@ -1058,9 +1227,26 @@ hymnAlignStorage.get().then(setHymnAlign);
       {/* Off-screen render for image capture */}
       <View style={styles.offscreen} pointerEvents="none">
         {sharePages.map((pg, i) => (
-          <ShareCard key={i} ref={(r) => { pageRefs.current[i] = r; }}
-            himnario={hymn.himnario} numero={hymn.numero} titulo={hymn.titulo}
-            page={pg} equivalencia={pg.pageIndex === 1 ? equivText : null} />
+          <ShareCard
+            key={i}
+            ref={(r) => {
+              pageRefs.current[i] = r;
+            }}
+            himnario={hymn.himnario}
+            numero={hymn.numero}
+            titulo={hymn.titulo}
+            page={pg}
+            equivalencia={
+              pg.pageIndex === 1
+                ? equivText
+                : null
+            }
+            colors={c}
+            isDark={isDark}
+            hymnFont={hymnFont}
+            hymnAlign={hymnAlign}
+            baseSize={baseSize}
+          />
         ))}
       </View>
     </SafeAreaView>
@@ -1074,14 +1260,40 @@ const styles = StyleSheet.create({
   shareCard: { width: '100%', maxWidth: 360, borderRadius: RADIUS.lg, padding: SPACING.xl },
   shareOpt: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: SPACING.sm, height: 52, borderRadius: RADIUS.md, marginBottom: SPACING.sm },
   topBar: { flexDirection: 'row', alignItems: 'center', paddingHorizontal: SPACING.md, paddingVertical: SPACING.sm, gap: SPACING.sm },
-  iconBtn: { padding: SPACING.sm },
+  iconBtn: {
+    padding: SPACING.sm,
+    borderRadius: RADIUS.md,
+  },
   scroll: { padding: SPACING.lg, paddingBottom: 140 },
   himnario: { fontSize: 11, fontWeight: '800', letterSpacing: 2 },
-  number: { fontSize: 34, fontWeight: '900', letterSpacing: 1, marginTop: 4 },
-  title: { fontSize: 24, fontWeight: '700', marginTop: 4 },
+  number: { fontSize: 27, fontWeight: '900', letterSpacing: 1, marginTop: 1 },
+  title: {
+    fontSize: 20,
+    fontWeight: '700',
+    marginTop: -1,
+    lineHeight: 24,
+  },
   equivBox: { flexDirection: 'row', alignItems: 'center', gap: SPACING.sm, padding: SPACING.md, borderRadius: RADIUS.md, borderWidth: 1, marginTop: SPACING.md },
+  equivCompact: {
+    alignSelf: 'stretch',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 3,
+    marginTop: 3,
+    paddingVertical: 2,
+    paddingHorizontal: 0,
+  },
+
+  equivCompactText: {
+    fontSize: 11,
+    lineHeight: 15,
+    flexShrink: 1,
+    textAlign: 'center',
+  },
+
   meta: { fontSize: 12, fontStyle: 'italic' },
-  divider: { height: 2, width: 60, marginVertical: SPACING.lg, opacity: 0.7 },
+  divider: { height: 2, width: 60, marginTop: 14, marginBottom: 14, opacity: 0.7 },
 stanzaTitle: { fontSize: 14, fontWeight: '800', fontStyle: 'italic', letterSpacing: 1.8, marginBottom: SPACING.md },
   verse: {},
 chorusClean: { paddingVertical: 8, marginTop: 6, marginBottom: 10 },
@@ -1115,6 +1327,16 @@ controlBar: { position: 'absolute', left: 0, right: 0, bottom: 0, flexDirection:
     alignItems: 'center',
     justifyContent: 'center',
     gap: 6,
+  },
+
+  backToLyrics: {
+    alignSelf: 'flex-start',
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 2,
+    paddingVertical: 5,
+    paddingRight: 8,
+    marginBottom: SPACING.sm,
   },
 
   audioWrap: {

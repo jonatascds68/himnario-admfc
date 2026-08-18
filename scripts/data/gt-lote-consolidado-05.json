@@ -1,0 +1,18 @@
+{
+  "registros": [
+    {
+      "numero": 14,
+      "titulo": "¡OH QUE AMIGO!",
+      "audio_external_url": "https://www.youtube.com/playlist?list=PL0NbMtp6GcVRT-R3HnsEyVzIJYPJ1fvf7",
+      "audio_notas": "Fonte externa identifica explicitamente o hino Nº 14 de Himnos de Gloria y Triunfo: ¡Oh qué amigo nos es Cristo!. Referência externa; áudio não incorporado.",
+      "audio_autorizado": false
+    },
+    {
+      "numero": 18,
+      "titulo": "GRATO ES DECIR LA HISTORIA",
+      "audio_external_url": "https://music.apple.com/co/album/16-himnos-del-himnario-de-gloria-y-triunfo-vol-2/1475376403",
+      "audio_notas": "Gravação externa de Grato Es Decir la Historia publicada em álbum identificado como Himnos del Himnario de Gloria y Triunfo, Vol. 2. Referência externa; áudio não incorporado.",
+      "audio_autorizado": false
+    }
+  ]
+}

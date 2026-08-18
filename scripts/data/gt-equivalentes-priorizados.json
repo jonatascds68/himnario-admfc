@@ -1,0 +1,926 @@
+{
+  "total": 115,
+  "confirmados_agora": 0,
+  "registros": [
+    {
+      "gt_numero": 1,
+      "gt_titulo": "EL APOSENTO ALTO",
+      "sion_numero": 4,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 2,
+      "gt_titulo": "LLUVIAS DE GRACIA",
+      "sion_numero": 5,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 4,
+      "gt_titulo": "DULCE COMUNIÓN",
+      "sion_numero": 6,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 11,
+      "gt_titulo": "CARIÑOSO SALVADOR",
+      "sion_numero": 212,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 12,
+      "gt_titulo": "ROCA DE LA ETERNIDAD",
+      "sion_numero": 98,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 14,
+      "gt_titulo": "¡OH QUE AMIGO!",
+      "sion_numero": 167,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 16,
+      "gt_titulo": "CERCA DE TI, SEÑOR",
+      "sion_numero": 127,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 18,
+      "gt_titulo": "GRATO ES DECIR LA HISTORIA",
+      "sion_numero": 128,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 25,
+      "gt_titulo": "¡OH, CUAN DULCE!",
+      "sion_numero": 134,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 26,
+      "gt_titulo": "ALLÍ NO HABRÁ TRIBULACIÓN",
+      "sion_numero": 12,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 27,
+      "gt_titulo": "¡PAZ! ¡PAZ! ¡CUAN DULCE PAZ!",
+      "sion_numero": 14,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 30,
+      "gt_titulo": "HAY PODER EN JESÚS",
+      "sion_numero": 13,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 34,
+      "gt_titulo": "TENDRÁS QUE RENACER",
+      "sion_numero": 17,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 35,
+      "gt_titulo": "CANTARE LA MARAVILLA",
+      "sion_numero": 18,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 48,
+      "gt_titulo": "PENTECOSTÉS PARA TODOS",
+      "sion_numero": 162,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 52,
+      "gt_titulo": "CRISTO LA ROCA",
+      "sion_numero": 24,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 57,
+      "gt_titulo": "GLORIA AL CORDERO",
+      "sion_numero": 27,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 59,
+      "gt_titulo": "¡TE QUIERO MI SEÑOR!",
+      "sion_numero": 29,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 61,
+      "gt_titulo": "NADA HAY QUE ME PUEDA APARTAR",
+      "sion_numero": 39,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 63,
+      "gt_titulo": "DIOS OS GUARDE",
+      "sion_numero": 119,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 66,
+      "gt_titulo": "¡SALUD! ¡SALUD!",
+      "sion_numero": 30,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 68,
+      "gt_titulo": "LIBRE ESTOY",
+      "sion_numero": 32,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 69,
+      "gt_titulo": "PRECIOSO ES JESÚS",
+      "sion_numero": 278,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 72,
+      "gt_titulo": "HAY QUIEN VIGILE",
+      "sion_numero": 34,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 73,
+      "gt_titulo": "JAMÁS SE DICE ADIÓS ALLÁ",
+      "sion_numero": 236,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 74,
+      "gt_titulo": "DILO A CRISTO",
+      "sion_numero": 33,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 75,
+      "gt_titulo": "TUYO SOY, JESÚS",
+      "sion_numero": 36,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 76,
+      "gt_titulo": "EL CONSOLADOR HA VENIDO",
+      "sion_numero": 266,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 83,
+      "gt_titulo": "¡OH, VEN SIN TARDAR!",
+      "sion_numero": 37,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 91,
+      "gt_titulo": "YA SALVO SOY",
+      "sion_numero": 41,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 93,
+      "gt_titulo": "LA GLORIOSA APARICIÓN",
+      "sion_numero": 311,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 95,
+      "gt_titulo": "MAS CUAL JESÚS",
+      "sion_numero": 42,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 100,
+      "gt_titulo": "A LOS PIES DE JESUCRISTO",
+      "sion_numero": 59,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 102,
+      "gt_titulo": "PODER PENTECOSTAL",
+      "sion_numero": 44,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 103,
+      "gt_titulo": "CUANDO ANDEMOS CON DIOS",
+      "sion_numero": 133,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 107,
+      "gt_titulo": "HUBO QUIEN POR MIS CULPAS",
+      "sion_numero": 47,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 108,
+      "gt_titulo": "EL NOMBRE DE JESÚS",
+      "sion_numero": 48,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 109,
+      "gt_titulo": "LLAMA PENTECOSTAL",
+      "sion_numero": 49,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 110,
+      "gt_titulo": "HE CONSAGRADO A MI JESÚS",
+      "sion_numero": 50,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 111,
+      "gt_titulo": "LAS PISADAS DEL MAESTRO",
+      "sion_numero": 51,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 114,
+      "gt_titulo": "EN JESÚS MI SEÑOR ENCONTRÉ DULCE PAZ",
+      "sion_numero": 132,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 116,
+      "gt_titulo": "SI CREYERE PUEDE A EL VENIR",
+      "sion_numero": 148,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 122,
+      "gt_titulo": "EL MEJOR AMIGO",
+      "sion_numero": 56,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 123,
+      "gt_titulo": "LA FUENTE ETERNA HALLÉ",
+      "sion_numero": 57,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 124,
+      "gt_titulo": "CRISTO VIENE",
+      "sion_numero": 199,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 126,
+      "gt_titulo": "LAS PROMESAS DE JESÚS",
+      "sion_numero": 58,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 133,
+      "gt_titulo": "TAL COMO SOY",
+      "sion_numero": 135,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 136,
+      "gt_titulo": "SOY SALVO",
+      "sion_numero": 60,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 137,
+      "gt_titulo": "SIEMPRE ORAD",
+      "sion_numero": 62,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 138,
+      "gt_titulo": "LA FUENTE SANADORA",
+      "sion_numero": 63,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 140,
+      "gt_titulo": "MAS SANTIDAD DAME",
+      "sion_numero": 65,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 141,
+      "gt_titulo": "VIENE OTRA VEZ",
+      "sion_numero": 61,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 147,
+      "gt_titulo": "LAS BUENAS NUEVAS",
+      "sion_numero": 1,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 148,
+      "gt_titulo": "FUENTE DE LA VIDA ETERNA",
+      "sion_numero": 66,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 149,
+      "gt_titulo": "BAUTÍCESE CADA UNO",
+      "sion_numero": 67,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 152,
+      "gt_titulo": "BIENAVENTURADOS LOS DE LIMPIO CORAZÓN",
+      "sion_numero": 69,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 159,
+      "gt_titulo": "LA PATRIA DEL ALMA",
+      "sion_numero": 68,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 167,
+      "gt_titulo": "SANTO ESPÍRITU, DESCIENDE",
+      "sion_numero": 165,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 168,
+      "gt_titulo": "CARA A CARA",
+      "sion_numero": 72,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 169,
+      "gt_titulo": "HAY UN LUGAR DO QUIERO ESTAR",
+      "sion_numero": 73,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 170,
+      "gt_titulo": "LA PALABRA HOY SEMBRADA",
+      "sion_numero": 75,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 172,
+      "gt_titulo": "JESÚS, YO HE PROMETIDO",
+      "sion_numero": 206,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 179,
+      "gt_titulo": "¡TRABAJAD, TRABAJAD!",
+      "sion_numero": 80,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 180,
+      "gt_titulo": "LAS SANTAS ESCRITURAS",
+      "sion_numero": 81,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 184,
+      "gt_titulo": "EN JESÚS, MI SALVADOR",
+      "sion_numero": 82,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 187,
+      "gt_titulo": "YO GUIARÉ",
+      "sion_numero": 84,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 192,
+      "gt_titulo": "DEJO EL MUNDO Y SIGO A CRISTO",
+      "sion_numero": 85,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 193,
+      "gt_titulo": "IGLESIA DE CRISTO",
+      "sion_numero": 86,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 196,
+      "gt_titulo": "CUANDO LEO EN LA BIBLIA",
+      "sion_numero": 43,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 200,
+      "gt_titulo": "NÍTIDO RAYO POR CRISTO",
+      "sion_numero": 90,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 203,
+      "gt_titulo": "LOS NIÑOS, JOYAS DE CRISTO",
+      "sion_numero": 93,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 204,
+      "gt_titulo": "CRISTO ME AMA",
+      "sion_numero": 129,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 207,
+      "gt_titulo": "SUENEN DULCES HIMNOS",
+      "sion_numero": 94,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 208,
+      "gt_titulo": "LUGAR PARA CRISTO",
+      "sion_numero": 95,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 211,
+      "gt_titulo": "¡GLORIA A DIOS EN LAS ALTURAS!",
+      "sion_numero": 160,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 212,
+      "gt_titulo": "¡NOCHE DE PAZ, NOCHE DE AMOR!",
+      "sion_numero": 221,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 213,
+      "gt_titulo": "UN AMIGO HAY MAS QUE HERMANO",
+      "sion_numero": 306,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 216,
+      "gt_titulo": "YA VENIMOS, CUAL HERMANOS",
+      "sion_numero": 91,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 217,
+      "gt_titulo": "LA SANTA CENA",
+      "sion_numero": 99,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 219,
+      "gt_titulo": "DIOS BENDIGA LAS ALMAS UNIDAS",
+      "sion_numero": 96,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 232,
+      "gt_titulo": "¿QUIEN A CRISTO QUIERE?",
+      "sion_numero": 100,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 235,
+      "gt_titulo": "NO HAY MAS QUE UNO",
+      "sion_numero": 20,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 244,
+      "gt_titulo": "ADORADLE",
+      "sion_numero": 103,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 246,
+      "gt_titulo": "¡ALELUYA, EL ME SALVA!",
+      "sion_numero": 104,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 255,
+      "gt_titulo": "SALVADOR, MI BIEN ETERNO",
+      "sion_numero": 105,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 257,
+      "gt_titulo": "TEMPLOS DE DIOS SOIS",
+      "sion_numero": 106,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 259,
+      "gt_titulo": "GUARDA EL CONTACTO",
+      "sion_numero": 107,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 260,
+      "gt_titulo": "CREO EN LA BIBLIA",
+      "sion_numero": 108,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 262,
+      "gt_titulo": "EL QUE HA DE VENIR, VENDRÁ",
+      "sion_numero": 109,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 267,
+      "gt_titulo": "MÁS CERCA DE CRISTO",
+      "sion_numero": 110,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 274,
+      "gt_titulo": "EN MI ALMA HAY DULCE PAZ",
+      "sion_numero": 53,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 280,
+      "gt_titulo": "JESÚS, YO TE AMO",
+      "sion_numero": 131,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 282,
+      "gt_titulo": "LA GRACIA",
+      "sion_numero": 115,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 289,
+      "gt_titulo": "MI REY Y MI AMIGO",
+      "sion_numero": 309,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 290,
+      "gt_titulo": "SOLO CRISTO",
+      "sion_numero": 114,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 292,
+      "gt_titulo": "EL ME SOSTENDRÁ",
+      "sion_numero": 187,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 293,
+      "gt_titulo": "PON TU CARGA EN JESÚS",
+      "sion_numero": 102,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 295,
+      "gt_titulo": "JESÚS PRONTO VOLVERÁ",
+      "sion_numero": 116,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 296,
+      "gt_titulo": "COMPRADO CON SANGRE POR CRISTO",
+      "sion_numero": 117,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 300,
+      "gt_titulo": "ID A LA MIES",
+      "sion_numero": 118,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 306,
+      "gt_titulo": "JUBILOSAS NUESTRAS VOCES",
+      "sion_numero": 121,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 307,
+      "gt_titulo": "¡GLORIOSA PAZ!",
+      "sion_numero": 122,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 309,
+      "gt_titulo": "VEN A CRISTO",
+      "sion_numero": 141,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 312,
+      "gt_titulo": "LA PAZ QUE CRISTO DA",
+      "sion_numero": 124,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 319,
+      "gt_titulo": "VE Y VIVIRÁS",
+      "sion_numero": 144,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 320,
+      "gt_titulo": "EN LA NUEVA JERUSALÉN",
+      "sion_numero": 130,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 331,
+      "gt_titulo": "DAD LO MEJOR AL MAESTRO",
+      "sion_numero": 154,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 341,
+      "gt_titulo": "UN DÍA QUE EL CIELO",
+      "sion_numero": 249,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 347,
+      "gt_titulo": "CRISTO ME AYUDA POR EL A VIVIR",
+      "sion_numero": 139,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 356,
+      "gt_titulo": "EL EVANGELIO",
+      "sion_numero": 313,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 373,
+      "gt_titulo": "OÍD, OÍD, LO QUE NOS MANDA",
+      "sion_numero": 219,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 375,
+      "gt_titulo": "LEJOS ALLENDE LOS MARES",
+      "sion_numero": 2,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 377,
+      "gt_titulo": "MUCHOS QUE VIVEN",
+      "sion_numero": 151,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 381,
+      "gt_titulo": "JEHOVÁ ES MI PASTOR",
+      "sion_numero": 259,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    },
+    {
+      "gt_numero": 399,
+      "gt_titulo": "LA VENIDA DE CRISTO",
+      "sion_numero": 314,
+      "fonte_confirmada": null,
+      "prioridade": 2,
+      "status": "pendiente"
+    }
+  ]
+}

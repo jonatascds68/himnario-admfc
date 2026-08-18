@@ -4,7 +4,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
 import { Feather } from '@expo/vector-icons';
 import { useTheme } from '@/src/theme/ThemeContext';
-import { hymnFontStorage, HymnFont, hymnAlignStorage, HymnAlign } from '@/src/lib/storage';
+import { HymnFont, hymnAlignStorage, HymnAlign } from '@/src/lib/storage';
 import { SPACING, RADIUS } from '@/src/theme/tokens';
 
 const LINKS: { key: string; label: string; icon: string; href: string }[] = [
@@ -13,17 +13,16 @@ const LINKS: { key: string; label: string; icon: string; href: string }[] = [
   { key: 'cat', label: 'Categorías', icon: 'grid', href: '/categories' },
   { key: 'fav', label: 'Favoritos', icon: 'star', href: '/favorites' },
   { key: 'rec', label: 'Recientes', icon: 'clock', href: '/recents' },
-  { key: 'admin', label: 'Administración', icon: 'shield', href: '/admin-login' },
   { key: 'about', label: 'Acerca de', icon: 'info', href: '/about' },
 ];
 
 export default function More() {
   const router = useRouter();
-  const { c, mode, setMode, isDark, fontScale, bumpFont } = useTheme();
-const [hymnFont, setHymnFont] = useState<HymnFont>('Lora');
+  const { c, mode, setMode, isDark, fontScale, bumpFont, hymnFont, setHymnFont } = useTheme();
+
 const [hymnAlign, setHymnAlign] = useState<HymnAlign>('center');
 useEffect(() => {
-  hymnFontStorage.get().then(setHymnFont);
+  
   hymnAlignStorage.get().then(setHymnAlign);
 }, []);
   return (
@@ -82,7 +81,6 @@ useEffect(() => {
       key={font}
       onPress={async () => {
         setHymnFont(font);
-        await hymnFontStorage.set(font);
       }}
       style={{
         paddingVertical: 10,

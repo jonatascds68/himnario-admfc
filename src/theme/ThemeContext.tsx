@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useEffect, useMemo, useState, useCallback } from 'react';
 import { useColorScheme } from 'react-native';
 import { COLORS } from './tokens';
-import { kv } from '../lib/storage';
+import { kv, hymnFontStorage, HymnFont } from '../lib/storage';
 
 type Mode = 'light' | 'dark' | 'system';
 
@@ -13,6 +13,8 @@ interface Ctx {
   fontScale: number;
   setFontScale: (n: number) => void;
   bumpFont: (delta: number) => void;
+  hymnFont: HymnFont;
+  setHymnFont: (font: HymnFont) => void;
 }
 
 const ThemeCtx = createContext<Ctx | null>(null);
@@ -24,6 +26,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const system = useColorScheme();
 const [mode, setModeState] = useState<Mode>('light');
 const [fontScale, setFontScaleState] = useState<number>(1.2);
+  const [hymnFont, setHymnFontState] = useState<HymnFont>('Merriweather');
 
   useEffect(() => {
     (async () => {
@@ -41,6 +44,9 @@ if (!migrated && m === 'system') {
       if (m === 'light' || m === 'dark' || m === 'system') setModeState(m);
       const f = await kv.get(KEY_FONT);
       if (f) setFontScaleState(Math.min(2.5, Math.max(0.85, parseFloat(f) || 1)));
+
+      const savedHymnFont = await hymnFontStorage.get();
+      setHymnFontState(savedHymnFont);
     })();
   }, []);
 
@@ -52,11 +58,36 @@ if (!migrated && m === 'system') {
   }, []);
   const bumpFont = useCallback((delta: number) => setFontScale(fontScale + delta), [fontScale, setFontScale]);
 
+  const setHymnFont = useCallback((font: HymnFont) => {
+    setHymnFontState(font);
+    hymnFontStorage.set(font);
+  }, []);
+
   const isDark = mode === 'system' ? system === 'dark' : mode === 'dark';
   const c = isDark ? COLORS.dark : COLORS.light;
 
-  const value = useMemo(() => ({ mode, setMode, isDark, c, fontScale, setFontScale, bumpFont }),
-    [mode, isDark, c, fontScale, setMode, setFontScale, bumpFont]);
+  const value = useMemo(() => ({
+    mode,
+    setMode,
+    isDark,
+    c,
+    fontScale,
+    setFontScale,
+    bumpFont,
+    hymnFont,
+    setHymnFont,
+  }),
+    [
+      mode,
+      isDark,
+      c,
+      fontScale,
+      setMode,
+      setFontScale,
+      bumpFont,
+      hymnFont,
+      setHymnFont,
+    ]);
   return <ThemeCtx.Provider value={value}>{children}</ThemeCtx.Provider>;
 }
 

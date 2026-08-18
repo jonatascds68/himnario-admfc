@@ -1,0 +1,32 @@
+{
+  "registros": [
+    {
+      "numero": 2,
+      "titulo": "LLUVIAS DE GRACIA",
+      "cifra_url": "https://es.scribd.com/document/710656090/Acordes-Himnos-de-Gloria-y-Triunfo",
+      "cifra_notas": "Coleção externa de acordes identifica explicitamente o hino GT 002 - LLUVIAS DE GRACIA. Referência externa; conteúdo da cifra não incorporado.",
+      "cifra_autorizada": false
+    },
+    {
+      "numero": 3,
+      "titulo": "JESÚS VENDRÁ OTRA VEZ",
+      "cifra_url": "https://es.scribd.com/document/710656090/Acordes-Himnos-de-Gloria-y-Triunfo",
+      "cifra_notas": "Coleção externa de acordes identifica explicitamente o hino GT 003 - JESÚS VENDRÁ OTRA VEZ. Referência externa; conteúdo da cifra não incorporado.",
+      "cifra_autorizada": false
+    },
+    {
+      "numero": 31,
+      "titulo": "CRISTO ES MI DULCE SALVADOR",
+      "cifra_url": "https://es.scribd.com/document/710656090/Acordes-Himnos-de-Gloria-y-Triunfo",
+      "cifra_notas": "Coleção externa de acordes identifica explicitamente o hino GT 031 - CRISTO ES MI DULCE SALVADOR. Referência externa; conteúdo da cifra não incorporado.",
+      "cifra_autorizada": false
+    },
+    {
+      "numero": 41,
+      "titulo": "HAY UN PRECIOSO MANANTIAL",
+      "cifra_url": "https://es.scribd.com/document/710656090/Acordes-Himnos-de-Gloria-y-Triunfo",
+      "cifra_notas": "Coleção externa de acordes identifica explicitamente o hino GT 041 - HAY UN PRECIOSO MANANTIAL. Referência externa; conteúdo da cifra não incorporado.",
+      "cifra_autorizada": false
+    }
+  ]
+}

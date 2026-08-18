@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { View, Text, StyleSheet, ScrollView, Image, Pressable } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
@@ -9,6 +9,32 @@ import { LOGO_LOCAL, SPACING, RADIUS } from '@/src/theme/tokens';
 export default function About() {
   const router = useRouter();
   const { c } = useTheme();
+
+  // Acesso administrativo oculto:
+  // 7 toques rápidos consecutivos na logo.
+  // O acesso continua protegido pela tela de login e senha.
+  const adminTapCount = useRef(0);
+  const adminLastTap = useRef(0);
+
+  const handleSecretAdminAccess = () => {
+    const now = Date.now();
+
+    // Se demorar mais de 1,2 s entre os toques,
+    // reinicia a sequência.
+    if (now - adminLastTap.current > 1200) {
+      adminTapCount.current = 0;
+    }
+
+    adminLastTap.current = now;
+    adminTapCount.current += 1;
+
+    if (adminTapCount.current >= 7) {
+      adminTapCount.current = 0;
+      adminLastTap.current = 0;
+      router.push('/admin-login' as any);
+    }
+  };
+
   return (
     <SafeAreaView style={[styles.container, { backgroundColor: c.surface }]} edges={['top']} testID="about-screen">
       <View style={styles.header}>
@@ -18,7 +44,18 @@ export default function About() {
         <Text style={[styles.title, { color: c.brand }]}>Acerca de</Text>
       </View>
       <ScrollView contentContainerStyle={styles.scroll}>
-        <Image source={LOGO_LOCAL} style={styles.logo} resizeMode="contain" />
+        <Pressable
+        onPress={handleSecretAdminAccess}
+        style={styles.logoSecretAccess}
+        accessibilityLabel="Logo ADMFC"
+        testID="about-logo"
+      >
+        <Image
+          source={LOGO_LOCAL}
+          style={styles.logo}
+          resizeMode="contain"
+        />
+      </Pressable>
         <Text style={[styles.brand, { color: c.brand }]}>HIMNARIO ADMFC</Text>
         <Text style={[styles.sub, { color: c.onSurface }]}>Asamblea de Dios · Misión de la Fe Cristiana</Text>
         <View style={[styles.divider, { backgroundColor: c.borderStrong }]} />
@@ -54,7 +91,15 @@ const styles = StyleSheet.create({
   header: { flexDirection: 'row', alignItems: 'center', gap: SPACING.sm, paddingHorizontal: SPACING.md, paddingTop: SPACING.sm, paddingBottom: SPACING.md },
   title: { fontSize: 22, fontWeight: '800', letterSpacing: 1 },
   scroll: { padding: SPACING.lg, alignItems: 'center' },
-  logo: { width: 140, height: 140, marginBottom: SPACING.md },
+  logoSecretAccess: {
+    width: 140,
+    height: 140,
+    marginBottom: SPACING.md,
+  },
+  logo: {
+    width: 140,
+    height: 140,
+  },
   brand: { fontSize: 20, fontWeight: '800', letterSpacing: 1 },
   sub: { fontSize: 13, marginTop: 4, textAlign: 'center' },
   divider: { height: 2, width: 60, marginVertical: SPACING.lg, opacity: 0.7, borderRadius: RADIUS.sm },

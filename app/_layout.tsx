@@ -58,7 +58,7 @@ export default function RootLayout() {
         // Duas voltas como moeda
         Animated.timing(spin, {
           toValue: 2,
-          duration: 2500,
+          duration: 3750,
           easing: Easing.inOut(Easing.cubic),
           useNativeDriver: true,
         }),
@@ -67,7 +67,7 @@ export default function RootLayout() {
         Animated.parallel([
           Animated.timing(spin, {
             toValue: 3,
-            duration: 1400,
+            duration: 2100,
             easing: Easing.out(Easing.cubic),
             useNativeDriver: true,
           }),

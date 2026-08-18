@@ -98,8 +98,8 @@ const DEFAULT_CATEGORIES = [
 const DB_KEY = 'admfc_local_db_v1';
 const DB_DATA_VERSION_KEY = 'admfc_local_db_data_version';
 const DB_DATA_VERSION = '7';
-const ADMIN_EMAIL_KEY = 'admfc_local_admin_email';
-const ADMIN_PASS_KEY = 'admfc_local_admin_password';
+const ADMIN_EMAIL = 'jonatascds68@gmail.com';
+const ADMIN_PASSWORD_HASH = 'edf29432fb85857e36c029fffe09af9b1e02b1474dcc7b384fed25a121645900';
 
 function normalize(s: string) {
   return (s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
@@ -144,6 +144,14 @@ function keyToName(k?: 'gt'|'sion') { return k === 'gt' ? 'Gloria y Triunfo' : k
 function nameToKey(n?: string) { return n === 'Gloria y Triunfo' ? 'gt' : 'sion'; }
 function requireAuth() { if (!sessionToken) throw new Error('No autorizado'); }
 
+async function sha256(value: string): Promise<string> {
+  const Crypto = await import('expo-crypto');
+  return Crypto.digestStringAsync(
+    Crypto.CryptoDigestAlgorithm.SHA256,
+    value
+  );
+}
+
 export const api = {
   listHymns: async (p: { himnario?: 'gt'|'sion'; q?: string; category?: string } = {}) => {
     const db = await loadDb(); let items = [...db.hymns]; const hn = keyToName(p.himnario);
@@ -161,16 +169,32 @@ export const api = {
   deleteCategory: async (id:string) => { requireAuth(); const db=await loadDb(); const c=db.categories.find(x=>x.id===id); if(c) db.hymns.forEach(h=>{h.categorias=(h.categorias||[]).filter(x=>x!==c.name)}); db.categories=db.categories.filter(x=>x.id!==id); await saveDb(db); return {ok:true}; },
   stats: async () => { const hs=(await loadDb()).hymns; return {total:hs.length,gt:hs.filter(h=>h.himnario==='Gloria y Triunfo').length,sion:hs.filter(h=>h.himnario==='Himnos de Sión').length,equivalences:hs.filter(h=>h.numero_equivalente!=null).length,with_lyrics:hs.filter(h=>(h.letra||'').trim()).length}; },
 
-  // Administración local: en el primer acceso del dispositivo, las credenciales
-  // introducidas quedan registradas en SecureStore. En accesos posteriores deben coincidir.
+  // Administración local protegida por credencial fija.
+  // La contraseña nunca se almacena en texto plano.
   login: async (email:string,password:string) => {
-    if (!email || password.length < 6) throw new Error('Ingrese email y una contraseña de al menos 6 caracteres');
-    const savedEmail=await secureKv.get(ADMIN_EMAIL_KEY), savedPass=await secureKv.get(ADMIN_PASS_KEY);
-    if (!savedEmail && !savedPass) { await secureKv.set(ADMIN_EMAIL_KEY,email); await secureKv.set(ADMIN_PASS_KEY,password); }
-    else if (savedEmail!==email || savedPass!==password) throw new Error('Credenciales incorrectas');
-    adminSession.set(`local-${Date.now()}`); return {access_token:adminSession.get(),local:true};
+    if (!email || !password) throw new Error('Ingrese email y contraseña');
+
+    const normalizedEmail = email.trim().toLowerCase();
+
+    const passwordHash = await sha256(password);
+
+    if (
+      normalizedEmail !== ADMIN_EMAIL ||
+      passwordHash !== ADMIN_PASSWORD_HASH
+    ) {
+      throw new Error('Credenciales incorrectas');
+    }
+
+    adminSession.set(`local-${Date.now()}`);
+    return {
+      access_token: adminSession.get(),
+      local: true
+    };
   },
-  me: async () => { requireAuth(); return {email:await secureKv.get(ADMIN_EMAIL_KEY),local:true}; },
+  me: async () => {
+    requireAuth();
+    return { email: ADMIN_EMAIL, local: true };
+  },
   logout: async () => { adminSession.clear(); },
   isAuth: async () => !!adminSession.get(),
 

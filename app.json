@@ -20,7 +20,13 @@
       },
       "edgeToEdgeEnabled": true,
       "versionCode": 1,
-      "package": "org.admfc.himnario"
+      "package": "org.admfc.himnario",
+      "permissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.MODIFY_AUDIO_SETTINGS",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.MODIFY_AUDIO_SETTINGS"
+      ]
     },
     "web": {
       "bundler": "metro",
@@ -38,7 +44,8 @@
           "backgroundColor": "#0B1B3D"
         }
       ],
-      "expo-audio"
+      "expo-audio",
+      "expo-asset"
     ],
     "experiments": {
       "typedRoutes": true
@@ -49,6 +56,12 @@
         "projectId": "1e9d0ccd-e294-4a64-8007-2ef98331cff7"
       }
     },
-    "owner": "jonatascds68s-admfc"
+    "owner": "jonatascds68s-admfc",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/1e9d0ccd-e294-4a64-8007-2ef98331cff7"
+    }
   }
 }

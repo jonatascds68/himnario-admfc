@@ -1,0 +1,26 @@
+{
+  "registros": [
+    {
+      "numero": 103,
+      "titulo": "CUANDO ANDEMOS CON DIOS",
+      "cifra_url": "https://es.scribd.com/document/710656090/Acordes-Himnos-de-Gloria-y-Triunfo",
+      "cifra_notas": "Cifra confirmada no documento Acordes Himnos de Gloria y Triunfo, identificada como hino 103.",
+      "cifra_autorizada": false
+    },
+    {
+      "numero": 126,
+      "titulo": "LAS PROMESAS DE JESÚS",
+      "tom": "G",
+      "cifra_url": "https://acordes.lacuerda.net/himnos_de_gloria_y_triunfo/todas_las_promesas_del_senior_jesus",
+      "cifra_notas": "Cifra externa confirmada para Todas las promesas del Señor Jesús, repertório Himnos de Gloria y Triunfo. Tom publicado: G.",
+      "cifra_autorizada": false
+    },
+    {
+      "numero": 296,
+      "titulo": "COMPRADO CON SANGRE POR CRISTO",
+      "audio_external_url": "https://www.youtube.com/watch?v=h0QkiqfGkDo",
+      "audio_notas": "Gravação identificada explicitamente como Himnos de Gloria y Triunfo número 296.",
+      "audio_autorizado": false
+    }
+  ]
+}

@@ -1,0 +1,485 @@
+{
+  "criterio": "Una URL de cifra solamente se valida cuando el destino corresponde inequívocamente al mismo himno.",
+  "registros": [
+    {
+      "numero": 1,
+      "titulo": "EL APOSENTO ALTO",
+      "tom": "F",
+      "cifra_url": "https://chordify.net/es/chords/himnos-de-gloria-n-1-el-aposento-alto-himnos-de-gloria-mas",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada individualmente y compatible con el número/título del himno."
+    },
+    {
+      "numero": 2,
+      "titulo": "LLUVIAS DE GRACIA",
+      "tom": null,
+      "cifra_url": "https://es.scribd.com/document/710656090/Acordes-Himnos-de-Gloria-y-Triunfo",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada individualmente y compatible con el número/título del himno."
+    },
+    {
+      "numero": 3,
+      "titulo": "JESÚS VENDRÁ OTRA VEZ",
+      "tom": null,
+      "cifra_url": "https://es.scribd.com/document/710656090/Acordes-Himnos-de-Gloria-y-Triunfo",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada individualmente y compatible con el número/título del himno."
+    },
+    {
+      "numero": 4,
+      "titulo": "DULCE COMUNIÓN",
+      "tom": "D",
+      "cifra_url": "https://chordify.net/es/chords/dulce-comunion-libre-salvo-himnos-de-gloria-y-triunfo-egleyda-adoracion-cristiana-egleyda",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada individualmente y compatible con el número/título del himno."
+    },
+    {
+      "numero": 6,
+      "titulo": "LIBERTAD",
+      "tom": null,
+      "cifra_url": "https://www.e-chords.com/chords/himnos-de-gloria-y-triunfo/libertad",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada individualmente y compatible con el número/título del himno."
+    },
+    {
+      "numero": 7,
+      "titulo": "TODO A CRISTO YO ME RINDO",
+      "tom": null,
+      "cifra_url": "https://acordes.lacuerda.net/himnos_de_gloria_y_triunfo/todo_a_cristo",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada individualmente y compatible con el número/título del himno."
+    },
+    {
+      "numero": 8,
+      "titulo": "LA SIEMBRA",
+      "tom": null,
+      "cifra_url": "https://acordes.lacuerda.net/himnos_de_gloria_y_triunfo/la_siembra",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada individualmente y compatible con el número/título del himno."
+    },
+    {
+      "numero": 10,
+      "titulo": "CRISTO QUIERE LIMPIOS CORAZONES",
+      "tom": "C",
+      "cifra_url": "https://acordes.lacuerda.net/himnos_de_gloria_y_triunfo/cristo_quiere_limpios_corazones",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada individualmente. URL directa corregida; título, contenido y cifra corresponden al himno GT 010."
+    },
+    {
+      "numero": 12,
+      "titulo": "ROCA DE LA ETERNIDAD",
+      "tom": "A",
+      "cifra_url": "https://chordify.net/es/chords/roca-de-la-eternidad-himno-12-el-brody",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada individualmente y compatible con el número/título del himno."
+    },
+    {
+      "numero": 13,
+      "titulo": "DULCE ORACIÓN",
+      "tom": null,
+      "cifra_url": "https://acordes.lacuerda.net/himnos_de_gloria_y_triunfo/dulce_oracion",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada individualmente y compatible con el número/título del himno."
+    },
+    {
+      "numero": 15,
+      "titulo": "FIRMES Y ADELANTE",
+      "tom": null,
+      "cifra_url": "https://acordes.lacuerda.net/himnos_de_gloria_y_triunfo/firmes_y_adelante",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada y compatible con el título/número del himno dentro de Himnos de Gloria y Triunfo."
+    },
+    {
+      "numero": 20,
+      "titulo": "CUANDO ALLÁ SE PASE LISTA",
+      "tom": null,
+      "cifra_url": "https://acordes.lacuerda.net/himnos_de_gloria_y_triunfo/cuando_alla_se_pase_lista",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada y compatible con el título/número del himno dentro de Himnos de Gloria y Triunfo."
+    },
+    {
+      "numero": 28,
+      "titulo": "MÁS DE JESÚS",
+      "tom": null,
+      "cifra_url": "https://acordes.lacuerda.net/himnos_de_gloria_y_triunfo/himno_28",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada y compatible con el título/número del himno dentro de Himnos de Gloria y Triunfo."
+    },
+    {
+      "numero": 30,
+      "titulo": "HAY PODER EN JESÚS",
+      "tom": null,
+      "cifra_url": "https://chordify.net/es/chords/hay-poder-en-jesus-himnos-de-gloria-y-triunfo-numero-30-alex-david-music",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada y compatible con el título/número del himno dentro de Himnos de Gloria y Triunfo."
+    },
+    {
+      "numero": 31,
+      "titulo": "CRISTO ES MI DULCE SALVADOR",
+      "tom": null,
+      "cifra_url": "https://es.scribd.com/document/710656090/Acordes-Himnos-de-Gloria-y-Triunfo",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada y compatible con el título/número del himno dentro de Himnos de Gloria y Triunfo."
+    },
+    {
+      "numero": 32,
+      "titulo": "¡LOORES A DIOS!",
+      "tom": null,
+      "cifra_url": "https://acordes.lacuerda.net/himnos_de_gloria_y_triunfo/loores_a_dios",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada y compatible con el título/número del himno dentro de Himnos de Gloria y Triunfo."
+    },
+    {
+      "numero": 33,
+      "titulo": "GRANDE GOZO HAY EN MI ALMA HOY",
+      "tom": null,
+      "cifra_url": "https://acordes.lacuerda.net/himnos_de_gloria_y_triunfo/grande_gozo_hay_en_mi_alma_hoy",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada y compatible con el título/número del himno dentro de Himnos de Gloria y Triunfo."
+    },
+    {
+      "numero": 36,
+      "titulo": "ENTERA CONSAGRACIÓN",
+      "tom": null,
+      "cifra_url": "https://acordes.lacuerda.net/himnos_de_gloria_y_triunfo/36_entera_consagracion",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada y compatible con el título/número del himno dentro de Himnos de Gloria y Triunfo."
+    },
+    {
+      "numero": 39,
+      "titulo": "SANTA BIBLIA",
+      "tom": "G",
+      "cifra_url": "https://acordes.lacuerda.net/himnos_de_gloria_y_triunfo/cadena_de_cantos_268_275_y_270",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada individualmente. La cifra de 'Santa Biblia' aparece dentro de la página 'Cadena de cantos 268, 275 y 270'. Contenido y armonización corresponden al himno; se conserva GT 039 como numeración propia del himnario."
+    },
+    {
+      "numero": 41,
+      "titulo": "HAY UN PRECIOSO MANANTIAL",
+      "tom": null,
+      "cifra_url": "https://es.scribd.com/document/710656090/Acordes-Himnos-de-Gloria-y-Triunfo",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada y compatible con el título/número del himno dentro de Himnos de Gloria y Triunfo."
+    },
+    {
+      "numero": 43,
+      "titulo": "A JESUCRISTO VEN SIN TARDAR",
+      "tom": null,
+      "cifra_url": "https://www.cifraclub.com/himnos-de-gloria-y-triunfo/a-jesucristo-ven-sin-tardar/",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada individualmente; título y contenido corresponden al himno."
+    },
+    {
+      "numero": 44,
+      "titulo": "YA TODO DEJÉ",
+      "tom": null,
+      "cifra_url": "https://acordes.lacuerda.net/himnos_de_gloria_y_triunfo/ya_todo_deje",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada individualmente; título y contenido corresponden al himno."
+    },
+    {
+      "numero": 45,
+      "titulo": "¿ERES LIMPIO EN LA SANGRE?",
+      "tom": null,
+      "cifra_url": "https://www.cifraclub.com/himnos-de-gloria-y-triunfo/eres-limpio-en-la-sagre/",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada individualmente; título y contenido corresponden al himno."
+    },
+    {
+      "numero": 49,
+      "titulo": "EN LA VIÑA DEL SEÑOR",
+      "tom": "F",
+      "cifra_url": "https://acordes.lacuerda.net/himnos_de_gloria_y_triunfo/en_la_vinia_del_senior",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada individualmente. URL directa corregida; título, contenido y cifra corresponden al himno."
+    },
+    {
+      "numero": 50,
+      "titulo": "TE LOAMOS, ¡OH DIOS!",
+      "tom": null,
+      "cifra_url": "https://acordes.lacuerda.net/himnos_de_gloria_y_triunfo/te_loamos_oh_dios",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada individualmente; título y contenido corresponden al himno."
+    },
+    {
+      "numero": 52,
+      "titulo": "CRISTO LA ROCA",
+      "tom": "G",
+      "cifra_url": "https://chordify.net/es/chords/es-cristo-la-roca-himnos-de-gloria-y-triunfo-pentecostes",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada individualmente; título y contenido corresponden al himno."
+    },
+    {
+      "numero": 53,
+      "titulo": "EN LA CRUZ",
+      "tom": null,
+      "cifra_url": "https://acordes.lacuerda.net/himnos_de_gloria_y_triunfo/en_la_cruz",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada individualmente; título y contenido corresponden al himno."
+    },
+    {
+      "numero": 56,
+      "titulo": "¡OH, YO QUIERO ANDAR CON CRISTO!",
+      "tom": null,
+      "cifra_url": "https://acordes.lacuerda.net/himnos_de_gloria_y_triunfo/oh_yo_quiero_andar_con_cristo",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada individualmente; título y contenido corresponden al himno."
+    },
+    {
+      "numero": 65,
+      "titulo": "A SOLAS CON JESÚS",
+      "tom": null,
+      "cifra_url": "https://acordes.lacuerda.net/himnos_de_gloria_y_triunfo/a_solas_con_jesus",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada individualmente; título y contenido corresponden al himno."
+    },
+    {
+      "numero": 71,
+      "titulo": "DÍA FELIZ",
+      "tom": null,
+      "cifra_url": "https://www.e-chords.com/de/chords/himnos-de-gloria-y-triunfo/dia-feliz",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada individualmente; título y contenido corresponden al himno."
+    },
+    {
+      "numero": 81,
+      "titulo": "LA BANDERA DE LA CRUZ",
+      "tom": "E",
+      "cifra_url": "https://acordes.lacuerda.net/himnos_de_gloria_y_triunfo/la_bandera_de_la_cruz",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada individualmente; título, contenido y armonización corresponden al himno."
+    },
+    {
+      "numero": 84,
+      "titulo": "¿SOY YO SOLDADO DE JESÚS?",
+      "tom": "D",
+      "cifra_url": "https://acordes.lacuerda.net/himnos_de_gloria_y_triunfo/soy_yo_soldado_de_jesus",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada individualmente; título, contenido y armonización corresponden al himno."
+    },
+    {
+      "numero": 92,
+      "titulo": "BRILLA EN TU LUGAR",
+      "tom": "C",
+      "cifra_url": "https://www.cifraclub.com.br/himnos-de-gloria-y-triunfo/brilla-en-tu-lugar/",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada individualmente; título, contenido y armonización corresponden al himno."
+    },
+    {
+      "numero": 96,
+      "titulo": "¡SANTO! ¡SANTO! ¡SANTO!",
+      "tom": "C",
+      "cifra_url": "https://acordes.lacuerda.net/himnos_de_gloria_y_triunfo/santo_santo_santo",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada individualmente; título, contenido y armonización corresponden al himno."
+    },
+    {
+      "numero": 103,
+      "titulo": "CUANDO ANDEMOS CON DIOS",
+      "tom": "D",
+      "cifra_url": "https://es.scribd.com/document/710656090/Acordes-Himnos-de-Gloria-y-Triunfo",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada individualmente; título, contenido y armonización corresponden al himno."
+    },
+    {
+      "numero": 104,
+      "titulo": "MI CULPA EL LLEVO",
+      "tom": "F",
+      "cifra_url": "https://acordes.lacuerda.net/himnos_de_gloria_y_triunfo/mi_culpa_el_llevo",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada individualmente; título, contenido y armonización corresponden al himno."
+    },
+    {
+      "numero": 111,
+      "titulo": "LAS PISADAS DEL MAESTRO",
+      "tom": "C",
+      "cifra_url": "https://www.scribd.com/document/632477861/111-Las-pisadas-del-Maestro-pdf",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada individualmente; título, contenido y armonización corresponden al himno."
+    },
+    {
+      "numero": 112,
+      "titulo": "UN DÍA CRISTO VOLVERÁ",
+      "tom": "A",
+      "cifra_url": "https://acordes.lacuerda.net/himnos_de_gloria_y_triunfo/un_dia_cristo_volvera",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada individualmente; título, contenido y armonización corresponden al himno."
+    },
+    {
+      "numero": 117,
+      "titulo": "AMA EL PASTOR SUS OVEJAS",
+      "tom": "D",
+      "cifra_url": "https://acordes.lacuerda.net/himnos_de_gloria_y_triunfo/ama_el_pastor_sus_ovejas",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada individualmente; título, contenido y armonización corresponden al himno."
+    },
+    {
+      "numero": 118,
+      "titulo": "EL MUNDO NO ES MI HOGAR",
+      "tom": "C",
+      "cifra_url": "https://acordes.lacuerda.net/himnos_de_gloria_y_triunfo/118_la_senda_ancha_dejare",
+      "status": "validado_fuente",
+      "nota": "Fuente verificada. El slug usa el primer verso 'La senda ancha dejaré', pero el contenido corresponde a GT 118 'El mundo no es mi hogar'."
+    },
+    {
+      "numero": 120,
+      "titulo": "GRANDES COSAS CRISTO HA HECHO PARA MI",
+      "tom": "F",
+      "cifra_url": "https://www.cifraclub.com/himnos-de-gloria-y-triunfo/grandes-cosas-cristo-ha-hecho-para-mi/",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada individualmente; título, contenido y armonización corresponden al himno."
+    },
+    {
+      "numero": 126,
+      "titulo": "LAS PROMESAS DE JESÚS",
+      "tom": "G",
+      "cifra_url": "https://acordes.lacuerda.net/himnos_de_gloria_y_triunfo/todas_las_promesas_del_senior_jesus",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada individualmente; título, contenido y armonización corresponden al himno."
+    },
+    {
+      "numero": 128,
+      "titulo": "VALOR Y FE",
+      "tom": "D",
+      "cifra_url": "https://www.e-chords.com/es/acordes/himnos-de-gloria-y-triunfo/valor-y-fe",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada individualmente; título, contenido y armonización corresponden al himno."
+    },
+    {
+      "numero": 139,
+      "titulo": "QUIERO VER MI PATRIA",
+      "tom": "A",
+      "cifra_url": "https://acordes.lacuerda.net/himnos_de_gloria_y_triunfo/quiero_ver_mi_patria",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada individualmente; título, contenido y armonización corresponden al himno."
+    },
+    {
+      "numero": 161,
+      "titulo": "PECADOR, VEN AL DULCE JESÚS",
+      "tom": "G",
+      "cifra_url": "https://acordes.lacuerda.net/himnos_de_gloria_y_triunfo/pecador_ven_al_dulce_jesus",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada individualmente; título, contenido y armonización corresponden al himno."
+    },
+    {
+      "numero": 175,
+      "titulo": "¡OH CRISTO MÍO!",
+      "tom": "D",
+      "cifra_url": "https://acordes.lacuerda.net/himnos_de_gloria_y_triunfo/oh_cristo_mio",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada individualmente; título, contenido y armonización corresponden al himno."
+    },
+    {
+      "numero": 178,
+      "titulo": "MI ESPÍRITU, ALMA Y CUERPO",
+      "tom": "D",
+      "cifra_url": "https://acordes.lacuerda.net/himnos_de_gloria_y_triunfo/mi_espiritu_alma_y_cuerpo",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada individualmente; título, contenido y armonización corresponden al himno."
+    },
+    {
+      "numero": 182,
+      "titulo": "¡GLORIA A TI, JESÚS DIVINO",
+      "tom": "G",
+      "cifra_url": "https://www.cifraclub.com/himnos-de-gloria-y-triunfo/gloria-a-ti-jesus-divino/",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada individualmente; título, contenido y armonización corresponden al himno."
+    },
+    {
+      "numero": 185,
+      "titulo": "¡OH, BONDAD TAN INFINITA!",
+      "tom": "C",
+      "cifra_url": "https://acordes.lacuerda.net/himnos_de_gloria_y_triunfo/oh_bondad_tan_infinita",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada individualmente; título, contenido y armonización corresponden al himno."
+    },
+    {
+      "numero": 188,
+      "titulo": "BELLAS PALABRAS DE VIDA",
+      "tom": "E",
+      "cifra_url": "https://acordes.lacuerda.net/himnos_de_gloria_y_triunfo/bellas_palabras_de_vida",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada individualmente; título, contenido y armonización corresponden al himno."
+    },
+    {
+      "numero": 197,
+      "titulo": "¡OH JÓVENES VENID!",
+      "tom": "G",
+      "cifra_url": "https://acordes.lacuerda.net/himnos_de_gloria_y_triunfo/oh_jovenes_venid",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada individualmente; título, contenido y armonización corresponden al himno."
+    },
+    {
+      "numero": 201,
+      "titulo": "LA LUCHA SIGUE",
+      "tom": "G",
+      "cifra_url": "https://acordes.lacuerda.net/himnos_de_gloria_y_triunfo/la_lucha_sigue",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada individualmente; título, contenido y armonización corresponden al himno."
+    },
+    {
+      "numero": 208,
+      "titulo": "LUGAR PARA CRISTO",
+      "tom": "D",
+      "cifra_url": "https://es.scribd.com/document/710656090/Acordes-Himnos-de-Gloria-y-Triunfo",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada individualmente; título, contenido y armonización corresponden al himno."
+    },
+    {
+      "numero": 233,
+      "titulo": "JUNTO A LA CRUZ",
+      "tom": "F",
+      "cifra_url": "https://acordes.lacuerda.net/himnos_de_gloria_y_triunfo/junto_a_la_cruz",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada individualmente; título, contenido y armonización corresponden al himno."
+    },
+    {
+      "numero": 240,
+      "titulo": "LA BIENVENIDA DAREMOS A CRISTO",
+      "tom": "Am",
+      "cifra_url": "https://www.e-chords.com/chords/himnos-de-gloria-y-triunfo/la-bienvenida-daremos-a-cristo",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada individualmente; título, contenido y armonización corresponden al himno."
+    },
+    {
+      "numero": 275,
+      "titulo": "POR LA SANGRE",
+      "tom": "Eb",
+      "cifra_url": "https://acordes.lacuerda.net/himnos_de_gloria_y_triunfo/por_la_sangre",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada individualmente; título, contenido y armonización corresponden al himno."
+    },
+    {
+      "numero": 284,
+      "titulo": "SIGUE ORANDO",
+      "tom": "G",
+      "cifra_url": "https://www.e-chords.com/chords/himnos-de-gloria-y-triunfo/sigue-orando",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada individualmente; título, contenido y armonización corresponden al himno."
+    },
+    {
+      "numero": 294,
+      "titulo": "HAY UN CANTO NUEVO EN MI SER",
+      "tom": "D",
+      "cifra_url": "https://acordes.lacuerda.net/himnos_de_gloria_y_triunfo/hay_un_canto_nuevo_en_mi_ser",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada individualmente; título, contenido y armonización corresponden al himno."
+    },
+    {
+      "numero": 297,
+      "titulo": "¡OH, SI, QUIERO VERLE!",
+      "tom": "C",
+      "cifra_url": "https://acordes.lacuerda.net/himnos_de_gloria_y_triunfo/oh_si_quiero_verle",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada individualmente; título, contenido y armonización corresponden al himno."
+    },
+    {
+      "numero": 308,
+      "titulo": "LA CRUZ DE JESÚS",
+      "tom": "G",
+      "cifra_url": "https://acordes.lacuerda.net/himnos_de_gloria_y_triunfo/la_cruz_de_jesus",
+      "status": "validado_fuente",
+      "nota": "Fuente externa verificada individualmente; título, contenido y armonización corresponden al himno."
+    }
+  ]
+}

@@ -42,3 +42,6 @@ app-example
 assets/images/*ANTES_NOVA_IDENTIDADE*
 *.bak-*
 /assets/base_mestre.pre-cifras.json
+
+# Backups locais de manutenção
+*.bak-*

@@ -10,7 +10,7 @@ import { api, adminSession } from '@/src/lib/api';
 export default function AdminLogin() {
   const router = useRouter();
   const { c } = useTheme();
-  const [email, setEmail] = useState('admin@admfc.org');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);

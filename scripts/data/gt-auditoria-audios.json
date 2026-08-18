@@ -1,0 +1,89 @@
+{
+  "criterio": "Ningún enlace se considera válido sin verificar que el contenido corresponde al número y título del himno.",
+  "registros": [
+    {
+      "numero": 4,
+      "titulo": "DULCE COMUNIÓN",
+      "audio_external_url": "https://www.youtube.com/watch?v=MMDgVdC1xx8",
+      "status": "validado_usuario",
+      "nota": "Audio verificado personalmente por el usuario como correspondiente a DULCE COMUNIÓN."
+    },
+    {
+      "numero": 12,
+      "titulo": "ROCA DE LA ETERNIDAD",
+      "audio_external_url": "https://www.youtube.com/watch?v=kGsRCSjiZaY",
+      "status": "validado_fuente",
+      "nota": "Enlace verificado: el video identifica explícitamente Himnos de Gloria y Triunfo Nº 12 - Roca de la Eternidad."
+    },
+    {
+      "numero": 14,
+      "titulo": "¡OH QUE AMIGO!",
+      "audio_external_url": null,
+      "status": "incorrecto_removido",
+      "nota": "El enlace anterior correspondía a otro himno y fue removido."
+    },
+    {
+      "numero": 18,
+      "titulo": "GRATO ES DECIR LA HISTORIA",
+      "audio_external_url": "https://music.apple.com/co/album/16-himnos-del-himnario-de-gloria-y-triunfo-vol-2/1475376403",
+      "status": "validado_fuente",
+      "nota": "Enlace verificado individualmente: el álbum de Apple Music se identifica como '16 Himnos del Himnario de Gloria y Triunfo, Vol. 2' y contiene la pista 'Grato Es Decir la Historia'."
+    },
+    {
+      "numero": 27,
+      "titulo": "¡PAZ! ¡PAZ! ¡CUAN DULCE PAZ!",
+      "audio_external_url": "https://open.spotify.com/track/4jRuJ8rVqi3gw5r7FwOCLc",
+      "status": "validado_fuente",
+      "nota": "Enlace verificado individualmente: la pista de Spotify es 'Paz Paz Cuan Dulce Paz' de Unzion y Aremy Arvizu; el repertorio también se identifica como Himno 27 de Gloria y Triunfo."
+    },
+    {
+      "numero": 74,
+      "titulo": "DILO A CRISTO",
+      "audio_external_url": "https://www.youtube.com/watch?v=Upmble5oBJI",
+      "status": "validado_fuente",
+      "nota": "Enlace verificado individualmente: el video de destino se identifica como Himno 74 'Dilo a Cristo' | Himnos de gloria y triunfo."
+    },
+    {
+      "numero": 107,
+      "titulo": "HUBO QUIEN POR MIS CULPAS",
+      "audio_external_url": "https://www.radiocristianadominicana.com/2018/06/himnos-de-gloria-y-triunfo-107-hubo.html",
+      "status": "validado_fuente",
+      "nota": "Enlace verificado individualmente: la página de destino identifica Himnos de Gloria y Triunfo Nº 107 - Hubo Quien por Mis Culpas y presenta la letra correspondiente."
+    },
+    {
+      "numero": 141,
+      "titulo": "VIENE OTRA VEZ",
+      "audio_external_url": "https://open.spotify.com/intl-pt/track/1PqJIzSMgIe1HOGhpm3wyy",
+      "status": "validado_fuente",
+      "nota": "Enlace verificado individualmente: la pista de Spotify se identifica exactamente como 'Viene Otra Vez (Himno 141)'."
+    },
+    {
+      "numero": 204,
+      "titulo": "CRISTO ME AMA",
+      "audio_external_url": "https://www.youtube.com/watch?v=laHT9Ot6eYs",
+      "status": "validado_fuente",
+      "nota": "Enlace verificado individualmente: el propio video laHT9Ot6eYs se identifica como 'Cristo Me Ama (Himno Num 204)'."
+    },
+    {
+      "numero": 207,
+      "titulo": "SUENEN DULCES HIMNOS",
+      "audio_external_url": "https://www.youtube.com/watch?v=yRRk1407Uwg",
+      "status": "validado_fuente",
+      "nota": "Enlace verificado individualmente: el video de destino se identifica como Himnos de Gloria Nº 207 - Suenen dulces himnos y declara pertenecer a Himnos de Gloria y Triunfo."
+    },
+    {
+      "numero": 208,
+      "titulo": "LUGAR PARA CRISTO",
+      "audio_external_url": "https://www.youtube.com/watch?v=VI43MsriNE0",
+      "status": "validado_fuente",
+      "nota": "Enlace verificado: el video identifica explícitamente Himno 208 - Lugar para Cristo | Gloria y Triunfo."
+    },
+    {
+      "numero": 296,
+      "titulo": "COMPRADO CON SANGRE POR CRISTO",
+      "audio_external_url": "https://www.youtube.com/watch?v=h0QkiqfGkDo",
+      "status": "validado_fuente",
+      "nota": "Enlace verificado individualmente: el propio video h0QkiqfGkDo declara 'Himnos de Gloria y Triunfo - Numero 296' y presenta la letra de 'Comprado con sangre por Cristo'."
+    }
+  ]
+}
