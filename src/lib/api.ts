@@ -63,6 +63,20 @@ audio_procedencia?: MediaProvenance | null;
 }
 interface LocalDb { hymns: Hymn[]; categories: { id: string; name: string }[]; }
 
+export interface AdminHymnChange {
+  id: string;
+  hymn_id: string;
+  himnario: Himnario;
+  numero: number;
+  titulo: string;
+  action: 'update';
+  changed_fields: string[];
+  before: Partial<Hymn>;
+  after: Partial<Hymn>;
+  created_at: string;
+  status: 'pending';
+}
+
 const DEFAULT_CATEGORIES = [
   "Actividad Cristiana",
   "Alabanza a Dios",
@@ -96,6 +110,7 @@ const DEFAULT_CATEGORIES = [
 ];
 
 const DB_KEY = 'admfc_local_db_v1';
+const ADMIN_CHANGES_KEY = 'admfc_admin_changes_v1';
 const DB_DATA_VERSION_KEY = 'admfc_local_db_data_version';
 const DB_DATA_VERSION = '7';
 const ADMIN_EMAIL = 'jonatascds68@gmail.com';
@@ -140,6 +155,67 @@ if (raw && dataVersion !== DB_DATA_VERSION) {
 await saveDb(db); await kv.set(DB_DATA_VERSION_KEY, DB_DATA_VERSION); return db;
 }
 async function saveDb(db: LocalDb) { await kv.set(DB_KEY, JSON.stringify(db)); }
+
+async function loadAdminChanges(): Promise<AdminHymnChange[]> {
+  const raw = await kv.get(ADMIN_CHANGES_KEY);
+  if (!raw) return [];
+
+  try {
+    const parsed = JSON.parse(raw);
+    return Array.isArray(parsed) ? parsed : [];
+  } catch {
+    return [];
+  }
+}
+
+async function saveAdminChanges(changes: AdminHymnChange[]) {
+  await kv.set(ADMIN_CHANGES_KEY, JSON.stringify(changes));
+}
+
+function sameValue(a: any, b: any) {
+  return JSON.stringify(a ?? null) === JSON.stringify(b ?? null);
+}
+
+async function registerHymnUpdate(
+  before: Hymn,
+  after: Hymn,
+  payload: Partial<Hymn>
+) {
+  const changedFields = Object.keys(payload).filter(
+    key => !sameValue(
+      (before as any)[key],
+      (after as any)[key]
+    )
+  );
+
+  if (!changedFields.length) return;
+
+  const beforeValues: Partial<Hymn> = {};
+  const afterValues: Partial<Hymn> = {};
+
+  for (const key of changedFields) {
+    (beforeValues as any)[key] = (before as any)[key];
+    (afterValues as any)[key] = (after as any)[key];
+  }
+
+  const changes = await loadAdminChanges();
+
+  changes.unshift({
+    id: `change-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+    hymn_id: after.id,
+    himnario: after.himnario,
+    numero: after.numero,
+    titulo: after.titulo,
+    action: 'update',
+    changed_fields: changedFields,
+    before: beforeValues,
+    after: afterValues,
+    created_at: new Date().toISOString(),
+    status: 'pending',
+  });
+
+  await saveAdminChanges(changes);
+}
 function keyToName(k?: 'gt'|'sion') { return k === 'gt' ? 'Gloria y Triunfo' : k === 'sion' ? 'Himnos de Sión' : undefined; }
 function nameToKey(n?: string) { return n === 'Gloria y Triunfo' ? 'gt' : 'sion'; }
 function requireAuth() { if (!sessionToken) throw new Error('No autorizado'); }
@@ -209,6 +285,8 @@ export const api = {
       throw new Error('Himno no encontrado');
     }
 
+    const before = JSON.parse(JSON.stringify(db.hymns[i])) as Hymn;
+
     db.hymns[i] = {
       ...db.hymns[i],
       ...payload,
@@ -255,8 +333,52 @@ export const api = {
     }
 
     await saveDb(db);
+    await registerHymnUpdate(before, updated, payload);
     return updated;
   },
+
+  listAdminChanges: async () => {
+    requireAuth();
+    const items = await loadAdminChanges();
+
+    return {
+      items,
+      count: items.length,
+    };
+  },
+
+  adminChangesCount: async () => {
+    requireAuth();
+    const items = await loadAdminChanges();
+    return items.length;
+  },
+
+  clearAdminChanges: async () => {
+    requireAuth();
+    await saveAdminChanges([]);
+    return { ok: true };
+  },
+
+  removeAdminChange: async (changeId: string) => {
+    requireAuth();
+
+    const items = await loadAdminChanges();
+    const exists = items.some(item => item.id === changeId);
+
+    if (!exists) {
+      throw new Error('Alteración administrativa no encontrada');
+    }
+
+    const remaining = items.filter(item => item.id !== changeId);
+    await saveAdminChanges(remaining);
+
+    return {
+      ok: true,
+      removed_id: changeId,
+      count: remaining.length,
+    };
+  },
+
   deleteHymn: async (id:string) => { requireAuth(); const db=await loadDb(); db.hymns=db.hymns.filter(h=>h.id!==id); await saveDb(db); return {ok:true}; },
   setEquivalence: async (
     id:string,

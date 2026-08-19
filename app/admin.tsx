@@ -23,7 +23,8 @@ const insets = useSafeAreaInsets();
     try {
       await api.me();
       const s = await api.stats();
-      setStats(s);
+      const pendingChanges = await api.adminChangesCount();
+      setStats({ ...s, pendingChanges });
 } catch {
       router.replace('/admin-login' as any);
     }
@@ -107,6 +108,13 @@ const insets = useSafeAreaInsets();
         <Text style={[styles.section, { color: c.muted }]}>Editor de la Base</Text>
         <View style={[styles.actionCard, { borderColor: c.border, backgroundColor: c.surfaceSecondary }]}>
           <ActionBtn c={c} icon="edit-3" label="Editor de Himnos (título, letra, número, equivalencia)" onPress={() => router.push('/admin/hymns' as any)} testID="admin-editor" />
+          <ActionBtn
+            c={c}
+            icon="clock"
+            label={`Cambios pendientes (${stats?.pendingChanges ?? 0})`}
+            onPress={() => router.push('/admin/changes' as any)}
+            testID="admin-changes"
+          />
         </View>
 
         <Text style={[styles.section, { color: c.muted }]}>Importación / Exportación</Text>
