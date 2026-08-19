@@ -1,9 +1,11 @@
 import React, { useCallback, useState } from 'react';
-import { View, Text, StyleSheet, Pressable, ScrollView, ActivityIndicator, Alert } from 'react-native';
+import { View, Text, StyleSheet, Pressable, ScrollView, ActivityIndicator, Alert, Platform } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
 import { useFocusEffect } from '@react-navigation/native';
 import { Feather } from '@expo/vector-icons';
+import * as FileSystem from 'expo-file-system/legacy';
+import * as Sharing from 'expo-sharing';
 import { useTheme } from '@/src/theme/ThemeContext';
 import { SPACING } from '@/src/theme/tokens';
 import { api, AdminHymnChange } from '@/src/lib/api';
@@ -43,6 +45,7 @@ export default function AdminChanges() {
   const { c } = useTheme();
   const [changes, setChanges] = useState<AdminHymnChange[]>([]);
   const [loading, setLoading] = useState(true);
+  const [exporting, setExporting] = useState(false);
   const [reviewingId, setReviewingId] = useState<string | null>(null);
 
   const loadChanges = useCallback(async () => {
@@ -60,6 +63,70 @@ export default function AdminChanges() {
       loadChanges();
     }, [loadChanges])
   );
+
+  const exportChanges = async () => {
+    if (!changes.length || exporting) return;
+
+    try {
+      setExporting(true);
+
+      const data = await api.exportAdminChanges();
+
+      const ts = new Date()
+        .toISOString()
+        .replace(/[:.]/g, '-');
+
+      const filename = `admfc-correcciones-${ts}.json`;
+      const content = JSON.stringify(data, null, 2);
+
+      if (Platform.OS === 'web') {
+        const blob = new Blob(
+          [content],
+          { type: 'application/json' }
+        );
+
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+
+        a.href = url;
+        a.download = filename;
+        a.click();
+
+        URL.revokeObjectURL(url);
+      } else {
+        const uri =
+          (FileSystem as any).cacheDirectory +
+          filename;
+
+        await (FileSystem as any).writeAsStringAsync(
+          uri,
+          content
+        );
+
+        const available =
+          await Sharing.isAvailableAsync();
+
+        if (!available) {
+          throw new Error(
+            'El sistema no permite compartir archivos en este dispositivo'
+          );
+        }
+
+        await Sharing.shareAsync(uri, {
+          mimeType: 'application/json',
+          dialogTitle: 'Exportar correcciones ADMFC',
+        });
+      }
+    } catch (e: any) {
+      Alert.alert(
+        'Error',
+        e?.message ||
+          'No se pudieron exportar las correcciones'
+      );
+    } finally {
+      setExporting(false);
+    }
+  };
 
   const markAsReviewed = (item: AdminHymnChange) => {
     Alert.alert(
@@ -138,6 +205,42 @@ export default function AdminChanges() {
                 : 'correcciones pendientes'}
             </Text>
           </View>
+
+          <Pressable
+            onPress={exportChanges}
+            disabled={exporting}
+            style={[
+              styles.exportButton,
+              {
+                backgroundColor: c.brand,
+                opacity: exporting ? 0.65 : 1,
+              },
+            ]}
+          >
+            {exporting ? (
+              <ActivityIndicator
+                size="small"
+                color={c.surface}
+              />
+            ) : (
+              <Feather
+                name="share-2"
+                size={17}
+                color={c.surface}
+              />
+            )}
+
+            <Text
+              style={[
+                styles.exportButtonText,
+                { color: c.surface },
+              ]}
+            >
+              {exporting
+                ? 'Exportando...'
+                : 'Exportar correcciones'}
+            </Text>
+          </Pressable>
 
           {changes.map((item) => (
             <View
@@ -320,6 +423,20 @@ const styles = StyleSheet.create({
   summaryText: {
     fontSize: 14,
     fontWeight: '600',
+  },
+  exportButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 7,
+    borderRadius: 12,
+    paddingHorizontal: SPACING.md,
+    paddingVertical: 11,
+    marginBottom: SPACING.md,
+  },
+  exportButtonText: {
+    fontSize: 13,
+    fontWeight: '800',
   },
   changeCard: {
     borderWidth: 1,

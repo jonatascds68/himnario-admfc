@@ -100,7 +100,7 @@ const insets = useSafeAreaInsets();
             </View>
             <View style={styles.statRow}>
               <Stat label="Con letra" value={stats.with_lyrics} c={c} />
-              <Stat label="Pendientes" value={stats.total - stats.with_lyrics} c={c} />
+              <Stat label="Pendientes" value={stats.pendingChanges ?? 0} c={c} />
             </View>
           </View>
         ) : <ActivityIndicator color={c.brand} />}

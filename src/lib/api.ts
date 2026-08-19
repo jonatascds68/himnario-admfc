@@ -353,6 +353,20 @@ export const api = {
     return items.length;
   },
 
+  exportAdminChanges: async () => {
+    requireAuth();
+
+    const items = await loadAdminChanges();
+
+    return {
+      schema_version: 'admfc-admin-changes-1',
+      release: 'ADMFC_INDEPENDIENTE_1.0',
+      exported_at: new Date().toISOString(),
+      total_changes: items.length,
+      changes: items,
+    };
+  },
+
   clearAdminChanges: async () => {
     requireAuth();
     await saveAdminChanges([]);
