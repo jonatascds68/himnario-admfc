@@ -103,19 +103,98 @@ export default function AdminChanges() {
           content
         );
 
-        const available =
-          await Sharing.isAvailableAsync();
+        if (Platform.OS === 'android') {
+          const SAF =
+            (FileSystem as any).StorageAccessFramework;
 
-        if (!available) {
-          throw new Error(
-            'El sistema no permite compartir archivos en este dispositivo'
+          Alert.alert(
+            'Exportar correcciones',
+            '¿Cómo desea exportar el archivo de correcciones?',
+            [
+              {
+                text: 'Guardar archivo',
+                onPress: async () => {
+                  try {
+                    const permission =
+                      await SAF.requestDirectoryPermissionsAsync();
+
+                    if (!permission.granted) {
+                      return;
+                    }
+
+                    const fileUri =
+                      await SAF.createFileAsync(
+                        permission.directoryUri,
+                        filename,
+                        'application/json'
+                      );
+
+                    await (FileSystem as any).writeAsStringAsync(
+                      fileUri,
+                      content
+                    );
+
+                    Alert.alert(
+                      'Archivo guardado',
+                      `Las correcciones fueron guardadas correctamente como:\n\n${filename}`
+                    );
+                  } catch (saveError: any) {
+                    Alert.alert(
+                      'Error',
+                      saveError?.message ||
+                        'No se pudo guardar el archivo'
+                    );
+                  }
+                },
+              },
+              {
+                text: 'Compartir',
+                onPress: async () => {
+                  try {
+                    const available =
+                      await Sharing.isAvailableAsync();
+
+                    if (!available) {
+                      throw new Error(
+                        'El sistema no permite compartir archivos en este dispositivo'
+                      );
+                    }
+
+                    await Sharing.shareAsync(uri, {
+                      mimeType: 'application/json',
+                      dialogTitle:
+                        'Exportar correcciones ADMFC',
+                    });
+                  } catch (shareError: any) {
+                    Alert.alert(
+                      'Error',
+                      shareError?.message ||
+                        'No se pudo compartir el archivo'
+                    );
+                  }
+                },
+              },
+              {
+                text: 'Cancelar',
+                style: 'cancel',
+              },
+            ]
           );
-        }
+        } else {
+          const available =
+            await Sharing.isAvailableAsync();
 
-        await Sharing.shareAsync(uri, {
-          mimeType: 'application/json',
-          dialogTitle: 'Exportar correcciones ADMFC',
-        });
+          if (!available) {
+            throw new Error(
+              'El sistema no permite compartir archivos en este dispositivo'
+            );
+          }
+
+          await Sharing.shareAsync(uri, {
+            mimeType: 'application/json',
+            dialogTitle: 'Exportar correcciones ADMFC',
+          });
+        }
       }
     } catch (e: any) {
       Alert.alert(
