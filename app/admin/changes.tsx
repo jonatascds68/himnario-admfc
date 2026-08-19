@@ -207,6 +207,77 @@ export default function AdminChanges() {
     }
   };
 
+
+  /*
+   * ADMFC 7AA.44 — gera o pacote enxuto que futuramente
+   * será distribuído automaticamente aos usuários.
+   *
+   * Gerar/compartilhar NÃO significa publicar.
+   * A revisão só será confirmada quando existir publicação remota real.
+   */
+  const generateContentUpdate = async () => {
+    if (!changes.length || exporting) return;
+
+    try {
+      setExporting(true);
+
+      const data = await api.exportContentUpdates();
+
+      const filename =
+        `admfc-update-r${String(data.revision).padStart(6, '0')}.json`;
+
+      const content = JSON.stringify(data, null, 2);
+
+      if (Platform.OS === 'web') {
+        const blob = new Blob(
+          [content],
+          { type: 'application/json' }
+        );
+
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+
+        a.href = url;
+        a.download = filename;
+        a.click();
+
+        URL.revokeObjectURL(url);
+        return;
+      }
+
+      const uri =
+        (FileSystem as any).cacheDirectory + filename;
+
+      await (FileSystem as any).writeAsStringAsync(
+        uri,
+        content
+      );
+
+      const available =
+        await Sharing.isAvailableAsync();
+
+      if (!available) {
+        throw new Error(
+          'El sistema no permite compartir archivos en este dispositivo'
+        );
+      }
+
+      await Sharing.shareAsync(uri, {
+        mimeType: 'application/json',
+        dialogTitle:
+          `Actualización ADMFC — revisión ${data.revision}`,
+      });
+    } catch (e: any) {
+      Alert.alert(
+        'Error',
+        e?.message ||
+          'No se pudo generar la actualización'
+      );
+    } finally {
+      setExporting(false);
+    }
+  };
+
   const markAsReviewed = (item: AdminHymnChange) => {
     Alert.alert(
       'Marcar como revisado',
@@ -318,6 +389,36 @@ export default function AdminChanges() {
               {exporting
                 ? 'Exportando...'
                 : 'Exportar correcciones'}
+            </Text>
+          </Pressable>
+
+
+          <Pressable
+            onPress={generateContentUpdate}
+            disabled={exporting}
+            style={[
+              styles.exportButton,
+              {
+                backgroundColor: c.surfaceSecondary,
+                borderWidth: 1,
+                borderColor: c.brand,
+                opacity: exporting ? 0.65 : 1,
+              },
+            ]}
+          >
+            <Feather
+              name="upload-cloud"
+              size={17}
+              color={c.brand}
+            />
+
+            <Text
+              style={[
+                styles.exportButtonText,
+                { color: c.brand },
+              ]}
+            >
+              Generar actualización
             </Text>
           </Pressable>
 

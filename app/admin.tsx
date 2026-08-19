@@ -1,11 +1,11 @@
 import React, { useCallback, useState } from 'react';
-import { View, Text, StyleSheet, ScrollView, Pressable, ActivityIndicator, Platform } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, Pressable, ActivityIndicator, Platform, Modal } from 'react-native';
 import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
 import { Feather } from '@expo/vector-icons';
 import { useFocusEffect } from '@react-navigation/native';
 import * as DocumentPicker from 'expo-document-picker';
-import * as FileSystem from 'expo-file-system';
+import * as FileSystem from 'expo-file-system/legacy';
 import * as Sharing from 'expo-sharing';
 import { useTheme } from '@/src/theme/ThemeContext';
 import { SPACING, RADIUS } from '@/src/theme/tokens';
@@ -18,7 +18,11 @@ const insets = useSafeAreaInsets();
   const [stats, setStats] = useState<any>(null);
   const [busy, setBusy] = useState('');
   const [msg, setMsg] = useState('');
-  const [importResult, setImportResult] = useState<any>(null);
+  // ADMFC 7AA.41 — confirmação visual própria para restauração.
+  const [restoreConfirm, setRestoreConfirm] = useState<{
+    data: any;
+    hymnCount: number;
+  } | null>(null);
   const load = useCallback(async () => {
     try {
       await api.me();
@@ -55,27 +59,73 @@ const insets = useSafeAreaInsets();
     finally { setBusy(''); }
   };
 
+  /*
+   * ADMFC 7AA.41:
+   * A restauração de backup substitui a base local.
+   * Exige confirmação explícita antes de persistir qualquer dado.
+   */
   const doRestore = async () => {
     setMsg('');
-    const res = await DocumentPicker.getDocumentAsync({ type: ['application/json', '*/*'], copyToCacheDirectory: true });
+
+    const res = await DocumentPicker.getDocumentAsync({
+      type: ['application/json', '*/*'],
+      copyToCacheDirectory: true,
+    });
+
     if (res.canceled || !res.assets?.[0]) return;
-    setBusy('restore');
+
     try {
       let text = '';
+
       if (Platform.OS === 'web') {
-        const r = await fetch(res.assets[0].uri); text = await r.text();
+        const r = await fetch(res.assets[0].uri);
+        text = await r.text();
       } else {
-        text = await (FileSystem as any).readAsStringAsync(res.assets[0].uri);
+        text = await (FileSystem as any).readAsStringAsync(
+          res.assets[0].uri
+        );
       }
+
       const data = JSON.parse(text);
+      const hymns = data?.himnos || data?.hymns;
+
+      if (!Array.isArray(hymns) || !hymns.length) {
+        throw new Error('Backup inválido');
+      }
+
+      setRestoreConfirm({
+        data,
+        hymnCount: hymns.length,
+      });
+    } catch (e: any) {
+      setMsg(e?.message || 'Error restaurando');
+    }
+  };
+
+  const confirmRestore = async () => {
+    if (!restoreConfirm) return;
+
+    const data = restoreConfirm.data;
+    setRestoreConfirm(null);
+    setBusy('restore');
+
+    try {
       const out = await api.restoreBackup(data);
-      setMsg(`Restaurado: ${out.restored_hymns} himnos, ${out.restored_categories} categorías`);
-      load();
-    } catch (e: any) { setMsg(e?.message || 'Error restaurando'); }
-    finally { setBusy(''); }
+
+      setMsg(
+        `Restaurado: ${out.restored_hymns} himnos, ${out.restored_categories} categorías, ${out.restored_changes ?? 0} correcciones pendientes`
+      );
+
+      await load();
+    } catch (e: any) {
+      setMsg(e?.message || 'Error restaurando');
+    } finally {
+      setBusy('');
+    }
   };
 
   return (
+    <>
     <SafeAreaView style={[styles.container, { backgroundColor: c.surface }]} edges={['top']} testID="admin-screen">
       <View style={styles.header}>
         <Pressable onPress={() => { adminSession.clear(); router.replace('/(tabs)/more' as any); }} hitSlop={10}>
@@ -124,29 +174,133 @@ const insets = useSafeAreaInsets();
         </View>
 
         {msg ? <Text style={{ color: c.info, marginTop: SPACING.md, textAlign: 'center' }} testID="admin-msg">{msg}</Text> : null}
-        {importResult ? (
-          <View style={[styles.actionCard, { borderColor: c.border, backgroundColor: c.surfaceSecondary, marginTop: SPACING.md }]}>
-            <Text style={[styles.section, { color: c.muted }]}>Resultado</Text>
-            <Text style={{ color: c.onSurface }}>Total filas: {importResult.total}</Text>
-            <Text style={{ color: c.onSurface }}>Válidos: {importResult.valid}</Text>
-            <Text style={{ color: c.onSurface }}>Duplicados: {importResult.duplicates}</Text>
-            <Text style={{ color: c.onSurface }}>Errores: {importResult.errors}</Text>
-            <Text style={{ color: c.muted, fontSize: 12, marginTop: SPACING.sm }}>
-              Columnas admitidas: NUMERO_GLORIA_TRIUNFO, NUMERO_SION, TITULO, AUTOR, LETRA, CORO,
-              CATEGORIA, TONALIDAD, REFERENCIA_BIBLICA, FUENTE, COPYRIGHT_STATUS, VERIFICATION_STATUS.
-            </Text>
-          </View>
-        ) : null}
+        {/* ADMFC 7AA.42: removido bloco legado de importação CSV/XLSX. */}
 
         <Text style={[styles.section, { color: c.muted }]}>Notas</Text>
         <Text style={{ color: c.muted, fontSize: 13, lineHeight: 20 }}>
-          • CRUD de himnos individuales disponible vía API. Próxima versión incluirá editor
-          visual completo dentro del panel.{'\n'}
-          • La importación acepta filas nuevas y actualiza duplicados según GT o Sión.{'\n'}
-          • El backup guarda himnos + categorías en JSON.
+          {/* ADMFC 7AA.40: notas atualizadas ao estado real do painel administrativo. */}
+          • El Editor de Himnos permite corregir título, letra, número, equivalencias y demás datos administrables.{'\n'}
+          • Las modificaciones reales quedan registradas en Cambios pendientes para su revisión y exportación.{'\n'}
+          • El backup conserva los himnos, categorías y correcciones pendientes en formato JSON.
         </Text>
       </ScrollView>
     </SafeAreaView>
+
+    <Modal
+      visible={!!restoreConfirm}
+      transparent
+      animationType="fade"
+      onRequestClose={() => setRestoreConfirm(null)}
+    >
+      <View style={styles.modalOverlay}>
+        <View
+          style={[
+            styles.modalCard,
+            {
+              backgroundColor: c.surface,
+              borderColor: c.border,
+            },
+          ]}
+        >
+          <View
+            style={[
+              styles.modalIcon,
+              { backgroundColor: c.surfaceSecondary },
+            ]}
+          >
+            <Feather
+              name="alert-triangle"
+              size={28}
+              color={c.error}
+            />
+          </View>
+
+          <Text
+            style={[
+              styles.modalTitle,
+              { color: c.onSurface },
+            ]}
+          >
+            Restaurar backup
+          </Text>
+
+          <Text
+            style={[
+              styles.modalText,
+              { color: c.muted },
+            ]}
+          >
+            Este archivo contiene{' '}
+            <Text style={{ fontWeight: '800', color: c.onSurface }}>
+              {restoreConfirm?.hymnCount ?? 0} himnos
+            </Text>
+            . La restauración reemplazará la base local actual y
+            restaurará también las correcciones pendientes guardadas
+            en este backup.
+          </Text>
+
+          <Text
+            style={[
+              styles.modalWarning,
+              { color: c.error },
+            ]}
+          >
+            Esta acción reemplazará los datos locales actuales.
+          </Text>
+
+          <View style={styles.modalActions}>
+            <Pressable
+              onPress={() => setRestoreConfirm(null)}
+              style={[
+                styles.modalButton,
+                {
+                  borderColor: c.borderStrong,
+                  backgroundColor: c.surfaceSecondary,
+                },
+              ]}
+            >
+              <Feather
+                name="x"
+                size={18}
+                color={c.onSurface}
+              />
+              <Text
+                style={[
+                  styles.modalButtonText,
+                  { color: c.onSurface },
+                ]}
+              >
+                Cancelar
+              </Text>
+            </Pressable>
+
+            <Pressable
+              onPress={confirmRestore}
+              style={[
+                styles.modalButton,
+                styles.modalDangerButton,
+                { backgroundColor: c.error },
+              ]}
+            >
+              <Feather
+                name="rotate-ccw"
+                size={18}
+                color={c.onSurfaceInverse}
+              />
+              <Text
+                style={[
+                  styles.modalButtonText,
+                  { color: c.onSurfaceInverse },
+                ]}
+              >
+                Restaurar backup
+              </Text>
+            </Pressable>
+          </View>
+        </View>
+      </View>
+    </Modal>
+    </>
   );
 }
 
@@ -177,4 +331,65 @@ const styles = StyleSheet.create({
   section: { fontSize: 11, fontWeight: '800', textTransform: 'uppercase', letterSpacing: 1, marginTop: SPACING.lg, marginBottom: SPACING.sm },
   actionCard: { borderRadius: RADIUS.lg, borderWidth: 1, padding: SPACING.md, gap: SPACING.sm },
   actionBtn: { flexDirection: 'row', alignItems: 'center', gap: SPACING.md, paddingVertical: SPACING.md, paddingHorizontal: SPACING.sm, borderRadius: RADIUS.md, borderWidth: 1, minHeight: 52 },
+
+  // ADMFC 7AA.41 — confirmação visual segura de restauração.
+  modalOverlay: {
+    flex: 1,
+    backgroundColor: 'rgba(0,0,0,0.55)',
+    justifyContent: 'center',
+    padding: SPACING.lg,
+  },
+  modalCard: {
+    borderRadius: RADIUS.lg,
+    borderWidth: 1,
+    padding: SPACING.xl,
+    alignItems: 'center',
+  },
+  modalIcon: {
+    width: 56,
+    height: 56,
+    borderRadius: 28,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: SPACING.md,
+  },
+  modalTitle: {
+    fontSize: 21,
+    fontWeight: '800',
+    textAlign: 'center',
+    marginBottom: SPACING.sm,
+  },
+  modalText: {
+    fontSize: 14,
+    lineHeight: 21,
+    textAlign: 'center',
+  },
+  modalWarning: {
+    fontSize: 13,
+    fontWeight: '700',
+    textAlign: 'center',
+    marginTop: SPACING.md,
+  },
+  modalActions: {
+    width: '100%',
+    gap: SPACING.sm,
+    marginTop: SPACING.xl,
+  },
+  modalButton: {
+    minHeight: 52,
+    borderRadius: RADIUS.md,
+    borderWidth: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: SPACING.sm,
+    paddingHorizontal: SPACING.md,
+  },
+  modalDangerButton: {
+    borderWidth: 0,
+  },
+  modalButtonText: {
+    fontSize: 15,
+    fontWeight: '800',
+  },
 });

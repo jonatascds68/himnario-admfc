@@ -113,6 +113,21 @@ const DB_KEY = 'admfc_local_db_v1';
 const ADMIN_CHANGES_KEY = 'admfc_admin_changes_v1';
 const DB_DATA_VERSION_KEY = 'admfc_local_db_data_version';
 const DB_DATA_VERSION = '7';
+
+/*
+ * ADMFC 7AA.44 — revisão da atualização remota de conteúdo.
+ * Independente da versão estrutural da base local.
+ */
+const CONTENT_REVISION_KEY = 'admfc_content_revision_v1';
+
+/*
+ * ADMFC 7AA.44 — última revisão GERADA pelo administrador.
+ * Não confundir com CONTENT_REVISION_KEY, que pertence ao
+ * aparelho que recebe e aplica atualizações.
+ */
+const PUBLISHED_CONTENT_REVISION_KEY =
+  'admfc_published_content_revision_v1';
+
 const ADMIN_EMAIL = 'jonatascds68@gmail.com';
 const ADMIN_PASSWORD_HASH = 'edf29432fb85857e36c029fffe09af9b1e02b1474dcc7b384fed25a121645900';
 
@@ -156,13 +171,100 @@ await saveDb(db); await kv.set(DB_DATA_VERSION_KEY, DB_DATA_VERSION); return db;
 }
 async function saveDb(db: LocalDb) { await kv.set(DB_KEY, JSON.stringify(db)); }
 
+function consolidateAdminChanges(
+  items: AdminHymnChange[]
+): AdminHymnChange[] {
+  const result: AdminHymnChange[] = [];
+
+  /*
+   * Registros antigos eram adicionados com unshift(),
+   * portanto a fila está normalmente do mais novo
+   * para o mais antigo.
+   *
+   * Reconstruímos cronologicamente para obter
+   * somente o estado líquido pendente.
+   */
+  const chronological = [...items].reverse();
+
+  for (const item of chronological) {
+    let existing = result.find(
+      current =>
+        current.hymn_id === item.hymn_id &&
+        current.action === 'update'
+    );
+
+    if (!existing) {
+      result.push({
+        ...item,
+        changed_fields: [...item.changed_fields],
+        before: { ...item.before },
+        after: { ...item.after },
+      });
+
+      continue;
+    }
+
+    for (const field of item.changed_fields) {
+      if (!existing.changed_fields.includes(field)) {
+        existing.changed_fields.push(field);
+
+        (existing.before as any)[field] =
+          (item.before as any)?.[field];
+      }
+
+      (existing.after as any)[field] =
+        (item.after as any)?.[field];
+
+      if (
+        sameValue(
+          (existing.before as any)[field],
+          (existing.after as any)[field]
+        )
+      ) {
+        existing.changed_fields =
+          existing.changed_fields.filter(
+            currentField => currentField !== field
+          );
+
+        delete (existing.before as any)[field];
+        delete (existing.after as any)[field];
+      }
+    }
+
+    existing.himnario = item.himnario;
+    existing.numero = item.numero;
+    existing.titulo = item.titulo;
+    existing.created_at = item.created_at;
+  }
+
+  /*
+   * A ordem pública da fila continua:
+   * alteração mais recente primeiro.
+   */
+  return result
+    .filter(item => item.changed_fields.length > 0)
+    .reverse();
+}
+
 async function loadAdminChanges(): Promise<AdminHymnChange[]> {
   const raw = await kv.get(ADMIN_CHANGES_KEY);
   if (!raw) return [];
 
   try {
     const parsed = JSON.parse(raw);
-    return Array.isArray(parsed) ? parsed : [];
+
+    if (!Array.isArray(parsed)) {
+      return [];
+    }
+
+    /*
+     * ADMFC 7AA.20:
+     * normalização SOMENTE EM LEITURA.
+     *
+     * Nenhuma alteração é persistida no AsyncStorage
+     * nesta etapa.
+     */
+    return consolidateAdminChanges(parsed);
   } catch {
     return [];
   }
@@ -190,32 +292,109 @@ async function registerHymnUpdate(
 
   if (!changedFields.length) return;
 
-  const beforeValues: Partial<Hymn> = {};
-  const afterValues: Partial<Hymn> = {};
-
-  for (const key of changedFields) {
-    (beforeValues as any)[key] = (before as any)[key];
-    (afterValues as any)[key] = (after as any)[key];
-  }
-
   const changes = await loadAdminChanges();
 
-  changes.unshift({
-    id: `change-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
-    hymn_id: after.id,
-    himnario: after.himnario,
-    numero: after.numero,
-    titulo: after.titulo,
-    action: 'update',
-    changed_fields: changedFields,
-    before: beforeValues,
-    after: afterValues,
-    created_at: new Date().toISOString(),
-    status: 'pending',
-  });
+  /*
+   * ADMFC 7AA:
+   * A fila administrativa representa o estado líquido pendente
+   * de sincronização, e não um histórico de todas as edições locais.
+   *
+   * Para cada campo do mesmo hino:
+   * - preserva o primeiro BEFORE ainda pendente;
+   * - atualiza o AFTER para o valor mais recente;
+   * - se AFTER voltar a ser igual ao BEFORE original,
+   *   a pendência daquele campo desaparece.
+   */
+
+  let existing = changes.find(
+    item =>
+      item.hymn_id === after.id &&
+      item.action === 'update'
+  );
+
+  if (!existing) {
+    const beforeValues: Partial<Hymn> = {};
+    const afterValues: Partial<Hymn> = {};
+
+    for (const key of changedFields) {
+      (beforeValues as any)[key] = (before as any)[key];
+      (afterValues as any)[key] = (after as any)[key];
+    }
+
+    changes.unshift({
+      id: `change-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+      hymn_id: after.id,
+      himnario: after.himnario,
+      numero: after.numero,
+      titulo: after.titulo,
+      action: 'update',
+      changed_fields: changedFields,
+      before: beforeValues,
+      after: afterValues,
+      created_at: new Date().toISOString(),
+      status: 'pending',
+    });
+
+    await saveAdminChanges(changes);
+    return;
+  }
+
+  for (const key of changedFields) {
+    /*
+     * Se este campo ainda não fazia parte da pendência,
+     * o estado imediatamente anterior passa a ser seu
+     * BEFORE original.
+     */
+    if (!existing.changed_fields.includes(key)) {
+      existing.changed_fields.push(key);
+      (existing.before as any)[key] = (before as any)[key];
+    }
+
+    (existing.after as any)[key] = (after as any)[key];
+
+    /*
+     * Se o valor atual voltou ao BEFORE original,
+     * não existe mais alteração líquida nesse campo.
+     */
+    if (
+      sameValue(
+        (existing.before as any)[key],
+        (existing.after as any)[key]
+      )
+    ) {
+      existing.changed_fields =
+        existing.changed_fields.filter(field => field !== key);
+
+      delete (existing.before as any)[key];
+      delete (existing.after as any)[key];
+    }
+  }
+
+  /*
+   * Mantém os metadados visuais correspondentes
+   * ao estado mais recente do hino.
+   */
+  existing.himnario = after.himnario;
+  existing.numero = after.numero;
+  existing.titulo = after.titulo;
+  existing.created_at = new Date().toISOString();
+
+  /*
+   * Se todos os campos retornaram ao estado original,
+   * remove completamente a pendência.
+   */
+  if (!existing.changed_fields.length) {
+    const remaining = changes.filter(
+      item => item.id !== existing!.id
+    );
+
+    await saveAdminChanges(remaining);
+    return;
+  }
 
   await saveAdminChanges(changes);
 }
+
 function keyToName(k?: 'gt'|'sion') { return k === 'gt' ? 'Gloria y Triunfo' : k === 'sion' ? 'Himnos de Sión' : undefined; }
 function nameToKey(n?: string) { return n === 'Gloria y Triunfo' ? 'gt' : 'sion'; }
 function requireAuth() { if (!sessionToken) throw new Error('No autorizado'); }
@@ -228,7 +407,233 @@ async function sha256(value: string): Promise<string> {
   );
 }
 
+
+/*
+ * ADMFC 7AA.44 — motor seguro de atualização de conteúdo.
+ *
+ * Este motor aplica correções oficiais sobre a base local sem tocar
+ * em favoritos, recentes, playlist ou preferências do usuário.
+ *
+ * Identidade:
+ * - hymn_id identifica permanentemente o hino.
+ * - id nunca pode ser alterado remotamente.
+ * - audio_local pertence ao aparelho e nunca pode ser alterado remotamente.
+ */
+
+export interface ContentPatch {
+  hymn_id: string;
+  fields: Partial<Hymn>;
+}
+
+export interface ContentPatchPackage {
+  schema_version: 'admfc-content-patch-1';
+  revision: number;
+  patches: ContentPatch[];
+}
+
+const REMOTE_HYMN_FIELDS = new Set<keyof Hymn>([
+  'himnario',
+  'numero',
+  'titulo',
+  'letra',
+  'bloques',
+  'numero_equivalente',
+  'himnario_equivalente',
+  'estado',
+  'fuente',
+  'observacion',
+  'categorias',
+  'has_lyrics',
+  'tom',
+  'cifra',
+  'cifra_bloques',
+  'cifra_url',
+  'audio_url',
+  'audio_external_url',
+  'cifra_autorizada',
+  'cifra_procedencia',
+  'audio_autorizado',
+  'audio_procedencia',
+]);
+
+
+/*
+ * ADMFC 7AA.44 — converte alterações administrativas consolidadas
+ * em pacote oficial de distribuição.
+ *
+ * Somente os campos presentes em changed_fields são publicados.
+ * Dados administrativos como before, status e created_at não fazem
+ * parte do pacote recebido pelos usuários.
+ */
+export function adminChangesToContentPackage(
+  changes: AdminHymnChange[],
+  revision: number
+): ContentPatchPackage {
+  if (!Number.isInteger(revision) || revision < 1) {
+    throw new Error('Revisión de contenido inválida');
+  }
+
+  const patches: ContentPatch[] = changes.map(change => {
+    if (
+      !change ||
+      change.action !== 'update' ||
+      typeof change.hymn_id !== 'string' ||
+      !change.hymn_id.trim() ||
+      !Array.isArray(change.changed_fields)
+    ) {
+      throw new Error('Cambio administrativo inválido');
+    }
+
+    const fields: Partial<Hymn> = {};
+
+    for (const field of change.changed_fields) {
+      if (
+        field === 'id' ||
+        field === 'audio_local' ||
+        !REMOTE_HYMN_FIELDS.has(field as keyof Hymn)
+      ) {
+        throw new Error(
+          `Campo no publicable: ${field}`
+        );
+      }
+
+      if (!Object.prototype.hasOwnProperty.call(change.after, field)) {
+        throw new Error(
+          `Valor final ausente para: ${field}`
+        );
+      }
+
+      (fields as any)[field] = (change.after as any)[field];
+    }
+
+    return {
+      hymn_id: change.hymn_id,
+      fields,
+    };
+  });
+
+  return {
+    schema_version: 'admfc-content-patch-1',
+    revision,
+    patches,
+  };
+}
+
+export async function getContentRevision(): Promise<number> {
+  const raw = await kv.get(CONTENT_REVISION_KEY);
+  const revision = Number(raw);
+
+  return Number.isInteger(revision) && revision >= 0
+    ? revision
+    : 0;
+}
+
+export async function applyContentPatchPackage(
+  pkg: ContentPatchPackage
+) {
+  if (
+    !pkg ||
+    pkg.schema_version !== 'admfc-content-patch-1' ||
+    !Number.isInteger(pkg.revision) ||
+    pkg.revision < 1 ||
+    !Array.isArray(pkg.patches)
+  ) {
+    throw new Error('Paquete de actualización inválido');
+  }
+
+  const currentRevision = await getContentRevision();
+
+  /*
+   * Revisões são monotônicas:
+   * - pacote já aplicado: não reaplica;
+   * - pacote antigo: não provoca regressão.
+   */
+  if (pkg.revision <= currentRevision) {
+    return {
+      ok: true,
+      revision: currentRevision,
+      applied_patches: 0,
+      skipped: true,
+    };
+  }
+
+  const db = await loadDb();
+
+  /*
+   * Trabalhamos sobre uma cópia profunda.
+   * Nada é persistido enquanto o pacote inteiro não for validado.
+   */
+  const nextDb = JSON.parse(JSON.stringify(db)) as LocalDb;
+
+  for (const patch of pkg.patches) {
+    if (
+      !patch ||
+      typeof patch.hymn_id !== 'string' ||
+      !patch.hymn_id.trim() ||
+      !patch.fields ||
+      typeof patch.fields !== 'object' ||
+      Array.isArray(patch.fields)
+    ) {
+      throw new Error('Corrección de himno inválida');
+    }
+
+    const hymn = nextDb.hymns.find(h => h.id === patch.hymn_id);
+
+    if (!hymn) {
+      throw new Error(`Himno desconocido: ${patch.hymn_id}`);
+    }
+
+    for (const [field, value] of Object.entries(patch.fields)) {
+      if (
+        field === 'id' ||
+        field === 'audio_local' ||
+        !REMOTE_HYMN_FIELDS.has(field as keyof Hymn)
+      ) {
+        throw new Error(
+          `Campo remoto no permitido: ${field}`
+        );
+      }
+
+      (hymn as any)[field] = value;
+    }
+
+    /*
+     * A identidade permanente deve continuar intacta.
+     */
+    if (hymn.id !== patch.hymn_id) {
+      throw new Error(
+        `Identidad de himno alterada: ${patch.hymn_id}`
+      );
+    }
+  }
+
+  /*
+   * Um único save depois da validação completa.
+   */
+  await saveDb(nextDb);
+
+  /*
+   * A revisão só é registrada DEPOIS que a nova base foi salva.
+   * Um pacote inválido nunca avança a revisão local.
+   */
+  await kv.set(CONTENT_REVISION_KEY, String(pkg.revision));
+
+  return {
+    ok: true,
+    revision: pkg.revision,
+    applied_patches: pkg.patches.length,
+    skipped: false,
+  };
+}
+
 export const api = {
+  // ADMFC 7AA.44: entrada pública do motor de atualização de conteúdo.
+  applyContentUpdates: async (pkg: ContentPatchPackage) =>
+    applyContentPatchPackage(pkg),
+
+  getContentRevision: async () =>
+    getContentRevision(),
+
   listHymns: async (p: { himnario?: 'gt'|'sion'; q?: string; category?: string } = {}) => {
     const db = await loadDb(); let items = [...db.hymns]; const hn = keyToName(p.himnario);
     if (hn) items = items.filter(h => h.himnario === hn);
@@ -287,9 +692,25 @@ export const api = {
 
     const before = JSON.parse(JSON.stringify(db.hymns[i])) as Hymn;
 
+    /*
+     * ADMFC 7AA.35C:
+     * O editor envia um payload completo do formulário.
+     * Para a fila administrativa, porém, interessam somente
+     * os campos cujo valor realmente mudou.
+     */
+    const effectivePayload = Object.fromEntries(
+      Object.entries(payload).filter(
+        ([key, value]) =>
+          !sameValue(
+            (before as any)[key],
+            value
+          )
+      )
+    ) as Partial<Hymn>;
+
     db.hymns[i] = {
       ...db.hymns[i],
-      ...payload,
+      ...effectivePayload,
       id,
     };
 
@@ -321,19 +742,23 @@ export const api = {
         for (const key of sharedKeys) {
           if (
             Object.prototype.hasOwnProperty.call(
-              payload,
+              effectivePayload,
               key
             )
           ) {
             (target as any)[key] =
-              (payload as any)[key];
+              (effectivePayload as any)[key];
           }
         }
       }
     }
 
     await saveDb(db);
-    await registerHymnUpdate(before, updated, payload);
+    await registerHymnUpdate(
+      before,
+      updated,
+      effectivePayload
+    );
     return updated;
   },
 
@@ -351,6 +776,80 @@ export const api = {
     requireAuth();
     const items = await loadAdminChanges();
     return items.length;
+  },
+
+  exportContentUpdates: async () => {
+    requireAuth();
+
+    const items = await loadAdminChanges();
+
+    if (!items.length) {
+      throw new Error('No hay correcciones pendientes para publicar');
+    }
+
+    const raw = await kv.get(PUBLISHED_CONTENT_REVISION_KEY);
+    const storedRevision = Number(raw);
+
+    const currentRevision =
+      Number.isInteger(storedRevision) && storedRevision >= 0
+        ? storedRevision
+        : 0;
+
+    const nextRevision = currentRevision + 1;
+
+    /*
+     * Gerar o pacote NÃO avança ainda o contador.
+     * A revisão só deverá ser confirmada depois que a
+     * publicação efetivamente for concluída.
+     */
+    return adminChangesToContentPackage(
+      items,
+      nextRevision
+    );
+  },
+
+  confirmContentPublished: async (revision: number) => {
+    requireAuth();
+
+    if (!Number.isInteger(revision) || revision < 1) {
+      throw new Error('Revisión publicada inválida');
+    }
+
+    const raw = await kv.get(PUBLISHED_CONTENT_REVISION_KEY);
+    const storedRevision = Number(raw);
+
+    const currentRevision =
+      Number.isInteger(storedRevision) && storedRevision >= 0
+        ? storedRevision
+        : 0;
+
+    if (revision <= currentRevision) {
+      return {
+        ok: true,
+        revision: currentRevision,
+        already_confirmed: true,
+      };
+    }
+
+    /*
+     * Não permitimos saltos acidentais de revisão.
+     */
+    if (revision !== currentRevision + 1) {
+      throw new Error(
+        `Secuencia de revisión inválida: ${currentRevision} -> ${revision}`
+      );
+    }
+
+    await kv.set(
+      PUBLISHED_CONTENT_REVISION_KEY,
+      String(revision)
+    );
+
+    return {
+      ok: true,
+      revision,
+      already_confirmed: false,
+    };
   },
 
   exportAdminChanges: async () => {
@@ -458,9 +957,71 @@ export const api = {
     };
   },
   removeEquivalence: async (id:string) => { requireAuth(); const db=await loadDb(); const h=db.hymns.find(x=>x.id===id); if(!h) throw new Error('Himno no encontrado'); const oldN=h.numero_equivalente, oldH=h.himnario_equivalente; h.numero_equivalente=null; h.himnario_equivalente=null; const target=db.hymns.find(x=>x.himnario===oldH&&x.numero===oldN); if(target&&target.numero_equivalente===h.numero){target.numero_equivalente=null;target.himnario_equivalente=null;} await saveDb(db); return {hymn:h}; },
-  exportBackup: async () => { requireAuth(); const db=await loadDb(); return {schema_version:'local-1',release:'ADMFC_INDEPENDIENTE_1.0',total:db.hymns.length,himnos:db.hymns,categories:db.categories}; },
-  restoreBackup: async (p:any) => { requireAuth(); const hymns=(p.himnos||p.hymns||[]) as Hymn[]; if(!Array.isArray(hymns)||!hymns.length) throw new Error('Backup inválido'); const categories=p.categories||p.categorias||[]; await saveDb({hymns,categories}); return {restored_hymns:hymns.length,restored_categories:categories.length}; },
-  importFile: async () => { throw new Error('Importación CSV/XLSX no disponible en modo local. Use Restaurar backup (JSON).'); },
+  /*
+   * ADMFC 7AA.41:
+   * O backup representa o estado administrativo completo:
+   * base local + categorias + correções pendentes.
+   */
+  exportBackup: async () => {
+    requireAuth();
+
+    const db = await loadDb();
+    const adminChanges = await loadAdminChanges();
+
+    return {
+      schema_version: 'local-2',
+      release: 'ADMFC_INDEPENDIENTE_1.0',
+      total: db.hymns.length,
+      himnos: db.hymns,
+      categories: db.categories,
+      admin_changes: adminChanges,
+    };
+  },
+
+  restoreBackup: async (p: any) => {
+    requireAuth();
+
+    const hymns = (p.himnos || p.hymns || []) as Hymn[];
+
+    if (!Array.isArray(hymns) || !hymns.length) {
+      throw new Error('Backup inválido');
+    }
+
+    const categories =
+      p.categories || p.categorias || [];
+
+    if (!Array.isArray(categories)) {
+      throw new Error('Categorías inválidas en el backup');
+    }
+
+    /*
+     * Backups local-2 restauram a fila administrativa.
+     * Backups antigos não possuíam essa informação;
+     * nesse caso a fila é zerada para não misturar
+     * correções de estados diferentes da base.
+     */
+    let adminChanges: AdminHymnChange[] = [];
+
+    if (Array.isArray(p.admin_changes)) {
+      adminChanges = consolidateAdminChanges(
+        p.admin_changes as AdminHymnChange[]
+      );
+    }
+
+    await saveDb({
+      hymns,
+      categories,
+    });
+
+    await saveAdminChanges(adminChanges);
+
+    return {
+      restored_hymns: hymns.length,
+      restored_categories: categories.length,
+      restored_changes: adminChanges.length,
+    };
+  },
+  // ADMFC 7AA.43: API legada de importação CSV/XLSX removida.
 };
 
 export interface Section { kind:'verse'|'chorus'; index?:number; text:string; }

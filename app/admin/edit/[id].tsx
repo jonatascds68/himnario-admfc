@@ -314,7 +314,7 @@ const insets = useSafeAreaInsets();
         return;
       }
 
-      const payload: Partial<Hymn> = {
+      const fullPayload: Partial<Hymn> = {
         himnario, numero: n, titulo: titulo.trim(),
         categorias: selectedCats,
         bloques: toBloques(),
@@ -341,6 +341,148 @@ const insets = useSafeAreaInsets();
         },
         audio_local: audioLocal || null,
       };
+
+      /*
+       * ADMFC 7AA.39:
+       * O formulário normaliza campos ausentes da Base Mestre.
+       * Essas normalizações não podem virar correções
+       * administrativas quando o usuário não alterou o conteúdo.
+       */
+      const payload: Partial<Hymn> = { ...fullPayload };
+
+      if (!isNew && hymn) {
+        const sameJson = (a: any, b: any) =>
+          JSON.stringify(a) === JSON.stringify(b);
+
+        /*
+         * categorias ausentes e [] representam o mesmo estado
+         * administrativo.
+         */
+        if (
+          sameJson(
+            hymn.categorias || [],
+            selectedCats
+          )
+        ) {
+          delete payload.categorias;
+        }
+
+        /*
+         * A Base Mestre histórica usa "letra".
+         * O editor converte essa letra para bloques ao carregar.
+         * Só persistimos bloques quando as seções realmente
+         * foram modificadas pelo administrador.
+         */
+        const originalBlocks: Bloque[] =
+          getSections(hymn).map((sec) => ({
+            tipo:
+              sec.kind === 'chorus'
+                ? 'coro'
+                : 'estrofa',
+            numero:
+              sec.kind === 'verse'
+                ? sec.index ?? null
+                : null,
+            texto: sec.text,
+          }));
+
+        if (
+          sameJson(
+            originalBlocks,
+            toBloques()
+          )
+        ) {
+          delete payload.bloques;
+        }
+
+        /*
+         * cifra_bloques ausente e [] também são equivalentes
+         * quando nenhuma cifra foi acrescentada.
+         */
+        if (
+          sameJson(
+            hymn.cifra_bloques || [],
+            toCifraBloques()
+          )
+        ) {
+          delete payload.cifra_bloques;
+        }
+
+        /*
+         * Campos opcionais vazios não devem ser materializados
+         * apenas porque o formulário utiliza valores padrão.
+         */
+        const optionalNullFields: (keyof Hymn)[] = [
+          'tom',
+          'cifra_url',
+          'audio_url',
+          'audio_external_url',
+          'audio_local',
+        ];
+
+        for (const key of optionalNullFields) {
+          const beforeValue = hymn[key] ?? null;
+          const afterValue = payload[key] ?? null;
+
+          if (sameJson(beforeValue, afterValue)) {
+            delete (payload as any)[key];
+          }
+        }
+
+        /*
+         * Booleanos ausentes historicamente equivalem a false.
+         */
+        if (
+          (hymn.cifra_autorizada ?? false) ===
+          cifraAutorizada
+        ) {
+          delete payload.cifra_autorizada;
+        }
+
+        if (
+          (hymn.audio_autorizado ?? false) ===
+          audioAutorizado
+        ) {
+          delete payload.audio_autorizado;
+        }
+
+        /*
+         * Proveniência precisa ser comparada semanticamente.
+         * Ausência histórica equivale ao formulário padrão.
+         */
+        const normalizeProvenance = (value: any) => ({
+          fuente: value?.fuente || null,
+          tipo: value?.tipo || 'desconocido',
+          autorizado: value?.autorizado ?? false,
+          notas: value?.notas || null,
+        });
+
+        if (
+          sameJson(
+            normalizeProvenance(
+              hymn.cifra_procedencia
+            ),
+            normalizeProvenance(
+              fullPayload.cifra_procedencia
+            )
+          )
+        ) {
+          delete payload.cifra_procedencia;
+        }
+
+        if (
+          sameJson(
+            normalizeProvenance(
+              hymn.audio_procedencia
+            ),
+            normalizeProvenance(
+              fullPayload.audio_procedencia
+            )
+          )
+        ) {
+          delete payload.audio_procedencia;
+        }
+      }
       if (isNew) {
         const created = await api.createHymn(payload);
         setMsg('Himno creado'); router.replace(`/admin/edit/${created.id}` as any);
