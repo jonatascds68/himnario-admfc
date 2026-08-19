@@ -1,0 +1,44 @@
+{
+  "produto": "Hinário ADMFC",
+  "base": "Base Mestre",
+  "versao_consolidacao": "1.0",
+  "status": "CONSOLIDADA",
+  "total_hinos": 718,
+  "hinarios": {
+    "gloria_y_triunfo": 400,
+    "himnos_de_sion": 318
+  },
+  "integridade": {
+    "sha256": "29fe35592ba18e5ef8793dff6af2e59be0736dcf977422936014204b0052847d",
+    "erros_estruturais_bloqueantes": 0,
+    "corrupcao_ocr_forte": 0
+  },
+  "auditoria": {
+    "status": "TECNICAMENTE ENCERRADA",
+    "correcoes_automaticas_confiaveis": "INCORPORADAS À BASE MESTRE",
+    "pendencias_documentais": [
+      {
+        "id": "GT-079",
+        "tipo": "TEXTO",
+        "observacao": "Conferir documentalmente o trecho: Dondequiera fiel te seguiré e ,"
+      },
+      {
+        "id": "GT-320",
+        "tipo": "FORMATAÇÃO/EDIÇÃO",
+        "observacao": "Conferir documentalmente o coro com repetição de En Jerusalén."
+      }
+    ],
+    "editoriais_preservados": [
+      "GT-055",
+      "GT-293",
+      "SION-102",
+      "SION-007",
+      "SION-293"
+    ]
+  },
+  "politica_futura": {
+    "base_mestre": "Não executar novas correções automáticas globais sem evidência documental.",
+    "correcoes_manuais": "Realizar preferencialmente pelo painel administrativo.",
+    "distribuicao": "As correções administrativas deverão futuramente gerar pacote/versionamento para atualização dos usuários."
+  }
+}
