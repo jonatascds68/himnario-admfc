@@ -1,5 +1,5 @@
-import React, { useEffect, useState, useCallback } from 'react';
-import { View, Text, StyleSheet, TextInput, FlatList, Pressable, ActivityIndicator, ScrollView, Keyboard } from 'react-native';
+import React, { useEffect, useState, useCallback, useRef } from 'react';
+import { View, Text, StyleSheet, TextInput, FlatList, Pressable, ActivityIndicator, ScrollView } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
 import { Feather } from '@expo/vector-icons';
@@ -20,6 +20,7 @@ export default function AdminHymns() {
   const [col, setCol] = useState<Key>('all');
   const [items, setItems] = useState<Hymn[]>([]);
   const [loading, setLoading] = useState(true);
+  const inputRef = useRef<TextInput>(null);
 
   const load = useCallback(async () => {
     try { await api.me(); } catch { router.replace('/admin-login' as any); return; }
@@ -31,7 +32,36 @@ export default function AdminHymns() {
   }, [q, col, router]);
 
   useEffect(() => { const t = setTimeout(load, 220); return () => clearTimeout(t); }, [load]);
-  useFocusEffect(useCallback(() => { load(); }, [load]));
+
+  useFocusEffect(useCallback(() => {
+    load();
+
+    // ADMFC — ao voltar da edição, reabre o teclado da busca.
+    const timer = setTimeout(() => {
+      inputRef.current?.focus();
+    }, 320);
+
+    return () => clearTimeout(timer);
+  }, [load]));
+
+  // ADMFC — a lupa executa sua própria busca.
+  // Não depende do debounce nem do estado atual da lista.
+  const submitSearch = async () => {
+    const query = q.trim();
+    if (!query) return;
+
+    try {
+      const r = await api.listHymns({
+        himnario: col === 'all' ? undefined : col,
+        q: query,
+      });
+
+      const result = r.items[0];
+      if (!result) return;
+
+      router.push(`/admin/edit/${result.id}` as any);
+    } catch {}
+  };
 
   return (
     <SafeAreaView style={[styles.container, { backgroundColor: c.surface }]} edges={['top']} testID="admin-hymns-screen">
@@ -45,12 +75,17 @@ export default function AdminHymns() {
       </View>
       <View style={[styles.box, { backgroundColor: c.surfaceSecondary, borderColor: c.border }]}>
         <Feather name="search" size={18} color={c.muted} />
-        <TextInput value={q} onChangeText={setQ} placeholder="Nº, título o palabra…" placeholderTextColor={c.muted}
+        <TextInput ref={inputRef} value={q} onChangeText={setQ} placeholder="Nº, título o palabra…" placeholderTextColor={c.muted}
           style={[styles.input, { color: c.onSurface }]} autoCorrect={false} autoCapitalize="none"
-          returnKeyType="search" onSubmitEditing={Keyboard.dismiss} testID="admin-hymns-search" />
+          returnKeyType="search" onSubmitEditing={submitSearch} testID="admin-hymns-search" />
         {q ? <Pressable onPress={() => setQ('')} hitSlop={10}><Feather name="x" size={18} color={c.muted} /></Pressable> : null}
       </View>
-      <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.segRow}>
+      <ScrollView
+          horizontal
+          style={styles.segScroll}
+          showsHorizontalScrollIndicator={false}
+          contentContainerStyle={styles.segRow}
+        >
         {SEG.map((s) => {
           const active = col === s.key;
           return (
@@ -62,7 +97,9 @@ export default function AdminHymns() {
         })}
       </ScrollView>
       {loading ? <ActivityIndicator style={{ marginTop: SPACING.xl }} color={c.brand} /> : (
-        <FlatList data={items} keyExtractor={(h) => h.id}
+        <FlatList
+          data={items}
+          keyExtractor={(h) => h.id}
           contentContainerStyle={{ paddingHorizontal: SPACING.lg, paddingBottom: SPACING.xxxl }}
           ItemSeparatorComponent={() => <View style={{ height: StyleSheet.hairlineWidth, backgroundColor: c.divider }} />}
           renderItem={({ item }) => {
@@ -94,6 +131,7 @@ const styles = StyleSheet.create({
   title: { fontSize: 20, fontWeight: '800', letterSpacing: 1 },
   box: { marginHorizontal: SPACING.lg, flexDirection: 'row', alignItems: 'center', gap: SPACING.sm, paddingHorizontal: SPACING.md, paddingVertical: 10, borderRadius: RADIUS.lg, borderWidth: 1 },
   input: { flex: 1, fontSize: 16, paddingVertical: 4 },
+  segScroll: { flexGrow: 0 },
   segRow: { paddingHorizontal: SPACING.lg, paddingVertical: SPACING.md, gap: SPACING.sm },
   seg: { height: 36, paddingHorizontal: 14, borderRadius: RADIUS.pill, borderWidth: 1, alignItems: 'center', justifyContent: 'center', flexShrink: 0 },
   row: { flexDirection: 'row', alignItems: 'center', gap: SPACING.md, paddingVertical: SPACING.md, minHeight: 60 },

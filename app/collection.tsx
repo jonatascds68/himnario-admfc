@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback, useRef } from 'react';
-import { View, Text, StyleSheet, FlatList, Pressable, ActivityIndicator, TextInput, Keyboard } from 'react-native';
+import { View, Text, StyleSheet, FlatList, Pressable, ActivityIndicator, TextInput } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useFocusEffect, useLocalSearchParams, useRouter } from 'expo-router';
 import { Feather } from '@expo/vector-icons';
@@ -57,6 +57,25 @@ export default function Collection() {
     setTimeout(() => inputRef.current?.focus(), 80);
   };
 
+  // ADMFC — a lupa do teclado executa uma busca própria
+  // e abre diretamente o primeiro hino encontrado.
+  const submitSearch = async () => {
+    const query = q.trim();
+    if (!query) return;
+
+    try {
+      const r = await api.listHymns({
+        himnario: himnario as any,
+        q: query,
+      });
+
+      const result = r.items[0];
+      if (!result) return;
+
+      router.push(`/hymn/${result.id}`);
+    } catch {}
+  };
+
   return (
     <SafeAreaView style={[styles.container, { backgroundColor: c.surface }]} edges={['top']} testID="collection-screen">
       <View style={styles.header}>
@@ -73,7 +92,7 @@ export default function Collection() {
           <TextInput ref={inputRef} value={q} onChangeText={setQ}
             placeholder={mode === '123' ? 'Número del himno…' : 'Título o palabra de la letra…'}
             placeholderTextColor={c.muted} keyboardType={mode === '123' ? 'number-pad' : 'default'}
-            autoCorrect={false} autoCapitalize="none" returnKeyType="search" onSubmitEditing={Keyboard.dismiss}
+            autoCorrect={false} autoCapitalize="none" returnKeyType="search" onSubmitEditing={submitSearch}
             style={[styles.input, { color: c.onSurface }]} testID="collection-search-input" />
           {q ? <Pressable onPress={() => setQ('')} hitSlop={10} testID="collection-search-clear"><Feather name="x" size={18} color={c.muted} /></Pressable> : null}
         </View>

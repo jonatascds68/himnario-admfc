@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback, useRef } from 'react';
-import { View, Text, StyleSheet, TextInput, FlatList, Pressable, ActivityIndicator, Keyboard } from 'react-native';
+import { View, Text, StyleSheet, TextInput, FlatList, Pressable, ActivityIndicator } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
 import { useFocusEffect } from '@react-navigation/native';
@@ -48,6 +48,24 @@ export default function Search() {
 
   const switchMode = (m: '123' | 'abc') => { setMode(m); lastMode = m; setQ(''); setTimeout(() => inputRef.current?.focus(), 50); };
 
+  // ADMFC — a lupa executa sua própria busca.
+  // Não depende do debounce nem do estado atual da lista.
+  const submitSearch = async () => {
+    const query = q.trim();
+    if (!query) return;
+
+    try {
+      const r = mode === '123'
+        ? await api.listHymns({ himnario: him, q: query })
+        : await api.listHymns({ q: query });
+
+      const result = r.items[0];
+      if (!result) return;
+
+      router.push(`/hymn/${result.id}`);
+    } catch {}
+  };
+
   return (
     <SafeAreaView style={[styles.container, { backgroundColor: c.surface }]} edges={['top']} testID="search-screen">
       <View style={styles.header}><Text style={[styles.title, { color: c.brand }]}>Buscar</Text></View>
@@ -58,7 +76,7 @@ export default function Search() {
           <TextInput ref={inputRef} value={q} onChangeText={setQ}
             placeholder={mode === '123' ? 'Número del himno…' : 'Título o palabra de la letra…'}
             placeholderTextColor={c.muted} keyboardType={mode === '123' ? 'number-pad' : 'default'}
-            autoCorrect={false} autoCapitalize="none" returnKeyType="search" onSubmitEditing={Keyboard.dismiss}
+            autoCorrect={false} autoCapitalize="none" returnKeyType="search" onSubmitEditing={submitSearch}
             style={[styles.input, { color: c.onSurface }]} testID="search-input" />
           {q ? <Pressable onPress={() => setQ('')} hitSlop={10} testID="search-clear"><Feather name="x" size={18} color={c.muted} /></Pressable> : null}
         </View>
