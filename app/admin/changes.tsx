@@ -713,7 +713,16 @@ export default function AdminChanges() {
                   </Text>
                 </View>
 
-                <Feather name="edit-3" size={18} color={c.brand} />
+                <Pressable
+                  onPress={() =>
+                    router.push(`/admin/edit/${item.hymn_id}` as any)
+                  }
+                  hitSlop={12}
+                  accessibilityRole="button"
+                  accessibilityLabel={`Editar himno ${item.numero}`}
+                >
+                  <Feather name="edit-3" size={18} color={c.brand} />
+                </Pressable>
               </View>
 
               <View style={[styles.divider, { backgroundColor: c.divider }]} />

@@ -1132,16 +1132,40 @@ export const api = {
     const currentItems = await loadAdminChanges();
 
     /*
-     * Uma correção somente pode sair da fila quando:
+     * ADMFC — rebase campo a campo após publicação.
      *
-     * 1. fazia parte do pacote publicado;
-     * 2. continua com os mesmos campos;
-     * 3. continua com exatamente os mesmos valores AFTER;
-     * 4. continua revisada.
+     * O snapshot preparado representa exatamente o estado publicado.
      *
-     * Qualquer edição posterior permanece na fila.
+     * Para cada campo que entrou nessa revisão:
+     *
+     * 1. se o valor atual continua igual ao AFTER publicado,
+     *    o campo foi totalmente publicado e sai da fila;
+     *
+     * 2. se o campo foi novamente alterado depois da geração,
+     *    ele continua pendente, porém seu novo BEFORE passa a ser
+     *    o AFTER que acabou de ser publicado;
+     *
+     * 3. campos que não pertenciam ao pacote preparado permanecem
+     *    exatamente como estavam;
+     *
+     * 4. se nenhum campo continuar pendente, o registro inteiro sai.
+     *
+     * Exemplo:
+     *
+     * R000001 publica:
+     *   titulo  A -> B
+     *   bloques X -> Y
+     *
+     * Antes da confirmação, somente titulo muda novamente:
+     *   titulo B -> C
+     *
+     * Depois da confirmação:
+     *   titulo  B -> C continua pendente
+     *   bloques desaparece da fila, pois Y já foi publicado.
      */
-    const remainingItems = currentItems.filter(current => {
+    const remainingItems: AdminHymnChange[] = [];
+
+    for (const current of currentItems) {
       const published = prepared.changes.find(
         (candidate: any) =>
           candidate.id === current.id &&
@@ -1149,35 +1173,75 @@ export const api = {
       );
 
       if (!published) {
-        return true;
+        remainingItems.push(current);
+        continue;
       }
 
-      if (current.status !== 'reviewed') {
-        return true;
-      }
-
-      if (
-        !sameValue(
-          [...current.changed_fields].sort(),
-          [...published.changed_fields].sort()
-        )
-      ) {
-        return true;
-      }
+      const nextChangedFields: string[] = [];
+      const nextBefore: Partial<Hymn> = {};
+      const nextAfter: Partial<Hymn> = {};
 
       for (const field of current.changed_fields) {
-        if (
-          !sameValue(
-            (current.after as any)[field],
-            (published.after as any)[field]
-          )
-        ) {
-          return true;
+        const currentAfter = (current.after as any)?.[field];
+
+        const wasPublished =
+          Array.isArray(published.changed_fields) &&
+          published.changed_fields.includes(field);
+
+        /*
+         * Este campo não fazia parte da revisão confirmada.
+         * Portanto continua pendente sem qualquer rebase.
+         */
+        if (!wasPublished) {
+          nextChangedFields.push(field);
+          (nextBefore as any)[field] =
+            (current.before as any)?.[field];
+          (nextAfter as any)[field] = currentAfter;
+          continue;
         }
+
+        const publishedAfter =
+          (published.after as any)?.[field];
+
+        /*
+         * O estado atual é exatamente o que foi publicado:
+         * não existe mais diferença pendente neste campo.
+         */
+        if (sameValue(currentAfter, publishedAfter)) {
+          continue;
+        }
+
+        /*
+         * Houve nova edição depois da geração do pacote.
+         * A revisão publicada passa a ser a nova base.
+         */
+        nextChangedFields.push(field);
+        (nextBefore as any)[field] = publishedAfter;
+        (nextAfter as any)[field] = currentAfter;
       }
 
-      return false;
-    });
+      /*
+       * Se todos os campos deste registro foram absorvidos pela
+       * publicação, ele desaparece da fila administrativa.
+       */
+      if (!nextChangedFields.length) {
+        continue;
+      }
+
+      remainingItems.push({
+        ...current,
+        changed_fields: nextChangedFields,
+        before: nextBefore,
+        after: nextAfter,
+
+        /*
+         * Uma alteração sobrevivente ao rebase é uma nova pendência
+         * e precisa ser revisada novamente antes da próxima publicação.
+         */
+        status: 'pending',
+        reviewed_at: null,
+      });
+    }
 
     /*
      * Primeiro preservamos a fila resultante.
