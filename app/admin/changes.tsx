@@ -828,7 +828,7 @@ export default function AdminChanges() {
                       { color: c.brand },
                     ]}
                   >
-                    {item.status === 'reviewed' ? '✓ Revisado' : 'Revisar'}
+                    {item.status === 'reviewed' ? 'Revisado' : 'Revisar'}
                   </Text>
                 </Pressable>
               </View>
