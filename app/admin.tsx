@@ -185,6 +185,15 @@ const insets = useSafeAreaInsets();
             onPress={() => router.push('/admin/changes' as any)}
             testID="admin-changes"
           />
+
+          <ActionBtn
+            c={c}
+            icon="archive"
+            label="Historial de actualizaciones"
+            description="Revisiones de contenido confirmadas como publicadas"
+            onPress={() => router.push('/admin/history' as any)}
+            testID="admin-history"
+          />
         </View>
 
         <View style={styles.sectionHeader}>

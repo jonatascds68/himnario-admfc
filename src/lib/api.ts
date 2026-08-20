@@ -139,6 +139,19 @@ const PUBLISHED_CONTENT_REVISION_KEY =
 const PREPARED_CONTENT_PUBLICATION_KEY =
   'admfc_prepared_content_publication_v1';
 
+/*
+ * ADMFC — histórico permanente das revisões de conteúdo
+ * efetivamente confirmadas como publicadas.
+ *
+ * Diferente de Cambios pendientes:
+ * - não representa trabalho pendente;
+ * - não participa do rebase;
+ * - é somente auditoria administrativa;
+ * - preserva o snapshot exato de cada publicação confirmada.
+ */
+const CONTENT_PUBLICATION_HISTORY_KEY =
+  'admfc_content_publication_history_v1';
+
 const ADMIN_EMAIL = 'jonatascds68@gmail.com';
 const ADMIN_PASSWORD_HASH = 'edf29432fb85857e36c029fffe09af9b1e02b1474dcc7b384fed25a121645900';
 
@@ -1064,6 +1077,39 @@ export const api = {
     }
   },
 
+  getContentPublicationHistory: async () => {
+    requireAuth();
+
+    const raw = await kv.get(
+      CONTENT_PUBLICATION_HISTORY_KEY
+    );
+
+    if (!raw) {
+      return [];
+    }
+
+    try {
+      const parsed = JSON.parse(raw);
+
+      if (!Array.isArray(parsed)) {
+        return [];
+      }
+
+      /*
+       * Mais recente primeiro.
+       * Retornamos cópia para que a tela administrativa
+       * nunca altere acidentalmente o conteúdo persistido.
+       */
+      return [...parsed].sort(
+        (a, b) =>
+          Number(b?.revision || 0) -
+          Number(a?.revision || 0)
+      );
+    } catch {
+      return [];
+    }
+  },
+
   confirmContentPublished: async (revision: number) => {
     requireAuth();
 
@@ -1253,6 +1299,65 @@ export const api = {
       PUBLISHED_CONTENT_REVISION_KEY,
       String(revision)
     );
+
+    /*
+     * A revisão já foi confirmada.
+     * Agora preservamos permanentemente o snapshot que estava
+     * preparado antes de removê-lo.
+     */
+    const historyRaw = await kv.get(
+      CONTENT_PUBLICATION_HISTORY_KEY
+    );
+
+    let history: any[] = [];
+
+    if (historyRaw) {
+      try {
+        const parsedHistory = JSON.parse(historyRaw);
+
+        if (Array.isArray(parsedHistory)) {
+          history = parsedHistory;
+        }
+      } catch {
+        history = [];
+      }
+    }
+
+    /*
+     * Proteção contra duplicação caso uma confirmação seja
+     * reexecutada por algum fluxo inesperado.
+     */
+    const alreadyInHistory = history.some(
+      item => item?.revision === revision
+    );
+
+    if (!alreadyInHistory) {
+      history.push({
+        revision,
+        generated_at:
+          typeof prepared.generated_at === 'string'
+            ? prepared.generated_at
+            : null,
+        published_at: new Date().toISOString(),
+
+        changes: prepared.changes.map((change: any) => ({
+          id: change.id,
+          hymn_id: change.hymn_id,
+          changed_fields: Array.isArray(change.changed_fields)
+            ? [...change.changed_fields]
+            : [],
+          after:
+            change.after && typeof change.after === 'object'
+              ? { ...change.after }
+              : {},
+        })),
+      });
+
+      await kv.set(
+        CONTENT_PUBLICATION_HISTORY_KEY,
+        JSON.stringify(history)
+      );
+    }
 
     await kv.remove(
       PREPARED_CONTENT_PUBLICATION_KEY
