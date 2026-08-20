@@ -815,7 +815,11 @@ export default function AdminChanges() {
                   {reviewingId === item.id ? (
                     <ActivityIndicator size="small" color={c.brand} />
                   ) : (
-                    <Feather name="check" size={15} color={c.brand} />
+                    <Feather
+                      name={item.status === 'reviewed' ? 'check-circle' : 'eye'}
+                      size={15}
+                      color={c.brand}
+                    />
                   )}
 
                   <Text
