@@ -1,0 +1,222 @@
+{
+  "etapa": "9M",
+  "descricao": "Auditoria final pré-aplicação da Base Mestre contra a simulação consolidada 9L.",
+  "total_base": 718,
+  "total_simulacao": 718,
+  "ids_unicos_base": 718,
+  "ids_unicos_simulacao": 718,
+  "registros_alterados": [
+    "GT-028",
+    "GT-033",
+    "GT-040",
+    "GT-052",
+    "GT-056",
+    "GT-081",
+    "GT-161",
+    "GT-186",
+    "GT-259",
+    "GT-283",
+    "SION-015",
+    "SION-016",
+    "SION-024",
+    "SION-026",
+    "SION-038",
+    "SION-107"
+  ],
+  "total_alterados": 16,
+  "bloqueados_9f": [
+    "GT-036",
+    "GT-100",
+    "SION-019",
+    "SION-059"
+  ],
+  "bloqueados_preservados": 4,
+  "pendencias_textuais_preservadas": [
+    {
+      "id": "GT-040",
+      "trecho": "oid, ."
+    },
+    {
+      "id": "GT-056",
+      "trecho": "serIe"
+    },
+    {
+      "id": "SION-026",
+      "trecho": "serIe"
+    },
+    {
+      "id": "GT-161",
+      "trecho": "serás . De"
+    },
+    {
+      "id": "GT-283",
+      "trecho": "tierra mis Allí"
+    }
+  ],
+  "alteracoes_nao_autorizadas": 0,
+  "auditoria_campos": [
+    {
+      "id": "GT-028",
+      "titulo": "MÁS DE JESÚS",
+      "modificados": [
+        "letra"
+      ],
+      "adicionados": [],
+      "removidos": [],
+      "somente_letra": true
+    },
+    {
+      "id": "GT-033",
+      "titulo": "GRANDE GOZO HAY EN MI ALMA HOY",
+      "modificados": [
+        "letra"
+      ],
+      "adicionados": [],
+      "removidos": [],
+      "somente_letra": true
+    },
+    {
+      "id": "GT-040",
+      "titulo": "EN LOS NEGOCIOS DEL REY",
+      "modificados": [
+        "letra"
+      ],
+      "adicionados": [],
+      "removidos": [],
+      "somente_letra": true
+    },
+    {
+      "id": "GT-052",
+      "titulo": "CRISTO LA ROCA",
+      "modificados": [
+        "letra"
+      ],
+      "adicionados": [],
+      "removidos": [],
+      "somente_letra": true
+    },
+    {
+      "id": "GT-056",
+      "titulo": "¡OH, YO QUIERO ANDAR CON CRISTO!",
+      "modificados": [
+        "letra"
+      ],
+      "adicionados": [],
+      "removidos": [],
+      "somente_letra": true
+    },
+    {
+      "id": "GT-081",
+      "titulo": "LA BANDERA DE LA CRUZ",
+      "modificados": [
+        "letra"
+      ],
+      "adicionados": [],
+      "removidos": [],
+      "somente_letra": true
+    },
+    {
+      "id": "GT-161",
+      "titulo": "PECADOR, VEN AL DULCE JESÚS",
+      "modificados": [
+        "letra"
+      ],
+      "adicionados": [],
+      "removidos": [],
+      "somente_letra": true
+    },
+    {
+      "id": "GT-186",
+      "titulo": "PRESENTIMOS DEL MUNDO DICHOSO",
+      "modificados": [
+        "letra"
+      ],
+      "adicionados": [],
+      "removidos": [],
+      "somente_letra": true
+    },
+    {
+      "id": "GT-259",
+      "titulo": "GUARDA EL CONTACTO",
+      "modificados": [
+        "letra"
+      ],
+      "adicionados": [],
+      "removidos": [],
+      "somente_letra": true
+    },
+    {
+      "id": "GT-283",
+      "titulo": "EN LA MAÑANA",
+      "modificados": [
+        "letra"
+      ],
+      "adicionados": [],
+      "removidos": [],
+      "somente_letra": true
+    },
+    {
+      "id": "SION-015",
+      "titulo": "MÁS DE JESÚS",
+      "modificados": [
+        "letra"
+      ],
+      "adicionados": [],
+      "removidos": [],
+      "somente_letra": true
+    },
+    {
+      "id": "SION-016",
+      "titulo": "GRANDE GOZO HAY EN MI ALMA",
+      "modificados": [
+        "letra"
+      ],
+      "adicionados": [],
+      "removidos": [],
+      "somente_letra": true
+    },
+    {
+      "id": "SION-024",
+      "titulo": "CRISTO LA ROCA",
+      "modificados": [
+        "letra"
+      ],
+      "adicionados": [],
+      "removidos": [],
+      "somente_letra": true
+    },
+    {
+      "id": "SION-026",
+      "titulo": "¡OH! YO QUIERO ANDAR CON CRISTO",
+      "modificados": [
+        "letra"
+      ],
+      "adicionados": [],
+      "removidos": [],
+      "somente_letra": true
+    },
+    {
+      "id": "SION-038",
+      "titulo": "LA BANDERA DE LA CRUZ",
+      "modificados": [
+        "letra"
+      ],
+      "adicionados": [],
+      "removidos": [],
+      "somente_letra": true
+    },
+    {
+      "id": "SION-107",
+      "titulo": "GUARDA EL CONTACTO",
+      "modificados": [
+        "letra"
+      ],
+      "adicionados": [],
+      "removidos": [],
+      "somente_letra": true
+    }
+  ],
+  "hash_base": "9a8636c6a249a783a091f4dfd7fb8f36910019cb235d865486e316609365f17d",
+  "hash_simulacao_9l": "a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41",
+  "aprovado_para_preparacao_de_aplicacao": true
+}

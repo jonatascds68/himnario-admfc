@@ -1,0 +1,521 @@
+TOTAL BASE ORIGINAL: 718
+TOTAL BASE SIMULADA: 718
+REGISTROS ALTERADOS: 16
+
+============================================================
+CASO 01 / 16
+ID: GT-028
+HINÁRIO: Gloria y Triunfo
+NÚMERO: 28
+TÍTULO: MÁS DE JESÚS
+============================================================
+
+>>> LETRA FINAL SIMULADA
+
+1
+Más de Jesús deseo saber, Más de su gracia y poder: Más de su salvación gozar: Más de su dulce amor gustar.
+CORO:
+Más quiero amarle, Más quiero honrarle:
+Más de su salvación gozar, Más de su dulce amor gustar.
+2
+Más quiero a Jesús seguir, Más de su santa ley cumplir: Más de su voluntad saber, Más de su Espíritu tener.
+3
+Más de Jesús, más oración, Más cerca estar en comunión; Más su palabra meditar,
+Más sus promesas alcanzar.
+4
+Más de Jesús allá veré, Más semejante a él seré:
+Más de su gloria he de gozar, Más su gran nombre alabar.
+
+>>> CONTROLE
+Título preservado: SIM
+Número preservado: SIM
+Equivalência preservada: SIM
+Somente letra alterada: SIM
+
+============================================================
+CASO 02 / 16
+ID: GT-033
+HINÁRIO: Gloria y Triunfo
+NÚMERO: 33
+TÍTULO: GRANDE GOZO HAY EN MI ALMA HOY
+============================================================
+
+>>> LETRA FINAL SIMULADA
+
+1
+Grande gozo hay en mi alma hoy, Pues Jesús conmigo está;
+Y su paz, que ya gozando estoy Por siempre durará
+CORO:
+Grande gozo, ¡cuán hermoso! Paso todo el tiempo bien feliz;
+Porque veo de Cristo la sonriente faz, Grande gozo siento en mí.
+2
+Hay un canto en mi alma hoy; Melodías a mi Rey:
+En su amor feliz y libre soy.
+Y salvo por la fe.
+3
+Paz divina hay en mi alma hoy, Porque Cristo me salvó;
+Las cadenas rotas ya están, Jesús me libertó.
+4
+Gratitud hay en mi alma hoy, Y alabanzas a Jesús;
+Por su gracia a la gloria voy, Gozándome en la luz.
+
+>>> CONTROLE
+Título preservado: SIM
+Número preservado: SIM
+Equivalência preservada: SIM
+Somente letra alterada: SIM
+
+============================================================
+CASO 03 / 16
+ID: GT-040
+HINÁRIO: Gloria y Triunfo
+NÚMERO: 40
+TÍTULO: EN LOS NEGOCIOS DEL REY
+============================================================
+
+>>> LETRA FINAL SIMULADA
+
+1
+Soy peregrino aquí, mi hogar lejano está, En la mansión de luz, eterna paz y amor: Embajador yo soy del reino celestial
+En los negocios de mi Rey.
+CORO:
+Este mensaje fiel oid, . Que dijo ya celeste voz:
+«Reconciliaos ya» – dice el Señor y Rey,
+¡Reconciliaos hoy con Dios!
+2
+Que del pecado vil arrepentidos ya, Han de reinar con él los que obedientes son:
+Es el mensaje fiel que debo proclamar, En los negocios de mi Rey.
+3
+Mi hogar más bello es que el Valle de Sarón, Eterno gozo y paz reinan por siempre en él, Y allí Jesús dará eterna habitación;
+Es el mensaje, de mi Rey.
+
+>>> CONTROLE
+Título preservado: SIM
+Número preservado: SIM
+Equivalência preservada: SIM
+Somente letra alterada: SIM
+
+============================================================
+CASO 04 / 16
+ID: GT-052
+HINÁRIO: Gloria y Triunfo
+NÚMERO: 52
+TÍTULO: CRISTO LA ROCA
+============================================================
+
+>>> LETRA FINAL SIMULADA
+
+1
+En las olas inmensas de embravecido mar, Que asaltan de mi alma la pobre embarcación, De rodillas a Cristo clamé, y el huracán Deshecho fue al instante a la voz de Dios.
+CORO:
+Es Cristo la Roca, el ancla de mi fe; Los males, lamentos, y ayes de temor,
+Terminan por siempre, con mi supremo Rey; Es Jesucristo mi refugio.
+2
+Me guarda de peligros, de pruebas, de dolor; Él manda que los vientos no agiten tempestad, Los mares se detienen, la ola reposó,
+Y en Cristo fijo el ancla, confiando mis.
+3
+Mi dulce Salvador, sí, mi hermoso amigo y Dios, Que libra de tristezas y aleja amarga hiel:
+Por fe yo iré al cielo, mansión del ser de amor, La fuente inagotable de dicha y bien.
+
+>>> CONTROLE
+Título preservado: SIM
+Número preservado: SIM
+Equivalência preservada: SIM
+Somente letra alterada: SIM
+
+============================================================
+CASO 05 / 16
+ID: GT-056
+HINÁRIO: Gloria y Triunfo
+NÚMERO: 56
+TÍTULO: ¡OH, YO QUIERO ANDAR CON CRISTO!
+============================================================
+
+>>> LETRA FINAL SIMULADA
+
+1
+¡Oh!, yo quiero andar con Cristo.
+Quiero oír su tierna voz, Meditar en su palabra, Siempre andar de él en pos: Consagrar a él mi vida, Cumplir fiel su voluntad,
+Y algún día con mi Cristo Gozaré la claridad.
+CORO:
+¡Oh, sí, yo quiero andar con Cristo!
+¡Oh, sí, yo quiero vivir con Cristo!
+¡Oh, sí, yo quiero morir con Cristo!
+Quiero serIe un testigo fiel.
+2
+¡Oh!, yo quiero andar con Cristo, Él vivió en santidad,
+En la Biblia yo lo leo
+Y yo sé que es la verdad. Cristo era santo en todo, El Cordero de la cruz;
+Y yo anhelo ser cristiano, Seguidor de mi Jesús.
+3
+¡Oh!, yo quiero andar con Cristo De mi senda él es la luz, Dejaré el perverso mundo
+Y cargar aquí mi cruz. Este mundo nada ofrece, Cristo ofrece salvación;
+Y es mi única esperanza Gozar vida eterna en Sion.
+
+>>> CONTROLE
+Título preservado: SIM
+Número preservado: SIM
+Equivalência preservada: SIM
+Somente letra alterada: SIM
+
+============================================================
+CASO 06 / 16
+ID: GT-081
+HINÁRIO: Gloria y Triunfo
+NÚMERO: 81
+TÍTULO: LA BANDERA DE LA CRUZ
+============================================================
+
+>>> LETRA FINAL SIMULADA
+
+1
+Cual pendón hermoso despleguemos hoy La bandera de la cruz,
+La verdad del evangelio, el blasón Del soldado de Jesús.
+CORO:
+¡Adelante, adelante,
+En pos de nuestro Salvador! Con plena fe en nuestro Rey,
+¡Adelante con valor!
+2
+Prediquemos siempre lo que dice Dios De la sangre de Jesús;
+Cómo limpia del pecado al mortal, Y le compra la salud.
+3
+En el mundo proclamemos con fervor Esta historia de la cruz:
+Bendigamos sin cesar al Redentor Que nos dio su paz y luz.
+4
+En el cielo nuestro cántico será:
+¡Aleluya a Jesús!
+Nuestro corazón allí rebosará De amor y gratitud.
+
+>>> CONTROLE
+Título preservado: SIM
+Número preservado: SIM
+Equivalência preservada: SIM
+Somente letra alterada: SIM
+
+============================================================
+CASO 07 / 16
+ID: GT-161
+HINÁRIO: Gloria y Triunfo
+NÚMERO: 161
+TÍTULO: PECADOR, VEN AL DULCE JESÚS
+============================================================
+
+>>> LETRA FINAL SIMULADA
+
+1
+Pecador, ven al dulce Jesús, Y feliz para Siempre serás:
+Si en verdad le quisieres tener, Al divino Señor hallarás.
+CORO:
+||Ven a él, ven a él,
+Que te espera tu buen Salvador.||
+2
+Si cual hijo que necio pecó
+Vas buscando a sus pies compasión, Tierno Padre en Jesús hallarás,
+Y tendrás en sus brazos perdón.
+3
+Si enfermo te sientes morir, El será tu Doctor celestial;
+Y hallarás en su sangre también Medicina que cure tu mal.
+4
+Ovejuela que huyó del redil,
+¡He aquí tu benigno Señor!
+Y en los hombros llevada serás . De tan dulce y amante Pastor.
+
+>>> CONTROLE
+Título preservado: SIM
+Número preservado: SIM
+Equivalência preservada: SIM
+Somente letra alterada: SIM
+
+============================================================
+CASO 08 / 16
+ID: GT-186
+HINÁRIO: Gloria y Triunfo
+NÚMERO: 186
+TÍTULO: PRESENTIMOS DEL MUNDO DICHOSO
+============================================================
+
+>>> LETRA FINAL SIMULADA
+
+1
+Presentimos del mundo dichoso. Los placeres que Dios nos dará; El país lo creemos hermoso: Mas hallarnos allí ¿qué será?
+CORO:
+¿Qué será? ¿Qué será?
+Mas hallarnos allí ¿qué será?
+¿Qué será? ¿Qué será?
+Mas hallarnos allí ¿qué será?
+2
+Esperamos el gozo, la gloria, La grandeza sin fin que tendrá El mortal que ganó la victoria: Mas hallarnos allí ¿qué será?
+3
+Anhelamos el día esplendente Que en el santo país brillará Por Jesús el Cordero inocente: Mas hallarnos allí ¿qué será?
+4
+Bien sabemos que llanto, ni duelo, Ni pecados, ni males habrá
+En la casa de Dios en el cielo: Mas hallarnos allí ¿qué será?
+
+>>> CONTROLE
+Título preservado: SIM
+Número preservado: SIM
+Equivalência preservada: SIM
+Somente letra alterada: SIM
+
+============================================================
+CASO 09 / 16
+ID: GT-259
+HINÁRIO: Gloria y Triunfo
+NÚMERO: 259
+TÍTULO: GUARDA EL CONTACTO
+============================================================
+
+>>> LETRA FINAL SIMULADA
+
+1
+¿Quieres sobre el mundo ser un vencedor?
+¿Quieres tú cantar aún cuando hay dolor?
+¿Quieres ser alegre cual fiel luchador? Guarda el contacto con el Salvador.
+CORO:
+Guarda el contacto con el Salvador, Luego las tinieblas no te cubrirán; Por la senda alegre tú caminarás,
+A causa del contacto con el Salvador.
+2
+En el mundo hay muchos, tristes en pecar, Cuyos corazones lloran de pesar;
+Dales el mensaje, no hay que callar, Con Dios el contacto debes de guardar.
+3
+¿Quieres tú con Dios la comunión tener?
+¿Y su gloria siempre en ti permanecer?
+¿Que el mundo a Cristo pueda en ti hoy ver?
+Guarda el contacto con el Supremo Ser.
+4
+Deja que el Espíritu implante en ti La humildad de Cristo y su santo amor; Ora siempre y vela, que Jesús vendrá;
+Guarda el contacto con el Salvador.
+
+>>> CONTROLE
+Título preservado: SIM
+Número preservado: SIM
+Equivalência preservada: SIM
+Somente letra alterada: SIM
+
+============================================================
+CASO 10 / 16
+ID: GT-283
+HINÁRIO: Gloria y Triunfo
+NÚMERO: 283
+TÍTULO: EN LA MAÑANA
+============================================================
+
+>>> LETRA FINAL SIMULADA
+
+1
+En el mundo la Iglesia Peregrina ha de estar; Anhelante ella espera Su feliz, eterno hogar.
+CORO:
+Nos veremos, nos veremos Pronto en gloria, pronto en gloria, Nos veremos en la tierra mis Allí; Nos veremos, nos veremos Pronto en gloria, pronto en gloria, Junto al rio cristalino más Allá.
+2
+Nada aquí es permanente, Todo ha de terminar; Mas miramos adelante, En el cielo nuestro hogar.
+3
+Las familias en la tierra Se desunen al morir; Mas esperan la mañana En que se han de reunir.
+4
+Con Jesús cual unos reyes Pronto habremos de estar; Juntos, miles de millares, Con Jesús para morar.
+
+>>> CONTROLE
+Título preservado: SIM
+Número preservado: SIM
+Equivalência preservada: SIM
+Somente letra alterada: SIM
+
+============================================================
+CASO 11 / 16
+ID: SION-015
+HINÁRIO: Himnos de Sión
+NÚMERO: 15
+TÍTULO: MÁS DE JESÚS
+============================================================
+
+>>> LETRA FINAL SIMULADA
+
+1
+Más de Jesús deseo saber, Más de su gracia y poder: Más de su salvación gozar: Más de su dulce amor gustar.
+CORO:
+Más quiero amarle, Más quiero honrarle:
+Más de su salvación gozar, Más de su dulce amor gustar.
+2
+Más quiero a Jesús seguir, Más de su santa ley cumplir: Más de su voluntad saber, Más de su Espíritu tener.
+3
+Más de Jesús, más oración, Más cerca estar en comunión; Más su palabra meditar,
+Más sus promesas alcanzar.
+4
+Más de Jesús allá veré, Más semejante a él seré:
+Más de su gloria he de gozar, Más su gran nombre alabar.
+
+>>> CONTROLE
+Título preservado: SIM
+Número preservado: SIM
+Equivalência preservada: SIM
+Somente letra alterada: SIM
+
+============================================================
+CASO 12 / 16
+ID: SION-016
+HINÁRIO: Himnos de Sión
+NÚMERO: 16
+TÍTULO: GRANDE GOZO HAY EN MI ALMA
+============================================================
+
+>>> LETRA FINAL SIMULADA
+
+1
+Grande gozo hay en mi alma hoy, Pues Jesús conmigo está;
+Y su paz, que ya gozando estoy Por siempre durará
+CORO:
+Grande gozo, ¡cuán hermoso! Paso todo el tiempo bien feliz;
+Porque veo de Cristo la sonriente faz, Grande gozo siento en mí.
+2
+Hay un canto en mi alma hoy; Melodías a mi Rey:
+En su amor feliz y libre soy.
+Y salvo por la fe.
+3
+Paz divina hay en mi alma hoy, Porque Cristo me salvó;
+Las cadenas rotas ya están, Jesús me libertó.
+4
+Gratitud hay en mi alma hoy, Y alabanzas a Jesús;
+Por su gracia a la gloria voy, Gozándome en la luz.
+
+>>> CONTROLE
+Título preservado: SIM
+Número preservado: SIM
+Equivalência preservada: SIM
+Somente letra alterada: SIM
+
+============================================================
+CASO 13 / 16
+ID: SION-024
+HINÁRIO: Himnos de Sión
+NÚMERO: 24
+TÍTULO: CRISTO LA ROCA
+============================================================
+
+>>> LETRA FINAL SIMULADA
+
+1
+En las olas inmensas de embravecido mar, Que asaltan de mi alma la pobre embarcación, De rodillas a Cristo clamé, y el huracán Deshecho fue al instante a la voz de Dios.
+CORO:
+Es Cristo la Roca, el ancla de mi fe; Los males, lamentos, y ayes de temor,
+Terminan por siempre, con mi supremo Rey; Es Jesucristo mi refugio.
+2
+Me guarda de peligros, de pruebas, de dolor; Él manda que los vientos no agiten tempestad, Los mares se detienen, la ola reposó,
+Y en Cristo fijo el ancla, confiando mis.
+3
+Mi dulce Salvador, sí, mi hermoso amigo y Dios, Que libra de tristezas y aleja amarga hiel:
+Por fe yo iré al cielo, mansión del ser de amor, La fuente inagotable de dicha y bien.
+
+>>> CONTROLE
+Título preservado: SIM
+Número preservado: SIM
+Equivalência preservada: SIM
+Somente letra alterada: SIM
+
+============================================================
+CASO 14 / 16
+ID: SION-026
+HINÁRIO: Himnos de Sión
+NÚMERO: 26
+TÍTULO: ¡OH! YO QUIERO ANDAR CON CRISTO
+============================================================
+
+>>> LETRA FINAL SIMULADA
+
+1
+¡Oh!, yo quiero andar con Cristo.
+Quiero oír su tierna voz, Meditar en su palabra, Siempre andar de él en pos: Consagrar a él mi vida, Cumplir fiel su voluntad,
+Y algún día con mi Cristo Gozaré la claridad.
+CORO:
+¡Oh, sí, yo quiero andar con Cristo!
+¡Oh, sí, yo quiero vivir con Cristo!
+¡Oh, sí, yo quiero morir con Cristo!
+Quiero serIe un testigo fiel.
+2
+¡Oh!, yo quiero andar con Cristo, Él vivió en santidad,
+En la Biblia yo lo leo
+Y yo sé que es la verdad. Cristo era santo en todo, El Cordero de la cruz;
+Y yo anhelo ser cristiano, Seguidor de mi Jesús.
+3
+¡Oh!, yo quiero andar con Cristo De mi senda él es la luz, Dejaré el perverso mundo
+Y cargar aquí mi cruz. Este mundo nada ofrece, Cristo ofrece salvación;
+Y es mi única esperanza Gozar vida eterna en Sion.
+
+>>> CONTROLE
+Título preservado: SIM
+Número preservado: SIM
+Equivalência preservada: SIM
+Somente letra alterada: SIM
+
+============================================================
+CASO 15 / 16
+ID: SION-038
+HINÁRIO: Himnos de Sión
+NÚMERO: 38
+TÍTULO: LA BANDERA DE LA CRUZ
+============================================================
+
+>>> LETRA FINAL SIMULADA
+
+1
+Cual pendón hermoso despleguemos hoy La bandera de la cruz,
+La verdad del evangelio, el blasón Del soldado de Jesús.
+CORO:
+¡Adelante, adelante,
+En pos de nuestro Salvador! Con plena fe en nuestro Rey,
+¡Adelante con valor!
+2
+Prediquemos siempre lo que dice Dios De la sangre de Jesús;
+Cómo limpia del pecado al mortal, Y le compra la salud.
+3
+En el mundo proclamemos con fervor Esta historia de la cruz:
+Bendigamos sin cesar al Redentor Que nos dio su paz y luz.
+4
+En el cielo nuestro cántico será:
+¡Aleluya a Jesús!
+Nuestro corazón allí rebosará De amor y gratitud.
+
+>>> CONTROLE
+Título preservado: SIM
+Número preservado: SIM
+Equivalência preservada: SIM
+Somente letra alterada: SIM
+
+============================================================
+CASO 16 / 16
+ID: SION-107
+HINÁRIO: Himnos de Sión
+NÚMERO: 107
+TÍTULO: GUARDA EL CONTACTO
+============================================================
+
+>>> LETRA FINAL SIMULADA
+
+1
+¿Quieres sobre el mundo ser un vencedor?
+¿Quieres tú cantar aún cuando hay dolor?
+¿Quieres ser alegre cual fiel luchador? Guarda el contacto con el Salvador.
+CORO:
+Guarda el contacto con el Salvador, Luego las tinieblas no te cubrirán; Por la senda alegre tú caminarás,
+A causa del contacto con el Salvador.
+2
+En el mundo hay muchos, tristes en pecar, Cuyos corazones lloran de pesar;
+Dales el mensaje, no hay que callar, Con Dios el contacto debes de guardar.
+3
+¿Quieres tú con Dios la comunión tener?
+¿Y su gloria siempre en ti permanecer?
+¿Que el mundo a Cristo pueda en ti hoy ver?
+Guarda el contacto con el Supremo Ser.
+4
+Deja que el Espíritu implante en ti La humildad de Cristo y su santo amor; Ora siempre y vela, que Jesús vendrá;
+Guarda el contacto con el Salvador.
+
+>>> CONTROLE
+Título preservado: SIM
+Número preservado: SIM
+Equivalência preservada: SIM
+Somente letra alterada: SIM
+
+============================================================
+RESUMO FINAL
+============================================================
+REGISTROS REVISADOS: 16
+BASE MESTRE NÃO ALTERADA.

@@ -1,0 +1,139 @@
+============================================
+ AUDITORIA HINÁRIA - ETAPA 10J
+ INVESTIGAÇÃO DOS 4 CASOS BLOQUEADOS
+ CRUZAMENTO INTERNO GT / SIÓN
+ SOMENTE LEITURA
+============================================
+
+============================================
+ 1. CONTROLE
+============================================
+HASH ATUAL:   48cd4be20055aa9243a0a2223aef36376186dfd202f72ca4a4666015c44445a5
+HASH OFICIAL: 48cd4be20055aa9243a0a2223aef36376186dfd202f72ca4a4666015c44445a5
+HASH: OK
+OBJETOS INSPECIONADOS: 744
+REGISTROS DETECTADOS: 718
+
+============================================
+ 2. INVESTIGAÇÃO DOS BLOQUEADOS
+============================================
+
+--------------------------------------------
+GT-283
+TIPO: COTEJO_VISUAL
+LOCALIZADO: SIM
+TÍTULO: EN LA MAÑANA
+NÚMEROS ESTRUTURAIS: 1 -> 2 -> 3 -> 4
+TERMO SUSPEITO: "tierra mis Allí"
+QUESTÃO DOCUMENTAL: Determinar a leitura correta do verso suspeito sem reconstrução por inferência.
+
+TRECHO / CONTEÚDO:
+1 | En el mundo la Iglesia Peregrina ha de estar; Anhelante ella espera Su feliz, eterno hogar. | CORO: | Nos veremos, nos veremos Pronto en gloria, pronto en gloria, Nos veremos en la tierra mis Allí; Nos veremos, nos veremos Pronto en gloria, pronto en gloria, Junto al rio cristalino más Allá. | 2 | Nada aquí es permanente, Todo ha de terminar; Mas miramos adelante, En el cielo n
+
+POSSÍVEIS CORRESPONDENTES NA OUTRA EDIÇÃO:
+  NENHUM PAR FORTE LOCALIZADO.
+
+--------------------------------------------
+GT-042
+TIPO: ESTRUTURA_NUMERACAO
+LOCALIZADO: SIM
+TÍTULO: HAY UN PRECIOSO MANANTIAL
+NÚMEROS ESTRUTURAIS: 2 -> 3 -> 4 -> 1 -> 2 -> 3 -> 4
+QUESTÃO DOCUMENTAL: Determinar se há duplicação/justaposição de conteúdo e qual é a estrutura correta das estrofes.
+
+TRECHO / CONTEÚDO:
+Hay un precioso manantial De sangre de Emmanuel, Que purifica a cada cual Que se sumerge en él. | CORO: | Lávame, Señor Jesús, En la sangre de tu cruz: Lávame, Señor Jesús, | Y más blanco que la nieve yo seré: | 2 | El malhechor se convirtió Pendiente de una cruz; El vio la fuente y se lavó, Creyendo en Jesús. | 3 | Y yo también mi pobre ser Allí logré lavar: | La gloria de su gran poder Me gozo en ensalzar. | 4 | ¡Eterna fuente carmesí! | ¡Raudal de puro amor! Se lavará por siempre en ti | El pueblo del Señor. | HAY UN 
+
+POSSÍVEIS CORRESPONDENTES NA OUTRA EDIÇÃO:
+  NENHUM PAR FORTE LOCALIZADO.
+
+--------------------------------------------
+GT-182
+TIPO: SALTO_NUMERICO
+LOCALIZADO: SIM
+TÍTULO: ¡GLORIA A TI, JESÚS DIVINO
+NÚMEROS ESTRUTURAIS: 1 -> 2 -> 3 -> 4 -> 5
+QUESTÃO DOCUMENTAL: Confirmar se a edição realmente salta da estrofe 1 para a 3 ou se existe estrofe 2 perdida.
+
+TRECHO / CONTEÚDO:
+1 | ¡Gloria a ti, Jesús Divino! | ¡Gloria a ti por tus bondades! | ¡Gloria eterna a tus piedades! | Querido Salvador. | CORO: | ¡Gloria, gloria, aleluya! | ¡Gloria, gloria, aleluya! | ¡Gloria, gloria, aleluya! A nuestro Salvador. | 2. | Tú me amaste con ternura, Y por mí en la cruz moriste, Con ternura me quisiste, Querido Salvador. | 3 | Tengo fe sólo en tu muerte, Pues con ella me salvaste; Vida eterna me compraste, Querido Salvador. | 4 | Te veremos en el cielo: A vivir contigo iremos; Tu presencia gozaremos, Querido Sa
+
+POSSÍVEIS CORRESPONDENTES NA OUTRA EDIÇÃO:
+  SION-079 | GLORIA A TI, JESÚS DIVINO | similaridade=100% | letra_idêntica=SIM
+
+--------------------------------------------
+SION-079
+TIPO: SALTO_NUMERICO
+LOCALIZADO: SIM
+TÍTULO: GLORIA A TI, JESÚS DIVINO
+NÚMEROS ESTRUTURAIS: 1 -> 2 -> 3 -> 4 -> 5
+QUESTÃO DOCUMENTAL: Confirmar se a edição realmente salta da estrofe 1 para a 3 ou se existe estrofe 2 perdida.
+
+TRECHO / CONTEÚDO:
+1 | ¡Gloria a ti, Jesús Divino! | ¡Gloria a ti por tus bondades! | ¡Gloria eterna a tus piedades! | Querido Salvador. | CORO: | ¡Gloria, gloria, aleluya! | ¡Gloria, gloria, aleluya! | ¡Gloria, gloria, aleluya! A nuestro Salvador. | 2. | Tú me amaste con ternura, Y por mí en la cruz moriste, Con ternura me quisiste, Querido Salvador. | 3 | Tengo fe sólo en tu muerte, Pues con ella me salvaste; Vida eterna me compraste, Querido Salvador. | 4 | Te veremos en el cielo: A vivir contigo iremos; Tu presencia gozaremos, Querido Sa
+
+POSSÍVEIS CORRESPONDENTES NA OUTRA EDIÇÃO:
+  GT-182 | ¡GLORIA A TI, JESÚS DIVINO | similaridade=100% | letra_idêntica=SIM
+
+============================================
+ 3. VIZINHANÇA ESTRUTURAL DO GT-042
+============================================
+
+GT-040 | EN LOS NEGOCIOS DEL REY
+NÚMEROS: 1 -> 2 -> 3
+TAMANHO DO TEXTO: 574
+INÍCIO: 1 | Soy peregrino aquí, mi hogar lejano está, En la mansión de luz, eterna paz y amor: Embajador yo soy del reino celestial | En los negocios de mi Rey. | CORO: | Este mensaje fiel oid, Que dijo ya celeste voz: | «Reconciliaos ya» – dice el Señor y Rey, | ¡Reconciliaos hoy con Dios! | 2 | Que del pecado vil arrepen
+FINAL:  Que del pecado vil arrepentidos ya, Han de reinar con él los que obedientes son: | Es el mensaje fiel que debo proclamar, En los negocios de mi Rey. | 3 | Mi hogar más bello es que el Valle de Sarón, Eterno gozo y paz reinan por siempre en él, Y allí Jesús dará eterna habitación; | Es el mensaje, de mi Rey.
+
+GT-041 | HAY UN PRECIOSO MANANTIAL
+NÚMEROS: 1
+TAMANHO DO TEXTO: 1
+INÍCIO: 1
+FINAL:  1
+
+GT-042 | HAY UN PRECIOSO MANANTIAL
+NÚMEROS: 2 -> 3 -> 4 -> 1 -> 2 -> 3 -> 4
+TAMANHO DO TEXTO: 907
+INÍCIO: Hay un precioso manantial De sangre de Emmanuel, Que purifica a cada cual Que se sumerge en él. | CORO: | Lávame, Señor Jesús, En la sangre de tu cruz: Lávame, Señor Jesús, | Y más blanco que la nieve yo seré: | 2 | El malhechor se convirtió Pendiente de una cruz; El vio la fuente y se lavó, Creyendo en Jesús
+FINAL:  ge en él. | 2 | El malhechor se convirtió Pendiente de una cruz; El vio la fuente y se lavó, Creyendo en Jesús. | 3 | Y yo también mi pobre ser Allí logré lavar; | La gloria de su gran poder, Me gozo en ensalzar. | 4 | ¡Eterna fuente carmesí! | ¡Raudal de puro amor! | Se lavará por siempre en ti, El pueblo del Señor.
+
+GT-043 | A JESUCRISTO VEN SIN TARDAR
+NÚMEROS: 1 -> 2 -> 3
+TAMANHO DO TEXTO: 471
+INÍCIO: 1 | A Jesucristo ven sin tardar, Que entre nosotros hoy él esté, Y te convida con dulce afán, Tierno diciendo: «Ven» | CORO: | ¡Oh!, cuán grata nuestra reunión, Cuando allá, Señor, en tu mansión, Contigo estemos en comunión, Gozando eterno bien. | 2 | Piensa que él sólo puede colmar Tu triste pecho de gozo y 
+FINAL:  or, en tu mansión, Contigo estemos en comunión, Gozando eterno bien. | 2 | Piensa que él sólo puede colmar Tu triste pecho de gozo y paz; Y porque anhela tu bienestar | Vuelve a decirte: «Ven» | 3 | Su voz escucha sin vacilar, | Y grato acepta lo que hoy te da. Tal vez mañana no habrá lugar No te detengas, ven.
+
+============================================
+ 4. PAR GT-182 / SION-079
+============================================
+AMBOS LOCALIZADOS: SIM
+TÍTULO NORMALIZADO IGUAL: SIM
+LETRA IDÊNTICA: SIM
+GT-182 NÚMEROS: 1 -> 2 -> 3 -> 4 -> 5
+SION-079 NÚMEROS: 1 -> 2 -> 3 -> 4 -> 5
+
+GT-182:
+1 | ¡Gloria a ti, Jesús Divino! | ¡Gloria a ti por tus bondades! | ¡Gloria eterna a tus piedades! | Querido Salvador. | CORO: | ¡Gloria, gloria, aleluya! | ¡Gloria, gloria, aleluya! | ¡Gloria, gloria, aleluya! A nuestro Salvador. | 2. | Tú me amaste con ternura, Y por mí en la cruz moriste, Con ternura me quisiste, Querido Salvador. | 3 | Tengo fe sólo en tu muerte, Pues con ella me salvaste; Vida eterna me compraste, Querido Salvador. | 4 | Te veremos en el cielo: A vivir contigo iremos; Tu presencia gozaremos, Querido Salvador. | 5 | Ten valor, valor cristiano, Cristo es tu mejor amigo: Él te llevará consigo; Jesús es tu Señor.
+
+SION-079:
+1 | ¡Gloria a ti, Jesús Divino! | ¡Gloria a ti por tus bondades! | ¡Gloria eterna a tus piedades! | Querido Salvador. | CORO: | ¡Gloria, gloria, aleluya! | ¡Gloria, gloria, aleluya! | ¡Gloria, gloria, aleluya! A nuestro Salvador. | 2. | Tú me amaste con ternura, Y por mí en la cruz moriste, Con ternura me quisiste, Querido Salvador. | 3 | Tengo fe sólo en tu muerte, Pues con ella me salvaste; Vida eterna me compraste, Querido Salvador. | 4 | Te veremos en el cielo: A vivir contigo iremos; Tu presencia gozaremos, Querido Salvador. | 5 | Ten valor, valor cristiano, Cristo es tu mejor amigo: Él te llevará consigo; Jesús es tu Señor.
+
+============================================
+ 5. DECISÃO DE SEGURANÇA
+============================================
+NENHUMA CORREÇÃO FOI APLICADA.
+NENHUM TEXTO SUSPEITO FOI RECONSTRUÍDO POR INFERÊNCIA.
+A SAÍDA DESTA ETAPA SERVIRÁ PARA DECIDIR QUAIS CASOS
+AINDA EXIGEM COTEJO VISUAL COM A EDIÇÃO FONTE.
+
+============================================
+ 6. CONTROLE DE IMUTABILIDADE
+============================================
+HASH ANTES:  48cd4be20055aa9243a0a2223aef36376186dfd202f72ca4a4666015c44445a5
+HASH DEPOIS: 48cd4be20055aa9243a0a2223aef36376186dfd202f72ca4a4666015c44445a5
+BASE ALTERADA PELA 10J: NÃO
+
+============================================
+ ETAPA 10J CONCLUÍDA
+ AGUARDANDO ANÁLISE DOS 4 CASOS
+============================================

@@ -1,0 +1,246 @@
+AUDITORIA HINÁRIA ADMFC
+DOSSIÊ DOS NOVOS CASOS
+Data: 2026-08-19
+Base alterada: NÃO
+
+============================================================
+CASO 21 / 31
+CATEGORIA: SEM_EQUIVALENTE
+SCORE: 6
+TÍTULO: NO TE DE TEMOR HABLAR POR CRISTO
+============================================================
+
+------------------------------------------------------------
+GT-177 | NO TE DE TEMOR HABLAR POR CRISTO
+------------------------------------------------------------
+Hinário: Gloria y Triunfo
+Número: 177
+Equivalente: —
+Alertas: POSSIVEL_ESTROFE_FUNDIDA_4
+Fonte declarada: Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada
+Observação: DOCX original 1–329
+
+LETRA:
+1
+¡No te dé temor hablar por Cristo!
+Haz que brille en ti su luz;
+Al que te salvó confiesa siempre, Todo debes a Jesús.
+CORO:
+¡No te dé temor, no te dé temor, Nunca, nunca, nunca:
+Es tu amante Salvador, Nunca, pues, te dé temor!
+2
+¡No te dé temor hacer por Cristo Cuanto de tu parte está!
+Obra con amor, con fe y constancia: Tus trabajos premiará.
+3
+¡No te dé temor sufrir por Cristo Los reproches o el dolor!
+Sufre con amor tus pruebas todas, Cual sufrió tu Salvador.
+4
+¡Note dé temor vivir por Cristo Esa vida que te da!
+Si tan sólo en él por siempre fiares, El con bien te sacará.
+S
+¡No te dé temor morir por Cristo!
+Vía, verdad y vida es él; Él te llevará con su ternura
+A su célico vergel.
+
+============================================================
+CASO 22 / 31
+CATEGORIA: SEM_EQUIVALENTE
+SCORE: 6
+TÍTULO: HOGAR CELESTIAL
+============================================================
+
+------------------------------------------------------------
+GT-291 | HOGAR CELESTIAL
+------------------------------------------------------------
+Hinário: Gloria y Triunfo
+Número: 291
+Equivalente: —
+Alertas: POSSIVEL_ERRO_OCR
+Fonte declarada: Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada
+Observação: DOCX original 1–329
+
+LETRA:
+1
+Venid, pecadores, que Dios por su amor, Al cielo nos llama, que es patria mejor; Do nunca la aurora perdió su fulgor;
+Do brilla la gloria del Dios Creador..
+¡Oh, si, venid, venid!
+Al cielo nos llama, que es patria mejor.
+2
+Dejemos, hermanos, aparte el dolor: Que arriba en los cielos el mundo cantor, De espíritus puros, proclaman Señor
+A Cristo-Dios-Hombre, el gran Redentor.
+¡Oh, si, venid, venid!
+Allí son eternos la paz y el amor.
+3
+Trabajas y sufres aquí, pecador;
+El pan que tú comes tendrás con sudor Mas Dios te reserva por suerte mejor Primicias celestes de eterno valor.
+¡Oh si, venid, venid!
+El cielo es del alma la patria mejor.
+
+============================================================
+CASO 23 / 31
+CATEGORIA: SO_UMA_EDICAO_SINALIZADA
+SCORE: 6
+TÍTULO: LA SIEMBRA
+============================================================
+
+------------------------------------------------------------
+SION-007 | LA SIEMBRA
+------------------------------------------------------------
+Hinário: Himnos de Sión
+Número: 7
+Equivalente: 8
+Alertas: POSSIVEL_ERRO_OCR
+Fonte declarada: PDF Himnario de Sión enviado por el usuario (136 págs.; escaneado)
+Observação: Letra transcrita y verificada visualmente del PDF de Sión; ortografía segura normalizada.
+
+LETRA:
+1
+Sembraré la simiente preciosa,
+Del glorioso Evangelio de amor;
+Sembraré, sembraré mientras viva,
+Dejaré el resultado al Señor.
+
+CORO:
+Sembraré..., sembraré,
+Mientras viva, simiente de amor;
+Segaré..., segaré...,
+Al hallarme en la casa de Dios.
+
+2
+Sembraré en corazones sensibles,
+La doctrina de Dios de perdón;
+Sembraré, sembraré mientras viva,
+Dejaré el resultado al Señor.
+
+3
+Sembraré en corazones de mármol,
+La bendita palabra de Dios;
+Sembraré, sembraré mientras viva,
+Dejaré el resultado al Señor.
+
+>>>>>>>>>> EDIÇÃO EQUIVALENTE PARA COMPARAÇÃO <<<<<<<<<<
+
+------------------------------------------------------------
+GT-008 | LA SIEMBRA
+------------------------------------------------------------
+Hinário: Gloria y Triunfo
+Número: 8
+Equivalente: 7
+Alertas: SEM ALERTA
+Fonte declarada: Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada
+Observação: DOCX original 1–329
+
+LETRA:
+1
+Sembraré la simiente preciosa Del glorioso evangelio de amor:
+Sembraré, sembraré mientras viva, Dejaré el resultado al Señor.
+CORO:
+Sembraré, sembraré, Mientras viva, simiente de amor.
+Segaré, segaré,
+Al hallarme en la casa de Dios.
+2
+Sembraré en corazones sensibles La doctrina del Dios de perdón; Sembraré, sembraré, mientras viva, Dejaré el resultado al Señor.
+Sembraré en corazones de mármol La bendita palabra de Dios; Sembraré, sembraré mientras viva, Dejaré el resultado al Señor.
+
+============================================================
+CASO 24 / 31
+CATEGORIA: SEM_EQUIVALENTE
+SCORE: 6
+TÍTULO: GLORIOSO GÓLGOTA
+============================================================
+
+------------------------------------------------------------
+SION-267 | GLORIOSO GÓLGOTA
+------------------------------------------------------------
+Hinário: Himnos de Sión
+Número: 267
+Equivalente: —
+Alertas: POSSIVEL_ESTROFE_FUNDIDA_4
+Fonte declarada: PDF Himnario de Sión enviado por el usuario (136 págs.; escaneado)
+Observação: Letra transcrita y verificada visualmente del PDF de Sión; ortografía segura normalizada.
+
+LETRA:
+1
+Lejos de Dios en pecado viví,
+Mas Cristo allá me vio,
+Dióme su mano, sacóme de allí,
+Glorioso Gólgota.
+
+CORO:
+Glorioso Gólgota, glorioso Gólgota.
+Cristo allí me ha dado su paz.
+Glorioso Gólgota.
+
+2
+Ya libre estoy y no quiero pecar,
+Me libertó Jesús.
+Un nuevo himno ya puedo cantar,
+Glorioso Gólgota.
+
+3
+Ven, alma triste, con tu gran dolor
+Jesús te salvará.
+Ven y abraza la cruz del Señor,
+Glorioso Gólgota.
+
+4
+Sólo por Gólgota tú llegarás,
+Al cielo con Jesús,
+Gloriosa puerta por donde entrarás,
+Glorioso Gólgota.
+
+CORO 2º:
+Oh, ven a Gólgota, sí, ven a Gólgota,
+Cristo te quiere allí redimir,
+Glorioso Gólgota.
+
+============================================================
+CASO 25 / 31
+CATEGORIA: SEM_EQUIVALENTE
+SCORE: 6
+TÍTULO: EN SU PROFUNDO AMOR
+============================================================
+
+------------------------------------------------------------
+SION-293 | EN SU PROFUNDO AMOR
+------------------------------------------------------------
+Hinário: Himnos de Sión
+Número: 293
+Equivalente: —
+Alertas: POSSIVEL_ERRO_OCR
+Fonte declarada: PDF Himnario de Sión enviado por el usuario (136 págs.; escaneado)
+Observação: Letra transcrita y verificada visualmente del PDF de Sión; ortografía segura normalizada.
+
+LETRA:
+1
+En su profundo amor
+Por ti el Salvador
+Vino del cielo y obró redención;
+Tu vida de pecar
+Debes abandonar,
+Confiando en Cristo por tu salvación.
+
+CORO:
+¡Oh, sin igual amor!
+De Cristo el Salvador...
+Nuestra salud compró,
+Cuando en la cruz murió.
+Pues tanto fue el amor
+De nuestro Redentor,
+Que por nosotros su vida entregó.
+
+2
+Perdidos y sin luz,
+Nos encontró Jesús,
+Y en el Calvario su vida entregó;
+Vio nuestra perdición,
+Mostró su compasión
+Cuando en la cruz nuestros males llevó.
+
+3
+Hijo del Padre Dios,
+Es Cristo, cuya voz,
+Hoy tiernamente llamando está;
+Él te perdonará,
+Tus males borrará,
+Confía en Él, pues te quiere librar.

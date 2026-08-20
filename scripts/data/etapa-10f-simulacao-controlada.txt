@@ -1,0 +1,219 @@
+============================================
+ AUDITORIA HINÁRIA - ETAPA 10F
+ SIMULAÇÃO CONTROLADA
+ NENHUMA ESCRITA NA BASE MESTRE
+============================================
+
+============================================
+ 1. CONTROLE INICIAL
+============================================
+HASH OFICIAL: a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41
+HASH ATUAL:   a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41
+HASH: OK
+OBJETOS INSPECIONADOS: 1562
+
+--------------------------------------------
+01. GT-040
+ATUAL:    "oid, ."
+PROPOSTA: "oid,"
+REGISTRO: LOCALIZADO
+OCORRÊNCIAS EXATAS: 1
+RESULTADO: SIMULAÇÃO POSSÍVEL
+CAMPO: letra
+SUBSTITUIÇÕES: 1
+ANTES:
+: Embajador yo soy del reino celestial | En los negocios de mi Rey. | CORO: | Este mensaje fiel oid, . Que dijo ya celeste voz: | «Reconciliaos ya» – dice el Señor y Rey, | ¡Reconciliaos hoy con D
+DEPOIS:
+: Embajador yo soy del reino celestial | En los negocios de mi Rey. | CORO: | Este mensaje fiel oid, Que dijo ya celeste voz: | «Reconciliaos ya» – dice el Señor y Rey, | ¡Reconciliaos hoy con Dios! | 2 | Que
+--------------------------------------------
+02. GT-056
+ATUAL:    "serIe"
+PROPOSTA: "serle"
+REGISTRO: LOCALIZADO
+OCORRÊNCIAS EXATAS: 1
+RESULTADO: SIMULAÇÃO POSSÍVEL
+CAMPO: letra
+SUBSTITUIÇÕES: 1
+ANTES:
+ Cristo! | ¡Oh, sí, yo quiero vivir con Cristo! | ¡Oh, sí, yo quiero morir con Cristo! | Quiero serIe un testigo fiel. | 2 | ¡Oh!, yo quiero andar con Cristo, Él vivió en santidad, | En la Biblia y
+DEPOIS:
+ Cristo! | ¡Oh, sí, yo quiero vivir con Cristo! | ¡Oh, sí, yo quiero morir con Cristo! | Quiero serle un testigo fiel. | 2 | ¡Oh!, yo quiero andar con Cristo, Él vivió en santidad, | En la Biblia yo lo leo | Y
+--------------------------------------------
+03. SION-026
+ATUAL:    "serIe"
+PROPOSTA: "serle"
+REGISTRO: LOCALIZADO
+OCORRÊNCIAS EXATAS: 1
+RESULTADO: SIMULAÇÃO POSSÍVEL
+CAMPO: letra
+SUBSTITUIÇÕES: 1
+ANTES:
+ Cristo! | ¡Oh, sí, yo quiero vivir con Cristo! | ¡Oh, sí, yo quiero morir con Cristo! | Quiero serIe un testigo fiel. | 2 | ¡Oh!, yo quiero andar con Cristo, Él vivió en santidad, | En la Biblia y
+DEPOIS:
+ Cristo! | ¡Oh, sí, yo quiero vivir con Cristo! | ¡Oh, sí, yo quiero morir con Cristo! | Quiero serle un testigo fiel. | 2 | ¡Oh!, yo quiero andar con Cristo, Él vivió en santidad, | En la Biblia yo lo leo | Y
+--------------------------------------------
+04. GT-161
+ATUAL:    "serás . De"
+PROPOSTA: "serás. De"
+REGISTRO: LOCALIZADO
+OCORRÊNCIAS EXATAS: 1
+RESULTADO: SIMULAÇÃO POSSÍVEL
+CAMPO: letra
+SUBSTITUIÇÕES: 1
+ANTES:
+u mal. | 4 | Ovejuela que huyó del redil, | ¡He aquí tu benigno Señor! | Y en los hombros llevada serás . De tan dulce y amante Pastor.
+DEPOIS:
+u mal. | 4 | Ovejuela que huyó del redil, | ¡He aquí tu benigno Señor! | Y en los hombros llevada serás. De tan dulce y amante Pastor.
+--------------------------------------------
+05. GT-018
+ATUAL:    "referirIa"
+PROPOSTA: "referirla"
+REGISTRO: LOCALIZADO
+OCORRÊNCIAS EXATAS: 1
+RESULTADO: SIMULAÇÃO POSSÍVEL
+CAMPO: letra
+SUBSTITUIÇÕES: 1
+ANTES:
+historia Del celestial favor; | De Cristo y de su gloria, De Cristo y de su amor; Me agrada referirIa, Pues sé que es la verdad, Y nada satisface | Cual ella, mi ansiedad. | CORO: | ¡Cuán bella es 
+DEPOIS:
+historia Del celestial favor; | De Cristo y de su gloria, De Cristo y de su amor; Me agrada referirla, Pues sé que es la verdad, Y nada satisface | Cual ella, mi ansiedad. | CORO: | ¡Cuán bella es esa histor
+--------------------------------------------
+06. GT-018
+ATUAL:    "buen .Jesús"
+PROPOSTA: "buen Jesús"
+REGISTRO: LOCALIZADO
+OCORRÊNCIAS EXATAS: 1
+RESULTADO: SIMULAÇÃO POSSÍVEL
+CAMPO: letra
+SUBSTITUIÇÕES: 1
+ANTES:
+s dulce cada vez; Me agrada referirla, | Pues hay quien nunca oyó Que para hacerle salvo El buen .Jesús murió.
+DEPOIS:
+s dulce cada vez; Me agrada referirla, | Pues hay quien nunca oyó Que para hacerle salvo El buen Jesús murió.
+--------------------------------------------
+07. SION-128
+ATUAL:    "referirIa"
+PROPOSTA: "referirla"
+REGISTRO: LOCALIZADO
+OCORRÊNCIAS EXATAS: 1
+RESULTADO: SIMULAÇÃO POSSÍVEL
+CAMPO: letra
+SUBSTITUIÇÕES: 1
+ANTES:
+historia Del celestial favor; | De Cristo y de su gloria, De Cristo y de su amor; Me agrada referirIa, Pues sé que es la verdad, Y nada satisface | Cual ella, mi ansiedad. | CORO: | ¡Cuán bella es 
+DEPOIS:
+historia Del celestial favor; | De Cristo y de su gloria, De Cristo y de su amor; Me agrada referirla, Pues sé que es la verdad, Y nada satisface | Cual ella, mi ansiedad. | CORO: | ¡Cuán bella es esa histor
+--------------------------------------------
+08. SION-128
+ATUAL:    "buen .Jesús"
+PROPOSTA: "buen Jesús"
+REGISTRO: LOCALIZADO
+OCORRÊNCIAS EXATAS: 1
+RESULTADO: SIMULAÇÃO POSSÍVEL
+CAMPO: letra
+SUBSTITUIÇÕES: 1
+ANTES:
+s dulce cada vez; Me agrada referirla, | Pues hay quien nunca oyó Que para hacerle salvo El buen .Jesús murió.
+DEPOIS:
+s dulce cada vez; Me agrada referirla, | Pues hay quien nunca oyó Que para hacerle salvo El buen Jesús murió.
+--------------------------------------------
+09. GT-007
+ATUAL:    "serIe"
+PROPOSTA: "serle"
+REGISTRO: LOCALIZADO
+OCORRÊNCIAS EXATAS: 1
+RESULTADO: SIMULAÇÃO POSSÍVEL
+CAMPO: letra
+SUBSTITUIÇÕES: 1
+ANTES:
+ sólo a él. | CORO: | Yo me rindo a él, Yo me rindo a él; | Todo a Cristo yo me entrego, Quiero serIe fiel. | 2 | Todo a Cristo yo me rindo, A sus pies postrado estoy; Los placeres he dejado, | Y l
+DEPOIS:
+ sólo a él. | CORO: | Yo me rindo a él, Yo me rindo a él; | Todo a Cristo yo me entrego, Quiero serle fiel. | 2 | Todo a Cristo yo me rindo, A sus pies postrado estoy; Los placeres he dejado, | Y le sigo des
+--------------------------------------------
+10. SION-011
+ATUAL:    "serIe"
+PROPOSTA: "serle"
+REGISTRO: LOCALIZADO
+OCORRÊNCIAS EXATAS: 1
+RESULTADO: SIMULAÇÃO POSSÍVEL
+CAMPO: letra
+SUBSTITUIÇÕES: 1
+ANTES:
+ sólo a él. | CORO: | Yo me rindo a él, Yo me rindo a él; | Todo a Cristo yo me entrego, Quiero serIe fiel. | 2 | Todo a Cristo yo me rindo, A sus pies postrado estoy; Los placeres he dejado, | Y l
+DEPOIS:
+ sólo a él. | CORO: | Yo me rindo a él, Yo me rindo a él; | Todo a Cristo yo me entrego, Quiero serle fiel. | 2 | Todo a Cristo yo me rindo, A sus pies postrado estoy; Los placeres he dejado, | Y le sigo des
+--------------------------------------------
+11. GT-025
+ATUAL:    "serIe"
+PROPOSTA: "serle"
+REGISTRO: LOCALIZADO
+OCORRÊNCIAS EXATAS: 1
+RESULTADO: SIMULAÇÃO POSSÍVEL
+CAMPO: letra
+SUBSTITUIÇÕES: 1
+ANTES:
+ dulce es fiar en Cristo Y entregarse todo a él; Esperar en sus promesas, | Y en sus sendas serIe fiel! | CORO: | Jesucristo, Jesucristo, Ya tu amor probaste en mí | Jesucristo, Jesucristo Siem
+DEPOIS:
+ dulce es fiar en Cristo Y entregarse todo a él; Esperar en sus promesas, | Y en sus sendas serle fiel! | CORO: | Jesucristo, Jesucristo, Ya tu amor probaste en mí | Jesucristo, Jesucristo Siempre quiero
+--------------------------------------------
+12. SION-134
+ATUAL:    "serIe"
+PROPOSTA: "serle"
+REGISTRO: LOCALIZADO
+OCORRÊNCIAS EXATAS: 1
+RESULTADO: SIMULAÇÃO POSSÍVEL
+CAMPO: letra
+SUBSTITUIÇÕES: 1
+ANTES:
+ dulce es fiar en Cristo Y entregarse todo a él; Esperar en sus promesas, | Y en sus sendas serIe fiel! | CORO: | Jesucristo, Jesucristo, Ya tu amor probaste en mí | Jesucristo, Jesucristo Siem
+DEPOIS:
+ dulce es fiar en Cristo Y entregarse todo a él; Esperar en sus promesas, | Y en sus sendas serle fiel! | CORO: | Jesucristo, Jesucristo, Ya tu amor probaste en mí | Jesucristo, Jesucristo Siempre quiero
+--------------------------------------------
+13. GT-102
+ATUAL:    "hazIo"
+PROPOSTA: "hazlo"
+REGISTRO: LOCALIZADO
+OCORRÊNCIAS EXATAS: 1
+RESULTADO: SIMULAÇÃO POSSÍVEL
+CAMPO: letra
+SUBSTITUIÇÕES: 1
+ANTES:
+del Consolador, Aviva tu iglesia con poder celestial. | 2 | Cual vivo fuego o vendaval, | ¡Oh!, hazIo descender; Y pueda hoy en cada cual | Su templo establecer. | 3 | Mediante fe y oración, El cie
+DEPOIS:
+del Consolador, Aviva tu iglesia con poder celestial. | 2 | Cual vivo fuego o vendaval, | ¡Oh!, hazlo descender; Y pueda hoy en cada cual | Su templo establecer. | 3 | Mediante fe y oración, El cielo tú abri
+--------------------------------------------
+14. SION-044
+ATUAL:    "hazIo"
+PROPOSTA: "hazlo"
+REGISTRO: LOCALIZADO
+OCORRÊNCIAS EXATAS: 1
+RESULTADO: SIMULAÇÃO POSSÍVEL
+CAMPO: letra
+SUBSTITUIÇÕES: 1
+ANTES:
+del Consolador, Aviva tu iglesia con poder celestial. | 2 | Cual vivo fuego o vendaval, | ¡Oh!, hazIo descender; Y pueda hoy en cada cual | Su templo establecer. | 3 | Mediante fe y oración, El cie
+DEPOIS:
+del Consolador, Aviva tu iglesia con poder celestial. | 2 | Cual vivo fuego o vendaval, | ¡Oh!, hazlo descender; Y pueda hoy en cada cual | Su templo establecer. | 3 | Mediante fe y oración, El cielo tú abri
+
+============================================
+ 2. RESUMO DA SIMULAÇÃO
+============================================
+CORREÇÕES TESTADAS: 14
+REGISTROS LOCALIZADOS: 14
+REGISTROS NÃO LOCALIZADOS: 0
+PONTOS COM OCORRÊNCIA EXATA: 14
+PONTOS SEM OCORRÊNCIA EXATA: 0
+TOTAL DE SUBSTITUIÇÕES SIMULADAS: 14
+
+============================================
+ 3. CONTROLE DE IMUTABILIDADE
+============================================
+HASH ANTES:  a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41
+HASH DEPOIS: a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41
+BASE MESTRE ALTERADA: NÃO
+
+============================================
+ ETAPA 10F CONCLUÍDA
+ ALTERAÇÕES REALIZADAS SOMENTE EM MEMÓRIA
+ ARQUIVO OFICIAL PRESERVADO
+============================================

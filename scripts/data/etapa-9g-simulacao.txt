@@ -1,0 +1,45 @@
+REGISTROS ORIGINAIS: 718
+PATCHES APROVADOS: 16
+REGISTROS BLOQUEADOS: 4
+
+============================================
+RESULTADO DA SIMULAÇÃO
+============================================
+TOTAL FINAL: 718
+ALTERADOS: 16
+IDS DUPLICADOS: 0
+ALTERAÇÕES NÃO AUTORIZADAS: 0
+
+IDS ALTERADOS:
+- GT-028
+- GT-033
+- GT-040
+- GT-052
+- GT-056
+- GT-081
+- GT-161
+- GT-186
+- GT-259
+- GT-283
+- SION-015
+- SION-016
+- SION-024
+- SION-026
+- SION-038
+- SION-107
+
+BLOQUEADOS PRESERVADOS:
+- GT-100
+- SION-059
+- GT-036
+- SION-019
+
+HASH BASE ORIGINAL: 9a8636c6a249a783a091f4dfd7fb8f36910019cb235d865486e316609365f17d
+HASH BASE SIMULADA: 87736cf68b63e14bfe4d6c9a4253a8ccc88bbb4d486a76686d85f7b2afe2e905
+
+ARQUIVO SIMULADO: scripts/data/etapa-9g-base-simulada.json
+BASE MESTRE NÃO ALTERADA.
+
+============================================
+ETAPA 9G VALIDADA COM SUCESSO
+============================================

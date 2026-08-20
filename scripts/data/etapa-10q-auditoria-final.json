@@ -1,0 +1,48 @@
+{
+  "etapa": "10Q",
+  "tipo": "AUDITORIA_FINAL_DE_ENCERRAMENTO",
+  "status": "APROVADO",
+  "hash_oficial": "214d87c16a3a1a18c9bd525c5474dff344fa78857762960084de51771262cbfb",
+  "hash_final": "214d87c16a3a1a18c9bd525c5474dff344fa78857762960084de51771262cbfb",
+  "total_hinos": 718,
+  "ids_unicos": 718,
+  "gt041": {
+    "titulo": "HAY UN PRECIOSO MANANTIAL",
+    "possui_coro": true,
+    "possui_lavame": true,
+    "inicia_estrofe_1": true
+  },
+  "gt042": {
+    "titulo": "HAY UN PRECIOSO MANANTIAL",
+    "possui_coro": false,
+    "possui_lavame": false,
+    "inicia_estrofe_1": true
+  },
+  "gt283": {
+    "titulo": "EN LA MAÑANA",
+    "texto_antigo": 0,
+    "texto_corrigido": 1
+  },
+  "residuos_historicos": 0,
+  "falsos_positivos": {
+    "GT_182": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "SION_079": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "sanidade": {
+    "titulos_vazios": [],
+    "letras_vazias": []
+  },
+  "base_alterada": false
+}

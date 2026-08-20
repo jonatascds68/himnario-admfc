@@ -1,0 +1,85 @@
+============================================
+ AUDITORIA HINÁRIA - ETAPA 10L
+ DIAGNÓSTICO DOCUMENTAL CONSOLIDADO
+ SOMENTE LEITURA
+============================================
+
+============================================
+ 1. CONTROLE
+============================================
+HASH ATUAL:   48cd4be20055aa9243a0a2223aef36376186dfd202f72ca4a4666015c44445a5
+HASH OFICIAL: 48cd4be20055aa9243a0a2223aef36376186dfd202f72ca4a4666015c44445a5
+HASH: OK
+REGISTROS DETECTADOS: 718
+
+============================================
+ 2. GT-283 — EN LA MAÑANA
+============================================
+TERMO: "tierra mis Allí"
+OCORRÊNCIAS: 1
+DECISÃO: BLOQUEADO DOCUMENTAL
+
+A mesma leitura suspeita já estava presente no material
+anterior marcado como VERIFICADO_FONTE.
+Portanto, a marcação histórica de verificação não constitui
+prova independente da leitura correta deste verso.
+NÃO RECONSTRUIR POR INFERÊNCIA.
+
+============================================
+ 3. GT-041 / GT-042
+============================================
+GT-041 TÍTULO: HAY UN PRECIOSO MANANTIAL
+GT-041 LETRA: "1"
+
+GT-042 TÍTULO: HAY UN PRECIOSO MANANTIAL
+GT-042 TAMANHO: 907
+TÍTULO REPETIDO INTERNAMENTE: 1
+
+TÍTULOS GT-041/GT-042 IGUAIS: SIM
+
+EVIDÊNCIAS:
+- GT-041 possui apenas o marcador estrutural "1".
+- GT-041 e GT-042 possuem o mesmo título.
+- GT-042 contém repetição interna do título.
+- GT-042 contém duas sequências do mesmo conteúdo.
+- O padrão é compatível com deslocamento de fronteira durante importação/transcrição.
+
+DECISÃO: ERRO DE SEGMENTAÇÃO FORTEMENTE CONFIRMADO
+
+IMPORTANTE: ainda não será decidido automaticamente
+se HAY UN PRECIOSO MANANTIAL corresponde ao nº 41 ou 42.
+Essa definição exige confirmação independente da numeração
+da edição original.
+
+============================================
+ 4. REAVALIAÇÃO DA MARCA VERIFICADO_FONTE
+============================================
+A indicação histórica "VERIFICADO_FONTE" não é suficiente
+para estes dois casos, porque os próprios dados derivados
+da fonte preservaram as anomalias.
+
+GT-283: verificação textual independente necessária.
+GT-041/042: verificação de paginação/numeração necessária.
+
+============================================
+ 5. ESTADO APÓS A ETAPA 10L
+============================================
+GT-182   -> RESOLVIDO COMO FALSO POSITIVO
+SION-079 -> RESOLVIDO COMO FALSO POSITIVO
+GT-283   -> BLOQUEADO DOCUMENTAL
+GT-041/042 -> ERRO DE SEGMENTAÇÃO CONFIRMADO,
+              NUMERAÇÃO AINDA BLOQUEADA
+
+============================================
+ 6. PRÓXIMA ETAPA
+============================================
+A Etapa 10M deverá preparar a resolução documental final
+dos dois problemas restantes, sem inferir conteúdo.
+
+============================================
+ 7. CONTROLE DE IMUTABILIDADE
+============================================
+HASH ANTES:  48cd4be20055aa9243a0a2223aef36376186dfd202f72ca4a4666015c44445a5
+HASH DEPOIS: 48cd4be20055aa9243a0a2223aef36376186dfd202f72ca4a4666015c44445a5
+BASE ALTERADA PELA 10L: NÃO
+

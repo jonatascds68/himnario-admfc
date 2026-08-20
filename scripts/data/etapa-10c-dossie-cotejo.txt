@@ -1,0 +1,400 @@
+============================================
+ 1. CONTROLE DA BASE
+============================================
+HASH ATUAL:   a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41
+HASH OFICIAL: a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41
+HASH: OK
+
+TOTAL BASE: 718
+PRIORIDADE ALTA 10B: 44
+
+============================================
+ 2. PENDÊNCIAS HERDADAS DO LOTE 9
+============================================
+
+GT-040 | EN LOS NEGOCIOS DEL REY
+TERMO: "oid, ."
+PRESENTE NA BASE: SIM
+DETECTADO COMO ALTA NA 10B: SIM
+TRECHO: no aquí, mi hogar lejano está, En la mansión de luz, eterna paz y amor: Embajador yo soy del reino celestial | En los negocios de mi Rey. | CORO: | Este mensaje fiel oid, . Que dijo ya celeste voz: | «Reconciliaos ya» – dice el Señor y Rey, | ¡Reconciliaos hoy con Dios! | 2 | Que del pecado vil arrepentidos ya, Han de reinar con él los qu
+
+GT-056 | ¡OH, YO QUIERO ANDAR CON CRISTO!
+TERMO: "serIe"
+PRESENTE NA BASE: SIM
+DETECTADO COMO ALTA NA 10B: SIM
+TRECHO: a con mi Cristo Gozaré la claridad. | CORO: | ¡Oh, sí, yo quiero andar con Cristo! | ¡Oh, sí, yo quiero vivir con Cristo! | ¡Oh, sí, yo quiero morir con Cristo! | Quiero serIe un testigo fiel. | 2 | ¡Oh!, yo quiero andar con Cristo, Él vivió en santidad, | En la Biblia yo lo leo | Y yo sé que es la verdad. Cristo era santo en todo, El Corder
+
+SION-026 | ¡OH! YO QUIERO ANDAR CON CRISTO
+TERMO: "serIe"
+PRESENTE NA BASE: SIM
+DETECTADO COMO ALTA NA 10B: SIM
+TRECHO: a con mi Cristo Gozaré la claridad. | CORO: | ¡Oh, sí, yo quiero andar con Cristo! | ¡Oh, sí, yo quiero vivir con Cristo! | ¡Oh, sí, yo quiero morir con Cristo! | Quiero serIe un testigo fiel. | 2 | ¡Oh!, yo quiero andar con Cristo, Él vivió en santidad, | En la Biblia yo lo leo | Y yo sé que es la verdad. Cristo era santo en todo, El Corder
+
+GT-161 | PECADOR, VEN AL DULCE JESÚS
+TERMO: "serás . De"
+PRESENTE NA BASE: SIM
+DETECTADO COMO ALTA NA 10B: SIM
+TRECHO: Doctor celestial; | Y hallarás en su sangre también Medicina que cure tu mal. | 4 | Ovejuela que huyó del redil, | ¡He aquí tu benigno Señor! | Y en los hombros llevada serás . De tan dulce y amante Pastor.
+
+GT-283 | EN LA MAÑANA
+TERMO: "tierra mis Allí"
+PRESENTE NA BASE: SIM
+DETECTADO COMO ALTA NA 10B: NÃO
+TRECHO: lesia Peregrina ha de estar; Anhelante ella espera Su feliz, eterno hogar. | CORO: | Nos veremos, nos veremos Pronto en gloria, pronto en gloria, Nos veremos en la tierra mis Allí; Nos veremos, nos veremos Pronto en gloria, pronto en gloria, Junto al rio cristalino más Allá. | 2 | Nada aquí es permanente, Todo ha de terminar; Mas miramos ade
+
+============================================
+ 3. PARES GT / SIÓN DE ALTA PRIORIDADE
+============================================
+TOTAL DE PARES: 12
+
+--------------------------------------------
+GLORIA A TI JESUS DIVINO
+
+GT-182 | 182 | ¡GLORIA A TI, JESÚS DIVINO
+TIPOS: SALTO_NUMERICO
+  SEM TERMO CRÍTICO PRÉ-DEFINIDO
+
+SION-079 | 79 | GLORIA A TI, JESÚS DIVINO
+TIPOS: SALTO_NUMERICO
+  SEM TERMO CRÍTICO PRÉ-DEFINIDO
+
+--------------------------------------------
+GRATO ES DECIR LA HISTORIA
+
+GT-018 | 18 | GRATO ES DECIR LA HISTORIA
+TIPOS: ESPACO_ANTES_PONTUACAO, PALAVRA_OCR_MAIUSCULA_INTERNA
+  TERMO: "referirIa"
+  TRECHO: 1 | Grato es decir la historia Del celestial favor; | De Cristo y de su gloria, De Cristo y de su amor; Me agrada referirIa, Pues sé que es la verdad, Y nada satisface | Cual ella, mi ansiedad. | CORO: | ¡Cuán bella es esa historia! Mi tema allá en
+  TERMO: ".Jesús"
+  TRECHO: z, Parece al repetirla | Más dulce cada vez; Me agrada referirla, | Pues hay quien nunca oyó Que para hacerle salvo El buen .Jesús murió.
+
+SION-128 | 128 | GRATO ES DECIR LA HISTORIA
+TIPOS: ESPACO_ANTES_PONTUACAO, PALAVRA_OCR_MAIUSCULA_INTERNA
+  TERMO: "referirIa"
+  TRECHO: 1 | Grato es decir la historia Del celestial favor; | De Cristo y de su gloria, De Cristo y de su amor; Me agrada referirIa, Pues sé que es la verdad, Y nada satisface | Cual ella, mi ansiedad. | CORO: | ¡Cuán bella es esa historia! Mi tema allá en
+  TERMO: ".Jesús"
+  TRECHO: z, Parece al repetirla | Más dulce cada vez; Me agrada referirla, | Pues hay quien nunca oyó Que para hacerle salvo El buen .Jesús murió.
+
+--------------------------------------------
+HAY QUIEN VIGILE
+
+GT-072 | 72 | HAY QUIEN VIGILE
+TIPOS: ESPACO_ANTES_PONTUACAO
+  TERMO: "; ,"
+  TRECHO: mante, De infinita compasión | Que confiere paz constante Al contrito corazón. | En su amor hay eficacia Él es un amigo fiel; , | Hay en él verdad y gracia, Suyo soy y mío es él.
+
+SION-034 | 34 | HAY QUIEN VIGILE
+TIPOS: ESPACO_ANTES_PONTUACAO
+  TERMO: "; ,"
+  TRECHO: mante, De infinita compasión | Que confiere paz constante Al contrito corazón. | En su amor hay eficacia Él es un amigo fiel; , | Hay en él verdad y gracia, Suyo soy y mío es él.
+
+--------------------------------------------
+LA FUENTE SANADORA
+
+GT-138 | 138 | LA FUENTE SANADORA
+TIPOS: ESPACO_ANTES_PONTUACAO
+  TERMO: "perdón, ,"
+  TRECHO: dos fluye libre; | ¡Oh preciosa fuente sanadora! | ¡Gloria a Dios!, me sana a mí. | 2 | En la fuente que nos sana He hallado el perdón, , Y lavado toda mancha De mi pobre corazón. | 3 | En la fuente que nos sana Cristo ofrece la salud; | Pues venid, enfermos todo
+
+SION-063 | 63 | LA FUENTE SANADORA
+TIPOS: ESPACO_ANTES_PONTUACAO
+  TERMO: "perdón, ,"
+  TRECHO: dos fluye libre; | ¡Oh preciosa fuente sanadora! | ¡Gloria a Dios!, me sana a mí. | 2 | En la fuente que nos sana He hallado el perdón, , Y lavado toda mancha De mi pobre corazón. | 3 | En la fuente que nos sana Cristo ofrece la salud; | Pues venid, enfermos todo
+
+--------------------------------------------
+LA PALABRA HOY SEMBRADA
+
+GT-170 | 170 | LA PALABRA HOY SEMBRADA
+TIPOS: RESIDUO_BARRAS, ESPACO_ANTES_PONTUACAO
+  TERMO: "gracia ."
+  TRECHO: saber, No permitas que las aves Se la vengan a comer: | ||Ricos frutos tú nos puedes conceder.|| | 3 | Haz que crezca con tu gracia . | Y tu rica bendición; No la ahoguen las espinas De congojas y aflicción: | ||Ricos frutos tú nos puedes conceder.|| | 4 | Que
+
+SION-075 | 75 | LA PALABRA HOY SEMBRADA
+TIPOS: RESIDUO_BARRAS, ESPACO_ANTES_PONTUACAO
+  TERMO: "gracia ."
+  TRECHO: saber, No permitas que las aves Se la vengan a comer: | ||Ricos frutos tú nos puedes conceder.|| | 3 | Haz que crezca con tu gracia . | Y tu rica bendición; No la ahoguen las espinas De congojas y aflicción: | ||Ricos frutos tú nos puedes conceder.|| | 4 | Que
+
+--------------------------------------------
+OH CUAN DULCE
+
+GT-025 | 25 | ¡OH, CUAN DULCE!
+TIPOS: PALAVRA_OCR_MAIUSCULA_INTERNA
+  TERMO: "serIe"
+  TRECHO: 1 | ¡Oh, cuán dulce es fiar en Cristo Y entregarse todo a él; Esperar en sus promesas, | Y en sus sendas serIe fiel! | CORO: | Jesucristo, Jesucristo, Ya tu amor probaste en mí | Jesucristo, Jesucristo Siempre quiero fiar en ti. | 2 | Es mu
+
+SION-134 | 134 | ¡OH, CUÁN DULCE!
+TIPOS: PALAVRA_OCR_MAIUSCULA_INTERNA
+  TERMO: "serIe"
+  TRECHO: 1 | ¡Oh, cuán dulce es fiar en Cristo Y entregarse todo a él; Esperar en sus promesas, | Y en sus sendas serIe fiel! | CORO: | Jesucristo, Jesucristo, Ya tu amor probaste en mí | Jesucristo, Jesucristo Siempre quiero fiar en ti. | 2 | Es mu
+
+--------------------------------------------
+OH YO QUIERO ANDAR CON CRISTO
+
+GT-056 | 56 | ¡OH, YO QUIERO ANDAR CON CRISTO!
+TIPOS: PALAVRA_OCR_MAIUSCULA_INTERNA
+  TERMO: "serIe"
+  TRECHO: : | ¡Oh, sí, yo quiero andar con Cristo! | ¡Oh, sí, yo quiero vivir con Cristo! | ¡Oh, sí, yo quiero morir con Cristo! | Quiero serIe un testigo fiel. | 2 | ¡Oh!, yo quiero andar con Cristo, Él vivió en santidad, | En la Biblia yo lo leo | Y yo sé que es la ver
+
+SION-026 | 26 | ¡OH! YO QUIERO ANDAR CON CRISTO
+TIPOS: PALAVRA_OCR_MAIUSCULA_INTERNA
+  TERMO: "serIe"
+  TRECHO: : | ¡Oh, sí, yo quiero andar con Cristo! | ¡Oh, sí, yo quiero vivir con Cristo! | ¡Oh, sí, yo quiero morir con Cristo! | Quiero serIe un testigo fiel. | 2 | ¡Oh!, yo quiero andar con Cristo, Él vivió en santidad, | En la Biblia yo lo leo | Y yo sé que es la ver
+
+--------------------------------------------
+PENTECOSTES PARA TODOS
+
+GT-048 | 48 | PENTECOSTÉS PARA TODOS
+TIPOS: CORO_SEM_DOIS_PONTOS
+  SEM TERMO CRÍTICO PRÉ-DEFINIDO
+
+SION-162 | 162 | PENTECOSTÉS PARA TODOS
+TIPOS: CORO_SEM_DOIS_PONTOS
+  SEM TERMO CRÍTICO PRÉ-DEFINIDO
+
+--------------------------------------------
+PODER PENTECOSTAL
+
+GT-102 | 102 | PODER PENTECOSTAL
+TIPOS: PALAVRA_OCR_MAIUSCULA_INTERNA
+  TERMO: "hazIo"
+  TRECHO: Señor; | ¡Oh!, danos la lluvia, del Consolador, Aviva tu iglesia con poder celestial. | 2 | Cual vivo fuego o vendaval, | ¡Oh!, hazIo descender; Y pueda hoy en cada cual | Su templo establecer. | 3 | Mediante fe y oración, El cielo tú abrirás: | El santo fuego
+
+SION-044 | 44 | PODER PENTECOSTAL
+TIPOS: PALAVRA_OCR_MAIUSCULA_INTERNA
+  TERMO: "hazIo"
+  TRECHO: Señor; | ¡Oh!, danos la lluvia, del Consolador, Aviva tu iglesia con poder celestial. | 2 | Cual vivo fuego o vendaval, | ¡Oh!, hazIo descender; Y pueda hoy en cada cual | Su templo establecer. | 3 | Mediante fe y oración, El cielo tú abrirás: | El santo fuego
+
+--------------------------------------------
+SALUD SALUD
+
+GT-066 | 66 | ¡SALUD! ¡SALUD!
+TIPOS: ESPACO_ANTES_PONTUACAO
+  TERMO: "; ,"
+  TRECHO: da en loor; | ¡Oh Salvador, tierno Cristo! | CORO: | ¡Salud! ¡Salud!, cantad a nuestro Dios. La paz nos da, clamad en alta voz; , | Salvación ya tengo y descanso dulce en él, Yo soy salvado en Cristo. | 2 | Debo, pues, mis fuerzas y mi vida toda a i: Te l
+
+SION-030 | 30 | ¡SALUD! ¡SALUD!
+TIPOS: ESPACO_ANTES_PONTUACAO
+  TERMO: "; ,"
+  TRECHO: da en loor; | ¡Oh Salvador, tierno Cristo! | CORO: | ¡Salud! ¡Salud!, cantad a nuestro Dios. La paz nos da, clamad en alta voz; , | Salvación ya tengo y descanso dulce en él, Yo soy salvado en Cristo. | 2 | Debo, pues, mis fuerzas y mi vida toda a i: Te l
+
+--------------------------------------------
+SIEMPRE ORAD
+
+GT-137 | 137 | SIEMPRE ORAD
+TIPOS: ESPACO_ANTES_PONTUACAO
+  SEM TERMO CRÍTICO PRÉ-DEFINIDO
+
+SION-062 | 62 | SIEMPRE ORAD
+TIPOS: ESPACO_ANTES_PONTUACAO
+  SEM TERMO CRÍTICO PRÉ-DEFINIDO
+
+--------------------------------------------
+TODO A CRISTO YO ME RINDO
+
+GT-007 | 7 | TODO A CRISTO YO ME RINDO
+TIPOS: PALAVRA_OCR_MAIUSCULA_INTERNA
+  TERMO: "serIe"
+  TRECHO: 1 | Todo a Cristo yo me rindo, Con el fin de serie fiel; | Para siempre quiero amarle, Y agradarle sólo a él. | CORO: | Yo me rindo a él, Yo me rindo a él; | Todo a Cristo yo me
+
+SION-011 | 11 | TODO A CRISTO YO ME RINDO
+TIPOS: PALAVRA_OCR_MAIUSCULA_INTERNA
+  TERMO: "serIe"
+  TRECHO: 1 | Todo a Cristo yo me rindo, Con el fin de serie fiel; | Para siempre quiero amarle, Y agradarle sólo a él. | CORO: | Yo me rindo a él, Yo me rindo a él; | Todo a Cristo yo me
+
+============================================
+ 4. CASOS INDIVIDUAIS DE ALTA PRIORIDADE
+============================================
+TOTAL INDIVIDUAIS: 20
+
+GT-042 | 42 | HAY UN PRECIOSO MANANTIAL
+PONTOS: 15
+TIPOS: PRIMEIRA_ESTROFE_SEM_NUMERO, NUMERO_REPETIDO, NUMERACAO_SUSPEITA
+
+GT-054 | 54 | QUE HAGA EN TI SU VOLUNTAD
+PONTOS: 10
+TIPOS: PRIMEIRA_ESTROFE_SEM_NUMERO, NUMERACAO_SUSPEITA
+
+GT-040 | 40 | EN LOS NEGOCIOS DEL REY
+PONTOS: 7
+TIPOS: ESPACO_ANTES_PONTUACAO, PONTUACAO_DUPLA_SUSPEITA
+  TERMO: "oid, ."
+  TRECHO: sión de luz, eterna paz y amor: Embajador yo soy del reino celestial | En los negocios de mi Rey. | CORO: | Este mensaje fiel oid, . Que dijo ya celeste voz: | «Reconciliaos ya» – dice el Señor y Rey, | ¡Reconciliaos hoy con Dios! | 2 | Que del pecado vil arre
+
+GT-055 | 55 | EL MUNDO PERDIDO
+PONTOS: 7
+TIPOS: PRIMEIRA_ESTROFE_SEM_NUMERO, PONTUACAO_DUPLA_SUSPEITA
+
+GT-069 | 69 | PRECIOSO ES JESÚS
+PONTOS: 7
+TIPOS: ESPACO_ANTES_PONTUACAO, PONTUACAO_DUPLA_SUSPEITA
+
+GT-079 | 79 | PUEDO OÍR TU VOZ LLAMANDO
+PONTOS: 7
+TIPOS: PRIMEIRA_ESTROFE_SEM_NUMERO, RESIDUO_BARRAS, ESPACO_ANTES_PONTUACAO
+
+GT-062 | 62 | CON CRISTO YO IRÉ
+PONTOS: 5
+TIPOS: ESPACO_ANTES_PONTUACAO
+
+GT-067 | 67 | DE MI TIERNO SALVADOR LIBRE ESTOY
+PONTOS: 5
+TIPOS: ESPACO_ANTES_PONTUACAO
+  TERMO: "! ,"
+  TRECHO: favor de Jesús: De tinieblas me llamó, | De cadenas me libró, | De la muerte me salvó, mi Jesús. | CORO: | ¡Mi Jesús! ¡Mi Jesús! , | ¡Cuán precioso es el nombre de Jesús! | Con su sangre me limpié, De su gozo me llenó, | De su vida me dotó, mi Jesús. | 2 | ¡Oh
+
+GT-099 | 99 | NADA DE SOMBRAS
+PONTOS: 5
+TIPOS: ESPACO_ANTES_PONTUACAO
+  TERMO: ".sombras"
+  TRECHO: 1 | No habrá .sombras en el valle de la muerte Cuando cese de la vida el batallar, | Y escuchemos del Señor el llamamiento, Ya llevándonos con
+
+GT-128 | 128 | VALOR Y FE
+PONTOS: 5
+TIPOS: ESPACO_ANTES_PONTUACAO
+  TERMO: ".las"
+  TRECHO: 1 | Si en tu senda .las nubes Agolparse ves, | No vaciles por ello, Ni flaqueen tus pies; Cada nube que venga No podrá traer | Más que pruebas que
+
+GT-161 | 161 | PECADOR, VEN AL DULCE JESÚS
+PONTOS: 5
+TIPOS: RESIDUO_BARRAS, ESPACO_ANTES_PONTUACAO
+  TERMO: "serás . De"
+  TRECHO: re también Medicina que cure tu mal. | 4 | Ovejuela que huyó del redil, | ¡He aquí tu benigno Señor! | Y en los hombros llevada serás . De tan dulce y amante Pastor.
+
+GT-218 | 218 | YO ME ACUERDO
+PONTOS: 5
+TIPOS: ESPACO_ANTES_PONTUACAO
+  TERMO: "murió. :"
+  TRECHO: ús el pan quebró, A los suyos todos con amor lo dio; | En su cuerpo el Señor ya llevó nuestro dolor, Pues por mí el Señor murió. : | 3 | Yo me acuerdo que el vino él les dio: | «Si, tomad de ello todos», les mandó; | «Es mi sangre de la cruz, por la cual os
+
+GT-220 | 220 | HOGAR DE MIS RECUERDOS
+PONTOS: 5
+TIPOS: ESPACO_ANTES_PONTUACAO
+  TERMO: ".en"
+  TRECHO: 1 | Hogar de mis recuerdos, A ti volver anhelo; | No hay sitio bajo el cielo Más dulce que el hogar. Posara yo .en palacios, Corriendo el mundo entero, A todos yo prefiero | Mi hogar, mi dulce hogar. | CORO: | ¡Mi hogar, mi hogar, mi dulce
+
+GT-265 | 265 | MAS ALLÁ EL DÍA VIENE
+PONTOS: 5
+TIPOS: ESPACO_ANTES_PONTUACAO
+  TERMO: ".su"
+  TRECHO: llanto, | Sino notas	de loor; | Más allá	un día alegre | Que por siempre	ha de durar. | 2 | ¿Qué será estar con Cristo? | Escuchar .su dulce voz; Ver su rostro tan brillante Y andar de él en pos. | 3 | Con Jesús	por guía siempre | El camino	seguiré, | Con confia
+
+GT-303 | 303 | DE LA
+PONTOS: 5
+TIPOS: PRIMEIRA_ESTROFE_SEM_NUMERO
+
+GT-320 | 320 | EN LA NUEVA JERUSALÉN
+PONTOS: 5
+TIPOS: ESPACO_ANTES_PONTUACAO
+
+GT-322 | 322 | NO HAY TRISTEZA EN EL CIELO
+PONTOS: 5
+TIPOS: ESPACO_ANTES_PONTUACAO
+
+GT-325 | 325 | ¿NOS VEREMOS EN EL RIO?
+PONTOS: 5
+TIPOS: ESPACO_ANTES_PONTUACAO
+  TERMO: ".Jesús"
+  TRECHO: uel río Crece el árbol de la Vida Y a toda alma dolorida Dan sus hojas la salud. | 6 | Tiene faz risueña el río, Pues la de .Jesús refleja, La que de su grey aleja Todo mal, todo dolor. | 7 | Nos veremos en el río Nuestro viaje concluyendo, Suaves melodí
+
+SION-007 | 7 | LA SIEMBRA
+PONTOS: 5
+TIPOS: PONTUACAO_DUPLA_SUSPEITA
+
+SION-246 | 246 | CRISTIANOS, TODOS A PREPARARSE
+PONTOS: 5
+TIPOS: PRIMEIRA_ESTROFE_SEM_NUMERO
+
+============================================
+ 5. CASOS ESTRUTURAIS
+============================================
+TOTAL ESTRUTURAIS: 10
+
+GT-042 | 42 | HAY UN PRECIOSO MANANTIAL
+TIPOS: PRIMEIRA_ESTROFE_SEM_NUMERO, NUMERO_REPETIDO, NUMERACAO_SUSPEITA
+  - PRIMEIRA_ESTROFE_SEM_NUMERO: Primeiro número estrutural encontrado: 2.
+    Y más blanco que la nieve yo seré: | 2 | El malhechor se convirtió Pendiente de una cruz; El vio la fuente y se lavó, Creyendo en Jesús.
+  - NUMERO_REPETIDO: Número estrutural 2 repetido.
+    Hay un precioso manantial De sangre de Emmanuel, Que purifica a cada cual Que se sumerge en él. | 2 | El malhechor se convirtió Pendiente de una cruz; El vio la fuente y se lavó, Creyendo en Jesús.
+  - NUMERO_REPETIDO: Número estrutural 3 repetido.
+    El malhechor se convirtió Pendiente de una cruz; El vio la fuente y se lavó, Creyendo en Jesús. | 3 | Y yo también mi pobre ser Allí logré lavar;
+  - NUMERO_REPETIDO: Número estrutural 4 repetido.
+    La gloria de su gran poder, Me gozo en ensalzar. | 4 | ¡Eterna fuente carmesí!
+  - NUMERACAO_SUSPEITA: Sequência regressiva 4 -> 1.
+
+GT-054 | 54 | QUE HAGA EN TI SU VOLUNTAD
+TIPOS: PRIMEIRA_ESTROFE_SEM_NUMERO, NUMERACAO_SUSPEITA
+  - PRIMEIRA_ESTROFE_SEM_NUMERO: Primeiro número estrutural encontrado: 2.
+    Su gran poder, sus dones te dará, El gozo y paz a tu alma volverá: Del corazón las manchas limpiará, Que haga en ti su santa voluntad. | 2 | ¿Quieres ir en pos de Cristo y llevar la cruz?
+  - NUMERACAO_SUSPEITA: Sequência regressiva 3 -> 1.
+
+GT-182 | 182 | ¡GLORIA A TI, JESÚS DIVINO
+TIPOS: SALTO_NUMERICO
+  - SALTO_NUMERICO: Sequência 1 -> 3.
+
+SION-079 | 79 | GLORIA A TI, JESÚS DIVINO
+TIPOS: SALTO_NUMERICO
+  - SALTO_NUMERICO: Sequência 1 -> 3.
+
+GT-055 | 55 | EL MUNDO PERDIDO
+TIPOS: PRIMEIRA_ESTROFE_SEM_NUMERO
+  - PRIMEIRA_ESTROFE_SEM_NUMERO: Primeiro número estrutural encontrado: 2.
+    ¡Jesús es la luz del mundo! | 2 | En día la noche se cambia con él, etc. Irás en la luz si a su ley eres fiel, etc.
+
+GT-079 | 79 | PUEDO OÍR TU VOZ LLAMANDO
+TIPOS: PRIMEIRA_ESTROFE_SEM_NUMERO
+  - PRIMEIRA_ESTROFE_SEM_NUMERO: Primeiro número estrutural encontrado: 2.
+    ||Seguiré do tú me guíes, || Dondequiera fiel te seguiré e , | 2 | ||Yo te seguiré en el huerto|| Sufriré contigo, mi Jesús.
+
+GT-048 | 48 | PENTECOSTÉS PARA TODOS
+TIPOS: CORO_SEM_DOIS_PONTOS
+  - CORO_SEM_DOIS_PONTOS: Marcador CORO encontrado sem dois pontos.
+    Nos manda el Santo Espíritu, Que llena de su gran virtud Al ser que le esperó. | CORO | ¿Ha venido a ti? ¿Ha venido a ti, El Espíritu Consolador?
+
+GT-303 | 303 | DE LA
+TIPOS: PRIMEIRA_ESTROFE_SEM_NUMERO
+  - PRIMEIRA_ESTROFE_SEM_NUMERO: Primeiro número estrutural encontrado: 2.
+    Para hacerla esposa quiso De los cielos descender, Y su sangre por limpiarla En la horrible cruz verter. | 2 | De entre todas las naciones Escogida en variedad,
+
+SION-162 | 162 | PENTECOSTÉS PARA TODOS
+TIPOS: CORO_SEM_DOIS_PONTOS
+  - CORO_SEM_DOIS_PONTOS: Marcador CORO encontrado sem dois pontos.
+    Nos manda el Santo Espíritu, Que llena de su gran virtud Al ser que le esperó. | CORO | ¿Ha venido a ti? ¿Ha venido a ti, El Espíritu Consolador?
+
+SION-246 | 246 | CRISTIANOS, TODOS A PREPARARSE
+TIPOS: PRIMEIRA_ESTROFE_SEM_NUMERO
+  - PRIMEIRA_ESTROFE_SEM_NUMERO: Primeiro número estrutural encontrado: 2.
+    | 2 | Ya las señales cúmplense todas,
+
+============================================
+ 6. ORDEM RECOMENDADA PARA COTEJO
+============================================
+01. GT-040 | EN LOS NEGOCIOS DEL REY
+02. GT-056 | ¡OH, YO QUIERO ANDAR CON CRISTO!
+03. SION-026 | ¡OH! YO QUIERO ANDAR CON CRISTO
+04. GT-161 | PECADOR, VEN AL DULCE JESÚS
+05. GT-283 | EN LA MAÑANA
+06. GT-018 | GRATO ES DECIR LA HISTORIA
+07. SION-128 | GRATO ES DECIR LA HISTORIA
+08. GT-007 | TODO A CRISTO YO ME RINDO
+09. SION-011 | TODO A CRISTO YO ME RINDO
+10. GT-025 | ¡OH, CUAN DULCE!
+11. SION-134 | ¡OH, CUÁN DULCE!
+12. GT-102 | PODER PENTECOSTAL
+13. SION-044 | PODER PENTECOSTAL
+14. GT-042 | HAY UN PRECIOSO MANANTIAL
+15. GT-182 | ¡GLORIA A TI, JESÚS DIVINO
+16. SION-079 | GLORIA A TI, JESÚS DIVINO
+
+============================================
+ 7. CONTROLE DE IMUTABILIDADE
+============================================
+HASH ANTES:  a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41
+HASH DEPOIS: a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41
+BASE MESTRE ALTERADA: NÃO
+RELATÓRIO: scripts/data/etapa-10c-dossie-cotejo.json
+
+============================================
+ ETAPA 10C CONCLUÍDA COM SUCESSO
+ DOSSIÊ DE COTEJO PREPARADO
+ NENHUMA CORREÇÃO APLICADA
+============================================

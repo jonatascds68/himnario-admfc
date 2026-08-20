@@ -1,0 +1,802 @@
+============================================
+ 1. INTEGRIDADE DA BASE
+============================================
+HASH ATUAL:   214d87c16a3a1a18c9bd525c5474dff344fa78857762960084de51771262cbfb
+HASH OFICIAL: 214d87c16a3a1a18c9bd525c5474dff344fa78857762960084de51771262cbfb
+TOTAL DE HINOS: 718
+
+============================================
+ 2. ESTRUTURA BRUTA DOS CASOS
+============================================
+
+--------------------------------------------
+GT-052 | CRISTO LA ROCA
+--------------------------------------------
+001 | "1"
+002 | "En las olas inmensas de embravecido mar, Que asaltan de mi alma la pobre embarcación, De rodillas a Cristo clamé, y el huracán Deshecho fue al instante a la voz de Dios."
+003 | "CORO:"
+004 | "Es Cristo la Roca, el ancla de mi fe; Los males, lamentos, y ayes de temor,"
+005 | "Terminan por siempre, con mi supremo Rey; Es Jesucristo mi refugio."
+006 | "2"
+007 | "Me guarda de peligros, de pruebas, de dolor; Él manda que los vientos no agiten tempestad, Los mares se detienen, la ola reposó,"
+008 | "Y en Cristo fijo el ancla, confiando más."
+009 | "3"
+010 | "Mi dulce Salvador, sí, mi hermoso amigo y Dios, Que libra de tristezas y aleja amarga hiel:"
+011 | "Por fe yo iré al cielo, mansión del ser de amor, La fuente inagotable de dicha y bien."
+
+--------------------------------------------
+GT-100 | A LOS PIES DE JESUCRISTO
+--------------------------------------------
+001 | "1"
+002 | "A los pies de Jesucristo Es el sitio aquí mejor, Escuchando cual María Las palabras de su amor."
+003 | "CORO:"
+004 | "A los pies de Jesucristo Gozaré su comunión, Pues su mano fiel y tierna"
+005 | "Me ha provisto protección."
+006 | "2"
+007 | "A los pies de Jesucristo Hallo tierna compasión; El quitó ya mis afanes,"
+008 | "Ya me ha dado bendición."
+009 | "¡Puedo yo decirle a Cristo Mis cuidados y temor!"
+010 | "Y con él tendrá mi alma Gozo, paz, eterno amor."
+011 | "3"
+012 | "A los pies de Jesucristo Yo tendré su bendición; En sus ojos hay dulzura Y en su seno protección."
+013 | "¡Qué feliz es el momento Que yo paso junto a ti! Ya anhelo el encuentro Cuando vengas tú por mí."
+
+--------------------------------------------
+GT-188 | BELLAS PALABRAS DE VIDA
+--------------------------------------------
+001 | "1"
+002 | "¡Oh, cantádmelas otra vez! Bellas palabras de vida; Hallo en ellas mi gozo y luz, Bellas palabras de vida;"
+003 | "Si, de luz y vida; Son sostén y a:"
+004 | "|| ¡Qué bellas son, qué bellas son!"
+005 | "Bellas palabras de vida.||"
+006 | "2"
+007 | "Jesucristo a todos da Bellas palabras de vida; Hoy escúchalas, pecador, Bellas palabras de vida; Bondadoso te salva,"
+008 | "Y al cielo te llama:"
+009 | "|| ¡Qué bellas son, qué bellas son!"
+010 | "Bellas palabras de vida.||"
+011 | "3"
+012 | "Grato el cántico sonará, Bellas palabras de vida; Tus pecados perdonará, Bellas palabras de vida; Si, de luz y vida,"
+013 | "Son sostén y guía:"
+014 | "|| ¡Qué bellas son, qué bellas son!"
+015 | "Bellas palabras de vida.||"
+
+--------------------------------------------
+GT-177 | NO TE DE TEMOR HABLAR POR CRISTO
+--------------------------------------------
+001 | "1"
+002 | "¡No te dé temor hablar por Cristo!"
+003 | "Haz que brille en ti su luz;"
+004 | "Al que te salvó confiesa siempre, Todo debes a Jesús."
+005 | "CORO:"
+006 | "¡No te dé temor, no te dé temor, Nunca, nunca, nunca:"
+007 | "Es tu amante Salvador, Nunca, pues, te dé temor!"
+008 | "2"
+009 | "¡No te dé temor hacer por Cristo Cuanto de tu parte está!"
+010 | "Obra con amor, con fe y constancia: Tus trabajos premiará."
+011 | "3"
+012 | "¡No te dé temor sufrir por Cristo Los reproches o el dolor!"
+013 | "Sufre con amor tus pruebas todas, Cual sufrió tu Salvador."
+014 | "4"
+015 | "¡Note dé temor vivir por Cristo Esa vida que te da!"
+016 | "Si tan sólo en él por siempre fiares, El con bien te sacará."
+017 | "S"
+018 | "¡No te dé temor morir por Cristo!"
+019 | "Vía, verdad y vida es él; Él te llevará con su ternura"
+020 | "A su célico vergel."
+
+============================================
+ 3. GT-052 — TESTE DO CORO
+============================================
+MARCADOR CORO: PRESENTE
+ÍNDICE: 172
+ANTES: "an de mi alma la pobre embarcación, De rodillas a Cristo clamé, y el huracán Deshecho fue al instante a la voz de Dios.\n"
+DEPOIS: "CORO:\nEs Cristo la Roca, el ancla de mi fe; Los males, lamentos, y ayes de temor,\nTerminan por siempre, con mi supremo Rey; Es Jesucristo mi refugio.\n2\nMe guarda de peligros, de pruebas, de dolor; Él manda que los vientos no agiten tempestad, Los mar"
+
+============================================
+ 4. GT-100 — TESTE DO CORO
+============================================
+MARCADOR CORO: PRESENTE
+ÍNDICE: 98
+ANTES: "1\nA los pies de Jesucristo Es el sitio aquí mejor, Escuchando cual María Las palabras de su amor.\n"
+DEPOIS: "CORO:\nA los pies de Jesucristo Gozaré su comunión, Pues su mano fiel y tierna\nMe ha provisto protección.\n2\nA los pies de Jesucristo Hallo tierna compasión; El quitó ya mis afanes,\nYa me ha dado bendición.\n¡Puedo yo decirle a Cristo Mis cuidados y tem"
+
+============================================
+ 5. GT-188 — ANOMALIA DOCUMENTAL
+============================================
+"Son sostén y a:" -> 1 ocorrência(s)
+"Son sostén y guía:" -> 1 ocorrência(s)
+"||" -> 6 ocorrência(s)
+"CORO:" -> 0 ocorrência(s)
+
+DIAGNÓSTICO: GT-188 TEM ANOMALIA NA BASE.
+NÃO CORRIGIR AINDA SEM COTEJO/VALIDAÇÃO.
+
+============================================
+ 6. GT-177 — FRAGMENTO ISOLADO
+============================================
+LINHA ISOLADA "S" ENCONTRADA: 17
+CONTEXTO: 4 | ¡Note dé temor vivir por Cristo Esa vida que te da! | Si tan sólo en él por siempre fiares, El con bien te sacará. | S | ¡No te dé temor morir por Cristo! | Vía, verdad y vida es él; Él te llevará con su ternura | A su célico vergel.
+DIAGNÓSTICO: CANDIDATO A ERRO DOCUMENTAL.
+
+============================================
+ 7. LOCALIZANDO O PARSER DO APLICATIVO
+============================================
+ARQUIVOS CANDIDATOS: 8
+
+app/(tabs)/index.tsx
+   /sections?/gi=15
+
+app/(tabs)/more.tsx
+   /sections?/gi=8
+
+app/admin/edit/[id].tsx
+   /\bCORO\b/g=3 | /split\s*\(/g=2 | /sections?/gi=2 | /estrofa/gi=12 | /chorus/gi=1
+
+app/admin.tsx
+   /\bCORO\b/g=1 | /sections?/gi=5
+
+app/culto-mode.tsx
+   /\bCORO\b/g=1 | /sections?/gi=4 | /chorus/gi=3
+
+app/hymn/[id].tsx
+   /cleanBlockText/g=2 | /contentMode/g=12 | /\bCORO\b/g=6 | /split\s*\(/g=1 | /sections?/gi=10 | /estrofa/gi=1 | /chorus/gi=8
+
+src/components/ShareCard.tsx
+   /\bCORO\b/g=1 | /sections?/gi=11 | /chorus/gi=5
+
+src/lib/api.ts
+   /\bCORO\b/g=1 | /split\s*\(/g=1 | /sections?/gi=6 | /estrofa/gi=2 | /chorus/gi=5
+
+============================================
+ 8. TRECHOS DO PARSER
+============================================
+
+--------------------------------------------
+ARQUIVO: app/(tabs)/index.tsx
+--------------------------------------------
+0190 |         </Pressable>
+0191 | 
+0192 |         {/* HIMNARIOS */}
+0193 | <SectionTitle
+0194 |   title="Himnarios"
+0195 |   action="Ver todos"
+0196 |   onAction={() => router.push('/(tabs)/search')}
+...
+0282 | </View>
+0283 | 
+0284 |         {/* CONTINUAR / RECENTES */}
+0285 |         <SectionTitle
+0286 |           title="Continúa donde paraste"
+0287 |           action="Ver recientes"
+0288 |           onAction={() =>
+...
+0348 |         </Pressable>
+0349 | 
+0350 |         {/* ACESSO RÁPIDO */}
+0351 |         <SectionTitle
+0352 |           title="Acceso rápido"
+0353 |           c={c}
+0354 |         />
+...
+0415 |         </ScrollView>
+0416 | 
+0417 |         {/* CATEGORIAS DESTACADAS */}
+0418 |         <SectionTitle
+0419 |           title="Categorías destacadas"
+0420 |           action="Ver todas"
+0421 |           onAction={() =>
+...
+0601 |   );
+0602 | }
+0603 | 
+0604 | function SectionTitle({
+0605 |   title,
+0606 |   action,
+0607 |   onAction,
+...
+0613 |   c: any;
+0614 | }) {
+0615 |   return (
+0616 |     <View style={styles.sectionHeader}>
+0617 |       <View style={styles.sectionTitleWrap}>
+0618 |         <View
+0619 |           style={[
+...
+0620 |             styles.sectionLine,
+...
+0621 |             {
+0622 |               backgroundColor:
+0623 |                 c.brandSecondary,
+...
+0627 | 
+0628 |         <Text
+0629 |           style={[
+0630 |             styles.sectionTitle,
+0631 |             { color: c.onSurface },
+0632 |           ]}
+0633 |         >
+...
+0639 |         <Pressable onPress={onAction}>
+0640 |           <Text
+0641 |             style={[
+0642 |               styles.sectionAction,
+0643 |               {
+0644 |                 color:
+0645 |                   c.brandSecondary,
+...
+0705 |     fontSize: 14,
+0706 |   },
+0707 | 
+0708 |   sectionHeader: {
+0709 |     flexDirection: 'row',
+0710 |     alignItems: 'center',
+0711 |     justifyContent:
+...
+0715 |     marginTop: SPACING.sm,
+0716 |   },
+0717 | 
+0718 |   sectionTitleWrap: {
+0719 |     flexDirection: 'row',
+0720 |     alignItems: 'center',
+0721 |     gap: SPACING.sm,
+...
+0722 |     flex: 1,
+0723 |   },
+0724 | 
+0725 |   sectionLine: {
+0726 |     width: 3,
+0727 |     height: 18,
+0728 |     borderRadius: 3,
+...
+0729 |   },
+0730 | 
+0731 |   sectionTitle: {
+0732 |     fontSize: 15,
+0733 |     fontWeight: '800',
+0734 |     textTransform: 'uppercase',
+...
+0735 |     letterSpacing: 0.5,
+0736 |   },
+0737 | 
+0738 |   sectionAction: {
+0739 |     fontSize: 12,
+0740 |     fontWeight: '700',
+0741 |   },
+...
+
+--------------------------------------------
+ARQUIVO: app/(tabs)/more.tsx
+--------------------------------------------
+0147 |         >
+0148 |           <Text
+0149 |             style={[
+0150 |               styles.section,
+0151 |               { color: c.brandSecondary },
+0152 |             ]}
+0153 |           >
+...
+0401 | 
+0402 |           {/* FONTES */}
+0403 | 
+0404 |           <View style={styles.fontSection}>
+0405 |             <Text
+0406 |               style={[
+0407 |                 styles.fontSectionTitle,
+...
+0408 |                 { color: c.onSurface },
+0409 |               ]}
+0410 |             >
+...
+0413 | 
+0414 |             <Text
+0415 |               style={[
+0416 |                 styles.fontSectionSub,
+0417 |                 { color: c.muted },
+0418 |               ]}
+0419 |             >
+...
+0729 |     paddingBottom: 12,
+0730 |   },
+0731 | 
+0732 |   section: {
+0733 |     fontSize: 11,
+0734 |     fontWeight: '800',
+0735 |     letterSpacing: 0.8,
+...
+0803 |     justifyContent: 'center',
+0804 |   },
+0805 | 
+0806 |   fontSection: {
+0807 |     paddingTop: 14,
+0808 |   },
+0809 | 
+...
+0810 |   fontSectionTitle: {
+0811 |     fontSize: 15,
+0812 |     fontWeight: '700',
+0813 |   },
+...
+0814 | 
+0815 |   fontSectionSub: {
+0816 |     fontSize: 11,
+0817 |     marginTop: 3,
+0818 |     marginBottom: 11,
+...
+
+--------------------------------------------
+ARQUIVO: app/admin/edit/[id].tsx
+--------------------------------------------
+0010 | import * as FileSystem from 'expo-file-system/legacy';
+0011 | import { useTheme } from '@/src/theme/ThemeContext';
+0012 | import { SPACING, RADIUS } from '@/src/theme/tokens';
+0013 | import { api, Hymn, Bloque, getSections, MediaProvenanceType } from '@/src/lib/api';
+0014 | 
+0015 | const GT = 'Gloria y Triunfo';
+0016 | const SN = 'Himnos de Sión';
+...
+0017 | 
+0018 | interface BlockState {
+0019 |   tipo: 'estrofa' | 'coro';
+0020 |   numero: string;
+0021 |   texto: string;
+0022 |   cifras: string[];
+...
+0164 |         h.audio_procedencia?.tipo || 'desconocido'
+0165 |       );
+0166 |       setAudioNotas(h.audio_procedencia?.notas || '');
+0167 |       const secs = getSections(h);
+0168 |       setBlocks(secs.map((sec, secIndex) => {
+0169 |         const tipo =
+0170 |           sec.kind === 'chorus' ? 'coro' : 'estrofa';
+...
+0171 | 
+0172 |         const numero =
+0173 |           sec.index != null ? String(sec.index) : '';
+...
+0174 | 
+0175 |         const cifraBlock = h.cifra_bloques?.find((cb) => {
+0176 |           if (tipo === 'coro') return cb.tipo === 'coro';
+0177 | 
+0178 |           return (
+0179 |             cb.tipo === 'estrofa' &&
+...
+0180 |             cb.numero === (sec.index ?? secIndex + 1)
+0181 |           );
+0182 |         });
+...
+0292 | 
+0293 |   const toBloques = (): Bloque[] => blocks.map((b) => ({
+0294 |     tipo: b.tipo,
+0295 |     numero: b.tipo === 'estrofa' && b.numero ? parseInt(b.numero, 10) : null,
+0296 |     texto: b.texto,
+0297 |   }));
+0298 | 
+...
+0429 |       return [{
+0430 |         tipo: b.tipo,
+0431 |         numero:
+0432 |           b.tipo === 'estrofa' && b.numero
+0433 |             ? parseInt(b.numero, 10)
+0434 |             : null,
+0435 |         lineas: textLines(b.texto).map(
+...
+0446 |     setBlocks((prev) => [
+0447 |       ...prev,
+0448 |       {
+0449 |         tipo: 'estrofa',
+0450 |         numero: String(
+0451 |           prev.filter((b) => b.tipo === 'estrofa').length + 1
+0452 |         ),
+...
+0453 |         texto: '',
+0454 |         cifras: [''],
+...
+0866 |           {/* STRUCTURE / BLOCKS */}
+0867 |           <Label c={c}>Estructura de la letra</Label>
+0868 |           <Text style={{ color: c.muted, fontSize: 12, marginBottom: SPACING.sm }}>
+0869 |             Cada bloque es una ESTROFA o el CORO. Solo el CORO recibe el destaque visual.
+0870 |           </Text>
+0871 |           {blocks.map((b, i) => (
+0872 |             <View key={i} style={[styles.blockCard, { borderColor: b.tipo === 'coro' ? c.brandSecondary : c.border, backgroundColor: c.surfaceSecondary }]} testID={`block-${i}`}>
+...
+0873 |               <View style={styles.blockHead}>
+0874 |                 <Pressable onPress={() => updBlock(i, { tipo: b.tipo === 'estrofa' ? 'coro' : 'estrofa' })}
+0875 |                   style={[styles.typeToggle, { backgroundColor: b.tipo === 'coro' ? c.brandSecondary : c.brand }]} testID={`block-type-${i}`}>
+...
+0876 |                   <Text style={{ color: b.tipo === 'coro' ? c.brand : c.onSurfaceInverse, fontWeight: '800', fontSize: 11, letterSpacing: 1 }}>
+0877 |                     {b.tipo === 'coro' ? 'CORO' : 'ESTROFA'}
+...
+0878 |                   </Text>
+...
+0879 |                 </Pressable>
+...
+0880 |                 {b.tipo === 'estrofa' ? (
+...
+0881 |                   <TextInput value={b.numero} onChangeText={(v) => updBlock(i, { numero: v.replace(/[^0-9]/g, '') })}
+0882 |                     keyboardType="number-pad" placeholder="Nº" placeholderTextColor={c.muted}
+0883 |                     style={[styles.numInput, { borderColor: c.border, color: c.onSurface }]} testID={`block-num-${i}`} />
+...
+
+--------------------------------------------
+ARQUIVO: app/admin.tsx
+--------------------------------------------
+0104 |           </View>
+0105 |         ) : <ActivityIndicator color={c.brand} />}
+0106 | 
+0107 |         <Text style={[styles.section, { color: c.muted }]}>Editor de la Base</Text>
+0108 |         <View style={[styles.actionCard, { borderColor: c.border, backgroundColor: c.surfaceSecondary }]}>
+0109 |           <ActionBtn c={c} icon="edit-3" label="Editor de Himnos (título, letra, número, equivalencia)" onPress={() => router.push('/admin/hymns' as any)} testID="admin-editor" />
+0110 |         </View>
+...
+0111 | 
+0112 |         <Text style={[styles.section, { color: c.muted }]}>Importación / Exportación</Text>
+0113 |         <View style={[styles.actionCard, { borderColor: c.border, backgroundColor: c.surfaceSecondary }]}>
+0114 |           <ActionBtn c={c} icon="download" label="Exportar backup (JSON)" onPress={doExport} busy={busy === 'export'} testID="admin-export" />
+0115 |           <ActionBtn c={c} icon="rotate-ccw" label="Restaurar backup (JSON)" onPress={doRestore} busy={busy === 'restore'} testID="admin-restore" />
+...
+0118 |         {msg ? <Text style={{ color: c.info, marginTop: SPACING.md, textAlign: 'center' }} testID="admin-msg">{msg}</Text> : null}
+0119 |         {importResult ? (
+0120 |           <View style={[styles.actionCard, { borderColor: c.border, backgroundColor: c.surfaceSecondary, marginTop: SPACING.md }]}>
+0121 |             <Text style={[styles.section, { color: c.muted }]}>Resultado</Text>
+0122 |             <Text style={{ color: c.onSurface }}>Total filas: {importResult.total}</Text>
+0123 |             <Text style={{ color: c.onSurface }}>Válidos: {importResult.valid}</Text>
+0124 |             <Text style={{ color: c.onSurface }}>Duplicados: {importResult.duplicates}</Text>
+...
+0125 |             <Text style={{ color: c.onSurface }}>Errores: {importResult.errors}</Text>
+0126 |             <Text style={{ color: c.muted, fontSize: 12, marginTop: SPACING.sm }}>
+0127 |               Columnas admitidas: NUMERO_GLORIA_TRIUNFO, NUMERO_SION, TITULO, AUTOR, LETRA, CORO,
+0128 |               CATEGORIA, TONALIDAD, REFERENCIA_BIBLICA, FUENTE, COPYRIGHT_STATUS, VERIFICATION_STATUS.
+0129 |             </Text>
+0130 |           </View>
+...
+0131 |         ) : null}
+0132 | 
+0133 |         <Text style={[styles.section, { color: c.muted }]}>Notas</Text>
+0134 |         <Text style={{ color: c.muted, fontSize: 13, lineHeight: 20 }}>
+0135 |           • CRUD de himnos individuales disponible vía API. Próxima versión incluirá editor
+0136 |           visual completo dentro del panel.{'\n'}
+...
+0166 |   title: { fontSize: 22, fontWeight: '800', letterSpacing: 1 },
+0167 |   statCard: { borderRadius: RADIUS.lg, borderWidth: 1, padding: SPACING.lg, gap: SPACING.md },
+0168 |   statRow: { flexDirection: 'row', gap: SPACING.md },
+0169 |   section: { fontSize: 11, fontWeight: '800', textTransform: 'uppercase', letterSpacing: 1, marginTop: SPACING.lg, marginBottom: SPACING.sm },
+0170 |   actionCard: { borderRadius: RADIUS.lg, borderWidth: 1, padding: SPACING.md, gap: SPACING.sm },
+0171 |   actionBtn: { flexDirection: 'row', alignItems: 'center', gap: SPACING.md, paddingVertical: SPACING.md, paddingHorizontal: SPACING.sm, borderRadius: RADIUS.md, borderWidth: 1, minHeight: 52 },
+0172 | });
+...
+
+--------------------------------------------
+ARQUIVO: app/culto-mode.tsx
+--------------------------------------------
+0006 | import { activateKeepAwakeAsync, deactivateKeepAwake } from 'expo-keep-awake';
+0007 | import { useTheme } from '@/src/theme/ThemeContext';
+0008 | import { SPACING, RADIUS, COLORS } from '@/src/theme/tokens';
+0009 | import { api, Hymn, getSections } from '@/src/lib/api';
+0010 | import { playlist } from '@/src/lib/collections';
+0011 | import { hymnAlignStorage, HymnAlign } from '@/src/lib/storage';
+0012 | export default function CultoMode() {
+...
+0043 |   useEffect(() => { if (queue[pos]) load(queue[pos]); }, [queue, pos, load]);
+0044 | const bg = c.surface, fg = c.onSurface, gold = c.brand;
+0045 | const baseSize = 20 * fontScale;
+0046 |   const sections = hymn ? getSections(hymn) : [];
+0047 |   return (
+0048 |     <View style={[styles.container, { backgroundColor: bg }]} testID="culto-mode-screen">
+0049 |       <View style={styles.topBar}>
+...
+0059 |           <Text style={[styles.number, { color: gold }]}>Nº {hymn.numero}</Text>
+0060 |           <Text style={[styles.title, { color: fg }]}>{hymn.titulo}</Text>
+0061 |           <View style={[styles.divider, { backgroundColor: gold }]} />
+0062 |           {sections.map((s, i) => (
+0063 |             <View key={i} style={{ marginBottom: SPACING.xl }}>
+0064 | {s.kind === 'chorus' ? (
+0065 |   <>
+...
+0066 |     <Text style={{ color: gold, fontSize: 12, fontWeight: '800', letterSpacing: 1.5, marginBottom: SPACING.sm, textAlign: hymnAlign }}>CORO</Text>
+0067 |     <View style={styles.chorusClean}>
+...
+0068 | <Text
+0069 |       style={{
+...
+0070 |         color: isDark ? '#D6C59A' : '#75612F',
+...
+0103 |   number: { fontSize: 38, fontWeight: '900', letterSpacing: 1, marginTop: 4 },
+0104 |   title: { fontSize: 28, fontWeight: '700', marginTop: 4 },
+0105 |   divider: { height: 2, width: 80, marginVertical: SPACING.xl, opacity: 0.8 },
+0106 | chorusClean: { paddingVertical: 8, marginTop: 6, marginBottom: 10 },
+0107 |   ctrl: { paddingHorizontal: 14, height: 40, borderRadius: RADIUS.md, borderWidth: 1, alignItems: 'center', justifyContent: 'center' },
+0108 | navBar: { flexDirection: 'row', paddingHorizontal: SPACING.md, paddingTop: 6, gap: SPACING.sm, borderTopWidth: 1 },
+0109 |   navBtn: { flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 6, height: 52, borderRadius: RADIUS.md, borderWidth: 1 },
+...
+
+--------------------------------------------
+ARQUIVO: app/hymn/[id].tsx
+--------------------------------------------
+0010 | import * as Sharing from 'expo-sharing';
+0011 | import { useTheme } from '@/src/theme/ThemeContext';
+0012 | import { SPACING, RADIUS, GOLD } from '@/src/theme/tokens';
+0013 | import { api, Hymn, getSections } from '@/src/lib/api';
+0014 | import { favorites, recents, playlist } from '@/src/lib/collections';
+0015 | import { hymnAlignStorage, HymnAlign } from '@/src/lib/storage';
+0016 | import { ShareCard, buildSharePages } from '@/src/components/ShareCard';
+...
+0027 | }
+0028 | 
+0029 | // Limpia marcaciones internas (p.ej. "||...||") y normaliza saltos de línea.
+0030 | function cleanBlockText(raw: string): string {
+0031 |   return (raw || '')
+0032 |     .replace(/\r\n/g, '\n')
+0033 |     .replace(/\|+/g, '')          // quita "||" y "|" internos
+...
+0034 |     .replace(/^\s*CORO\s*:?\s*$/gim, '') // etiqueta CORO redundante dentro del texto
+0035 |     .split('\n')
+0036 |     .map((l) => l.trim())
+0037 |     .filter((l, i, arr) => !(l === '' && arr[i - 1] === '')) // evita dobles vacíos
+...
+0140 | }
+0141 | 
+0142 | function buildShareText(hymn: Hymn): string {
+0143 |   const sections = getSections(hymn);
+0144 |   const lines: string[] = [];
+0145 |   lines.push('HIMNARIO ADMFC');
+0146 |   lines.push('');
+...
+0147 |   lines.push(`${hymn.himnario} — Nº ${hymn.numero}`);
+0148 |   lines.push(hymn.titulo);
+0149 |   lines.push('');
+0150 |   sections.forEach((s, i) => {
+0151 |     const label = s.kind === 'chorus' ? 'CORO' : `${s.index ?? i + 1}ª `;
+0152 |     const body = cleanBlockText(s.text);
+0153 |     if (!body) return;
+...
+0154 |     lines.push(label);
+...
+0155 |     lines.push('');
+...
+0391 |   if (loading) return <SafeAreaView style={[styles.container, { backgroundColor: c.surface }]}><ActivityIndicator color={c.brand} style={{ marginTop: SPACING.xxxl }} /></SafeAreaView>;
+0392 |   if (!hymn) return <SafeAreaView style={[styles.container, { backgroundColor: c.surface, alignItems: 'center', justifyContent: 'center' }]}><Text style={{ color: c.onSurface }}>Himno no encontrado</Text></SafeAreaView>;
+0393 | 
+0394 |   const sections = getSections(hymn);
+0395 |   const baseSize = 17 * fontScale;
+0396 |   const shortOther =
+0397 |     hymn.himnario === 'Gloria y Triunfo'
+...
+0398 |       ? 'Himnos de Sión'
+0399 |       : 'Gloria y Triunfo';
+0400 | 
+0401 |   const sharePages = buildSharePages(sections);
+0402 | 
+0403 |   const equivText =
+0404 |     hymn.numero_equivalente != null
+...
+0589 | 
+0590 |       {contentMode === 'lyrics' ? (
+0591 |   <>
+0592 |     {sections.length === 0 ? (
+0593 |           <Text style={{ color: c.muted, textAlign: 'center', marginTop: SPACING.xl }}>Letra no disponible</Text>
+0594 |         ) : (
+0595 |           <View testID="hymn-lyrics">
+...
+0596 |             {sections.map((s, i) => (
+0597 | <View key={i} style={{ marginBottom: s.kind === 'chorus' ? SPACING.xxl : SPACING.xl }}>
+0598 | {s.kind === 'chorus' ? (
+0599 |   <>
+...
+0600 |     <Text style={[styles.stanzaTitle, { color: c.brand, textAlign: hymnAlign }]}>CORO</Text>
+...
+0601 |     <View style={styles.chorusClean}>
+...
+0602 | <Text
+0603 |       style={[
+...
+0604 |         styles.verse,
+...
+0743 |                   { color: c.brand },
+0744 |                 ]}
+0745 |               >
+0746 |                 {bloque.tipo === 'coro'
+0747 |                   ? 'CORO'
+0748 |                   : `${bloque.numero ?? blocoIndex + 1}.`}
+0749 |               </Text>
+...
+0750 | 
+...
+0799 |           ))}
+0800 |         </View>
+0801 | 
+0802 |         {sections
+0803 |           .filter((sec, secIndex) => {
+0804 |             if (sec.kind === 'chorus') {
+0805 |               return !hymn.cifra_bloques?.some(
+...
+0806 |                 (b) => b.tipo === 'coro'
+0807 |               );
+...
+0808 |             }
+0809 | 
+...
+0811 | 
+0812 |             return !hymn.cifra_bloques?.some(
+0813 |               (b) =>
+0814 |                 b.tipo === 'estrofa' &&
+0815 |                 b.numero === numero
+0816 |             );
+0817 |           })
+...
+0828 |                   styles.chordBlockTitle,
+0829 |                   {
+0830 |                     color:
+0831 |                       sec.kind === 'chorus'
+0832 |                         ? '#0B6678'
+0833 |                         : c.brand,
+0834 |                     width: '100%',
+...
+0837 |                   },
+0838 |                 ]}
+0839 |               >
+0840 |                 {sec.kind === 'chorus'
+0841 |                   ? 'CORO'
+0842 |                   : `${sec.index ?? secIndex + 1}.`}
+0843 |               </Text>
+...
+0844 | 
+...
+1296 |   divider: { height: 2, width: 60, marginTop: 14, marginBottom: 14, opacity: 0.7 },
+1297 | stanzaTitle: { fontSize: 14, fontWeight: '800', fontStyle: 'italic', letterSpacing: 1.8, marginBottom: SPACING.md },
+1298 |   verse: {},
+1299 | chorusClean: { paddingVertical: 8, marginTop: 6, marginBottom: 10 },
+1300 | controlBar: { position: 'absolute', left: 0, right: 0, bottom: 0, flexDirection: 'row', paddingHorizontal: SPACING.md, paddingTop: 6, gap: 6, borderTopWidth: 1 },
+1301 |   ctrl: { minWidth: 44, height: 44, borderRadius: RADIUS.md, borderWidth: 1, alignItems: 'center', justifyContent: 'center', paddingHorizontal: 10 },
+1302 |   ctrlWide: { flex: 1, flexDirection: 'row', height: 44, borderRadius: RADIUS.md, borderWidth: 1, alignItems: 'center', justifyContent: 'center', gap: 6, paddingHorizontal: 8 },
+...
+
+--------------------------------------------
+ARQUIVO: src/components/ShareCard.tsx
+--------------------------------------------
+0001 | import React from 'react';
+0002 | import { View, Text, StyleSheet } from 'react-native';
+0003 | import { Section } from '@/src/lib/api';
+0004 | import { HymnFont, HymnAlign } from '@/src/lib/storage';
+0005 | 
+0006 | export interface SharePage {
+...
+0007 |   sections: Section[];
+0008 |   pageIndex: number;
+0009 |   pageTotal: number;
+0010 | }
+...
+0011 | 
+0012 | export function buildSharePages(sections: Section[]): SharePage[] {
+0013 |   // Compartilhamento em imagem:
+0014 |   // o hino inteiro deve ser renderizado em uma única imagem vertical.
+0015 |   // A altura do ShareCard cresce automaticamente conforme o conteúdo.
+...
+0016 |   return [
+0017 |     {
+0018 |       sections,
+0019 |       pageIndex: 1,
+0020 |       pageTotal: 1,
+0021 |     },
+...
+0167 |           </>
+0168 |         )}
+0169 | 
+0170 |         {page.sections.map((s, i) => {
+0171 |           const text = (s.text || '')
+0172 |             .replace(/\|+/g, '')
+0173 |             .trim();
+...
+0174 | 
+0175 |           if (s.kind === 'chorus') {
+0176 |             return (
+0177 |               <View
+0178 |                 key={i}
+...
+0179 |                 style={styles.chorusSection}
+0180 |               >
+0181 |                 <Text
+0182 |                   style={[
+...
+0183 |                     styles.chorusTitle,
+0184 |                     {
+0185 |                       color: colors.brand,
+0186 |                       textAlign: hymnAlign,
+...
+0187 |                     },
+0188 |                   ]}
+0189 |                 >
+0190 |                   CORO
+0191 |                 </Text>
+0192 | 
+0193 |                 <Text
+...
+0214 |           return (
+0215 |             <View
+0216 |               key={i}
+0217 |               style={styles.verseSection}
+0218 |             >
+0219 |               <View
+0220 |                 style={{
+...
+0330 |     marginTop: 4,
+0331 |   },
+0332 | 
+0333 |   verseSection: {
+0334 |     marginBottom: 24,
+0335 |   },
+0336 | 
+...
+0337 |   chorusSection: {
+0338 |     marginBottom: 32,
+0339 |   },
+0340 | 
+...
+0347 |     letterSpacing: 1.8,
+0348 |   },
+0349 | 
+0350 |   chorusTitle: {
+0351 |     fontSize: 14,
+0352 |     fontWeight: '800',
+0353 |     fontStyle: 'italic',
+...
+
+--------------------------------------------
+ARQUIVO: src/lib/api.ts
+--------------------------------------------
+0012 | };
+0013 | 
+0014 | export type Himnario = 'Gloria y Triunfo' | 'Himnos de Sión';
+0015 | export interface Bloque { tipo: 'estrofa' | 'coro'; numero?: number | null; texto: string; }
+0016 | export interface CifraSegmento {
+0017 |   texto: string;
+0018 |   acorde?: string | null;
+...
+0023 | }
+0024 | 
+0025 | export interface CifraBloque {
+0026 |   tipo: 'estrofa' | 'coro';
+0027 |   numero?: number | null;
+0028 |   lineas: CifraLinea[];
+0029 | }
+...
+0077 |   "Cena del Señor",
+0078 |   "Cielo - Gloriosa Esperanza",
+0079 |   "Consagración",
+0080 |   "Coros",
+0081 |   "Despedida",
+0082 |   "Escuela Dominical",
+0083 |   "Fe y Confianza",
+...
+0327 |   importFile: async () => { throw new Error('Importación CSV/XLSX no disponible en modo local. Use Restaurar backup (JSON).'); },
+0328 | };
+0329 | 
+0330 | export interface Section { kind:'verse'|'chorus'; index?:number; text:string; }
+0331 | export function getSections(hymn:{bloques?:Bloque[]|null;letra?:string}):Section[]{ if(hymn.bloques?.length) return hymn.bloques.map(b=>({kind:b.tipo==='coro'?'chorus':'verse',index:b.numero??undefined,text:b.texto||''})); return parseLetra(hymn.letra||''); }
+0332 | export function parseLetra(letra:string):Section[]{ if(!letra)return[]; const lines=letra.replace(/\r\n/g,'\n').split('\n'); const out:Section[]=[]; let current:Section|null=null; const push=()=>{if(current&&current.text.trim())out.push(current);current=null}; for(const raw of lines){const line=raw.trimEnd(),trimmed=line.trim(),m=/^(\d+)\.?$/.exec(trimmed),chorus=/^\s*CORO\s*:?\s*$/i.test(trimmed); if(m){push();current={kind:'verse',index:parseInt(m[1],10),text:''};}else if(chorus){push();current={kind:'chorus',text:''};}else if(trimmed===''){if(current)current.text+='\n';}else{if(!current)current={kind:'verse',text:''};current.text+=(current.text?'\n':'')+line;}} push(); return out; }
+0333 | 
+...
+...
+...
+
+============================================
+ 9. CONCLUSÃO
+============================================
+GT-052: BASE CONTÉM MARCADOR CORO
+GT-100: BASE CONTÉM MARCADOR CORO
+GT-188: ANOMALIA PRESENTE NA BASE
+GT-177: CANDIDATO DOCUMENTAL
+
+SE GT-052/GT-100 CONTINUAM ERRADOS NA TELA,
+O DEFEITO ESTÁ NA INTERPRETAÇÃO/RENDERIZAÇÃO.
+
+============================================
+ 10. IMUTABILIDADE
+============================================
+HASH ANTES:  214d87c16a3a1a18c9bd525c5474dff344fa78857762960084de51771262cbfb
+HASH DEPOIS: 214d87c16a3a1a18c9bd525c5474dff344fa78857762960084de51771262cbfb
+BASE ALTERADA: NÃO
+
+============================================
+ ETAPA 11B CONCLUÍDA
+ NENHUMA ALTERAÇÃO APLICADA
+============================================

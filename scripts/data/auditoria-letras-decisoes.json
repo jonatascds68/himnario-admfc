@@ -1,0 +1,628 @@
+{
+  "versao": "1.7",
+  "data": "2026-08-19",
+  "metodo": "detector estrutural + comparação hinológica + fontes externas",
+  "base_alterada": false,
+  "decisoes": [
+    {
+      "ids": [
+        "GT-040"
+      ],
+      "titulo": "EN LOS NEGOCIOS DEL REY",
+      "status": "CONFIRMADO_ERRO",
+      "acao": [
+        "separar_coro_da_estrofe_1"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "ids": [
+        "GT-052",
+        "SION-024"
+      ],
+      "titulo": "CRISTO LA ROCA",
+      "status": "CONFIRMADO_ERRO",
+      "acao": [
+        "separar_coro_da_estrofe_1",
+        "corrigir_truncamento_confiando_mis"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "ids": [
+        "GT-091",
+        "SION-041"
+      ],
+      "titulo": "YA SALVO SOY",
+      "status": "FALSO_POSITIVO",
+      "acao": [
+        "manter_coro"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "ids": [
+        "GT-100",
+        "SION-059"
+      ],
+      "titulo": "A LOS PIES DE JESUCRISTO",
+      "status": "CONFIRMADO_ERRO",
+      "acao": [
+        "remover_marcador_coro",
+        "incorporar_falso_coro_na_estrofe_1"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "ids": [
+        "GT-161"
+      ],
+      "titulo": "PECADOR, VEN AL DULCE JESÚS",
+      "status": "ESTROFES_FUNDIDAS",
+      "acao": [
+        "manter_coro",
+        "separar_estrofe_4_da_estrofe_3"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "ids": [
+        "GT-186"
+      ],
+      "titulo": "PRESENTIMOS DEL MUNDO DICHOSO",
+      "status": "ESTROFES_FUNDIDAS",
+      "acao": [
+        "manter_coro",
+        "separar_estrofe_4_da_estrofe_3"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "ids": [
+        "GT-259",
+        "SION-107"
+      ],
+      "titulo": "GUARDA EL CONTACTO",
+      "status": "ESTROFES_FUNDIDAS",
+      "acao": [
+        "manter_coro",
+        "separar_estrofe_4_da_estrofe_3"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "ids": [
+        "GT-277"
+      ],
+      "titulo": "LA PALABRA DIVINA",
+      "status": "ERRO_TEXTUAL_E_ESTRUTURAL",
+      "acao": [
+        "manter_coro",
+        "separar_estrofe_4_da_estrofe_3",
+        "corrigir_off_para_oir",
+        "revisar_variante_final_com_impresso"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "ids": [
+        "GT-283"
+      ],
+      "titulo": "EN LA MAÑANA",
+      "status": "CONFIRMADO_ERRO",
+      "acao": [
+        "separar_coro_da_estrofe_1"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "ids": [
+        "GT-284"
+      ],
+      "titulo": "SIGUE ORANDO",
+      "status": "ERRO_TEXTUAL_E_ESTRUTURAL",
+      "acao": [
+        "manter_coro",
+        "separar_estrofe_4_da_estrofe_3",
+        "corrigir_tu_z_eleva_para_tu_voz_eleva"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "ids": [
+        "GT-328"
+      ],
+      "titulo": "LLAMA",
+      "status": "ERRO_ESTRUTURAL_E_CONTAMINACAO",
+      "acao": [
+        "preservar_texto_introdutorio",
+        "separar_coro_da_estrofe_1",
+        "remover_contaminacao_do_hino_seguinte"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "ids": [
+        "GT-054"
+      ],
+      "titulo": "QUE HAGA EN TI SU VOLUNTAD",
+      "status": "CORROMPIDO_TRUNCADO",
+      "acao": [
+        "reconstruir_estrofe_1",
+        "remover_vazamento_hino_55",
+        "conferir_texto_integral"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "ids": [
+        "GT-082"
+      ],
+      "titulo": "VEN PECADOR",
+      "status": "CORROMPIDO_CONTAMINADO",
+      "acao": [
+        "investigar_fonte_antes_de_corrigir",
+        "remover_contaminacao_somente_apos_confirmacao",
+        "reconstruir_estrutura"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "ids": [
+        "GT-056",
+        "SION-026"
+      ],
+      "titulo": "¡OH, YO QUIERO ANDAR CON CRISTO!",
+      "status": "ERRO_ESTRUTURAL",
+      "acao": [
+        "marcar_primeira_estrofe_como_1",
+        "manter_coro",
+        "revisar_serIe_para_serle"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "ids": [
+        "GT-081",
+        "SION-038"
+      ],
+      "titulo": "LA BANDERA DE LA CRUZ",
+      "status": "ERRO_ESTRUTURAL",
+      "acao": [
+        "marcar_primeira_estrofe_como_1",
+        "manter_coro"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "ids": [
+        "GT-028",
+        "SION-015"
+      ],
+      "titulo": "MÁS DE JESÚS",
+      "status": "ESTROFES_FUNDIDAS",
+      "acao": [
+        "manter_coro",
+        "separar_estrofe_4_da_estrofe_3"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "ids": [
+        "GT-033",
+        "SION-016"
+      ],
+      "titulo": "GRANDE GOZO HAY EN MI ALMA",
+      "status": "ESTROFES_FUNDIDAS",
+      "acao": [
+        "manter_coro",
+        "separar_estrofe_4_da_estrofe_3"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "ids": [
+        "GT-042"
+      ],
+      "titulo": "HAY UN PRECIOSO MANANTIAL",
+      "status": "DUPLICACAO_INTERNA",
+      "acao": [
+        "reconstruir_registro_removendo_bloco_duplicado",
+        "preservar_coro",
+        "marcar_primeira_estrofe_como_1",
+        "conferir_fonte_antes_de_aplicar"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "ids": [
+        "GT-062"
+      ],
+      "titulo": "CON CRISTO YO IRÉ",
+      "status": "ERRO_TEXTUAL_E_ESTROFES_FUNDIDAS",
+      "acao": [
+        "separar_estrofe_4_da_estrofe_3",
+        "manter_coro",
+        "investigar_ocr_tu_voluntad_h",
+        "investigar_ocr_me_gula",
+        "nao_corrigir_texto_por_conjectura"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "ids": [
+        "GT-036",
+        "SION-019"
+      ],
+      "titulo": "ENTERA CONSAGRACIÓN",
+      "status": "ESTROFES_FUNDIDAS",
+      "acao": [
+        "manter_coro",
+        "separar_estrofe_5_da_estrofe_4",
+        "inicio_estrofe_5_toma_tu_mi_amor"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "ids": [
+        "GT-053",
+        "SION-025"
+      ],
+      "titulo": "EN LA CRUZ",
+      "status": "CONTAMINACAO_APOS_ESTROFE_4",
+      "acao": [
+        "manter_coro",
+        "preservar_estrofes_1_a_4",
+        "investigar_trecho_viviras_por_cristo",
+        "remover_trecho_somente_apos_confirmacao_da_fonte"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "ids": [
+        "GT-055"
+      ],
+      "titulo": "EL MUNDO PERDIDO",
+      "status": "ERRO_ESTRUTURAL_COM_ABREVIACOES_EDITORIAIS",
+      "acao": [
+        "marcar_primeira_estrofe_como_1",
+        "manter_coro",
+        "preservar_etc_ate_conferencia_da_fonte",
+        "nao_expandir_repeticoes_automaticamente"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "ids": [
+        "GT-079"
+      ],
+      "titulo": "PUEDO OÍR TU VOZ LLAMANDO",
+      "status": "ERRO_ESTRUTURAL_E_OCR",
+      "acao": [
+        "marcar_primeira_estrofe_como_1",
+        "manter_coro",
+        "preservar_repeticoes_duplas",
+        "investigar_ocr_seguire_e",
+        "investigar_ocr_medaras",
+        "conferir_fonte_antes_de_corrigir_texto"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "ids": [
+        "GT-137",
+        "SION-062"
+      ],
+      "titulo": "SIEMPRE ORAD",
+      "status": "OCR_E_PONTUACAO",
+      "acao": [
+        "manter_estrutura",
+        "manter_coro",
+        "normalizar_espacos_excessivos",
+        "investigar_pontuacao_lid_virgulas",
+        "conferir_fonte_antes_de_corrigir_texto"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "ids": [
+        "GT-138",
+        "SION-063"
+      ],
+      "titulo": "LA FUENTE SANADORA",
+      "status": "ERRO_DE_PONTUACAO",
+      "acao": [
+        "manter_estrutura",
+        "manter_coro",
+        "revisar_virgula_duplicada_apos_perdon",
+        "conferir_fonte"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "ids": [
+        "GT-170",
+        "SION-075"
+      ],
+      "titulo": "LA PALABRA HOY SEMBRADA",
+      "status": "OCR_PONTUAL",
+      "acao": [
+        "manter_estrutura_5_estrofes",
+        "preservar_repeticoes",
+        "revisar_ponto_isolado_apos_gracia",
+        "conferir_redacao_na_fonte_sem_modernizar_texto"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "ids": [
+        "GT-293",
+        "SION-102"
+      ],
+      "titulo": "PON TU CARGA EN JESÚS",
+      "status": "POSSIVEL_OCR_COM_ABREVIACOES_EDITORIAIS",
+      "acao": [
+        "manter_estrutura",
+        "manter_coro",
+        "preservar_etc",
+        "nao_expandir_repeticoes_automaticamente",
+        "investigar_tendre_libertare_podre_na_fonte",
+        "conferir_fonte_antes_de_corrigir"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "ids": [
+        "SION-246"
+      ],
+      "titulo": "CRISTIANOS, TODOS A PREPARARSE",
+      "status": "ERRO_ESTRUTURAL_NUMERACAO",
+      "acao": [
+        "marcar_primeira_estrofe_como_1",
+        "manter_coro",
+        "manter_estrofes_2_3_4",
+        "nao_alterar_texto_sem_nova_evidencia"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "ids": [
+        "GT-083",
+        "SION-037"
+      ],
+      "titulo": "¡OH, VEN SIN TARDAR!",
+      "status": "ERRO_ESTRUTURAL_E_TEXTUAL",
+      "acao": [
+        "marcar_primeira_estrofe_como_1",
+        "manter_estrutura_de_4_estrofes",
+        "investigar_e_corrigir_hoyes_para_hoy_es_se_confirmado_na_fonte",
+        "preservar_variantes_editoriais_de_cada_hinario"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "ids": [
+        "GT-182",
+        "SION-079"
+      ],
+      "titulo": "GLORIA A TI, JESÚS DIVINO",
+      "status": "NUMERACAO_IRREGULAR",
+      "acao": [
+        "normalizar_numero_2_removendo_ponto_residual",
+        "manter_estrutura_de_5_estrofes",
+        "manter_coro",
+        "nao_alterar_texto"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "ids": [
+        "SION-245"
+      ],
+      "titulo": "JESÚS ME AMA",
+      "status": "ERRO_ESTRUTURAL_NUMERACAO",
+      "acao": [
+        "marcar_primeira_estrofe_como_1",
+        "manter_coro",
+        "marcar_bloco_apos_coro_como_estrofe_2",
+        "marcar_bloco_final_como_estrofe_3",
+        "preservar_texto_transcrito_do_pdf"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "ids": [
+        "GT-069"
+      ],
+      "titulo": "PRECIOSO ES JESÚS",
+      "status": "ERROS_TEXTUAIS_CONFIRMAVEIS_POR_EQUIVALENTE",
+      "acao": [
+        "usar_SION_278_como_testemunho_comparativo",
+        "remover_ponto_residual_apos_salvador",
+        "investigar_le_alabo_vs_lo_alabo",
+        "corrigir_tris_para_triste_se_confirmado",
+        "investigar_un_corazon_vs_mi_corazon",
+        "investigar_un_eterno_hogar_vs_mi_eterno_hogar",
+        "preservar_estrutura_de_4_estrofes_e_coro",
+        "nao_copiar_integralmente_SION_278_sobre_GT_069"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "ids": [
+        "GT-177"
+      ],
+      "titulo": "NO TE DE TEMOR HABLAR POR CRISTO",
+      "status": "OCR_E_NUMERACAO",
+      "acao": [
+        "corrigir_note_para_no_te_se_confirmado_na_fonte",
+        "corrigir_marcador_S_para_5",
+        "investigar_el_para_Él_na_estrofe_4",
+        "manter_fiares_sem_modernizacao_automatica",
+        "preservar_5_estrofes_e_coro",
+        "conferir_fonte_antes_de_aplicar"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "ids": [
+        "GT-291"
+      ],
+      "titulo": "HOGAR CELESTIAL",
+      "status": "OCR_PONTUACAO",
+      "acao": [
+        "remover_ponto_duplicado_em_Creador_se_confirmado",
+        "investigar_acentuacao_de_si_em_exclamacoes",
+        "investigar_pontuacao_ausente_entre_sudor_e_Mas",
+        "preservar_estrutura_de_3_estrofes",
+        "nao_modernizar_vocabulario_antigo",
+        "conferir_fonte_antes_de_aplicar"
+      ],
+      "confianca": "media_alta"
+    },
+    {
+      "ids": [
+        "SION-007"
+      ],
+      "titulo": "LA SIEMBRA",
+      "status": "FALSO_POSITIVO_PROVAVEL",
+      "acao": [
+        "manter_letra_transcrita_do_pdf",
+        "manter_3_estrofes_e_coro",
+        "preservar_repeticoes_do_coro",
+        "nao_usar_GT_008_para_sobrescrever_SION_007",
+        "nenhuma_correcao_sem_nova_evidencia"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "ids": [
+        "SION-267"
+      ],
+      "titulo": "GLORIOSO GÓLGOTA",
+      "status": "ESTRUTURA_COM_SEGUNDO_CORO",
+      "acao": [
+        "manter_4_estrofes",
+        "manter_coro_principal_apos_estrofe_1",
+        "preservar_CORO_2_distinto_apos_estrofe_4",
+        "nao_fundir_coro_2_com_estrofe_4",
+        "nao_tratar_segundo_coro_como_contaminacao",
+        "preservar_texto_verificado_no_pdf"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "ids": [
+        "SION-293"
+      ],
+      "titulo": "EN SU PROFUNDO AMOR",
+      "status": "FALSO_POSITIVO_PROVAVEL",
+      "acao": [
+        "manter_3_estrofes_e_coro",
+        "preservar_texto_transcrito_e_verificado_no_pdf",
+        "investigar_reticencias_apos_Salvador_apenas_se_necessario",
+        "nao_remover_reticencias_sem_evidencia_editorial",
+        "nenhuma_correcao_textual_automatica"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "ids": [
+        "GT-104"
+      ],
+      "titulo": "MI CULPA EL LLEVO",
+      "status": "ESTRUTURA_LEGITIMA_COM_CORO_VARIANTE",
+      "acao": [
+        "manter_4_estrofes",
+        "manter_coro_principal_apos_estrofe_1",
+        "preservar_segundo_coro_apos_estrofe_4",
+        "tratar_segundo_coro_como_variante_contextual",
+        "preservar_abreviacoes_editoriais_etc",
+        "nao_expandir_etc_sem_fonte",
+        "nenhuma_correcao_textual_automatica"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "ids": [
+        "GT-151"
+      ],
+      "titulo": "SOLO DE JESÚS LA SANGRE",
+      "status": "FALSO_POSITIVO_ABREVIACOES_EDITORIAIS",
+      "acao": [
+        "manter_4_estrofes_e_coro",
+        "preservar_abreviacoes_editoriais_etc",
+        "nao_expandir_repeticoes_sem_fonte",
+        "nenhuma_correcao_estrutural_necessaria"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "ids": [
+        "GT-276"
+      ],
+      "titulo": "VOY A VER A CRISTO EL REY",
+      "status": "FALSO_POSITIVO_ABREVIACOES_EDITORIAIS",
+      "acao": [
+        "manter_4_estrofes_e_coro",
+        "preservar_abreviacoes_editoriais_etc",
+        "nao_expandir_repeticoes_sem_fonte",
+        "investigar_apenas_se_houver_evidencia_adicional",
+        "nenhuma_correcao_estrutural_automatica"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "ids": [
+        "GT-303"
+      ],
+      "titulo": "DE LA",
+      "status": "TITULO_TRUNCADO_E_OCR_TEXTUAL",
+      "acao": [
+        "marcar_primeira_estrofe_como_1",
+        "investigar_titulo_completo_na_fonte",
+        "investigar_vaivenY_como_juncao_ocr",
+        "nao_inventar_titulo",
+        "nao_corrigir_texto_sem_confirmacao_da_fonte",
+        "preservar_estrutura_provisoria_de_5_estrofes"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "ids": [
+        "GT-304"
+      ],
+      "titulo": "JERUSALÉN CELESTE",
+      "status": "ERRO_ESTRUTURAL_NUMERACAO",
+      "acao": [
+        "marcar_primeira_estrofe_como_1",
+        "manter_4_estrofes",
+        "preservar_texto",
+        "nao_alterar_ortografia_ou_vocabulario_sem_evidencia"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "ids": [
+        "SION-244"
+      ],
+      "titulo": "SI FUI MOTIVO DE DOLOR, SEÑOR",
+      "status": "ESTROFE_4_SEM_NUMERACAO",
+      "acao": [
+        "manter_estrofes_1_2_3",
+        "marcar_bloco_Escucha_oh_Dios_como_estrofe_4",
+        "preservar_Amén_Amén_no_final_da_estrofe_4",
+        "preservar_texto_verificado_no_pdf",
+        "nenhuma_correcao_textual_automatica"
+      ],
+      "confianca": "alta"
+    }
+  ],
+  "pendentes": [],
+  "observacao_v12": "Casos 01-05 da segunda rodada classificados. Nenhuma alteração aplicada à Base Mestre.",
+  "observacao_v13": "Casos 06-10 classificados. Base Mestre permanece intacta. Correções textuais duvidosas continuam condicionadas à conferência da fonte.",
+  "observacao_v14": "Casos 11-15 classificados. Nenhuma alteração aplicada à Base Mestre. OCR e variantes textuais permanecem condicionados à conferência das fontes.",
+  "observacao_v15": "Casos 16-20 classificados. SION-278 utilizado apenas como testemunho comparativo para GT-069. Nenhuma alteração aplicada à Base Mestre.",
+  "observacao_v16": "Casos 21-25 classificados. Falsos positivos preservados; segundo coro de SION-267 reconhecido como estrutura legítima. Nenhuma alteração aplicada à Base Mestre.",
+  "observacao_v17": "Casos 26-31 classificados. Encerrada a triagem manual dos 31 novos casos da auditoria global. Nenhuma alteração aplicada à Base Mestre."
+}

@@ -639,7 +639,7 @@ const insets = useSafeAreaInsets();
         <Text style={[styles.title, { color: c.brand }]}>{isNew ? 'Nuevo Himno' : 'Editar Himno'}</Text>
       </View>
       <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : undefined} style={{ flex: 1 }}>
-        <ScrollView contentContainerStyle={{ padding: SPACING.lg, paddingBottom: 140 }} keyboardShouldPersistTaps="handled">
+        <ScrollView contentContainerStyle={{ paddingHorizontal: SPACING.lg, paddingTop: SPACING.sm, paddingBottom: 125 }} keyboardShouldPersistTaps="handled">
           <Label c={c}>Himnario</Label>
           <View style={{ flexDirection: 'row', gap: SPACING.sm }}>
             {([GT, SN] as Hymn['himnario'][]).map((h) => {
@@ -665,7 +665,12 @@ const insets = useSafeAreaInsets();
           {/* CATEGORIES — ADMFC UI compacta */}
           <View style={styles.sectionHead}>
             <View>
-              <Label c={c}>Categorías</Label>
+              <View style={styles.sectionTitleRow}>
+            <Feather name="tag" size={17} color={c.brand} />
+            <Text style={[styles.sectionTitle, { color: c.brand }]}>
+              CATEGORÍAS
+            </Text>
+          </View>
               <Text style={[styles.sectionHint, { color: c.muted }]}>
                 {selectedCats.length
                   ? `${selectedCats.length} seleccionada${selectedCats.length === 1 ? '' : 's'}`
@@ -698,7 +703,7 @@ const insets = useSafeAreaInsets();
             style={[
               styles.categorySummary,
               {
-                backgroundColor: c.surfaceSecondary,
+                backgroundColor: c.surface,
                 borderColor: c.border,
               },
             ]}
@@ -863,14 +868,19 @@ const insets = useSafeAreaInsets();
           </View>
 
           {/* MUSICA / CIFRAS / AUDIO */}
-          <Label c={c}>Música, cifras y audio</Label>
+          <View style={styles.mainSectionTitleRow}>
+            <Feather name="music" size={18} color={c.brand} />
+            <Text style={[styles.mainSectionTitle, { color: c.brand }]}>
+              MÚSICA, CIFRAS Y AUDIO
+            </Text>
+          </View>
 
           <View
             style={[
               styles.musicBox,
               {
-                backgroundColor: c.surfaceSecondary,
-                borderColor: c.borderStrong,
+                backgroundColor: c.surface,
+                borderColor: c.border,
               },
             ]}
           >
@@ -1015,7 +1025,12 @@ const insets = useSafeAreaInsets();
           </View>
 
           {/* PROCEDENCIA / DERECHOS */}
-          <Label c={c}>Procedencia y derechos</Label>
+          <View style={styles.mainSectionTitleRow}>
+            <Feather name="shield" size={18} color={c.brand} />
+            <Text style={[styles.mainSectionTitle, { color: c.brand }]}>
+              PROCEDENCIA Y DERECHOS
+            </Text>
+          </View>
 
           <View
             style={[
@@ -1224,7 +1239,12 @@ const insets = useSafeAreaInsets();
           </View>
 
           {/* STRUCTURE / BLOCKS */}
-          <Label c={c}>Estructura de la letra</Label>
+          <View style={styles.mainSectionTitleRow}>
+            <Feather name="file-text" size={18} color={c.brand} />
+            <Text style={[styles.mainSectionTitle, { color: c.brand }]}>
+              ESTRUCTURA DE LA LETRA
+            </Text>
+          </View>
           <Text style={{ color: c.muted, fontSize: 12, marginBottom: SPACING.sm }}>
             Cada bloque es una ESTROFA o el CORO. Solo el CORO recibe el destaque visual.
           </Text>
@@ -1424,18 +1444,56 @@ const styles = StyleSheet.create({
   container: { flex: 1 },
   header: { flexDirection: 'row', alignItems: 'center', gap: SPACING.sm, paddingHorizontal: SPACING.md, paddingTop: SPACING.sm, paddingBottom: SPACING.md },
   title: { fontSize: 20, fontWeight: '800', letterSpacing: 1 },
-  input: { height: 50, borderRadius: RADIUS.md, borderWidth: 1, paddingHorizontal: SPACING.md, fontSize: 15 },
+  input: {
+    height: 46,
+    borderRadius: RADIUS.md,
+    borderWidth: 1,
+    paddingHorizontal: SPACING.md,
+    fontSize: 14.5,
+  },
   himBtn: { flex: 1, height: 46, borderRadius: RADIUS.md, borderWidth: 1, alignItems: 'center', justifyContent: 'center' },
   sectionHead: {
     flexDirection: 'row',
-    alignItems: 'flex-end',
+    alignItems: 'center',
     justifyContent: 'space-between',
     gap: SPACING.md,
+    marginTop: SPACING.lg,
+    marginBottom: 6,
   },
   sectionHint: {
-    fontSize: 11,
-    marginTop: -2,
-    marginBottom: 6,
+    fontSize: 11.5,
+    lineHeight: 16,
+    marginTop: 2,
+    marginBottom: 0,
+  },
+
+  sectionTitleRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 7,
+  },
+
+  sectionTitle: {
+    fontSize: 14,
+    lineHeight: 20,
+    fontWeight: '900',
+    letterSpacing: 0.7,
+  },
+
+  mainSectionTitleRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+    marginTop: SPACING.xl,
+    marginBottom: SPACING.sm,
+    minHeight: 24,
+  },
+
+  mainSectionTitle: {
+    fontSize: 14,
+    lineHeight: 20,
+    fontWeight: '900',
+    letterSpacing: 0.75,
   },
   manageBtn: {
     minHeight: 36,
@@ -1454,7 +1512,8 @@ const styles = StyleSheet.create({
   categorySummary: {
     borderWidth: 1,
     borderRadius: RADIUS.lg,
-    padding: SPACING.sm,
+    padding: SPACING.md,
+    minHeight: 58,
   },
   chipsWrapCompact: {
     flexDirection: 'row',
@@ -1462,11 +1521,11 @@ const styles = StyleSheet.create({
     gap: 6,
   },
   catChipCompact: {
-    minHeight: 30,
+    minHeight: 32,
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 4,
-    paddingHorizontal: 10,
+    gap: 5,
+    paddingHorizontal: 11,
     borderRadius: RADIUS.pill,
     borderWidth: 1,
   },
@@ -1480,7 +1539,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
   },
   emptyCategoryRow: {
-    minHeight: 40,
+    minHeight: 44,
     flexDirection: 'row',
     alignItems: 'center',
     gap: SPACING.sm,
@@ -1507,7 +1566,12 @@ const styles = StyleSheet.create({
   chipsWrap: { flexDirection: 'row', flexWrap: 'wrap', gap: SPACING.sm },
   catChip: { flexDirection: 'row', alignItems: 'center', gap: 4, height: 34, paddingHorizontal: 12, borderRadius: RADIUS.pill, borderWidth: 1 },
   addCatBtn: { width: 44, height: 44, borderRadius: RADIUS.md, borderWidth: 1, alignItems: 'center', justifyContent: 'center' },
-  blockCard: { borderRadius: RADIUS.md, borderWidth: 1.5, padding: SPACING.md, marginBottom: SPACING.sm },
+  blockCard: {
+    borderRadius: RADIUS.lg,
+    borderWidth: 1.5,
+    padding: SPACING.md,
+    marginBottom: SPACING.md,
+  },
   blockHead: { flexDirection: 'row', alignItems: 'center', gap: SPACING.sm, marginBottom: SPACING.sm },
   typeToggle: { paddingHorizontal: 10, height: 30, borderRadius: RADIUS.sm, alignItems: 'center', justifyContent: 'center' },
   numInput: { width: 48, height: 34, borderRadius: RADIUS.sm, borderWidth: 1, textAlign: 'center', paddingVertical: 0 },
@@ -1563,13 +1627,15 @@ const styles = StyleSheet.create({
     borderRadius: RADIUS.lg,
     padding: SPACING.md,
     gap: SPACING.sm,
+    marginBottom: SPACING.sm,
   },
 
   provenanceTitle: {
     fontSize: 14,
+    lineHeight: 20,
     fontWeight: '900',
-    letterSpacing: 0.5,
-    marginTop: 2,
+    letterSpacing: 0.3,
+    marginTop: 4,
   },
 
   provenanceChips: {
@@ -1588,6 +1654,8 @@ const styles = StyleSheet.create({
   provenanceNotes: {
     minHeight: 74,
     textAlignVertical: 'top',
+    paddingTop: 10,
+    paddingBottom: 10,
   },
 
   provenanceDivider: {
@@ -1611,21 +1679,23 @@ const styles = StyleSheet.create({
   },
 
   cardTitle: {
-    fontSize: 15,
+    fontSize: 16,
+    lineHeight: 21,
     fontWeight: '900',
+    letterSpacing: 0.1,
   },
 
   cardSubtitle: {
-    fontSize: 11,
+    fontSize: 11.5,
     lineHeight: 16,
-    marginTop: 1,
+    marginTop: 2,
   },
 
   musicBox: {
     borderRadius: RADIUS.lg,
     borderWidth: 1.5,
     padding: SPACING.md,
-    gap: SPACING.sm,
+    gap: 10,
     marginBottom: SPACING.sm,
   },
 
@@ -1674,8 +1744,21 @@ const styles = StyleSheet.create({
   linkBtn: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 6, height: 44, borderRadius: RADIUS.md, borderWidth: 1 },
   smallBtn: { paddingHorizontal: 12, height: 32, borderRadius: RADIUS.md, borderWidth: 1, alignItems: 'center', justifyContent: 'center' },
   footer: { position: 'absolute', left: 0, right: 0, bottom: 0, flexDirection: 'row', gap: SPACING.sm, padding: SPACING.md, borderTopWidth: 1 },
-  delBtn: { width: 52, height: 52, borderRadius: RADIUS.md, borderWidth: 1, alignItems: 'center', justifyContent: 'center' },
-  saveBtn: { flex: 1, height: 52, borderRadius: RADIUS.md, alignItems: 'center', justifyContent: 'center' },
+  delBtn: {
+    width: 54,
+    height: 52,
+    borderRadius: RADIUS.md,
+    borderWidth: 1.5,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  saveBtn: {
+    flex: 1,
+    height: 52,
+    borderRadius: RADIUS.md,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
   box: { flexDirection: 'row', alignItems: 'center', gap: SPACING.sm, paddingHorizontal: SPACING.md, paddingVertical: 8, borderRadius: RADIUS.lg, borderWidth: 1 },
   modalWrap: { flex: 1, backgroundColor: 'rgba(0,0,0,0.4)', justifyContent: 'flex-end' },
   modalCard: { height: '80%', borderTopLeftRadius: RADIUS.lg, borderTopRightRadius: RADIUS.lg, padding: SPACING.lg },

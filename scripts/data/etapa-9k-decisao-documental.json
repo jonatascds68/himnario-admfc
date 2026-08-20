@@ -1,0 +1,69 @@
+{
+  "etapa": "9K",
+  "descricao": "Decisão documental conservadora dos pendentes textuais.",
+  "base_total": 718,
+  "hash_base_mestre": "9a8636c6a249a783a091f4dfd7fb8f36910019cb235d865486e316609365f17d",
+  "grupos_confirmados": 1,
+  "grupos_bloqueados": 4,
+  "registros_com_correcao_confirmada": 2,
+  "decisoes": [
+    {
+      "ids": [
+        "GT-052",
+        "SION-024"
+      ],
+      "titulo": "CRISTO LA ROCA",
+      "status": "CORRECAO_DOCUMENTAL_CONFIRMADA",
+      "tipo": "TEXTUAL",
+      "trecho_atual": "confiando mis.",
+      "trecho_confirmado": "confiando más.",
+      "evidencia": [
+        "PDF original de Himnos de Sión",
+        "OCR independente da página correspondente",
+        "Leitura documental: \"Y en Cristo, fijo el ancla, confiando más.\""
+      ],
+      "acao_futura": "Substituir exclusivamente \"confiando mis.\" por \"confiando más.\" nos dois registros.",
+      "aplicar_agora": false
+    },
+    {
+      "ids": [
+        "GT-040"
+      ],
+      "titulo": "EN LOS NEGOCIOS DEL REY",
+      "status": "BLOQUEADO_FONTE",
+      "pendencia": "Pontuação/OCR em \"oid, .\"",
+      "aplicar_agora": false
+    },
+    {
+      "ids": [
+        "GT-056",
+        "SION-026"
+      ],
+      "titulo": "¡OH, YO QUIERO ANDAR CON CRISTO!",
+      "status": "BLOQUEADO_FONTE",
+      "pendencia": "Possível OCR \"serIe\"; provável \"serle\", ainda sem confirmação documental suficiente.",
+      "aplicar_agora": false
+    },
+    {
+      "ids": [
+        "GT-161"
+      ],
+      "titulo": "PECADOR, VEN AL DULCE JESÚS",
+      "status": "BLOQUEADO_FONTE",
+      "pendencia": "Pontuação/espaçamento em \"serás . De\".",
+      "aplicar_agora": false
+    },
+    {
+      "ids": [
+        "GT-283"
+      ],
+      "titulo": "EN LA MAÑANA",
+      "status": "BLOQUEADO_FONTE",
+      "pendencia": [
+        "Possível OCR \"tierra mis Allí\".",
+        "Acentuação/editorial de \"rio\"."
+      ],
+      "aplicar_agora": false
+    }
+  ]
+}

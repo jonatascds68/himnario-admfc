@@ -1,0 +1,94 @@
+============================================
+ AUDITORIA HINÁRIA - ETAPA 10Q
+ AUDITORIA FINAL DE ENCERRAMENTO
+ SOMENTE LEITURA
+============================================
+
+============================================
+ 1. CONTROLE DE INTEGRIDADE
+============================================
+HASH ATUAL:   214d87c16a3a1a18c9bd525c5474dff344fa78857762960084de51771262cbfb
+HASH OFICIAL: 214d87c16a3a1a18c9bd525c5474dff344fa78857762960084de51771262cbfb
+HASH: OK
+JSON: VÁLIDO
+TOTAL DE HINOS: 718
+TOTAL: OK (718)
+
+============================================
+ 2. IDENTIFICADORES
+============================================
+IDS TOTAIS: 718
+IDS ÚNICOS: 718
+IDS DUPLICADOS: ZERO — OK
+
+============================================
+ 3. VALIDAÇÃO DOCUMENTAL GT-041 / GT-042
+============================================
+GT-041: HAY UN PRECIOSO MANANTIAL | CORO: SIM
+GT-042: HAY UN PRECIOSO MANANTIAL | CORO: NÃO
+GT-041 contém "Lávame, Señor Jesús": SIM
+GT-042 contém "Lávame, Señor Jesús": NÃO
+GT-041 inicia na estrofe 1: SIM
+GT-042 inicia na estrofe 1: SIM
+GT-041 / GT-042: OK
+
+============================================
+ 4. VALIDAÇÃO DOCUMENTAL GT-283
+============================================
+GT-283: EN LA MAÑANA
+"tierra mis Allí": 0
+"tierra más allá": 1
+GT-283: OK
+
+============================================
+ 5. VARREDURA DOS RESÍDUOS HISTÓRICOS
+============================================
+"oid, ." -> 0
+"serIe" -> 0
+"serás . De" -> 0
+"referirIa" -> 0
+"buen .Jesús" -> 0
+"hazIo" -> 0
+"tierra mis Allí" -> 0
+TOTAL DE RESÍDUOS: 0
+RESÍDUOS: ZERO — OK
+
+============================================
+ 6. FALSOS POSITIVOS RESOLVIDOS
+============================================
+GT-182 SEQUÊNCIA: 1 -> 2 -> 3 -> 4 -> 5
+SION-079 SEQUÊNCIA: 1 -> 2 -> 3 -> 4 -> 5
+GT-182: OK
+SION-079: OK
+
+============================================
+ 7. SANIDADE GLOBAL DOS REGISTROS
+============================================
+TÍTULOS VAZIOS: 0
+LETRAS VAZIAS: 0
+
+============================================
+ 8. CONTROLE DE IMUTABILIDADE
+============================================
+HASH ANTES:  214d87c16a3a1a18c9bd525c5474dff344fa78857762960084de51771262cbfb
+HASH DEPOIS: 214d87c16a3a1a18c9bd525c5474dff344fa78857762960084de51771262cbfb
+BASE ALTERADA PELA 10Q: NÃO
+
+============================================
+ 9. RESULTADO FINAL
+============================================
+STATUS: APROVADO
+718 HINOS: OK
+IDS ÚNICOS: OK
+GT-041 / GT-042: OK
+GT-283: OK
+14 CORREÇÕES DA 10H: PRESERVADAS
+RESÍDUOS HISTÓRICOS: ZERO
+GT-182 / SION-079: OK
+HASH FINAL: 214d87c16a3a1a18c9bd525c5474dff344fa78857762960084de51771262cbfb
+
+============================================
+ ETAPA 10Q CONCLUÍDA
+ AUDITORIA FINAL EXECUTADA
+ BASE MESTRE NÃO ALTERADA
+============================================

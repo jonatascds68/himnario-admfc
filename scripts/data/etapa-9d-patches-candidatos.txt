@@ -1,0 +1,108 @@
+TOTAL DE PATCHES CANDIDATOS: 20
+
+============================================================
+GT-040 | EN LOS NEGOCIOS DEL REY
+TIPO: ESTRUTURAL
+ALTERAÇÃO DETECTADA: SIM
+AÇÃO: Inserir marcador CORO após a primeira estrofe.
+============================================================
+GT-052 | CRISTO LA ROCA
+TIPO: ESTRUTURAL
+ALTERAÇÃO DETECTADA: SIM
+AÇÃO: Separar coro da estrofe 1; correção textual permanece bloqueada.
+============================================================
+SION-024 | CRISTO LA ROCA
+TIPO: ESTRUTURAL
+ALTERAÇÃO DETECTADA: SIM
+AÇÃO: Separar coro da estrofe 1; correção textual permanece bloqueada.
+============================================================
+GT-100 | A LOS PIES DE JESUCRISTO
+TIPO: ESTRUTURAL
+ALTERAÇÃO DETECTADA: SIM
+AÇÃO: Remover falso marcador CORO; preservar o texto como continuação da estrofe 1.
+============================================================
+SION-059 | A LOS PIES DE JESUCRISTO
+TIPO: ESTRUTURAL
+ALTERAÇÃO DETECTADA: SIM
+AÇÃO: Remover falso marcador CORO; preservar o texto como continuação da estrofe 1.
+============================================================
+GT-161 | PECADOR, VEN AL DULCE JESÚS
+TIPO: ESTRUTURAL
+ALTERAÇÃO DETECTADA: SIM
+AÇÃO: Separar estrofe 4 da estrofe 3.
+============================================================
+GT-186 | PRESENTIMOS DEL MUNDO DICHOSO
+TIPO: ESTRUTURAL
+ALTERAÇÃO DETECTADA: SIM
+AÇÃO: Separar estrofe 4 da estrofe 3.
+============================================================
+GT-259 | GUARDA EL CONTACTO
+TIPO: ESTRUTURAL
+ALTERAÇÃO DETECTADA: SIM
+AÇÃO: Separar estrofe 4 da estrofe 3.
+============================================================
+SION-107 | GUARDA EL CONTACTO
+TIPO: ESTRUTURAL
+ALTERAÇÃO DETECTADA: SIM
+AÇÃO: Separar estrofe 4 da estrofe 3.
+============================================================
+GT-283 | EN LA MAÑANA
+TIPO: ESTRUTURAL
+ALTERAÇÃO DETECTADA: SIM
+AÇÃO: Separar coro da estrofe 1; possível OCR permanece bloqueado.
+============================================================
+GT-056 | ¡OH, YO QUIERO ANDAR CON CRISTO!
+TIPO: ESTRUTURAL
+ALTERAÇÃO DETECTADA: SIM
+AÇÃO: Adicionar número 1 à primeira estrofe; possível OCR serIe permanece bloqueado.
+============================================================
+SION-026 | ¡OH! YO QUIERO ANDAR CON CRISTO
+TIPO: ESTRUTURAL
+ALTERAÇÃO DETECTADA: SIM
+AÇÃO: Adicionar número 1 à primeira estrofe; possível OCR serIe permanece bloqueado.
+============================================================
+GT-081 | LA BANDERA DE LA CRUZ
+TIPO: ESTRUTURAL
+ALTERAÇÃO DETECTADA: SIM
+AÇÃO: Adicionar número 1 à primeira estrofe.
+============================================================
+SION-038 | LA BANDERA DE LA CRUZ
+TIPO: ESTRUTURAL
+ALTERAÇÃO DETECTADA: SIM
+AÇÃO: Adicionar número 1 à primeira estrofe.
+============================================================
+GT-028 | MÁS DE JESÚS
+TIPO: ESTRUTURAL
+ALTERAÇÃO DETECTADA: SIM
+AÇÃO: Separar estrofe 4 da estrofe 3.
+============================================================
+SION-015 | MÁS DE JESÚS
+TIPO: ESTRUTURAL
+ALTERAÇÃO DETECTADA: SIM
+AÇÃO: Separar estrofe 4 da estrofe 3.
+============================================================
+GT-033 | GRANDE GOZO HAY EN MI ALMA HOY
+TIPO: ESTRUTURAL
+ALTERAÇÃO DETECTADA: SIM
+AÇÃO: Separar estrofe 4 da estrofe 3.
+============================================================
+SION-016 | GRANDE GOZO HAY EN MI ALMA
+TIPO: ESTRUTURAL
+ALTERAÇÃO DETECTADA: SIM
+AÇÃO: Separar estrofe 4 da estrofe 3.
+============================================================
+GT-036 | ENTERA CONSAGRACIÓN
+TIPO: ESTRUTURAL
+ALTERAÇÃO DETECTADA: SIM
+AÇÃO: Separar estrofe 5 da estrofe 4.
+============================================================
+SION-019 | ENTERA CONSAGRACIÓN
+TIPO: ESTRUTURAL
+ALTERAÇÃO DETECTADA: SIM
+AÇÃO: Separar estrofe 5 da estrofe 4.
+
+============================================================
+PATCHES GERADOS: 20
+PATCHES SEM ALTERAÇÃO DETECTADA: 0
+ARQUIVO: scripts/data/etapa-9d-patches-candidatos.json
+BASE MESTRE NÃO ALTERADA.

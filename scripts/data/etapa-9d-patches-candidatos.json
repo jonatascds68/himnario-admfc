@@ -1,0 +1,187 @@
+{
+  "etapa": "9D",
+  "base_alterada": false,
+  "total": 20,
+  "patches": [
+    {
+      "id": "GT-040",
+      "titulo": "EN LOS NEGOCIOS DEL REY",
+      "tipo": "ESTRUTURAL",
+      "descricao": "Inserir marcador CORO após a primeira estrofe.",
+      "letra_original": "1\nSoy peregrino aquí, mi hogar lejano está, En la mansión de luz, eterna paz y amor: Embajador yo soy del reino celestial\nEn los negocios de mi Rey.\nEste mensaje fiel oid, . Que dijo ya celeste voz:\n«Reconciliaos ya» – dice el Señor y Rey,\n¡Reconciliaos hoy con Dios!\n2\nQue del pecado vil arrepentidos ya, Han de reinar con él los que obedientes son:\nEs el mensaje fiel que debo proclamar, En los negocios de mi Rey.\n3\nMi hogar más bello es que el Valle de Sarón, Eterno gozo y paz reinan por siempre en él, Y allí Jesús dará eterna habitación;\nEs el mensaje, de mi Rey.",
+      "letra_candidata": "1\nSoy peregrino aquí, mi hogar lejano está, En la mansión de luz, eterna paz y amor: Embajador yo soy del reino celestial\nEn los negocios de mi Rey.\nCORO:\nEste mensaje fiel oid, . Que dijo ya celeste voz:\n«Reconciliaos ya» – dice el Señor y Rey,\n¡Reconciliaos hoy con Dios!\n2\nQue del pecado vil arrepentidos ya, Han de reinar con él los que obedientes son:\nEs el mensaje fiel que debo proclamar, En los negocios de mi Rey.\n3\nMi hogar más bello es que el Valle de Sarón, Eterno gozo y paz reinan por siempre en él, Y allí Jesús dará eterna habitación;\nEs el mensaje, de mi Rey.",
+      "alterado": true
+    },
+    {
+      "id": "GT-052",
+      "titulo": "CRISTO LA ROCA",
+      "tipo": "ESTRUTURAL",
+      "descricao": "Separar coro da estrofe 1; correção textual permanece bloqueada.",
+      "letra_original": "1\nEn las olas inmensas de embravecido mar, Que asaltan de mi alma la pobre embarcación, De rodillas a Cristo clamé, y el huracán Deshecho fue al instante a la voz de Dios.\nEs Cristo la Roca, el ancla de mi fe; Los males, lamentos, y ayes de temor,\nTerminan por siempre, con mi supremo Rey; Es Jesucristo mi refugio.\n2\nMe guarda de peligros, de pruebas, de dolor; Él manda que los vientos no agiten tempestad, Los mares se detienen, la ola reposó,\nY en Cristo fijo el ancla, confiando mis.\n3\nMi dulce Salvador, sí, mi hermoso amigo y Dios, Que libra de tristezas y aleja amarga hiel:\nPor fe yo iré al cielo, mansión del ser de amor, La fuente inagotable de dicha y bien.",
+      "letra_candidata": "1\nEn las olas inmensas de embravecido mar, Que asaltan de mi alma la pobre embarcación, De rodillas a Cristo clamé, y el huracán Deshecho fue al instante a la voz de Dios.\nCORO:\nEs Cristo la Roca, el ancla de mi fe; Los males, lamentos, y ayes de temor,\nTerminan por siempre, con mi supremo Rey; Es Jesucristo mi refugio.\n2\nMe guarda de peligros, de pruebas, de dolor; Él manda que los vientos no agiten tempestad, Los mares se detienen, la ola reposó,\nY en Cristo fijo el ancla, confiando mis.\n3\nMi dulce Salvador, sí, mi hermoso amigo y Dios, Que libra de tristezas y aleja amarga hiel:\nPor fe yo iré al cielo, mansión del ser de amor, La fuente inagotable de dicha y bien.",
+      "alterado": true
+    },
+    {
+      "id": "SION-024",
+      "titulo": "CRISTO LA ROCA",
+      "tipo": "ESTRUTURAL",
+      "descricao": "Separar coro da estrofe 1; correção textual permanece bloqueada.",
+      "letra_original": "1\nEn las olas inmensas de embravecido mar, Que asaltan de mi alma la pobre embarcación, De rodillas a Cristo clamé, y el huracán Deshecho fue al instante a la voz de Dios.\nEs Cristo la Roca, el ancla de mi fe; Los males, lamentos, y ayes de temor,\nTerminan por siempre, con mi supremo Rey; Es Jesucristo mi refugio.\n2\nMe guarda de peligros, de pruebas, de dolor; Él manda que los vientos no agiten tempestad, Los mares se detienen, la ola reposó,\nY en Cristo fijo el ancla, confiando mis.\n3\nMi dulce Salvador, sí, mi hermoso amigo y Dios, Que libra de tristezas y aleja amarga hiel:\nPor fe yo iré al cielo, mansión del ser de amor, La fuente inagotable de dicha y bien.",
+      "letra_candidata": "1\nEn las olas inmensas de embravecido mar, Que asaltan de mi alma la pobre embarcación, De rodillas a Cristo clamé, y el huracán Deshecho fue al instante a la voz de Dios.\nCORO:\nEs Cristo la Roca, el ancla de mi fe; Los males, lamentos, y ayes de temor,\nTerminan por siempre, con mi supremo Rey; Es Jesucristo mi refugio.\n2\nMe guarda de peligros, de pruebas, de dolor; Él manda que los vientos no agiten tempestad, Los mares se detienen, la ola reposó,\nY en Cristo fijo el ancla, confiando mis.\n3\nMi dulce Salvador, sí, mi hermoso amigo y Dios, Que libra de tristezas y aleja amarga hiel:\nPor fe yo iré al cielo, mansión del ser de amor, La fuente inagotable de dicha y bien.",
+      "alterado": true
+    },
+    {
+      "id": "GT-100",
+      "titulo": "A LOS PIES DE JESUCRISTO",
+      "tipo": "ESTRUTURAL",
+      "descricao": "Remover falso marcador CORO; preservar o texto como continuação da estrofe 1.",
+      "letra_original": "1\nA los pies de Jesucristo Es el sitio aquí mejor, Escuchando cual María Las palabras de su amor.\nCORO:\nA los pies de Jesucristo Gozaré su comunión, Pues su mano fiel y tierna\nMe ha provisto protección.\n2\nA los pies de Jesucristo Hallo tierna compasión; El quitó ya mis afanes,\nYa me ha dado bendición.\n¡Puedo yo decirle a Cristo Mis cuidados y temor!\nY con él tendrá mi alma Gozo, paz, eterno amor.\n3\nA los pies de Jesucristo Yo tendré su bendición; En sus ojos hay dulzura Y en su seno protección.\n¡Qué feliz es el momento Que yo paso junto a ti! Ya anhelo el encuentro Cuando vengas tú por mí.",
+      "letra_candidata": "1\nA los pies de Jesucristo Es el sitio aquí mejor, Escuchando cual María Las palabras de su amor.\nA los pies de Jesucristo Gozaré su comunión, Pues su mano fiel y tierna\nMe ha provisto protección.\n2\nA los pies de Jesucristo Hallo tierna compasión; El quitó ya mis afanes,\nYa me ha dado bendición.\n¡Puedo yo decirle a Cristo Mis cuidados y temor!\nY con él tendrá mi alma Gozo, paz, eterno amor.\n3\nA los pies de Jesucristo Yo tendré su bendición; En sus ojos hay dulzura Y en su seno protección.\n¡Qué feliz es el momento Que yo paso junto a ti! Ya anhelo el encuentro Cuando vengas tú por mí.",
+      "alterado": true
+    },
+    {
+      "id": "SION-059",
+      "titulo": "A LOS PIES DE JESUCRISTO",
+      "tipo": "ESTRUTURAL",
+      "descricao": "Remover falso marcador CORO; preservar o texto como continuação da estrofe 1.",
+      "letra_original": "1\nA los pies de Jesucristo Es el sitio aquí mejor, Escuchando cual María Las palabras de su amor.\nCORO:\nA los pies de Jesucristo Gozaré su comunión, Pues su mano fiel y tierna\nMe ha provisto protección.\n2\nA los pies de Jesucristo Hallo tierna compasión; El quitó ya mis afanes,\nYa me ha dado bendición.\n¡Puedo yo decirle a Cristo Mis cuidados y temor!\nY con él tendrá mi alma Gozo, paz, eterno amor.\n3\nA los pies de Jesucristo Yo tendré su bendición; En sus ojos hay dulzura Y en su seno protección.\n¡Qué feliz es el momento Que yo paso junto a ti! Ya anhelo el encuentro Cuando vengas tú por mí.",
+      "letra_candidata": "1\nA los pies de Jesucristo Es el sitio aquí mejor, Escuchando cual María Las palabras de su amor.\nA los pies de Jesucristo Gozaré su comunión, Pues su mano fiel y tierna\nMe ha provisto protección.\n2\nA los pies de Jesucristo Hallo tierna compasión; El quitó ya mis afanes,\nYa me ha dado bendición.\n¡Puedo yo decirle a Cristo Mis cuidados y temor!\nY con él tendrá mi alma Gozo, paz, eterno amor.\n3\nA los pies de Jesucristo Yo tendré su bendición; En sus ojos hay dulzura Y en su seno protección.\n¡Qué feliz es el momento Que yo paso junto a ti! Ya anhelo el encuentro Cuando vengas tú por mí.",
+      "alterado": true
+    },
+    {
+      "id": "GT-161",
+      "titulo": "PECADOR, VEN AL DULCE JESÚS",
+      "tipo": "ESTRUTURAL",
+      "descricao": "Separar estrofe 4 da estrofe 3.",
+      "letra_original": "1\nPecador, ven al dulce Jesús, Y feliz para Siempre serás:\nSi en verdad le quisieres tener, Al divino Señor hallarás.\nCORO:\n||Ven a él, ven a él,\nQue te espera tu buen Salvador.||\n2\nSi cual hijo que necio pecó\nVas buscando a sus pies compasión, Tierno Padre en Jesús hallarás,\nY tendrás en sus brazos perdón.\n3\nSi enfermo te sientes morir, El será tu Doctor celestial;\nY hallarás en su sangre también Medicina que cure tu mal.\nOvejuela que huyó del redil,\n¡He aquí tu benigno Señor!\nY en los hombros llevada serás . De tan dulce y amante Pastor.",
+      "letra_candidata": "1\nPecador, ven al dulce Jesús, Y feliz para Siempre serás:\nSi en verdad le quisieres tener, Al divino Señor hallarás.\nCORO:\n||Ven a él, ven a él,\nQue te espera tu buen Salvador.||\n2\nSi cual hijo que necio pecó\nVas buscando a sus pies compasión, Tierno Padre en Jesús hallarás,\nY tendrás en sus brazos perdón.\n3\nSi enfermo te sientes morir, El será tu Doctor celestial;\nY hallarás en su sangre también Medicina que cure tu mal.\n4\nOvejuela que huyó del redil,\n¡He aquí tu benigno Señor!\nY en los hombros llevada serás . De tan dulce y amante Pastor.",
+      "alterado": true
+    },
+    {
+      "id": "GT-186",
+      "titulo": "PRESENTIMOS DEL MUNDO DICHOSO",
+      "tipo": "ESTRUTURAL",
+      "descricao": "Separar estrofe 4 da estrofe 3.",
+      "letra_original": "1\nPresentimos del mundo dichoso. Los placeres que Dios nos dará; El país lo creemos hermoso: Mas hallarnos allí ¿qué será?\nCORO:\n¿Qué será? ¿Qué será?\nMas hallarnos allí ¿qué será?\n¿Qué será? ¿Qué será?\nMas hallarnos allí ¿qué será?\n2\nEsperamos el gozo, la gloria, La grandeza sin fin que tendrá El mortal que ganó la victoria: Mas hallarnos allí ¿qué será?\n3\nAnhelamos el día esplendente Que en el santo país brillará Por Jesús el Cordero inocente: Mas hallarnos allí ¿qué será?\nBien sabemos que llanto, ni duelo, Ni pecados, ni males habrá\nEn la casa de Dios en el cielo: Mas hallarnos allí ¿qué será?",
+      "letra_candidata": "1\nPresentimos del mundo dichoso. Los placeres que Dios nos dará; El país lo creemos hermoso: Mas hallarnos allí ¿qué será?\nCORO:\n¿Qué será? ¿Qué será?\nMas hallarnos allí ¿qué será?\n¿Qué será? ¿Qué será?\nMas hallarnos allí ¿qué será?\n2\nEsperamos el gozo, la gloria, La grandeza sin fin que tendrá El mortal que ganó la victoria: Mas hallarnos allí ¿qué será?\n3\nAnhelamos el día esplendente Que en el santo país brillará Por Jesús el Cordero inocente: Mas hallarnos allí ¿qué será?\n4\nBien sabemos que llanto, ni duelo, Ni pecados, ni males habrá\nEn la casa de Dios en el cielo: Mas hallarnos allí ¿qué será?",
+      "alterado": true
+    },
+    {
+      "id": "GT-259",
+      "titulo": "GUARDA EL CONTACTO",
+      "tipo": "ESTRUTURAL",
+      "descricao": "Separar estrofe 4 da estrofe 3.",
+      "letra_original": "1\n¿Quieres sobre el mundo ser un vencedor?\n¿Quieres tú cantar aún cuando hay dolor?\n¿Quieres ser alegre cual fiel luchador? Guarda el contacto con el Salvador.\nCORO:\nGuarda el contacto con el Salvador, Luego las tinieblas no te cubrirán; Por la senda alegre tú caminarás,\nA causa del contacto con el Salvador.\n2\nEn el mundo hay muchos, tristes en pecar, Cuyos corazones lloran de pesar;\nDales el mensaje, no hay que callar, Con Dios el contacto debes de guardar.\n3\n¿Quieres tú con Dios la comunión tener?\n¿Y su gloria siempre en ti permanecer?\n¿Que el mundo a Cristo pueda en ti hoy ver?\nGuarda el contacto con el Supremo Ser.\nDeja que el Espíritu implante en ti La humildad de Cristo y su santo amor; Ora siempre y vela, que Jesús vendrá;\nGuarda el contacto con el Salvador.",
+      "letra_candidata": "1\n¿Quieres sobre el mundo ser un vencedor?\n¿Quieres tú cantar aún cuando hay dolor?\n¿Quieres ser alegre cual fiel luchador? Guarda el contacto con el Salvador.\nCORO:\nGuarda el contacto con el Salvador, Luego las tinieblas no te cubrirán; Por la senda alegre tú caminarás,\nA causa del contacto con el Salvador.\n2\nEn el mundo hay muchos, tristes en pecar, Cuyos corazones lloran de pesar;\nDales el mensaje, no hay que callar, Con Dios el contacto debes de guardar.\n3\n¿Quieres tú con Dios la comunión tener?\n¿Y su gloria siempre en ti permanecer?\n¿Que el mundo a Cristo pueda en ti hoy ver?\nGuarda el contacto con el Supremo Ser.\n4\nDeja que el Espíritu implante en ti La humildad de Cristo y su santo amor; Ora siempre y vela, que Jesús vendrá;\nGuarda el contacto con el Salvador.",
+      "alterado": true
+    },
+    {
+      "id": "SION-107",
+      "titulo": "GUARDA EL CONTACTO",
+      "tipo": "ESTRUTURAL",
+      "descricao": "Separar estrofe 4 da estrofe 3.",
+      "letra_original": "1\n¿Quieres sobre el mundo ser un vencedor?\n¿Quieres tú cantar aún cuando hay dolor?\n¿Quieres ser alegre cual fiel luchador? Guarda el contacto con el Salvador.\nCORO:\nGuarda el contacto con el Salvador, Luego las tinieblas no te cubrirán; Por la senda alegre tú caminarás,\nA causa del contacto con el Salvador.\n2\nEn el mundo hay muchos, tristes en pecar, Cuyos corazones lloran de pesar;\nDales el mensaje, no hay que callar, Con Dios el contacto debes de guardar.\n3\n¿Quieres tú con Dios la comunión tener?\n¿Y su gloria siempre en ti permanecer?\n¿Que el mundo a Cristo pueda en ti hoy ver?\nGuarda el contacto con el Supremo Ser.\nDeja que el Espíritu implante en ti La humildad de Cristo y su santo amor; Ora siempre y vela, que Jesús vendrá;\nGuarda el contacto con el Salvador.",
+      "letra_candidata": "1\n¿Quieres sobre el mundo ser un vencedor?\n¿Quieres tú cantar aún cuando hay dolor?\n¿Quieres ser alegre cual fiel luchador? Guarda el contacto con el Salvador.\nCORO:\nGuarda el contacto con el Salvador, Luego las tinieblas no te cubrirán; Por la senda alegre tú caminarás,\nA causa del contacto con el Salvador.\n2\nEn el mundo hay muchos, tristes en pecar, Cuyos corazones lloran de pesar;\nDales el mensaje, no hay que callar, Con Dios el contacto debes de guardar.\n3\n¿Quieres tú con Dios la comunión tener?\n¿Y su gloria siempre en ti permanecer?\n¿Que el mundo a Cristo pueda en ti hoy ver?\nGuarda el contacto con el Supremo Ser.\n4\nDeja que el Espíritu implante en ti La humildad de Cristo y su santo amor; Ora siempre y vela, que Jesús vendrá;\nGuarda el contacto con el Salvador.",
+      "alterado": true
+    },
+    {
+      "id": "GT-283",
+      "titulo": "EN LA MAÑANA",
+      "tipo": "ESTRUTURAL",
+      "descricao": "Separar coro da estrofe 1; possível OCR permanece bloqueado.",
+      "letra_original": "1\nEn el mundo la Iglesia Peregrina ha de estar; Anhelante ella espera Su feliz, eterno hogar.\nNos veremos, nos veremos Pronto en gloria, pronto en gloria, Nos veremos en la tierra mis Allí; Nos veremos, nos veremos Pronto en gloria, pronto en gloria, Junto al rio cristalino más Allá.\n2\nNada aquí es permanente, Todo ha de terminar; Mas miramos adelante, En el cielo nuestro hogar.\n3\nLas familias en la tierra Se desunen al morir; Mas esperan la mañana En que se han de reunir.\n4\nCon Jesús cual unos reyes Pronto habremos de estar; Juntos, miles de millares, Con Jesús para morar.",
+      "letra_candidata": "1\nEn el mundo la Iglesia Peregrina ha de estar; Anhelante ella espera Su feliz, eterno hogar.\nCORO:\nNos veremos, nos veremos Pronto en gloria, pronto en gloria, Nos veremos en la tierra mis Allí; Nos veremos, nos veremos Pronto en gloria, pronto en gloria, Junto al rio cristalino más Allá.\n2\nNada aquí es permanente, Todo ha de terminar; Mas miramos adelante, En el cielo nuestro hogar.\n3\nLas familias en la tierra Se desunen al morir; Mas esperan la mañana En que se han de reunir.\n4\nCon Jesús cual unos reyes Pronto habremos de estar; Juntos, miles de millares, Con Jesús para morar.",
+      "alterado": true
+    },
+    {
+      "id": "GT-056",
+      "titulo": "¡OH, YO QUIERO ANDAR CON CRISTO!",
+      "tipo": "ESTRUTURAL",
+      "descricao": "Adicionar número 1 à primeira estrofe; possível OCR serIe permanece bloqueado.",
+      "letra_original": "¡Oh!, yo quiero andar con Cristo.\nQuiero oír su tierna voz, Meditar en su palabra, Siempre andar de él en pos: Consagrar a él mi vida, Cumplir fiel su voluntad,\nY algún día con mi Cristo Gozaré la claridad.\nCORO:\n¡Oh, sí, yo quiero andar con Cristo!\n¡Oh, sí, yo quiero vivir con Cristo!\n¡Oh, sí, yo quiero morir con Cristo!\nQuiero serIe un testigo fiel.\n2\n¡Oh!, yo quiero andar con Cristo, Él vivió en santidad,\nEn la Biblia yo lo leo\nY yo sé que es la verdad. Cristo era santo en todo, El Cordero de la cruz;\nY yo anhelo ser cristiano, Seguidor de mi Jesús.\n3\n¡Oh!, yo quiero andar con Cristo De mi senda él es la luz, Dejaré el perverso mundo\nY cargar aquí mi cruz. Este mundo nada ofrece, Cristo ofrece salvación;\nY es mi única esperanza Gozar vida eterna en Sion.",
+      "letra_candidata": "1\n¡Oh!, yo quiero andar con Cristo.\nQuiero oír su tierna voz, Meditar en su palabra, Siempre andar de él en pos: Consagrar a él mi vida, Cumplir fiel su voluntad,\nY algún día con mi Cristo Gozaré la claridad.\nCORO:\n¡Oh, sí, yo quiero andar con Cristo!\n¡Oh, sí, yo quiero vivir con Cristo!\n¡Oh, sí, yo quiero morir con Cristo!\nQuiero serIe un testigo fiel.\n2\n¡Oh!, yo quiero andar con Cristo, Él vivió en santidad,\nEn la Biblia yo lo leo\nY yo sé que es la verdad. Cristo era santo en todo, El Cordero de la cruz;\nY yo anhelo ser cristiano, Seguidor de mi Jesús.\n3\n¡Oh!, yo quiero andar con Cristo De mi senda él es la luz, Dejaré el perverso mundo\nY cargar aquí mi cruz. Este mundo nada ofrece, Cristo ofrece salvación;\nY es mi única esperanza Gozar vida eterna en Sion.",
+      "alterado": true
+    },
+    {
+      "id": "SION-026",
+      "titulo": "¡OH! YO QUIERO ANDAR CON CRISTO",
+      "tipo": "ESTRUTURAL",
+      "descricao": "Adicionar número 1 à primeira estrofe; possível OCR serIe permanece bloqueado.",
+      "letra_original": "¡Oh!, yo quiero andar con Cristo.\nQuiero oír su tierna voz, Meditar en su palabra, Siempre andar de él en pos: Consagrar a él mi vida, Cumplir fiel su voluntad,\nY algún día con mi Cristo Gozaré la claridad.\nCORO:\n¡Oh, sí, yo quiero andar con Cristo!\n¡Oh, sí, yo quiero vivir con Cristo!\n¡Oh, sí, yo quiero morir con Cristo!\nQuiero serIe un testigo fiel.\n2\n¡Oh!, yo quiero andar con Cristo, Él vivió en santidad,\nEn la Biblia yo lo leo\nY yo sé que es la verdad. Cristo era santo en todo, El Cordero de la cruz;\nY yo anhelo ser cristiano, Seguidor de mi Jesús.\n3\n¡Oh!, yo quiero andar con Cristo De mi senda él es la luz, Dejaré el perverso mundo\nY cargar aquí mi cruz. Este mundo nada ofrece, Cristo ofrece salvación;\nY es mi única esperanza Gozar vida eterna en Sion.",
+      "letra_candidata": "1\n¡Oh!, yo quiero andar con Cristo.\nQuiero oír su tierna voz, Meditar en su palabra, Siempre andar de él en pos: Consagrar a él mi vida, Cumplir fiel su voluntad,\nY algún día con mi Cristo Gozaré la claridad.\nCORO:\n¡Oh, sí, yo quiero andar con Cristo!\n¡Oh, sí, yo quiero vivir con Cristo!\n¡Oh, sí, yo quiero morir con Cristo!\nQuiero serIe un testigo fiel.\n2\n¡Oh!, yo quiero andar con Cristo, Él vivió en santidad,\nEn la Biblia yo lo leo\nY yo sé que es la verdad. Cristo era santo en todo, El Cordero de la cruz;\nY yo anhelo ser cristiano, Seguidor de mi Jesús.\n3\n¡Oh!, yo quiero andar con Cristo De mi senda él es la luz, Dejaré el perverso mundo\nY cargar aquí mi cruz. Este mundo nada ofrece, Cristo ofrece salvación;\nY es mi única esperanza Gozar vida eterna en Sion.",
+      "alterado": true
+    },
+    {
+      "id": "GT-081",
+      "titulo": "LA BANDERA DE LA CRUZ",
+      "tipo": "ESTRUTURAL",
+      "descricao": "Adicionar número 1 à primeira estrofe.",
+      "letra_original": "Cual pendón hermoso despleguemos hoy La bandera de la cruz,\nLa verdad del evangelio, el blasón Del soldado de Jesús.\nCORO:\n¡Adelante, adelante,\nEn pos de nuestro Salvador! Con plena fe en nuestro Rey,\n¡Adelante con valor!\n2\nPrediquemos siempre lo que dice Dios De la sangre de Jesús;\nCómo limpia del pecado al mortal, Y le compra la salud.\n3\nEn el mundo proclamemos con fervor Esta historia de la cruz:\nBendigamos sin cesar al Redentor Que nos dio su paz y luz.\n4\nEn el cielo nuestro cántico será:\n¡Aleluya a Jesús!\nNuestro corazón allí rebosará De amor y gratitud.",
+      "letra_candidata": "1\nCual pendón hermoso despleguemos hoy La bandera de la cruz,\nLa verdad del evangelio, el blasón Del soldado de Jesús.\nCORO:\n¡Adelante, adelante,\nEn pos de nuestro Salvador! Con plena fe en nuestro Rey,\n¡Adelante con valor!\n2\nPrediquemos siempre lo que dice Dios De la sangre de Jesús;\nCómo limpia del pecado al mortal, Y le compra la salud.\n3\nEn el mundo proclamemos con fervor Esta historia de la cruz:\nBendigamos sin cesar al Redentor Que nos dio su paz y luz.\n4\nEn el cielo nuestro cántico será:\n¡Aleluya a Jesús!\nNuestro corazón allí rebosará De amor y gratitud.",
+      "alterado": true
+    },
+    {
+      "id": "SION-038",
+      "titulo": "LA BANDERA DE LA CRUZ",
+      "tipo": "ESTRUTURAL",
+      "descricao": "Adicionar número 1 à primeira estrofe.",
+      "letra_original": "Cual pendón hermoso despleguemos hoy La bandera de la cruz,\nLa verdad del evangelio, el blasón Del soldado de Jesús.\nCORO:\n¡Adelante, adelante,\nEn pos de nuestro Salvador! Con plena fe en nuestro Rey,\n¡Adelante con valor!\n2\nPrediquemos siempre lo que dice Dios De la sangre de Jesús;\nCómo limpia del pecado al mortal, Y le compra la salud.\n3\nEn el mundo proclamemos con fervor Esta historia de la cruz:\nBendigamos sin cesar al Redentor Que nos dio su paz y luz.\n4\nEn el cielo nuestro cántico será:\n¡Aleluya a Jesús!\nNuestro corazón allí rebosará De amor y gratitud.",
+      "letra_candidata": "1\nCual pendón hermoso despleguemos hoy La bandera de la cruz,\nLa verdad del evangelio, el blasón Del soldado de Jesús.\nCORO:\n¡Adelante, adelante,\nEn pos de nuestro Salvador! Con plena fe en nuestro Rey,\n¡Adelante con valor!\n2\nPrediquemos siempre lo que dice Dios De la sangre de Jesús;\nCómo limpia del pecado al mortal, Y le compra la salud.\n3\nEn el mundo proclamemos con fervor Esta historia de la cruz:\nBendigamos sin cesar al Redentor Que nos dio su paz y luz.\n4\nEn el cielo nuestro cántico será:\n¡Aleluya a Jesús!\nNuestro corazón allí rebosará De amor y gratitud.",
+      "alterado": true
+    },
+    {
+      "id": "GT-028",
+      "titulo": "MÁS DE JESÚS",
+      "tipo": "ESTRUTURAL",
+      "descricao": "Separar estrofe 4 da estrofe 3.",
+      "letra_original": "1\nMás de Jesús deseo saber, Más de su gracia y poder: Más de su salvación gozar: Más de su dulce amor gustar.\nCORO:\nMás quiero amarle, Más quiero honrarle:\nMás de su salvación gozar, Más de su dulce amor gustar.\n2\nMás quiero a Jesús seguir, Más de su santa ley cumplir: Más de su voluntad saber, Más de su Espíritu tener.\n3\nMás de Jesús, más oración, Más cerca estar en comunión; Más su palabra meditar,\nMás sus promesas alcanzar.\nMás de Jesús allá veré, Más semejante a él seré:\nMás de su gloria he de gozar, Más su gran nombre alabar.",
+      "letra_candidata": "1\nMás de Jesús deseo saber, Más de su gracia y poder: Más de su salvación gozar: Más de su dulce amor gustar.\nCORO:\nMás quiero amarle, Más quiero honrarle:\nMás de su salvación gozar, Más de su dulce amor gustar.\n2\nMás quiero a Jesús seguir, Más de su santa ley cumplir: Más de su voluntad saber, Más de su Espíritu tener.\n3\nMás de Jesús, más oración, Más cerca estar en comunión; Más su palabra meditar,\nMás sus promesas alcanzar.\n4\nMás de Jesús allá veré, Más semejante a él seré:\nMás de su gloria he de gozar, Más su gran nombre alabar.",
+      "alterado": true
+    },
+    {
+      "id": "SION-015",
+      "titulo": "MÁS DE JESÚS",
+      "tipo": "ESTRUTURAL",
+      "descricao": "Separar estrofe 4 da estrofe 3.",
+      "letra_original": "1\nMás de Jesús deseo saber, Más de su gracia y poder: Más de su salvación gozar: Más de su dulce amor gustar.\nCORO:\nMás quiero amarle, Más quiero honrarle:\nMás de su salvación gozar, Más de su dulce amor gustar.\n2\nMás quiero a Jesús seguir, Más de su santa ley cumplir: Más de su voluntad saber, Más de su Espíritu tener.\n3\nMás de Jesús, más oración, Más cerca estar en comunión; Más su palabra meditar,\nMás sus promesas alcanzar.\nMás de Jesús allá veré, Más semejante a él seré:\nMás de su gloria he de gozar, Más su gran nombre alabar.",
+      "letra_candidata": "1\nMás de Jesús deseo saber, Más de su gracia y poder: Más de su salvación gozar: Más de su dulce amor gustar.\nCORO:\nMás quiero amarle, Más quiero honrarle:\nMás de su salvación gozar, Más de su dulce amor gustar.\n2\nMás quiero a Jesús seguir, Más de su santa ley cumplir: Más de su voluntad saber, Más de su Espíritu tener.\n3\nMás de Jesús, más oración, Más cerca estar en comunión; Más su palabra meditar,\nMás sus promesas alcanzar.\n4\nMás de Jesús allá veré, Más semejante a él seré:\nMás de su gloria he de gozar, Más su gran nombre alabar.",
+      "alterado": true
+    },
+    {
+      "id": "GT-033",
+      "titulo": "GRANDE GOZO HAY EN MI ALMA HOY",
+      "tipo": "ESTRUTURAL",
+      "descricao": "Separar estrofe 4 da estrofe 3.",
+      "letra_original": "1\nGrande gozo hay en mi alma hoy, Pues Jesús conmigo está;\nY su paz, que ya gozando estoy Por siempre durará\nCORO:\nGrande gozo, ¡cuán hermoso! Paso todo el tiempo bien feliz;\nPorque veo de Cristo la sonriente faz, Grande gozo siento en mí.\n2\nHay un canto en mi alma hoy; Melodías a mi Rey:\nEn su amor feliz y libre soy.\nY salvo por la fe.\n3\nPaz divina hay en mi alma hoy, Porque Cristo me salvó;\nLas cadenas rotas ya están, Jesús me libertó.\nGratitud hay en mi alma hoy, Y alabanzas a Jesús;\nPor su gracia a la gloria voy, Gozándome en la luz.",
+      "letra_candidata": "1\nGrande gozo hay en mi alma hoy, Pues Jesús conmigo está;\nY su paz, que ya gozando estoy Por siempre durará\nCORO:\nGrande gozo, ¡cuán hermoso! Paso todo el tiempo bien feliz;\nPorque veo de Cristo la sonriente faz, Grande gozo siento en mí.\n2\nHay un canto en mi alma hoy; Melodías a mi Rey:\nEn su amor feliz y libre soy.\nY salvo por la fe.\n3\nPaz divina hay en mi alma hoy, Porque Cristo me salvó;\nLas cadenas rotas ya están, Jesús me libertó.\n4\nGratitud hay en mi alma hoy, Y alabanzas a Jesús;\nPor su gracia a la gloria voy, Gozándome en la luz.",
+      "alterado": true
+    },
+    {
+      "id": "SION-016",
+      "titulo": "GRANDE GOZO HAY EN MI ALMA",
+      "tipo": "ESTRUTURAL",
+      "descricao": "Separar estrofe 4 da estrofe 3.",
+      "letra_original": "1\nGrande gozo hay en mi alma hoy, Pues Jesús conmigo está;\nY su paz, que ya gozando estoy Por siempre durará\nCORO:\nGrande gozo, ¡cuán hermoso! Paso todo el tiempo bien feliz;\nPorque veo de Cristo la sonriente faz, Grande gozo siento en mí.\n2\nHay un canto en mi alma hoy; Melodías a mi Rey:\nEn su amor feliz y libre soy.\nY salvo por la fe.\n3\nPaz divina hay en mi alma hoy, Porque Cristo me salvó;\nLas cadenas rotas ya están, Jesús me libertó.\nGratitud hay en mi alma hoy, Y alabanzas a Jesús;\nPor su gracia a la gloria voy, Gozándome en la luz.",
+      "letra_candidata": "1\nGrande gozo hay en mi alma hoy, Pues Jesús conmigo está;\nY su paz, que ya gozando estoy Por siempre durará\nCORO:\nGrande gozo, ¡cuán hermoso! Paso todo el tiempo bien feliz;\nPorque veo de Cristo la sonriente faz, Grande gozo siento en mí.\n2\nHay un canto en mi alma hoy; Melodías a mi Rey:\nEn su amor feliz y libre soy.\nY salvo por la fe.\n3\nPaz divina hay en mi alma hoy, Porque Cristo me salvó;\nLas cadenas rotas ya están, Jesús me libertó.\n4\nGratitud hay en mi alma hoy, Y alabanzas a Jesús;\nPor su gracia a la gloria voy, Gozándome en la luz.",
+      "alterado": true
+    },
+    {
+      "id": "GT-036",
+      "titulo": "ENTERA CONSAGRACIÓN",
+      "tipo": "ESTRUTURAL",
+      "descricao": "Separar estrofe 5 da estrofe 4.",
+      "letra_original": "1\nQue mi vida entera esté Consagrada a ti, Señor;\nQue a mis manos pueda guiar El impulso de tu amor.\nCORO:\nLávame en tu sangre, Salvador, Límpiame de toda mi maldad; Traigo a ti mi vida, para ser, Señor,\n¡Tuya por la eternidad!\n2\nQue mis pies tan solo en pos De lo santo puedan ir,\nY que a ti, Señor, mi voz Se complazca en bendecir.\n3\nQue mi tiempo todo esté Consagrado a tu loor, Que mis labios al hablar Hablen solo de tu amor.\n4\nToma, ¡oh Dios!, mi voluntad, Y hazla tuya, nada más; Toma, sí, mi corazón\nPor tu trono lo tendrás.\nToma tú mi amor, que hoy A tus pies vengo a poner;\n¡Toma todo lo que soy, Todo tuyo quiero ser!",
+      "letra_candidata": "1\nQue mi vida entera esté Consagrada a ti, Señor;\nQue a mis manos pueda guiar El impulso de tu amor.\nCORO:\nLávame en tu sangre, Salvador, Límpiame de toda mi maldad; Traigo a ti mi vida, para ser, Señor,\n¡Tuya por la eternidad!\n2\nQue mis pies tan solo en pos De lo santo puedan ir,\nY que a ti, Señor, mi voz Se complazca en bendecir.\n3\nQue mi tiempo todo esté Consagrado a tu loor, Que mis labios al hablar Hablen solo de tu amor.\n4\nToma, ¡oh Dios!, mi voluntad, Y hazla tuya, nada más; Toma, sí, mi corazón\nPor tu trono lo tendrás.\n5\nToma tú mi amor, que hoy A tus pies vengo a poner;\n¡Toma todo lo que soy, Todo tuyo quiero ser!",
+      "alterado": true
+    },
+    {
+      "id": "SION-019",
+      "titulo": "ENTERA CONSAGRACIÓN",
+      "tipo": "ESTRUTURAL",
+      "descricao": "Separar estrofe 5 da estrofe 4.",
+      "letra_original": "1\nQue mi vida entera esté Consagrada a ti, Señor;\nQue a mis manos pueda guiar El impulso de tu amor.\nCORO:\nLávame en tu sangre, Salvador, Límpiame de toda mi maldad; Traigo a ti mi vida, para ser, Señor,\n¡Tuya por la eternidad!\n2\nQue mis pies tan solo en pos De lo santo puedan ir,\nY que a ti, Señor, mi voz Se complazca en bendecir.\n3\nQue mi tiempo todo esté Consagrado a tu loor, Que mis labios al hablar Hablen solo de tu amor.\n4\nToma, ¡oh Dios!, mi voluntad, Y hazla tuya, nada más; Toma, sí, mi corazón\nPor tu trono lo tendrás.\nToma tú mi amor, que hoy A tus pies vengo a poner;\n¡Toma todo lo que soy, Todo tuyo quiero ser!",
+      "letra_candidata": "1\nQue mi vida entera esté Consagrada a ti, Señor;\nQue a mis manos pueda guiar El impulso de tu amor.\nCORO:\nLávame en tu sangre, Salvador, Límpiame de toda mi maldad; Traigo a ti mi vida, para ser, Señor,\n¡Tuya por la eternidad!\n2\nQue mis pies tan solo en pos De lo santo puedan ir,\nY que a ti, Señor, mi voz Se complazca en bendecir.\n3\nQue mi tiempo todo esté Consagrado a tu loor, Que mis labios al hablar Hablen solo de tu amor.\n4\nToma, ¡oh Dios!, mi voluntad, Y hazla tuya, nada más; Toma, sí, mi corazón\nPor tu trono lo tendrás.\n5\nToma tú mi amor, que hoy A tus pies vengo a poner;\n¡Toma todo lo que soy, Todo tuyo quiero ser!",
+      "alterado": true
+    }
+  ]
+}

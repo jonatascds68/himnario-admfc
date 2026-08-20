@@ -1,0 +1,483 @@
+============================================
+ 1. CONTROLE DA BASE
+============================================
+HASH ATUAL:   a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41
+HASH OFICIAL: a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41
+HASH: OK
+
+TOTAL BASE: 718
+SINALIZADOS 10A: 77
+
+============================================
+ 2. RESULTADO DA TRIAGEM
+============================================
+PRIORIDADE ALTA: 44
+PRIORIDADE MÉDIA: 3
+BAIXA / EDITORIAL: 30
+TOTAL: 77
+
+============================================
+ PRIORIDADE ALTA — COTEJO PRIMEIRO
+============================================
+
+GT-042 | 42 | HAY UN PRECIOSO MANANTIAL
+PONTOS: 15 | ACHADOS: 5
+TIPOS: PRIMEIRA_ESTROFE_SEM_NUMERO, NUMERO_REPETIDO, NUMERACAO_SUSPEITA
+PADRÃO FORTE: SIM
+  - PRIMEIRA_ESTROFE_SEM_NUMERO: Primeiro número estrutural encontrado: 2.
+    Y más blanco que la nieve yo seré: | 2 | El malhechor se convirtió Pendiente de una cruz; El vio la fuente y se lavó, Creyendo en Jesús.
+  - NUMERO_REPETIDO: Número estrutural 2 repetido.
+    Hay un precioso manantial De sangre de Emmanuel, Que purifica a cada cual Que se sumerge en él. | 2 | El malhechor se convirtió Pendiente de una cruz; El vio la fuente y se lavó, Creyendo en Jesús.
+  - NUMERO_REPETIDO: Número estrutural 3 repetido.
+    El malhechor se convirtió Pendiente de una cruz; El vio la fuente y se lavó, Creyendo en Jesús. | 3 | Y yo también mi pobre ser Allí logré lavar;
+  - NUMERO_REPETIDO: Número estrutural 4 repetido.
+    La gloria de su gran poder, Me gozo en ensalzar. | 4 | ¡Eterna fuente carmesí!
+  - NUMERACAO_SUSPEITA: Sequência regressiva 4 -> 1.
+
+GT-018 | 18 | GRATO ES DECIR LA HISTORIA
+PONTOS: 10 | ACHADOS: 2
+TIPOS: ESPACO_ANTES_PONTUACAO, PALAVRA_OCR_MAIUSCULA_INTERNA
+PADRÃO FORTE: SIM
+  - ESPACO_ANTES_PONTUACAO: Espaço encontrado antes de sinal de pontuação.
+    Más dulce cada vez; Me agrada referirla, | Pues hay quien nunca oyó Que para hacerle salvo El buen .Jesús murió.
+  - PALAVRA_OCR_MAIUSCULA_INTERNA: Possível OCR: "referirIa".
+    referirIa
+
+GT-054 | 54 | QUE HAGA EN TI SU VOLUNTAD
+PONTOS: 10 | ACHADOS: 2
+TIPOS: PRIMEIRA_ESTROFE_SEM_NUMERO, NUMERACAO_SUSPEITA
+PADRÃO FORTE: SIM
+  - PRIMEIRA_ESTROFE_SEM_NUMERO: Primeiro número estrutural encontrado: 2.
+    Su gran poder, sus dones te dará, El gozo y paz a tu alma volverá: Del corazón las manchas limpiará, Que haga en ti su santa voluntad. | 2 | ¿Quieres ir en pos de Cristo y llevar la cruz?
+  - NUMERACAO_SUSPEITA: Sequência regressiva 3 -> 1.
+
+SION-128 | 128 | GRATO ES DECIR LA HISTORIA
+PONTOS: 10 | ACHADOS: 2
+TIPOS: ESPACO_ANTES_PONTUACAO, PALAVRA_OCR_MAIUSCULA_INTERNA
+PADRÃO FORTE: SIM
+  - ESPACO_ANTES_PONTUACAO: Espaço encontrado antes de sinal de pontuação.
+    Más dulce cada vez; Me agrada referirla, | Pues hay quien nunca oyó Que para hacerle salvo El buen .Jesús murió.
+  - PALAVRA_OCR_MAIUSCULA_INTERNA: Possível OCR: "referirIa".
+    referirIa
+
+GT-007 | 7 | TODO A CRISTO YO ME RINDO
+PONTOS: 8 | ACHADOS: 1
+TIPOS: PALAVRA_OCR_MAIUSCULA_INTERNA
+PADRÃO FORTE: SIM
+  - PALAVRA_OCR_MAIUSCULA_INTERNA: Possível OCR: "serIe".
+    serIe
+
+GT-025 | 25 | ¡OH, CUAN DULCE!
+PONTOS: 8 | ACHADOS: 1
+TIPOS: PALAVRA_OCR_MAIUSCULA_INTERNA
+PADRÃO FORTE: SIM
+  - PALAVRA_OCR_MAIUSCULA_INTERNA: Possível OCR: "serIe".
+    serIe
+
+GT-056 | 56 | ¡OH, YO QUIERO ANDAR CON CRISTO!
+PONTOS: 8 | ACHADOS: 1
+TIPOS: PALAVRA_OCR_MAIUSCULA_INTERNA
+PADRÃO FORTE: SIM
+  - PALAVRA_OCR_MAIUSCULA_INTERNA: Possível OCR: "serIe".
+    serIe
+
+GT-102 | 102 | PODER PENTECOSTAL
+PONTOS: 8 | ACHADOS: 1
+TIPOS: PALAVRA_OCR_MAIUSCULA_INTERNA
+PADRÃO FORTE: SIM
+  - PALAVRA_OCR_MAIUSCULA_INTERNA: Possível OCR: "hazIo".
+    hazIo
+
+GT-182 | 182 | ¡GLORIA A TI, JESÚS DIVINO
+PONTOS: 8 | ACHADOS: 1
+TIPOS: SALTO_NUMERICO
+PADRÃO FORTE: SIM
+  - SALTO_NUMERICO: Sequência 1 -> 3.
+
+SION-011 | 11 | TODO A CRISTO YO ME RINDO
+PONTOS: 8 | ACHADOS: 1
+TIPOS: PALAVRA_OCR_MAIUSCULA_INTERNA
+PADRÃO FORTE: SIM
+  - PALAVRA_OCR_MAIUSCULA_INTERNA: Possível OCR: "serIe".
+    serIe
+
+SION-026 | 26 | ¡OH! YO QUIERO ANDAR CON CRISTO
+PONTOS: 8 | ACHADOS: 1
+TIPOS: PALAVRA_OCR_MAIUSCULA_INTERNA
+PADRÃO FORTE: SIM
+  - PALAVRA_OCR_MAIUSCULA_INTERNA: Possível OCR: "serIe".
+    serIe
+
+SION-044 | 44 | PODER PENTECOSTAL
+PONTOS: 8 | ACHADOS: 1
+TIPOS: PALAVRA_OCR_MAIUSCULA_INTERNA
+PADRÃO FORTE: SIM
+  - PALAVRA_OCR_MAIUSCULA_INTERNA: Possível OCR: "hazIo".
+    hazIo
+
+SION-079 | 79 | GLORIA A TI, JESÚS DIVINO
+PONTOS: 8 | ACHADOS: 1
+TIPOS: SALTO_NUMERICO
+PADRÃO FORTE: SIM
+  - SALTO_NUMERICO: Sequência 1 -> 3.
+
+SION-134 | 134 | ¡OH, CUÁN DULCE!
+PONTOS: 8 | ACHADOS: 1
+TIPOS: PALAVRA_OCR_MAIUSCULA_INTERNA
+PADRÃO FORTE: SIM
+  - PALAVRA_OCR_MAIUSCULA_INTERNA: Possível OCR: "serIe".
+    serIe
+
+GT-040 | 40 | EN LOS NEGOCIOS DEL REY
+PONTOS: 7 | ACHADOS: 2
+TIPOS: ESPACO_ANTES_PONTUACAO, PONTUACAO_DUPLA_SUSPEITA
+PADRÃO FORTE: SIM
+  - ESPACO_ANTES_PONTUACAO: Espaço encontrado antes de sinal de pontuação.
+    CORO: | Este mensaje fiel oid, . Que dijo ya celeste voz: | «Reconciliaos ya» – dice el Señor y Rey,
+  - PONTUACAO_DUPLA_SUSPEITA: Combinação incomum de sinais de pontuação.
+    CORO: | Este mensaje fiel oid, . Que dijo ya celeste voz: | «Reconciliaos ya» – dice el Señor y Rey,
+
+GT-055 | 55 | EL MUNDO PERDIDO
+PONTOS: 7 | ACHADOS: 2
+TIPOS: PRIMEIRA_ESTROFE_SEM_NUMERO, PONTUACAO_DUPLA_SUSPEITA
+PADRÃO FORTE: SIM
+  - PRIMEIRA_ESTROFE_SEM_NUMERO: Primeiro número estrutural encontrado: 2.
+    ¡Jesús es la luz del mundo! | 2 | En día la noche se cambia con él, etc. Irás en la luz si a su ley eres fiel, etc.
+  - PONTUACAO_DUPLA_SUSPEITA: Combinação incomum de sinais de pontuação.
+    ¡Oh, ciegos y presos del lóbrego error!, etc. | Él manda lavaros y ver su fulgor, etc., | 4
+
+GT-069 | 69 | PRECIOSO ES JESÚS
+PONTOS: 7 | ACHADOS: 2
+TIPOS: ESPACO_ANTES_PONTUACAO, PONTUACAO_DUPLA_SUSPEITA
+PADRÃO FORTE: SIM
+  - ESPACO_ANTES_PONTUACAO: Espaço encontrado antes de sinal de pontuação.
+    1 | Jesús es precioso, mi buen Salvador, . Por siempre le alabo por su gran amor, Si débil me encuentro su fuerza me da, Él es mi precioso Jesús. | CORO:
+  - PONTUACAO_DUPLA_SUSPEITA: Combinação incomum de sinais de pontuação.
+    1 | Jesús es precioso, mi buen Salvador, . Por siempre le alabo por su gran amor, Si débil me encuentro su fuerza me da, Él es mi precioso Jesús. | CORO:
+
+GT-079 | 79 | PUEDO OÍR TU VOZ LLAMANDO
+PONTOS: 7 | ACHADOS: 7
+TIPOS: PRIMEIRA_ESTROFE_SEM_NUMERO, RESIDUO_BARRAS, ESPACO_ANTES_PONTUACAO
+PADRÃO FORTE: SIM
+  - PRIMEIRA_ESTROFE_SEM_NUMERO: Primeiro número estrutural encontrado: 2.
+    ||Seguiré do tú me guíes, || Dondequiera fiel te seguiré e , | 2 | ||Yo te seguiré en el huerto|| Sufriré contigo, mi Jesús.
+  - RESIDUO_BARRAS: Encontrado marcador "||".
+    ||Puedo oír tu voz llamando, || Trae tu cruz y ven en pos de mí. | CORO:
+  - RESIDUO_BARRAS: Encontrado marcador "||".
+    CORO: | ||Seguiré do tú me guíes, || Dondequiera fiel te seguiré e , | 2
+  - RESIDUO_BARRAS: Encontrado marcador "||".
+    2 | ||Yo te seguiré en el huerto|| Sufriré contigo, mi Jesús. | 3
+  - RESIDUO_BARRAS: Encontrado marcador "||".
+    3 | ||Sufriré por ti, Maestro,|| Moriré contigo, mi Jesús. | 4
+  - RESIDUO_BARRAS: Encontrado marcador "||".
+    4 | ||Medarás la gracia y gloria, || Y por siempre tú me guiarás.
+  - ESPACO_ANTES_PONTUACAO: Espaço encontrado antes de sinal de pontuação.
+    CORO: | ||Seguiré do tú me guíes, || Dondequiera fiel te seguiré e , | 2
+
+GT-048 | 48 | PENTECOSTÉS PARA TODOS
+PONTOS: 5 | ACHADOS: 1
+TIPOS: CORO_SEM_DOIS_PONTOS
+PADRÃO FORTE: SIM
+  - CORO_SEM_DOIS_PONTOS: Marcador CORO encontrado sem dois pontos.
+    Nos manda el Santo Espíritu, Que llena de su gran virtud Al ser que le esperó. | CORO | ¿Ha venido a ti? ¿Ha venido a ti, El Espíritu Consolador?
+
+GT-062 | 62 | CON CRISTO YO IRÉ
+PONTOS: 5 | ACHADOS: 1
+TIPOS: ESPACO_ANTES_PONTUACAO
+PADRÃO FORTE: SIM
+  - ESPACO_ANTES_PONTUACAO: Espaço encontrado antes de sinal de pontuação.
+    Aunque mi parte sea mi dura cruz llevar, Diré a mis hermanos también su gran poder; Contento quedaré, mi luz haré brillar, | ¡Testigo de Cristo, doquiera yo iré! . | La voluntad de Cristo yo quiero obedecer, Pues en la Santa Biblia encuentro mi saber Y con su gran poder al mundo venceré,
+
+GT-066 | 66 | ¡SALUD! ¡SALUD!
+PONTOS: 5 | ACHADOS: 1
+TIPOS: ESPACO_ANTES_PONTUACAO
+PADRÃO FORTE: SIM
+  - ESPACO_ANTES_PONTUACAO: Espaço encontrado antes de sinal de pontuação.
+    CORO: | ¡Salud! ¡Salud!, cantad a nuestro Dios. La paz nos da, clamad en alta voz; , | Salvación ya tengo y descanso dulce en él, Yo soy salvado en Cristo.
+
+GT-067 | 67 | DE MI TIERNO SALVADOR LIBRE ESTOY
+PONTOS: 5 | ACHADOS: 1
+TIPOS: ESPACO_ANTES_PONTUACAO
+PADRÃO FORTE: SIM
+  - ESPACO_ANTES_PONTUACAO: Espaço encontrado antes de sinal de pontuação.
+    CORO: | ¡Mi Jesús! ¡Mi Jesús! , | ¡Cuán precioso es el nombre de Jesús!
+
+GT-072 | 72 | HAY QUIEN VIGILE
+PONTOS: 5 | ACHADOS: 1
+TIPOS: ESPACO_ANTES_PONTUACAO
+PADRÃO FORTE: SIM
+  - ESPACO_ANTES_PONTUACAO: Espaço encontrado antes de sinal de pontuação.
+    Que confiere paz constante Al contrito corazón. | En su amor hay eficacia Él es un amigo fiel; , | Hay en él verdad y gracia, Suyo soy y mío es él.
+
+GT-099 | 99 | NADA DE SOMBRAS
+PONTOS: 5 | ACHADOS: 1
+TIPOS: ESPACO_ANTES_PONTUACAO
+PADRÃO FORTE: SIM
+  - ESPACO_ANTES_PONTUACAO: Espaço encontrado antes de sinal de pontuação.
+    1 | No habrá .sombras en el valle de la muerte Cuando cese de la vida el batallar, | Y escuchemos del Señor el llamamiento, Ya llevándonos con él a descansar.
+
+GT-128 | 128 | VALOR Y FE
+PONTOS: 5 | ACHADOS: 1
+TIPOS: ESPACO_ANTES_PONTUACAO
+PADRÃO FORTE: SIM
+  - ESPACO_ANTES_PONTUACAO: Espaço encontrado antes de sinal de pontuação.
+    1 | Si en tu senda .las nubes Agolparse ves, | No vaciles por ello, Ni flaqueen tus pies; Cada nube que venga No podrá traer
+
+GT-137 | 137 | SIEMPRE ORAD
+PONTOS: 5 | ACHADOS: 1
+TIPOS: ESPACO_ANTES_PONTUACAO
+PADRÃO FORTE: SIM
+  - ESPACO_ANTES_PONTUACAO: Espaço encontrado antes de sinal de pontuação.
+    2 | «Siempre orad», que si hoy viniere Cristo El te halle en la lid, , | Con la espada suya bien empleada, Fiel por nuestro Adalid.
+
+GT-138 | 138 | LA FUENTE SANADORA
+PONTOS: 5 | ACHADOS: 1
+TIPOS: ESPACO_ANTES_PONTUACAO
+PADRÃO FORTE: SIM
+  - ESPACO_ANTES_PONTUACAO: Espaço encontrado antes de sinal de pontuação.
+    2 | En la fuente que nos sana He hallado el perdón, , Y lavado toda mancha De mi pobre corazón. | 3
+
+GT-161 | 161 | PECADOR, VEN AL DULCE JESÚS
+PONTOS: 5 | ACHADOS: 3
+TIPOS: RESIDUO_BARRAS, ESPACO_ANTES_PONTUACAO
+PADRÃO FORTE: SIM
+  - RESIDUO_BARRAS: Encontrado marcador "||".
+    CORO: | ||Ven a él, ven a él, | Que te espera tu buen Salvador.||
+  - RESIDUO_BARRAS: Encontrado marcador "||".
+    ||Ven a él, ven a él, | Que te espera tu buen Salvador.|| | 2
+  - ESPACO_ANTES_PONTUACAO: Espaço encontrado antes de sinal de pontuação.
+    ¡He aquí tu benigno Señor! | Y en los hombros llevada serás . De tan dulce y amante Pastor.
+
+GT-170 | 170 | LA PALABRA HOY SEMBRADA
+PONTOS: 5 | ACHADOS: 6
+TIPOS: RESIDUO_BARRAS, ESPACO_ANTES_PONTUACAO
+PADRÃO FORTE: SIM
+  - RESIDUO_BARRAS: Encontrado marcador "||".
+    La palabra hoy sembrada Hazla, Cristo, en mi nacer, Para darle crecimiento Sólo tienes tú poder: | ||Ricos frutos tú nos puedes conceder.|| | 2
+  - RESIDUO_BARRAS: Encontrado marcador "||".
+    La semilla que tu siervo Ha sembrado con saber, No permitas que las aves Se la vengan a comer: | ||Ricos frutos tú nos puedes conceder.|| | 3
+  - RESIDUO_BARRAS: Encontrado marcador "||".
+    Y tu rica bendición; No la ahoguen las espinas De congojas y aflicción: | ||Ricos frutos tú nos puedes conceder.|| | 4
+  - RESIDUO_BARRAS: Encontrado marcador "||".
+    Que su efecto muy profundo, En la mente y corazón, Llevará consigo al mundo Que le das la salvación: | ||Ricos frutos tú nos puedes conceder.|| | 5
+  - RESIDUO_BARRAS: Encontrado marcador "||".
+    Sembraremos la palabra, Con amor y profusión, Esperando la cosecha En la célica mansión: | ||Ricos frutos tú nos puedes conceder.||
+  - ESPACO_ANTES_PONTUACAO: Espaço encontrado antes de sinal de pontuação.
+    3 | Haz que crezca con tu gracia . | Y tu rica bendición; No la ahoguen las espinas De congojas y aflicción:
+
+GT-218 | 218 | YO ME ACUERDO
+PONTOS: 5 | ACHADOS: 1
+TIPOS: ESPACO_ANTES_PONTUACAO
+PADRÃO FORTE: SIM
+  - ESPACO_ANTES_PONTUACAO: Espaço encontrado antes de sinal de pontuação.
+    Yo me acuerdo que Jesús el pan quebró, A los suyos todos con amor lo dio; | En su cuerpo el Señor ya llevó nuestro dolor, Pues por mí el Señor murió. : | 3
+
+GT-220 | 220 | HOGAR DE MIS RECUERDOS
+PONTOS: 5 | ACHADOS: 1
+TIPOS: ESPACO_ANTES_PONTUACAO
+PADRÃO FORTE: SIM
+  - ESPACO_ANTES_PONTUACAO: Espaço encontrado antes de sinal de pontuação.
+    Hogar de mis recuerdos, A ti volver anhelo; | No hay sitio bajo el cielo Más dulce que el hogar. Posara yo .en palacios, Corriendo el mundo entero, A todos yo prefiero | Mi hogar, mi dulce hogar.
+
+GT-265 | 265 | MAS ALLÁ EL DÍA VIENE
+PONTOS: 5 | ACHADOS: 1
+TIPOS: ESPACO_ANTES_PONTUACAO
+PADRÃO FORTE: SIM
+  - ESPACO_ANTES_PONTUACAO: Espaço encontrado antes de sinal de pontuação.
+    ¿Qué será estar con Cristo? | Escuchar .su dulce voz; Ver su rostro tan brillante Y andar de él en pos. | 3
+
+GT-303 | 303 | DE LA
+PONTOS: 5 | ACHADOS: 1
+TIPOS: PRIMEIRA_ESTROFE_SEM_NUMERO
+PADRÃO FORTE: SIM
+  - PRIMEIRA_ESTROFE_SEM_NUMERO: Primeiro número estrutural encontrado: 2.
+    Para hacerla esposa quiso De los cielos descender, Y su sangre por limpiarla En la horrible cruz verter. | 2 | De entre todas las naciones Escogida en variedad,
+
+GT-320 | 320 | EN LA NUEVA JERUSALÉN
+PONTOS: 5 | ACHADOS: 1
+TIPOS: ESPACO_ANTES_PONTUACAO
+PADRÃO FORTE: SIM
+  - ESPACO_ANTES_PONTUACAO: Espaço encontrado antes de sinal de pontuação.
+    CORO: | Cantaremos con los santos la canción de redención, En Jerusalén …………, En Jerusalén	, | Con acentos de alegría alabando al Salvador, En la gran Jerusalén.
+
+GT-322 | 322 | NO HAY TRISTEZA EN EL CIELO
+PONTOS: 5 | ACHADOS: 1
+TIPOS: ESPACO_ANTES_PONTUACAO
+PADRÃO FORTE: SIM
+  - ESPACO_ANTES_PONTUACAO: Espaço encontrado antes de sinal de pontuação.
+    CORO: | Yo voy a la patria del alma, Do Cristo prepara mi hogar; Do todos los santificados Irán .para siempre a morar: El día feliz ya se acerca | En que el sol para mí se pondrá:
+
+GT-325 | 325 | ¿NOS VEREMOS EN EL RIO?
+PONTOS: 5 | ACHADOS: 1
+TIPOS: ESPACO_ANTES_PONTUACAO
+PADRÃO FORTE: SIM
+  - ESPACO_ANTES_PONTUACAO: Espaço encontrado antes de sinal de pontuação.
+    6 | Tiene faz risueña el río, Pues la de .Jesús refleja, La que de su grey aleja Todo mal, todo dolor. | 7
+
+SION-007 | 7 | LA SIEMBRA
+PONTOS: 5 | ACHADOS: 2
+TIPOS: PONTUACAO_DUPLA_SUSPEITA
+PADRÃO FORTE: SIM
+  - PONTUACAO_DUPLA_SUSPEITA: Combinação incomum de sinais de pontuação.
+    CORO: | Sembraré..., sembraré, | Mientras viva, simiente de amor;
+  - PONTUACAO_DUPLA_SUSPEITA: Combinação incomum de sinais de pontuação.
+    Mientras viva, simiente de amor; | Segaré..., segaré..., | Al hallarme en la casa de Dios.
+
+SION-030 | 30 | ¡SALUD! ¡SALUD!
+PONTOS: 5 | ACHADOS: 1
+TIPOS: ESPACO_ANTES_PONTUACAO
+PADRÃO FORTE: SIM
+  - ESPACO_ANTES_PONTUACAO: Espaço encontrado antes de sinal de pontuação.
+    CORO: | ¡Salud! ¡Salud!, cantad a nuestro Dios. La paz nos da, clamad en alta voz; , | Salvación ya tengo y descanso dulce en él, Yo soy salvado en Cristo.
+
+SION-034 | 34 | HAY QUIEN VIGILE
+PONTOS: 5 | ACHADOS: 1
+TIPOS: ESPACO_ANTES_PONTUACAO
+PADRÃO FORTE: SIM
+  - ESPACO_ANTES_PONTUACAO: Espaço encontrado antes de sinal de pontuação.
+    Que confiere paz constante Al contrito corazón. | En su amor hay eficacia Él es un amigo fiel; , | Hay en él verdad y gracia, Suyo soy y mío es él.
+
+SION-062 | 62 | SIEMPRE ORAD
+PONTOS: 5 | ACHADOS: 1
+TIPOS: ESPACO_ANTES_PONTUACAO
+PADRÃO FORTE: SIM
+  - ESPACO_ANTES_PONTUACAO: Espaço encontrado antes de sinal de pontuação.
+    2 | «Siempre orad», que si hoy viniere Cristo El te halle en la lid, , | Con la espada suya bien empleada, Fiel por nuestro Adalid.
+
+SION-063 | 63 | LA FUENTE SANADORA
+PONTOS: 5 | ACHADOS: 1
+TIPOS: ESPACO_ANTES_PONTUACAO
+PADRÃO FORTE: SIM
+  - ESPACO_ANTES_PONTUACAO: Espaço encontrado antes de sinal de pontuação.
+    2 | En la fuente que nos sana He hallado el perdón, , Y lavado toda mancha De mi pobre corazón. | 3
+
+SION-075 | 75 | LA PALABRA HOY SEMBRADA
+PONTOS: 5 | ACHADOS: 6
+TIPOS: RESIDUO_BARRAS, ESPACO_ANTES_PONTUACAO
+PADRÃO FORTE: SIM
+  - RESIDUO_BARRAS: Encontrado marcador "||".
+    La palabra hoy sembrada Hazla, Cristo, en mi nacer, Para darle crecimiento Sólo tienes tú poder: | ||Ricos frutos tú nos puedes conceder.|| | 2
+  - RESIDUO_BARRAS: Encontrado marcador "||".
+    La semilla que tu siervo Ha sembrado con saber, No permitas que las aves Se la vengan a comer: | ||Ricos frutos tú nos puedes conceder.|| | 3
+  - RESIDUO_BARRAS: Encontrado marcador "||".
+    Y tu rica bendición; No la ahoguen las espinas De congojas y aflicción: | ||Ricos frutos tú nos puedes conceder.|| | 4
+  - RESIDUO_BARRAS: Encontrado marcador "||".
+    Que su efecto muy profundo, En la mente y corazón, Llevará consigo al mundo Que le das la salvación: | ||Ricos frutos tú nos puedes conceder.|| | 5
+  - RESIDUO_BARRAS: Encontrado marcador "||".
+    Sembraremos la palabra, Con amor y profusión, Esperando la cosecha En la célica mansión: | ||Ricos frutos tú nos puedes conceder.||
+  - ESPACO_ANTES_PONTUACAO: Espaço encontrado antes de sinal de pontuação.
+    3 | Haz que crezca con tu gracia . | Y tu rica bendición; No la ahoguen las espinas De congojas y aflicción:
+
+SION-162 | 162 | PENTECOSTÉS PARA TODOS
+PONTOS: 5 | ACHADOS: 1
+TIPOS: CORO_SEM_DOIS_PONTOS
+PADRÃO FORTE: SIM
+  - CORO_SEM_DOIS_PONTOS: Marcador CORO encontrado sem dois pontos.
+    Nos manda el Santo Espíritu, Que llena de su gran virtud Al ser que le esperó. | CORO | ¿Ha venido a ti? ¿Ha venido a ti, El Espíritu Consolador?
+
+SION-246 | 246 | CRISTIANOS, TODOS A PREPARARSE
+PONTOS: 5 | ACHADOS: 1
+TIPOS: PRIMEIRA_ESTROFE_SEM_NUMERO
+PADRÃO FORTE: SIM
+  - PRIMEIRA_ESTROFE_SEM_NUMERO: Primeiro número estrutural encontrado: 2.
+    | 2 | Ya las señales cúmplense todas,
+
+============================================
+ PRIORIDADE MÉDIA — REVISÃO POSTERIOR
+============================================
+
+GT-083 | 83 | ¡OH, VEN SIN TARDAR!
+PONTOS: 2 | ACHADOS: 1
+TIPOS: PRIMEIRA_ESTROFE_SEM_NUMERO
+  - PRIMEIRA_ESTROFE_SEM_NUMERO: Primeiro número estrutural encontrado: 2.
+    Acepta a Jesús, y salvo serás. | 2 | Tus ojos ya tal vez el sol No más aquí contemplarán: Hoyes el día de salvación,
+
+GT-304 | 304 | JERUSALÉN CELESTE
+PONTOS: 2 | ACHADOS: 1
+TIPOS: PRIMEIRA_ESTROFE_SEM_NUMERO
+  - PRIMEIRA_ESTROFE_SEM_NUMERO: Primeiro número estrutural encontrado: 2.
+    Y de ángeles millares, Te ciñen en redor. | 2 | Ciudad del Rey eterno, De perlas son tus puertas, Continuamente abiertas Al mísero mortal;
+
+SION-037 | 37 | ¡OH, VEN SIN TARDAR!
+PONTOS: 2 | ACHADOS: 1
+TIPOS: PRIMEIRA_ESTROFE_SEM_NUMERO
+  - PRIMEIRA_ESTROFE_SEM_NUMERO: Primeiro número estrutural encontrado: 2.
+    Acepta a Jesús, y salvo serás. | 2 | Tus ojos ya tal vez el sol No más aquí contemplarán: Hoyes el día de salvación,
+
+============================================
+ BAIXA PRIORIDADE / EDITORIAL
+============================================
+GT-001 | 1 | EL APOSENTO ALTO | 1 marcação(ões) ||
+GT-005 | 5 | DESDE QUE SALVO ESTOY | 1 marcação(ões) ||
+GT-034 | 34 | TENDRÁS QUE RENACER | 1 marcação(ões) ||
+GT-142 | 142 | CUANDO TE QUIERO MAS | 1 marcação(ões) ||
+GT-146 | 146 | ME BUSCA A MÍ | 4 marcação(ões) ||
+GT-156 | 156 | EL CUIDARA DE MÍ | 3 marcação(ões) ||
+GT-160 | 160 | HAY UN MUNDO FELIZ MÁS ALLÁ | 1 marcação(ões) ||
+GT-164 | 164 | JESÚS ES TODO PARA MÍ | 4 marcação(ões) ||
+GT-165 | 165 | AUNQUE SEAN COMO ESCARLATA | 4 marcação(ões) ||
+GT-225 | 225 | SU SANGRE DERRAMO JESÚS | 1 marcação(ões) ||
+GT-242 | 242 | EL ES MI FUERTE SALVADOR | 1 marcação(ões) ||
+GT-251 | 251 | EL HIJO PRODIGO | 2 marcação(ões) ||
+GT-268 | 268 | CRISTO EL HIJO DEL SANTO DIOS | 4 marcação(ões) ||
+GT-285 | 285 | ALLÍ QUIERO IR, ¿Y TU? | 1 marcação(ões) ||
+GT-290 | 290 | SOLO CRISTO | 2 marcação(ões) ||
+GT-328 | 328 | LLAMA | 1 marcação(ões) ||
+SION-017 | 17 | TENDRÁS QUE RENACER | 1 marcação(ões) ||
+SION-114 | 114 | SOLO CRISTO | 2 marcação(ões) ||
+GT-088 | 88 | CERCA, MAS CERCA | 4 marcação(ões) ||
+GT-118 | 118 | EL MUNDO NO ES MI HOGAR | 1 marcação(ões) ||
+GT-159 | 159 | LA PATRIA DEL ALMA | 4 marcação(ões) ||
+GT-188 | 188 | BELLAS PALABRAS DE VIDA | 6 marcação(ões) ||
+GT-212 | 212 | ¡NOCHE DE PAZ, NOCHE DE AMOR! | 3 marcação(ões) ||
+GT-230 | 230 | CIMIENTO ETERNO DE LA FE | 7 marcação(ões) ||
+GT-255 | 255 | SALVADOR, MI BIEN ETERNO | 3 marcação(ões) ||
+GT-273 | 273 | MI PASTOR | 7 marcação(ões) ||
+GT-288 | 288 | UNOS SI, OTROS NO | 8 marcação(ões) ||
+SION-055 | 55 | EL MUNDO NO ES MI HOGAR | 1 marcação(ões) ||
+SION-068 | 68 | LA PATRIA DEL ALMA | 4 marcação(ões) ||
+SION-105 | 105 | SALVADOR, MI BIEN ETERNO | 3 marcação(ões) ||
+
+============================================
+ 3. POSSÍVEIS PARES GT / SIÓN SINALIZADOS
+============================================
+GT-118 <-> SION-055 | EL MUNDO NO ES MI HOGAR
+GT-182 <-> SION-079 | GLORIA A TI JESUS DIVINO
+GT-018 <-> SION-128 | GRATO ES DECIR LA HISTORIA
+GT-072 <-> SION-034 | HAY QUIEN VIGILE
+GT-138 <-> SION-063 | LA FUENTE SANADORA
+GT-170 <-> SION-075 | LA PALABRA HOY SEMBRADA
+GT-159 <-> SION-068 | LA PATRIA DEL ALMA
+GT-025 <-> SION-134 | OH CUAN DULCE
+GT-083 <-> SION-037 | OH VEN SIN TARDAR
+GT-056 <-> SION-026 | OH YO QUIERO ANDAR CON CRISTO
+GT-048 <-> SION-162 | PENTECOSTES PARA TODOS
+GT-102 <-> SION-044 | PODER PENTECOSTAL
+GT-066 <-> SION-030 | SALUD SALUD
+GT-255 <-> SION-105 | SALVADOR MI BIEN ETERNO
+GT-137 <-> SION-062 | SIEMPRE ORAD
+GT-290 <-> SION-114 | SOLO CRISTO
+GT-034 <-> SION-017 | TENDRAS QUE RENACER
+GT-007 <-> SION-011 | TODO A CRISTO YO ME RINDO
+
+============================================
+ 4. PENDÊNCIAS HERDADAS DO LOTE 9
+============================================
+GT-040 | DETECTADO | PRIORIDADE ALTA
+GT-056 | DETECTADO | PRIORIDADE ALTA
+SION-026 | DETECTADO | PRIORIDADE ALTA
+GT-161 | DETECTADO | PRIORIDADE ALTA
+GT-283 | NÃO DETECTADO
+
+============================================
+ 5. CONTROLE DE IMUTABILIDADE
+============================================
+HASH ANTES:  a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41
+HASH DEPOIS: a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41
+BASE MESTRE ALTERADA: NÃO
+RELATÓRIO: scripts/data/etapa-10b-triagem-inteligente.json
+
+============================================
+ ETAPA 10B CONCLUÍDA COM SUCESSO
+ PRÓXIMO PASSO: DOSSIÊ DE ALTA PRIORIDADE
+============================================

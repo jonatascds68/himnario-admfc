@@ -1,0 +1,286 @@
+AUDITORIA HINÁRIA ADMFC
+DOSSIÊ DOS NOVOS CASOS
+Data: 2026-08-19
+Base alterada: NÃO
+
+============================================================
+CASO 11 / 31
+CATEGORIA: SEM_EQUIVALENTE
+SCORE: 12
+TÍTULO: PUEDO OÍR TU VOZ LLAMANDO
+============================================================
+
+------------------------------------------------------------
+GT-079 | PUEDO OÍR TU VOZ LLAMANDO
+------------------------------------------------------------
+Hinário: Gloria y Triunfo
+Número: 79
+Equivalente: —
+Alertas: TEXTO_ANTES_DA_ESTROFE_1, CORO_VAZIO_OU_TRUNCADO
+Fonte declarada: Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada
+Observação: DOCX original 1–329
+
+LETRA:
+||Puedo oír tu voz llamando, || Trae tu cruz y ven en pos de mí.
+CORO:
+||Seguiré do tú me guíes, || Dondequiera fiel te seguiré e ,
+2
+||Yo te seguiré en el huerto|| Sufriré contigo, mi Jesús.
+3
+||Sufriré por ti, Maestro,|| Moriré contigo, mi Jesús.
+4
+||Medarás la gracia y gloria, || Y por siempre tú me guiarás.
+
+============================================================
+CASO 12 / 31
+CATEGORIA: PAR_EQUIVALENTE_SINALIZADO
+SCORE: 12
+TÍTULO: SIEMPRE ORAD
+============================================================
+
+------------------------------------------------------------
+GT-137 | SIEMPRE ORAD
+------------------------------------------------------------
+Hinário: Gloria y Triunfo
+Número: 137
+Equivalente: 62
+Alertas: POSSIVEL_ERRO_OCR
+Fonte declarada: Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada
+Observação: DOCX original 1–329
+
+LETRA:
+1
+«Siempre orad», muy pronto viene Cristo, Guarda bien tu corazón;
+Retén firme todo lo que tienes, Tú tendrás tu galardón.
+CORO:
+«Siempre orad», nos manda Cristo, Y velad	en oración;
+Pronto vendrá	él en las nubes,
+Nos dará su bendición.
+2
+«Siempre orad», que si hoy viniere Cristo El te halle en la lid, ,
+Con la espada suya bien empleada, Fiel por nuestro Adalid.
+3
+«Siempre orad», si, vive aquí velando, Es mandato del Señor;
+Sin demora toma la promesa Del gran fiel Consolador.
+4
+«Siempre orad», constante y con celo, Ejercítate en la fe;
+Ten el ánimo de Jesucristo Y sus huellas siguen fiel.
+
+>>>>>>>>>> EDIÇÃO EQUIVALENTE PARA COMPARAÇÃO <<<<<<<<<<
+
+------------------------------------------------------------
+SION-062 | SIEMPRE ORAD
+------------------------------------------------------------
+Hinário: Himnos de Sión
+Número: 62
+Equivalente: 137
+Alertas: POSSIVEL_ERRO_OCR
+Fonte declarada: PDF Himnario de Sión enviado por el usuario (136 págs.; escaneado)
+Observação: Letra incorporada desde la equivalencia confirmada con Gloria y Triunfo; pendiente sólo de diferencias editoriales propias de Sión, si las hubiera.
+
+LETRA:
+1
+«Siempre orad», muy pronto viene Cristo, Guarda bien tu corazón;
+Retén firme todo lo que tienes, Tú tendrás tu galardón.
+CORO:
+«Siempre orad», nos manda Cristo, Y velad	en oración;
+Pronto vendrá	él en las nubes,
+Nos dará su bendición.
+2
+«Siempre orad», que si hoy viniere Cristo El te halle en la lid, ,
+Con la espada suya bien empleada, Fiel por nuestro Adalid.
+3
+«Siempre orad», si, vive aquí velando, Es mandato del Señor;
+Sin demora toma la promesa Del gran fiel Consolador.
+4
+«Siempre orad», constante y con celo, Ejercítate en la fe;
+Ten el ánimo de Jesucristo Y sus huellas siguen fiel.
+
+============================================================
+CASO 13 / 31
+CATEGORIA: PAR_EQUIVALENTE_SINALIZADO
+SCORE: 12
+TÍTULO: LA FUENTE SANADORA
+============================================================
+
+------------------------------------------------------------
+GT-138 | LA FUENTE SANADORA
+------------------------------------------------------------
+Hinário: Gloria y Triunfo
+Número: 138
+Equivalente: 63
+Alertas: POSSIVEL_ERRO_OCR
+Fonte declarada: Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada
+Observação: DOCX original 1–329
+
+LETRA:
+1
+¡Ved la fuente sanadora, La que abrió el Salvador! Cuyas aguas refrescantes Son de perennal valor.
+CORO:
+¡Oh preciosa fuente sanadora!
+Para todos fluye libre;
+¡Oh preciosa fuente sanadora!
+¡Gloria a Dios!, me sana a mí.
+2
+En la fuente que nos sana He hallado el perdón, , Y lavado toda mancha De mi pobre corazón.
+3
+En la fuente que nos sana Cristo ofrece la salud;
+Pues venid, enfermos todos, Probaréis su gran virtud.
+4
+Esta fuente que nos sana Aun hoy día es eficaz: Ven, sumérgete en ella, Cree, y sano quedarás.
+
+>>>>>>>>>> EDIÇÃO EQUIVALENTE PARA COMPARAÇÃO <<<<<<<<<<
+
+------------------------------------------------------------
+SION-063 | LA FUENTE SANADORA
+------------------------------------------------------------
+Hinário: Himnos de Sión
+Número: 63
+Equivalente: 138
+Alertas: POSSIVEL_ERRO_OCR
+Fonte declarada: PDF Himnario de Sión enviado por el usuario (136 págs.; escaneado)
+Observação: Letra incorporada desde la equivalencia confirmada con Gloria y Triunfo; pendiente sólo de diferencias editoriales propias de Sión, si las hubiera.
+
+LETRA:
+1
+¡Ved la fuente sanadora, La que abrió el Salvador! Cuyas aguas refrescantes Son de perennal valor.
+CORO:
+¡Oh preciosa fuente sanadora!
+Para todos fluye libre;
+¡Oh preciosa fuente sanadora!
+¡Gloria a Dios!, me sana a mí.
+2
+En la fuente que nos sana He hallado el perdón, , Y lavado toda mancha De mi pobre corazón.
+3
+En la fuente que nos sana Cristo ofrece la salud;
+Pues venid, enfermos todos, Probaréis su gran virtud.
+4
+Esta fuente que nos sana Aun hoy día es eficaz: Ven, sumérgete en ella, Cree, y sano quedarás.
+
+============================================================
+CASO 14 / 31
+CATEGORIA: PAR_EQUIVALENTE_SINALIZADO
+SCORE: 12
+TÍTULO: LA PALABRA HOY SEMBRADA
+============================================================
+
+------------------------------------------------------------
+GT-170 | LA PALABRA HOY SEMBRADA
+------------------------------------------------------------
+Hinário: Gloria y Triunfo
+Número: 170
+Equivalente: 75
+Alertas: POSSIVEL_ERRO_OCR
+Fonte declarada: Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada
+Observação: DOCX original 1–329
+
+LETRA:
+1
+La palabra hoy sembrada Hazla, Cristo, en mi nacer, Para darle crecimiento Sólo tienes tú poder:
+||Ricos frutos tú nos puedes conceder.||
+2
+La semilla que tu siervo Ha sembrado con saber, No permitas que las aves Se la vengan a comer:
+||Ricos frutos tú nos puedes conceder.||
+3
+Haz que crezca con tu gracia .
+Y tu rica bendición; No la ahoguen las espinas De congojas y aflicción:
+||Ricos frutos tú nos puedes conceder.||
+4
+Que su efecto muy profundo, En la mente y corazón, Llevará consigo al mundo Que le das la salvación:
+||Ricos frutos tú nos puedes conceder.||
+5
+Sembraremos la palabra, Con amor y profusión, Esperando la cosecha En la célica mansión:
+||Ricos frutos tú nos puedes conceder.||
+
+>>>>>>>>>> EDIÇÃO EQUIVALENTE PARA COMPARAÇÃO <<<<<<<<<<
+
+------------------------------------------------------------
+SION-075 | LA PALABRA HOY SEMBRADA
+------------------------------------------------------------
+Hinário: Himnos de Sión
+Número: 75
+Equivalente: 170
+Alertas: POSSIVEL_ERRO_OCR
+Fonte declarada: PDF Himnario de Sión enviado por el usuario (136 págs.; escaneado)
+Observação: Letra incorporada desde la equivalencia confirmada con Gloria y Triunfo; pendiente sólo de diferencias editoriales propias de Sión, si las hubiera.
+
+LETRA:
+1
+La palabra hoy sembrada Hazla, Cristo, en mi nacer, Para darle crecimiento Sólo tienes tú poder:
+||Ricos frutos tú nos puedes conceder.||
+2
+La semilla que tu siervo Ha sembrado con saber, No permitas que las aves Se la vengan a comer:
+||Ricos frutos tú nos puedes conceder.||
+3
+Haz que crezca con tu gracia .
+Y tu rica bendición; No la ahoguen las espinas De congojas y aflicción:
+||Ricos frutos tú nos puedes conceder.||
+4
+Que su efecto muy profundo, En la mente y corazón, Llevará consigo al mundo Que le das la salvación:
+||Ricos frutos tú nos puedes conceder.||
+5
+Sembraremos la palabra, Con amor y profusión, Esperando la cosecha En la célica mansión:
+||Ricos frutos tú nos puedes conceder.||
+
+============================================================
+CASO 15 / 31
+CATEGORIA: PAR_EQUIVALENTE_SINALIZADO
+SCORE: 12
+TÍTULO: PON TU CARGA EN JESÚS
+============================================================
+
+------------------------------------------------------------
+GT-293 | PON TU CARGA EN JESÚS
+------------------------------------------------------------
+Hinário: Gloria y Triunfo
+Número: 293
+Equivalente: 102
+Alertas: POSSIVEL_ERRO_OCR
+Fonte declarada: Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada
+Observação: DOCX original 1–329
+
+LETRA:
+1
+En Jesu-Cristo confía no más, Pon tu carga en Jesús;
+Paz y socorro de él obtendrás, Pon tu carga en Jesús.
+CORO:
+Pon tu carga en Jesús Y dile tu cruel dolor; En Cristo tu Amigo Tendrás, un abrigo...
+¡Oh, pon tu carga en Jesús!
+2
+Paz redentora tu alma tendré, etc. De inquietudes te libertaré, etc.
+3
+De los conflictos no huyas jamás, etc. En el desierto no busques la paz, etc.
+4
+¿Males te asaltan doquier, pecador?, etc.
+¿Vas ya cansado de pena y dolor?, etc.
+5
+Cristo podré disipar tu temor, etc. A los devotos les da gran valor, etc.
+
+>>>>>>>>>> EDIÇÃO EQUIVALENTE PARA COMPARAÇÃO <<<<<<<<<<
+
+------------------------------------------------------------
+SION-102 | PON TU CARGA EN JESÚS
+------------------------------------------------------------
+Hinário: Himnos de Sión
+Número: 102
+Equivalente: 293
+Alertas: POSSIVEL_ERRO_OCR
+Fonte declarada: PDF Himnario de Sión enviado por el usuario (136 págs.; escaneado)
+Observação: Letra incorporada desde la equivalencia confirmada con Gloria y Triunfo; pendiente sólo de diferencias editoriales propias de Sión, si las hubiera.
+
+LETRA:
+1
+En Jesu-Cristo confía no más, Pon tu carga en Jesús;
+Paz y socorro de él obtendrás, Pon tu carga en Jesús.
+CORO:
+Pon tu carga en Jesús Y dile tu cruel dolor; En Cristo tu Amigo Tendrás, un abrigo...
+¡Oh, pon tu carga en Jesús!
+2
+Paz redentora tu alma tendré, etc. De inquietudes te libertaré, etc.
+3
+De los conflictos no huyas jamás, etc. En el desierto no busques la paz, etc.
+4
+¿Males te asaltan doquier, pecador?, etc.
+¿Vas ya cansado de pena y dolor?, etc.
+5
+Cristo podré disipar tu temor, etc. A los devotos les da gran valor, etc.

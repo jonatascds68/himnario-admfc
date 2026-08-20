@@ -1,0 +1,2143 @@
+{
+  "versao": "1.0",
+  "data": "2026-08-19",
+  "base_alterada": false,
+  "total_hinos": 718,
+  "total_candidatos": 59,
+  "contagem_alertas": {
+    "PRIMEIRA_ESTROFE_MUITO_CURTA": 17,
+    "POSSIVEL_FALSO_CORO": 14,
+    "POSSIVEL_ESTROFE_FUNDIDA_4": 6,
+    "POSSIVEL_ERRO_OCR": 17,
+    "PRIMEIRA_ESTROFE_MUITO_LONGA": 7,
+    "TEXTO_ANTES_DA_ESTROFE_1": 15,
+    "CORO_VAZIO_OU_TRUNCADO": 11,
+    "NUMERACAO_ESTROFES_IRREGULAR": 3,
+    "POSSIVEL_VAZAMENTO_HINO_SEGUINTE": 2
+  },
+  "candidatos": [
+    {
+      "id": "GT-028",
+      "himnario": "Gloria y Triunfo",
+      "numero": 28,
+      "titulo": "MÁS DE JESÚS",
+      "equivalente": 15,
+      "alertas": [
+        "PRIMEIRA_ESTROFE_MUITO_CURTA",
+        "POSSIVEL_FALSO_CORO"
+      ],
+      "estrutura": {
+        "preamble": false,
+        "coro": true,
+        "estrofes": [
+          {
+            "n": 1,
+            "words": 22,
+            "chars": 107
+          },
+          {
+            "n": 2,
+            "words": 21,
+            "chars": 107
+          },
+          {
+            "n": 3,
+            "words": 40,
+            "chars": 212
+          }
+        ]
+      },
+      "evidencias": []
+    },
+    {
+      "id": "GT-033",
+      "himnario": "Gloria y Triunfo",
+      "numero": 33,
+      "titulo": "GRANDE GOZO HAY EN MI ALMA HOY",
+      "equivalente": 16,
+      "alertas": [
+        "PRIMEIRA_ESTROFE_MUITO_CURTA",
+        "POSSIVEL_FALSO_CORO"
+      ],
+      "estrutura": {
+        "preamble": false,
+        "coro": true,
+        "estrofes": [
+          {
+            "n": 1,
+            "words": 21,
+            "chars": 106
+          },
+          {
+            "n": 2,
+            "words": 23,
+            "chars": 96
+          },
+          {
+            "n": 3,
+            "words": 40,
+            "chars": 202
+          }
+        ]
+      },
+      "evidencias": []
+    },
+    {
+      "id": "GT-036",
+      "himnario": "Gloria y Triunfo",
+      "numero": 36,
+      "titulo": "ENTERA CONSAGRACIÓN",
+      "equivalente": 19,
+      "alertas": [
+        "POSSIVEL_ESTROFE_FUNDIDA_4"
+      ],
+      "estrutura": {
+        "preamble": false,
+        "coro": true,
+        "estrofes": [
+          {
+            "n": 1,
+            "words": 20,
+            "chars": 98
+          },
+          {
+            "n": 2,
+            "words": 23,
+            "chars": 103
+          },
+          {
+            "n": 3,
+            "words": 19,
+            "chars": 94
+          },
+          {
+            "n": 4,
+            "words": 40,
+            "chars": 195
+          }
+        ]
+      },
+      "evidencias": []
+    },
+    {
+      "id": "GT-040",
+      "himnario": "Gloria y Triunfo",
+      "numero": 40,
+      "titulo": "EN LOS NEGOCIOS DEL REY",
+      "equivalente": null,
+      "alertas": [
+        "POSSIVEL_ERRO_OCR",
+        "PRIMEIRA_ESTROFE_MUITO_LONGA"
+      ],
+      "estrutura": {
+        "preamble": false,
+        "coro": false,
+        "estrofes": [
+          {
+            "n": 1,
+            "words": 50,
+            "chars": 265
+          },
+          {
+            "n": 2,
+            "words": 28,
+            "chars": 146
+          },
+          {
+            "n": 3,
+            "words": 31,
+            "chars": 151
+          }
+        ]
+      },
+      "evidencias": []
+    },
+    {
+      "id": "GT-042",
+      "himnario": "Gloria y Triunfo",
+      "numero": 42,
+      "titulo": "HAY UN PRECIOSO MANANTIAL",
+      "equivalente": null,
+      "alertas": [
+        "TEXTO_ANTES_DA_ESTROFE_1",
+        "CORO_VAZIO_OU_TRUNCADO",
+        "NUMERACAO_ESTROFES_IRREGULAR"
+      ],
+      "estrutura": {
+        "preamble": true,
+        "coro": false,
+        "estrofes": [
+          {
+            "n": 2,
+            "words": 18,
+            "chars": 95
+          },
+          {
+            "n": 3,
+            "words": 19,
+            "chars": 91
+          },
+          {
+            "n": 4,
+            "words": 21,
+            "chars": 120
+          },
+          {
+            "n": 1,
+            "words": 18,
+            "chars": 95
+          },
+          {
+            "n": 2,
+            "words": 18,
+            "chars": 95
+          },
+          {
+            "n": 3,
+            "words": 19,
+            "chars": 92
+          },
+          {
+            "n": 4,
+            "words": 17,
+            "chars": 95
+          }
+        ]
+      },
+      "evidencias": [
+        {
+          "tipo": "preamble",
+          "texto": "Hay un precioso manantial De sangre de Emmanuel, Que purifica a cada cual Que se sumerge en él.\nCORO:\nLávame, Señor Jesús, En la sangre de tu cruz: Lávame, Señor Jesús,\nY más blanco que la nieve yo seré:"
+        }
+      ]
+    },
+    {
+      "id": "GT-052",
+      "himnario": "Gloria y Triunfo",
+      "numero": 52,
+      "titulo": "CRISTO LA ROCA",
+      "equivalente": 24,
+      "alertas": [
+        "PRIMEIRA_ESTROFE_MUITO_LONGA"
+      ],
+      "estrutura": {
+        "preamble": false,
+        "coro": false,
+        "estrofes": [
+          {
+            "n": 1,
+            "words": 59,
+            "chars": 313
+          },
+          {
+            "n": 2,
+            "words": 31,
+            "chars": 170
+          },
+          {
+            "n": 3,
+            "words": 35,
+            "chars": 178
+          }
+        ]
+      },
+      "evidencias": []
+    },
+    {
+      "id": "GT-053",
+      "himnario": "Gloria y Triunfo",
+      "numero": 53,
+      "titulo": "EN LA CRUZ",
+      "equivalente": 25,
+      "alertas": [
+        "POSSIVEL_ESTROFE_FUNDIDA_4"
+      ],
+      "estrutura": {
+        "preamble": false,
+        "coro": true,
+        "estrofes": [
+          {
+            "n": 1,
+            "words": 19,
+            "chars": 102
+          },
+          {
+            "n": 2,
+            "words": 17,
+            "chars": 91
+          },
+          {
+            "n": 3,
+            "words": 20,
+            "chars": 95
+          },
+          {
+            "n": 4,
+            "words": 46,
+            "chars": 228
+          }
+        ]
+      },
+      "evidencias": []
+    },
+    {
+      "id": "GT-054",
+      "himnario": "Gloria y Triunfo",
+      "numero": 54,
+      "titulo": "QUE HAGA EN TI SU VOLUNTAD",
+      "equivalente": null,
+      "alertas": [
+        "TEXTO_ANTES_DA_ESTROFE_1",
+        "POSSIVEL_VAZAMENTO_HINO_SEGUINTE",
+        "CORO_VAZIO_OU_TRUNCADO"
+      ],
+      "estrutura": {
+        "preamble": true,
+        "coro": false,
+        "estrofes": [
+          {
+            "n": 2,
+            "words": 31,
+            "chars": 155
+          },
+          {
+            "n": 3,
+            "words": 32,
+            "chars": 170
+          }
+        ]
+      },
+      "evidencias": [
+        {
+          "tipo": "preamble",
+          "texto": "Que haga en ti su voluntad.\nCORO:\nSu gran poder, sus dones te dará, El gozo y paz a tu alma volverá: Del corazón las manchas limpiará, Que haga en ti su santa voluntad."
+        },
+        {
+          "tipo": "vazamento",
+          "texto": "55. EL MUNDO PERDIDO\n"
+        }
+      ]
+    },
+    {
+      "id": "GT-055",
+      "himnario": "Gloria y Triunfo",
+      "numero": 55,
+      "titulo": "EL MUNDO PERDIDO",
+      "equivalente": null,
+      "alertas": [
+        "TEXTO_ANTES_DA_ESTROFE_1",
+        "CORO_VAZIO_OU_TRUNCADO"
+      ],
+      "estrutura": {
+        "preamble": true,
+        "coro": false,
+        "estrofes": [
+          {
+            "n": 2,
+            "words": 20,
+            "chars": 81
+          },
+          {
+            "n": 3,
+            "words": 16,
+            "chars": 85
+          },
+          {
+            "n": 4,
+            "words": 16,
+            "chars": 78
+          }
+        ]
+      },
+      "evidencias": [
+        {
+          "tipo": "preamble",
+          "texto": "El mundo perdido en pecado se vio:\n¡Jesús, es la luz del mundo!\nMas en las tinieblas la gloria brilló,\n¡Jesús es la luz del mundo!\nCORO:\n¡Ven a la luz, no quieras perder Gozo perfecto al amanecer!\nYo ciego fui, mas ya puedo ver,\n¡Jesús es la luz del "
+        }
+      ]
+    },
+    {
+      "id": "GT-056",
+      "himnario": "Gloria y Triunfo",
+      "numero": 56,
+      "titulo": "¡OH, YO QUIERO ANDAR CON CRISTO!",
+      "equivalente": 26,
+      "alertas": [
+        "TEXTO_ANTES_DA_ESTROFE_1",
+        "CORO_VAZIO_OU_TRUNCADO"
+      ],
+      "estrutura": {
+        "preamble": true,
+        "coro": false,
+        "estrofes": [
+          {
+            "n": 2,
+            "words": 42,
+            "chars": 202
+          },
+          {
+            "n": 3,
+            "words": 39,
+            "chars": 206
+          }
+        ]
+      },
+      "evidencias": [
+        {
+          "tipo": "preamble",
+          "texto": "¡Oh!, yo quiero andar con Cristo.\nQuiero oír su tierna voz, Meditar en su palabra, Siempre andar de él en pos: Consagrar a él mi vida, Cumplir fiel su voluntad,\nY algún día con mi Cristo Gozaré la claridad.\nCORO:\n¡Oh, sí, yo quiero andar con Cristo!\n"
+        }
+      ]
+    },
+    {
+      "id": "GT-062",
+      "himnario": "Gloria y Triunfo",
+      "numero": 62,
+      "titulo": "CON CRISTO YO IRÉ",
+      "equivalente": null,
+      "alertas": [
+        "POSSIVEL_ERRO_OCR",
+        "PRIMEIRA_ESTROFE_MUITO_CURTA",
+        "POSSIVEL_FALSO_CORO"
+      ],
+      "estrutura": {
+        "preamble": false,
+        "coro": true,
+        "estrofes": [
+          {
+            "n": 1,
+            "words": 33,
+            "chars": 147
+          },
+          {
+            "n": 2,
+            "words": 29,
+            "chars": 157
+          },
+          {
+            "n": 3,
+            "words": 59,
+            "chars": 319
+          }
+        ]
+      },
+      "evidencias": []
+    },
+    {
+      "id": "GT-069",
+      "himnario": "Gloria y Triunfo",
+      "numero": 69,
+      "titulo": "PRECIOSO ES JESÚS",
+      "equivalente": 278,
+      "alertas": [
+        "POSSIVEL_ERRO_OCR"
+      ],
+      "estrutura": {
+        "preamble": false,
+        "coro": true,
+        "estrofes": [
+          {
+            "n": 1,
+            "words": 28,
+            "chars": 141
+          },
+          {
+            "n": 2,
+            "words": 27,
+            "chars": 134
+          },
+          {
+            "n": 3,
+            "words": 26,
+            "chars": 134
+          },
+          {
+            "n": 4,
+            "words": 29,
+            "chars": 141
+          }
+        ]
+      },
+      "evidencias": []
+    },
+    {
+      "id": "GT-079",
+      "himnario": "Gloria y Triunfo",
+      "numero": 79,
+      "titulo": "PUEDO OÍR TU VOZ LLAMANDO",
+      "equivalente": null,
+      "alertas": [
+        "TEXTO_ANTES_DA_ESTROFE_1",
+        "CORO_VAZIO_OU_TRUNCADO"
+      ],
+      "estrutura": {
+        "preamble": true,
+        "coro": false,
+        "estrofes": [
+          {
+            "n": 2,
+            "words": 10,
+            "chars": 57
+          },
+          {
+            "n": 3,
+            "words": 8,
+            "chars": 54
+          },
+          {
+            "n": 4,
+            "words": 11,
+            "chars": 61
+          }
+        ]
+      },
+      "evidencias": [
+        {
+          "tipo": "preamble",
+          "texto": "||Puedo oír tu voz llamando, || Trae tu cruz y ven en pos de mí.\nCORO:\n||Seguiré do tú me guíes, || Dondequiera fiel te seguiré e ,"
+        }
+      ]
+    },
+    {
+      "id": "GT-081",
+      "himnario": "Gloria y Triunfo",
+      "numero": 81,
+      "titulo": "LA BANDERA DE LA CRUZ",
+      "equivalente": 38,
+      "alertas": [
+        "TEXTO_ANTES_DA_ESTROFE_1",
+        "CORO_VAZIO_OU_TRUNCADO"
+      ],
+      "estrutura": {
+        "preamble": true,
+        "coro": false,
+        "estrofes": [
+          {
+            "n": 2,
+            "words": 22,
+            "chars": 115
+          },
+          {
+            "n": 3,
+            "words": 23,
+            "chars": 119
+          },
+          {
+            "n": 4,
+            "words": 17,
+            "chars": 101
+          }
+        ]
+      },
+      "evidencias": [
+        {
+          "tipo": "preamble",
+          "texto": "Cual pendón hermoso despleguemos hoy La bandera de la cruz,\nLa verdad del evangelio, el blasón Del soldado de Jesús.\nCORO:\n¡Adelante, adelante,\nEn pos de nuestro Salvador! Con plena fe en nuestro Rey,\n¡Adelante con valor!"
+        }
+      ]
+    },
+    {
+      "id": "GT-082",
+      "himnario": "Gloria y Triunfo",
+      "numero": 82,
+      "titulo": "VEN PECADOR",
+      "equivalente": null,
+      "alertas": [
+        "TEXTO_ANTES_DA_ESTROFE_1",
+        "POSSIVEL_VAZAMENTO_HINO_SEGUINTE",
+        "PRIMEIRA_ESTROFE_MUITO_CURTA",
+        "CORO_VAZIO_OU_TRUNCADO"
+      ],
+      "estrutura": {
+        "preamble": true,
+        "coro": false,
+        "estrofes": [
+          {
+            "n": 1,
+            "words": 22,
+            "chars": 138
+          },
+          {
+            "n": 2,
+            "words": 24,
+            "chars": 143
+          },
+          {
+            "n": 3,
+            "words": 42,
+            "chars": 235
+          }
+        ]
+      },
+      "evidencias": [
+        {
+          "tipo": "preamble",
+          "texto": "82. VEN PECADOR"
+        },
+        {
+          "tipo": "vazamento",
+          "texto": "82. VEN PECADOR\n"
+        }
+      ]
+    },
+    {
+      "id": "GT-083",
+      "himnario": "Gloria y Triunfo",
+      "numero": 83,
+      "titulo": "¡OH, VEN SIN TARDAR!",
+      "equivalente": 37,
+      "alertas": [
+        "TEXTO_ANTES_DA_ESTROFE_1"
+      ],
+      "estrutura": {
+        "preamble": true,
+        "coro": false,
+        "estrofes": [
+          {
+            "n": 2,
+            "words": 20,
+            "chars": 97
+          },
+          {
+            "n": 3,
+            "words": 19,
+            "chars": 95
+          },
+          {
+            "n": 4,
+            "words": 21,
+            "chars": 101
+          }
+        ]
+      },
+      "evidencias": [
+        {
+          "tipo": "preamble",
+          "texto": "¡Oh, ven sin tardar! ¡Oh, ven sin tardar!\nAcepta a Jesús, y salvo serás."
+        }
+      ]
+    },
+    {
+      "id": "GT-091",
+      "himnario": "Gloria y Triunfo",
+      "numero": 91,
+      "titulo": "YA SALVO SOY",
+      "equivalente": 41,
+      "alertas": [
+        "PRIMEIRA_ESTROFE_MUITO_CURTA",
+        "POSSIVEL_FALSO_CORO"
+      ],
+      "estrutura": {
+        "preamble": false,
+        "coro": true,
+        "estrofes": [
+          {
+            "n": 1,
+            "words": 19,
+            "chars": 105
+          },
+          {
+            "n": 2,
+            "words": 21,
+            "chars": 105
+          },
+          {
+            "n": 3,
+            "words": 40,
+            "chars": 219
+          }
+        ]
+      },
+      "evidencias": []
+    },
+    {
+      "id": "GT-100",
+      "himnario": "Gloria y Triunfo",
+      "numero": 100,
+      "titulo": "A LOS PIES DE JESUCRISTO",
+      "equivalente": 59,
+      "alertas": [
+        "PRIMEIRA_ESTROFE_MUITO_CURTA",
+        "POSSIVEL_FALSO_CORO"
+      ],
+      "estrutura": {
+        "preamble": false,
+        "coro": true,
+        "estrofes": [
+          {
+            "n": 1,
+            "words": 18,
+            "chars": 95
+          },
+          {
+            "n": 2,
+            "words": 37,
+            "chars": 194
+          },
+          {
+            "n": 3,
+            "words": 39,
+            "chars": 194
+          }
+        ]
+      },
+      "evidencias": []
+    },
+    {
+      "id": "GT-104",
+      "himnario": "Gloria y Triunfo",
+      "numero": 104,
+      "titulo": "MI CULPA EL LLEVO",
+      "equivalente": null,
+      "alertas": [
+        "PRIMEIRA_ESTROFE_MUITO_LONGA"
+      ],
+      "estrutura": {
+        "preamble": false,
+        "coro": true,
+        "estrofes": [
+          {
+            "n": 1,
+            "words": 25,
+            "chars": 125
+          },
+          {
+            "n": 2,
+            "words": 13,
+            "chars": 70
+          },
+          {
+            "n": 3,
+            "words": 14,
+            "chars": 73
+          },
+          {
+            "n": 4,
+            "words": 21,
+            "chars": 120
+          }
+        ]
+      },
+      "evidencias": []
+    },
+    {
+      "id": "GT-137",
+      "himnario": "Gloria y Triunfo",
+      "numero": 137,
+      "titulo": "SIEMPRE ORAD",
+      "equivalente": 62,
+      "alertas": [
+        "POSSIVEL_ERRO_OCR"
+      ],
+      "estrutura": {
+        "preamble": false,
+        "coro": true,
+        "estrofes": [
+          {
+            "n": 1,
+            "words": 20,
+            "chars": 120
+          },
+          {
+            "n": 2,
+            "words": 24,
+            "chars": 125
+          },
+          {
+            "n": 3,
+            "words": 19,
+            "chars": 113
+          },
+          {
+            "n": 4,
+            "words": 20,
+            "chars": 112
+          }
+        ]
+      },
+      "evidencias": []
+    },
+    {
+      "id": "GT-138",
+      "himnario": "Gloria y Triunfo",
+      "numero": 138,
+      "titulo": "LA FUENTE SANADORA",
+      "equivalente": 63,
+      "alertas": [
+        "POSSIVEL_ERRO_OCR"
+      ],
+      "estrutura": {
+        "preamble": false,
+        "coro": true,
+        "estrofes": [
+          {
+            "n": 1,
+            "words": 16,
+            "chars": 98
+          },
+          {
+            "n": 2,
+            "words": 19,
+            "chars": 91
+          },
+          {
+            "n": 3,
+            "words": 18,
+            "chars": 103
+          },
+          {
+            "n": 4,
+            "words": 18,
+            "chars": 94
+          }
+        ]
+      },
+      "evidencias": []
+    },
+    {
+      "id": "GT-151",
+      "himnario": "Gloria y Triunfo",
+      "numero": 151,
+      "titulo": "SOLO DE JESÚS LA SANGRE",
+      "equivalente": null,
+      "alertas": [
+        "PRIMEIRA_ESTROFE_MUITO_LONGA"
+      ],
+      "estrutura": {
+        "preamble": false,
+        "coro": true,
+        "estrofes": [
+          {
+            "n": 1,
+            "words": 19,
+            "chars": 98
+          },
+          {
+            "n": 2,
+            "words": 10,
+            "chars": 54
+          },
+          {
+            "n": 3,
+            "words": 10,
+            "chars": 51
+          },
+          {
+            "n": 4,
+            "words": 11,
+            "chars": 56
+          }
+        ]
+      },
+      "evidencias": []
+    },
+    {
+      "id": "GT-161",
+      "himnario": "Gloria y Triunfo",
+      "numero": 161,
+      "titulo": "PECADOR, VEN AL DULCE JESÚS",
+      "equivalente": null,
+      "alertas": [
+        "POSSIVEL_ERRO_OCR",
+        "PRIMEIRA_ESTROFE_MUITO_CURTA",
+        "POSSIVEL_FALSO_CORO"
+      ],
+      "estrutura": {
+        "preamble": false,
+        "coro": true,
+        "estrofes": [
+          {
+            "n": 1,
+            "words": 20,
+            "chars": 115
+          },
+          {
+            "n": 2,
+            "words": 23,
+            "chars": 126
+          },
+          {
+            "n": 3,
+            "words": 44,
+            "chars": 234
+          }
+        ]
+      },
+      "evidencias": []
+    },
+    {
+      "id": "GT-170",
+      "himnario": "Gloria y Triunfo",
+      "numero": 170,
+      "titulo": "LA PALABRA HOY SEMBRADA",
+      "equivalente": 75,
+      "alertas": [
+        "POSSIVEL_ERRO_OCR"
+      ],
+      "estrutura": {
+        "preamble": false,
+        "coro": false,
+        "estrofes": [
+          {
+            "n": 1,
+            "words": 22,
+            "chars": 137
+          },
+          {
+            "n": 2,
+            "words": 25,
+            "chars": 135
+          },
+          {
+            "n": 3,
+            "words": 26,
+            "chars": 143
+          },
+          {
+            "n": 4,
+            "words": 25,
+            "chars": 141
+          },
+          {
+            "n": 5,
+            "words": 20,
+            "chars": 129
+          }
+        ]
+      },
+      "evidencias": []
+    },
+    {
+      "id": "GT-177",
+      "himnario": "Gloria y Triunfo",
+      "numero": 177,
+      "titulo": "NO TE DE TEMOR HABLAR POR CRISTO",
+      "equivalente": null,
+      "alertas": [
+        "POSSIVEL_ESTROFE_FUNDIDA_4"
+      ],
+      "estrutura": {
+        "preamble": false,
+        "coro": true,
+        "estrofes": [
+          {
+            "n": 1,
+            "words": 24,
+            "chars": 117
+          },
+          {
+            "n": 2,
+            "words": 22,
+            "chars": 116
+          },
+          {
+            "n": 3,
+            "words": 22,
+            "chars": 118
+          },
+          {
+            "n": 4,
+            "words": 48,
+            "chars": 223
+          }
+        ]
+      },
+      "evidencias": []
+    },
+    {
+      "id": "GT-182",
+      "himnario": "Gloria y Triunfo",
+      "numero": 182,
+      "titulo": "¡GLORIA A TI, JESÚS DIVINO",
+      "equivalente": 79,
+      "alertas": [
+        "NUMERACAO_ESTROFES_IRREGULAR"
+      ],
+      "estrutura": {
+        "preamble": false,
+        "coro": true,
+        "estrofes": [
+          {
+            "n": 1,
+            "words": 18,
+            "chars": 107
+          },
+          {
+            "n": 3,
+            "words": 17,
+            "chars": 98
+          },
+          {
+            "n": 4,
+            "words": 14,
+            "chars": 89
+          },
+          {
+            "n": 5,
+            "words": 17,
+            "chars": 95
+          }
+        ]
+      },
+      "evidencias": []
+    },
+    {
+      "id": "GT-186",
+      "himnario": "Gloria y Triunfo",
+      "numero": 186,
+      "titulo": "PRESENTIMOS DEL MUNDO DICHOSO",
+      "equivalente": null,
+      "alertas": [
+        "PRIMEIRA_ESTROFE_MUITO_CURTA",
+        "POSSIVEL_FALSO_CORO"
+      ],
+      "estrutura": {
+        "preamble": false,
+        "coro": true,
+        "estrofes": [
+          {
+            "n": 1,
+            "words": 20,
+            "chars": 120
+          },
+          {
+            "n": 2,
+            "words": 22,
+            "chars": 122
+          },
+          {
+            "n": 3,
+            "words": 44,
+            "chars": 243
+          }
+        ]
+      },
+      "evidencias": []
+    },
+    {
+      "id": "GT-259",
+      "himnario": "Gloria y Triunfo",
+      "numero": 259,
+      "titulo": "GUARDA EL CONTACTO",
+      "equivalente": 107,
+      "alertas": [
+        "PRIMEIRA_ESTROFE_MUITO_CURTA",
+        "POSSIVEL_FALSO_CORO"
+      ],
+      "estrutura": {
+        "preamble": false,
+        "coro": true,
+        "estrofes": [
+          {
+            "n": 1,
+            "words": 26,
+            "chars": 157
+          },
+          {
+            "n": 2,
+            "words": 27,
+            "chars": 150
+          },
+          {
+            "n": 3,
+            "words": 59,
+            "chars": 310
+          }
+        ]
+      },
+      "evidencias": []
+    },
+    {
+      "id": "GT-276",
+      "himnario": "Gloria y Triunfo",
+      "numero": 276,
+      "titulo": "VOY A VER A CRISTO EL REY",
+      "equivalente": null,
+      "alertas": [
+        "PRIMEIRA_ESTROFE_MUITO_LONGA"
+      ],
+      "estrutura": {
+        "preamble": false,
+        "coro": true,
+        "estrofes": [
+          {
+            "n": 1,
+            "words": 28,
+            "chars": 125
+          },
+          {
+            "n": 2,
+            "words": 23,
+            "chars": 111
+          },
+          {
+            "n": 3,
+            "words": 14,
+            "chars": 81
+          },
+          {
+            "n": 4,
+            "words": 15,
+            "chars": 80
+          }
+        ]
+      },
+      "evidencias": []
+    },
+    {
+      "id": "GT-277",
+      "himnario": "Gloria y Triunfo",
+      "numero": 277,
+      "titulo": "LA PALABRA DIVINA",
+      "equivalente": null,
+      "alertas": [
+        "POSSIVEL_ERRO_OCR",
+        "PRIMEIRA_ESTROFE_MUITO_CURTA"
+      ],
+      "estrutura": {
+        "preamble": false,
+        "coro": true,
+        "estrofes": [
+          {
+            "n": 1,
+            "words": 35,
+            "chars": 182
+          },
+          {
+            "n": 2,
+            "words": 34,
+            "chars": 172
+          },
+          {
+            "n": 3,
+            "words": 72,
+            "chars": 365
+          }
+        ]
+      },
+      "evidencias": []
+    },
+    {
+      "id": "GT-283",
+      "himnario": "Gloria y Triunfo",
+      "numero": 283,
+      "titulo": "EN LA MAÑANA",
+      "equivalente": null,
+      "alertas": [
+        "PRIMEIRA_ESTROFE_MUITO_LONGA"
+      ],
+      "estrutura": {
+        "preamble": false,
+        "coro": false,
+        "estrofes": [
+          {
+            "n": 1,
+            "words": 49,
+            "chars": 282
+          },
+          {
+            "n": 2,
+            "words": 16,
+            "chars": 94
+          },
+          {
+            "n": 3,
+            "words": 19,
+            "chars": 93
+          },
+          {
+            "n": 4,
+            "words": 17,
+            "chars": 100
+          }
+        ]
+      },
+      "evidencias": []
+    },
+    {
+      "id": "GT-284",
+      "himnario": "Gloria y Triunfo",
+      "numero": 284,
+      "titulo": "SIGUE ORANDO",
+      "equivalente": null,
+      "alertas": [
+        "POSSIVEL_ERRO_OCR",
+        "PRIMEIRA_ESTROFE_MUITO_CURTA",
+        "POSSIVEL_FALSO_CORO"
+      ],
+      "estrutura": {
+        "preamble": false,
+        "coro": true,
+        "estrofes": [
+          {
+            "n": 1,
+            "words": 16,
+            "chars": 102
+          },
+          {
+            "n": 2,
+            "words": 18,
+            "chars": 95
+          },
+          {
+            "n": 3,
+            "words": 36,
+            "chars": 190
+          }
+        ]
+      },
+      "evidencias": []
+    },
+    {
+      "id": "GT-291",
+      "himnario": "Gloria y Triunfo",
+      "numero": 291,
+      "titulo": "HOGAR CELESTIAL",
+      "equivalente": null,
+      "alertas": [
+        "POSSIVEL_ERRO_OCR"
+      ],
+      "estrutura": {
+        "preamble": false,
+        "coro": false,
+        "estrofes": [
+          {
+            "n": 1,
+            "words": 41,
+            "chars": 220
+          },
+          {
+            "n": 2,
+            "words": 35,
+            "chars": 211
+          },
+          {
+            "n": 3,
+            "words": 37,
+            "chars": 203
+          }
+        ]
+      },
+      "evidencias": []
+    },
+    {
+      "id": "GT-293",
+      "himnario": "Gloria y Triunfo",
+      "numero": 293,
+      "titulo": "PON TU CARGA EN JESÚS",
+      "equivalente": 102,
+      "alertas": [
+        "POSSIVEL_ERRO_OCR"
+      ],
+      "estrutura": {
+        "preamble": false,
+        "coro": true,
+        "estrofes": [
+          {
+            "n": 1,
+            "words": 21,
+            "chars": 106
+          },
+          {
+            "n": 2,
+            "words": 11,
+            "chars": 68
+          },
+          {
+            "n": 3,
+            "words": 15,
+            "chars": 77
+          },
+          {
+            "n": 4,
+            "words": 14,
+            "chars": 80
+          },
+          {
+            "n": 5,
+            "words": 14,
+            "chars": 73
+          }
+        ]
+      },
+      "evidencias": []
+    },
+    {
+      "id": "GT-303",
+      "himnario": "Gloria y Triunfo",
+      "numero": 303,
+      "titulo": "DE LA",
+      "equivalente": null,
+      "alertas": [
+        "TEXTO_ANTES_DA_ESTROFE_1"
+      ],
+      "estrutura": {
+        "preamble": true,
+        "coro": false,
+        "estrofes": [
+          {
+            "n": 2,
+            "words": 37,
+            "chars": 197
+          },
+          {
+            "n": 3,
+            "words": 40,
+            "chars": 208
+          },
+          {
+            "n": 4,
+            "words": 37,
+            "chars": 203
+          },
+          {
+            "n": 5,
+            "words": 34,
+            "chars": 190
+          }
+        ]
+      },
+      "evidencias": [
+        {
+          "tipo": "preamble",
+          "texto": "De la Iglesia el fundamento Es Jesús el Salvador;\nPor el agua y la palabra Le dio vida su Señor:\nPara hacerla esposa quiso De los cielos descender, Y su sangre por limpiarla En la horrible cruz verter."
+        }
+      ]
+    },
+    {
+      "id": "GT-304",
+      "himnario": "Gloria y Triunfo",
+      "numero": 304,
+      "titulo": "JERUSALÉN CELESTE",
+      "equivalente": null,
+      "alertas": [
+        "TEXTO_ANTES_DA_ESTROFE_1"
+      ],
+      "estrutura": {
+        "preamble": true,
+        "coro": false,
+        "estrofes": [
+          {
+            "n": 2,
+            "words": 33,
+            "chars": 185
+          },
+          {
+            "n": 3,
+            "words": 32,
+            "chars": 180
+          },
+          {
+            "n": 4,
+            "words": 30,
+            "chars": 176
+          }
+        ]
+      },
+      "evidencias": [
+        {
+          "tipo": "preamble",
+          "texto": "Jerusalén celeste, Visión de paz dichosa,\nDe Cristo santa esposa, Radiante de esplendor, Tu fábrica es divina, Son vivos tus sillares,\nY de ángeles millares, Te ciñen en redor."
+        }
+      ]
+    },
+    {
+      "id": "GT-328",
+      "himnario": "Gloria y Triunfo",
+      "numero": 328,
+      "titulo": "LLAMA",
+      "equivalente": null,
+      "alertas": [
+        "TEXTO_ANTES_DA_ESTROFE_1"
+      ],
+      "estrutura": {
+        "preamble": true,
+        "coro": false,
+        "estrofes": [
+          {
+            "n": 1,
+            "words": 41,
+            "chars": 225
+          },
+          {
+            "n": 2,
+            "words": 22,
+            "chars": 110
+          },
+          {
+            "n": 3,
+            "words": 30,
+            "chars": 161
+          }
+        ]
+      },
+      "evidencias": [
+        {
+          "tipo": "preamble",
+          "texto": "Llaman, llaman, llaman, llaman al corazón, Permítele entrar sin tardar."
+        }
+      ]
+    },
+    {
+      "id": "SION-007",
+      "himnario": "Himnos de Sión",
+      "numero": 7,
+      "titulo": "LA SIEMBRA",
+      "equivalente": 8,
+      "alertas": [
+        "POSSIVEL_ERRO_OCR"
+      ],
+      "estrutura": {
+        "preamble": false,
+        "coro": true,
+        "estrofes": [
+          {
+            "n": 1,
+            "words": 18,
+            "chars": 126
+          },
+          {
+            "n": 2,
+            "words": 19,
+            "chars": 127
+          },
+          {
+            "n": 3,
+            "words": 19,
+            "chars": 124
+          }
+        ]
+      },
+      "evidencias": []
+    },
+    {
+      "id": "SION-015",
+      "himnario": "Himnos de Sión",
+      "numero": 15,
+      "titulo": "MÁS DE JESÚS",
+      "equivalente": 28,
+      "alertas": [
+        "PRIMEIRA_ESTROFE_MUITO_CURTA",
+        "POSSIVEL_FALSO_CORO"
+      ],
+      "estrutura": {
+        "preamble": false,
+        "coro": true,
+        "estrofes": [
+          {
+            "n": 1,
+            "words": 22,
+            "chars": 107
+          },
+          {
+            "n": 2,
+            "words": 21,
+            "chars": 107
+          },
+          {
+            "n": 3,
+            "words": 40,
+            "chars": 212
+          }
+        ]
+      },
+      "evidencias": []
+    },
+    {
+      "id": "SION-016",
+      "himnario": "Himnos de Sión",
+      "numero": 16,
+      "titulo": "GRANDE GOZO HAY EN MI ALMA",
+      "equivalente": "33",
+      "alertas": [
+        "PRIMEIRA_ESTROFE_MUITO_CURTA",
+        "POSSIVEL_FALSO_CORO"
+      ],
+      "estrutura": {
+        "preamble": false,
+        "coro": true,
+        "estrofes": [
+          {
+            "n": 1,
+            "words": 21,
+            "chars": 106
+          },
+          {
+            "n": 2,
+            "words": 23,
+            "chars": 96
+          },
+          {
+            "n": 3,
+            "words": 40,
+            "chars": 202
+          }
+        ]
+      },
+      "evidencias": []
+    },
+    {
+      "id": "SION-019",
+      "himnario": "Himnos de Sión",
+      "numero": 19,
+      "titulo": "ENTERA CONSAGRACIÓN",
+      "equivalente": 36,
+      "alertas": [
+        "POSSIVEL_ESTROFE_FUNDIDA_4"
+      ],
+      "estrutura": {
+        "preamble": false,
+        "coro": true,
+        "estrofes": [
+          {
+            "n": 1,
+            "words": 20,
+            "chars": 98
+          },
+          {
+            "n": 2,
+            "words": 23,
+            "chars": 103
+          },
+          {
+            "n": 3,
+            "words": 19,
+            "chars": 94
+          },
+          {
+            "n": 4,
+            "words": 40,
+            "chars": 195
+          }
+        ]
+      },
+      "evidencias": []
+    },
+    {
+      "id": "SION-024",
+      "himnario": "Himnos de Sión",
+      "numero": 24,
+      "titulo": "CRISTO LA ROCA",
+      "equivalente": 52,
+      "alertas": [
+        "PRIMEIRA_ESTROFE_MUITO_LONGA"
+      ],
+      "estrutura": {
+        "preamble": false,
+        "coro": false,
+        "estrofes": [
+          {
+            "n": 1,
+            "words": 59,
+            "chars": 313
+          },
+          {
+            "n": 2,
+            "words": 31,
+            "chars": 170
+          },
+          {
+            "n": 3,
+            "words": 35,
+            "chars": 178
+          }
+        ]
+      },
+      "evidencias": []
+    },
+    {
+      "id": "SION-025",
+      "himnario": "Himnos de Sión",
+      "numero": 25,
+      "titulo": "EN LA CRUZ",
+      "equivalente": 53,
+      "alertas": [
+        "POSSIVEL_ESTROFE_FUNDIDA_4"
+      ],
+      "estrutura": {
+        "preamble": false,
+        "coro": true,
+        "estrofes": [
+          {
+            "n": 1,
+            "words": 19,
+            "chars": 102
+          },
+          {
+            "n": 2,
+            "words": 17,
+            "chars": 91
+          },
+          {
+            "n": 3,
+            "words": 20,
+            "chars": 95
+          },
+          {
+            "n": 4,
+            "words": 46,
+            "chars": 228
+          }
+        ]
+      },
+      "evidencias": []
+    },
+    {
+      "id": "SION-026",
+      "himnario": "Himnos de Sión",
+      "numero": 26,
+      "titulo": "¡OH! YO QUIERO ANDAR CON CRISTO",
+      "equivalente": 56,
+      "alertas": [
+        "TEXTO_ANTES_DA_ESTROFE_1",
+        "CORO_VAZIO_OU_TRUNCADO"
+      ],
+      "estrutura": {
+        "preamble": true,
+        "coro": false,
+        "estrofes": [
+          {
+            "n": 2,
+            "words": 42,
+            "chars": 202
+          },
+          {
+            "n": 3,
+            "words": 39,
+            "chars": 206
+          }
+        ]
+      },
+      "evidencias": [
+        {
+          "tipo": "preamble",
+          "texto": "¡Oh!, yo quiero andar con Cristo.\nQuiero oír su tierna voz, Meditar en su palabra, Siempre andar de él en pos: Consagrar a él mi vida, Cumplir fiel su voluntad,\nY algún día con mi Cristo Gozaré la claridad.\nCORO:\n¡Oh, sí, yo quiero andar con Cristo!\n"
+        }
+      ]
+    },
+    {
+      "id": "SION-037",
+      "himnario": "Himnos de Sión",
+      "numero": 37,
+      "titulo": "¡OH, VEN SIN TARDAR!",
+      "equivalente": 83,
+      "alertas": [
+        "TEXTO_ANTES_DA_ESTROFE_1"
+      ],
+      "estrutura": {
+        "preamble": true,
+        "coro": false,
+        "estrofes": [
+          {
+            "n": 2,
+            "words": 20,
+            "chars": 97
+          },
+          {
+            "n": 3,
+            "words": 19,
+            "chars": 95
+          },
+          {
+            "n": 4,
+            "words": 21,
+            "chars": 101
+          }
+        ]
+      },
+      "evidencias": [
+        {
+          "tipo": "preamble",
+          "texto": "¡Oh, ven sin tardar! ¡Oh, ven sin tardar!\nAcepta a Jesús, y salvo serás."
+        }
+      ]
+    },
+    {
+      "id": "SION-038",
+      "himnario": "Himnos de Sión",
+      "numero": 38,
+      "titulo": "LA BANDERA DE LA CRUZ",
+      "equivalente": 81,
+      "alertas": [
+        "TEXTO_ANTES_DA_ESTROFE_1",
+        "CORO_VAZIO_OU_TRUNCADO"
+      ],
+      "estrutura": {
+        "preamble": true,
+        "coro": false,
+        "estrofes": [
+          {
+            "n": 2,
+            "words": 22,
+            "chars": 115
+          },
+          {
+            "n": 3,
+            "words": 23,
+            "chars": 119
+          },
+          {
+            "n": 4,
+            "words": 17,
+            "chars": 101
+          }
+        ]
+      },
+      "evidencias": [
+        {
+          "tipo": "preamble",
+          "texto": "Cual pendón hermoso despleguemos hoy La bandera de la cruz,\nLa verdad del evangelio, el blasón Del soldado de Jesús.\nCORO:\n¡Adelante, adelante,\nEn pos de nuestro Salvador! Con plena fe en nuestro Rey,\n¡Adelante con valor!"
+        }
+      ]
+    },
+    {
+      "id": "SION-041",
+      "himnario": "Himnos de Sión",
+      "numero": 41,
+      "titulo": "YA SALVO SOY",
+      "equivalente": 91,
+      "alertas": [
+        "PRIMEIRA_ESTROFE_MUITO_CURTA",
+        "POSSIVEL_FALSO_CORO"
+      ],
+      "estrutura": {
+        "preamble": false,
+        "coro": true,
+        "estrofes": [
+          {
+            "n": 1,
+            "words": 19,
+            "chars": 105
+          },
+          {
+            "n": 2,
+            "words": 21,
+            "chars": 105
+          },
+          {
+            "n": 3,
+            "words": 40,
+            "chars": 219
+          }
+        ]
+      },
+      "evidencias": []
+    },
+    {
+      "id": "SION-059",
+      "himnario": "Himnos de Sión",
+      "numero": 59,
+      "titulo": "A LOS PIES DE JESUCRISTO",
+      "equivalente": 100,
+      "alertas": [
+        "PRIMEIRA_ESTROFE_MUITO_CURTA",
+        "POSSIVEL_FALSO_CORO"
+      ],
+      "estrutura": {
+        "preamble": false,
+        "coro": true,
+        "estrofes": [
+          {
+            "n": 1,
+            "words": 18,
+            "chars": 95
+          },
+          {
+            "n": 2,
+            "words": 37,
+            "chars": 194
+          },
+          {
+            "n": 3,
+            "words": 39,
+            "chars": 194
+          }
+        ]
+      },
+      "evidencias": []
+    },
+    {
+      "id": "SION-062",
+      "himnario": "Himnos de Sión",
+      "numero": 62,
+      "titulo": "SIEMPRE ORAD",
+      "equivalente": 137,
+      "alertas": [
+        "POSSIVEL_ERRO_OCR"
+      ],
+      "estrutura": {
+        "preamble": false,
+        "coro": true,
+        "estrofes": [
+          {
+            "n": 1,
+            "words": 20,
+            "chars": 120
+          },
+          {
+            "n": 2,
+            "words": 24,
+            "chars": 125
+          },
+          {
+            "n": 3,
+            "words": 19,
+            "chars": 113
+          },
+          {
+            "n": 4,
+            "words": 20,
+            "chars": 112
+          }
+        ]
+      },
+      "evidencias": []
+    },
+    {
+      "id": "SION-063",
+      "himnario": "Himnos de Sión",
+      "numero": 63,
+      "titulo": "LA FUENTE SANADORA",
+      "equivalente": 138,
+      "alertas": [
+        "POSSIVEL_ERRO_OCR"
+      ],
+      "estrutura": {
+        "preamble": false,
+        "coro": true,
+        "estrofes": [
+          {
+            "n": 1,
+            "words": 16,
+            "chars": 98
+          },
+          {
+            "n": 2,
+            "words": 19,
+            "chars": 91
+          },
+          {
+            "n": 3,
+            "words": 18,
+            "chars": 103
+          },
+          {
+            "n": 4,
+            "words": 18,
+            "chars": 94
+          }
+        ]
+      },
+      "evidencias": []
+    },
+    {
+      "id": "SION-075",
+      "himnario": "Himnos de Sión",
+      "numero": 75,
+      "titulo": "LA PALABRA HOY SEMBRADA",
+      "equivalente": 170,
+      "alertas": [
+        "POSSIVEL_ERRO_OCR"
+      ],
+      "estrutura": {
+        "preamble": false,
+        "coro": false,
+        "estrofes": [
+          {
+            "n": 1,
+            "words": 22,
+            "chars": 137
+          },
+          {
+            "n": 2,
+            "words": 25,
+            "chars": 135
+          },
+          {
+            "n": 3,
+            "words": 26,
+            "chars": 143
+          },
+          {
+            "n": 4,
+            "words": 25,
+            "chars": 141
+          },
+          {
+            "n": 5,
+            "words": 20,
+            "chars": 129
+          }
+        ]
+      },
+      "evidencias": []
+    },
+    {
+      "id": "SION-079",
+      "himnario": "Himnos de Sión",
+      "numero": 79,
+      "titulo": "GLORIA A TI, JESÚS DIVINO",
+      "equivalente": 182,
+      "alertas": [
+        "NUMERACAO_ESTROFES_IRREGULAR"
+      ],
+      "estrutura": {
+        "preamble": false,
+        "coro": true,
+        "estrofes": [
+          {
+            "n": 1,
+            "words": 18,
+            "chars": 107
+          },
+          {
+            "n": 3,
+            "words": 17,
+            "chars": 98
+          },
+          {
+            "n": 4,
+            "words": 14,
+            "chars": 89
+          },
+          {
+            "n": 5,
+            "words": 17,
+            "chars": 95
+          }
+        ]
+      },
+      "evidencias": []
+    },
+    {
+      "id": "SION-102",
+      "himnario": "Himnos de Sión",
+      "numero": 102,
+      "titulo": "PON TU CARGA EN JESÚS",
+      "equivalente": 293,
+      "alertas": [
+        "POSSIVEL_ERRO_OCR"
+      ],
+      "estrutura": {
+        "preamble": false,
+        "coro": true,
+        "estrofes": [
+          {
+            "n": 1,
+            "words": 21,
+            "chars": 106
+          },
+          {
+            "n": 2,
+            "words": 11,
+            "chars": 68
+          },
+          {
+            "n": 3,
+            "words": 15,
+            "chars": 77
+          },
+          {
+            "n": 4,
+            "words": 14,
+            "chars": 80
+          },
+          {
+            "n": 5,
+            "words": 14,
+            "chars": 73
+          }
+        ]
+      },
+      "evidencias": []
+    },
+    {
+      "id": "SION-107",
+      "himnario": "Himnos de Sión",
+      "numero": 107,
+      "titulo": "GUARDA EL CONTACTO",
+      "equivalente": 259,
+      "alertas": [
+        "PRIMEIRA_ESTROFE_MUITO_CURTA",
+        "POSSIVEL_FALSO_CORO"
+      ],
+      "estrutura": {
+        "preamble": false,
+        "coro": true,
+        "estrofes": [
+          {
+            "n": 1,
+            "words": 26,
+            "chars": 157
+          },
+          {
+            "n": 2,
+            "words": 27,
+            "chars": 150
+          },
+          {
+            "n": 3,
+            "words": 59,
+            "chars": 310
+          }
+        ]
+      },
+      "evidencias": []
+    },
+    {
+      "id": "SION-244",
+      "himnario": "Himnos de Sión",
+      "numero": 244,
+      "titulo": "SI FUI MOTIVO DE DOLOR, SEÑOR",
+      "equivalente": null,
+      "alertas": [
+        "PRIMEIRA_ESTROFE_MUITO_CURTA"
+      ],
+      "estrutura": {
+        "preamble": false,
+        "coro": false,
+        "estrofes": [
+          {
+            "n": 1,
+            "words": 23,
+            "chars": 116
+          },
+          {
+            "n": 2,
+            "words": 24,
+            "chars": 119
+          },
+          {
+            "n": 3,
+            "words": 43,
+            "chars": 242
+          }
+        ]
+      },
+      "evidencias": []
+    },
+    {
+      "id": "SION-245",
+      "himnario": "Himnos de Sión",
+      "numero": 245,
+      "titulo": "JESÚS ME AMA",
+      "equivalente": null,
+      "alertas": [
+        "CORO_VAZIO_OU_TRUNCADO"
+      ],
+      "estrutura": {
+        "preamble": false,
+        "coro": false,
+        "estrofes": []
+      },
+      "evidencias": []
+    },
+    {
+      "id": "SION-246",
+      "himnario": "Himnos de Sión",
+      "numero": 246,
+      "titulo": "CRISTIANOS, TODOS A PREPARARSE",
+      "equivalente": null,
+      "alertas": [
+        "TEXTO_ANTES_DA_ESTROFE_1",
+        "CORO_VAZIO_OU_TRUNCADO"
+      ],
+      "estrutura": {
+        "preamble": true,
+        "coro": false,
+        "estrofes": [
+          {
+            "n": 2,
+            "words": 21,
+            "chars": 124
+          },
+          {
+            "n": 3,
+            "words": 23,
+            "chars": 121
+          },
+          {
+            "n": 4,
+            "words": 22,
+            "chars": 107
+          }
+        ]
+      },
+      "evidencias": [
+        {
+          "tipo": "preamble",
+          "texto": "Cristianos, todos a prepararse,\nVed al Esposo, vuestro Señor,\nLlenas tened las lámparas siempre,\nA su encuentro id con amor.\n\nCORO:\nCristo ya viene, pronto, sí, viene,\nSin tardanza aparecerá,\nCon Él iremos ¡Aleluya!\nA la mansión que Él nos dará."
+        }
+      ]
+    },
+    {
+      "id": "SION-267",
+      "himnario": "Himnos de Sión",
+      "numero": 267,
+      "titulo": "GLORIOSO GÓLGOTA",
+      "equivalente": null,
+      "alertas": [
+        "POSSIVEL_ESTROFE_FUNDIDA_4"
+      ],
+      "estrutura": {
+        "preamble": false,
+        "coro": true,
+        "estrofes": [
+          {
+            "n": 1,
+            "words": 19,
+            "chars": 102
+          },
+          {
+            "n": 2,
+            "words": 18,
+            "chars": 101
+          },
+          {
+            "n": 3,
+            "words": 19,
+            "chars": 103
+          },
+          {
+            "n": 4,
+            "words": 33,
+            "chars": 199
+          }
+        ]
+      },
+      "evidencias": []
+    },
+    {
+      "id": "SION-293",
+      "himnario": "Himnos de Sión",
+      "numero": 293,
+      "titulo": "EN SU PROFUNDO AMOR",
+      "equivalente": null,
+      "alertas": [
+        "POSSIVEL_ERRO_OCR"
+      ],
+      "estrutura": {
+        "preamble": false,
+        "coro": true,
+        "estrofes": [
+          {
+            "n": 1,
+            "words": 26,
+            "chars": 143
+          },
+          {
+            "n": 2,
+            "words": 27,
+            "chars": 156
+          },
+          {
+            "n": 3,
+            "words": 25,
+            "chars": 145
+          }
+        ]
+      },
+      "evidencias": []
+    }
+  ]
+}

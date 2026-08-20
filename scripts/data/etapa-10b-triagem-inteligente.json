@@ -1,0 +1,2215 @@
+{
+  "etapa": "10B",
+  "descricao": "Triagem conservadora dos achados da Etapa 10A",
+  "modo": "SOMENTE_LEITURA",
+  "base": {
+    "arquivo": "assets/base_mestre.json",
+    "hash_oficial": "a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41",
+    "hash_verificado": "a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41",
+    "total": 718
+  },
+  "origem": "scripts/data/etapa-10a-varredura-global.json",
+  "resumo": {
+    "total_sinalizados": 77,
+    "alta": 44,
+    "media": 3,
+    "baixa_editorial": 30,
+    "pares_gt_sion_por_titulo": 18
+  },
+  "criterio": {
+    "alta": [
+      "PALAVRA_OCR_MAIUSCULA_INTERNA",
+      "CARACTERE_SUBSTITUICAO",
+      "NUMERO_REPETIDO",
+      "NUMERACAO_SUSPEITA",
+      "SALTO_NUMERICO"
+    ],
+    "media": [
+      "ESPACO_ANTES_PONTUACAO",
+      "PONTUACAO_DUPLA_SUSPEITA",
+      "PRIMEIRA_ESTROFE_SEM_NUMERO",
+      "CORO_SEM_DOIS_PONTOS",
+      "MARCADOR_CORO_REPETIDO",
+      "ESPACOS_MULTIPLOS",
+      "LETRA_VAZIA"
+    ],
+    "baixa": [
+      "RESIDUO_BARRAS"
+    ],
+    "observacao": "Classificação heurística. Nenhum achado constitui autorização automática de correção."
+  },
+  "pendentes_lote_9": [
+    "GT-040",
+    "GT-056",
+    "SION-026",
+    "GT-161",
+    "GT-283"
+  ],
+  "equivalentes_sinalizados": [
+    {
+      "titulo_normalizado": "EL MUNDO NO ES MI HOGAR",
+      "ids": [
+        "GT-118",
+        "SION-055"
+      ]
+    },
+    {
+      "titulo_normalizado": "GLORIA A TI JESUS DIVINO",
+      "ids": [
+        "GT-182",
+        "SION-079"
+      ]
+    },
+    {
+      "titulo_normalizado": "GRATO ES DECIR LA HISTORIA",
+      "ids": [
+        "GT-018",
+        "SION-128"
+      ]
+    },
+    {
+      "titulo_normalizado": "HAY QUIEN VIGILE",
+      "ids": [
+        "GT-072",
+        "SION-034"
+      ]
+    },
+    {
+      "titulo_normalizado": "LA FUENTE SANADORA",
+      "ids": [
+        "GT-138",
+        "SION-063"
+      ]
+    },
+    {
+      "titulo_normalizado": "LA PALABRA HOY SEMBRADA",
+      "ids": [
+        "GT-170",
+        "SION-075"
+      ]
+    },
+    {
+      "titulo_normalizado": "LA PATRIA DEL ALMA",
+      "ids": [
+        "GT-159",
+        "SION-068"
+      ]
+    },
+    {
+      "titulo_normalizado": "OH CUAN DULCE",
+      "ids": [
+        "GT-025",
+        "SION-134"
+      ]
+    },
+    {
+      "titulo_normalizado": "OH VEN SIN TARDAR",
+      "ids": [
+        "GT-083",
+        "SION-037"
+      ]
+    },
+    {
+      "titulo_normalizado": "OH YO QUIERO ANDAR CON CRISTO",
+      "ids": [
+        "GT-056",
+        "SION-026"
+      ]
+    },
+    {
+      "titulo_normalizado": "PENTECOSTES PARA TODOS",
+      "ids": [
+        "GT-048",
+        "SION-162"
+      ]
+    },
+    {
+      "titulo_normalizado": "PODER PENTECOSTAL",
+      "ids": [
+        "GT-102",
+        "SION-044"
+      ]
+    },
+    {
+      "titulo_normalizado": "SALUD SALUD",
+      "ids": [
+        "GT-066",
+        "SION-030"
+      ]
+    },
+    {
+      "titulo_normalizado": "SALVADOR MI BIEN ETERNO",
+      "ids": [
+        "GT-255",
+        "SION-105"
+      ]
+    },
+    {
+      "titulo_normalizado": "SIEMPRE ORAD",
+      "ids": [
+        "GT-137",
+        "SION-062"
+      ]
+    },
+    {
+      "titulo_normalizado": "SOLO CRISTO",
+      "ids": [
+        "GT-290",
+        "SION-114"
+      ]
+    },
+    {
+      "titulo_normalizado": "TENDRAS QUE RENACER",
+      "ids": [
+        "GT-034",
+        "SION-017"
+      ]
+    },
+    {
+      "titulo_normalizado": "TODO A CRISTO YO ME RINDO",
+      "ids": [
+        "GT-007",
+        "SION-011"
+      ]
+    }
+  ],
+  "registros": [
+    {
+      "id": "GT-042",
+      "numero": 42,
+      "titulo": "HAY UN PRECIOSO MANANTIAL",
+      "prioridade": "ALTA",
+      "pontos": 15,
+      "tipos": [
+        "PRIMEIRA_ESTROFE_SEM_NUMERO",
+        "NUMERO_REPETIDO",
+        "NUMERACAO_SUSPEITA"
+      ],
+      "total_achados": 5,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/"
+      ],
+      "achados": [
+        {
+          "tipo": "PRIMEIRA_ESTROFE_SEM_NUMERO",
+          "detalhe": "Primeiro número estrutural encontrado: 2.",
+          "trecho": "Y más blanco que la nieve yo seré: | 2 | El malhechor se convirtió Pendiente de una cruz; El vio la fuente y se lavó, Creyendo en Jesús."
+        },
+        {
+          "tipo": "NUMERO_REPETIDO",
+          "detalhe": "Número estrutural 2 repetido.",
+          "trecho": "Hay un precioso manantial De sangre de Emmanuel, Que purifica a cada cual Que se sumerge en él. | 2 | El malhechor se convirtió Pendiente de una cruz; El vio la fuente y se lavó, Creyendo en Jesús."
+        },
+        {
+          "tipo": "NUMERO_REPETIDO",
+          "detalhe": "Número estrutural 3 repetido.",
+          "trecho": "El malhechor se convirtió Pendiente de una cruz; El vio la fuente y se lavó, Creyendo en Jesús. | 3 | Y yo también mi pobre ser Allí logré lavar;"
+        },
+        {
+          "tipo": "NUMERO_REPETIDO",
+          "detalhe": "Número estrutural 4 repetido.",
+          "trecho": "La gloria de su gran poder, Me gozo en ensalzar. | 4 | ¡Eterna fuente carmesí!"
+        },
+        {
+          "tipo": "NUMERACAO_SUSPEITA",
+          "detalhe": "Sequência regressiva 4 -> 1.",
+          "trecho": ""
+        }
+      ]
+    },
+    {
+      "id": "GT-018",
+      "numero": 18,
+      "titulo": "GRATO ES DECIR LA HISTORIA",
+      "prioridade": "ALTA",
+      "pontos": 10,
+      "tipos": [
+        "ESPACO_ANTES_PONTUACAO",
+        "PALAVRA_OCR_MAIUSCULA_INTERNA"
+      ],
+      "total_achados": 2,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/",
+        "/\\breferirIa\\b/"
+      ],
+      "achados": [
+        {
+          "tipo": "ESPACO_ANTES_PONTUACAO",
+          "detalhe": "Espaço encontrado antes de sinal de pontuação.",
+          "trecho": "Más dulce cada vez; Me agrada referirla, | Pues hay quien nunca oyó Que para hacerle salvo El buen .Jesús murió."
+        },
+        {
+          "tipo": "PALAVRA_OCR_MAIUSCULA_INTERNA",
+          "detalhe": "Possível OCR: \"referirIa\".",
+          "trecho": "referirIa"
+        }
+      ]
+    },
+    {
+      "id": "GT-054",
+      "numero": 54,
+      "titulo": "QUE HAGA EN TI SU VOLUNTAD",
+      "prioridade": "ALTA",
+      "pontos": 10,
+      "tipos": [
+        "PRIMEIRA_ESTROFE_SEM_NUMERO",
+        "NUMERACAO_SUSPEITA"
+      ],
+      "total_achados": 2,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/"
+      ],
+      "achados": [
+        {
+          "tipo": "PRIMEIRA_ESTROFE_SEM_NUMERO",
+          "detalhe": "Primeiro número estrutural encontrado: 2.",
+          "trecho": "Su gran poder, sus dones te dará, El gozo y paz a tu alma volverá: Del corazón las manchas limpiará, Que haga en ti su santa voluntad. | 2 | ¿Quieres ir en pos de Cristo y llevar la cruz?"
+        },
+        {
+          "tipo": "NUMERACAO_SUSPEITA",
+          "detalhe": "Sequência regressiva 3 -> 1.",
+          "trecho": ""
+        }
+      ]
+    },
+    {
+      "id": "SION-128",
+      "numero": 128,
+      "titulo": "GRATO ES DECIR LA HISTORIA",
+      "prioridade": "ALTA",
+      "pontos": 10,
+      "tipos": [
+        "ESPACO_ANTES_PONTUACAO",
+        "PALAVRA_OCR_MAIUSCULA_INTERNA"
+      ],
+      "total_achados": 2,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/",
+        "/\\breferirIa\\b/"
+      ],
+      "achados": [
+        {
+          "tipo": "ESPACO_ANTES_PONTUACAO",
+          "detalhe": "Espaço encontrado antes de sinal de pontuação.",
+          "trecho": "Más dulce cada vez; Me agrada referirla, | Pues hay quien nunca oyó Que para hacerle salvo El buen .Jesús murió."
+        },
+        {
+          "tipo": "PALAVRA_OCR_MAIUSCULA_INTERNA",
+          "detalhe": "Possível OCR: \"referirIa\".",
+          "trecho": "referirIa"
+        }
+      ]
+    },
+    {
+      "id": "GT-007",
+      "numero": 7,
+      "titulo": "TODO A CRISTO YO ME RINDO",
+      "prioridade": "ALTA",
+      "pontos": 8,
+      "tipos": [
+        "PALAVRA_OCR_MAIUSCULA_INTERNA"
+      ],
+      "total_achados": 1,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/",
+        "/\\bserIe\\b/"
+      ],
+      "achados": [
+        {
+          "tipo": "PALAVRA_OCR_MAIUSCULA_INTERNA",
+          "detalhe": "Possível OCR: \"serIe\".",
+          "trecho": "serIe"
+        }
+      ]
+    },
+    {
+      "id": "GT-025",
+      "numero": 25,
+      "titulo": "¡OH, CUAN DULCE!",
+      "prioridade": "ALTA",
+      "pontos": 8,
+      "tipos": [
+        "PALAVRA_OCR_MAIUSCULA_INTERNA"
+      ],
+      "total_achados": 1,
+      "padroes_fortes": [
+        "/\\bserIe\\b/"
+      ],
+      "achados": [
+        {
+          "tipo": "PALAVRA_OCR_MAIUSCULA_INTERNA",
+          "detalhe": "Possível OCR: \"serIe\".",
+          "trecho": "serIe"
+        }
+      ]
+    },
+    {
+      "id": "GT-056",
+      "numero": 56,
+      "titulo": "¡OH, YO QUIERO ANDAR CON CRISTO!",
+      "prioridade": "ALTA",
+      "pontos": 8,
+      "tipos": [
+        "PALAVRA_OCR_MAIUSCULA_INTERNA"
+      ],
+      "total_achados": 1,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/",
+        "/\\bserIe\\b/"
+      ],
+      "achados": [
+        {
+          "tipo": "PALAVRA_OCR_MAIUSCULA_INTERNA",
+          "detalhe": "Possível OCR: \"serIe\".",
+          "trecho": "serIe"
+        }
+      ]
+    },
+    {
+      "id": "GT-102",
+      "numero": 102,
+      "titulo": "PODER PENTECOSTAL",
+      "prioridade": "ALTA",
+      "pontos": 8,
+      "tipos": [
+        "PALAVRA_OCR_MAIUSCULA_INTERNA"
+      ],
+      "total_achados": 1,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/",
+        "/\\bhazIo\\b/"
+      ],
+      "achados": [
+        {
+          "tipo": "PALAVRA_OCR_MAIUSCULA_INTERNA",
+          "detalhe": "Possível OCR: \"hazIo\".",
+          "trecho": "hazIo"
+        }
+      ]
+    },
+    {
+      "id": "GT-182",
+      "numero": 182,
+      "titulo": "¡GLORIA A TI, JESÚS DIVINO",
+      "prioridade": "ALTA",
+      "pontos": 8,
+      "tipos": [
+        "SALTO_NUMERICO"
+      ],
+      "total_achados": 1,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/"
+      ],
+      "achados": [
+        {
+          "tipo": "SALTO_NUMERICO",
+          "detalhe": "Sequência 1 -> 3.",
+          "trecho": ""
+        }
+      ]
+    },
+    {
+      "id": "SION-011",
+      "numero": 11,
+      "titulo": "TODO A CRISTO YO ME RINDO",
+      "prioridade": "ALTA",
+      "pontos": 8,
+      "tipos": [
+        "PALAVRA_OCR_MAIUSCULA_INTERNA"
+      ],
+      "total_achados": 1,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/",
+        "/\\bserIe\\b/"
+      ],
+      "achados": [
+        {
+          "tipo": "PALAVRA_OCR_MAIUSCULA_INTERNA",
+          "detalhe": "Possível OCR: \"serIe\".",
+          "trecho": "serIe"
+        }
+      ]
+    },
+    {
+      "id": "SION-026",
+      "numero": 26,
+      "titulo": "¡OH! YO QUIERO ANDAR CON CRISTO",
+      "prioridade": "ALTA",
+      "pontos": 8,
+      "tipos": [
+        "PALAVRA_OCR_MAIUSCULA_INTERNA"
+      ],
+      "total_achados": 1,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/",
+        "/\\bserIe\\b/"
+      ],
+      "achados": [
+        {
+          "tipo": "PALAVRA_OCR_MAIUSCULA_INTERNA",
+          "detalhe": "Possível OCR: \"serIe\".",
+          "trecho": "serIe"
+        }
+      ]
+    },
+    {
+      "id": "SION-044",
+      "numero": 44,
+      "titulo": "PODER PENTECOSTAL",
+      "prioridade": "ALTA",
+      "pontos": 8,
+      "tipos": [
+        "PALAVRA_OCR_MAIUSCULA_INTERNA"
+      ],
+      "total_achados": 1,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/",
+        "/\\bhazIo\\b/"
+      ],
+      "achados": [
+        {
+          "tipo": "PALAVRA_OCR_MAIUSCULA_INTERNA",
+          "detalhe": "Possível OCR: \"hazIo\".",
+          "trecho": "hazIo"
+        }
+      ]
+    },
+    {
+      "id": "SION-079",
+      "numero": 79,
+      "titulo": "GLORIA A TI, JESÚS DIVINO",
+      "prioridade": "ALTA",
+      "pontos": 8,
+      "tipos": [
+        "SALTO_NUMERICO"
+      ],
+      "total_achados": 1,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/"
+      ],
+      "achados": [
+        {
+          "tipo": "SALTO_NUMERICO",
+          "detalhe": "Sequência 1 -> 3.",
+          "trecho": ""
+        }
+      ]
+    },
+    {
+      "id": "SION-134",
+      "numero": 134,
+      "titulo": "¡OH, CUÁN DULCE!",
+      "prioridade": "ALTA",
+      "pontos": 8,
+      "tipos": [
+        "PALAVRA_OCR_MAIUSCULA_INTERNA"
+      ],
+      "total_achados": 1,
+      "padroes_fortes": [
+        "/\\bserIe\\b/"
+      ],
+      "achados": [
+        {
+          "tipo": "PALAVRA_OCR_MAIUSCULA_INTERNA",
+          "detalhe": "Possível OCR: \"serIe\".",
+          "trecho": "serIe"
+        }
+      ]
+    },
+    {
+      "id": "GT-040",
+      "numero": 40,
+      "titulo": "EN LOS NEGOCIOS DEL REY",
+      "prioridade": "ALTA",
+      "pontos": 7,
+      "tipos": [
+        "ESPACO_ANTES_PONTUACAO",
+        "PONTUACAO_DUPLA_SUSPEITA"
+      ],
+      "total_achados": 2,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/",
+        "/,\\s*\\./"
+      ],
+      "achados": [
+        {
+          "tipo": "ESPACO_ANTES_PONTUACAO",
+          "detalhe": "Espaço encontrado antes de sinal de pontuação.",
+          "trecho": "CORO: | Este mensaje fiel oid, . Que dijo ya celeste voz: | «Reconciliaos ya» – dice el Señor y Rey,"
+        },
+        {
+          "tipo": "PONTUACAO_DUPLA_SUSPEITA",
+          "detalhe": "Combinação incomum de sinais de pontuação.",
+          "trecho": "CORO: | Este mensaje fiel oid, . Que dijo ya celeste voz: | «Reconciliaos ya» – dice el Señor y Rey,"
+        }
+      ]
+    },
+    {
+      "id": "GT-055",
+      "numero": 55,
+      "titulo": "EL MUNDO PERDIDO",
+      "prioridade": "ALTA",
+      "pontos": 7,
+      "tipos": [
+        "PRIMEIRA_ESTROFE_SEM_NUMERO",
+        "PONTUACAO_DUPLA_SUSPEITA"
+      ],
+      "total_achados": 2,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/",
+        "/\\.\\s*,/"
+      ],
+      "achados": [
+        {
+          "tipo": "PRIMEIRA_ESTROFE_SEM_NUMERO",
+          "detalhe": "Primeiro número estrutural encontrado: 2.",
+          "trecho": "¡Jesús es la luz del mundo! | 2 | En día la noche se cambia con él, etc. Irás en la luz si a su ley eres fiel, etc."
+        },
+        {
+          "tipo": "PONTUACAO_DUPLA_SUSPEITA",
+          "detalhe": "Combinação incomum de sinais de pontuação.",
+          "trecho": "¡Oh, ciegos y presos del lóbrego error!, etc. | Él manda lavaros y ver su fulgor, etc., | 4"
+        }
+      ]
+    },
+    {
+      "id": "GT-069",
+      "numero": 69,
+      "titulo": "PRECIOSO ES JESÚS",
+      "prioridade": "ALTA",
+      "pontos": 7,
+      "tipos": [
+        "ESPACO_ANTES_PONTUACAO",
+        "PONTUACAO_DUPLA_SUSPEITA"
+      ],
+      "total_achados": 2,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/",
+        "/,\\s*\\./"
+      ],
+      "achados": [
+        {
+          "tipo": "ESPACO_ANTES_PONTUACAO",
+          "detalhe": "Espaço encontrado antes de sinal de pontuação.",
+          "trecho": "1 | Jesús es precioso, mi buen Salvador, . Por siempre le alabo por su gran amor, Si débil me encuentro su fuerza me da, Él es mi precioso Jesús. | CORO:"
+        },
+        {
+          "tipo": "PONTUACAO_DUPLA_SUSPEITA",
+          "detalhe": "Combinação incomum de sinais de pontuação.",
+          "trecho": "1 | Jesús es precioso, mi buen Salvador, . Por siempre le alabo por su gran amor, Si débil me encuentro su fuerza me da, Él es mi precioso Jesús. | CORO:"
+        }
+      ]
+    },
+    {
+      "id": "GT-079",
+      "numero": 79,
+      "titulo": "PUEDO OÍR TU VOZ LLAMANDO",
+      "prioridade": "ALTA",
+      "pontos": 7,
+      "tipos": [
+        "PRIMEIRA_ESTROFE_SEM_NUMERO",
+        "RESIDUO_BARRAS",
+        "ESPACO_ANTES_PONTUACAO"
+      ],
+      "total_achados": 7,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/"
+      ],
+      "achados": [
+        {
+          "tipo": "PRIMEIRA_ESTROFE_SEM_NUMERO",
+          "detalhe": "Primeiro número estrutural encontrado: 2.",
+          "trecho": "||Seguiré do tú me guíes, || Dondequiera fiel te seguiré e , | 2 | ||Yo te seguiré en el huerto|| Sufriré contigo, mi Jesús."
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "||Puedo oír tu voz llamando, || Trae tu cruz y ven en pos de mí. | CORO:"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "CORO: | ||Seguiré do tú me guíes, || Dondequiera fiel te seguiré e , | 2"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "2 | ||Yo te seguiré en el huerto|| Sufriré contigo, mi Jesús. | 3"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "3 | ||Sufriré por ti, Maestro,|| Moriré contigo, mi Jesús. | 4"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "4 | ||Medarás la gracia y gloria, || Y por siempre tú me guiarás."
+        },
+        {
+          "tipo": "ESPACO_ANTES_PONTUACAO",
+          "detalhe": "Espaço encontrado antes de sinal de pontuação.",
+          "trecho": "CORO: | ||Seguiré do tú me guíes, || Dondequiera fiel te seguiré e , | 2"
+        }
+      ]
+    },
+    {
+      "id": "GT-048",
+      "numero": 48,
+      "titulo": "PENTECOSTÉS PARA TODOS",
+      "prioridade": "ALTA",
+      "pontos": 5,
+      "tipos": [
+        "CORO_SEM_DOIS_PONTOS"
+      ],
+      "total_achados": 1,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/"
+      ],
+      "achados": [
+        {
+          "tipo": "CORO_SEM_DOIS_PONTOS",
+          "detalhe": "Marcador CORO encontrado sem dois pontos.",
+          "trecho": "Nos manda el Santo Espíritu, Que llena de su gran virtud Al ser que le esperó. | CORO | ¿Ha venido a ti? ¿Ha venido a ti, El Espíritu Consolador?"
+        }
+      ]
+    },
+    {
+      "id": "GT-062",
+      "numero": 62,
+      "titulo": "CON CRISTO YO IRÉ",
+      "prioridade": "ALTA",
+      "pontos": 5,
+      "tipos": [
+        "ESPACO_ANTES_PONTUACAO"
+      ],
+      "total_achados": 1,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/"
+      ],
+      "achados": [
+        {
+          "tipo": "ESPACO_ANTES_PONTUACAO",
+          "detalhe": "Espaço encontrado antes de sinal de pontuação.",
+          "trecho": "Aunque mi parte sea mi dura cruz llevar, Diré a mis hermanos también su gran poder; Contento quedaré, mi luz haré brillar, | ¡Testigo de Cristo, doquiera yo iré! . | La voluntad de Cristo yo quiero obedecer, Pues en la Santa Biblia encuentro mi saber Y con su gran poder al mundo venceré,"
+        }
+      ]
+    },
+    {
+      "id": "GT-066",
+      "numero": 66,
+      "titulo": "¡SALUD! ¡SALUD!",
+      "prioridade": "ALTA",
+      "pontos": 5,
+      "tipos": [
+        "ESPACO_ANTES_PONTUACAO"
+      ],
+      "total_achados": 1,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/"
+      ],
+      "achados": [
+        {
+          "tipo": "ESPACO_ANTES_PONTUACAO",
+          "detalhe": "Espaço encontrado antes de sinal de pontuação.",
+          "trecho": "CORO: | ¡Salud! ¡Salud!, cantad a nuestro Dios. La paz nos da, clamad en alta voz; , | Salvación ya tengo y descanso dulce en él, Yo soy salvado en Cristo."
+        }
+      ]
+    },
+    {
+      "id": "GT-067",
+      "numero": 67,
+      "titulo": "DE MI TIERNO SALVADOR LIBRE ESTOY",
+      "prioridade": "ALTA",
+      "pontos": 5,
+      "tipos": [
+        "ESPACO_ANTES_PONTUACAO"
+      ],
+      "total_achados": 1,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/"
+      ],
+      "achados": [
+        {
+          "tipo": "ESPACO_ANTES_PONTUACAO",
+          "detalhe": "Espaço encontrado antes de sinal de pontuação.",
+          "trecho": "CORO: | ¡Mi Jesús! ¡Mi Jesús! , | ¡Cuán precioso es el nombre de Jesús!"
+        }
+      ]
+    },
+    {
+      "id": "GT-072",
+      "numero": 72,
+      "titulo": "HAY QUIEN VIGILE",
+      "prioridade": "ALTA",
+      "pontos": 5,
+      "tipos": [
+        "ESPACO_ANTES_PONTUACAO"
+      ],
+      "total_achados": 1,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/"
+      ],
+      "achados": [
+        {
+          "tipo": "ESPACO_ANTES_PONTUACAO",
+          "detalhe": "Espaço encontrado antes de sinal de pontuação.",
+          "trecho": "Que confiere paz constante Al contrito corazón. | En su amor hay eficacia Él es un amigo fiel; , | Hay en él verdad y gracia, Suyo soy y mío es él."
+        }
+      ]
+    },
+    {
+      "id": "GT-099",
+      "numero": 99,
+      "titulo": "NADA DE SOMBRAS",
+      "prioridade": "ALTA",
+      "pontos": 5,
+      "tipos": [
+        "ESPACO_ANTES_PONTUACAO"
+      ],
+      "total_achados": 1,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/"
+      ],
+      "achados": [
+        {
+          "tipo": "ESPACO_ANTES_PONTUACAO",
+          "detalhe": "Espaço encontrado antes de sinal de pontuação.",
+          "trecho": "1 | No habrá .sombras en el valle de la muerte Cuando cese de la vida el batallar, | Y escuchemos del Señor el llamamiento, Ya llevándonos con él a descansar."
+        }
+      ]
+    },
+    {
+      "id": "GT-128",
+      "numero": 128,
+      "titulo": "VALOR Y FE",
+      "prioridade": "ALTA",
+      "pontos": 5,
+      "tipos": [
+        "ESPACO_ANTES_PONTUACAO"
+      ],
+      "total_achados": 1,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/"
+      ],
+      "achados": [
+        {
+          "tipo": "ESPACO_ANTES_PONTUACAO",
+          "detalhe": "Espaço encontrado antes de sinal de pontuação.",
+          "trecho": "1 | Si en tu senda .las nubes Agolparse ves, | No vaciles por ello, Ni flaqueen tus pies; Cada nube que venga No podrá traer"
+        }
+      ]
+    },
+    {
+      "id": "GT-137",
+      "numero": 137,
+      "titulo": "SIEMPRE ORAD",
+      "prioridade": "ALTA",
+      "pontos": 5,
+      "tipos": [
+        "ESPACO_ANTES_PONTUACAO"
+      ],
+      "total_achados": 1,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/"
+      ],
+      "achados": [
+        {
+          "tipo": "ESPACO_ANTES_PONTUACAO",
+          "detalhe": "Espaço encontrado antes de sinal de pontuação.",
+          "trecho": "2 | «Siempre orad», que si hoy viniere Cristo El te halle en la lid, , | Con la espada suya bien empleada, Fiel por nuestro Adalid."
+        }
+      ]
+    },
+    {
+      "id": "GT-138",
+      "numero": 138,
+      "titulo": "LA FUENTE SANADORA",
+      "prioridade": "ALTA",
+      "pontos": 5,
+      "tipos": [
+        "ESPACO_ANTES_PONTUACAO"
+      ],
+      "total_achados": 1,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/"
+      ],
+      "achados": [
+        {
+          "tipo": "ESPACO_ANTES_PONTUACAO",
+          "detalhe": "Espaço encontrado antes de sinal de pontuação.",
+          "trecho": "2 | En la fuente que nos sana He hallado el perdón, , Y lavado toda mancha De mi pobre corazón. | 3"
+        }
+      ]
+    },
+    {
+      "id": "GT-161",
+      "numero": 161,
+      "titulo": "PECADOR, VEN AL DULCE JESÚS",
+      "prioridade": "ALTA",
+      "pontos": 5,
+      "tipos": [
+        "RESIDUO_BARRAS",
+        "ESPACO_ANTES_PONTUACAO"
+      ],
+      "total_achados": 3,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/"
+      ],
+      "achados": [
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "CORO: | ||Ven a él, ven a él, | Que te espera tu buen Salvador.||"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "||Ven a él, ven a él, | Que te espera tu buen Salvador.|| | 2"
+        },
+        {
+          "tipo": "ESPACO_ANTES_PONTUACAO",
+          "detalhe": "Espaço encontrado antes de sinal de pontuação.",
+          "trecho": "¡He aquí tu benigno Señor! | Y en los hombros llevada serás . De tan dulce y amante Pastor."
+        }
+      ]
+    },
+    {
+      "id": "GT-170",
+      "numero": 170,
+      "titulo": "LA PALABRA HOY SEMBRADA",
+      "prioridade": "ALTA",
+      "pontos": 5,
+      "tipos": [
+        "RESIDUO_BARRAS",
+        "ESPACO_ANTES_PONTUACAO"
+      ],
+      "total_achados": 6,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/"
+      ],
+      "achados": [
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "La palabra hoy sembrada Hazla, Cristo, en mi nacer, Para darle crecimiento Sólo tienes tú poder: | ||Ricos frutos tú nos puedes conceder.|| | 2"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "La semilla que tu siervo Ha sembrado con saber, No permitas que las aves Se la vengan a comer: | ||Ricos frutos tú nos puedes conceder.|| | 3"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "Y tu rica bendición; No la ahoguen las espinas De congojas y aflicción: | ||Ricos frutos tú nos puedes conceder.|| | 4"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "Que su efecto muy profundo, En la mente y corazón, Llevará consigo al mundo Que le das la salvación: | ||Ricos frutos tú nos puedes conceder.|| | 5"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "Sembraremos la palabra, Con amor y profusión, Esperando la cosecha En la célica mansión: | ||Ricos frutos tú nos puedes conceder.||"
+        },
+        {
+          "tipo": "ESPACO_ANTES_PONTUACAO",
+          "detalhe": "Espaço encontrado antes de sinal de pontuação.",
+          "trecho": "3 | Haz que crezca con tu gracia . | Y tu rica bendición; No la ahoguen las espinas De congojas y aflicción:"
+        }
+      ]
+    },
+    {
+      "id": "GT-218",
+      "numero": 218,
+      "titulo": "YO ME ACUERDO",
+      "prioridade": "ALTA",
+      "pontos": 5,
+      "tipos": [
+        "ESPACO_ANTES_PONTUACAO"
+      ],
+      "total_achados": 1,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/"
+      ],
+      "achados": [
+        {
+          "tipo": "ESPACO_ANTES_PONTUACAO",
+          "detalhe": "Espaço encontrado antes de sinal de pontuação.",
+          "trecho": "Yo me acuerdo que Jesús el pan quebró, A los suyos todos con amor lo dio; | En su cuerpo el Señor ya llevó nuestro dolor, Pues por mí el Señor murió. : | 3"
+        }
+      ]
+    },
+    {
+      "id": "GT-220",
+      "numero": 220,
+      "titulo": "HOGAR DE MIS RECUERDOS",
+      "prioridade": "ALTA",
+      "pontos": 5,
+      "tipos": [
+        "ESPACO_ANTES_PONTUACAO"
+      ],
+      "total_achados": 1,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/"
+      ],
+      "achados": [
+        {
+          "tipo": "ESPACO_ANTES_PONTUACAO",
+          "detalhe": "Espaço encontrado antes de sinal de pontuação.",
+          "trecho": "Hogar de mis recuerdos, A ti volver anhelo; | No hay sitio bajo el cielo Más dulce que el hogar. Posara yo .en palacios, Corriendo el mundo entero, A todos yo prefiero | Mi hogar, mi dulce hogar."
+        }
+      ]
+    },
+    {
+      "id": "GT-265",
+      "numero": 265,
+      "titulo": "MAS ALLÁ EL DÍA VIENE",
+      "prioridade": "ALTA",
+      "pontos": 5,
+      "tipos": [
+        "ESPACO_ANTES_PONTUACAO"
+      ],
+      "total_achados": 1,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/"
+      ],
+      "achados": [
+        {
+          "tipo": "ESPACO_ANTES_PONTUACAO",
+          "detalhe": "Espaço encontrado antes de sinal de pontuação.",
+          "trecho": "¿Qué será estar con Cristo? | Escuchar .su dulce voz; Ver su rostro tan brillante Y andar de él en pos. | 3"
+        }
+      ]
+    },
+    {
+      "id": "GT-303",
+      "numero": 303,
+      "titulo": "DE LA",
+      "prioridade": "ALTA",
+      "pontos": 5,
+      "tipos": [
+        "PRIMEIRA_ESTROFE_SEM_NUMERO"
+      ],
+      "total_achados": 1,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/"
+      ],
+      "achados": [
+        {
+          "tipo": "PRIMEIRA_ESTROFE_SEM_NUMERO",
+          "detalhe": "Primeiro número estrutural encontrado: 2.",
+          "trecho": "Para hacerla esposa quiso De los cielos descender, Y su sangre por limpiarla En la horrible cruz verter. | 2 | De entre todas las naciones Escogida en variedad,"
+        }
+      ]
+    },
+    {
+      "id": "GT-320",
+      "numero": 320,
+      "titulo": "EN LA NUEVA JERUSALÉN",
+      "prioridade": "ALTA",
+      "pontos": 5,
+      "tipos": [
+        "ESPACO_ANTES_PONTUACAO"
+      ],
+      "total_achados": 1,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/"
+      ],
+      "achados": [
+        {
+          "tipo": "ESPACO_ANTES_PONTUACAO",
+          "detalhe": "Espaço encontrado antes de sinal de pontuação.",
+          "trecho": "CORO: | Cantaremos con los santos la canción de redención, En Jerusalén …………, En Jerusalén\t, | Con acentos de alegría alabando al Salvador, En la gran Jerusalén."
+        }
+      ]
+    },
+    {
+      "id": "GT-322",
+      "numero": 322,
+      "titulo": "NO HAY TRISTEZA EN EL CIELO",
+      "prioridade": "ALTA",
+      "pontos": 5,
+      "tipos": [
+        "ESPACO_ANTES_PONTUACAO"
+      ],
+      "total_achados": 1,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/"
+      ],
+      "achados": [
+        {
+          "tipo": "ESPACO_ANTES_PONTUACAO",
+          "detalhe": "Espaço encontrado antes de sinal de pontuação.",
+          "trecho": "CORO: | Yo voy a la patria del alma, Do Cristo prepara mi hogar; Do todos los santificados Irán .para siempre a morar: El día feliz ya se acerca | En que el sol para mí se pondrá:"
+        }
+      ]
+    },
+    {
+      "id": "GT-325",
+      "numero": 325,
+      "titulo": "¿NOS VEREMOS EN EL RIO?",
+      "prioridade": "ALTA",
+      "pontos": 5,
+      "tipos": [
+        "ESPACO_ANTES_PONTUACAO"
+      ],
+      "total_achados": 1,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/"
+      ],
+      "achados": [
+        {
+          "tipo": "ESPACO_ANTES_PONTUACAO",
+          "detalhe": "Espaço encontrado antes de sinal de pontuação.",
+          "trecho": "6 | Tiene faz risueña el río, Pues la de .Jesús refleja, La que de su grey aleja Todo mal, todo dolor. | 7"
+        }
+      ]
+    },
+    {
+      "id": "SION-007",
+      "numero": 7,
+      "titulo": "LA SIEMBRA",
+      "prioridade": "ALTA",
+      "pontos": 5,
+      "tipos": [
+        "PONTUACAO_DUPLA_SUSPEITA"
+      ],
+      "total_achados": 2,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/",
+        "/\\.\\s*,/"
+      ],
+      "achados": [
+        {
+          "tipo": "PONTUACAO_DUPLA_SUSPEITA",
+          "detalhe": "Combinação incomum de sinais de pontuação.",
+          "trecho": "CORO: | Sembraré..., sembraré, | Mientras viva, simiente de amor;"
+        },
+        {
+          "tipo": "PONTUACAO_DUPLA_SUSPEITA",
+          "detalhe": "Combinação incomum de sinais de pontuação.",
+          "trecho": "Mientras viva, simiente de amor; | Segaré..., segaré..., | Al hallarme en la casa de Dios."
+        }
+      ]
+    },
+    {
+      "id": "SION-030",
+      "numero": 30,
+      "titulo": "¡SALUD! ¡SALUD!",
+      "prioridade": "ALTA",
+      "pontos": 5,
+      "tipos": [
+        "ESPACO_ANTES_PONTUACAO"
+      ],
+      "total_achados": 1,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/"
+      ],
+      "achados": [
+        {
+          "tipo": "ESPACO_ANTES_PONTUACAO",
+          "detalhe": "Espaço encontrado antes de sinal de pontuação.",
+          "trecho": "CORO: | ¡Salud! ¡Salud!, cantad a nuestro Dios. La paz nos da, clamad en alta voz; , | Salvación ya tengo y descanso dulce en él, Yo soy salvado en Cristo."
+        }
+      ]
+    },
+    {
+      "id": "SION-034",
+      "numero": 34,
+      "titulo": "HAY QUIEN VIGILE",
+      "prioridade": "ALTA",
+      "pontos": 5,
+      "tipos": [
+        "ESPACO_ANTES_PONTUACAO"
+      ],
+      "total_achados": 1,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/"
+      ],
+      "achados": [
+        {
+          "tipo": "ESPACO_ANTES_PONTUACAO",
+          "detalhe": "Espaço encontrado antes de sinal de pontuação.",
+          "trecho": "Que confiere paz constante Al contrito corazón. | En su amor hay eficacia Él es un amigo fiel; , | Hay en él verdad y gracia, Suyo soy y mío es él."
+        }
+      ]
+    },
+    {
+      "id": "SION-062",
+      "numero": 62,
+      "titulo": "SIEMPRE ORAD",
+      "prioridade": "ALTA",
+      "pontos": 5,
+      "tipos": [
+        "ESPACO_ANTES_PONTUACAO"
+      ],
+      "total_achados": 1,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/"
+      ],
+      "achados": [
+        {
+          "tipo": "ESPACO_ANTES_PONTUACAO",
+          "detalhe": "Espaço encontrado antes de sinal de pontuação.",
+          "trecho": "2 | «Siempre orad», que si hoy viniere Cristo El te halle en la lid, , | Con la espada suya bien empleada, Fiel por nuestro Adalid."
+        }
+      ]
+    },
+    {
+      "id": "SION-063",
+      "numero": 63,
+      "titulo": "LA FUENTE SANADORA",
+      "prioridade": "ALTA",
+      "pontos": 5,
+      "tipos": [
+        "ESPACO_ANTES_PONTUACAO"
+      ],
+      "total_achados": 1,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/"
+      ],
+      "achados": [
+        {
+          "tipo": "ESPACO_ANTES_PONTUACAO",
+          "detalhe": "Espaço encontrado antes de sinal de pontuação.",
+          "trecho": "2 | En la fuente que nos sana He hallado el perdón, , Y lavado toda mancha De mi pobre corazón. | 3"
+        }
+      ]
+    },
+    {
+      "id": "SION-075",
+      "numero": 75,
+      "titulo": "LA PALABRA HOY SEMBRADA",
+      "prioridade": "ALTA",
+      "pontos": 5,
+      "tipos": [
+        "RESIDUO_BARRAS",
+        "ESPACO_ANTES_PONTUACAO"
+      ],
+      "total_achados": 6,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/"
+      ],
+      "achados": [
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "La palabra hoy sembrada Hazla, Cristo, en mi nacer, Para darle crecimiento Sólo tienes tú poder: | ||Ricos frutos tú nos puedes conceder.|| | 2"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "La semilla que tu siervo Ha sembrado con saber, No permitas que las aves Se la vengan a comer: | ||Ricos frutos tú nos puedes conceder.|| | 3"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "Y tu rica bendición; No la ahoguen las espinas De congojas y aflicción: | ||Ricos frutos tú nos puedes conceder.|| | 4"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "Que su efecto muy profundo, En la mente y corazón, Llevará consigo al mundo Que le das la salvación: | ||Ricos frutos tú nos puedes conceder.|| | 5"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "Sembraremos la palabra, Con amor y profusión, Esperando la cosecha En la célica mansión: | ||Ricos frutos tú nos puedes conceder.||"
+        },
+        {
+          "tipo": "ESPACO_ANTES_PONTUACAO",
+          "detalhe": "Espaço encontrado antes de sinal de pontuação.",
+          "trecho": "3 | Haz que crezca con tu gracia . | Y tu rica bendición; No la ahoguen las espinas De congojas y aflicción:"
+        }
+      ]
+    },
+    {
+      "id": "SION-162",
+      "numero": 162,
+      "titulo": "PENTECOSTÉS PARA TODOS",
+      "prioridade": "ALTA",
+      "pontos": 5,
+      "tipos": [
+        "CORO_SEM_DOIS_PONTOS"
+      ],
+      "total_achados": 1,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/"
+      ],
+      "achados": [
+        {
+          "tipo": "CORO_SEM_DOIS_PONTOS",
+          "detalhe": "Marcador CORO encontrado sem dois pontos.",
+          "trecho": "Nos manda el Santo Espíritu, Que llena de su gran virtud Al ser que le esperó. | CORO | ¿Ha venido a ti? ¿Ha venido a ti, El Espíritu Consolador?"
+        }
+      ]
+    },
+    {
+      "id": "SION-246",
+      "numero": 246,
+      "titulo": "CRISTIANOS, TODOS A PREPARARSE",
+      "prioridade": "ALTA",
+      "pontos": 5,
+      "tipos": [
+        "PRIMEIRA_ESTROFE_SEM_NUMERO"
+      ],
+      "total_achados": 1,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/"
+      ],
+      "achados": [
+        {
+          "tipo": "PRIMEIRA_ESTROFE_SEM_NUMERO",
+          "detalhe": "Primeiro número estrutural encontrado: 2.",
+          "trecho": "| 2 | Ya las señales cúmplense todas,"
+        }
+      ]
+    },
+    {
+      "id": "GT-083",
+      "numero": 83,
+      "titulo": "¡OH, VEN SIN TARDAR!",
+      "prioridade": "MEDIA",
+      "pontos": 2,
+      "tipos": [
+        "PRIMEIRA_ESTROFE_SEM_NUMERO"
+      ],
+      "total_achados": 1,
+      "padroes_fortes": [],
+      "achados": [
+        {
+          "tipo": "PRIMEIRA_ESTROFE_SEM_NUMERO",
+          "detalhe": "Primeiro número estrutural encontrado: 2.",
+          "trecho": "Acepta a Jesús, y salvo serás. | 2 | Tus ojos ya tal vez el sol No más aquí contemplarán: Hoyes el día de salvación,"
+        }
+      ]
+    },
+    {
+      "id": "GT-304",
+      "numero": 304,
+      "titulo": "JERUSALÉN CELESTE",
+      "prioridade": "MEDIA",
+      "pontos": 2,
+      "tipos": [
+        "PRIMEIRA_ESTROFE_SEM_NUMERO"
+      ],
+      "total_achados": 1,
+      "padroes_fortes": [],
+      "achados": [
+        {
+          "tipo": "PRIMEIRA_ESTROFE_SEM_NUMERO",
+          "detalhe": "Primeiro número estrutural encontrado: 2.",
+          "trecho": "Y de ángeles millares, Te ciñen en redor. | 2 | Ciudad del Rey eterno, De perlas son tus puertas, Continuamente abiertas Al mísero mortal;"
+        }
+      ]
+    },
+    {
+      "id": "SION-037",
+      "numero": 37,
+      "titulo": "¡OH, VEN SIN TARDAR!",
+      "prioridade": "MEDIA",
+      "pontos": 2,
+      "tipos": [
+        "PRIMEIRA_ESTROFE_SEM_NUMERO"
+      ],
+      "total_achados": 1,
+      "padroes_fortes": [],
+      "achados": [
+        {
+          "tipo": "PRIMEIRA_ESTROFE_SEM_NUMERO",
+          "detalhe": "Primeiro número estrutural encontrado: 2.",
+          "trecho": "Acepta a Jesús, y salvo serás. | 2 | Tus ojos ya tal vez el sol No más aquí contemplarán: Hoyes el día de salvación,"
+        }
+      ]
+    },
+    {
+      "id": "GT-001",
+      "numero": 1,
+      "titulo": "EL APOSENTO ALTO",
+      "prioridade": "BAIXA_EDITORIAL",
+      "pontos": 3,
+      "tipos": [
+        "RESIDUO_BARRAS"
+      ],
+      "total_achados": 1,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/"
+      ],
+      "achados": [
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "CORO: | ||¡Dios manda tu gran poder!|| A cada corazón. | 2"
+        }
+      ]
+    },
+    {
+      "id": "GT-005",
+      "numero": 5,
+      "titulo": "DESDE QUE SALVO ESTOY",
+      "prioridade": "BAIXA_EDITORIAL",
+      "pontos": 3,
+      "tipos": [
+        "RESIDUO_BARRAS"
+      ],
+      "total_achados": 1,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/"
+      ],
+      "achados": [
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "CORO: | ||Desde que salvo estoy|| Sólo en él me gloriaré; Desde que salvo estoy | En mi Salvador me gloriaré."
+        }
+      ]
+    },
+    {
+      "id": "GT-034",
+      "numero": 34,
+      "titulo": "TENDRÁS QUE RENACER",
+      "prioridade": "BAIXA_EDITORIAL",
+      "pontos": 3,
+      "tipos": [
+        "RESIDUO_BARRAS"
+      ],
+      "total_achados": 1,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/"
+      ],
+      "achados": [
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "CORO: | ||Tendrás que renacer,|| De cierto, de cierto te digo a ti: | Tendrás que renacer."
+        }
+      ]
+    },
+    {
+      "id": "GT-142",
+      "numero": 142,
+      "titulo": "CUANDO TE QUIERO MAS",
+      "prioridade": "BAIXA_EDITORIAL",
+      "pontos": 3,
+      "tipos": [
+        "RESIDUO_BARRAS"
+      ],
+      "total_achados": 1,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/"
+      ],
+      "achados": [
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "CORO: | ||Cuando te quiero más.|| Cerca tú estás, mi buen Salvador, Cuando te quiero más. | 2"
+        }
+      ]
+    },
+    {
+      "id": "GT-146",
+      "numero": 146,
+      "titulo": "ME BUSCA A MÍ",
+      "prioridade": "BAIXA_EDITORIAL",
+      "pontos": 3,
+      "tipos": [
+        "RESIDUO_BARRAS"
+      ],
+      "total_achados": 4,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/"
+      ],
+      "achados": [
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "CORO: | ||Me busca a mí, a mí,|| Maravilloso es su gran amor; Me busca a mí, a mí. | 2"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "CORO: | ||Muere por mí, por mí,|| Sufre la muerte amarga en la cruz; | Muere por mí, por mí."
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "CORO: | ||Me llama a mí, a mí;|| Con tierna voz y profundo amor. | Me llama a mí, a mí."
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "CORO: | ||Viene por mí, por mí;|| | ¡Oh, en las nubes veré a Jesús!"
+        }
+      ]
+    },
+    {
+      "id": "GT-156",
+      "numero": 156,
+      "titulo": "EL CUIDARA DE MÍ",
+      "prioridade": "BAIXA_EDITORIAL",
+      "pontos": 3,
+      "tipos": [
+        "RESIDUO_BARRAS"
+      ],
+      "total_achados": 3,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/"
+      ],
+      "achados": [
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "Si Cristo es mi consuelo, Mi amigo siempre fiel, | ||Si aún las aves tienen Seguro asilo en él? || | CORO:"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "A Cristo pasó a paso Yo sigo sin cesar, | ||Y todas sus bondades Me da sin limitar. || | 3"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "Si en mi la fe desmaya Y caigo en la ansiedad, | ||¡Tan sólo él me levanta, Me da seguridad!||"
+        }
+      ]
+    },
+    {
+      "id": "GT-160",
+      "numero": 160,
+      "titulo": "HAY UN MUNDO FELIZ MÁS ALLÁ",
+      "prioridade": "BAIXA_EDITORIAL",
+      "pontos": 3,
+      "tipos": [
+        "RESIDUO_BARRAS"
+      ],
+      "total_achados": 1,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/"
+      ],
+      "achados": [
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "CORO: | ||¡En el mundo feliz Reinaremos con nuestro Señor!|| | 2"
+        }
+      ]
+    },
+    {
+      "id": "GT-164",
+      "numero": 164,
+      "titulo": "JESÚS ES TODO PARA MÍ",
+      "prioridade": "BAIXA_EDITORIAL",
+      "pontos": 3,
+      "tipos": [
+        "RESIDUO_BARRAS"
+      ],
+      "total_achados": 4,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/"
+      ],
+      "achados": [
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "Si en mis tristezas voy a él, | ||Hallo un amigo siempre fiel,|| En Jesús. | 2"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "Yendo conmigo el Salvador | ||Ya nada puede el tentador|| Contra mí. | 3"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "Nada en el mundo igualará | ||A lo que en Cristo encontrará|| El mortal. | 4"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "Quien vida tal me aseguró Muriendo en cruenta cruz; | ||Ensalzará su salivación.|| Sin igual."
+        }
+      ]
+    },
+    {
+      "id": "GT-165",
+      "numero": 165,
+      "titulo": "AUNQUE SEAN COMO ESCARLATA",
+      "prioridade": "BAIXA_EDITORIAL",
+      "pontos": 3,
+      "tipos": [
+        "RESIDUO_BARRAS"
+      ],
+      "total_achados": 4,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/"
+      ],
+      "achados": [
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "Y si fueren como grana Níveos los haré. | ||Aunque sean como escarlata, Tus pecados lavaré. || | 2"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "Y de tierno amor. | ||Oye voz que te suplica: Vuelve, vuelve a tu Señor.|| | 3"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "«Venid a mí, y sed salvos», Dice nuestro Dios. | ||El aleja tus pecados | Y su consecuencia atroz.||"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "||El aleja tus pecados | Y su consecuencia atroz.||"
+        }
+      ]
+    },
+    {
+      "id": "GT-225",
+      "numero": 225,
+      "titulo": "SU SANGRE DERRAMO JESÚS",
+      "prioridade": "BAIXA_EDITORIAL",
+      "pontos": 3,
+      "tipos": [
+        "RESIDUO_BARRAS"
+      ],
+      "total_achados": 1,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/"
+      ],
+      "achados": [
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "CORO: | ||La sangre te puede limpiar,|| | Tus muchos pecados Dios puede quitarte."
+        }
+      ]
+    },
+    {
+      "id": "GT-242",
+      "numero": 242,
+      "titulo": "EL ES MI FUERTE SALVADOR",
+      "prioridade": "BAIXA_EDITORIAL",
+      "pontos": 3,
+      "tipos": [
+        "RESIDUO_BARRAS"
+      ],
+      "total_achados": 1,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/"
+      ],
+      "achados": [
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "CORO: | ||Él es mi fuerte y gran Salvador,\" Yo perdido fui, mas. Cristo me salvó, Él es mi fuerte y gran Salvador. | 2"
+        }
+      ]
+    },
+    {
+      "id": "GT-251",
+      "numero": 251,
+      "titulo": "EL HIJO PRODIGO",
+      "prioridade": "BAIXA_EDITORIAL",
+      "pontos": 3,
+      "tipos": [
+        "RESIDUO_BARRAS"
+      ],
+      "total_achados": 2,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/"
+      ],
+      "achados": [
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "CORO: | ||Lla…\tmando por ti | (Llamando por ti\tllamando por ti)"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "(Llamando por ti\tllamando por ti) | Perdi\tdo pródigo ven;|| | (Perdido pródigo ven. Ven, ¡oh pródigo!, ven)."
+        }
+      ]
+    },
+    {
+      "id": "GT-268",
+      "numero": 268,
+      "titulo": "CRISTO EL HIJO DEL SANTO DIOS",
+      "prioridade": "BAIXA_EDITORIAL",
+      "pontos": 3,
+      "tipos": [
+        "RESIDUO_BARRAS"
+      ],
+      "total_achados": 4,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/"
+      ],
+      "achados": [
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "Por su sangre pura, por su muerte dura, | ||Sólo Jesús, sólo Jesús hizo la salvación.|| | 2"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "Para los dolientes, que le son creyentes, | ||Sólo Jesús, sólo Jesús hizo la salvación.|| | 3"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "Sin ayuda nuestra, por su propia diestra, | ||Sólo Jesús, sólo Jesús hizo la salvación.|| | 4"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "Su favor tenemos, siempre cantaremos: | ||Sólo Jesús, sólo Jesús hizo la salvación.||"
+        }
+      ]
+    },
+    {
+      "id": "GT-285",
+      "numero": 285,
+      "titulo": "ALLÍ QUIERO IR, ¿Y TU?",
+      "prioridade": "BAIXA_EDITORIAL",
+      "pontos": 3,
+      "tipos": [
+        "RESIDUO_BARRAS"
+      ],
+      "total_achados": 1,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/"
+      ],
+      "achados": [
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "CORO: | ||Allí quiero ir, allí quiero ir, Allí quiero ir, ¿y tú?|| | 2"
+        }
+      ]
+    },
+    {
+      "id": "GT-290",
+      "numero": 290,
+      "titulo": "SOLO CRISTO",
+      "prioridade": "BAIXA_EDITORIAL",
+      "pontos": 3,
+      "tipos": [
+        "RESIDUO_BARRAS"
+      ],
+      "total_achados": 2,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/"
+      ],
+      "achados": [
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "CORO: | ||Sólo Cristo,\t\tSólo Cristo, Sólo Cristo,\tSólo Cristo | Es el lirio de los valles, mi Jesús.||"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "||Sólo Cristo,\t\tSólo Cristo, Sólo Cristo,\tSólo Cristo | Es el lirio de los valles, mi Jesús.|| | 2"
+        }
+      ]
+    },
+    {
+      "id": "GT-328",
+      "numero": 328,
+      "titulo": "LLAMA",
+      "prioridade": "BAIXA_EDITORIAL",
+      "pontos": 3,
+      "tipos": [
+        "RESIDUO_BARRAS"
+      ],
+      "total_achados": 1,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/"
+      ],
+      "achados": [
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "Tu Amigo es él, tu bienhechor, Te llama hoy, ve sin tardar: | ||¿Darás lugar al Salvador?|| | 2"
+        }
+      ]
+    },
+    {
+      "id": "SION-017",
+      "numero": 17,
+      "titulo": "TENDRÁS QUE RENACER",
+      "prioridade": "BAIXA_EDITORIAL",
+      "pontos": 3,
+      "tipos": [
+        "RESIDUO_BARRAS"
+      ],
+      "total_achados": 1,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/"
+      ],
+      "achados": [
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "CORO: | ||Tendrás que renacer,|| De cierto, de cierto te digo a ti: | Tendrás que renacer."
+        }
+      ]
+    },
+    {
+      "id": "SION-114",
+      "numero": 114,
+      "titulo": "SOLO CRISTO",
+      "prioridade": "BAIXA_EDITORIAL",
+      "pontos": 3,
+      "tipos": [
+        "RESIDUO_BARRAS"
+      ],
+      "total_achados": 2,
+      "padroes_fortes": [
+        "/\\.\\s*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/"
+      ],
+      "achados": [
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "CORO: | ||Sólo Cristo,\t\tSólo Cristo, Sólo Cristo,\tSólo Cristo | Es el lirio de los valles, mi Jesús.||"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "||Sólo Cristo,\t\tSólo Cristo, Sólo Cristo,\tSólo Cristo | Es el lirio de los valles, mi Jesús.|| | 2"
+        }
+      ]
+    },
+    {
+      "id": "GT-088",
+      "numero": 88,
+      "titulo": "CERCA, MAS CERCA",
+      "prioridade": "BAIXA_EDITORIAL",
+      "pontos": 0,
+      "tipos": [
+        "RESIDUO_BARRAS"
+      ],
+      "total_achados": 4,
+      "padroes_fortes": [],
+      "achados": [
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "Cerca, más cerca, ¡oh Dios, de ti! Cerca yo quiero mi vida llevar; Cerca, más cerca, ¡oh Dios, de ti! | ||Cerca a tu gracia que puede salvar.|| | 2"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "Cerca, más cerca, cual pobre soy, Nada, Señor, yo te puedo ofrecer: Sólo mi ser contrito te doy, | ||Pueda contigo la paz obtener.|| | 3"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "Cerca, más cerca, Señor, de ti, Quiero ser tuyo, dejando el pecar: Goces y pompas vanas aquí, | ||Todo, Señor, pronto quiero dejar.|| | 4"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "Y cuando al cielo pueda ascender, | ||Ya para siempre conmigo estarás.||"
+        }
+      ]
+    },
+    {
+      "id": "GT-118",
+      "numero": 118,
+      "titulo": "EL MUNDO NO ES MI HOGAR",
+      "prioridade": "BAIXA_EDITORIAL",
+      "pontos": 0,
+      "tipos": [
+        "RESIDUO_BARRAS"
+      ],
+      "total_achados": 1,
+      "padroes_fortes": [],
+      "achados": [
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "CORO: | ||No puede el mundo ser mi hogar,|| En gloria tengo mi mansión; | No puede el mundo ser mi hogar."
+        }
+      ]
+    },
+    {
+      "id": "GT-159",
+      "numero": 159,
+      "titulo": "LA PATRIA DEL ALMA",
+      "prioridade": "BAIXA_EDITORIAL",
+      "pontos": 0,
+      "tipos": [
+        "RESIDUO_BARRAS"
+      ],
+      "total_achados": 4,
+      "padroes_fortes": [],
+      "achados": [
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "Cantaré, cantaré, del hermoso país, El lejano, glorioso jardín, | ||Donde ha de vivir el alma feliz Mientras vuelen los siglos sin fin. || | 2"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "¡Oh la patria del alma! en sueños se ve Sus muros de jaspe y cristal; | ||Y cercano parece aquel bello Edén, Radiante de luz celestial.|| | 3"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "Y el árbol de vida florece allá, Do fluye el río de amor; | ||Y jamás en la santa ciudad entrará Ni la muerte, ni amargo dolor.|| | 4"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "¡Oh cuán dulce será en el santo país, Pasadas las penas aquí, | ||Volvernos a ver en la vida feliz, Que tendremos con Cristo Allí!||"
+        }
+      ]
+    },
+    {
+      "id": "GT-188",
+      "numero": 188,
+      "titulo": "BELLAS PALABRAS DE VIDA",
+      "prioridade": "BAIXA_EDITORIAL",
+      "pontos": 0,
+      "tipos": [
+        "RESIDUO_BARRAS"
+      ],
+      "total_achados": 6,
+      "padroes_fortes": [],
+      "achados": [
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "Si, de luz y vida; Son sostén y a: | || ¡Qué bellas son, qué bellas son! | Bellas palabras de vida.||"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "|| ¡Qué bellas son, qué bellas son! | Bellas palabras de vida.|| | 2"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "Y al cielo te llama: | || ¡Qué bellas son, qué bellas son! | Bellas palabras de vida.||"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "|| ¡Qué bellas son, qué bellas son! | Bellas palabras de vida.|| | 3"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "Son sostén y guía: | || ¡Qué bellas son, qué bellas son! | Bellas palabras de vida.||"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "|| ¡Qué bellas son, qué bellas son! | Bellas palabras de vida.||"
+        }
+      ]
+    },
+    {
+      "id": "GT-212",
+      "numero": 212,
+      "titulo": "¡NOCHE DE PAZ, NOCHE DE AMOR!",
+      "prioridade": "BAIXA_EDITORIAL",
+      "pontos": 0,
+      "tipos": [
+        "RESIDUO_BARRAS"
+      ],
+      "total_achados": 3,
+      "padroes_fortes": [],
+      "achados": [
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "Entre los astros que esparcen su luz: Bella anunciando al niñito Jesús: | ||Brilla la estrella de paz. || | 2"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "Oye humilde el fiel pastor Coros celestes que anuncian salud, Gracias y glorias en gran plenitud | ¡¡Por nuestro buen Redentor.|| | 3"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "Ved qué bello resplandor Luce en el rostro del niño Jesús; En el pesebre, del mundo la luz: | ||Astro de eterno fulgor.||"
+        }
+      ]
+    },
+    {
+      "id": "GT-230",
+      "numero": 230,
+      "titulo": "CIMIENTO ETERNO DE LA FE",
+      "prioridade": "BAIXA_EDITORIAL",
+      "pontos": 0,
+      "tipos": [
+        "RESIDUO_BARRAS"
+      ],
+      "total_achados": 7,
+      "padroes_fortes": [],
+      "achados": [
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "¿Qué más él pudiera en su libro añadir | ||Si todo a sus hijos lo ha dicho el Señor? || | 2"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "«Ya te halles enfermo o en plena salud, Ya rico, ya pobre se encuentre tu ser, En casa o viajando, por tierra o por mar, | ||Conforme a tus años será tu poder.»|| | 3"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "Tu fuerza y firmeza en mi diestra estarán, | ||Y en ella sostén y poder te daré.»|| | 4"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "Pues siempre contigo seré en tus angustias | ||Y todas tus penas podré bendecir.»|| | 5"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "El oro de tu alma más puro será, | ||pues sólo la escoria se habrá de quemar»|| | 6"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "Si nívea corona ya ciñe su sien, | ||¡Cual tierno cordero aún cuidaré!»|| | 7"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "«Al alma que anhele la paz que hay en mí, Jamás en sus luchas la habré de dejar; Si todo el infierno la quiere perder, | ||¡Yo nunca, no nunca, la puedo olvidar!»||"
+        }
+      ]
+    },
+    {
+      "id": "GT-255",
+      "numero": 255,
+      "titulo": "SALVADOR, MI BIEN ETERNO",
+      "prioridade": "BAIXA_EDITORIAL",
+      "pontos": 0,
+      "tipos": [
+        "RESIDUO_BARRAS"
+      ],
+      "total_achados": 3,
+      "padroes_fortes": [],
+      "achados": [
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "Cerca siempre te halle a ti, | ||Junto a ti, junto a ti.|| En mi fatigosa senda Cerca siempre te halle a ti. | 2"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "En las pruebas, en desdenes, Cerca siempre te halle a ti; | ||Junto a ti, junto a ti.|| En las pruebas, en desdenes, Cerca siempre te halle a ti. | 3"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "Yendo por sombrío valle, En rugiente mar hostil, Antes y después del trance, Cerca siempre te halle a ti; | ||Junto a ti, junto a ti.|| Antes y después del trance, Cerca siempre te halle a ti."
+        }
+      ]
+    },
+    {
+      "id": "GT-273",
+      "numero": 273,
+      "titulo": "MI PASTOR",
+      "prioridade": "BAIXA_EDITORIAL",
+      "pontos": 0,
+      "tipos": [
+        "RESIDUO_BARRAS"
+      ],
+      "total_achados": 7,
+      "padroes_fortes": [],
+      "achados": [
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "Un corderito débil soy, Mas cerca del Pastor estoy, | ||Su seno a todos da lugar, Conmigo tú podrás estar.|| | 2"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "Jesús se llama mi Pastor, De quien disfruto tal amor, | ||El cuida mucho a su grey, Pues él también es nuestro Rey.|| | 3"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "Recuerdo yo mi perdición, Estuve en otra condición, | ||Mas el Pastor me encontró, Me rescató y paz me dio.|| | 4"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "¡Oh, cuán benigno es, y ved! En pastos verdes yo yacer, | ||EI agua fresca me dará, Ninguna gracia faltará.\" | 5"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "Si pasos inciertos doy, Me dice: «Yo contigo estoy»: | ||Conoce mi camino él, Promete serme Guía fiel.|| | 6"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "Aun cuando haya lobos mil, El corderito en su redil, | ||No teme, porque su Pastor Los ahuyenta con valor.|| | 7"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "¡Si mucho más he de gozar! | ||Al cielo pronto yo iré Y con Jesús descansaré.||"
+        }
+      ]
+    },
+    {
+      "id": "GT-288",
+      "numero": 288,
+      "titulo": "UNOS SI, OTROS NO",
+      "prioridade": "BAIXA_EDITORIAL",
+      "pontos": 0,
+      "tipos": [
+        "RESIDUO_BARRAS"
+      ],
+      "total_achados": 8,
+      "padroes_fortes": [],
+      "achados": [
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "De alguien las glorias sin fin serán; | ||¿Y tú? ¿Y yo?|| Calles de oro, mar de cristal, Pleno reposo, perfecto amor; Unos tendrán celestial hogar; | ||¿Y tú? ¿Y yo?||"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "||¿Y tú? ¿Y yo?|| Calles de oro, mar de cristal, Pleno reposo, perfecto amor; Unos tendrán celestial hogar; | ||¿Y tú? ¿Y yo?|| | 2"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "Logran corona en vez de cruz; | ||¿Y tú? ¿Y yo?|| Mora el Rey en gloriosa luz, Con él no puede haber dolor; De alguien es esta beatitud; | ||¿Y tú? ¿Y yo?||"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "||¿Y tú? ¿Y yo?|| Mora el Rey en gloriosa luz, Con él no puede haber dolor; De alguien es esta beatitud; | ||¿Y tú? ¿Y yo?|| | 3"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "Estos las puertas cerradas ven; | ||¿Y tú? ¿Y yo?|| | Ciegos y sordos hoy nada creen; Tarde lamentarán tal error;"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "Al que desdeñan será su juez; | ||¿Y tú? ¿Y yo?|| | 4"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "Los que procuran por Dios vivir; | ||¿Y tú? ¿Y yo?|| Cuando concluya la dura lid, En compañía del Salvador, Alguien será sin cesar feliz; | ||¿Y tú? ¿Y yo?||"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "||¿Y tú? ¿Y yo?|| Cuando concluya la dura lid, En compañía del Salvador, Alguien será sin cesar feliz; | ||¿Y tú? ¿Y yo?||"
+        }
+      ]
+    },
+    {
+      "id": "SION-055",
+      "numero": 55,
+      "titulo": "EL MUNDO NO ES MI HOGAR",
+      "prioridade": "BAIXA_EDITORIAL",
+      "pontos": 0,
+      "tipos": [
+        "RESIDUO_BARRAS"
+      ],
+      "total_achados": 1,
+      "padroes_fortes": [],
+      "achados": [
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "CORO: | ||No puede el mundo ser mi hogar,|| En gloria tengo mi mansión; | No puede el mundo ser mi hogar."
+        }
+      ]
+    },
+    {
+      "id": "SION-068",
+      "numero": 68,
+      "titulo": "LA PATRIA DEL ALMA",
+      "prioridade": "BAIXA_EDITORIAL",
+      "pontos": 0,
+      "tipos": [
+        "RESIDUO_BARRAS"
+      ],
+      "total_achados": 4,
+      "padroes_fortes": [],
+      "achados": [
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "Cantaré, cantaré, del hermoso país, El lejano, glorioso jardín, | ||Donde ha de vivir el alma feliz Mientras vuelen los siglos sin fin. || | 2"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "¡Oh la patria del alma! en sueños se ve Sus muros de jaspe y cristal; | ||Y cercano parece aquel bello Edén, Radiante de luz celestial.|| | 3"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "Y el árbol de vida florece allá, Do fluye el río de amor; | ||Y jamás en la santa ciudad entrará Ni la muerte, ni amargo dolor.|| | 4"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "¡Oh cuán dulce será en el santo país, Pasadas las penas aquí, | ||Volvernos a ver en la vida feliz, Que tendremos con Cristo Allí!||"
+        }
+      ]
+    },
+    {
+      "id": "SION-105",
+      "numero": 105,
+      "titulo": "SALVADOR, MI BIEN ETERNO",
+      "prioridade": "BAIXA_EDITORIAL",
+      "pontos": 0,
+      "tipos": [
+        "RESIDUO_BARRAS"
+      ],
+      "total_achados": 3,
+      "padroes_fortes": [],
+      "achados": [
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "Cerca siempre te halle a ti, | ||Junto a ti, junto a ti.|| En mi fatigosa senda Cerca siempre te halle a ti. | 2"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "En las pruebas, en desdenes, Cerca siempre te halle a ti; | ||Junto a ti, junto a ti.|| En las pruebas, en desdenes, Cerca siempre te halle a ti. | 3"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "Yendo por sombrío valle, En rugiente mar hostil, Antes y después del trance, Cerca siempre te halle a ti; | ||Junto a ti, junto a ti.|| Antes y después del trance, Cerca siempre te halle a ti."
+        }
+      ]
+    }
+  ]
+}

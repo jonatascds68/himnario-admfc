@@ -1,0 +1,126 @@
+============================================
+ AUDITORIA HINÁRIA - ETAPA 10H
+ APLICAÇÃO TRANSACIONAL
+ 14 CORREÇÕES APROVADAS
+============================================
+
+============================================
+ 1. PRÉ-CHECAGEM
+============================================
+HASH ATUAL:    a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41
+HASH ESPERADO: a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41
+HASH INICIAL: OK
+CORREÇÕES RECEBIDAS: 14
+
+============================================
+ 2. BACKUP
+============================================
+ARQUIVO: assets/base_mestre.bak-etapa-10h.json
+HASH BACKUP: a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41
+BACKUP: ÍNTEGRO
+
+============================================
+ 3. PRÉ-VALIDAÇÃO DAS 14 CORREÇÕES
+============================================
+GT-040: "oid, ." | ocorrências=1
+GT-056: "serIe" | ocorrências=1
+SION-026: "serIe" | ocorrências=1
+GT-161: "serás . De" | ocorrências=1
+GT-018: "referirIa" | ocorrências=1
+GT-018: "buen .Jesús" | ocorrências=1
+SION-128: "referirIa" | ocorrências=1
+SION-128: "buen .Jesús" | ocorrências=1
+GT-007: "serIe" | ocorrências=1
+SION-011: "serIe" | ocorrências=1
+GT-025: "serIe" | ocorrências=1
+SION-134: "serIe" | ocorrências=1
+GT-102: "hazIo" | ocorrências=1
+SION-044: "hazIo" | ocorrências=1
+PRÉ-VALIDAÇÃO: OK
+
+============================================
+ 4. APLICAÇÃO EM MEMÓRIA
+============================================
+GT-040: "oid, ." -> "oid," | OK
+GT-056: "serIe" -> "serle" | OK
+SION-026: "serIe" -> "serle" | OK
+GT-161: "serás . De" -> "serás. De" | OK
+GT-018: "referirIa" -> "referirla" | OK
+GT-018: "buen .Jesús" -> "buen Jesús" | OK
+SION-128: "referirIa" -> "referirla" | OK
+SION-128: "buen .Jesús" -> "buen Jesús" | OK
+GT-007: "serIe" -> "serle" | OK
+SION-011: "serIe" -> "serle" | OK
+GT-025: "serIe" -> "serle" | OK
+SION-134: "serIe" -> "serle" | OK
+GT-102: "hazIo" -> "hazlo" | OK
+SION-044: "hazIo" -> "hazlo" | OK
+
+============================================
+ 5. PÓS-VALIDAÇÃO EM MEMÓRIA
+============================================
+GT-040: texto antigo restante=0
+GT-056: texto antigo restante=0
+SION-026: texto antigo restante=0
+GT-161: texto antigo restante=0
+GT-018: texto antigo restante=0
+GT-018: texto antigo restante=0
+SION-128: texto antigo restante=0
+SION-128: texto antigo restante=0
+GT-007: texto antigo restante=0
+SION-011: texto antigo restante=0
+GT-025: texto antigo restante=0
+SION-134: texto antigo restante=0
+GT-102: texto antigo restante=0
+SION-044: texto antigo restante=0
+PÓS-VALIDAÇÃO EM MEMÓRIA: OK
+
+============================================
+ 6. ARQUIVO TEMPORÁRIO
+============================================
+TEMP: assets/base_mestre.tmp-etapa-10h.json
+HASH TEMP: 48cd4be20055aa9243a0a2223aef36376186dfd202f72ca4a4666015c44445a5
+JSON TEMPORÁRIO: VÁLIDO
+
+============================================
+ 7. ESCRITA ATÔMICA
+============================================
+BASE MESTRE: SUBSTITUÍDA PELO TEMPORÁRIO
+HASH ANTES:  a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41
+HASH DEPOIS: 48cd4be20055aa9243a0a2223aef36376186dfd202f72ca4a4666015c44445a5
+
+============================================
+ 8. AUDITORIA PÓS-GRAVAÇÃO
+============================================
+GT-040: antigo=0 | proposta=1
+GT-056: antigo=0 | proposta=1
+SION-026: antigo=0 | proposta=1
+GT-161: antigo=0 | proposta=1
+GT-018: antigo=0 | proposta=3
+GT-018: antigo=0 | proposta=1
+SION-128: antigo=0 | proposta=3
+SION-128: antigo=0 | proposta=1
+GT-007: antigo=0 | proposta=1
+SION-011: antigo=0 | proposta=1
+GT-025: antigo=0 | proposta=1
+SION-134: antigo=0 | proposta=1
+GT-102: antigo=0 | proposta=1
+SION-044: antigo=0 | proposta=1
+AUDITORIA PÓS-GRAVAÇÃO: OK
+
+============================================
+ 9. RESULTADO FINAL
+============================================
+CORREÇÕES APLICADAS: 14
+CASOS BLOQUEADOS ALTERADOS: NÃO
+BACKUP PRESERVADO: assets/base_mestre.bak-etapa-10h.json
+HASH ANTERIOR: a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41
+NOVO HASH OFICIAL: 48cd4be20055aa9243a0a2223aef36376186dfd202f72ca4a4666015c44445a5
+
+============================================
+ ETAPA 10H CONCLUÍDA COM SUCESSO
+ 14 CORREÇÕES APLICADAS
+ BASE MESTRE VALIDADA
+ BACKUP PRESERVADO
+ NOVO HASH OFICIAL GERADO
+============================================

@@ -1,0 +1,88 @@
+{
+  "etapa": "10K",
+  "hashOficial": "48cd4be20055aa9243a0a2223aef36376186dfd202f72ca4a4666015c44445a5",
+  "hashAntes": "48cd4be20055aa9243a0a2223aef36376186dfd202f72ca4a4666015c44445a5",
+  "detectorEstruturalCorrigido": {
+    "reconhece": [
+      "2",
+      "2.",
+      "2)",
+      "2. texto",
+      "2) texto"
+    ]
+  },
+  "decisions": [
+    {
+      "key": "GT-182",
+      "previousStatus": "BLOQUEADO_SALTO_NUMERICO",
+      "numbers": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "issuesAfterDetectorFix": [],
+      "decision": "FALSO_POSITIVO_RESOLVIDO",
+      "reason": "A Etapa 10J demonstrou que a estrofe 2 está presente como marcador \"2.\"."
+    },
+    {
+      "key": "SION-079",
+      "previousStatus": "BLOQUEADO_SALTO_NUMERICO",
+      "numbers": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "issuesAfterDetectorFix": [],
+      "decision": "FALSO_POSITIVO_RESOLVIDO",
+      "reason": "O mesmo marcador \"2.\" existe no correspondente Sión e a letra é idêntica ao GT-182."
+    },
+    {
+      "key": "GT-283",
+      "previousStatus": "BLOQUEADO_COTEJO_VISUAL",
+      "decision": "MANTER_BLOQUEADO_DOCUMENTAL",
+      "suspiciousText": "tierra mis Allí",
+      "occurrences": 1,
+      "reason": "Não existe correspondente forte na outra edição e o verso não deve ser reconstruído por inferência."
+    },
+    {
+      "key": "GT-042",
+      "previousStatus": "BLOQUEADO_ESTRUTURA_NUMERACAO",
+      "decision": "MANTER_BLOQUEADO_DOCUMENTAL",
+      "gt041Numbers": [
+        1
+      ],
+      "gt042Numbers": [
+        2,
+        3,
+        4,
+        1,
+        2,
+        3,
+        4
+      ],
+      "gt042Issues": [
+        {
+          "type": "REGRESSAO",
+          "transition": "4 -> 1"
+        }
+      ],
+      "gt041Text": "1",
+      "reason": "GT-041 contém somente o marcador \"1\", enquanto GT-042 apresenta conteúdo antes da sequência 2-3-4 e depois nova sequência 1-2-3-4. Há forte evidência de duplicação/justaposição, mas a reconstrução exige fonte."
+    }
+  ],
+  "resumo": {
+    "falsosPositivosResolvidos": [
+      "GT-182",
+      "SION-079"
+    ],
+    "permanecemDocumentais": [
+      "GT-283",
+      "GT-042"
+    ],
+    "alteracoesNaBase": 0
+  }
+}

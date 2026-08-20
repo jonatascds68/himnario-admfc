@@ -1,0 +1,19 @@
+{
+  "etapa": "10N",
+  "tipo": "CORRECAO_DOCUMENTAL_CONFIRMADA",
+  "alvo": "GT-283",
+  "titulo": "EN LA MAÑANA",
+  "evidencia": "visual_independente",
+  "alteracao": {
+    "antes": "tierra mis Allí",
+    "depois": "tierra más allá",
+    "substituicoes": 1
+  },
+  "total_hinos": 718,
+  "gt041_gt042_alterados": false,
+  "hash_anterior": "48cd4be20055aa9243a0a2223aef36376186dfd202f72ca4a4666015c44445a5",
+  "hash_novo": "8c6b5ae3d1dd4701a75602e2e9ff20ce13c4ce4c831f3d6a39e51e9affb80185",
+  "backup": "assets/base_mestre.bak-etapa-10n-gt283.json",
+  "hash_backup": "48cd4be20055aa9243a0a2223aef36376186dfd202f72ca4a4666015c44445a5",
+  "status": "APROVADO"
+}

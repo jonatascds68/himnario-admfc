@@ -1,0 +1,118 @@
+============================================
+ AUDITORIA HINÁRIA - ETAPA 10M
+ RESOLUÇÃO EDITORIAL DOS CASOS FINAIS
+ SOMENTE LEITURA
+============================================
+
+============================================
+ 1. CONTROLE
+============================================
+HASH ATUAL:   48cd4be20055aa9243a0a2223aef36376186dfd202f72ca4a4666015c44445a5
+HASH OFICIAL: 48cd4be20055aa9243a0a2223aef36376186dfd202f72ca4a4666015c44445a5
+HASH: OK
+TOTAL DE HINOS: 718
+
+============================================
+ 2. GT-283 — EN LA MAÑANA
+============================================
+TERMO SUSPEITO: "tierra mis Allí"
+OCORRÊNCIAS: 1
+
+DECISÃO EDITORIAL: MANTER COMO ESTÁ
+STATUS: PENDENTE DE COTEJO DOCUMENTAL
+
+JUSTIFICATIVA: não existe evidência independente
+suficiente para substituir o texto sem inferência.
+
+============================================
+ 3. GT-041 / GT-042
+============================================
+GT-041: HAY UN PRECIOSO MANANTIAL
+LETRA: "1"
+SOMENTE MARCADOR "1": SIM
+
+GT-042: HAY UN PRECIOSO MANANTIAL
+TAMANHO: 907
+TÍTULO INTERNO: 1 ocorrência(s)
+FRONTEIRA DE DUPLICAÇÃO: DETECTADA
+
+MESMO TÍTULO GT-041/GT-042: SIM
+
+--------------------------------------------
+ PRIMEIRA PARTE DETECTADA
+--------------------------------------------
+Hay un precioso manantial De sangre de Emmanuel, Que purifica a cada cual Que se sumerge en él.
+CORO:
+Lávame, Señor Jesús, En la sangre de tu cruz: Lávame, Señor Jesús,
+Y más blanco que la nieve yo seré:
+2
+El malhechor se convirtió Pendiente de una cruz; El vio la fuente y se lavó, Creyendo en Jesús.
+3
+Y yo también mi pobre ser Allí logré lavar:
+La gloria de su gran poder Me gozo en ensalzar.
+4
+¡Eterna fuente carmesí!
+¡Raudal de puro amor! Se lavará por siempre en ti
+El pueblo del Señor.
+
+NÚMEROS: 2 -> 3 -> 4
+
+--------------------------------------------
+ SEGUNDA PARTE DETECTADA
+--------------------------------------------
+1
+Hay un precioso manantial De sangre de Emmanuel, Que purifica a cada cual Que se sumerge en él.
+2
+El malhechor se convirtió Pendiente de una cruz; El vio la fuente y se lavó, Creyendo en Jesús.
+3
+Y yo también mi pobre ser Allí logré lavar;
+La gloria de su gran poder, Me gozo en ensalzar.
+4
+¡Eterna fuente carmesí!
+¡Raudal de puro amor!
+Se lavará por siempre en ti, El pueblo del Señor.
+
+NÚMEROS: 1 -> 2 -> 3 -> 4
+
+EVIDÊNCIA ESTRUTURAL SUFICIENTE: SIM
+DIAGNÓSTICO: ERRO_IMPORTACAO_SEGMENTACAO
+
+DECISÃO: NÃO CORRIGIR AUTOMATICAMENTE.
+A falha de segmentação está demonstrada, mas a
+numeração editorial correta ainda depende da fonte.
+
+============================================
+ 4. VIZINHANÇA
+============================================
+GT-040 | 40 | EN LOS NEGOCIOS DEL REY
+GT-041 | 41 | HAY UN PRECIOSO MANANTIAL
+GT-042 | 42 | HAY UN PRECIOSO MANANTIAL
+GT-043 | 43 | A JESUCRISTO VEN SIN TARDAR
+
+============================================
+ 5. BALANÇO DA AUDITORIA
+============================================
+14 CORREÇÕES SEGURAS: APLICADAS E VALIDADAS
+GT-182: FALSO POSITIVO RESOLVIDO
+SION-079: FALSO POSITIVO RESOLVIDO
+GT-283: PENDÊNCIA DOCUMENTAL
+GT-041/042: PENDÊNCIA DOCUMENTAL/ESTRUTURAL
+
+NENHUMA OUTRA CORREÇÃO AUTOMÁTICA É RECOMENDADA
+PARA ESTES CASOS SEM CONSULTA À EDIÇÃO ORIGINAL.
+
+============================================
+ 6. RECOMENDAÇÃO
+============================================
+ENCERRAR A AUDITORIA AUTOMÁTICA NA ETAPA 10N.
+OS DOIS CASOS RESTANTES DEVEM SER REGISTRADOS
+COMO PENDÊNCIAS DOCUMENTAIS, NÃO COMO ERROS
+CORRIGIDOS POR INFERÊNCIA.
+
+============================================
+ 7. CONTROLE DE IMUTABILIDADE
+============================================
+HASH ANTES:  48cd4be20055aa9243a0a2223aef36376186dfd202f72ca4a4666015c44445a5
+HASH DEPOIS: 48cd4be20055aa9243a0a2223aef36376186dfd202f72ca4a4666015c44445a5
+BASE ALTERADA PELA 10M: NÃO
+

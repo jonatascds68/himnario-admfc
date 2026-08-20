@@ -1,0 +1,144 @@
+============================================
+ AUDITORIA HINÁRIA - ETAPA 10O
+ INVESTIGAÇÃO FINAL GT-041 / GT-042
+ SOMENTE LEITURA
+============================================
+
+============================================
+ 1. CONTROLE
+============================================
+HASH ATUAL:   8c6b5ae3d1dd4701a75602e2e9ff20ce13c4ce4c831f3d6a39e51e9affb80185
+HASH OFICIAL: 8c6b5ae3d1dd4701a75602e2e9ff20ce13c4ce4c831f3d6a39e51e9affb80185
+HASH: OK
+REGISTROS DETECTADOS: 718
+TOTAL: OK (718)
+
+============================================
+ 2. VIZINHANÇA GT-039 A GT-044
+============================================
+GT-039 | SANTA BIBLIA
+  ID: GT-039
+  TAMANHO LETRA: 566
+  NÚMEROS: 1 -> 2 -> 3 -> 4
+  INÍCIO: 1 ¡Santa Biblia! para mí, Eres un tesoro aquí; Tú contienes con verdad La divina voluntad; Tú me dices lo que soy, De quién vine y a quién voy. 2 Tú reprendes mi dudar; Tú me exhortas sin cesar; Eres faro que a mi pie, Va guiando por la fe, A las fuentes del a ...
+
+GT-040 | EN LOS NEGOCIOS DEL REY
+  ID: GT-040
+  TAMANHO LETRA: 574
+  NÚMEROS: 1 -> 2 -> 3
+  INÍCIO: 1 Soy peregrino aquí, mi hogar lejano está, En la mansión de luz, eterna paz y amor: Embajador yo soy del reino celestial En los negocios de mi Rey. CORO: Este mensaje fiel oid, Que dijo ya celeste voz: «Reconciliaos ya» – dice el Señor y Rey, ¡Reconciliaos ho ...
+
+GT-041 | HAY UN PRECIOSO MANANTIAL
+  ID: GT-041
+  TAMANHO LETRA: 1
+  NÚMEROS: 1
+  INÍCIO: 1
+
+GT-042 | HAY UN PRECIOSO MANANTIAL
+  ID: GT-042
+  TAMANHO LETRA: 907
+  NÚMEROS: 2 -> 3 -> 4 -> 1 -> 2 -> 3 -> 4
+  INÍCIO: Hay un precioso manantial De sangre de Emmanuel, Que purifica a cada cual Que se sumerge en él. CORO: Lávame, Señor Jesús, En la sangre de tu cruz: Lávame, Señor Jesús, Y más blanco que la nieve yo seré: 2 El malhechor se convirtió Pendiente de una cruz; El vi ...
+
+GT-043 | A JESUCRISTO VEN SIN TARDAR
+  ID: GT-043
+  TAMANHO LETRA: 471
+  NÚMEROS: 1 -> 2 -> 3
+  INÍCIO: 1 A Jesucristo ven sin tardar, Que entre nosotros hoy él esté, Y te convida con dulce afán, Tierno diciendo: «Ven» CORO: ¡Oh!, cuán grata nuestra reunión, Cuando allá, Señor, en tu mansión, Contigo estemos en comunión, Gozando eterno bien. 2 Piensa que él sólo ...
+
+GT-044 | YA TODO DEJÉ
+  ID: GT-044
+  TAMANHO LETRA: 651
+  NÚMEROS: 1 -> 2 -> 3 -> 4
+  INÍCIO: 1 Tan triste y tan lejos de Dios me sentí Y sin el perdón de Jesús, Mas cuando su voz amorosa oí Que dijo: «Oh, ven a la luz» CORO: Ya todo dejé para andar en la luz No moro en tinieblas ya más Ya todo dejé por seguir a Jesús Y vivo en la luz de su faz. 2 ¡Qué ...
+
+============================================
+ 3. COMPARAÇÃO GT-041 / GT-042
+============================================
+GT-041 TÍTULO: HAY UN PRECIOSO MANANTIAL
+GT-042 TÍTULO: HAY UN PRECIOSO MANANTIAL
+TÍTULOS NORMALIZADOS IGUAIS: SIM
+GT-041 LETRA: "1"
+GT-042 TAMANHO: 907
+
+TÍTULO REPETIDO DENTRO DE GT-042: 3
+GT-041 É APENAS "1": SIM
+GT-042 NÚMEROS: 2 -> 3 -> 4 -> 1 -> 2 -> 3 -> 4
+
+============================================
+ 4. FRONTEIRA INTERNA DE GT-042
+============================================
+TÍTULO DO HINO LOCALIZADO NOVAMENTE NO CORPO.
+
+--- PARTE ANTES DO TÍTULO INTERNO ---
+
+
+--- PARTE DEPOIS DO TÍTULO INTERNO ---
+De sangre de Emmanuel, Que purifica a cada cual Que se sumerge en él.
+CORO:
+Lávame, Señor Jesús, En la sangre de tu cruz: Lávame, Señor Jesús,
+Y más blanco que la nieve yo seré:
+2
+El malhechor se convirtió Pendiente de una cruz; El vio la fuente y se lavó, Creyendo en Jesús.
+3
+Y yo también mi pobre ser Allí logré lavar:
+La gloria de su gran poder Me gozo en ensalzar.
+4
+¡Eterna fuente carmesí!
+¡Raudal de puro amor! Se lavará por siempre en ti
+El pueblo del Señor.
+HAY UN PRECIOSO MANANTIAL
+1
+Hay un precioso manantial De sangre de Emmanuel, Que purifica a cada cual Que se sumerge en él.
+2
+El malhechor se convirtió Pendiente de una cruz; El vio la fuente y se lavó, Creyendo en Jesús.
+3
+Y yo también mi pobre ser Allí logré lavar;
+La gloria de su gran poder, Me gozo en ensalzar.
+4
+¡Eterna fuente carmesí!
+¡Raudal de puro amor!
+Se lavará por siempre en ti, El pueblo del Señor.
+
+NÚMEROS PRIMEIRA PARTE: (nenhum)
+NÚMEROS SEGUNDA PARTE: 2 -> 3 -> 4 -> 1 -> 2 -> 3 -> 4
+
+============================================
+ 5. COMPARAÇÃO DAS DUAS CÓPIAS
+============================================
+
+============================================
+ 6. DIAGNÓSTICO TÉCNICO
+============================================
+GT-041 APENAS MARCADOR: SIM
+MESMO TÍTULO: SIM
+ERRO DE SEGMENTAÇÃO: FORTEMENTE CONFIRMADO
+NUMERAÇÃO EDITORIAL CORRETA: AINDA NÃO CONFIRMADA
+
+============================================
+ 7. O QUE PRECISAMOS DA FONTE
+============================================
+Precisamos visualizar na edição original a região
+onde aparecem os hinos nº 40, 41, 42 e 43.
+
+A evidência necessária é apenas:
+1. título correspondente ao número 41;
+2. título correspondente ao número 42;
+3. início da letra de ambos, se possível.
+
+NÃO É NECESSÁRIO RECONSTRUIR NENHUM TEXTO
+ANTES DESSA CONFIRMAÇÃO DOCUMENTAL.
+
+============================================
+ 8. CONTROLE DE IMUTABILIDADE
+============================================
+HASH ANTES:  8c6b5ae3d1dd4701a75602e2e9ff20ce13c4ce4c831f3d6a39e51e9affb80185
+HASH DEPOIS: 8c6b5ae3d1dd4701a75602e2e9ff20ce13c4ce4c831f3d6a39e51e9affb80185
+BASE ALTERADA PELA 10O: NÃO
+
+============================================
+ ETAPA 10O CONCLUÍDA
+ GT-041/GT-042 INVESTIGADOS
+ NENHUMA ALTERAÇÃO NA BASE
+ AGUARDANDO EVIDÊNCIA DOCUMENTAL
+============================================

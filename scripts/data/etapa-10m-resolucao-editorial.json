@@ -1,0 +1,83 @@
+{
+  "etapa": "10M",
+  "hash_oficial": "48cd4be20055aa9243a0a2223aef36376186dfd202f72ca4a4666015c44445a5",
+  "total_hinos": 718,
+  "gt283": {
+    "id": "GT-283",
+    "numero": 283,
+    "titulo": "EN LA MAÑANA",
+    "termo": "tierra mis Allí",
+    "ocorrencias": 1,
+    "decisao": "MANTER_COMO_ESTA",
+    "status_editorial": "PENDENTE_COTEJO_DOCUMENTAL",
+    "justificativa": "Não existe evidência documental independente suficiente para substituir o texto sem inferência."
+  },
+  "gt041_gt042": {
+    "gt041": {
+      "numero": 41,
+      "titulo": "HAY UN PRECIOSO MANANTIAL",
+      "letra": "1",
+      "somente_marcador_1": true
+    },
+    "gt042": {
+      "numero": 42,
+      "titulo": "HAY UN PRECIOSO MANANTIAL",
+      "tamanho": 907,
+      "titulo_interno_ocorrencias": 1,
+      "fronteira_duplicacao_detectada": true
+    },
+    "mesmo_titulo": true,
+    "primeira_parte": "Hay un precioso manantial De sangre de Emmanuel, Que purifica a cada cual Que se sumerge en él.\nCORO:\nLávame, Señor Jesús, En la sangre de tu cruz: Lávame, Señor Jesús,\nY más blanco que la nieve yo seré:\n2\nEl malhechor se convirtió Pendiente de una cruz; El vio la fuente y se lavó, Creyendo en Jesús.\n3\nY yo también mi pobre ser Allí logré lavar:\nLa gloria de su gran poder Me gozo en ensalzar.\n4\n¡Eterna fuente carmesí!\n¡Raudal de puro amor! Se lavará por siempre en ti\nEl pueblo del Señor.",
+    "segunda_parte": "1\nHay un precioso manantial De sangre de Emmanuel, Que purifica a cada cual Que se sumerge en él.\n2\nEl malhechor se convirtió Pendiente de una cruz; El vio la fuente y se lavó, Creyendo en Jesús.\n3\nY yo también mi pobre ser Allí logré lavar;\nLa gloria de su gran poder, Me gozo en ensalzar.\n4\n¡Eterna fuente carmesí!\n¡Raudal de puro amor!\nSe lavará por siempre en ti, El pueblo del Señor.",
+    "numeros_primeira_parte": [
+      2,
+      3,
+      4
+    ],
+    "numeros_segunda_parte": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "evidencia_estrutural_suficiente": true,
+    "diagnostico": "ERRO_IMPORTACAO_SEGMENTACAO",
+    "decisao": "NÃO_CORRIGIR_AUTOMATICAMENTE",
+    "motivo": "A duplicação está comprovada, mas a numeração editorial 41/42 não deve ser reconstruída sem confirmação documental independente."
+  },
+  "vizinhanca": {
+    "anterior": {
+      "id": "GT-040",
+      "numero": 40,
+      "titulo": "EN LOS NEGOCIOS DEL REY"
+    },
+    "atual_a": {
+      "id": "GT-041",
+      "numero": 41,
+      "titulo": "HAY UN PRECIOSO MANANTIAL"
+    },
+    "atual_b": {
+      "id": "GT-042",
+      "numero": 42,
+      "titulo": "HAY UN PRECIOSO MANANTIAL"
+    },
+    "posterior": {
+      "id": "GT-043",
+      "numero": 43,
+      "titulo": "A JESUCRISTO VEN SIN TARDAR"
+    }
+  },
+  "fechamento": {
+    "correcoes_10h_preservadas": 14,
+    "falsos_positivos_resolvidos": [
+      "GT-182",
+      "SION-079"
+    ],
+    "pendencias_documentais": [
+      "GT-283",
+      "GT-041/GT-042"
+    ],
+    "base_alterada": false,
+    "recomendacao": "Encerrar a auditoria automática na próxima etapa e registrar estes dois casos como pendências documentais explícitas."
+  }
+}

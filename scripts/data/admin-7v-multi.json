@@ -1,0 +1,49 @@
+{
+  "schema_version": "admfc-admin-changes-1",
+  "release": "ADMFC_INDEPENDIENTE_1.0",
+  "exported_at": "2026-08-19T16:07:48.011Z",
+  "total_changes": 2,
+  "changes": [
+    {
+      "id": "admin-7v-gt001",
+      "hymn_id": "GT-001",
+      "himnario": "Gloria y Triunfo",
+      "numero": 1,
+      "titulo": "EL APOSENTO ALTO",
+      "action": "update",
+      "changed_fields": [
+        "titulo",
+        "observacion"
+      ],
+      "before": {
+        "titulo": "EL APOSENTO ALTO",
+        "observacion": "DOCX original 1–329"
+      },
+      "after": {
+        "titulo": "EL APOSENTO ALTO [TESTE 7V]",
+        "observacion": "TESTE TRANSACIONAL CONTROLADO 7V"
+      },
+      "status": "pending",
+      "created_at": "2026-08-19T16:07:48.016Z"
+    },
+    {
+      "id": "admin-7v-gt002",
+      "hymn_id": "GT-002",
+      "himnario": "Gloria y Triunfo",
+      "numero": 2,
+      "titulo": "LLUVIAS DE GRACIA",
+      "action": "update",
+      "changed_fields": [
+        "titulo"
+      ],
+      "before": {
+        "titulo": "LLUVIAS DE GRACIA"
+      },
+      "after": {
+        "titulo": "LLUVIAS DE GRACIA [TESTE 7V]"
+      },
+      "status": "pending",
+      "created_at": "2026-08-19T16:07:48.016Z"
+    }
+  ]
+}

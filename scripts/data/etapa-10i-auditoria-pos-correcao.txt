@@ -1,0 +1,92 @@
+============================================
+ AUDITORIA HINÁRIA - ETAPA 10I
+ AUDITORIA PÓS-CORREÇÃO
+ SOMENTE LEITURA
+============================================
+
+============================================
+ 1. CONTROLE DE INTEGRIDADE
+============================================
+HASH BASE:    48cd4be20055aa9243a0a2223aef36376186dfd202f72ca4a4666015c44445a5
+HASH OFICIAL: 48cd4be20055aa9243a0a2223aef36376186dfd202f72ca4a4666015c44445a5
+BASE: OK
+
+HASH BACKUP:   a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41
+BACKUP ESP.:   a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41
+BACKUP: OK
+
+============================================
+ 2. ESTRUTURA GLOBAL
+============================================
+JSON: VÁLIDO
+OBJETOS INSPECIONADOS: 1562
+REGISTROS HINÁRIOS DETECTADOS: 718
+TOTAL DE HINOS: OK (718)
+
+============================================
+ 3. REAUDITORIA DAS 14 CORREÇÕES
+============================================
+CORREÇÕES REGISTRADAS NA 10H: 14
+01. GT-040 | antigo=0 | proposta=1 | OK
+02. GT-056 | antigo=0 | proposta=1 | OK
+03. SION-026 | antigo=0 | proposta=1 | OK
+04. GT-161 | antigo=0 | proposta=1 | OK
+05. GT-018 | antigo=0 | proposta=3 | OK
+06. GT-018 | antigo=0 | proposta=1 | OK
+07. SION-128 | antigo=0 | proposta=3 | OK
+08. SION-128 | antigo=0 | proposta=1 | OK
+09. GT-007 | antigo=0 | proposta=1 | OK
+10. SION-011 | antigo=0 | proposta=1 | OK
+11. GT-025 | antigo=0 | proposta=1 | OK
+12. SION-134 | antigo=0 | proposta=1 | OK
+13. GT-102 | antigo=0 | proposta=1 | OK
+14. SION-044 | antigo=0 | proposta=1 | OK
+
+CORREÇÕES OK: 14
+CORREÇÕES COM FALHA: 0
+
+============================================
+ 4. VARREDURA DOS RESÍDUOS CORRIGIDOS
+============================================
+"oid, ." -> 0
+"serIe" -> 0
+"serás . De" -> 0
+"referirIa" -> 0
+"buen .Jesús" -> 0
+"hazIo" -> 0
+TOTAL DE RESÍDUOS ANTIGOS: 0
+
+============================================
+ 5. CASOS BLOQUEADOS
+============================================
+GT-283 | COTEJO_VISUAL | REGISTRO: PRESENTE
+  TERMO "tierra mis Allí": 1 ocorrência(s)
+GT-042 | ESTRUTURA_NUMERACAO | REGISTRO: PRESENTE
+GT-182 | SALTO_NUMERICO | REGISTRO: PRESENTE
+SION-079 | SALTO_NUMERICO | REGISTRO: PRESENTE
+
+============================================
+ 6. RELAÇÃO BASE / BACKUP
+============================================
+HASH PRÉ-10H: a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41
+HASH PÓS-10H: 48cd4be20055aa9243a0a2223aef36376186dfd202f72ca4a4666015c44445a5
+VERSÕES DIFERENTES: SIM — ESPERADO
+
+============================================
+ 7. RESULTADO DA AUDITORIA
+============================================
+HASH OFICIAL: OK
+BACKUP PRÉ-10H: OK
+718 HINOS: OK
+14 CORREÇÕES: OK
+RESÍDUOS ANTIGOS: ZERO — OK
+4 BLOQUEADOS PRESERVADOS: OK
+
+STATUS FINAL: APROVADO
+
+============================================
+ 8. CONTROLE DE IMUTABILIDADE
+============================================
+HASH ANTES:  48cd4be20055aa9243a0a2223aef36376186dfd202f72ca4a4666015c44445a5
+HASH DEPOIS: 48cd4be20055aa9243a0a2223aef36376186dfd202f72ca4a4666015c44445a5
+BASE ALTERADA PELA 10I: NÃO

@@ -1,0 +1,59 @@
+{
+  "etapa": "9N",
+  "finalidade": "Backup final e manifesto de rollback antes da aplicação real da simulação consolidada 9L.",
+  "base_mestre": "assets/base_mestre.json",
+  "backup_pre_aplicacao": "assets/base_mestre.backup-pre-9n.json",
+  "simulacao_aprovada": "scripts/data/etapa-9l-base-simulada-consolidada.json",
+  "auditoria_pre_aplicacao": "scripts/data/etapa-9m-auditoria-final.json",
+  "total_registros": 718,
+  "hash_base_pre_aplicacao": "9a8636c6a249a783a091f4dfd7fb8f36910019cb235d865486e316609365f17d",
+  "hash_backup": "9a8636c6a249a783a091f4dfd7fb8f36910019cb235d865486e316609365f17d",
+  "hash_simulacao_aprovada": "a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41",
+  "backup_byte_a_byte_identico": true,
+  "registros_autorizados": [
+    "GT-028",
+    "GT-033",
+    "GT-040",
+    "GT-052",
+    "GT-056",
+    "GT-081",
+    "GT-161",
+    "GT-186",
+    "GT-259",
+    "GT-283",
+    "SION-015",
+    "SION-016",
+    "SION-024",
+    "SION-026",
+    "SION-038",
+    "SION-107"
+  ],
+  "total_registros_autorizados": 16,
+  "registros_bloqueados": [
+    "GT-036",
+    "GT-100",
+    "SION-019",
+    "SION-059"
+  ],
+  "pendencias_textuais_preservadas": [
+    "GT-040",
+    "GT-056",
+    "SION-026",
+    "GT-161",
+    "GT-283"
+  ],
+  "correcao_documental_confirmada": {
+    "registros": [
+      "GT-052",
+      "SION-024"
+    ],
+    "de": "confiando mis.",
+    "para": "confiando más."
+  },
+  "rollback": {
+    "origem": "assets/base_mestre.backup-pre-9n.json",
+    "destino": "assets/base_mestre.json",
+    "instrucao": "cp \"assets/base_mestre.backup-pre-9n.json\" \"assets/base_mestre.json\""
+  },
+  "base_mestre_alterada_nesta_etapa": false
+}

@@ -1,0 +1,1584 @@
+AUDITORIA HINÁRIA ADMFC
+DOSSIÊ DOS NOVOS CASOS
+Data: 2026-08-19
+Base alterada: NÃO
+
+
+============================================================
+CASO 01 / 31
+CATEGORIA: SEM_EQUIVALENTE
+SCORE: 26
+TÍTULO: VEN PECADOR
+============================================================
+
+------------------------------------------------------------
+GT-082 | VEN PECADOR
+------------------------------------------------------------
+Hinário: Gloria y Triunfo
+Número: 82
+Equivalente: —
+Alertas: TEXTO_ANTES_DA_ESTROFE_1, POSSIVEL_VAZAMENTO_HINO_SEGUINTE, PRIMEIRA_ESTROFE_MUITO_CURTA, CORO_VAZIO_OU_TRUNCADO
+Fonte declarada: Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada
+Observação: DOCX original 1–329
+
+LETRA:
+82. VEN PECADOR
+1
+Cristo está llamando, ven pecador, Por ti estoy rogando, ven pecador; Si tú anhelas verle, ven pecador, Hoy puedes conocerle, ven pecador.
+2
+Si vas del mal cargado, ven pecador, Él puede quitar tu carga, ven pecador; Él quiere recibirte, ven pecador,
+Él espera redimirte, ven pecador.
+3
+Cristo podrá salvarte, ven pecador, Él es pastor divino, ven pecador;
+Su bendición imparte, ven pecador; Por ti estoy rogando, ven pecador.
+¡Oh, no rechaces la verdad! Tus ojos hoy abre a la luz; Renuncia toda la maldad,
+Y ven a Jesús.
+CORO:
+
+
+============================================================
+CASO 02 / 31
+CATEGORIA: PAR_EQUIVALENTE_SINALIZADO
+SCORE: 24
+TÍTULO: ¡OH, YO QUIERO ANDAR CON CRISTO!
+============================================================
+
+------------------------------------------------------------
+GT-056 | ¡OH, YO QUIERO ANDAR CON CRISTO!
+------------------------------------------------------------
+Hinário: Gloria y Triunfo
+Número: 56
+Equivalente: 26
+Alertas: TEXTO_ANTES_DA_ESTROFE_1, CORO_VAZIO_OU_TRUNCADO
+Fonte declarada: Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada
+Observação: DOCX original 1–329
+
+LETRA:
+¡Oh!, yo quiero andar con Cristo.
+Quiero oír su tierna voz, Meditar en su palabra, Siempre andar de él en pos: Consagrar a él mi vida, Cumplir fiel su voluntad,
+Y algún día con mi Cristo Gozaré la claridad.
+CORO:
+¡Oh, sí, yo quiero andar con Cristo!
+¡Oh, sí, yo quiero vivir con Cristo!
+¡Oh, sí, yo quiero morir con Cristo!
+Quiero serIe un testigo fiel.
+2
+¡Oh!, yo quiero andar con Cristo, Él vivió en santidad,
+En la Biblia yo lo leo
+Y yo sé que es la verdad. Cristo era santo en todo, El Cordero de la cruz;
+Y yo anhelo ser cristiano, Seguidor de mi Jesús.
+3
+¡Oh!, yo quiero andar con Cristo De mi senda él es la luz, Dejaré el perverso mundo
+Y cargar aquí mi cruz. Este mundo nada ofrece, Cristo ofrece salvación;
+Y es mi única esperanza Gozar vida eterna en Sion.
+
+>>>>>>>>>> EDIÇÃO EQUIVALENTE PARA COMPARAÇÃO <<<<<<<<<<
+
+------------------------------------------------------------
+SION-026 | ¡OH! YO QUIERO ANDAR CON CRISTO
+------------------------------------------------------------
+Hinário: Himnos de Sión
+Número: 26
+Equivalente: 56
+Alertas: TEXTO_ANTES_DA_ESTROFE_1, CORO_VAZIO_OU_TRUNCADO
+Fonte declarada: PDF Himnario de Sión enviado por el usuario (136 págs.; escaneado)
+Observação: Letra incorporada desde la equivalencia confirmada con Gloria y Triunfo; pendiente sólo de diferencias editoriales propias de Sión, si las hubiera.
+
+LETRA:
+¡Oh!, yo quiero andar con Cristo.
+Quiero oír su tierna voz, Meditar en su palabra, Siempre andar de él en pos: Consagrar a él mi vida, Cumplir fiel su voluntad,
+Y algún día con mi Cristo Gozaré la claridad.
+CORO:
+¡Oh, sí, yo quiero andar con Cristo!
+¡Oh, sí, yo quiero vivir con Cristo!
+¡Oh, sí, yo quiero morir con Cristo!
+Quiero serIe un testigo fiel.
+2
+¡Oh!, yo quiero andar con Cristo, Él vivió en santidad,
+En la Biblia yo lo leo
+Y yo sé que es la verdad. Cristo era santo en todo, El Cordero de la cruz;
+Y yo anhelo ser cristiano, Seguidor de mi Jesús.
+3
+¡Oh!, yo quiero andar con Cristo De mi senda él es la luz, Dejaré el perverso mundo
+Y cargar aquí mi cruz. Este mundo nada ofrece, Cristo ofrece salvación;
+Y es mi única esperanza Gozar vida eterna en Sion.
+
+
+============================================================
+CASO 03 / 31
+CATEGORIA: PAR_EQUIVALENTE_SINALIZADO
+SCORE: 24
+TÍTULO: LA BANDERA DE LA CRUZ
+============================================================
+
+------------------------------------------------------------
+GT-081 | LA BANDERA DE LA CRUZ
+------------------------------------------------------------
+Hinário: Gloria y Triunfo
+Número: 81
+Equivalente: 38
+Alertas: TEXTO_ANTES_DA_ESTROFE_1, CORO_VAZIO_OU_TRUNCADO
+Fonte declarada: Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada
+Observação: DOCX original 1–329
+
+LETRA:
+Cual pendón hermoso despleguemos hoy La bandera de la cruz,
+La verdad del evangelio, el blasón Del soldado de Jesús.
+CORO:
+¡Adelante, adelante,
+En pos de nuestro Salvador! Con plena fe en nuestro Rey,
+¡Adelante con valor!
+2
+Prediquemos siempre lo que dice Dios De la sangre de Jesús;
+Cómo limpia del pecado al mortal, Y le compra la salud.
+3
+En el mundo proclamemos con fervor Esta historia de la cruz:
+Bendigamos sin cesar al Redentor Que nos dio su paz y luz.
+4
+En el cielo nuestro cántico será:
+¡Aleluya a Jesús!
+Nuestro corazón allí rebosará De amor y gratitud.
+
+>>>>>>>>>> EDIÇÃO EQUIVALENTE PARA COMPARAÇÃO <<<<<<<<<<
+
+------------------------------------------------------------
+SION-038 | LA BANDERA DE LA CRUZ
+------------------------------------------------------------
+Hinário: Himnos de Sión
+Número: 38
+Equivalente: 81
+Alertas: TEXTO_ANTES_DA_ESTROFE_1, CORO_VAZIO_OU_TRUNCADO
+Fonte declarada: PDF Himnario de Sión enviado por el usuario (136 págs.; escaneado)
+Observação: Letra incorporada desde la equivalencia confirmada con Gloria y Triunfo; pendiente sólo de diferencias editoriales propias de Sión, si las hubiera.
+
+LETRA:
+Cual pendón hermoso despleguemos hoy La bandera de la cruz,
+La verdad del evangelio, el blasón Del soldado de Jesús.
+CORO:
+¡Adelante, adelante,
+En pos de nuestro Salvador! Con plena fe en nuestro Rey,
+¡Adelante con valor!
+2
+Prediquemos siempre lo que dice Dios De la sangre de Jesús;
+Cómo limpia del pecado al mortal, Y le compra la salud.
+3
+En el mundo proclamemos con fervor Esta historia de la cruz:
+Bendigamos sin cesar al Redentor Que nos dio su paz y luz.
+4
+En el cielo nuestro cántico será:
+¡Aleluya a Jesús!
+Nuestro corazón allí rebosará De amor y gratitud.
+
+
+============================================================
+CASO 04 / 31
+CATEGORIA: PAR_EQUIVALENTE_SINALIZADO
+SCORE: 18
+TÍTULO: MÁS DE JESÚS
+============================================================
+
+------------------------------------------------------------
+GT-028 | MÁS DE JESÚS
+------------------------------------------------------------
+Hinário: Gloria y Triunfo
+Número: 28
+Equivalente: 15
+Alertas: PRIMEIRA_ESTROFE_MUITO_CURTA, POSSIVEL_FALSO_CORO
+Fonte declarada: Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada
+Observação: DOCX original 1–329
+
+LETRA:
+1
+Más de Jesús deseo saber, Más de su gracia y poder: Más de su salvación gozar: Más de su dulce amor gustar.
+CORO:
+Más quiero amarle, Más quiero honrarle:
+Más de su salvación gozar, Más de su dulce amor gustar.
+2
+Más quiero a Jesús seguir, Más de su santa ley cumplir: Más de su voluntad saber, Más de su Espíritu tener.
+3
+Más de Jesús, más oración, Más cerca estar en comunión; Más su palabra meditar,
+Más sus promesas alcanzar.
+Más de Jesús allá veré, Más semejante a él seré:
+Más de su gloria he de gozar, Más su gran nombre alabar.
+
+>>>>>>>>>> EDIÇÃO EQUIVALENTE PARA COMPARAÇÃO <<<<<<<<<<
+
+------------------------------------------------------------
+SION-015 | MÁS DE JESÚS
+------------------------------------------------------------
+Hinário: Himnos de Sión
+Número: 15
+Equivalente: 28
+Alertas: PRIMEIRA_ESTROFE_MUITO_CURTA, POSSIVEL_FALSO_CORO
+Fonte declarada: PDF Himnario de Sión enviado por el usuario (136 págs.; escaneado)
+Observação: Letra cotejada con el PDF de Sión y la versión correspondiente de Gloria y Triunfo; correcciones ortográficas seguras normalizadas.
+
+LETRA:
+1
+Más de Jesús deseo saber, Más de su gracia y poder: Más de su salvación gozar: Más de su dulce amor gustar.
+CORO:
+Más quiero amarle, Más quiero honrarle:
+Más de su salvación gozar, Más de su dulce amor gustar.
+2
+Más quiero a Jesús seguir, Más de su santa ley cumplir: Más de su voluntad saber, Más de su Espíritu tener.
+3
+Más de Jesús, más oración, Más cerca estar en comunión; Más su palabra meditar,
+Más sus promesas alcanzar.
+Más de Jesús allá veré, Más semejante a él seré:
+Más de su gloria he de gozar, Más su gran nombre alabar.
+
+
+============================================================
+CASO 05 / 31
+CATEGORIA: PAR_EQUIVALENTE_SINALIZADO
+SCORE: 18
+TÍTULO: GRANDE GOZO HAY EN MI ALMA HOY
+============================================================
+
+------------------------------------------------------------
+GT-033 | GRANDE GOZO HAY EN MI ALMA HOY
+------------------------------------------------------------
+Hinário: Gloria y Triunfo
+Número: 33
+Equivalente: 16
+Alertas: PRIMEIRA_ESTROFE_MUITO_CURTA, POSSIVEL_FALSO_CORO
+Fonte declarada: Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada
+Observação: DOCX original 1–329
+
+LETRA:
+1
+Grande gozo hay en mi alma hoy, Pues Jesús conmigo está;
+Y su paz, que ya gozando estoy Por siempre durará
+CORO:
+Grande gozo, ¡cuán hermoso! Paso todo el tiempo bien feliz;
+Porque veo de Cristo la sonriente faz, Grande gozo siento en mí.
+2
+Hay un canto en mi alma hoy; Melodías a mi Rey:
+En su amor feliz y libre soy.
+Y salvo por la fe.
+3
+Paz divina hay en mi alma hoy, Porque Cristo me salvó;
+Las cadenas rotas ya están, Jesús me libertó.
+Gratitud hay en mi alma hoy, Y alabanzas a Jesús;
+Por su gracia a la gloria voy, Gozándome en la luz.
+
+>>>>>>>>>> EDIÇÃO EQUIVALENTE PARA COMPARAÇÃO <<<<<<<<<<
+
+------------------------------------------------------------
+SION-016 | GRANDE GOZO HAY EN MI ALMA
+------------------------------------------------------------
+Hinário: Himnos de Sión
+Número: 16
+Equivalente: 33
+Alertas: PRIMEIRA_ESTROFE_MUITO_CURTA, POSSIVEL_FALSO_CORO
+Fonte declarada: PDF Himnario de Sión enviado por el usuario (136 págs.; escaneado)
+Observação: Letra cotejada con el PDF de Sión y la versión correspondiente de Gloria y Triunfo; correcciones ortográficas seguras normalizadas.
+
+LETRA:
+1
+Grande gozo hay en mi alma hoy, Pues Jesús conmigo está;
+Y su paz, que ya gozando estoy Por siempre durará
+CORO:
+Grande gozo, ¡cuán hermoso! Paso todo el tiempo bien feliz;
+Porque veo de Cristo la sonriente faz, Grande gozo siento en mí.
+2
+Hay un canto en mi alma hoy; Melodías a mi Rey:
+En su amor feliz y libre soy.
+Y salvo por la fe.
+3
+Paz divina hay en mi alma hoy, Porque Cristo me salvó;
+Las cadenas rotas ya están, Jesús me libertó.
+Gratitud hay en mi alma hoy, Y alabanzas a Jesús;
+Por su gracia a la gloria voy, Gozándome en la luz.
+
+
+============================================================
+CASO 06 / 31
+CATEGORIA: SEM_EQUIVALENTE
+SCORE: 16
+TÍTULO: HAY UN PRECIOSO MANANTIAL
+============================================================
+
+------------------------------------------------------------
+GT-042 | HAY UN PRECIOSO MANANTIAL
+------------------------------------------------------------
+Hinário: Gloria y Triunfo
+Número: 42
+Equivalente: —
+Alertas: TEXTO_ANTES_DA_ESTROFE_1, CORO_VAZIO_OU_TRUNCADO, NUMERACAO_ESTROFES_IRREGULAR
+Fonte declarada: Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada
+Observação: DOCX original 1–329
+
+LETRA:
+Hay un precioso manantial De sangre de Emmanuel, Que purifica a cada cual Que se sumerge en él.
+CORO:
+Lávame, Señor Jesús, En la sangre de tu cruz: Lávame, Señor Jesús,
+Y más blanco que la nieve yo seré:
+2
+El malhechor se convirtió Pendiente de una cruz; El vio la fuente y se lavó, Creyendo en Jesús.
+3
+Y yo también mi pobre ser Allí logré lavar:
+La gloria de su gran poder Me gozo en ensalzar.
+4
+¡Eterna fuente carmesí!
+¡Raudal de puro amor! Se lavará por siempre en ti
+El pueblo del Señor.
+HAY UN PRECIOSO MANANTIAL
+1
+Hay un precioso manantial De sangre de Emmanuel, Que purifica a cada cual Que se sumerge en él.
+2
+El malhechor se convirtió Pendiente de una cruz; El vio la fuente y se lavó, Creyendo en Jesús.
+3
+Y yo también mi pobre ser Allí logré lavar;
+La gloria de su gran poder, Me gozo en ensalzar.
+4
+¡Eterna fuente carmesí!
+¡Raudal de puro amor!
+Se lavará por siempre en ti, El pueblo del Señor.
+
+
+============================================================
+CASO 07 / 31
+CATEGORIA: SEM_EQUIVALENTE
+SCORE: 15
+TÍTULO: CON CRISTO YO IRÉ
+============================================================
+
+------------------------------------------------------------
+GT-062 | CON CRISTO YO IRÉ
+------------------------------------------------------------
+Hinário: Gloria y Triunfo
+Número: 62
+Equivalente: —
+Alertas: POSSIVEL_ERRO_OCR, PRIMEIRA_ESTROFE_MUITO_CURTA, POSSIVEL_FALSO_CORO
+Fonte declarada: Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada
+Observação: DOCX original 1–329
+
+LETRA:
+1
+Ya sea en el valle do el peligro esté
+O que en la luz gloriosa de paz habite yo A mi Jesús diré: «Tu voluntad h;
+Si Cristo me gula doquiera yo iré.
+CORO:
+Si Cristo conmigo va, yo iré: Yo no temeré, con gozo iré,
+Conmigo va; es grato servir a Jesús, Llevar la cruz:
+Si Cristo conmigo va, yo iré.
+2
+Si al desierto quiere Jesús que vaya yo, Llevando buenas nuevas de santa salvación; Si Allí, en dura lid, mi campo señaló,
+A Cristo yo sigo sin más dilación.
+3
+Aunque mi parte sea mi dura cruz llevar, Diré a mis hermanos también su gran poder; Contento quedaré, mi luz haré brillar,
+¡Testigo de Cristo, doquiera yo iré! .
+La voluntad de Cristo yo quiero obedecer, Pues en la Santa Biblia encuentro mi saber Y con su gran poder al mundo venceré,
+Si él va conmigo, doquiera yo iré.
+
+
+============================================================
+CASO 08 / 31
+CATEGORIA: PAR_EQUIVALENTE_SINALIZADO
+SCORE: 12
+TÍTULO: ENTERA CONSAGRACIÓN
+============================================================
+
+------------------------------------------------------------
+GT-036 | ENTERA CONSAGRACIÓN
+------------------------------------------------------------
+Hinário: Gloria y Triunfo
+Número: 36
+Equivalente: 19
+Alertas: POSSIVEL_ESTROFE_FUNDIDA_4
+Fonte declarada: Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada
+Observação: DOCX original 1–329
+
+LETRA:
+1
+Que mi vida entera esté Consagrada a ti, Señor;
+Que a mis manos pueda guiar El impulso de tu amor.
+CORO:
+Lávame en tu sangre, Salvador, Límpiame de toda mi maldad; Traigo a ti mi vida, para ser, Señor,
+¡Tuya por la eternidad!
+2
+Que mis pies tan solo en pos De lo santo puedan ir,
+Y que a ti, Señor, mi voz Se complazca en bendecir.
+3
+Que mi tiempo todo esté Consagrado a tu loor, Que mis labios al hablar Hablen solo de tu amor.
+4
+Toma, ¡oh Dios!, mi voluntad, Y hazla tuya, nada más; Toma, sí, mi corazón
+Por tu trono lo tendrás.
+Toma tú mi amor, que hoy A tus pies vengo a poner;
+¡Toma todo lo que soy, Todo tuyo quiero ser!
+
+>>>>>>>>>> EDIÇÃO EQUIVALENTE PARA COMPARAÇÃO <<<<<<<<<<
+
+------------------------------------------------------------
+SION-019 | ENTERA CONSAGRACIÓN
+------------------------------------------------------------
+Hinário: Himnos de Sión
+Número: 19
+Equivalente: 36
+Alertas: POSSIVEL_ESTROFE_FUNDIDA_4
+Fonte declarada: PDF Himnario de Sión enviado por el usuario (136 págs.; escaneado)
+Observação: Letra cotejada con el PDF de Sión y la versión correspondiente de Gloria y Triunfo; correcciones ortográficas seguras normalizadas.
+
+LETRA:
+1
+Que mi vida entera esté Consagrada a ti, Señor;
+Que a mis manos pueda guiar El impulso de tu amor.
+CORO:
+Lávame en tu sangre, Salvador, Límpiame de toda mi maldad; Traigo a ti mi vida, para ser, Señor,
+¡Tuya por la eternidad!
+2
+Que mis pies tan solo en pos De lo santo puedan ir,
+Y que a ti, Señor, mi voz Se complazca en bendecir.
+3
+Que mi tiempo todo esté Consagrado a tu loor, Que mis labios al hablar Hablen solo de tu amor.
+4
+Toma, ¡oh Dios!, mi voluntad, Y hazla tuya, nada más; Toma, sí, mi corazón
+Por tu trono lo tendrás.
+Toma tú mi amor, que hoy A tus pies vengo a poner;
+¡Toma todo lo que soy, Todo tuyo quiero ser!
+
+
+============================================================
+CASO 09 / 31
+CATEGORIA: PAR_EQUIVALENTE_SINALIZADO
+SCORE: 12
+TÍTULO: EN LA CRUZ
+============================================================
+
+------------------------------------------------------------
+GT-053 | EN LA CRUZ
+------------------------------------------------------------
+Hinário: Gloria y Triunfo
+Número: 53
+Equivalente: 25
+Alertas: POSSIVEL_ESTROFE_FUNDIDA_4
+Fonte declarada: Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada
+Observação: DOCX original 1–329
+
+LETRA:
+1
+Me hirió el pecado, fui a Jesús, Mostréle mi dolor;
+Perdido, errante, vi su luz, Bendíjome en su amor.
+CORO:
+En la cruz, en la cruz, Do primero vi la luz,
+Y las manchas de mi alma yo lavé: Fue Allí por fe do vi a Jesús,
+Y siempre feliz con él seré.
+2
+Sobre una cruz, mi buen Señor, Su sangre derramó,
+Por este pobre pecador A quien así salvó.
+3
+Venció la muerte con poder, Y al cielo se exaltó;
+Confiar en él es mi placer, Morir no temo yo.
+4
+Aunque él se fue solo no estoy: Mandó al Consolador, Divino Espíritu, que hoy Me da perfecto amor.
+¿Vivirás por Cristo, fiel a él al fin serás?
+¿En la vía de paz, en pos de él andarás?
+¿De la cruz al pie tus cuitas todas dejaré?
+
+>>>>>>>>>> EDIÇÃO EQUIVALENTE PARA COMPARAÇÃO <<<<<<<<<<
+
+------------------------------------------------------------
+SION-025 | EN LA CRUZ
+------------------------------------------------------------
+Hinário: Himnos de Sión
+Número: 25
+Equivalente: 53
+Alertas: POSSIVEL_ESTROFE_FUNDIDA_4
+Fonte declarada: PDF Himnario de Sión enviado por el usuario (136 págs.; escaneado)
+Observação: Letra incorporada desde la equivalencia confirmada con Gloria y Triunfo; pendiente sólo de diferencias editoriales propias de Sión, si las hubiera.
+
+LETRA:
+1
+Me hirió el pecado, fui a Jesús, Mostréle mi dolor;
+Perdido, errante, vi su luz, Bendíjome en su amor.
+CORO:
+En la cruz, en la cruz, Do primero vi la luz,
+Y las manchas de mi alma yo lavé: Fue Allí por fe do vi a Jesús,
+Y siempre feliz con él seré.
+2
+Sobre una cruz, mi buen Señor, Su sangre derramó,
+Por este pobre pecador A quien así salvó.
+3
+Venció la muerte con poder, Y al cielo se exaltó;
+Confiar en él es mi placer, Morir no temo yo.
+4
+Aunque él se fue solo no estoy: Mandó al Consolador, Divino Espíritu, que hoy Me da perfecto amor.
+¿Vivirás por Cristo, fiel a él al fin serás?
+¿En la vía de paz, en pos de él andarás?
+¿De la cruz al pie tus cuitas todas dejaré?
+
+
+============================================================
+CASO 10 / 31
+CATEGORIA: SEM_EQUIVALENTE
+SCORE: 12
+TÍTULO: EL MUNDO PERDIDO
+============================================================
+
+------------------------------------------------------------
+GT-055 | EL MUNDO PERDIDO
+------------------------------------------------------------
+Hinário: Gloria y Triunfo
+Número: 55
+Equivalente: —
+Alertas: TEXTO_ANTES_DA_ESTROFE_1, CORO_VAZIO_OU_TRUNCADO
+Fonte declarada: Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada
+Observação: DOCX original 1–329
+
+LETRA:
+El mundo perdido en pecado se vio:
+¡Jesús, es la luz del mundo!
+Mas en las tinieblas la gloria brilló,
+¡Jesús es la luz del mundo!
+CORO:
+¡Ven a la luz, no quieras perder Gozo perfecto al amanecer!
+Yo ciego fui, mas ya puedo ver,
+¡Jesús es la luz del mundo!
+2
+En día la noche se cambia con él, etc. Irás en la luz si a su ley eres fiel, etc.
+3
+¡Oh, ciegos y presos del lóbrego error!, etc.
+Él manda lavaros y ver su fulgor, etc.,
+4
+Ni soles ni lunas el cielo tendrá, etc. La luz de su rostro lo iluminará, etc.
+
+
+============================================================
+CASO 11 / 31
+CATEGORIA: SEM_EQUIVALENTE
+SCORE: 12
+TÍTULO: PUEDO OÍR TU VOZ LLAMANDO
+============================================================
+
+------------------------------------------------------------
+GT-079 | PUEDO OÍR TU VOZ LLAMANDO
+------------------------------------------------------------
+Hinário: Gloria y Triunfo
+Número: 79
+Equivalente: —
+Alertas: TEXTO_ANTES_DA_ESTROFE_1, CORO_VAZIO_OU_TRUNCADO
+Fonte declarada: Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada
+Observação: DOCX original 1–329
+
+LETRA:
+||Puedo oír tu voz llamando, || Trae tu cruz y ven en pos de mí.
+CORO:
+||Seguiré do tú me guíes, || Dondequiera fiel te seguiré e ,
+2
+||Yo te seguiré en el huerto|| Sufriré contigo, mi Jesús.
+3
+||Sufriré por ti, Maestro,|| Moriré contigo, mi Jesús.
+4
+||Medarás la gracia y gloria, || Y por siempre tú me guiarás.
+
+
+============================================================
+CASO 12 / 31
+CATEGORIA: PAR_EQUIVALENTE_SINALIZADO
+SCORE: 12
+TÍTULO: SIEMPRE ORAD
+============================================================
+
+------------------------------------------------------------
+GT-137 | SIEMPRE ORAD
+------------------------------------------------------------
+Hinário: Gloria y Triunfo
+Número: 137
+Equivalente: 62
+Alertas: POSSIVEL_ERRO_OCR
+Fonte declarada: Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada
+Observação: DOCX original 1–329
+
+LETRA:
+1
+«Siempre orad», muy pronto viene Cristo, Guarda bien tu corazón;
+Retén firme todo lo que tienes, Tú tendrás tu galardón.
+CORO:
+«Siempre orad», nos manda Cristo, Y velad	en oración;
+Pronto vendrá	él en las nubes,
+Nos dará su bendición.
+2
+«Siempre orad», que si hoy viniere Cristo El te halle en la lid, ,
+Con la espada suya bien empleada, Fiel por nuestro Adalid.
+3
+«Siempre orad», si, vive aquí velando, Es mandato del Señor;
+Sin demora toma la promesa Del gran fiel Consolador.
+4
+«Siempre orad», constante y con celo, Ejercítate en la fe;
+Ten el ánimo de Jesucristo Y sus huellas siguen fiel.
+
+>>>>>>>>>> EDIÇÃO EQUIVALENTE PARA COMPARAÇÃO <<<<<<<<<<
+
+------------------------------------------------------------
+SION-062 | SIEMPRE ORAD
+------------------------------------------------------------
+Hinário: Himnos de Sión
+Número: 62
+Equivalente: 137
+Alertas: POSSIVEL_ERRO_OCR
+Fonte declarada: PDF Himnario de Sión enviado por el usuario (136 págs.; escaneado)
+Observação: Letra incorporada desde la equivalencia confirmada con Gloria y Triunfo; pendiente sólo de diferencias editoriales propias de Sión, si las hubiera.
+
+LETRA:
+1
+«Siempre orad», muy pronto viene Cristo, Guarda bien tu corazón;
+Retén firme todo lo que tienes, Tú tendrás tu galardón.
+CORO:
+«Siempre orad», nos manda Cristo, Y velad	en oración;
+Pronto vendrá	él en las nubes,
+Nos dará su bendición.
+2
+«Siempre orad», que si hoy viniere Cristo El te halle en la lid, ,
+Con la espada suya bien empleada, Fiel por nuestro Adalid.
+3
+«Siempre orad», si, vive aquí velando, Es mandato del Señor;
+Sin demora toma la promesa Del gran fiel Consolador.
+4
+«Siempre orad», constante y con celo, Ejercítate en la fe;
+Ten el ánimo de Jesucristo Y sus huellas siguen fiel.
+
+
+============================================================
+CASO 13 / 31
+CATEGORIA: PAR_EQUIVALENTE_SINALIZADO
+SCORE: 12
+TÍTULO: LA FUENTE SANADORA
+============================================================
+
+------------------------------------------------------------
+GT-138 | LA FUENTE SANADORA
+------------------------------------------------------------
+Hinário: Gloria y Triunfo
+Número: 138
+Equivalente: 63
+Alertas: POSSIVEL_ERRO_OCR
+Fonte declarada: Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada
+Observação: DOCX original 1–329
+
+LETRA:
+1
+¡Ved la fuente sanadora, La que abrió el Salvador! Cuyas aguas refrescantes Son de perennal valor.
+CORO:
+¡Oh preciosa fuente sanadora!
+Para todos fluye libre;
+¡Oh preciosa fuente sanadora!
+¡Gloria a Dios!, me sana a mí.
+2
+En la fuente que nos sana He hallado el perdón, , Y lavado toda mancha De mi pobre corazón.
+3
+En la fuente que nos sana Cristo ofrece la salud;
+Pues venid, enfermos todos, Probaréis su gran virtud.
+4
+Esta fuente que nos sana Aun hoy día es eficaz: Ven, sumérgete en ella, Cree, y sano quedarás.
+
+>>>>>>>>>> EDIÇÃO EQUIVALENTE PARA COMPARAÇÃO <<<<<<<<<<
+
+------------------------------------------------------------
+SION-063 | LA FUENTE SANADORA
+------------------------------------------------------------
+Hinário: Himnos de Sión
+Número: 63
+Equivalente: 138
+Alertas: POSSIVEL_ERRO_OCR
+Fonte declarada: PDF Himnario de Sión enviado por el usuario (136 págs.; escaneado)
+Observação: Letra incorporada desde la equivalencia confirmada con Gloria y Triunfo; pendiente sólo de diferencias editoriales propias de Sión, si las hubiera.
+
+LETRA:
+1
+¡Ved la fuente sanadora, La que abrió el Salvador! Cuyas aguas refrescantes Son de perennal valor.
+CORO:
+¡Oh preciosa fuente sanadora!
+Para todos fluye libre;
+¡Oh preciosa fuente sanadora!
+¡Gloria a Dios!, me sana a mí.
+2
+En la fuente que nos sana He hallado el perdón, , Y lavado toda mancha De mi pobre corazón.
+3
+En la fuente que nos sana Cristo ofrece la salud;
+Pues venid, enfermos todos, Probaréis su gran virtud.
+4
+Esta fuente que nos sana Aun hoy día es eficaz: Ven, sumérgete en ella, Cree, y sano quedarás.
+
+
+============================================================
+CASO 14 / 31
+CATEGORIA: PAR_EQUIVALENTE_SINALIZADO
+SCORE: 12
+TÍTULO: LA PALABRA HOY SEMBRADA
+============================================================
+
+------------------------------------------------------------
+GT-170 | LA PALABRA HOY SEMBRADA
+------------------------------------------------------------
+Hinário: Gloria y Triunfo
+Número: 170
+Equivalente: 75
+Alertas: POSSIVEL_ERRO_OCR
+Fonte declarada: Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada
+Observação: DOCX original 1–329
+
+LETRA:
+1
+La palabra hoy sembrada Hazla, Cristo, en mi nacer, Para darle crecimiento Sólo tienes tú poder:
+||Ricos frutos tú nos puedes conceder.||
+2
+La semilla que tu siervo Ha sembrado con saber, No permitas que las aves Se la vengan a comer:
+||Ricos frutos tú nos puedes conceder.||
+3
+Haz que crezca con tu gracia .
+Y tu rica bendición; No la ahoguen las espinas De congojas y aflicción:
+||Ricos frutos tú nos puedes conceder.||
+4
+Que su efecto muy profundo, En la mente y corazón, Llevará consigo al mundo Que le das la salvación:
+||Ricos frutos tú nos puedes conceder.||
+5
+Sembraremos la palabra, Con amor y profusión, Esperando la cosecha En la célica mansión:
+||Ricos frutos tú nos puedes conceder.||
+
+>>>>>>>>>> EDIÇÃO EQUIVALENTE PARA COMPARAÇÃO <<<<<<<<<<
+
+------------------------------------------------------------
+SION-075 | LA PALABRA HOY SEMBRADA
+------------------------------------------------------------
+Hinário: Himnos de Sión
+Número: 75
+Equivalente: 170
+Alertas: POSSIVEL_ERRO_OCR
+Fonte declarada: PDF Himnario de Sión enviado por el usuario (136 págs.; escaneado)
+Observação: Letra incorporada desde la equivalencia confirmada con Gloria y Triunfo; pendiente sólo de diferencias editoriales propias de Sión, si las hubiera.
+
+LETRA:
+1
+La palabra hoy sembrada Hazla, Cristo, en mi nacer, Para darle crecimiento Sólo tienes tú poder:
+||Ricos frutos tú nos puedes conceder.||
+2
+La semilla que tu siervo Ha sembrado con saber, No permitas que las aves Se la vengan a comer:
+||Ricos frutos tú nos puedes conceder.||
+3
+Haz que crezca con tu gracia .
+Y tu rica bendición; No la ahoguen las espinas De congojas y aflicción:
+||Ricos frutos tú nos puedes conceder.||
+4
+Que su efecto muy profundo, En la mente y corazón, Llevará consigo al mundo Que le das la salvación:
+||Ricos frutos tú nos puedes conceder.||
+5
+Sembraremos la palabra, Con amor y profusión, Esperando la cosecha En la célica mansión:
+||Ricos frutos tú nos puedes conceder.||
+
+
+============================================================
+CASO 15 / 31
+CATEGORIA: PAR_EQUIVALENTE_SINALIZADO
+SCORE: 12
+TÍTULO: PON TU CARGA EN JESÚS
+============================================================
+
+------------------------------------------------------------
+GT-293 | PON TU CARGA EN JESÚS
+------------------------------------------------------------
+Hinário: Gloria y Triunfo
+Número: 293
+Equivalente: 102
+Alertas: POSSIVEL_ERRO_OCR
+Fonte declarada: Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada
+Observação: DOCX original 1–329
+
+LETRA:
+1
+En Jesu-Cristo confía no más, Pon tu carga en Jesús;
+Paz y socorro de él obtendrás, Pon tu carga en Jesús.
+CORO:
+Pon tu carga en Jesús Y dile tu cruel dolor; En Cristo tu Amigo Tendrás, un abrigo...
+¡Oh, pon tu carga en Jesús!
+2
+Paz redentora tu alma tendré, etc. De inquietudes te libertaré, etc.
+3
+De los conflictos no huyas jamás, etc. En el desierto no busques la paz, etc.
+4
+¿Males te asaltan doquier, pecador?, etc.
+¿Vas ya cansado de pena y dolor?, etc.
+5
+Cristo podré disipar tu temor, etc. A los devotos les da gran valor, etc.
+
+>>>>>>>>>> EDIÇÃO EQUIVALENTE PARA COMPARAÇÃO <<<<<<<<<<
+
+------------------------------------------------------------
+SION-102 | PON TU CARGA EN JESÚS
+------------------------------------------------------------
+Hinário: Himnos de Sión
+Número: 102
+Equivalente: 293
+Alertas: POSSIVEL_ERRO_OCR
+Fonte declarada: PDF Himnario de Sión enviado por el usuario (136 págs.; escaneado)
+Observação: Letra incorporada desde la equivalencia confirmada con Gloria y Triunfo; pendiente sólo de diferencias editoriales propias de Sión, si las hubiera.
+
+LETRA:
+1
+En Jesu-Cristo confía no más, Pon tu carga en Jesús;
+Paz y socorro de él obtendrás, Pon tu carga en Jesús.
+CORO:
+Pon tu carga en Jesús Y dile tu cruel dolor; En Cristo tu Amigo Tendrás, un abrigo...
+¡Oh, pon tu carga en Jesús!
+2
+Paz redentora tu alma tendré, etc. De inquietudes te libertaré, etc.
+3
+De los conflictos no huyas jamás, etc. En el desierto no busques la paz, etc.
+4
+¿Males te asaltan doquier, pecador?, etc.
+¿Vas ya cansado de pena y dolor?, etc.
+5
+Cristo podré disipar tu temor, etc. A los devotos les da gran valor, etc.
+
+
+============================================================
+CASO 16 / 31
+CATEGORIA: SEM_EQUIVALENTE
+SCORE: 12
+TÍTULO: CRISTIANOS, TODOS A PREPARARSE
+============================================================
+
+------------------------------------------------------------
+SION-246 | CRISTIANOS, TODOS A PREPARARSE
+------------------------------------------------------------
+Hinário: Himnos de Sión
+Número: 246
+Equivalente: —
+Alertas: TEXTO_ANTES_DA_ESTROFE_1, CORO_VAZIO_OU_TRUNCADO
+Fonte declarada: PDF Himnario de Sión enviado por el usuario (136 págs.; escaneado)
+Observação: Letra transcrita y verificada visualmente del PDF de Sión; ortografía segura normalizada.
+
+LETRA:
+Cristianos, todos a prepararse,
+Ved al Esposo, vuestro Señor,
+Llenas tened las lámparas siempre,
+A su encuentro id con amor.
+
+CORO:
+Cristo ya viene, pronto, sí, viene,
+Sin tardanza aparecerá,
+Con Él iremos ¡Aleluya!
+A la mansión que Él nos dará.
+
+2
+Ya las señales cúmplense todas,
+Ya la higuera quiere brotar,
+Fieles venid, el Salvador llama;
+Nadie a sus bodas debe faltar.
+
+3
+Ya se termina la larga espera
+Y el esposo ha de venir,
+Piensa ¡Oh, alma! en recibirle,
+Porque sin Él, tendrás que sufrir.
+
+4
+Presto acude, alma acepta,
+Este convite de tu Señor,
+Él te dará su gozo y gloria,
+Ven y recibe hoy su amor.
+
+
+============================================================
+CASO 17 / 31
+CATEGORIA: PAR_EQUIVALENTE_SINALIZADO
+SCORE: 8
+TÍTULO: ¡OH, VEN SIN TARDAR!
+============================================================
+
+------------------------------------------------------------
+GT-083 | ¡OH, VEN SIN TARDAR!
+------------------------------------------------------------
+Hinário: Gloria y Triunfo
+Número: 83
+Equivalente: 37
+Alertas: TEXTO_ANTES_DA_ESTROFE_1
+Fonte declarada: Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada
+Observação: DOCX original 1–329
+
+LETRA:
+¡Oh, ven sin tardar! ¡Oh, ven sin tardar!
+Acepta a Jesús, y salvo serás.
+2
+Tus ojos ya tal vez el sol No más aquí contemplarán: Hoyes el día de salvación,
+¡Oh, ven a Jesús!
+3
+Jesús te tiene compasión;
+¿Con qué su amor le pagarás?
+Hoy trae a él tu corazón, Y salvo serás.
+4
+Jesús recibe al pecador Que quiera a él su alma unir; Ya no desprecies más su amor,
+¡Oh, ven a Jesús!
+
+>>>>>>>>>> EDIÇÃO EQUIVALENTE PARA COMPARAÇÃO <<<<<<<<<<
+
+------------------------------------------------------------
+SION-037 | ¡OH, VEN SIN TARDAR!
+------------------------------------------------------------
+Hinário: Himnos de Sión
+Número: 37
+Equivalente: 83
+Alertas: TEXTO_ANTES_DA_ESTROFE_1
+Fonte declarada: PDF Himnario de Sión enviado por el usuario (136 págs.; escaneado)
+Observação: Letra incorporada desde la equivalencia confirmada con Gloria y Triunfo; pendiente sólo de diferencias editoriales propias de Sión, si las hubiera.
+
+LETRA:
+¡Oh, ven sin tardar! ¡Oh, ven sin tardar!
+Acepta a Jesús, y salvo serás.
+2
+Tus ojos ya tal vez el sol No más aquí contemplarán: Hoyes el día de salvación,
+¡Oh, ven a Jesús!
+3
+Jesús te tiene compasión;
+¿Con qué su amor le pagarás?
+Hoy trae a él tu corazón, Y salvo serás.
+4
+Jesús recibe al pecador Que quiera a él su alma unir; Ya no desprecies más su amor,
+¡Oh, ven a Jesús!
+
+
+============================================================
+CASO 18 / 31
+CATEGORIA: PAR_EQUIVALENTE_SINALIZADO
+SCORE: 8
+TÍTULO: ¡GLORIA A TI, JESÚS DIVINO
+============================================================
+
+------------------------------------------------------------
+GT-182 | ¡GLORIA A TI, JESÚS DIVINO
+------------------------------------------------------------
+Hinário: Gloria y Triunfo
+Número: 182
+Equivalente: 79
+Alertas: NUMERACAO_ESTROFES_IRREGULAR
+Fonte declarada: Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada
+Observação: DOCX original 1–329
+
+LETRA:
+1
+¡Gloria a ti, Jesús Divino!
+¡Gloria a ti por tus bondades!
+¡Gloria eterna a tus piedades!
+Querido Salvador.
+CORO:
+¡Gloria, gloria, aleluya!
+¡Gloria, gloria, aleluya!
+¡Gloria, gloria, aleluya! A nuestro Salvador.
+2.
+Tú me amaste con ternura, Y por mí en la cruz moriste, Con ternura me quisiste, Querido Salvador.
+3
+Tengo fe sólo en tu muerte, Pues con ella me salvaste; Vida eterna me compraste, Querido Salvador.
+4
+Te veremos en el cielo: A vivir contigo iremos; Tu presencia gozaremos, Querido Salvador.
+5
+Ten valor, valor cristiano, Cristo es tu mejor amigo: Él te llevará consigo; Jesús es tu Señor.
+
+>>>>>>>>>> EDIÇÃO EQUIVALENTE PARA COMPARAÇÃO <<<<<<<<<<
+
+------------------------------------------------------------
+SION-079 | GLORIA A TI, JESÚS DIVINO
+------------------------------------------------------------
+Hinário: Himnos de Sión
+Número: 79
+Equivalente: 182
+Alertas: NUMERACAO_ESTROFES_IRREGULAR
+Fonte declarada: PDF Himnario de Sión enviado por el usuario (136 págs.; escaneado)
+Observação: Letra incorporada desde la equivalencia confirmada con Gloria y Triunfo; pendiente sólo de diferencias editoriales propias de Sión, si las hubiera.
+
+LETRA:
+1
+¡Gloria a ti, Jesús Divino!
+¡Gloria a ti por tus bondades!
+¡Gloria eterna a tus piedades!
+Querido Salvador.
+CORO:
+¡Gloria, gloria, aleluya!
+¡Gloria, gloria, aleluya!
+¡Gloria, gloria, aleluya! A nuestro Salvador.
+2.
+Tú me amaste con ternura, Y por mí en la cruz moriste, Con ternura me quisiste, Querido Salvador.
+3
+Tengo fe sólo en tu muerte, Pues con ella me salvaste; Vida eterna me compraste, Querido Salvador.
+4
+Te veremos en el cielo: A vivir contigo iremos; Tu presencia gozaremos, Querido Salvador.
+5
+Ten valor, valor cristiano, Cristo es tu mejor amigo: Él te llevará consigo; Jesús es tu Señor.
+
+
+============================================================
+CASO 19 / 31
+CATEGORIA: SEM_EQUIVALENTE
+SCORE: 8
+TÍTULO: JESÚS ME AMA
+============================================================
+
+------------------------------------------------------------
+SION-245 | JESÚS ME AMA
+------------------------------------------------------------
+Hinário: Himnos de Sión
+Número: 245
+Equivalente: —
+Alertas: CORO_VAZIO_OU_TRUNCADO
+Fonte declarada: PDF Himnario de Sión enviado por el usuario (136 págs.; escaneado)
+Observação: Letra transcrita y verificada visualmente del PDF de Sión; ortografía segura normalizada.
+
+LETRA:
+Jesús me amó aunque indigno yo fui
+Caminando en sendas de error.
+Llamaba, llamaba, por fin atendí,
+Hoy me lleva en brazos de amor.
+
+CORO:
+Y ahora yo amo a mi Salvador,
+Siento en mí muy profunda su paz,
+Y deseo servir a mi Rey y Señor,
+Hasta el día que veré su faz.
+
+Él ama, y el cielo resuena de loor,
+Por su gracia que tan grande fue.
+Y en gratitud al amor del Señor,
+Yo con gozo por Él viviré.
+
+Te ama amigo errante sin paz,
+Hoy tu alma Él puede librar,
+De dudas y miedo, si a Él tú vas.
+Y a Sí te podrá Él llevar.
+
+
+============================================================
+CASO 20 / 31
+CATEGORIA: SO_UMA_EDICAO_SINALIZADA
+SCORE: 6
+TÍTULO: PRECIOSO ES JESÚS
+============================================================
+
+------------------------------------------------------------
+GT-069 | PRECIOSO ES JESÚS
+------------------------------------------------------------
+Hinário: Gloria y Triunfo
+Número: 69
+Equivalente: 278
+Alertas: POSSIVEL_ERRO_OCR
+Fonte declarada: Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada
+Observação: DOCX original 1–329
+
+LETRA:
+1
+Jesús es precioso, mi buen Salvador, . Por siempre le alabo por su gran amor, Si débil me encuentro su fuerza me da, Él es mi precioso Jesús.
+CORO:
+Precioso es Jesús, mi Jesús, Precioso es Jesús, mi Jesús;
+Mi gloria será su rostro al mirar, Él es mi precioso Jesús.
+2
+Y cuando en pecado muy tris me vi, Llamando a las puertas de un corazón, Me dijo: «Tu alma yo quiero salvar»; Él es mi precioso Jesús.
+3
+Mas ya por su gracia la luz puedo ver, Quitó mi tristeza, mi llanto enjugó; Por fe yo contemplo un eterno hogar, Es mi precioso Jesús.
+4
+Jesús es precioso, mi fiel Redentor, Me gozo en su luz que en mi senda brilló;
+Yo sé que glorioso por mí viene aquí, Él es mi precioso Jesús.
+
+>>>>>>>>>> EDIÇÃO EQUIVALENTE PARA COMPARAÇÃO <<<<<<<<<<
+
+------------------------------------------------------------
+SION-278 | PRECIOSO ES JESÚS
+------------------------------------------------------------
+Hinário: Himnos de Sión
+Número: 278
+Equivalente: 69
+Alertas: SEM ALERTA
+Fonte declarada: PDF Himnario de Sión enviado por el usuario (136 págs.; escaneado)
+Observação: Letra transcrita y verificada visualmente del PDF de Sión; ortografía segura normalizada.
+
+LETRA:
+1
+Jesús es precioso, mi buen Salvador,
+Por siempre lo alabo por su gran amor;
+Si débil me encuentro su fuerza me da,
+Él es mi precioso Jesús.
+
+CORO:
+Precioso es Jesús, mi Jesús,
+Precioso es Jesús, mi Jesús;
+Mi gloria será su rostro al mirar,
+Él es mi precioso Jesús.
+
+2
+Y cuando en pecado muy triste me vi,
+Llamando a las puertas de mi corazón,
+Me dijo: “Tu alma yo quiero salvar”,
+Él es mi precioso Jesús.
+
+3
+Mas ya por su gracia la luz puedo ver,
+Quitó mi tristeza, mi llanto enjugó;
+Por fe yo contemplo mi eterno hogar,
+Él es mi precioso Jesús.
+
+4
+Jesús es precioso, mi fiel Redentor,
+Me gozo en su luz que en mi senda brilló;
+Yo sé que glorioso por mí viene aquí,
+Él es mi precioso Jesús.
+
+
+============================================================
+CASO 21 / 31
+CATEGORIA: SEM_EQUIVALENTE
+SCORE: 6
+TÍTULO: NO TE DE TEMOR HABLAR POR CRISTO
+============================================================
+
+------------------------------------------------------------
+GT-177 | NO TE DE TEMOR HABLAR POR CRISTO
+------------------------------------------------------------
+Hinário: Gloria y Triunfo
+Número: 177
+Equivalente: —
+Alertas: POSSIVEL_ESTROFE_FUNDIDA_4
+Fonte declarada: Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada
+Observação: DOCX original 1–329
+
+LETRA:
+1
+¡No te dé temor hablar por Cristo!
+Haz que brille en ti su luz;
+Al que te salvó confiesa siempre, Todo debes a Jesús.
+CORO:
+¡No te dé temor, no te dé temor, Nunca, nunca, nunca:
+Es tu amante Salvador, Nunca, pues, te dé temor!
+2
+¡No te dé temor hacer por Cristo Cuanto de tu parte está!
+Obra con amor, con fe y constancia: Tus trabajos premiará.
+3
+¡No te dé temor sufrir por Cristo Los reproches o el dolor!
+Sufre con amor tus pruebas todas, Cual sufrió tu Salvador.
+4
+¡Note dé temor vivir por Cristo Esa vida que te da!
+Si tan sólo en él por siempre fiares, El con bien te sacará.
+S
+¡No te dé temor morir por Cristo!
+Vía, verdad y vida es él; Él te llevará con su ternura
+A su célico vergel.
+
+
+============================================================
+CASO 22 / 31
+CATEGORIA: SEM_EQUIVALENTE
+SCORE: 6
+TÍTULO: HOGAR CELESTIAL
+============================================================
+
+------------------------------------------------------------
+GT-291 | HOGAR CELESTIAL
+------------------------------------------------------------
+Hinário: Gloria y Triunfo
+Número: 291
+Equivalente: —
+Alertas: POSSIVEL_ERRO_OCR
+Fonte declarada: Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada
+Observação: DOCX original 1–329
+
+LETRA:
+1
+Venid, pecadores, que Dios por su amor, Al cielo nos llama, que es patria mejor; Do nunca la aurora perdió su fulgor;
+Do brilla la gloria del Dios Creador..
+¡Oh, si, venid, venid!
+Al cielo nos llama, que es patria mejor.
+2
+Dejemos, hermanos, aparte el dolor: Que arriba en los cielos el mundo cantor, De espíritus puros, proclaman Señor
+A Cristo-Dios-Hombre, el gran Redentor.
+¡Oh, si, venid, venid!
+Allí son eternos la paz y el amor.
+3
+Trabajas y sufres aquí, pecador;
+El pan que tú comes tendrás con sudor Mas Dios te reserva por suerte mejor Primicias celestes de eterno valor.
+¡Oh si, venid, venid!
+El cielo es del alma la patria mejor.
+
+
+============================================================
+CASO 23 / 31
+CATEGORIA: SO_UMA_EDICAO_SINALIZADA
+SCORE: 6
+TÍTULO: LA SIEMBRA
+============================================================
+
+------------------------------------------------------------
+SION-007 | LA SIEMBRA
+------------------------------------------------------------
+Hinário: Himnos de Sión
+Número: 7
+Equivalente: 8
+Alertas: POSSIVEL_ERRO_OCR
+Fonte declarada: PDF Himnario de Sión enviado por el usuario (136 págs.; escaneado)
+Observação: Letra transcrita y verificada visualmente del PDF de Sión; ortografía segura normalizada.
+
+LETRA:
+1
+Sembraré la simiente preciosa,
+Del glorioso Evangelio de amor;
+Sembraré, sembraré mientras viva,
+Dejaré el resultado al Señor.
+
+CORO:
+Sembraré..., sembraré,
+Mientras viva, simiente de amor;
+Segaré..., segaré...,
+Al hallarme en la casa de Dios.
+
+2
+Sembraré en corazones sensibles,
+La doctrina de Dios de perdón;
+Sembraré, sembraré mientras viva,
+Dejaré el resultado al Señor.
+
+3
+Sembraré en corazones de mármol,
+La bendita palabra de Dios;
+Sembraré, sembraré mientras viva,
+Dejaré el resultado al Señor.
+
+>>>>>>>>>> EDIÇÃO EQUIVALENTE PARA COMPARAÇÃO <<<<<<<<<<
+
+------------------------------------------------------------
+GT-008 | LA SIEMBRA
+------------------------------------------------------------
+Hinário: Gloria y Triunfo
+Número: 8
+Equivalente: 7
+Alertas: SEM ALERTA
+Fonte declarada: Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada
+Observação: DOCX original 1–329
+
+LETRA:
+1
+Sembraré la simiente preciosa Del glorioso evangelio de amor:
+Sembraré, sembraré mientras viva, Dejaré el resultado al Señor.
+CORO:
+Sembraré, sembraré, Mientras viva, simiente de amor.
+Segaré, segaré,
+Al hallarme en la casa de Dios.
+2
+Sembraré en corazones sensibles La doctrina del Dios de perdón; Sembraré, sembraré, mientras viva, Dejaré el resultado al Señor.
+Sembraré en corazones de mármol La bendita palabra de Dios; Sembraré, sembraré mientras viva, Dejaré el resultado al Señor.
+
+
+============================================================
+CASO 24 / 31
+CATEGORIA: SEM_EQUIVALENTE
+SCORE: 6
+TÍTULO: GLORIOSO GÓLGOTA
+============================================================
+
+------------------------------------------------------------
+SION-267 | GLORIOSO GÓLGOTA
+------------------------------------------------------------
+Hinário: Himnos de Sión
+Número: 267
+Equivalente: —
+Alertas: POSSIVEL_ESTROFE_FUNDIDA_4
+Fonte declarada: PDF Himnario de Sión enviado por el usuario (136 págs.; escaneado)
+Observação: Letra transcrita y verificada visualmente del PDF de Sión; ortografía segura normalizada.
+
+LETRA:
+1
+Lejos de Dios en pecado viví,
+Mas Cristo allá me vio,
+Dióme su mano, sacóme de allí,
+Glorioso Gólgota.
+
+CORO:
+Glorioso Gólgota, glorioso Gólgota.
+Cristo allí me ha dado su paz.
+Glorioso Gólgota.
+
+2
+Ya libre estoy y no quiero pecar,
+Me libertó Jesús.
+Un nuevo himno ya puedo cantar,
+Glorioso Gólgota.
+
+3
+Ven, alma triste, con tu gran dolor
+Jesús te salvará.
+Ven y abraza la cruz del Señor,
+Glorioso Gólgota.
+
+4
+Sólo por Gólgota tú llegarás,
+Al cielo con Jesús,
+Gloriosa puerta por donde entrarás,
+Glorioso Gólgota.
+
+CORO 2º:
+Oh, ven a Gólgota, sí, ven a Gólgota,
+Cristo te quiere allí redimir,
+Glorioso Gólgota.
+
+
+============================================================
+CASO 25 / 31
+CATEGORIA: SEM_EQUIVALENTE
+SCORE: 6
+TÍTULO: EN SU PROFUNDO AMOR
+============================================================
+
+------------------------------------------------------------
+SION-293 | EN SU PROFUNDO AMOR
+------------------------------------------------------------
+Hinário: Himnos de Sión
+Número: 293
+Equivalente: —
+Alertas: POSSIVEL_ERRO_OCR
+Fonte declarada: PDF Himnario de Sión enviado por el usuario (136 págs.; escaneado)
+Observação: Letra transcrita y verificada visualmente del PDF de Sión; ortografía segura normalizada.
+
+LETRA:
+1
+En su profundo amor
+Por ti el Salvador
+Vino del cielo y obró redención;
+Tu vida de pecar
+Debes abandonar,
+Confiando en Cristo por tu salvación.
+
+CORO:
+¡Oh, sin igual amor!
+De Cristo el Salvador...
+Nuestra salud compró,
+Cuando en la cruz murió.
+Pues tanto fue el amor
+De nuestro Redentor,
+Que por nosotros su vida entregó.
+
+2
+Perdidos y sin luz,
+Nos encontró Jesús,
+Y en el Calvario su vida entregó;
+Vio nuestra perdición,
+Mostró su compasión
+Cuando en la cruz nuestros males llevó.
+
+3
+Hijo del Padre Dios,
+Es Cristo, cuya voz,
+Hoy tiernamente llamando está;
+Él te perdonará,
+Tus males borrará,
+Confía en Él, pues te quiere librar.
+
+
+============================================================
+CASO 26 / 31
+CATEGORIA: SEM_EQUIVALENTE
+SCORE: 5
+TÍTULO: MI CULPA EL LLEVO
+============================================================
+
+------------------------------------------------------------
+GT-104 | MI CULPA EL LLEVO
+------------------------------------------------------------
+Hinário: Gloria y Triunfo
+Número: 104
+Equivalente: —
+Alertas: PRIMEIRA_ESTROFE_MUITO_LONGA
+Fonte declarada: Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada
+Observação: DOCX original 1–329
+
+LETRA:
+1
+Cansado y triste vine al Salvador, Mi culpa él llevó, mi culpa él llevó; Mi eterna dicha hallé en su amor, Mi culpa él llevó.
+CORO:
+Mi culpa él llevó, mi culpa él llevó,
+¡Alegre siempre cantaré! Al Señor gozoso alabaré, Porque él me salvó.
+2
+Borrados todos mis pecados son, etc.
+A él feliz elevo mi canción, etc.
+3
+Ya vivo libre de condenación, etc.
+Su dulce paz tengo en mi corazón, etc.
+4
+Si vienes hoy a Cristo, pecador, Tu culpa llevará, tu culpa llevará. Perdón tendrá si acudes al Señor, Tu culpa llevará,
+CORO:
+Tu culpa llevará, tu culpa llevará, Y limpiará tu corazón,
+Y dirás feliz en tu canción: Mi culpa él llevó.
+
+
+============================================================
+CASO 27 / 31
+CATEGORIA: SEM_EQUIVALENTE
+SCORE: 5
+TÍTULO: SOLO DE JESÚS LA SANGRE
+============================================================
+
+------------------------------------------------------------
+GT-151 | SOLO DE JESÚS LA SANGRE
+------------------------------------------------------------
+Hinário: Gloria y Triunfo
+Número: 151
+Equivalente: —
+Alertas: PRIMEIRA_ESTROFE_MUITO_LONGA
+Fonte declarada: Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada
+Observação: DOCX original 1–329
+
+LETRA:
+1
+¿Qué me puede dar perdón?
+¡Sólo de Jesús la sangre!
+¿Y un nuevo corazón?
+¡Sólo de Jesús la sangre!
+CORO:
+Precioso es el raudal Que limpia todo mal; No hay otro manantial,
+¡Sólo de Jesús la sangre!
+2
+Fue el rescate eficaz, etc. Trajo santidad y paz, etc.
+3
+Veo para mi salud, etc. Tiene de sanar virtud, etc.
+4
+Cantaré junto a sus pies, etc. El Cordero digno es, etc.
+
+
+============================================================
+CASO 28 / 31
+CATEGORIA: SEM_EQUIVALENTE
+SCORE: 5
+TÍTULO: VOY A VER A CRISTO EL REY
+============================================================
+
+------------------------------------------------------------
+GT-276 | VOY A VER A CRISTO EL REY
+------------------------------------------------------------
+Hinário: Gloria y Triunfo
+Número: 276
+Equivalente: —
+Alertas: PRIMEIRA_ESTROFE_MUITO_LONGA
+Fonte declarada: Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada
+Observação: DOCX original 1–329
+
+LETRA:
+1
+Aunque peregrino y pobre soy aquí, Voy a ver a Cristo el Rey;
+Cuando en las nubes venga él por mí, Voy a ver a Cristo el Rey.
+CORO:
+Voy a ver a Cristo el Rey Y sus glorias cantaré;
+Cuando al cielo allá a los suyos llamará, Voy a ver a Cristo el Rey.
+2
+Tras angustia y pena y tras cruel dolor, Voy a ver a Cristo el Rey.
+Perdurable gozo me dará el Señor, Voy, etc.
+3
+Tras las duras luchas que aquí tendré, etc. Cuando mi carrera acabado habré, etc.
+4
+Con los redimidos que se fueron ya, etc. Lágrimas y llanto nunca más habrá, etc.
+
+
+============================================================
+CASO 29 / 31
+CATEGORIA: SEM_EQUIVALENTE
+SCORE: 4
+TÍTULO: DE LA
+============================================================
+
+------------------------------------------------------------
+GT-303 | DE LA
+------------------------------------------------------------
+Hinário: Gloria y Triunfo
+Número: 303
+Equivalente: —
+Alertas: TEXTO_ANTES_DA_ESTROFE_1
+Fonte declarada: Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada
+Observação: DOCX original 1–329
+
+LETRA:
+De la Iglesia el fundamento Es Jesús el Salvador;
+Por el agua y la palabra Le dio vida su Señor:
+Para hacerla esposa quiso De los cielos descender, Y su sangre por limpiarla En la horrible cruz verter.
+2
+De entre todas las naciones Escogida en variedad,
+A través de las edades Se presenta en unidad; Y los títulos que ostenta
+Son: tener sólo un Señor, Una fe y un nacimiento, Un constante y puro amor.
+3
+Sólo un nombre ella bendice, Participa de un manjar,
+La consuela una esperanza Y en la cruz tiene su altar; Por el celo que la anima De las almas corre en pos Y ambiciona por la gracia Conducirlas hasta Dios.
+4
+Aunque el mundo, combatida Del error por el vaivén
+Y de cismas desgarrada, La contemple con desdén; En vigilia están los santos Y jamás cesan de orar:
+Lo que es hoy tristeza, pronto Será júbilo y cantar.
+5
+A través de sufrimientos Y fatigas y dolor,
+El glorioso día espera En que vuelva su Señor.
+Consumada y plena entonces Su carrera y su salud,
+Entrará libre y triunfante En la eterna beatitud.
+
+
+============================================================
+CASO 30 / 31
+CATEGORIA: SEM_EQUIVALENTE
+SCORE: 4
+TÍTULO: JERUSALÉN CELESTE
+============================================================
+
+------------------------------------------------------------
+GT-304 | JERUSALÉN CELESTE
+------------------------------------------------------------
+Hinário: Gloria y Triunfo
+Número: 304
+Equivalente: —
+Alertas: TEXTO_ANTES_DA_ESTROFE_1
+Fonte declarada: Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada
+Observação: DOCX original 1–329
+
+LETRA:
+Jerusalén celeste, Visión de paz dichosa,
+De Cristo santa esposa, Radiante de esplendor, Tu fábrica es divina, Son vivos tus sillares,
+Y de ángeles millares, Te ciñen en redor.
+2
+Ciudad del Rey eterno, De perlas son tus puertas, Continuamente abiertas Al mísero mortal;
+Y en tu recinto moran Los que por fe se elevan, Y el sello augusto llevan Del Verbo celestial.
+3
+Felices moradores, En ti perenne canto, Profieren al Dios santos, Que de ellos se apiadó; Y honor y gloria entonan Al ínclito Cordero
+Que, amante en el madero, Por ellos se inmoló.
+4
+Al mismo Cristo amamos y al mismo Dios servimos Los que por fe vivimos, Ansiando a ti volar:
+Y pronto gozaremos, Pasando tus umbrales, Las dichas eternales Del suspirado hogar.
+
+
+============================================================
+CASO 31 / 31
+CATEGORIA: SEM_EQUIVALENTE
+SCORE: 4
+TÍTULO: SI FUI MOTIVO DE DOLOR, SEÑOR
+============================================================
+
+------------------------------------------------------------
+SION-244 | SI FUI MOTIVO DE DOLOR, SEÑOR
+------------------------------------------------------------
+Hinário: Himnos de Sión
+Número: 244
+Equivalente: —
+Alertas: PRIMEIRA_ESTROFE_MUITO_CURTA
+Fonte declarada: PDF Himnario de Sión enviado por el usuario (136 págs.; escaneado)
+Observação: Letra transcrita y verificada visualmente del PDF de Sión; ortografía segura normalizada.
+
+LETRA:
+1
+Si fui motivo de dolor, Señor;
+Si por mi causa el débil tropezó;
+Si en tus caminos yo no quise andar,
+Perdón, Señor.
+
+2
+Si vana y fútil mi palabra fue;
+Si al que sufría en su dolor dejé,
+No me condenes, Dios, por mi maldad;
+¡Perdón, Señor!
+
+3
+Si por la vida quise andar en paz,
+Tranquilo, libre y sin luchar por Ti,
+Cuando anhelabas verme en la lid,
+Perdón, Señor.
+
+Escucha, ¡oh, Dios!, mi pobre confesión,
+Y líbrame de tentación sutil.
+Preserva siempre mi alma en tu redil,
+Amén, Amén.
+

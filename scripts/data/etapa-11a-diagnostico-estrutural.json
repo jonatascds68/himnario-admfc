@@ -1,0 +1,2723 @@
+{
+  "etapa": "11A",
+  "hash": "214d87c16a3a1a18c9bd525c5474dff344fa78857762960084de51771262cbfb",
+  "totalHinos": 718,
+  "casosTestemunha": [
+    {
+      "id": "GT-052",
+      "titulo": "CRISTO LA ROCA",
+      "tamanho": 675,
+      "possuiMarcadorCoro": true,
+      "ocorrenciasCoro": 1,
+      "inicio": "1\nEn las olas inmensas de embravecido mar, Que asaltan de mi alma la pobre embarcación, De rodillas a Cristo clamé, y el huracán Deshecho fue al instante a la voz de Dios.\nCORO:\nEs Cristo la Roca, el ancla de mi fe; Los males, lamentos, y ayes de temor,\nTerminan por siempre, con mi supremo Rey; Es Jesucristo mi refugio.\n2\nMe guarda de peligros, de pruebas, de dolor; Él manda que los vientos no agiten tempestad, Los mares se detienen, la ola reposó,\nY en Cristo fijo el ancla, confiando más.\n3\nMi dulce Salvador, sí, mi hermoso amigo y Dios, Que libra de tristezas y aleja amarga hiel:\nPor fe yo i"
+    },
+    {
+      "id": "GT-100",
+      "titulo": "A LOS PIES DE JESUCRISTO",
+      "tamanho": 596,
+      "possuiMarcadorCoro": true,
+      "ocorrenciasCoro": 1,
+      "inicio": "1\nA los pies de Jesucristo Es el sitio aquí mejor, Escuchando cual María Las palabras de su amor.\nCORO:\nA los pies de Jesucristo Gozaré su comunión, Pues su mano fiel y tierna\nMe ha provisto protección.\n2\nA los pies de Jesucristo Hallo tierna compasión; El quitó ya mis afanes,\nYa me ha dado bendición.\n¡Puedo yo decirle a Cristo Mis cuidados y temor!\nY con él tendrá mi alma Gozo, paz, eterno amor.\n3\nA los pies de Jesucristo Yo tendré su bendición; En sus ojos hay dulzura Y en su seno protección.\n¡Qué feliz es el momento Que yo paso junto a ti! Ya anhelo el encuentro Cuando vengas tú por mí."
+    },
+    {
+      "id": "GT-188",
+      "titulo": "BELLAS PALABRAS DE VIDA",
+      "tamanho": 610,
+      "possuiMarcadorCoro": false,
+      "ocorrenciasCoro": 0,
+      "inicio": "1\n¡Oh, cantádmelas otra vez! Bellas palabras de vida; Hallo en ellas mi gozo y luz, Bellas palabras de vida;\nSi, de luz y vida; Son sostén y a:\n|| ¡Qué bellas son, qué bellas son!\nBellas palabras de vida.||\n2\nJesucristo a todos da Bellas palabras de vida; Hoy escúchalas, pecador, Bellas palabras de vida; Bondadoso te salva,\nY al cielo te llama:\n|| ¡Qué bellas son, qué bellas son!\nBellas palabras de vida.||\n3\nGrato el cántico sonará, Bellas palabras de vida; Tus pecados perdonará, Bellas palabras de vida; Si, de luz y vida,\nSon sostén y guía:\n|| ¡Qué bellas son, qué bellas son!\nBellas palabras "
+    }
+  ],
+  "estatisticas": {
+    "hinosComMarcadorCoro": 525,
+    "multiplosMarcadoresCoro": 18,
+    "fragmentosSuspeitos": 1,
+    "blocosLongos": 357,
+    "paresComDiferencaDeCoro": 5
+  },
+  "multiplosMarcadoresCoro": [
+    {
+      "id": "GT-046",
+      "numero": 46,
+      "edicao": "GT",
+      "titulo": "MÁS BLANCO QUE LA NIEVE",
+      "quantidade": 2
+    },
+    {
+      "id": "GT-074",
+      "numero": 74,
+      "edicao": "GT",
+      "titulo": "DILO A CRISTO",
+      "quantidade": 4
+    },
+    {
+      "id": "GT-104",
+      "numero": 104,
+      "edicao": "GT",
+      "titulo": "MI CULPA EL LLEVO",
+      "quantidade": 2
+    },
+    {
+      "id": "GT-119",
+      "numero": 119,
+      "edicao": "GT",
+      "titulo": "JESÚS ES MI AMIGO",
+      "quantidade": 2
+    },
+    {
+      "id": "GT-131",
+      "numero": 131,
+      "edicao": "GT",
+      "titulo": "PAZ",
+      "quantidade": 2
+    },
+    {
+      "id": "GT-139",
+      "numero": 139,
+      "edicao": "GT",
+      "titulo": "QUIERO VER MI PATRIA",
+      "quantidade": 2
+    },
+    {
+      "id": "GT-146",
+      "numero": 146,
+      "edicao": "GT",
+      "titulo": "ME BUSCA A MÍ",
+      "quantidade": 4
+    },
+    {
+      "id": "GT-153",
+      "numero": 153,
+      "edicao": "GT",
+      "titulo": "¡ALELUYA, AMEN!",
+      "quantidade": 2
+    },
+    {
+      "id": "GT-171",
+      "numero": 171,
+      "edicao": "GT",
+      "titulo": "MEDITAD",
+      "quantidade": 4
+    },
+    {
+      "id": "GT-244",
+      "numero": 244,
+      "edicao": "GT",
+      "titulo": "ADORADLE",
+      "quantidade": 2
+    },
+    {
+      "id": "GT-262",
+      "numero": 262,
+      "edicao": "GT",
+      "titulo": "EL QUE HA DE VENIR, VENDRÁ",
+      "quantidade": 2
+    },
+    {
+      "id": "SION-033",
+      "numero": 33,
+      "edicao": "SION",
+      "titulo": "DILO A CRISTO",
+      "quantidade": 4
+    },
+    {
+      "id": "SION-064",
+      "numero": 64,
+      "edicao": "SION",
+      "titulo": "QUIERO VER MI PATRIA",
+      "quantidade": 2
+    },
+    {
+      "id": "SION-103",
+      "numero": 103,
+      "edicao": "SION",
+      "titulo": "ADORADLE",
+      "quantidade": 2
+    },
+    {
+      "id": "SION-109",
+      "numero": 109,
+      "edicao": "SION",
+      "titulo": "EL QUE HA DE VENIR, VENDRÁ",
+      "quantidade": 2
+    },
+    {
+      "id": "SION-267",
+      "numero": 267,
+      "edicao": "SION",
+      "titulo": "GLORIOSO GÓLGOTA",
+      "quantidade": 2
+    },
+    {
+      "id": "SION-272",
+      "numero": 272,
+      "edicao": "SION",
+      "titulo": "DE LA NOCHE OSCURA",
+      "quantidade": 2
+    },
+    {
+      "id": "SION-277",
+      "numero": 277,
+      "edicao": "SION",
+      "titulo": "UN CORTO TIEMPO MÁS",
+      "quantidade": 2
+    }
+  ],
+  "fragmentosSuspeitos": [
+    {
+      "id": "GT-177",
+      "titulo": "NO TE DE TEMOR HABLAR POR CRISTO",
+      "linha": 17,
+      "texto": "S",
+      "contexto": "¡Note dé temor vivir por Cristo Esa vida que te da! | Si tan sólo en él por siempre fiares, El con bien te sacará. | S | ¡No te dé temor morir por Cristo! | Vía, verdad y vida es él; Él te llevará con su ternura"
+    }
+  ],
+  "blocosLongos": [
+    {
+      "id": "GT-003",
+      "titulo": "JESÚS VENDRÁ OTRA VEZ",
+      "bloco": 1,
+      "palavras": 166,
+      "inicio": "1\nYo espero el día alegre cuando Cristo volverá, Pues vendrá al mundo pronto y nos arrebatará;\n¡Oh, qué gozo este pensamiento a mi alma da: El que Cristo venga al mundo otra vez!\nCORO:\n¡Oh! Jesús vendrá al mundo otra vez, Sí, Jesús vendrá al mundo ot"
+    },
+    {
+      "id": "GT-004",
+      "titulo": "DULCE COMUNIÓN",
+      "bloco": 1,
+      "palavras": 99,
+      "inicio": "1\nDulce comunión la que gozo ya En los brazos de mi Salvador.\n¡Qué gran bendición en su paz me da!\n¡Oh!, yo siento en mí su tierno amor.\nCORO:\nLibre, salvo, del pecado y del temor, Libre, salvo, en los brazos de mi Salvador.\n2\n¡Cuán dulce es vivir, c"
+    },
+    {
+      "id": "GT-005",
+      "titulo": "DESDE QUE SALVO ESTOY",
+      "bloco": 1,
+      "palavras": 102,
+      "inicio": "1\nYo tengo un himno de loor Desde que salvo estoy, Para mi Rey, mi Salvador Desde que salvo estoy.\nCORO:\n||Desde que salvo estoy|| Sólo en él me gloriaré; Desde que salvo estoy\nEn mi Salvador me gloriaré.\n2\nYo tengo un Cristo, y mi ansiedad Desde que"
+    },
+    {
+      "id": "GT-006",
+      "titulo": "LIBERTAD",
+      "bloco": 1,
+      "palavras": 106,
+      "inicio": "1\n¡Aleluya! que el Señor Tiene grande salvación Libertad, libertad.\nNuestro Dios tiene poder Para Satanás vencer, Libertad, libertad.\nCORO:\nLibertad y redención,\n¡Aleluya! Cristo ya Me amó y me salvó; Gloria, gloria, ¡Aleluya! Él es todo, en todo es "
+    },
+    {
+      "id": "GT-007",
+      "titulo": "TODO A CRISTO YO ME RINDO",
+      "bloco": 1,
+      "palavras": 109,
+      "inicio": "1\nTodo a Cristo yo me rindo, Con el fin de serie fiel;\nPara siempre quiero amarle, Y agradarle sólo a él.\nCORO:\nYo me rindo a él, Yo me rindo a él;\nTodo a Cristo yo me entrego, Quiero serle fiel.\n2\nTodo a Cristo yo me rindo, A sus pies postrado estoy"
+    },
+    {
+      "id": "GT-009",
+      "titulo": "GLORIA SIN FIN",
+      "bloco": 1,
+      "palavras": 104,
+      "inicio": "1\nCuando mis luchas terminen aquí Y ya seguro en los cielos esté, Cuando al Señor mire cerca de mí;\n¡Por las edades mi gloria será!\nCORO:\n¡Esa será, gloria sin fin, Gloria sin fin, gloria sin fin!\nCuando por gracia su faz pueda ver,\n¡Esa mi gloria si"
+    },
+    {
+      "id": "GT-010",
+      "titulo": "CRISTO QUIERE LIMPIOS CORAZONES",
+      "bloco": 1,
+      "palavras": 139,
+      "inicio": "1\nCristo busca limpios corazones, Que le sirvan siempre con fidelidad; Que a los pecadores insten fervorosos Que se vuelvan del pecado a la verdad.\nCORO:\nId a trabajar allá en los campos del Señor (Id a trabajar con voluntad)\nQue para la siega se pre"
+    },
+    {
+      "id": "GT-011",
+      "titulo": "CARIÑOSO SALVADOR",
+      "bloco": 1,
+      "palavras": 105,
+      "inicio": "1\nCariñoso Salvador, Huyo de la tempestad A tu seno protector,\nFiándome de tu bondad. Sálvame, Señor Jesús, De las olas del turbión: Hasta el puerto de salud\nGuía mi pobre embarcación.\n2\nOtro asilo ninguno hay, Indefenso acudo a ti; Mi necesidad me t"
+    },
+    {
+      "id": "GT-013",
+      "titulo": "DULCE ORACIÓN",
+      "bloco": 1,
+      "palavras": 114,
+      "inicio": "1\nDulce oración, dulce oración, De toda influencia mundanal Elevas tú mi corazón,\nAl tierno Padre Celestial.\n¡Oh cuantas veces tuve en ti Auxilio en ruda tentación, Y cuantos bienes recibí,\nMediante ti, dulce oración!\n2\nDulce oración, dulce oración, "
+    },
+    {
+      "id": "GT-014",
+      "titulo": "¡OH QUE AMIGO!",
+      "bloco": 1,
+      "palavras": 111,
+      "inicio": "1\n¡Oh qué Amigo nos es Cristo!\nEl llevo nuestro dolor,\nY nos manda que llevemos Todo a Dios en oración.\n¿Vive el hombre desprovisto De paz, gozo y santo amor? Esto es porque no llevamos Todo a Dios en oración.\n2\n¿Vives débil y cargado De cuidados y t"
+    },
+    {
+      "id": "GT-015",
+      "titulo": "FIRMES Y ADELANTE",
+      "bloco": 1,
+      "palavras": 126,
+      "inicio": "1\nFirmes y adelante, huestes de la fe, Sin temor alguno, que Jesús nos ve. Jefe soberano, Cristo al frente va,\nY la regia enseña tremolando está.\nCORO:\nFirmes y adelante, huestes de la fe, Sin temor alguno, que Jesús nos ve.\n2\nAl sagrado nombre de nu"
+    },
+    {
+      "id": "GT-018",
+      "titulo": "GRATO ES DECIR LA HISTORIA",
+      "bloco": 1,
+      "palavras": 125,
+      "inicio": "1\nGrato es decir la historia Del celestial favor;\nDe Cristo y de su gloria, De Cristo y de su amor; Me agrada referirla, Pues sé que es la verdad, Y nada satisface\nCual ella, mi ansiedad.\nCORO:\n¡Cuán bella es esa historia! Mi tema allá en la gloria S"
+    },
+    {
+      "id": "GT-019",
+      "titulo": "¿OYES COMO EL EVANGELIO?",
+      "bloco": 1,
+      "palavras": 111,
+      "inicio": "1\n¿Oyes cómo el evangelio, AJ cansado ofrece paz? Pues segura, oh alma mía, La promesa a ti se da; Bien alguno en mí no veo, Corrupción tan sólo hay; Yo cansado y afligido Busco alivio con afán.\n2\nEn el arca la paloma Encontró do reposar: Para mi alm"
+    },
+    {
+      "id": "GT-020",
+      "titulo": "CUANDO ALLÁ SE PASE LISTA",
+      "bloco": 1,
+      "palavras": 128,
+      "inicio": "1\nCuando la trompeta suene En aquel día final,\nY que el alba eterna rompa en claridad; Cuando las naciones salvas\nA su patria lleguen ya,\nY que sea pasada lista, allí he de estar.\nCORO:\nCuando allá se pase lista, Cuando allá se pase lista, Cuando all"
+    },
+    {
+      "id": "GT-024",
+      "titulo": "ANDANDO EN LA LUZ",
+      "bloco": 1,
+      "palavras": 114,
+      "inicio": "1\nVagaba yo en obscuridad Hasta que vi a Jesús,\nMás por su amor y su verdad Me amaneció la luz.\nCORO:\nGozo y luz hay en mi alma hoy, Gozo y luz hay, ya que salvo soy; Desde que a Jesús vi,\nY a su lado fui,\nHe sentido el gozo de su amor en mí\n2\nLas nu"
+    },
+    {
+      "id": "GT-025",
+      "titulo": "¡OH, CUAN DULCE!",
+      "bloco": 1,
+      "palavras": 103,
+      "inicio": "1\n¡Oh, cuán dulce es fiar en Cristo Y entregarse todo a él; Esperar en sus promesas,\nY en sus sendas serle fiel!\nCORO:\nJesucristo, Jesucristo, Ya tu amor probaste en mí\nJesucristo, Jesucristo Siempre quiero fiar en ti.\n2\nEs muy dulce fiar en Cristo Y"
+    },
+    {
+      "id": "GT-026",
+      "titulo": "ALLÍ NO HABRÁ TRIBULACIÓN",
+      "bloco": 1,
+      "palavras": 98,
+      "inicio": "1\nEn la mansión do Cristo está\" Allí no habrá tribulación; Ningún pesar, ningún dolor, Que me quebrante el corazón.\nCORO:\nAllí no habrá tribulación; Ningún pesar, ningún dolor, Y cuando esté morando allá, Diré que no hay tribulación.\n2\nSerá muy trist"
+    },
+    {
+      "id": "GT-027",
+      "titulo": "¡PAZ! ¡PAZ! ¡CUAN DULCE PAZ!",
+      "bloco": 1,
+      "palavras": 177,
+      "inicio": "1\nEn el seno de mi alma una dulce quietud Se difunde embargando mi ser:\nUna calma infinita que sólo podrán Los amados de Dios comprender.\nCORO:\n¡Paz! ¡Paz! ¡cuán dulce paz! Es aquella que el Padre me da;\nYo le ruego que inunde por siempre mi ser, En "
+    },
+    {
+      "id": "GT-028",
+      "titulo": "MÁS DE JESÚS",
+      "bloco": 1,
+      "palavras": 105,
+      "inicio": "1\nMás de Jesús deseo saber, Más de su gracia y poder: Más de su salvación gozar: Más de su dulce amor gustar.\nCORO:\nMás quiero amarle, Más quiero honrarle:\nMás de su salvación gozar, Más de su dulce amor gustar.\n2\nMás quiero a Jesús seguir, Más de su"
+    },
+    {
+      "id": "GT-029",
+      "titulo": "ACEPTA EL PERDÓN DE JESÚS",
+      "bloco": 1,
+      "palavras": 122,
+      "inicio": "1\nSi tú cansado ya estás de pecar, Acepta el perdón de Jesús;\nSi vida nueva quisieres hallar, Acepta el perdón de Jesús.\nCORO:\nNo más pecar, ven a él,\nSu amor te muestra en la cruz· Es tiempo no seas infiel, Acepta el perdón de Jesús.\n2\nSi vida pura "
+    },
+    {
+      "id": "GT-030",
+      "titulo": "HAY PODER EN JESÚS",
+      "bloco": 1,
+      "palavras": 103,
+      "inicio": "1\n¿Quieres ser salvo de toda maldad? Tan sólo hay poder en mi Jesús;\n¿Quieres vivir y gozar santidad? Tan sólo hay poder en Jesús.\nCORO:\nHay poder, poder sin igual poder, En Jesús, quien murió;\nHay poder, poder sin igual poder, En la sangre que él ve"
+    },
+    {
+      "id": "GT-031",
+      "titulo": "CRISTO ES MI DULCE SALVADOR",
+      "bloco": 1,
+      "palavras": 138,
+      "inicio": "1\nCristo es mi dulce Salvador, Mi bien, mi paz, mi luz, Mostróme su infinito amor, Muriendo en dura cruz.\nCuando estoy triste encuentro en él, Consolador, y amigo fiel, Consolador, amigo fiel, es Jesús.\n2\nCristo es mi dulce Salvador, Su sangre me com"
+    },
+    {
+      "id": "GT-032",
+      "titulo": "¡LOORES A DIOS!",
+      "bloco": 1,
+      "palavras": 104,
+      "inicio": "1\n¡Oh!, jamás nos cansaremos de la gran canción\n¡Loores a Dios, aleluya!\nPor la fe la cantaremos con el corazón,\n¡Loores a Dios, aleluya!\nCORO:\nA los hijos del Señor, pertenece el cantar Pues vendrá el Salvador y nos arrebatará; Del palacio celestial"
+    },
+    {
+      "id": "GT-033",
+      "titulo": "GRANDE GOZO HAY EN MI ALMA HOY",
+      "bloco": 1,
+      "palavras": 111,
+      "inicio": "1\nGrande gozo hay en mi alma hoy, Pues Jesús conmigo está;\nY su paz, que ya gozando estoy Por siempre durará\nCORO:\nGrande gozo, ¡cuán hermoso! Paso todo el tiempo bien feliz;\nPorque veo de Cristo la sonriente faz, Grande gozo siento en mí.\n2\nHay un c"
+    },
+    {
+      "id": "GT-034",
+      "titulo": "TENDRÁS QUE RENACER",
+      "bloco": 1,
+      "palavras": 114,
+      "inicio": "1\nUn hombre de noche llegóse a Jesús, Buscando la senda de vida y de luz, Y Cristo le dijo: Si a Dios quieres ver,\nTendrás que renacer.\nCORO:\n||Tendrás que renacer,|| De cierto, de cierto te digo a ti:\nTendrás que renacer.\n2\nSi acaso a los cielos tú "
+    },
+    {
+      "id": "GT-035",
+      "titulo": "CANTARE LA MARAVILLA",
+      "bloco": 1,
+      "palavras": 97,
+      "inicio": "1\nCantaré la maravilla Que Jesús murió por mí; Cómo allá en el Calvario Dio su sangre carmesí,\nCORO:\nCantaré la bella historia De Jesús mi Salvador.\nY con santos en la gloria, A Jesús daré loor.\n2\nCristo vino a rescatarme, Vil, perdido me encontró; C"
+    },
+    {
+      "id": "GT-036",
+      "titulo": "ENTERA CONSAGRACIÓN",
+      "bloco": 1,
+      "palavras": 129,
+      "inicio": "1\nQue mi vida entera esté Consagrada a ti, Señor;\nQue a mis manos pueda guiar El impulso de tu amor.\nCORO:\nLávame en tu sangre, Salvador, Límpiame de toda mi maldad; Traigo a ti mi vida, para ser, Señor,\n¡Tuya por la eternidad!\n2\nQue mis pies tan sol"
+    },
+    {
+      "id": "GT-037",
+      "titulo": "¿LLEVAS SOLO TU CARGA?",
+      "bloco": 1,
+      "palavras": 96,
+      "inicio": "1\n¿Has tratado de llevar tu carga?\nSólo tú, sólo tú,\n¿No sabiendo que tendrás ayuda Si acudieres al Señor Jesús?\nCORO:\nSi tengo cargas que solo debo llevar, Paciente las alzo y acudo a mi Señor;\nSi tengo cruces que nadie puede cargar,\nSu ayuda siempr"
+    },
+    {
+      "id": "GT-038",
+      "titulo": "LA CRUZ ME GUIARA",
+      "bloco": 1,
+      "palavras": 101,
+      "inicio": "1\nAl Calvario solo Jesús ascendió Llevando pesada cruz,\nY al morir en ella al mortal dejó Un fanal de gloriosa luz.\nCORO:\nLa cruz sólo me guiará; La cruz sólo me guiará;\nA mi hogar de paz y eterno amor, La cruz sólo me guiará.\n2\nEn la cruz el alma ta"
+    },
+    {
+      "id": "GT-039",
+      "titulo": "SANTA BIBLIA",
+      "bloco": 1,
+      "palavras": 115,
+      "inicio": "1\n¡Santa Biblia! para mí, Eres un tesoro aquí;\nTú contienes con verdad La divina voluntad;\nTú me dices lo que soy, De quién vine y a quién voy.\n2\nTú reprendes mi dudar; Tú me exhortas sin cesar; Eres faro que a mi pie, Va guiando por la fe,\nA las fue"
+    },
+    {
+      "id": "GT-040",
+      "titulo": "EN LOS NEGOCIOS DEL REY",
+      "bloco": 1,
+      "palavras": 112,
+      "inicio": "1\nSoy peregrino aquí, mi hogar lejano está, En la mansión de luz, eterna paz y amor: Embajador yo soy del reino celestial\nEn los negocios de mi Rey.\nCORO:\nEste mensaje fiel oid, Que dijo ya celeste voz:\n«Reconciliaos ya» – dice el Señor y Rey,\n¡Recon"
+    },
+    {
+      "id": "GT-041",
+      "titulo": "HAY UN PRECIOSO MANANTIAL",
+      "bloco": 1,
+      "palavras": 97,
+      "inicio": "1\nHay un precioso manantial De sangre de Emmanuel, Que purifica a cada cual Que se sumerge en él.\nCORO:\nLávame, Señor Jesús, En la sangre de tu cruz: Lávame, Señor Jesús,\nY más blanco que la nieve yo seré:\n2\nEl malhechor se convirtió Pendiente de una"
+    },
+    {
+      "id": "GT-044",
+      "titulo": "YA TODO DEJÉ",
+      "bloco": 1,
+      "palavras": 140,
+      "inicio": "1\nTan triste y tan lejos de Dios me sentí Y sin el perdón de Jesús,\nMas cuando su voz amorosa oí Que dijo: «Oh, ven a la luz»\nCORO:\nYa todo dejé para andar en la luz No moro en tinieblas ya más\nYa todo dejé por seguir a Jesús Y vivo en la luz de su f"
+    },
+    {
+      "id": "GT-045",
+      "titulo": "¿ERES LIMPIO EN LA SANGRE?",
+      "bloco": 1,
+      "palavras": 131,
+      "inicio": "1\n¿Has hallado en Cristo plena salvación, Por la sangre que Cristo vertió?\nToda mancha lava de tu corazón:\n¿Eres limpio en la sangre eficaz?\nCORO:\n¿Eres limpio en la sangre, En la sangre de Cristo Jesús?\n¿Es tu corazón más blanco que la nieve?\n¿Eres "
+    },
+    {
+      "id": "GT-046",
+      "titulo": "MÁS BLANCO QUE LA NIEVE",
+      "bloco": 1,
+      "palavras": 148,
+      "inicio": "1\nYo quiero ser limpio, oh mi buen Jesús, Deseo por siempre andar en tu luz; Tan sólo en tu sangre limpieza tendré, Lavado y más blanco que nieve seré.\nCORO:\nMás blanco, si, que la nieve seré; Lavado en la sangre y limpio por fe.\n2\nQue en mi alma no "
+    },
+    {
+      "id": "GT-047",
+      "titulo": "DONDEQUIERA CON JESÚS",
+      "bloco": 1,
+      "palavras": 124,
+      "inicio": "1\nA cualquiera parte sin temor iré Si Jesús dirige mi inseguro pie; Sin su compañía todo es pavor,\nMas si él me gula no tendré temor.\nCORO:\nCon Jesús, por doquier, sin temor iré; Si Jesús me gula nada temeré.\n2\nCon Jesús por gula donde quiera voy; Ca"
+    },
+    {
+      "id": "GT-048",
+      "titulo": "PENTECOSTÉS PARA TODOS",
+      "bloco": 1,
+      "palavras": 106,
+      "inicio": "1\nDios no nos deja huérfanos, Más como prometió,\nNos manda el Santo Espíritu, Que llena de su gran virtud Al ser que le esperó.\nCORO\n¿Ha venido a ti? ¿Ha venido a ti, El Espíritu Consolador?\nDios convencerá al mundo de mal, Cuando venga el Consolador"
+    },
+    {
+      "id": "GT-049",
+      "titulo": "EN LA VIÑA DEL SEÑOR",
+      "bloco": 1,
+      "palavras": 95,
+      "inicio": "1\nYo quiero trabajar por el Señor, Confiando en su palabra y en su amor: Quiero yo cantar y orar,\nY ocupado siempre estar En la viña del Señor.\nCORO:\nTrabajar y orar\nEn la viña, en la viña del Señor; Sí, mi anhelo es orar.\nY ocupado siempre estar, En"
+    },
+    {
+      "id": "GT-051",
+      "titulo": "LA CRUZ Y LA GRACIA DE DIOS",
+      "bloco": 1,
+      "palavras": 95,
+      "inicio": "1\nLa cruz no será más pesada Que la gracia que él me da; Y si la tormenta me espanta No podrá esconder su faz.\nCORO:\nLa gracia de Dios me bastará, Su ayuda jamás me faltará: Consolado por su amor\nQue echa fuera mi temor, Confiaré en mi Señor.\n2\nMi cá"
+    },
+    {
+      "id": "GT-052",
+      "titulo": "CRISTO LA ROCA",
+      "bloco": 1,
+      "palavras": 129,
+      "inicio": "1\nEn las olas inmensas de embravecido mar, Que asaltan de mi alma la pobre embarcación, De rodillas a Cristo clamé, y el huracán Deshecho fue al instante a la voz de Dios.\nCORO:\nEs Cristo la Roca, el ancla de mi fe; Los males, lamentos, y ayes de tem"
+    },
+    {
+      "id": "GT-053",
+      "titulo": "EN LA CRUZ",
+      "bloco": 1,
+      "palavras": 140,
+      "inicio": "1\nMe hirió el pecado, fui a Jesús, Mostréle mi dolor;\nPerdido, errante, vi su luz, Bendíjome en su amor.\nCORO:\nEn la cruz, en la cruz, Do primero vi la luz,\nY las manchas de mi alma yo lavé: Fue Allí por fe do vi a Jesús,\nY siempre feliz con él seré."
+    },
+    {
+      "id": "GT-054",
+      "titulo": "QUE HAGA EN TI SU VOLUNTAD",
+      "bloco": 1,
+      "palavras": 99,
+      "inicio": "Que haga en ti su voluntad.\nCORO:\nSu gran poder, sus dones te dará, El gozo y paz a tu alma volverá: Del corazón las manchas limpiará, Que haga en ti su santa voluntad.\n2\n¿Quieres ir en pos de Cristo y llevar la cruz?\n¿Quieres conocer la paz que da J"
+    },
+    {
+      "id": "GT-055",
+      "titulo": "EL MUNDO PERDIDO",
+      "bloco": 1,
+      "palavras": 106,
+      "inicio": "El mundo perdido en pecado se vio:\n¡Jesús, es la luz del mundo!\nMas en las tinieblas la gloria brilló,\n¡Jesús es la luz del mundo!\nCORO:\n¡Ven a la luz, no quieras perder Gozo perfecto al amanecer!\nYo ciego fui, mas ya puedo ver,\n¡Jesús es la luz del "
+    },
+    {
+      "id": "GT-056",
+      "titulo": "¡OH, YO QUIERO ANDAR CON CRISTO!",
+      "bloco": 1,
+      "palavras": 150,
+      "inicio": "1\n¡Oh!, yo quiero andar con Cristo.\nQuiero oír su tierna voz, Meditar en su palabra, Siempre andar de él en pos: Consagrar a él mi vida, Cumplir fiel su voluntad,\nY algún día con mi Cristo Gozaré la claridad.\nCORO:\n¡Oh, sí, yo quiero andar con Cristo"
+    },
+    {
+      "id": "GT-057",
+      "titulo": "GLORIA AL CORDERO",
+      "bloco": 1,
+      "palavras": 98,
+      "inicio": "1\nCristo mío, me salvaste, Tuyo soy, tuyo seré;\nPor tu sangre derramada Vida eterna gozaré.\nCORO:\n¡Gloria, gloria al Cordero!\n¡Gloria, gloria a Jesús!\nYa soy limpio por su sangre\n¡Gloria, gloria a Jesús!\n2\nMucho tiempo solo anduve, Lejos de tu dulce "
+    },
+    {
+      "id": "GT-058",
+      "titulo": "PUEDO ENTONCES CONOCERLE",
+      "bloco": 1,
+      "palavras": 154,
+      "inicio": "1\nCuando aquí de mi vida mis afanes cesen ya Y se anuncie bella aurora celestial,\nEn las playas del cielo mi llegada esperará, Mi Señor con bienvenida paternal.\nCORO:\nPuedo entonces conocerle, Y seguro en su seno estaré; Cara a cara espero verle,\nY c"
+    },
+    {
+      "id": "GT-060",
+      "titulo": "ESTRELLAS EN MI CORONA",
+      "bloco": 1,
+      "palavras": 118,
+      "inicio": "1\nSin cesar siempre pienso en la tierra mejor, Do al ponerse mi sol llegaré,\nY al hallarme en los cielos con Cristo el Señor\n¿Mi corona de estrellas tendré?\nCORO:\n¿Mi corona tendrá sus estrellas allí En las almas que yo rescaté?\nCuando el sol ya decl"
+    },
+    {
+      "id": "GT-061",
+      "titulo": "NADA HAY QUE ME PUEDA APARTAR",
+      "bloco": 1,
+      "palavras": 103,
+      "inicio": "1\nNada hay que me pueda apartar De Cristo y de su amor,\nPues él de veras sabe amar Al pobre pecador.\nCORO:\n¡Yo te amo, oh mi Salvador!, Más que a lo terrenal;\nMe das consuelo, paz y amor, Y el reino celestial.\n2\nSaber que Cristo es mi sostén, Me aleg"
+    },
+    {
+      "id": "GT-062",
+      "titulo": "CON CRISTO YO IRÉ",
+      "bloco": 1,
+      "palavras": 153,
+      "inicio": "1\nYa sea en el valle do el peligro esté\nO que en la luz gloriosa de paz habite yo A mi Jesús diré: «Tu voluntad h;\nSi Cristo me gula doquiera yo iré.\nCORO:\nSi Cristo conmigo va, yo iré: Yo no temeré, con gozo iré,\nConmigo va; es grato servir a Jesús,"
+    },
+    {
+      "id": "GT-063",
+      "titulo": "DIOS OS GUARDE",
+      "bloco": 1,
+      "palavras": 115,
+      "inicio": "1\nDios os guarde en su santo amor, Hasta el día en que lleguemos,\nA la patria do estaremos; Para siempre con el Salvador.\nCORO:\nAl venir Jesús nos veremos A los pies de nuestro Salvador;\nReunidos todos seremos,\nUn redil con nuestro buen Pastor.\n2\nDio"
+    },
+    {
+      "id": "GT-064",
+      "titulo": "VOLUNTARIOS DE JESÚS",
+      "bloco": 1,
+      "palavras": 146,
+      "inicio": "1\nJesús está buscando voluntarios hoy, Que a la ruda lucha luego puedan ir;\n¿Quién está dispuesto a escuchar su voz, Siendo voluntario listo a combatir?\nCORO:\nDe Cristo voluntario, tú puedes ser, Otros ya se alistan, hazlo tú;\nCristo es nuestro Jefe,"
+    },
+    {
+      "id": "GT-065",
+      "titulo": "A SOLAS CON JESÚS",
+      "bloco": 1,
+      "palavras": 105,
+      "inicio": "1\nA solas al huerto yo voy, Cuando duerme aún la floresta; Yen quietud y paz con Jesús estoy\nOyendo absorto Allí su voz.\nCORO:\nEl conmigo está, puedo oír su voz, Y que suyo dice seré;\nY el encanto que hallo en él Allí, Con nadie tener podré.\n2\nTan du"
+    },
+    {
+      "id": "GT-066",
+      "titulo": "¡SALUD! ¡SALUD!",
+      "bloco": 1,
+      "palavras": 149,
+      "inicio": "1\nVengo a tus pies, Jesús, con llanto y dolor; Misericordia ten de mí, un pobre pecador; Sálvame, y te daré mi vida en loor;\n¡Oh Salvador, tierno Cristo!\nCORO:\n¡Salud! ¡Salud!, cantad a nuestro Dios. La paz nos da, clamad en alta voz; ,\nSalvación ya "
+    },
+    {
+      "id": "GT-067",
+      "titulo": "DE MI TIERNO SALVADOR LIBRE ESTOY",
+      "bloco": 1,
+      "palavras": 151,
+      "inicio": "1\nDe mi tierno Salvador Cantaré el inmenso amor.\nGloriaréme en el favor de Jesús: De tinieblas me llamó,\nDe cadenas me libró,\nDe la muerte me salvó, mi Jesús.\nCORO:\n¡Mi Jesús! ¡Mi Jesús! ,\n¡Cuán precioso es el nombre de Jesús!\nCon su sangre me limpié"
+    },
+    {
+      "id": "GT-068",
+      "titulo": "LIBRE ESTOY",
+      "bloco": 1,
+      "palavras": 117,
+      "inicio": "1\nYo vagaba mucho tiempo en el terror, Agobiado en el pecado y el temor; Cuando vi al Salvador\nY escuché su tierna voz,\nMi Jesús me hizo libre por su amor.\nCORO:\nLibre estoy, libre estoy,\nPor la gracia de Jesús libre estoy; Libre estoy, libre estoy,\n"
+    },
+    {
+      "id": "GT-069",
+      "titulo": "PRECIOSO ES JESÚS",
+      "bloco": 1,
+      "palavras": 137,
+      "inicio": "1\nJesús es precioso, mi buen Salvador, . Por siempre le alabo por su gran amor, Si débil me encuentro su fuerza me da, Él es mi precioso Jesús.\nCORO:\nPrecioso es Jesús, mi Jesús, Precioso es Jesús, mi Jesús;\nMi gloria será su rostro al mirar, Él es m"
+    },
+    {
+      "id": "GT-070",
+      "titulo": "MI SUEÑO INEFABLE",
+      "bloco": 1,
+      "palavras": 117,
+      "inicio": "1\nHay un sueño inefable de Cristo el Señor, Que ha de ser a su fin realidad;\nCada instante contemplo esa dulce visión, Que es promesa de eterna verdad.\nCORO:\nEste sueño inefable secreto es de paz, Que yo quiero impartirte en verdad; Porque sueño mira"
+    },
+    {
+      "id": "GT-071",
+      "titulo": "DÍA FELIZ",
+      "bloco": 1,
+      "palavras": 121,
+      "inicio": "1\nFeliz momento en que escogí Servirte, mi Señor y Dios; Preciso es que mi gozo en ti\nLo muestre hoy con obra y voz.\nCORO:\n¡Soy feliz! ¡Soy feliz!\nY en su favor me gozaré; En libertad y luz me vi Cuando triunfó en mí la fe; Y el raudal carmesí\nSalud "
+    },
+    {
+      "id": "GT-072",
+      "titulo": "HAY QUIEN VIGILE",
+      "bloco": 1,
+      "palavras": 135,
+      "inicio": "1\nHay quien vele mis pisadas, En la sombra y en la luz; Por las sendas escarpadas Velará por mí, Jesús.\nPor los valles, por los montes, Do me lleva su bondad, Miro ya los horizontes\nDe una nueva claridad.\nCORO:\nHay quien vele mis pisadas, Y mi senda "
+    },
+    {
+      "id": "GT-074",
+      "titulo": "DILO A CRISTO",
+      "bloco": 1,
+      "palavras": 132,
+      "inicio": "1\nCuando estés cansado y abatido, Dilo a Cristo, dilo a Cristo;\nSi te sientes débil, confundido, Dilo a Cristo el Señor.\nCORO:\nDilo a Cristo, dilo a Cristo, Él es tu amigo más fiel;\nNo hay otro amigo como Cristo, Dilo tan sólo a él.\n2\nCuando estés de"
+    },
+    {
+      "id": "GT-075",
+      "titulo": "TUYO SOY, JESÚS",
+      "bloco": 1,
+      "palavras": 113,
+      "inicio": "1\nTuyo soy, Jesús, ya escuché la voz, De tu amor hablándome aquí; Mas anhelo en alas de fe subir,\nY más cerca estar de ti.\nCORO:\nAún más cerca, cerca de tu cruz: Llévame, ¡oh Salvador!\nAún más cerca, cerca, cerca de tu cruz, Llévame, ¡oh buen Pastor!"
+    },
+    {
+      "id": "GT-076",
+      "titulo": "EL CONSOLADOR HA VENIDO",
+      "bloco": 1,
+      "palavras": 130,
+      "inicio": "1\nDoquier el hombre esté, la nueva proclamad, Doquier haya aflicción, miserias y dolor; Cristianos, anunciad que el Padre nos envió, El fiel Consolador.\nCORO:\nEl fiel Consolador, el fiel Consolador, Que Dios nos prometió, al mundo descendió: Doquier "
+    },
+    {
+      "id": "GT-077",
+      "titulo": "CUANDO DIOS LA SANGRE VE",
+      "bloco": 1,
+      "palavras": 112,
+      "inicio": "1\nMi Redentor murió en la cruz; Quien le reciba, tendrá la luz; Por pecadores todo él pagó,\nYa sus maldades Jesús perdonó.\nCORO:\nCuando Dios la sangre ve, Cuando Dios la sangre ve, En la cual el pecador\nSe lavó, le verá con favor.\n2\nA los más malos é"
+    },
+    {
+      "id": "GT-080",
+      "titulo": "PUEDO OÍR TU VOZ LLAMANDO",
+      "bloco": 1,
+      "palavras": 102,
+      "inicio": "1\nPuedo oír la voz de Cristo, Tiernamente está llamando, Puedo oír el llamamiento:\nTrae tu cruz y ven en pos de mí,\nCORO:\nSeguiré do tú me guíes, Seguiré do tú me gules, Salvador, seguirte quiero, Dondequiera fiel te seguiré.\n2\nYo te seguiré en el hu"
+    },
+    {
+      "id": "GT-081",
+      "titulo": "LA BANDERA DE LA CRUZ",
+      "bloco": 1,
+      "palavras": 103,
+      "inicio": "1\nCual pendón hermoso despleguemos hoy La bandera de la cruz,\nLa verdad del evangelio, el blasón Del soldado de Jesús.\nCORO:\n¡Adelante, adelante,\nEn pos de nuestro Salvador! Con plena fe en nuestro Rey,\n¡Adelante con valor!\n2\nPrediquemos siempre lo q"
+    },
+    {
+      "id": "GT-082",
+      "titulo": "VEN PECADOR",
+      "bloco": 1,
+      "palavras": 95,
+      "inicio": "82. VEN PECADOR\n1\nCristo está llamando, ven pecador, Por ti estoy rogando, ven pecador; Si tú anhelas verle, ven pecador, Hoy puedes conocerle, ven pecador.\n2\nSi vas del mal cargado, ven pecador, Él puede quitar tu carga, ven pecador; Él quiere recib"
+    },
+    {
+      "id": "GT-084",
+      "titulo": "¿SOY YO SOLDADO DE JESÚS?",
+      "bloco": 1,
+      "palavras": 102,
+      "inicio": "1\n¿Soy yo soldado de la cruz, Y siervo del Señor?\nNo temeré llevar su cruz, Sufriendo por su amor.\nCORO:\nDespués de la batalla nos coronará, Dios nos coronará, Dios nos coronará; Después de la batalla nos coronará, En aquella santa Sion:\nMás allá, má"
+    },
+    {
+      "id": "GT-085",
+      "titulo": "¡OJALA FUERA HOY!",
+      "bloco": 1,
+      "palavras": 142,
+      "inicio": "1\nViene otra vez nuestro Salvador,\n¡Oh, que si fuera hoy!\nPara reinar con poder y amor,\n¡Oh, que si fuera hoy!\nYa por su esposa viene esta vez, Purificada en su grande amor; Del mundo por la redondez,\n¡Oh, que si fuera hoy!\nCORO:\n¡Gloria!, ¡gloria!, "
+    },
+    {
+      "id": "GT-087",
+      "titulo": "EL AMOR DE JESUCRISTO",
+      "bloco": 1,
+      "palavras": 166,
+      "inicio": "1\nDel santo amor de Cristo que no tendrá su igual, De su divina gracia, sublime y eternal:\nDe su misericordia, inmensa como el mar Y cual los cielos alta, con gozo he de cantar.\nCORO:\nEl amor de mi Señor, grande y dulce es más y más Rico e inefable, "
+    },
+    {
+      "id": "GT-088",
+      "titulo": "CERCA, MAS CERCA",
+      "bloco": 1,
+      "palavras": 99,
+      "inicio": "1\nCerca, más cerca, ¡oh Dios, de ti! Cerca yo quiero mi vida llevar; Cerca, más cerca, ¡oh Dios, de ti!\n||Cerca a tu gracia que puede salvar.||\n2\nCerca, más cerca, cual pobre soy, Nada, Señor, yo te puedo ofrecer: Sólo mi ser contrito te doy,\n||Pueda"
+    },
+    {
+      "id": "GT-089",
+      "titulo": "¡OH, EXCELSA GRACIA DEL AMOR",
+      "bloco": 1,
+      "palavras": 97,
+      "inicio": "1\nPor fe en Jesús, el Salvador, Se hace salvo el pecador; Sin merecer tan rico don, Recibe plena salvación.\nCORO:\n¡Oh excelsa gracia del amor, Que Dios perdona al pecador!\nSi presto está a confesar Sus culpas y en Jesús confiar; No hay otro autor de "
+    },
+    {
+      "id": "GT-090",
+      "titulo": "YO ANDO CON CRISTO",
+      "bloco": 1,
+      "palavras": 126,
+      "inicio": "1\nMuy triste en pecado y en noche me vi, Mas ya vivo alegre, a Cristo volví;\nY todos los días yo canto a Jesús, Yo ando con Cristo y tengo su luz.\nCORO:\nYo voy con el Rey, ¡Aleluya! Yo ando con Cristo el Rey;\nNo vago ya más, al cielo me voy: Tan sólo"
+    },
+    {
+      "id": "GT-091",
+      "titulo": "YA SALVO SOY",
+      "bloco": 1,
+      "palavras": 103,
+      "inicio": "1\nMis culpas todas borró Jesús Con infinito amor;\nCargó con ellas en cruenta cruz En medio de mortal dolor.\nCORO:\nSalvo por él yo soy, Salvo por su poder:\nA vida nueva Jesús me ha llevado,\n¡Ya salvo soy!\n2\nEn densas sombras anduve yo Cuando en maldad"
+    },
+    {
+      "id": "GT-092",
+      "titulo": "BRILLA EN TU LUGAR",
+      "bloco": 1,
+      "palavras": 112,
+      "inicio": "1\nNunca esperes el momento de una grande acción Ni que pueda lejos ir tu luz;\nDe la vida a los pequeños actos de atención, Brilla en el sitio donde estés.\nCORO:\nBrilla en el sitio donde estés, Brilla en el sitio donde estés:\nPuedes con tu luz algún p"
+    },
+    {
+      "id": "GT-094",
+      "titulo": "DIOS ES AMOR",
+      "bloco": 1,
+      "palavras": 116,
+      "inicio": "1\nEn pecados y temor el Salvador me vio, Aunque indigno pecador su mano me tendió: En Calvario al morir mi vida rescató;\nEn la cruz salud por mi él consumó.\nCORO:\nVen al Señor, ¡oh pecador!\nÉl es tu amigo fiel: Ven, pecador.\nVen al Señor, Dios es amo"
+    },
+    {
+      "id": "GT-095",
+      "titulo": "MAS CUAL JESÚS",
+      "bloco": 1,
+      "palavras": 105,
+      "inicio": "1\nMás cual mi Cristo quiero siempre ser, Más mansedumbre, y su amor tener; Celo en servirle, fidelidad mostrar, Más consagrado, y las nuevas publicar.\nCORO:\nToma mi ser, lo doy, Señor, a ti, Mi corazón, imploro limpies, sí; Toma mi ser, es tuyo en ve"
+    },
+    {
+      "id": "GT-096",
+      "titulo": "¡SANTO! ¡SANTO! ¡SANTO!",
+      "bloco": 1,
+      "palavras": 146,
+      "inicio": "1\n¡Santo! ¡Santo! ¡Santo! Señor Omnipotente, Siempre el labio mío loores te dará;\n¡Santo! ¡Santo! ¡Santo! te adora reverente, Dios en tres personas, bendita Trinidad.\n2\n¡Santo! ¡Santo! ¡Santo! en numeroso coro, Santos escogidos te adoran con fervor; "
+    },
+    {
+      "id": "GT-097",
+      "titulo": "CUANDO EL VINO A MI CORAZÓN",
+      "bloco": 1,
+      "palavras": 116,
+      "inicio": "1\nCuán glorioso es el cambio operado en mí ser Viniendo a mi vida el Señor!\nHay en mi alma una paz que yo ansiaba tener: La paz que me trajo su amor.\nCORO:\n¡El vino a mi corazón!\n¡El vino a mi corazón!.\nSoy feliz con la vida que Cristo me dio, Cuando"
+    },
+    {
+      "id": "GT-099",
+      "titulo": "NADA DE SOMBRAS",
+      "bloco": 1,
+      "palavras": 106,
+      "inicio": "1\nNo habrá .sombras en el valle de la muerte Cuando cese de la vida el batallar,\nY escuchemos del Señor el llamamiento, Ya llevándonos con él a descansar.\nCORO:\nSombras, nada de sombras Al dejar el mundo de dolor; Sombras, nada de sombras\nCuando al c"
+    },
+    {
+      "id": "GT-100",
+      "titulo": "A LOS PIES DE JESUCRISTO",
+      "bloco": 1,
+      "palavras": 116,
+      "inicio": "1\nA los pies de Jesucristo Es el sitio aquí mejor, Escuchando cual María Las palabras de su amor.\nCORO:\nA los pies de Jesucristo Gozaré su comunión, Pues su mano fiel y tierna\nMe ha provisto protección.\n2\nA los pies de Jesucristo Hallo tierna compasi"
+    },
+    {
+      "id": "GT-101",
+      "titulo": "EL GRAN DÍA VIENE",
+      "bloco": 1,
+      "palavras": 93,
+      "inicio": "1\nEl gran día viene, Muy pronto viene,\nCuando Cristo vendrá en poder;\nMas el gozo lo sienten los amados del Señor: Esperemos a nuestro Señor.\nCORO:\n¿Estás listo? ¿Estás listo? La trompeta ya da la señal:\n¿Estás listo, esperando El juicio final?\n2\nDía"
+    },
+    {
+      "id": "GT-102",
+      "titulo": "PODER PENTECOSTAL",
+      "bloco": 1,
+      "palavras": 94,
+      "inicio": "1\nUnánimes junto a la cruz, Pedimos con fervor; Según tu dicho, oh Jesús, Manda el Consolador.\nCORO:\nSí, manda otra lluvia,\n¡Oh buen Salvador!\nY con tu gran fuego avívanos, Señor;\n¡Oh!, danos la lluvia, del Consolador, Aviva tu iglesia con poder cele"
+    },
+    {
+      "id": "GT-104",
+      "titulo": "MI CULPA EL LLEVO",
+      "bloco": 1,
+      "palavras": 118,
+      "inicio": "1\nCansado y triste vine al Salvador, Mi culpa él llevó, mi culpa él llevó; Mi eterna dicha hallé en su amor, Mi culpa él llevó.\nCORO:\nMi culpa él llevó, mi culpa él llevó,\n¡Alegre siempre cantaré! Al Señor gozoso alabaré, Porque él me salvó.\n2\nBorrad"
+    },
+    {
+      "id": "GT-105",
+      "titulo": "EN MEDIO DE MORTAL DOLOR",
+      "bloco": 1,
+      "palavras": 96,
+      "inicio": "1\nEn medio de mortal dolor, La cruenta cruz yo vi:\nY allí raudal de gracia hallé, Bastante para mí.\nCORO:\nEn la cruz fluye sin cesar, Insondable cual es el mar Esta gracia que brota allí: Basta para mí.\n2\nSufriendo fue mi corazón, Y apenas pude allí\n"
+    },
+    {
+      "id": "GT-106",
+      "titulo": "LA SENDA ES ESTRECHA",
+      "bloco": 1,
+      "palavras": 96,
+      "inicio": "1\nYa no es mi vida cual antes fue, Borrado el pecado está: Hoy canto feliz: ¡Aleluya!\nY voy feliz al dulce hogar.\nCORO:\nLa senda es muy estrecha mas la sigo, La sigo, la sigo;\nLa senda es muy estrecha mas la sigo: Yo la sigo por las huellas de Jesús."
+    },
+    {
+      "id": "GT-107",
+      "titulo": "HUBO QUIEN POR MIS CULPAS",
+      "bloco": 1,
+      "palavras": 112,
+      "inicio": "1\nHubo quien por mis culpas muriera en la cruz Aun indigno y vil como soy;\nSoy feliz, pues su sangre vertió mi Jesús, Y con ella mis culpas borró.\nCORO:\nMis pecados llevó, en la cruz do murió El sublime, el tierno Jesús,\nLos desprecios sufrió, y mi a"
+    },
+    {
+      "id": "GT-108",
+      "titulo": "EL NOMBRE DE JESÚS",
+      "bloco": 1,
+      "palavras": 102,
+      "inicio": "1\n¡Tan dulce el nombre de Jesús!\nSus bellas notas al cantar; Que mi alma llena al proclamar\n¡El nombre de Jesús!\nCORO:\nCristo, ¡oh, qué dulce es! Cristo, para siempre es; Cristo, yo te aclamaré,\nPor siempre, ¡oh mi Cristo!\n2\nAdoro el nombre de Jesús;"
+    },
+    {
+      "id": "GT-111",
+      "titulo": "LAS PISADAS DEL MAESTRO",
+      "bloco": 1,
+      "palavras": 135,
+      "inicio": "1\nQuiero seguir las pisadas del Maestro: Quiero ir en pos de mi Rey y Señor;\nY modelando por él mi carácter, Canto con gozo a mi Redentor.\nCORO:\n¡Qué hermoso es seguir las pisadas del Maestro!\nSiempre en la luz, cerca de Jesús;\n¡Qué hermoso es seguir"
+    },
+    {
+      "id": "GT-112",
+      "titulo": "UN DÍA CRISTO VOLVERÁ",
+      "bloco": 1,
+      "palavras": 107,
+      "inicio": "1\nUn día Cristo volverá, Promesa fiel ¿faltar?, ¡jamás!\nComo se fue así vendrá\nY su pueblo ha de ver al Rey Jesús.\nCORO:\nMuy pronto, sí, Jesús vendrá, Y alegre le verá su pueblo;\n¡Velad! ¡Orad!, el Rey vendrá, Los suyos arrebatará.\n2\nLos mensajeros d"
+    },
+    {
+      "id": "GT-113",
+      "titulo": "GRACIAS SEAN DADAS AL BUEN SALVADOR",
+      "bloco": 1,
+      "palavras": 141,
+      "inicio": "1\nGracias sean dadas al buen Salvador, Libre es su amor, libre es su amor; Ha preparado para el pecador Fuente preciosa de amor.\nY si tú quieres en Cristo confiar,\nDe vida eterna irás a gozar; Inagotable es su amor.\nCORO:\nTierno te llama Jesús, ¿quie"
+    },
+    {
+      "id": "GT-114",
+      "titulo": "EN JESÚS MI SEÑOR ENCONTRÉ DULCE PAZ",
+      "bloco": 1,
+      "palavras": 102,
+      "inicio": "1\nEn Jesús, mi Señor, encontré dulce paz, En Jesús quien por mí se entregó;\nSi acudieres a él este don tú tendrás Ve, que a nadie jamás rechazó.\nCORO:\n¡Sublime don!, ¡don sin igual! Solamente él podrá conceder;\nEs un rayo de luz de su luz celestial, "
+    },
+    {
+      "id": "GT-116",
+      "titulo": "SI CREYERE PUEDE A EL VENIR",
+      "bloco": 1,
+      "palavras": 90,
+      "inicio": "1\n¡Oh qué gozo yo siento en mi corazón, No hay más oscuridad!\nEn Jesús he hallado gran bendición, Borró ya mi maldad.\nCORO:\nSi creyere, puede a él venir, Puede a él venir, si, puede a él venir;\nSi creyere puede a él venir, Jesucristo salvará.\n2\nAlaba"
+    },
+    {
+      "id": "GT-117",
+      "titulo": "AMA EL PASTOR SUS OVEJAS",
+      "bloco": 1,
+      "palavras": 165,
+      "inicio": "1\n¡Ama el Pastor sus ovejas! Con un amor paternal;\n¡Ama el Pastor su rebaño! Con un amor sin igual:\n¡Ama el Pastor a las otras Que descarriadas están, Y conmovido las busca\nPor dondequiera que van!\nCORO:\nPor el desierto errabundas Vense sufrir penas "
+    },
+    {
+      "id": "GT-119",
+      "titulo": "JESÚS ES MI AMIGO",
+      "bloco": 1,
+      "palavras": 208,
+      "inicio": "1\nJesús es mi amigo, mi buen amigo fiel, A mi alma es hermoso y sin par;\nMi Salvador y Guía, encuentro sólo en él La virtud que trae perfecto bienestar.\nMis penas y mis cuitas las llevo siempre a él Porque él me ha mandado hacerlo así;\nEn todo este m"
+    },
+    {
+      "id": "GT-120",
+      "titulo": "GRANDES COSAS CRISTO HA HECHO PARA MI",
+      "bloco": 1,
+      "palavras": 178,
+      "inicio": "1\nHallé un buen amigo, Mi amado Salvador,\nContaré lo que él ha hecho para mí: Hallándome perdido\nE indigno pecador,\nMe salvó y hoy me guarda para sí.\nMe salva del pecado, Me guarda de Satán:\nPromete estar conmigo hasta el fin;\n¡Aleluya!\nEl consuela m"
+    },
+    {
+      "id": "GT-122",
+      "titulo": "EL MEJOR AMIGO",
+      "bloco": 1,
+      "palavras": 111,
+      "inicio": "1\n¡Es Jesús el mejor amigo!\nCuando triste o tentado estés, Colmará de bendición\nTu transido corazón;\n¡Es Jesús el mejor amigo!\nCORO:\n¡Es Jesús el mejor amigo, Es Jesús el mejor amigo!\nEl tus súplicas oirá Y tu carga llevará;\n¡Es Jesús el mejor amigo!"
+    },
+    {
+      "id": "GT-123",
+      "titulo": "LA FUENTE ETERNA HALLÉ",
+      "bloco": 1,
+      "palavras": 106,
+      "inicio": "1\nPor fe contemplo redención, La fuente carmesí;\nJesús nos da la salvación, Su vida dio por mí.\nCORO:\nLa fuente sin igual hall De vida y luz el manantial;\n¡Oh gloria a Dios, me limpia a mí, Me limpia a mí, me limpia a mí!\n2\nMi vida entrego a mi Jesús"
+    },
+    {
+      "id": "GT-124",
+      "titulo": "CRISTO VIENE",
+      "bloco": 1,
+      "palavras": 158,
+      "inicio": "1\nCristo viene, esto es cierto, Porque así está escrito Siempre fiel a su promesa, Por los suyos ya regresa:\n¡Vedle ya, ved al Señor!\nTrae a aquellos que han dormido Ni uno solo se ha perdido;\nSI vendrá – ¡Oh, sí vendrá!\n2\nEl que en la cruz muriendo "
+    },
+    {
+      "id": "GT-125",
+      "titulo": "TODOS LOS QUE TENGAN SED",
+      "bloco": 1,
+      "palavras": 92,
+      "inicio": "1\nTodos los que tengan sed, beberán, beberán; Vengan cuantos pobres hay, comerán, comerán; No malgasten el haber, compren verdadero pan, Si a Jesús acuden hoy, gozarán, gozarán.\n2\nSi le prestan atención, les dará, les dará Parte en su pactado bien, e"
+    },
+    {
+      "id": "GT-126",
+      "titulo": "LAS PROMESAS DE JESÚS",
+      "bloco": 1,
+      "palavras": 97,
+      "inicio": "1\nTodas las promesas del Señor Jesús Son apoyo poderoso de mi fe;\nMientras luche aquí buscando yo su luz, Siempre en sus promesas confiaré.\nCORO:\nGrandes, fieles,\nLas promesas que el Señor Jesús ha dado Grandes, fieles,\nEn ellas para siempre confiaré"
+    },
+    {
+      "id": "GT-127",
+      "titulo": "EN BUSCA DE OBREROS",
+      "bloco": 1,
+      "palavras": 103,
+      "inicio": "1\nCristo está buscando obreros hoy Que quieran ir con él,\n¿Quién dirá: «Señor contigo voy, Yo quiero serte fiel?\nCORO:\n¡Oh Señor, es mucha la labor, Y obreros faltan ya;\nDanos luz, ardiente fe y valor, Y obreros siempre habrá!\n2\nCristo quiere mensaje"
+    },
+    {
+      "id": "GT-128",
+      "titulo": "VALOR Y FE",
+      "bloco": 1,
+      "palavras": 136,
+      "inicio": "1\nSi en tu senda .las nubes Agolparse ves,\nNo vaciles por ello, Ni flaqueen tus pies; Cada nube que venga No podrá traer\nMás que pruebas que pasan e Si hay valor y fe.\nCORO:\n¡Si hay valor y fe, si hay valor y fe, En la más oscura noche\nSiempre hay lu"
+    },
+    {
+      "id": "GT-130",
+      "titulo": "ME LEVANTÓ",
+      "bloco": 1,
+      "palavras": 103,
+      "inicio": "1\nMi Salvador, en su bondad, Al mundo malo descendió;\nY de hondo abismo de maldad El mi alma levantó.\nCORO:\n¡Seguridad me dio Jesús. Cuando su mano me tendió: Estando en sombra a plena luz, En su bondad me levantó!\n2\nSu voz constante resistí, Aunque "
+    },
+    {
+      "id": "GT-131",
+      "titulo": "PAZ",
+      "bloco": 1,
+      "palavras": 133,
+      "inicio": "1\nYa viene a mi alma un son, Un coro de gozo y paz,\nLo canto con grato amor; Dulce paz, el don de mi Dios.\nCORO:\n¡Paz, paz, dulce paz, Don precioso de Dios!\n¡Oh paz, maravilla de paz! El don de amor de mi Dios.\n2\nPor Cristo en la cruz vino paz Mi deu"
+    },
+    {
+      "id": "GT-132",
+      "titulo": "ESTAD POR CRISTO FIRMES",
+      "bloco": 1,
+      "palavras": 92,
+      "inicio": "1\n¡Estad por Cristo firmes, Soldados de la cruz! Alzad hoy la bandera En nombre de Jesús: Es vuestra la victoria, Con él por capitán; Por él serán vencidas Las huestes de Satán.\n2\n¡Estad por Cristo firmes!\nOs llama a la lid.\n¡Con él, pues, a la lucha"
+    },
+    {
+      "id": "GT-134",
+      "titulo": "LA LUZ DE DIOS",
+      "bloco": 1,
+      "palavras": 156,
+      "inicio": "1\nSi al cruel enemigo temes combatir, Si la duda agobia siempre tu existir;\n¡Que la hermosa luz de Dios fulgure en ti!\nY serás feliz así,\nCORO:\n¡Deja penetrar la luz!\n¡Deja penetrar la luz!\n¡Que la hermosa luz de Dios fulgure en ti!\nY serás feliz así"
+    },
+    {
+      "id": "GT-135",
+      "titulo": "TÚ AMARAS A CRISTO",
+      "bloco": 1,
+      "palavras": 115,
+      "inicio": "1\nTú que vagas en las tinieblas, Lejos de Cristo y de su amor; Ven y ve cuán amante es Cristo, Ven, contempla a tu Salvador.\nCORO:\n¡Oh, cuánto tú amarás a Cristo, Al mirar la gloria del Señor! Su corazón fue quebrantado\nEn la cruz, por ti, por mí.\n2\n"
+    },
+    {
+      "id": "GT-136",
+      "titulo": "SOY SALVO",
+      "bloco": 1,
+      "palavras": 122,
+      "inicio": "1\nCristo del cielo a buscarme Vino a la tierra, se humilló: Cuando vagaba yo en la noche, El me buscó y mi alma salvó.\nCORO:\n¡Soy salvo, éste es mi canto!\nCristo me salva, ¡oh cuán glorioso!\n¡Soy salvo, miro su gloria! Doy alabanzas al Salvador.\n2\nCr"
+    },
+    {
+      "id": "GT-137",
+      "titulo": "SIEMPRE ORAD",
+      "bloco": 1,
+      "palavras": 107,
+      "inicio": "1\n«Siempre orad», muy pronto viene Cristo, Guarda bien tu corazón;\nRetén firme todo lo que tienes, Tú tendrás tu galardón.\nCORO:\n«Siempre orad», nos manda Cristo, Y velad\ten oración;\nPronto vendrá\tél en las nubes,\nNos dará su bendición.\n2\n«Siempre or"
+    },
+    {
+      "id": "GT-138",
+      "titulo": "LA FUENTE SANADORA",
+      "bloco": 1,
+      "palavras": 95,
+      "inicio": "1\n¡Ved la fuente sanadora, La que abrió el Salvador! Cuyas aguas refrescantes Son de perennal valor.\nCORO:\n¡Oh preciosa fuente sanadora!\nPara todos fluye libre;\n¡Oh preciosa fuente sanadora!\n¡Gloria a Dios!, me sana a mí.\n2\nEn la fuente que nos sana "
+    },
+    {
+      "id": "GT-139",
+      "titulo": "QUIERO VER MI PATRIA",
+      "bloco": 1,
+      "palavras": 130,
+      "inicio": "1\nQuiero ver a Jesucristo mi precioso Salvador, Quiero ver el alto cielo, ver el trono del Señor;\nVer la faz de mi Maestro, quien por mi sufrió la cruz, Viviré en esa patria de eterno gozo y luz.\nCORO:\nQuiero ver\taquella tierra,\nDonde rei\tna eterno a"
+    },
+    {
+      "id": "GT-140",
+      "titulo": "MAS SANTIDAD DAME",
+      "bloco": 1,
+      "palavras": 93,
+      "inicio": "1\nMás santidad dame, más odio al mal, Más calma en las penas, más alto ideal; Más fe en mi Maestro, más consagración, Más celo en servirle, más grata oración.\n2\nMás prudente hazme, más sabio en él, Más firme en su causa, más fuerte y más fiel:\nMás re"
+    },
+    {
+      "id": "GT-141",
+      "titulo": "VIENE OTRA VEZ",
+      "bloco": 1,
+      "palavras": 118,
+      "inicio": "1\nCantan los ángeles con dulce voz, Canten los hombres con sonora voz: Cristo vendrá nuestro Rey vencedor, Cristo vendrá otra vez.\nCORO:\n¡Viene otra vez, viene otra vez, En gloria viene al mundo otra vez: Viene otra vez, viene otra vez,\nEl viene pron"
+    },
+    {
+      "id": "GT-142",
+      "titulo": "CUANDO TE QUIERO MAS",
+      "bloco": 1,
+      "palavras": 101,
+      "inicio": "1\nCuando te quiero cerca tú estás: Mi buen Jesús, no me dejarás; Con tu potencia me sostendrás, Cuando te quiero más.\nCORO:\n||Cuando te quiero más.|| Cerca tú estás, mi buen Salvador, Cuando te quiero más.\n2\nCuando te quiero listo tú estás, Y abandon"
+    },
+    {
+      "id": "GT-144",
+      "titulo": "¡OH, CUANTO AMO A CRISTO!",
+      "bloco": 1,
+      "palavras": 97,
+      "inicio": "1\nEs Cristo quien por mi murió, Mis culpas por borrar;\n¡Cuán grandes penas él sufrió Mi alma al rescatar!\nCORO:\n¡Oh, cuánto amo a Cristo!\n¡Oh, cuánto amo a Cristo!\n¡Oh, cuánto amo a Cristo! Porque antes me amó.\n2\nJesús su sangre derramó, Mi Rey por m"
+    },
+    {
+      "id": "GT-145",
+      "titulo": "EL PAÍS DE BEULAH",
+      "bloco": 1,
+      "palavras": 178,
+      "inicio": "1\nMoro yo en las alturas, Donde encuentro gozo y paz, En el país de las bellezas, Donde tú vivir podrás;\nEs el país de hermosura, Do se cortan bellas flores, Que derraman sus olores En el alma de dolor.\nCORO:\n¿No será el país de Beulah, País feliz de"
+    },
+    {
+      "id": "GT-146",
+      "titulo": "ME BUSCA A MÍ",
+      "bloco": 1,
+      "palavras": 183,
+      "inicio": "1\nEl Rey de gloria al cielo dejó, Pobre, humilde al mundo llegó; Dolor y muerte de cruz él sufrió, Me busca a mí, a mí.\nCORO:\n||Me busca a mí, a mí,|| Maravilloso es su gran amor; Me busca a mí, a mí.\n2\nEl Rey de gloria clavado a la cruz, Así murió p"
+    },
+    {
+      "id": "GT-147",
+      "titulo": "LAS BUENAS NUEVAS",
+      "bloco": 1,
+      "palavras": 155,
+      "inicio": "1\nVe, ve oh Sion, tu gran destino cumple: Que Dios es luz, al mundo proclamad, Que el Hacedor de las naciones quiere Que nadie muera en densa oscuridad.\nCORO:\n¡Alegres nuevas al mundo dad!\nNuevas de redención, de amor y libertad.\n2\nVe cuántos miles y"
+    },
+    {
+      "id": "GT-148",
+      "titulo": "FUENTE DE LA VIDA ETERNA",
+      "bloco": 1,
+      "palavras": 93,
+      "inicio": "1\nFuente de la vida eterna Y de toda bendición; Ensalzar tu gracia tierna Debe cada corazón;\nTu piedad inagotable, Abundante en perdonar; Único ser adorable, Gloria a ti debemos dar.\n2\nDe los cánticos celestes Te quisiéramos cantar, Entonados por las"
+    },
+    {
+      "id": "GT-149",
+      "titulo": "BAUTÍCESE CADA UNO",
+      "bloco": 1,
+      "palavras": 112,
+      "inicio": "1\nEn las aguas de la muerte Sumergido fue \"Jesús,\nMas su amor no fue apagado Por sus penas en la cruz: Levantóse de la tumba, Sus cadenas quebrantó,\nY triunfante y victorioso A los cielos ascendió.\n2\nEn las aguas del bautismo Hoy confieso yo mi fe: J"
+    },
+    {
+      "id": "GT-150",
+      "titulo": "NO ME AVERGÜENZO DE JESÚS",
+      "bloco": 1,
+      "palavras": 138,
+      "inicio": "1\n¿Ser posible, mi Señor, que me avergüence yo de ti, De ti, Señor, mi Salvador, que ángeles adoran hoy!\n¡Avergonzarme de Jesús, mi único amigo fiel!\n¡No, mi Señor! Te adoro, hoy, eterno Rey, mi Salvador.\nCORO:\n¡No, mi Señor! Te adoro, hoy, eterno Re"
+    },
+    {
+      "id": "GT-152",
+      "titulo": "BIENAVENTURADOS LOS DE LIMPIO CORAZÓN",
+      "bloco": 1,
+      "palavras": 150,
+      "inicio": "1\nBienaventurados son los de limpio corazón, Que no aman el tesoro de aquí:\nDe tranquilidad y paz gozan cada día más Y del cielo el gozo tienen ya en sí.\nCORO:\n¡Oh, cantemos aleluya! Si, de todo corazón;\nPor amor al Salvador, a su nombre dad loor Y p"
+    },
+    {
+      "id": "GT-154",
+      "titulo": "¡VEN A EL, VEN A EL!",
+      "bloco": 1,
+      "palavras": 125,
+      "inicio": "1\n¿De Jesús no escuchas tierno llamamiento:\n«Ven a mí, pecador»?\nQuiere darte su perdón, paz y contento: Ven a él, pecador.\nCORO:\nTe llama con un tierno acento, Tu vida quiere redimir;\nOye del Señor el tierno llamamiento:\n«Ven a mí, ven a mí,»\n2\nDe t"
+    },
+    {
+      "id": "GT-156",
+      "titulo": "EL CUIDARA DE MÍ",
+      "bloco": 1,
+      "palavras": 127,
+      "inicio": "1\n¿Cómo podré estar triste, Cómo entre sombras ir; Cómo sentirme solo\nY en el dolor vivir;\nSi Cristo es mi consuelo, Mi amigo siempre fiel,\n||Si aún las aves tienen Seguro asilo en él? ||\nCORO:\nFeliz, cantando alegre, Yo vivo siempre aquí: Si él cuid"
+    },
+    {
+      "id": "GT-157",
+      "titulo": "NO LO HAY",
+      "bloco": 1,
+      "palavras": 152,
+      "inicio": "1\nNo hay cual Jesús otro fiel amigo, No lo hay, no lo hay;\nOtro que pueda salvar las almas, No lo hay, no lo hay.\nCORO:\nConoce todas nuestras luchas, Y sólo él nos sostendrá;\nNo hay cual Jesús otro fiel amigo, No lo hay, no lo hay.\n2\nNo hay otro amig"
+    },
+    {
+      "id": "GT-159",
+      "titulo": "LA PATRIA DEL ALMA",
+      "bloco": 1,
+      "palavras": 102,
+      "inicio": "1\nCantaré, cantaré, del hermoso país, El lejano, glorioso jardín,\n||Donde ha de vivir el alma feliz Mientras vuelen los siglos sin fin. ||\n2\n¡Oh la patria del alma! en sueños se ve Sus muros de jaspe y cristal;\n||Y cercano parece aquel bello Edén, Ra"
+    },
+    {
+      "id": "GT-161",
+      "titulo": "PECADOR, VEN AL DULCE JESÚS",
+      "bloco": 1,
+      "palavras": 103,
+      "inicio": "1\nPecador, ven al dulce Jesús, Y feliz para Siempre serás:\nSi en verdad le quisieres tener, Al divino Señor hallarás.\nCORO:\n||Ven a él, ven a él,\nQue te espera tu buen Salvador.||\n2\nSi cual hijo que necio pecó\nVas buscando a sus pies compasión, Tiern"
+    },
+    {
+      "id": "GT-162",
+      "titulo": "¡OH AMOR QUE NO ME DEJARAS!",
+      "bloco": 1,
+      "palavras": 113,
+      "inicio": "1\n¡Oh amor que no me dejarás! Descansa mi alma siempre en ti; Es tuya y tú la guardarás,\nY en el océano de tu amor Más rica al fin será.\n2\n¡Oh luz que en mi sendero vas! Mi antorcha débil rindo a ti;\nSu luz apaga el corazón, Seguro de encontrar en ti"
+    },
+    {
+      "id": "GT-163",
+      "titulo": "VOZ DE GRATITUD",
+      "bloco": 1,
+      "palavras": 139,
+      "inicio": "1\nLa gloria de Cristo el Señor cantaré, Pues llena mi vida de gozo y de paz: Callar los favores que de él alcancé, Mi labio no puede jamás.\nCORO:\nEs todo bondad para mí, Con él nada puedo desear;\nPues todos mis altos deseos aquí Tan sólo él los puede"
+    },
+    {
+      "id": "GT-164",
+      "titulo": "JESÚS ES TODO PARA MÍ",
+      "bloco": 1,
+      "palavras": 121,
+      "inicio": "1\nCristo el Señor es para mí Consuelo, dicha y paz;\nEn él tan sólo encuentro yo Descanso, amor, solaz:\nSi en mis tristezas voy a él,\n||Hallo un amigo siempre fiel,|| En Jesús.\n2\nEn mis conflictos con el mal No hay uno cual Jesús\nQue pueda darme prote"
+    },
+    {
+      "id": "GT-167",
+      "titulo": "SANTO ESPÍRITU, DESCIENDE",
+      "bloco": 1,
+      "palavras": 123,
+      "inicio": "1\nSanto Espíritu, desciende A mi pobre corazón; Llénalo de tu presencia\nY haz en él tu habitación.\nCORO:\n¡Llena hoy, llena hoy, Llena hoy mi corazón!\n¡Santo Espíritu, desciende Gloria y haz en mi tu habitación!\n2\nDe tu gracia puedes darme Inundando e"
+    },
+    {
+      "id": "GT-168",
+      "titulo": "CARA A CARA",
+      "bloco": 1,
+      "palavras": 106,
+      "inicio": "1\nEn presencia estar de Cristo, Ver su rostro, ¿qué será? Cuando al fin en pleno gozo Mi alma le contemplará.\nCORO:\n¡Cara a cara espero verle, Más allá del cielo azul; Cara a cara en plena\nHe de ver a mi Jesús!\n2\nSólo tras oscuro velo Hoy lo puedo aq"
+    },
+    {
+      "id": "GT-170",
+      "titulo": "LA PALABRA HOY SEMBRADA",
+      "bloco": 1,
+      "palavras": 123,
+      "inicio": "1\nLa palabra hoy sembrada Hazla, Cristo, en mi nacer, Para darle crecimiento Sólo tienes tú poder:\n||Ricos frutos tú nos puedes conceder.||\n2\nLa semilla que tu siervo Ha sembrado con saber, No permitas que las aves Se la vengan a comer:\n||Ricos fruto"
+    },
+    {
+      "id": "GT-171",
+      "titulo": "MEDITAD",
+      "bloco": 1,
+      "palavras": 187,
+      "inicio": "1\nMeditad en que hay un hogar, En la margen del río de luz, Donde van para siempre a gozar Los creyentes en Cristo Jesús.\nCORO:\nMás allá, más allá, Meditad en que hay un hogar, Más allá, más allá, más allá,\nEn la margen del río de luz.\n2\nMeditad en q"
+    },
+    {
+      "id": "GT-172",
+      "titulo": "JESÚS, YO HE PROMETIDO",
+      "bloco": 1,
+      "palavras": 132,
+      "inicio": "1\nJesús, yo he prometido Servirle con amor; Concédeme tu gracia, Mi amigo y Salvador.\nNo temeré la lucha\nSi tú a mi lado estás, Ni perderé el camino Si tú guiando vas.\n2\nEl mundo está muy cerca Y abunda en tentación; Suave es el engaño\nY es necia la "
+    },
+    {
+      "id": "GT-173",
+      "titulo": "DESPLIEGUE EL CRISTIANO",
+      "bloco": 1,
+      "palavras": 161,
+      "inicio": "1\nDespliegue el cristiano su santa bandera Y muéstrela ufano del mundo a la faz:\n¡Soldados valientes!, el triunfo os espera; Seguid vuestra lucha constante y tenaz.\nCORO:\nCristo nos gula, es nuestro Jefe, Y con nosotros siempre estará; Nada temamos, "
+    },
+    {
+      "id": "GT-174",
+      "titulo": "BUSCANDO A JESÚS",
+      "bloco": 1,
+      "palavras": 99,
+      "inicio": "1\nDébil, pobre, ciego soy, Nada puede en mi valer, Y a tu cruz ansioso voy, Do salud podré tener.\nCORO:\nYo confío sólo en ti,\n¡Oh Jesús, mi Salvador! Dame paz, dame perdón; Dame hoy tu salvación.\n2\nMucho tiempo el mal en mí Ha reinado sin cesar,\nY ho"
+    },
+    {
+      "id": "GT-175",
+      "titulo": "¡OH CRISTO MÍO!",
+      "bloco": 1,
+      "palavras": 110,
+      "inicio": "1\n¡Oh! Cristo mío, eres tú mi amigo fiel, Seguro amparo sólo en ti tendré;\nEn mis aflicciones, buen. Jesús, iré a ti Y consuelo y dicha me darás, ¡oh, sí!\nCORO:\nCristo, ven más cerca; Paz perfecta en mi alma pon,\nCerca, si, más cerca, de mi corazón.\n"
+    },
+    {
+      "id": "GT-177",
+      "titulo": "NO TE DE TEMOR HABLAR POR CRISTO",
+      "bloco": 1,
+      "palavras": 141,
+      "inicio": "1\n¡No te dé temor hablar por Cristo!\nHaz que brille en ti su luz;\nAl que te salvó confiesa siempre, Todo debes a Jesús.\nCORO:\n¡No te dé temor, no te dé temor, Nunca, nunca, nunca:\nEs tu amante Salvador, Nunca, pues, te dé temor!\n2\n¡No te dé temor hac"
+    },
+    {
+      "id": "GT-179",
+      "titulo": "¡TRABAJAD, TRABAJAD!",
+      "bloco": 1,
+      "palavras": 100,
+      "inicio": "1\n¡Trabajad! ¡Trabajad! Somos siervos de Dios, Seguiremos la senda que el Maestro trazó; Renovando las fuerzas con bienes que da,\nEl deber que nos toca cumplido será.\nCORO:\n¡Trabajad! ¡Trabajad!\n¡Esperad, y velad!\n¡Confiad! ¡Siempre orad!\n¡Que el Mae"
+    },
+    {
+      "id": "GT-180",
+      "titulo": "LAS SANTAS ESCRITURAS",
+      "bloco": 1,
+      "palavras": 98,
+      "inicio": "1\nPadre, tu palabra es Mi delicia y mi solaz:\nGuíe siempre aquí mis pies Y a mi pecho traiga paz.\nCORO:\nEs tu ley, Señor, Faro celestial\nQue, en perenne resplandor, Norte y guía da al mortal.\n2\nSI, obediente oí tu voz; En tu gracia fuerza hallé Y con"
+    },
+    {
+      "id": "GT-181",
+      "titulo": "ESCUCHAD, JESÚS NOS DICE",
+      "bloco": 1,
+      "palavras": 107,
+      "inicio": "1\nEscuchad, Jesús nos dice:\n«¿Quiénes van a trabajar? Campos blancos hoy aguardan Que los vayan a segar.»\nÉl nos llama cariñoso, Nos constriñe con su amor;\n¿Quién responde a su llamada:\n«Heme aquí, yo iré, Señor?»\n2\nSi por tierras o por mares No pudi"
+    },
+    {
+      "id": "GT-182",
+      "titulo": "¡GLORIA A TI, JESÚS DIVINO",
+      "bloco": 1,
+      "palavras": 102,
+      "inicio": "1\n¡Gloria a ti, Jesús Divino!\n¡Gloria a ti por tus bondades!\n¡Gloria eterna a tus piedades!\nQuerido Salvador.\nCORO:\n¡Gloria, gloria, aleluya!\n¡Gloria, gloria, aleluya!\n¡Gloria, gloria, aleluya! A nuestro Salvador.\n2.\nTú me amaste con ternura, Y por m"
+    },
+    {
+      "id": "GT-183",
+      "titulo": "CANTA, ¡OH BUEN CRISTIANO!",
+      "bloco": 1,
+      "palavras": 96,
+      "inicio": "1\n¡Canta, oh buen cristiano!\nDulce será cantar, Hace el camino llano, Libra el pesar:\nCanta en las noches tristes, Canta en el sol y en luz;\nEl mal así resistes, Canta de Jesús.\n2\n¡Canta, oh buen cristiano!\nTempla tu corazón;\nAlza a tu Soberano Tu fe"
+    },
+    {
+      "id": "GT-186",
+      "titulo": "PRESENTIMOS DEL MUNDO DICHOSO",
+      "bloco": 1,
+      "palavras": 109,
+      "inicio": "1\nPresentimos del mundo dichoso. Los placeres que Dios nos dará; El país lo creemos hermoso: Mas hallarnos allí ¿qué será?\nCORO:\n¿Qué será? ¿Qué será?\nMas hallarnos allí ¿qué será?\n¿Qué será? ¿Qué será?\nMas hallarnos allí ¿qué será?\n2\nEsperamos el go"
+    },
+    {
+      "id": "GT-187",
+      "titulo": "YO GUIARÉ",
+      "bloco": 1,
+      "palavras": 125,
+      "inicio": "1\nYo guiaré al peregrino extraviado, Bondadoso hasta el pie de la cruz; Yo diré al corazón angustiado: Hallarás tu consuelo en Jesús.\nCORO:\nYo guiaré, yo guiaré,\nAl sediento de vida y de luz; Yo guiaré, yo guiaré,\nAl perdido a los pies de Jesús.\n2\nYo"
+    },
+    {
+      "id": "GT-188",
+      "titulo": "BELLAS PALABRAS DE VIDA",
+      "bloco": 1,
+      "palavras": 111,
+      "inicio": "1\n¡Oh, cantádmelas otra vez! Bellas palabras de vida; Hallo en ellas mi gozo y luz, Bellas palabras de vida;\nSi, de luz y vida; Son sostén y a:\n|| ¡Qué bellas son, qué bellas son!\nBellas palabras de vida.||\n2\nJesucristo a todos da Bellas palabras de "
+    },
+    {
+      "id": "GT-189",
+      "titulo": "YO ESPERO LA MAÑANA",
+      "bloco": 1,
+      "palavras": 93,
+      "inicio": "1\nYo espero la mañana De aquel día sin igual,\nDe donde la dicha emana Y do el gozo es eternal.\nCORO:\nEsperando, esperando Otra vida sin dolor,\nDo me den la bienvenida De Jesús, mi Salvador.\n2\nYo espero la victoria, De la muerte al fin triunfar:\nRecib"
+    },
+    {
+      "id": "GT-190",
+      "titulo": "YO CONSAGRO A TÍ MI VIDA",
+      "bloco": 1,
+      "palavras": 91,
+      "inicio": "1\nYo consagro a ti mi vida,\n¡Oh querido y buen Jesús!\nY tu mano bendecida Llevaráme en clara luz.\nCORO:\nTrabajando, trabajando, Viviré por mi Señor: Buenas nuevas anunciando Al perdido pecador.\n2\nMil temores y mil dudas Por doquier me asediarán;: Per"
+    },
+    {
+      "id": "GT-192",
+      "titulo": "DEJO EL MUNDO Y SIGO A CRISTO",
+      "bloco": 1,
+      "palavras": 106,
+      "inicio": "1\nDejo el mundo y sigo a Cristo, Porque el mundo pasará; Mas su amor, amor bendito, Por los siglos durará.\nCORO:\n¡Oh, qué gran misericordia!\n¡Oh, de amor sublime don!\n¡Plenitud de vida eterna, Prenda viva de perdón!\n2\nDejo el mundo y sigo a Cristo, P"
+    },
+    {
+      "id": "GT-194",
+      "titulo": "GLORIA A LA TRINIDAD",
+      "bloco": 1,
+      "palavras": 103,
+      "inicio": "1\nA nuestro Padre Dios Alcemos nuestra voz;\n¡Gloria a él!\nTal fue su amor que dio Al Hijo que murió,\nEn quien confío yo;\n¡Gloria a él!\n2\nA nuestro Salvador Demos con fe loor;\n¡Gloria a él!\nSu sangre derramó, Con ella me lavó.\nY el cielo me abrió;\n¡Gl"
+    },
+    {
+      "id": "GT-195",
+      "titulo": "SOLDADOS DE CRISTO",
+      "bloco": 1,
+      "palavras": 114,
+      "inicio": "1\nSoldados de Cristo que estáis en la lid, Luchad sin desmayo, pelead con valor: Seguid adelante y luchando decid:\n¡Rendíos a Cristo, él es el Señor!\nCORO:\n¡Oh! jóvenes, niños y ancianos, marchad, Llevando en las manos las armas de luz; Las almas per"
+    },
+    {
+      "id": "GT-196",
+      "titulo": "CUANDO LEO EN LA BIBLIA",
+      "bloco": 1,
+      "palavras": 182,
+      "inicio": "1\nCuando leo en la Biblia cómo llama Jesús Y bendice a los niños con amor:\nYo también quisiera estar, Y con ellos descansar,\nEn los brazos del tierno Salvador.\n2\nVer quisiera sus manos sobre mí reposar, Cariñosos abrazos de él sentir;\nSus miradas dis"
+    },
+    {
+      "id": "GT-197",
+      "titulo": "¡OH JÓVENES VENID!",
+      "bloco": 1,
+      "palavras": 158,
+      "inicio": "1\n¡Oh jóvenes, venid, su brillante pabellón Cristo ha desplegado ante la nación:\nA todos en sus filas os quiere recibir; Y con él a la pelea os hará salir!\nCORO:\n¡Vamos a Jesús, alistados sin temor; Vamos a la lid, inflamados de valor! Jóvenes, luche"
+    },
+    {
+      "id": "GT-199",
+      "titulo": "GOZO LA SANTA PALABRA AL LEER",
+      "bloco": 1,
+      "palavras": 109,
+      "inicio": "1\nGozo la Santa Palabra al leer, Cosas preciosas allí puedo ver,\nY es la más bella que el buen Redentor Tiene a los niños muy tierno amor.\nCORO:\n¡Con tierno amor me ama Jesús, Me ama Jesús, me ama Jesús; Con tierno amor me ama Jesús, Me ama aún a mí!"
+    },
+    {
+      "id": "GT-201",
+      "titulo": "LA LUCHA SIGUE",
+      "bloco": 1,
+      "palavras": 123,
+      "inicio": "1\nLuchando estáis; aún suena la trompeta hoy Llamando a los soldados a la lid;\nA Jesucristo con valor decid: «Yo voy» Y él os dirá: «Venid, oh si, venid!».\nCORO:\nLa lucha sigue, oh cristianos, Y brazo a brazo lucharéis;\nEn Jesucristo seguid confiando"
+    },
+    {
+      "id": "GT-205",
+      "titulo": "EL REPOSO",
+      "bloco": 1,
+      "palavras": 113,
+      "inicio": "1\nSalvo en los tiernos brazos De mi Jesús seré;\nY en su amoroso pecho Siempre reposaré:\nEste es, sin duda, el eco De celestial canción Que de inefable gozo Llena mi corazón.\nCORO:\nSalvo en los tiernos brazos De mi Jesús seré;\nY en su amoroso pecho Si"
+    },
+    {
+      "id": "GT-207",
+      "titulo": "SUENEN DULCES HIMNOS",
+      "bloco": 1,
+      "palavras": 123,
+      "inicio": "1\n¡Suenen dulces himnos, gratos al Señor.\nY óiganse en concierto universal! Desde el alto cielo baja el Salvador Para beneficio del mortal.\nCORO:\n¡Gloria!, ¡gloria sea a nuestro Dios!\n¡Gloria, sí, cantemos a una voz!\nY el cantar de gloria que se oyó "
+    },
+    {
+      "id": "GT-208",
+      "titulo": "LUGAR PARA CRISTO",
+      "bloco": 1,
+      "palavras": 169,
+      "inicio": "1\nTú dejaste tu trono y corona por mí Al venir a Belén a nacer\nMas a ti no fue dado el entrar al mesón Y en pesebre te hicieron nacer.\nCORO:\nVen a mi corazón, ¡oh Cristo!, Pues en él hay lugar para ti;\nVen a mi corazón, ¡oh Cristo!, ven, Pues en él h"
+    },
+    {
+      "id": "GT-209",
+      "titulo": "¡OH, GLORIA INENARRABLE!",
+      "bloco": 1,
+      "palavras": 156,
+      "inicio": "1\n¡Oh gloria inenarrable!\n¡Prodigio sin segundo!\n¡Dios mismo viene al mundo Naciendo de mujer!\nY vemos en sus brazos, Al seno recogido, Cual niño desvalido,\nDe cielo y tierra al Rey.\n2\n¡Venid, gentes y pueblos!\n¡Venid con afán santo!\nNo os cause mudo"
+    },
+    {
+      "id": "GT-210",
+      "titulo": "LOS HERALDOS CELESTIALES",
+      "bloco": 1,
+      "palavras": 142,
+      "inicio": "1\nLos heraldos celestiales Cantan con sonora voz:\n¡Gloria al Rey recién nacido, Que del cielo descendió! Paz, misericordia plena, Franca reconciliación\nEntre Dios tan agraviado Y el mortal que le ofendió.\n2\nLa Divinidad sublime En la carne se veló;\nV"
+    },
+    {
+      "id": "GT-211",
+      "titulo": "¡GLORIA A DIOS EN LAS ALTURAS!",
+      "bloco": 1,
+      "palavras": 150,
+      "inicio": "1\n¡Gloria a Dios en las alturas, Que mostró su gran amor! Dando a humanas criaturas Un potente Salvador.\nCon los himnos de los santos Hagan coro nuestros cantos De alabanza y gratitud\nPor la divinal salud, Y digamos a una voz:\n¡En los cielos gloria a"
+    },
+    {
+      "id": "GT-213",
+      "titulo": "UN AMIGO HAY MAS QUE HERMANO",
+      "bloco": 1,
+      "palavras": 99,
+      "inicio": "1\nUn amigo hay más que hermano, Cristo el Señor,\nQuien llevó en su cuerpo humano Nuestro dolor:\nEste Amigo moribundo, Padeciendo por el mundo,\nLe mostró su amor profundo;\n¡DadIe loor!\n2\nConocerle es vida eterna, Cristo el Señor;\nTodo aquel que quiera"
+    },
+    {
+      "id": "GT-215",
+      "titulo": "EL GRAN DÍA DEL JUICIO",
+      "bloco": 1,
+      "palavras": 161,
+      "inicio": "1\nSoñé que el gran día del juicio Llegó, y sonó el clarín;\nSoñé ver los pueblos reunidos Para oír de su suerte sin fin; Del cielo bajó un gran ángel, Y, parado en tierra y mar, Juró con su diestra alzada\nQue el tiempo ya no más será.\nCORO:\nCon llanto"
+    },
+    {
+      "id": "GT-217",
+      "titulo": "LA SANTA CENA",
+      "bloco": 1,
+      "palavras": 96,
+      "inicio": "1\nSanta Cena, para mí Eres memorial aquí;\nTú me enseñas con verdad El misterio de bondad; Me recuerdas de la cruz, Del Cordero, mi Jesús.\n2\nTú elevas nuestro ser Al angélico placer; Tipificas con señal\nLa crucifixión pascual. Comulguemos al tomar De "
+    },
+    {
+      "id": "GT-218",
+      "titulo": "YO ME ACUERDO",
+      "bloco": 1,
+      "palavras": 130,
+      "inicio": "1\nYo me acuerdo que Jesús por mí murió En la cruz, en el Calvario él sufrió.\nYo me acuerdo que él murió, su Espíritu entregó, Pues por mí el Señor murió.\nCORO:\nYo me acuerdo que Jesús pagó por mí Mi gran deuda: hoy estoy libre aquí;\nPor la sangre de "
+    },
+    {
+      "id": "GT-219",
+      "titulo": "DIOS BENDIGA LAS ALMAS UNIDAS",
+      "bloco": 1,
+      "palavras": 150,
+      "inicio": "1\nDios bendiga las almas unidas. Por los lazos de amor sacrosanto, Y las guarde de todo quebranto En el mundo de espinas erial.\nQue el hogar que a formarse comienza, Con la unión de estos dos corazones, Goce siempre de mil bendiciones\nAl amparo del D"
+    },
+    {
+      "id": "GT-220",
+      "titulo": "HOGAR DE MIS RECUERDOS",
+      "bloco": 1,
+      "palavras": 122,
+      "inicio": "1\nHogar de mis recuerdos, A ti volver anhelo;\nNo hay sitio bajo el cielo Más dulce que el hogar. Posara yo .en palacios, Corriendo el mundo entero, A todos yo prefiero\nMi hogar, mi dulce hogar.\nCORO:\n¡Mi hogar, mi hogar, mi dulce hogar!\nNo hay sitio "
+    },
+    {
+      "id": "GT-222",
+      "titulo": "DISIPADAS LAS NEBLINAS",
+      "bloco": 1,
+      "palavras": 124,
+      "inicio": "1\nDisipadas las neblinas, A la vista de esplendor De las sierras y las rías A la luz y amor del sol.\nDel Señor el arco viendo, De promesas la señal, Con amigos verdaderos Gozaremos claridad.\nCORO:\nComo nos conocerán, Llegaremos a tener\nPleno y recto "
+    },
+    {
+      "id": "GT-223",
+      "titulo": "JESUCRISTO DESDE EL CIELO",
+      "bloco": 1,
+      "palavras": 92,
+      "inicio": "1\nJesucristo desde el cielo, Con benigna voz de amor, A su lado te convida, Desdichado pecador.\n2\nNo rechaces su llamada, Abre ya tu corazón;\nÉl te ofrece paz, consuelo Y perfecta salvación.\n3\nÉl te ama con ternura, En la cruz lo demostró; Pues alli "
+    },
+    {
+      "id": "GT-225",
+      "titulo": "SU SANGRE DERRAMO JESÚS",
+      "bloco": 1,
+      "palavras": 99,
+      "inicio": "1\nSu sangre derramó Jesús La sangre te puede limpiar; Para nosotros en la cruz, La sangre te puede limpiar.\nCORO:\n||La sangre te puede limpiar,||\nTus muchos pecados Dios puede quitarte.\nLa sangre te puede limpiar.\n2\n¿Deseas tú andar con Dios? La sang"
+    },
+    {
+      "id": "GT-226",
+      "titulo": "A LA BATALLA Y A LA VICTORIA",
+      "bloco": 1,
+      "palavras": 142,
+      "inicio": "1\n¡A la batalla y a la victoria! Vamos con Dios nuestro Rey,\nQue con su brazo fuerte y robusto Siempre defiende su grey.\nPues sin temor avancemos Entusiasmados por fe, Mientras alegres cantemos Gloria a Dios nuestro Rey.\nCORO:\nNo es la victoria de lo"
+    },
+    {
+      "id": "GT-227",
+      "titulo": "¡OH DIOS, VISÍTANOS!",
+      "bloco": 1,
+      "palavras": 116,
+      "inicio": "1\n¡Oh Dios, visítanos, no tardes! Mándanos, ¡oh Señor!, tu poder; Venimos hoya tus altares, Manifiesta, ¡oh Señor!, tu poder; Es tu promesa, Salvador,\nDarnos el gran Consolador, Que nos dará mayor fervor;\nSí, demuestra, ¡oh Señor!, tu poder.\n2\nDios d"
+    },
+    {
+      "id": "GT-228",
+      "titulo": "VENID TODOS A LA LID",
+      "bloco": 1,
+      "palavras": 95,
+      "inicio": "1\nVenid, ¡oh!, venid todos a la lid; Marchad, si, marchad tras el Señor; Valor, si, valor, firmes sin temor, Vamos a vencer al tentador.\nCORO:\n¡Adelante!, ¡oh soldados todos! Estad firmes, todos con valor;\n¡Adelante!, si, gritando todos:\n«¡La victori"
+    },
+    {
+      "id": "GT-229",
+      "titulo": "HAY MUCHOS QUE VIVEN EN DENSAS TINIEBLAS",
+      "bloco": 1,
+      "palavras": 93,
+      "inicio": "1\nHay muchos que viven en densas tinieblas Por falta del buen Salvador;\nMas hoy mensajeros proclaman sus glorias Y brilla doquier su fulgor.\nCORO:\nEl reino ya viene, decid la historia, El reino del buen Redentor;\nY todo el globo cubierto de gloria La"
+    },
+    {
+      "id": "GT-230",
+      "titulo": "CIMIENTO ETERNO DE LA FE",
+      "bloco": 1,
+      "palavras": 220,
+      "inicio": "1\n¡Cuán firme cimiento se ha dado a la fe, De Dios en su eterna Palabra de amor!\n¿Qué más él pudiera en su libro añadir\n||Si todo a sus hijos lo ha dicho el Señor? ||\n2\n«Ya te halles enfermo o en plena salud, Ya rico, ya pobre se encuentre tu ser, En"
+    },
+    {
+      "id": "GT-231",
+      "titulo": "¡TRIUNFO! ¡TRIUNFO!",
+      "bloco": 1,
+      "palavras": 93,
+      "inicio": "1\n¡Triunfo! ¡Triunfo!; cantemos la gloria Del Rey poderoso, por cuya victoria Quedó abolido el poder de la muerte El fuerte vencido por Uno más fuerte: Jesús vencedor, y vencido Satán.\n2\nEl Crucificado, por Dios coronado, Señor de señores será procla"
+    },
+    {
+      "id": "GT-232",
+      "titulo": "¿QUIEN A CRISTO QUIERE?",
+      "bloco": 1,
+      "palavras": 107,
+      "inicio": "1\n¿Quién a Cristo quiere De hoy en más seguir, Su pendón alzando, Yendo a combatir?\n¿Quién le quiere humilde Siempre aquí servir, Siempre obedecerle, Darle su existir?\nCORO:\n¿Quién seguirle quiere?\n¿Quién responderá Al buen Redentor:\n«Heme aquí, yo i"
+    },
+    {
+      "id": "GT-233",
+      "titulo": "JUNTO A LA CRUZ",
+      "bloco": 1,
+      "palavras": 105,
+      "inicio": "1\nJunto a la cruz do Jesús murió, Junto a la cruz do salud pedí, Ya mis maldades él perdonó,\n¡A su nombre gloria!\nCORO:\n¡A su nombre gloria!\n¡A su nombre gloria!\nYa mis maldades él perdonó,\n¡A su nombre gloria!\n2\nJunto a la cruz donde le busqué,\n¡Cuá"
+    },
+    {
+      "id": "GT-234",
+      "titulo": "GOZO TE DARA JESÚS",
+      "bloco": 1,
+      "palavras": 147,
+      "inicio": "1\nPuedes obtener la dulce paz de Dios Si a Jesu-Cristo acudieres hoy;\nVen contrito a su cruz, él tus culpas borrará, Y así gran gozo te dará Jesús.\nCORO:\nGozo da la salvación, gozo en el corazón; Santo júbilo tendrás cuando reine en ti la paz, Que te"
+    },
+    {
+      "id": "GT-235",
+      "titulo": "NO HAY MAS QUE UNO",
+      "bloco": 1,
+      "palavras": 168,
+      "inicio": "1\nEn el mundo no hay más que Uno Que puede las almas salvar\nEs Cristo, que en el Calvario Su vida en la cruz entregó.\nÉl es nuestra paz, nuestra vida La senda tan sólo es él\nQue nos puede llevar a la gloria, La patria feliz del mortal.\nCORO:\nEn el mu"
+    },
+    {
+      "id": "GT-236",
+      "titulo": "VEN A DESCANSAR",
+      "bloco": 1,
+      "palavras": 136,
+      "inicio": "1\nOye, pecador, la voz del Salvador;\n«Si estás cansado, ven a descansar; Ven, no te detengas, echa sobre mí Toda carga tuya, yo la llevaré.»\nCORO:\nVen, ven a mí y descansarás; Toma hoy mi yugo, yo te salvaré; Manso soy y humilde, tu amigo soy;\nVen, e"
+    },
+    {
+      "id": "GT-238",
+      "titulo": "¡GLORIA A MI JESÚS!",
+      "bloco": 1,
+      "palavras": 109,
+      "inicio": "1\nPor mí sufrió el Salvador,\n¡Gloria, gloria a mi Jesús! Load conmigo al Redentor,\n¡Gloria, gloria a mi Jesús!\nCORO:\n¡Jesús, Jesús el Salvador!\nEs dulce el nombre del Señor, El me rodea con santo amor,\n¡Gloria, gloria a mi Jesús!\n2\nCon mis maldades é"
+    },
+    {
+      "id": "GT-239",
+      "titulo": "ACOGIDA DA JESÚS",
+      "bloco": 1,
+      "palavras": 94,
+      "inicio": "1\nAl que en busca de la luz Vague ciego y con temor, Lo recibe el buen Jesús En los brazos de su amor.\nCORO:\nVolveremos a cantar, Cristo acoge al pecador; Claro hacedlo resonar, Cristo acoge al pecador.\n2\nA sus pies descansarás; Ejercita en él tu fe;"
+    },
+    {
+      "id": "GT-240",
+      "titulo": "LA BIENVENIDA DAREMOS A CRISTO",
+      "bloco": 1,
+      "palavras": 118,
+      "inicio": "1\nLa bienvenida daremos a Cristo Cuando le veamos del cielo bajar; En esplendor y gran gloria vestido, Viene su triunfo para celebrar.\nCORO:\nListo estaré cuando él vendrá; El vendrá, él vendrá;\nListo estaré cuando él vendrá Jesús pronto regresará.\n2\n"
+    },
+    {
+      "id": "GT-241",
+      "titulo": "SANTO ES EL SEÑOR",
+      "bloco": 1,
+      "palavras": 97,
+      "inicio": "1\n¡Santo! ¡Santo!, grande, eterno Dios, Con alegría hoy te alabamos;\nRey de reyes, grande Capitán, Todopoderoso Guerrero, Honor y gloria, luz y dominio Tributaremos todos a ti.\nCORO:\n¡Santo! ¡Santo! eres tú, Señor,\n¡Dios de las batallas, glorioso!\n2\n"
+    },
+    {
+      "id": "GT-242",
+      "titulo": "EL ES MI FUERTE SALVADOR",
+      "bloco": 1,
+      "palavras": 125,
+      "inicio": "1\nVagando yo en la obscuridad, El Señor me buscó y salvó;\nJesús me halló perdido en la maldad, Con su sangre mi culpa borró.\nCORO:\n||Él es mi fuerte y gran Salvador,\" Yo perdido fui, mas. Cristo me salvó, Él es mi fuerte y gran Salvador.\n2\nEn mi peca"
+    },
+    {
+      "id": "GT-243",
+      "titulo": "EL GRAN MEDICO",
+      "bloco": 1,
+      "palavras": 96,
+      "inicio": "1\nLa tierna voz del Salvador Nos habla conmovida. Venid al médico de amor, Que da a los muertos vida.\nCORO:\nÉl tiene toda potestad, Puede sanar la enfermedad; Lleno de gracia y de bondad Es nuestro Jesucristo.\n2\nConfía, tú a quien Satanás Por años ha"
+    },
+    {
+      "id": "GT-244",
+      "titulo": "ADORADLE",
+      "bloco": 1,
+      "palavras": 92,
+      "inicio": "1\nDad al Padre toda gloria, Dad al Hijo todo honor; Y al Espíritu divino Alabanzas de loor.\nCORO:\nAdoradle, adoradle, Adorad al Salvador; Tributadle toda gloria,\nPueblo suyo por su grande amor.\n2\nAdoradle, ¡oh iglesia!, Por Jesús tu Redentor; Rescata"
+    },
+    {
+      "id": "GT-245",
+      "titulo": "CUANDO ESTEMOS EN GLORIA",
+      "bloco": 1,
+      "palavras": 92,
+      "inicio": "1\nCantad del amor de Cristo, Ensalzad al Redentor; Tributadle, santos todos, Grande gloria y loor.\nCORO:\nCuando estemos en gloria,\nEn presencia de nuestro Redentor t\n¡A una voz la historia Diremos del gran Vencedor!\n2\nLa victoria es segura A las hues"
+    },
+    {
+      "id": "GT-246",
+      "titulo": "¡ALELUYA, EL ME SALVA!",
+      "bloco": 1,
+      "palavras": 92,
+      "inicio": "1\nJesús borró ya mi maldad Su sangre al derramar;\nÉl quiso en mí su gran bondad Venir a revelar.\nCORO:\n¡Aleluya! El me salva.\nPues en mí su amor probó;\n¡Aleluya! El me salva, Para siempre me libró.\n2\nÉl es mi paz, mi protección, Mi buen Consolador; A"
+    },
+    {
+      "id": "GT-248",
+      "titulo": "DAME LA FE DE MI JESÚS",
+      "bloco": 1,
+      "palavras": 127,
+      "inicio": "1\nDame la fe de mi Jesús, La fe bendita del Señor Que al afligido da la paz, La fe que salva de temor; Fe de los santos galardón, Gloriosa fe de salvación.\n2\nDame la fe que trae poder De los demonios vencedor; Que fieras no podrán vencer, Ni dominarl"
+    },
+    {
+      "id": "GT-249",
+      "titulo": "EN MI MALDAD",
+      "bloco": 1,
+      "palavras": 111,
+      "inicio": "1\nEn mi maldad busqué a Jesús\nY él me aceptó con grande amor, Me dio perdón allá en la cruz, Salud hallé por su dolor.\nCristo me dijo: «Ven a mí, Que ya mi vida di por ti.»\n2\nMuy densa fue la obscuridad Que en mi pecado me cercó, Mas el Señor en su b"
+    },
+    {
+      "id": "GT-250",
+      "titulo": "AL CANSADO PEREGRINO",
+      "bloco": 1,
+      "palavras": 163,
+      "inicio": "1\nAl cansado peregrino Que en el pecho siente fe,\nEl Señor ha prometido:\n«Con mi brazo te guiaré, Con mi brazo, con mi brazo, Con mi brazo te guiaré;\nEl Señor ha prometido:\n«Con mi brazo te guiaré.»\n2\nCuando cruel su lazo el mundo Arrojare ante tu pi"
+    },
+    {
+      "id": "GT-251",
+      "titulo": "EL HIJO PRODIGO",
+      "bloco": 1,
+      "palavras": 119,
+      "inicio": "1\nVen, ¡oh pródigo!, ven sin tardar, te llama Dios; Oyele llamando, llamándote a ti; (a ti)\nTú que vagas errante, escucha su tierna voz, Escucha su voz de amor, (de amor).\nCORO:\n||Lla…\tmando por ti\n(Llamando por ti\tllamando por ti)\nPerdi\tdo pródigo v"
+    },
+    {
+      "id": "GT-253",
+      "titulo": "DIVINA LUZ",
+      "bloco": 1,
+      "palavras": 102,
+      "inicio": "1\nDivina Luz, con tu esplendor benigno Guarda mi pie;\nDensa es la noche y áspero el camino; Mi guía sé.\nHarto distante de mi hogar estoy; Que al dulce hogar de las alturas voy.\n2\nAmargos tiempos hubo en que tu gracia No supliqué;\nDe mi valor fiando e"
+    },
+    {
+      "id": "GT-254",
+      "titulo": "LA VOZ DE JESÚS",
+      "bloco": 1,
+      "palavras": 107,
+      "inicio": "1\nYo escucho, buen Jesús, Tu dulce voz de amor\nQue desde el árbol de la cruz Invita al pecador.\nYo soy pecador, Nada hay bueno en mí; Ser objeto de tu amor\nDeseo, y vengo a ti.\n2\nTú ofreces el perdón De toda iniquidad\nSi el llanto inunda el corazón Q"
+    },
+    {
+      "id": "GT-255",
+      "titulo": "SALVADOR, MI BIEN ETERNO",
+      "bloco": 1,
+      "palavras": 111,
+      "inicio": "1\nSalvador, mi bien eterno, Más que vida para mí: En mi fatigosa senda\nCerca siempre te halle a ti,\n||Junto a ti, junto a ti.|| En mi fatigosa senda Cerca siempre te halle a ti.\n2\nNo los bienes, no placeres Ni renombre busco aquí;\nEn las pruebas, en "
+    },
+    {
+      "id": "GT-256",
+      "titulo": "TENTADO, NO CEDAS",
+      "bloco": 1,
+      "palavras": 101,
+      "inicio": "1\nTentado no cedas; ceder es pecar; Mejor y más noble es luchar y triunfar;\n¡Valor!, pues, cristiano, domina tu mal; Dios puede librarte de asalto mortal.\nCORO:\nEn Jesús, pues, confía; En sus brazos tú alma Hallará dulce calma, Él te hará vencedor.\n2"
+    },
+    {
+      "id": "GT-257",
+      "titulo": "TEMPLOS DE DIOS SOIS",
+      "bloco": 1,
+      "palavras": 91,
+      "inicio": "1\nTemplo de Dios sois, Así está escrito:\nTemplos de su Espíritu de verdad.\n¿A él le es dada Libre entrada?\n¿Franca es la puerta de tu voluntad?\nCORO:\nDeja entrar, Para morar,\nAl Santo Espíritu.\nÉl ha venido Pacto cumplido,\nBendito Espíritu de Dios.\n2"
+    },
+    {
+      "id": "GT-258",
+      "titulo": "POR GRACIA ME SOSTENDRÁ",
+      "bloco": 1,
+      "palavras": 121,
+      "inicio": "1\nSi estoy desalentado, con penas y temor, Con cuitas oprimido, en pruebas y en dolor, Entonces Cristo dice, mis pruebas al mirar, Que su sostén y ayuda jamás me faltarán.\nCORO:\nPor gracia Jesús me sostendrá Y nunca me faltará;\nSi en sombras yo voy y"
+    },
+    {
+      "id": "GT-259",
+      "titulo": "GUARDA EL CONTACTO",
+      "bloco": 1,
+      "palavras": 142,
+      "inicio": "1\n¿Quieres sobre el mundo ser un vencedor?\n¿Quieres tú cantar aún cuando hay dolor?\n¿Quieres ser alegre cual fiel luchador? Guarda el contacto con el Salvador.\nCORO:\nGuarda el contacto con el Salvador, Luego las tinieblas no te cubrirán; Por la senda"
+    },
+    {
+      "id": "GT-260",
+      "titulo": "CREO EN LA BIBLIA",
+      "bloco": 1,
+      "palavras": 144,
+      "inicio": "1\nCreo en la Biblia, el libro redentor, Pues de Jesu-Cristo muestra el dulce amor,\nTodos mis pecados ya borrados son; Paz y gozo tengo en mi corazón.\nCORO:\nCreo en la Biblia, libro de mi Dios; Música del cielo para mí es su voz;\nMuéstrame el camino y"
+    },
+    {
+      "id": "GT-261",
+      "titulo": "CRISTO TE LLAMA",
+      "bloco": 1,
+      "palavras": 126,
+      "inicio": "1\nCristo te llama a ti, pecador, Te llama a ti con tierna voz; Deja tus culpas y ven al Señor, Cristo te llama a ti.\nCORO:\nCristo te llama, te llama a ti, Cristo te llama, ¡oh, ven sin tardar!\nCristo te espera a ti, pecador, Cristo te llama a ti.\n2\nD"
+    },
+    {
+      "id": "GT-262",
+      "titulo": "EL QUE HA DE VENIR, VENDRÁ",
+      "bloco": 1,
+      "palavras": 114,
+      "inicio": "1\nAl rayar el alba tal vez venga Cristo Con aclamación y con voz de arcángel;\nLevanta los muertos, transforma los vivos, A los suyos él viene a llevar.\nCORO:\n¿Hasta cuándo? Señor Jesús,\n¿Hasta cuándo vendrás?\nCristo viene, aleluya, aleluya, amén; Ale"
+    },
+    {
+      "id": "GT-263",
+      "titulo": "¡VIENE, VIENE!",
+      "bloco": 1,
+      "palavras": 110,
+      "inicio": "1\nUn día mi Señor viene, viene Y yo veré a mi Rey,\nCon él por siempre estaré, Jamás yo le dejaré.\nCORO:\n¡Viene! ¡Viene!, ¡oh día sin igual! Vendré en las nubes, bien lo sé, Así vendrá tal cual se fue;\n¡Viene! ¡Viene! Ha de venir mi Rey.\n2\nPor su Igle"
+    },
+    {
+      "id": "GT-264",
+      "titulo": "TU COSECHA, ¿CUAL SERA?",
+      "bloco": 1,
+      "palavras": 116,
+      "inicio": "1\nEl día de segar vendrá A todo hombre aquí;\nY la semilla que sembró, Cosecha le dará.\nCORO:\nLo que siembres aquí, Segarás más allá,\nFuere bueno o fuere malo.\nLa cosecha vendrá, Lo ha dicho el Señor;\nLa cosecha tuya, ¿cuál será?\n2\nSi tu semilla es ca"
+    },
+    {
+      "id": "GT-265",
+      "titulo": "MAS ALLÁ EL DÍA VIENE",
+      "bloco": 1,
+      "palavras": 104,
+      "inicio": "1\nMás allá\tel día viene\nEn que luchas\tya no habrá;\nLos afanes\ty cuidados\nDe este mundo\tcesarán.\nCORO:\nMás allá\tno habrá más llanto,\nSino notas\tde loor;\nMás allá\tun día alegre\nQue por siempre\tha de durar.\n2\n¿Qué será estar con Cristo?\nEscuchar .su dul"
+    },
+    {
+      "id": "GT-266",
+      "titulo": "TIRA LA SOGA",
+      "bloco": 1,
+      "palavras": 110,
+      "inicio": "1\nPor sus pecados está el pecador Cual pobre náufrago sin salvador;\nTriste es su suerte que se hunde en el mar. Se esfuerza, se cansa, no puede ya más.\nCORO:\nTira la soga Al que se ahoga, Antes que se hunda en el mar; Ve su peligro Muere sin Cristo Y"
+    },
+    {
+      "id": "GT-267",
+      "titulo": "MÁS CERCA DE CRISTO",
+      "bloco": 1,
+      "palavras": 117,
+      "inicio": "1\nDe Cristo cada día quiero yo más cerca estar, Él es mi Rey amable, mi precioso Salvador;\nNo puedo en todo el mundo amigo cual Jesús hallar, Quien maravillas hace y prodigios sin cesar.\nCORO:\nJamás\tpodrán contarme\nDe Cristo la mitad; De su\tamor divi"
+    },
+    {
+      "id": "GT-268",
+      "titulo": "CRISTO EL HIJO DEL SANTO DIOS",
+      "bloco": 1,
+      "palavras": 125,
+      "inicio": "1\nCristo, el Hijo del santo Dios, Hizo la salvación, Padeciendo la muerte atroz Por nuestra redención.\nPor su sangre pura, por su muerte dura,\n||Sólo Jesús, sólo Jesús hizo la salvación.||\n2\n¡Oh, qué gracia nos reveló!\n¡Célebre Salvador!\nCompasión y "
+    },
+    {
+      "id": "GT-269",
+      "titulo": "EN LA SANGRE VIRTUOSA",
+      "bloco": 1,
+      "palavras": 197,
+      "inicio": "1\nEn la sangre virtuosa vertida por mí, Señor, lávame, Señor, lávame;\nDe pecado te ruego me libres a mí, Señor, lávame, Señor, lávame.\nFue triste la senda en que persistí, Constante derrota en ella sufrí;\nPor cuanto en tu grande poder no creí; Señor,"
+    },
+    {
+      "id": "GT-270",
+      "titulo": "SOLO JESÚS",
+      "bloco": 1,
+      "palavras": 122,
+      "inicio": "1\nEn Jesu-Cristo tan sólo Gracia tendrás, pecador;\n¡Nadie de polo a polo Es como el Salvador!\nCORO:\nSólo Jesús, sólo Jesús Salvarte puede; ¡sí, sólo Jesús!\nSólo Jesús, sólo Jesús Salvarte puede; ¡sí, sólo Jesús!\n2\nLos que en Cristo creyeron Gozan de "
+    },
+    {
+      "id": "GT-271",
+      "titulo": "A LA LUCHA",
+      "bloco": 1,
+      "palavras": 166,
+      "inicio": "1\nYa las huestes se aprestan para la batalla, Es Jesús el capitán que a todos nos guiará, Y con él a la cabeza no hay que vacilar,\nDe seguro al triunfo nos llevará.\nCORO:\nYo quiero estar con Cristo en lo rudo de la lid, Yo quiero siempre listo, valie"
+    },
+    {
+      "id": "GT-272",
+      "titulo": "DIOS VIVE",
+      "bloco": 1,
+      "palavras": 90,
+      "inicio": "1\nDo luzca el sol lo hay siempre; Do moren aves lo hay;\nNo sigan tus lamentos; Dios vive y sobra el ¡Ay!\nCORO:\n¡Vedla! ¡Vedla!\nLa ínsula riente de ¡Espera! Patria del bien, mejorado Edén, Célica primavera.\n2\nProlónguense los días; Sus faenas tienen f"
+    },
+    {
+      "id": "GT-273",
+      "titulo": "MI PASTOR",
+      "bloco": 1,
+      "palavras": 143,
+      "inicio": "1\nUn corderito débil soy, Mas cerca del Pastor estoy,\n||Su seno a todos da lugar, Conmigo tú podrás estar.||\n2\nJesús se llama mi Pastor, De quien disfruto tal amor,\n||El cuida mucho a su grey, Pues él también es nuestro Rey.||\n3\nRecuerdo yo mi perdic"
+    },
+    {
+      "id": "GT-274",
+      "titulo": "EN MI ALMA HAY DULCE PAZ",
+      "bloco": 1,
+      "palavras": 101,
+      "inicio": "1\nEn oscuridad sin Jesús me vi, Con mil penas y gran dolor;\nMas Jesús llamó, ven, sí, ven a mí, Quiero ser tu Salvador.\nCORO:\nEn mi alma hay dulce paz Desde que vine a Jesús;\nNo hay noche nunca, sino paz y gozo, Desde que vivo en su luz.\n2\nPor las gr"
+    },
+    {
+      "id": "GT-275",
+      "titulo": "POR LA SANGRE",
+      "bloco": 1,
+      "palavras": 117,
+      "inicio": "1\nPor el mundo brilla luz Desde que murió Jesús, Por nosotros en la cruz, Del Calvario;\nLos pecados él llevó, De la culpa nos libró\nCon la sangre que manó Del Calvario.\nCORO:\nPor la sangre, por la sangre Somos redimidos, sí, Por la sangre carmesí:\nPo"
+    },
+    {
+      "id": "GT-276",
+      "titulo": "VOY A VER A CRISTO EL REY",
+      "bloco": 1,
+      "palavras": 111,
+      "inicio": "1\nAunque peregrino y pobre soy aquí, Voy a ver a Cristo el Rey;\nCuando en las nubes venga él por mí, Voy a ver a Cristo el Rey.\nCORO:\nVoy a ver a Cristo el Rey Y sus glorias cantaré;\nCuando al cielo allá a los suyos llamará, Voy a ver a Cristo el Rey"
+    },
+    {
+      "id": "GT-277",
+      "titulo": "LA PALABRA DIVINA",
+      "bloco": 1,
+      "palavras": 164,
+      "inicio": "1\nAnhelo yo off la voz De mi buen Salvador;\nSus dichos un banquete son, Mi verdadera luz;\nCual el maná, a mi alma dan Dulzura y sostén,\nConsuelo, paz, recibo aquí Del Maestro de Belén.\nCORO:\n¡Tus palabras, oh Jesús!\n¡Tus palabras vida son! Me enseñan"
+    },
+    {
+      "id": "GT-279",
+      "titulo": "¿TE DESVÍAS?",
+      "bloco": 1,
+      "palavras": 152,
+      "inicio": "1\n¿Te desvías por el mar, donde puedes naufragar Te desvías lentamente más y más?\nLa marea llevará tu barquilla más allá;\n¿Te desvías lentamente más y más?\nCORO:\n¿Te desvías más, más y más,\nEn el proceloso mar te desvías más; Del cariño paternal, a l"
+    },
+    {
+      "id": "GT-281",
+      "titulo": "¡SE UN HÉROE!",
+      "bloco": 1,
+      "palavras": 129,
+      "inicio": "1\nDe la vida en el turbión, ¡Sé un héroe! En tu angustia y confusión, ¡Sé un héroe!\nAlza intrépido el pendón, Y con noble majestad Lucha en pro de la verdad, ¡Sé un héroe!\nCORO:\n¡Sé un héroe! Ten confianza en el Señor,\n¡Sé un héroe! Él te ampara bien"
+    },
+    {
+      "id": "GT-282",
+      "titulo": "LA GRACIA",
+      "bloco": 1,
+      "palavras": 106,
+      "inicio": "1\nLa gracia de Dios revelada En Cristo Jesús, mi Señor, Al mundo perdido presenta De Dios su infinito favor.\nCORO:\nGracia, gracia, me basta la gracia de Dios-Jesús; Gracia, gracia, yo miro su gracia en Jesús.\n2\nLa gracia de Dios es más dulce Que cosa"
+    },
+    {
+      "id": "GT-283",
+      "titulo": "EN LA MAÑANA",
+      "bloco": 1,
+      "palavras": 106,
+      "inicio": "1\nEn el mundo la Iglesia Peregrina ha de estar; Anhelante ella espera Su feliz, eterno hogar.\nCORO:\nNos veremos, nos veremos Pronto en gloria, pronto en gloria, Nos veremos en la tierra más allá; Nos veremos, nos veremos Pronto en gloria, pronto en g"
+    },
+    {
+      "id": "GT-285",
+      "titulo": "ALLÍ QUIERO IR, ¿Y TU?",
+      "bloco": 1,
+      "palavras": 151,
+      "inicio": "1\nMe dicen que hay una bella ciudad.\nAllí quiero ir, ¿y tú?\nEn donde es eterna la felicidad, Allí quiero ir, ¿y tú?\nJesús las mansiones nos fue a preparar, Allí quiero ir, ¿y tú?\nA donde la muerte no puede llegar.\nCORO:\n||Allí quiero ir, allí quiero "
+    },
+    {
+      "id": "GT-287",
+      "titulo": "CRISTO ES EL TODO",
+      "bloco": 1,
+      "palavras": 154,
+      "inicio": "1\nEs Jesu-Cristo mi todo, grato es cantar su loor,\n¡Oh cuán sublime e infinito es su divino amor! Cuando me vio errabundo, cual hijo pródigo, Vino a buscar y a salvarme, a su redil me llevó.\nCORO:\nCristo, Cristo, (Cristo, tú eres mi Salvador),\nTú ere"
+    },
+    {
+      "id": "GT-288",
+      "titulo": "UNOS SI, OTROS NO",
+      "bloco": 1,
+      "palavras": 154,
+      "inicio": "1\nFrancas las puertas encontrarán, Unos si, otros no;\nDe alguien las glorias sin fin serán;\n||¿Y tú? ¿Y yo?|| Calles de oro, mar de cristal, Pleno reposo, perfecto amor; Unos tendrán celestial hogar;\n||¿Y tú? ¿Y yo?||\n2\nFieles discípulos de Jesús, Un"
+    },
+    {
+      "id": "GT-289",
+      "titulo": "MI REY Y MI AMIGO",
+      "bloco": 1,
+      "palavras": 139,
+      "inicio": "1\nJesús es mi Rey soberano, Mi gozo es cantar su loor;\nEs Rey y me ve cual hermano, Es Rey y me imparte su amor, Dejando su trono de gloria, Me vino a sacar de la escoria,\n¡Y yo soy feliz, y yo soy feliz con él!\n2\nJesús es mi Amigo anhelado,\nY en som"
+    },
+    {
+      "id": "GT-290",
+      "titulo": "SOLO CRISTO",
+      "bloco": 1,
+      "palavras": 102,
+      "inicio": "1\nYo hallé un fiel amigo para siempre, Más que hermano, padre o madre es él; Más que plata, o que oro, o que cobre, Es de todos Jesu-Cristo el más fiel.\nCORO:\n||Sólo Cristo,\t\tSólo Cristo, Sólo Cristo,\tSólo Cristo\nEs el lirio de los valles, mi Jesús.|"
+    },
+    {
+      "id": "GT-291",
+      "titulo": "HOGAR CELESTIAL",
+      "bloco": 1,
+      "palavras": 116,
+      "inicio": "1\nVenid, pecadores, que Dios por su amor, Al cielo nos llama, que es patria mejor; Do nunca la aurora perdió su fulgor;\nDo brilla la gloria del Dios Creador..\n¡Oh, si, venid, venid!\nAl cielo nos llama, que es patria mejor.\n2\nDejemos, hermanos, aparte"
+    },
+    {
+      "id": "GT-292",
+      "titulo": "EL ME SOSTENDRÁ",
+      "bloco": 1,
+      "palavras": 90,
+      "inicio": "1\nSi la fe me abandonare, El me sostendrá;\nY si el mal me amenazare, El me sostendrá.\nCORO:\nEl me sostendrá, él me sostendrá: Mi Jesús que tanto me ama,\nEl me sostendrá.\n2\nNunca yo podré ser firme Con tan débil fe;\nMas él puede dirigirme, Y él me sos"
+    },
+    {
+      "id": "GT-293",
+      "titulo": "PON TU CARGA EN JESÚS",
+      "bloco": 1,
+      "palavras": 104,
+      "inicio": "1\nEn Jesu-Cristo confía no más, Pon tu carga en Jesús;\nPaz y socorro de él obtendrás, Pon tu carga en Jesús.\nCORO:\nPon tu carga en Jesús Y dile tu cruel dolor; En Cristo tu Amigo Tendrás, un abrigo...\n¡Oh, pon tu carga en Jesús!\n2\nPaz redentora tu al"
+    },
+    {
+      "id": "GT-294",
+      "titulo": "HAY UN CANTO NUEVO EN MI SER",
+      "bloco": 1,
+      "palavras": 126,
+      "inicio": "1\nHay un canto nuevo en mi ser, Es la voz de mi Jesús,\nQue me dice: «Ven a descansar, Tu paz conquisté en la cruz.»\nCORO:\nCristo, Cristo, Cristo, Nombre sin Igual: Llena siempre mi alma De esa nota celestial.\n2\nNáufrago en pecado me encontré, Sin paz"
+    },
+    {
+      "id": "GT-295",
+      "titulo": "JESÚS PRONTO VOLVERÁ",
+      "bloco": 1,
+      "palavras": 143,
+      "inicio": "1\nJesús pronto volverá Al mundo en gran poder;\nPromesa nos dio, él regresaré; Si, viene el Salvador.\nSeñales abundan hoy, Cumpliéndose ya estén, Por su gracia listo estoy, Le espero sin más afán.\nCORO:\nMuy pronto Jesús vendré, El viene no tardara;\nÉl"
+    },
+    {
+      "id": "GT-296",
+      "titulo": "COMPRADO CON SANGRE POR CRISTO",
+      "bloco": 1,
+      "palavras": 136,
+      "inicio": "1\nComprado con sangre por Cristo, Con gozo al cielo yo voy; Librado por gracia infinita,\nYa sé que su hijo yo soy.\nCORO:\nLo sé\tLo sé,\nComprado con sangre yo soy; Lo sé\tLo sé,\nCon Cristo al cielo yo voy.\n2\nSoy libre de pena y culpa, Su gozo él me hace"
+    },
+    {
+      "id": "GT-297",
+      "titulo": "¡OH, SI, QUIERO VERLE!",
+      "bloco": 1,
+      "palavras": 125,
+      "inicio": "1\nVoy feliz al dulce hogar, por fe en Jesús, Y luchando a traer almas a la luz;\nDardos encendidos mil vienen contra mí, Mas yo sé, por la fe, venceré aquí,\nCORO:\n¡Oh, sí, quiero verle, ver al Salvador, Quiero ver su rostro lleno de amor! En aquel gra"
+    },
+    {
+      "id": "GT-298",
+      "titulo": "ESTAD POR CRISTO FIRMES",
+      "bloco": 1,
+      "palavras": 117,
+      "inicio": "1\n¡Estad por Cristo firmes, Soldados de la cruz! Alzad hoy la bandera En nombre de Jesús. Es nuestra la victoria Con él por capitán, Por él serán vencidas Las huestes de Satán.\nCORO:\nEstad hoy firmes, Soldados de la Cruz, Alzad hoy la bandera,\nAlzadl"
+    },
+    {
+      "id": "GT-299",
+      "titulo": "CRISTO, TU SANTO AMOR 1",
+      "bloco": 1,
+      "palavras": 116,
+      "inicio": "1\nCristo, tu santo amor Diste a mí,\nNada a ti, Señor, Te niego aquí.\nMe postro en gratitud, Cumplo con prontitud, Me obliga tu actitud, Me rindo a ti.\n2\nAnte el trono estoy, Ruegas por mí, Cristo, al Padre voy, Sólo por ti.\nLa cruz podré llevar, Tu a"
+    },
+    {
+      "id": "GT-300",
+      "titulo": "ID A LA MIES",
+      "bloco": 1,
+      "palavras": 115,
+      "inicio": "1\n¡A los campos a segar, vedlos blancos, blancos ya!\n¡Idos allá!\t¡Idos allá!\n¡Todo el día trabajad, sólo de Jesús hablad, Id a la mies, id, predicad!\nCORO:\n¡Id a la mies! ¡Id a la mies!\n¡Id a la mies! ¡Id a la mies!\nEl amor del Salvador os compele a "
+    },
+    {
+      "id": "GT-302",
+      "titulo": "¡CAMARADAS!",
+      "bloco": 1,
+      "palavras": 120,
+      "inicio": "1\n¡Camaradas!, en los cielos Ved la enseña ya;\nHay refuerzos; nuestro el triunfo, No dudéis, será.\n«¡Estad firmes; yo voy pronto!» Clama el Salvador.\nSí, estaremos por tu gracia Firmes con vigor.\n2\nNada importa nos asedien, Con rugiente afán,\nLas leg"
+    },
+    {
+      "id": "GT-303",
+      "titulo": "DE LA",
+      "bloco": 1,
+      "palavras": 190,
+      "inicio": "De la Iglesia el fundamento Es Jesús el Salvador;\nPor el agua y la palabra Le dio vida su Señor:\nPara hacerla esposa quiso De los cielos descender, Y su sangre por limpiarla En la horrible cruz verter.\n2\nDe entre todas las naciones Escogida en varied"
+    },
+    {
+      "id": "GT-304",
+      "titulo": "JERUSALÉN CELESTE",
+      "bloco": 1,
+      "palavras": 127,
+      "inicio": "Jerusalén celeste, Visión de paz dichosa,\nDe Cristo santa esposa, Radiante de esplendor, Tu fábrica es divina, Son vivos tus sillares,\nY de ángeles millares, Te ciñen en redor.\n2\nCiudad del Rey eterno, De perlas son tus puertas, Continuamente abierta"
+    },
+    {
+      "id": "GT-305",
+      "titulo": "LLEGAREMOS AL HOGAR",
+      "bloco": 1,
+      "palavras": 123,
+      "inicio": "1\nLlegaremos al hogar Que Jesús preparó, Donde irán a descansar Los que aquí redimió.\nLlamaremos sin temor Y a la puerta él estará; Con ternura y con amor Bienvenida dará.\nCORO:\n¡Un hogar Dios nos da Y en su seno el alma fiel\nSin temor vivirá!\n2\nVues"
+    },
+    {
+      "id": "GT-307",
+      "titulo": "¡GLORIOSA PAZ!",
+      "bloco": 1,
+      "palavras": 97,
+      "inicio": "1\nVine a Cristo Jesús y encontré Gloriosa paz, perfecta paz;\nAunque las olas azoten mi ser, tengo dulce paz.\nCORO:\n¡Paz, paz, gloriosa paz!\n¡Paz, paz, perfecta paz!\nDesde que Cristo mi alma salvó, Tengo dulce paz.\n2\nPaz insondable cual es el mar, Glo"
+    },
+    {
+      "id": "GT-308",
+      "titulo": "LA CRUZ DE JESÚS",
+      "bloco": 1,
+      "palavras": 138,
+      "inicio": "1\nEn el monte Calvario estaba una cruz Emblema de afrenta y dolor;\nMas yo amo esa cruz do murió mi Jesús Por salvar al mis vil pecador.\nCORO:\n¡Oh!, yo siempre amaré esa cruz: En sus triunfos mi gloria será:\nY algún día, en vez de una cruz, Mi corona "
+    },
+    {
+      "id": "GT-309",
+      "titulo": "VEN A CRISTO",
+      "bloco": 1,
+      "palavras": 102,
+      "inicio": "1\nMientras oro y mientras ruego, Mientras sientes convicción, Mientras Dios derrama el fuego, Ven, amigo, a Cristo, ven.\nCORO:\nVen a él,\tVen a él,\nDale hoy tu corazón; Ven a él, Ven a él, Dale hoy tu corazón.\n2\nHas vagado en este mundo Sin tranquilid"
+    },
+    {
+      "id": "GT-310",
+      "titulo": "UNIDOS EN CRISTO",
+      "bloco": 1,
+      "palavras": 122,
+      "inicio": "1\nFalanges cristianas, al frente avanzad, Batid con denuedo las hordas del mal; El santo evangelio con fe proclamad, De paz y justicia, de amor y verdad.\nCORO:\nRescatad las almas que vagando van, Sin Dios ni esperanza, presas de Satán.\n2\nContemplad, "
+    },
+    {
+      "id": "GT-311",
+      "titulo": "YO SE QUE CRISTO ME AMA",
+      "bloco": 1,
+      "palavras": 106,
+      "inicio": "1\nDe tal manera mi Jesús me amó Que al mundo descendió,\nPor mis pecados y culpas murió.\nTan grande fue su amor.\nCORO:\nYo sé que Cristo me ama Con profundo amor.\nYo también quiero amarle Con sincero amor.\n2\nYo despreciaba su gracia y bondad Viviendo e"
+    },
+    {
+      "id": "GT-312",
+      "titulo": "LA PAZ QUE CRISTO DA",
+      "bloco": 1,
+      "palavras": 132,
+      "inicio": "1\n¿Has hallado la paz de Jesucristo?\n¿Permaneces en la verdadera Vid?\n¿Tienes gozo cual nunca da el mundo?\n¿Eres Siempre victorioso en la lid?\nCORO:\n¿Has hallado la paz de Jesucristo?\n¿Permaneces en la verdadera Vid?\nTu confianza en Cristo pon en el "
+    },
+    {
+      "id": "GT-313",
+      "titulo": "ABRE MIS OJOS A LA LUZ",
+      "bloco": 1,
+      "palavras": 184,
+      "inicio": "1\nAbre mis ojos a la luz, Tu rostro quiero ver, Jesús;\nPon en mi corazón tu bondad Y dame paz y santidad.\nHumildemente acudo a ti, Porque tu tierna voz oí;\nMi guía sé, Espíritu Consolador.\n2\nAbre mi oído a tu verdad, Yo quiero oír con claridad\nBellas"
+    },
+    {
+      "id": "GT-314",
+      "titulo": "ES EL TIEMPO DE LA SIEGA",
+      "bloco": 1,
+      "palavras": 146,
+      "inicio": "1\nEs el tiempo de la siega y tú sin vacilar, Declarando con holgura «DO hay que trabajan, Mientras tanto que el Maestro te vuelve a llamar:\n«Joven, joven, ven trabaja ya.»\nCORO:\nVen y ve los campos blancos cómo están Aguardando manos que los segarán;"
+    },
+    {
+      "id": "GT-315",
+      "titulo": "A LA SIEGA ACUDID",
+      "bloco": 1,
+      "palavras": 144,
+      "inicio": "1\nSomos obreros del Señor, La mies segamos con amor,\nLas nuevas damos de la salvación De Cristo al pecador;\nHoy trabajamos por amor A Cristo nuestro Salvador, Que por nosotros vida dio En el Calvario do murió.\nCORO:\nA la siega acudid, El Maestro os l"
+    },
+    {
+      "id": "GT-316",
+      "titulo": "ALZA TU CANTO, ¡OH LENGUA MÍA!",
+      "bloco": 1,
+      "palavras": 120,
+      "inicio": "1\nAl cielo vuelen los ecos santos Que arranco alegre de mi laúd; Al cielo vuelen mis dulces cantos, Mis dulces cantos de gratitud.\nCORO:\n¡Alza tu canto, oh lengua mía!\n¡Alza tu canto mi corazón! Llénese el alma de alegría, Con alegría de devoción.\n2\n"
+    },
+    {
+      "id": "GT-317",
+      "titulo": "¡DESPERTAD!",
+      "bloco": 1,
+      "palavras": 178,
+      "inicio": "1\n¡Despertad, despertad, oh cristianos!\nVuestro sueño funesto dejad, Que el cruel enemigo os acecha Y cautivos os quiere llevar.\nDespertad, las tinieblas pasaron, De la noche no sois hijos ya, Que lo sois de la luz y del día\nY tenéis el deber de luch"
+    },
+    {
+      "id": "GT-318",
+      "titulo": "EL CANTO DEL PEREGRINO",
+      "bloco": 1,
+      "palavras": 122,
+      "inicio": "1\nSoy peregrino en la tierra, Lejos ando de mi hogar; Mi alma con ansia espera La venida del Señor.\nAquí no hay permanencia, No hay de conflictos fin, Más de Jesús la presencia Gloria para mí será.\nCORO:\nPaz, dulce hogar. Quiero gozar, Con mi Jesús H"
+    },
+    {
+      "id": "GT-319",
+      "titulo": "VE Y VIVIRÁS",
+      "bloco": 1,
+      "palavras": 120,
+      "inicio": "1\nUn mensaje del Señor, ¡aleluya!, Anuncio yo que da la paz,\nEs de Dios el santo amor, ¡aleluya!\n«Ve tan sólo a Cristo y vivirás,»\nCORO:\nVe la cruz y vivirás, Ve a Cristo y vivirás;\nEs de Dios el santo amor, ¡aleluya!\nVe tan sólo a Cristo y vivirás.\n"
+    },
+    {
+      "id": "GT-320",
+      "titulo": "EN LA NUEVA JERUSALÉN",
+      "bloco": 1,
+      "palavras": 135,
+      "inicio": "1\nCuando cesen los conflictos de la vida terrenal Y dejemos este mundo de aflicción,\nEntraremos por las puertas de la patria celestial En la nueva Jerusalén.\nCORO:\nCantaremos con los santos la canción de redención, En Jerusalén …………, En Jerusalén\t,\nC"
+    },
+    {
+      "id": "GT-321",
+      "titulo": "LOOR A TI SEÑOR",
+      "bloco": 1,
+      "palavras": 122,
+      "inicio": "1\n¡Loor a ti, mi Dios, loor a ti!\nLo grande de tu amor es para mí: Me diste un Salvador, Cristo Jesús.\n¡Loor a ti, Señor, loor a ti!\n2\n¡Gloria a mi Salvador, Cristo Jesús!\nÉl es el pan de vida para mí; Su vida dio por mí Allí en la cruz.\n¡Loor a ti, "
+    },
+    {
+      "id": "GT-322",
+      "titulo": "NO HAY TRISTEZA EN EL CIELO",
+      "bloco": 1,
+      "palavras": 171,
+      "inicio": "1\nNo hay tristeza en el cielo, Ni llanto ni amargo dolor, No hay corazón angustiado Do reina el Dios de amor;\nLas nubes de nuestro horizonte Jamás aparecen allá,\nEl Sol en su gloria esplendente Derrama su luz celestial.\nCORO:\nYo voy a la patria del a"
+    },
+    {
+      "id": "GT-324",
+      "titulo": "NÍVEAS ROPAS",
+      "bloco": 1,
+      "palavras": 100,
+      "inicio": "1\nNíveas ropas sin igual En la patria celestial\nNos dará Jehová, nuestro Señor; Donde luz del sol no habrá, Pues sublime brillar\nLa sonriente faz del Salvador.\nCORO:\nNívea ser, nívea ser La vestidura celestial;\nTraje de luz nos da Jesús, Níveo vestid"
+    },
+    {
+      "id": "GT-325",
+      "titulo": "¿NOS VEREMOS EN EL RIO?",
+      "bloco": 1,
+      "palavras": 154,
+      "inicio": "1\n¿Nos veremos en el río Cuyas aguas argentinas Nacen puras, cristalinas, Bajo el trono del Señor?\nCORO:\n¡Oh!, sí, nos congregaremos De ese río a la ribera\nDe la vida verdadera Que nace del trono de Dios.\n2\nEn las márgenes del río Que frecuentan sera"
+    },
+    {
+      "id": "GT-326",
+      "titulo": "NO TENGO CUIDADOS",
+      "bloco": 1,
+      "palavras": 120,
+      "inicio": "1\nNo tengo cuidados ni tengo temor De lo que me espera aquí;\nConfío tan sólo en mi buen Salvador, El cual cuida siempre de mí.\nCORO:\nVivo por fe en mi Salvador, No temeré, es fiel mi Señor; En toda lid nunca me dejará, Yo vivo por fe, él me guardará."
+    },
+    {
+      "id": "GT-328",
+      "titulo": "LLAMA",
+      "bloco": 1,
+      "palavras": 106,
+      "inicio": "Llaman, llaman, llaman, llaman al corazón, Permítele entrar sin tardar.\n1\nLlama Jesús al corazón\nDe quien manchó el mal atroz. El llama hoy, ¡bella ocasión!\n¿No quieres tú oír su voz?\n¿Darás lugar al Salvador?\nTu Amigo es él, tu bienhechor, Te llama "
+    },
+    {
+      "id": "GT-329",
+      "titulo": "AL SONAR DE LA TROMPETA",
+      "bloco": 1,
+      "palavras": 116,
+      "inicio": "1\nAl sonar de la trompeta Nuestro corazón despierta,\nEs Jesús que en las nubes viene ya; De mil ángeles rodeado,\nDe victoria coronado, Cuando vuelva él en gloria, ¡Aleluya!\nCORO:\n¡Oh, hermano!, ¿estás listo?\n¿Vives tú ya salvo en Cristo?\n¡Cuánta glor"
+    },
+    {
+      "id": "SION-010",
+      "titulo": "CUANDO ALLÁ SE PASE LISTA",
+      "bloco": 1,
+      "palavras": 128,
+      "inicio": "1\nCuando la trompeta suene En aquel día final,\nY que el alba eterna rompa en claridad; Cuando las naciones salvas\nA su patria lleguen ya,\nY que sea pasada lista, allí he de estar.\nCORO:\nCuando allá se pase lista, Cuando allá se pase lista, Cuando all"
+    },
+    {
+      "id": "SION-011",
+      "titulo": "TODO A CRISTO YO ME RINDO",
+      "bloco": 1,
+      "palavras": 109,
+      "inicio": "1\nTodo a Cristo yo me rindo, Con el fin de serie fiel;\nPara siempre quiero amarle, Y agradarle sólo a él.\nCORO:\nYo me rindo a él, Yo me rindo a él;\nTodo a Cristo yo me entrego, Quiero serle fiel.\n2\nTodo a Cristo yo me rindo, A sus pies postrado estoy"
+    },
+    {
+      "id": "SION-012",
+      "titulo": "ALLÍ NO HABRÁ TRIBULACIÓN",
+      "bloco": 1,
+      "palavras": 98,
+      "inicio": "1\nEn la mansión do Cristo está\" Allí no habrá tribulación; Ningún pesar, ningún dolor, Que me quebrante el corazón.\nCORO:\nAllí no habrá tribulación; Ningún pesar, ningún dolor, Y cuando esté morando allá, Diré que no hay tribulación.\n2\nSerá muy trist"
+    },
+    {
+      "id": "SION-013",
+      "titulo": "HAY PODER EN JESÚS",
+      "bloco": 1,
+      "palavras": 103,
+      "inicio": "1\n¿Quieres ser salvo de toda maldad? Tan sólo hay poder en mi Jesús;\n¿Quieres vivir y gozar santidad? Tan sólo hay poder en Jesús.\nCORO:\nHay poder, poder sin igual poder, En Jesús, quien murió;\nHay poder, poder sin igual poder, En la sangre que él ve"
+    },
+    {
+      "id": "SION-014",
+      "titulo": "¡PAZ! ¡PAZ! ¡CUÁN DULCE PAZ!",
+      "bloco": 1,
+      "palavras": 177,
+      "inicio": "1\nEn el seno de mi alma una dulce quietud Se difunde embargando mi ser:\nUna calma infinita que sólo podrán Los amados de Dios comprender.\nCORO:\n¡Paz! ¡Paz! ¡cuán dulce paz! Es aquella que el Padre me da;\nYo le ruego que inunde por siempre mi ser, En "
+    },
+    {
+      "id": "SION-015",
+      "titulo": "MÁS DE JESÚS",
+      "bloco": 1,
+      "palavras": 105,
+      "inicio": "1\nMás de Jesús deseo saber, Más de su gracia y poder: Más de su salvación gozar: Más de su dulce amor gustar.\nCORO:\nMás quiero amarle, Más quiero honrarle:\nMás de su salvación gozar, Más de su dulce amor gustar.\n2\nMás quiero a Jesús seguir, Más de su"
+    },
+    {
+      "id": "SION-016",
+      "titulo": "GRANDE GOZO HAY EN MI ALMA",
+      "bloco": 1,
+      "palavras": 111,
+      "inicio": "1\nGrande gozo hay en mi alma hoy, Pues Jesús conmigo está;\nY su paz, que ya gozando estoy Por siempre durará\nCORO:\nGrande gozo, ¡cuán hermoso! Paso todo el tiempo bien feliz;\nPorque veo de Cristo la sonriente faz, Grande gozo siento en mí.\n2\nHay un c"
+    },
+    {
+      "id": "SION-017",
+      "titulo": "TENDRÁS QUE RENACER",
+      "bloco": 1,
+      "palavras": 114,
+      "inicio": "1\nUn hombre de noche llegóse a Jesús, Buscando la senda de vida y de luz, Y Cristo le dijo: Si a Dios quieres ver,\nTendrás que renacer.\nCORO:\n||Tendrás que renacer,|| De cierto, de cierto te digo a ti:\nTendrás que renacer.\n2\nSi acaso a los cielos tú "
+    },
+    {
+      "id": "SION-018",
+      "titulo": "CANTARÉ LA MARAVILLA",
+      "bloco": 1,
+      "palavras": 97,
+      "inicio": "1\nCantaré la maravilla Que Jesús murió por mí; Cómo allá en el Calvario Dio su sangre carmesí,\nCORO:\nCantaré la bella historia De Jesús mi Salvador.\nY con santos en la gloria, A Jesús daré loor.\n2\nCristo vino a rescatarme, Vil, perdido me encontró; C"
+    },
+    {
+      "id": "SION-019",
+      "titulo": "ENTERA CONSAGRACIÓN",
+      "bloco": 1,
+      "palavras": 129,
+      "inicio": "1\nQue mi vida entera esté Consagrada a ti, Señor;\nQue a mis manos pueda guiar El impulso de tu amor.\nCORO:\nLávame en tu sangre, Salvador, Límpiame de toda mi maldad; Traigo a ti mi vida, para ser, Señor,\n¡Tuya por la eternidad!\n2\nQue mis pies tan sol"
+    },
+    {
+      "id": "SION-020",
+      "titulo": "NO HAY MÁS QUE UNO",
+      "bloco": 1,
+      "palavras": 168,
+      "inicio": "1\nEn el mundo no hay más que Uno Que puede las almas salvar\nEs Cristo, que en el Calvario Su vida en la cruz entregó.\nÉl es nuestra paz, nuestra vida La senda tan sólo es él\nQue nos puede llevar a la gloria, La patria feliz del mortal.\nCORO:\nEn el mu"
+    },
+    {
+      "id": "SION-021",
+      "titulo": "YA TODO DEJÉ",
+      "bloco": 1,
+      "palavras": 140,
+      "inicio": "1\nTan triste y tan lejos de Dios me sentí Y sin el perdón de Jesús,\nMas cuando su voz amorosa oí Que dijo: «Oh, ven a la luz»\nCORO:\nYa todo dejé para andar en la luz No moro en tinieblas ya más\nYa todo dejé por seguir a Jesús Y vivo en la luz de su f"
+    },
+    {
+      "id": "SION-022",
+      "titulo": "EN LA VIÑA DEL SEÑOR",
+      "bloco": 1,
+      "palavras": 95,
+      "inicio": "1\nYo quiero trabajar por el Señor, Confiando en su palabra y en su amor: Quiero yo cantar y orar,\nY ocupado siempre estar En la viña del Señor.\nCORO:\nTrabajar y orar\nEn la viña, en la viña del Señor; Sí, mi anhelo es orar.\nY ocupado siempre estar, En"
+    },
+    {
+      "id": "SION-024",
+      "titulo": "CRISTO LA ROCA",
+      "bloco": 1,
+      "palavras": 129,
+      "inicio": "1\nEn las olas inmensas de embravecido mar, Que asaltan de mi alma la pobre embarcación, De rodillas a Cristo clamé, y el huracán Deshecho fue al instante a la voz de Dios.\nCORO:\nEs Cristo la Roca, el ancla de mi fe; Los males, lamentos, y ayes de tem"
+    },
+    {
+      "id": "SION-025",
+      "titulo": "EN LA CRUZ",
+      "bloco": 1,
+      "palavras": 140,
+      "inicio": "1\nMe hirió el pecado, fui a Jesús, Mostréle mi dolor;\nPerdido, errante, vi su luz, Bendíjome en su amor.\nCORO:\nEn la cruz, en la cruz, Do primero vi la luz,\nY las manchas de mi alma yo lavé: Fue Allí por fe do vi a Jesús,\nY siempre feliz con él seré."
+    },
+    {
+      "id": "SION-026",
+      "titulo": "¡OH! YO QUIERO ANDAR CON CRISTO",
+      "bloco": 1,
+      "palavras": 150,
+      "inicio": "1\n¡Oh!, yo quiero andar con Cristo.\nQuiero oír su tierna voz, Meditar en su palabra, Siempre andar de él en pos: Consagrar a él mi vida, Cumplir fiel su voluntad,\nY algún día con mi Cristo Gozaré la claridad.\nCORO:\n¡Oh, sí, yo quiero andar con Cristo"
+    },
+    {
+      "id": "SION-027",
+      "titulo": "GLORIA AL CORDERO",
+      "bloco": 1,
+      "palavras": 98,
+      "inicio": "1\nCristo mío, me salvaste, Tuyo soy, tuyo seré;\nPor tu sangre derramada Vida eterna gozaré.\nCORO:\n¡Gloria, gloria al Cordero!\n¡Gloria, gloria a Jesús!\nYa soy limpio por su sangre\n¡Gloria, gloria a Jesús!\n2\nMucho tiempo solo anduve, Lejos de tu dulce "
+    },
+    {
+      "id": "SION-030",
+      "titulo": "¡SALUD! ¡SALUD!",
+      "bloco": 1,
+      "palavras": 149,
+      "inicio": "1\nVengo a tus pies, Jesús, con llanto y dolor; Misericordia ten de mí, un pobre pecador; Sálvame, y te daré mi vida en loor;\n¡Oh Salvador, tierno Cristo!\nCORO:\n¡Salud! ¡Salud!, cantad a nuestro Dios. La paz nos da, clamad en alta voz; ,\nSalvación ya "
+    },
+    {
+      "id": "SION-032",
+      "titulo": "LIBRE ESTOY",
+      "bloco": 1,
+      "palavras": 117,
+      "inicio": "1\nYo vagaba mucho tiempo en el terror, Agobiado en el pecado y el temor; Cuando vi al Salvador\nY escuché su tierna voz,\nMi Jesús me hizo libre por su amor.\nCORO:\nLibre estoy, libre estoy,\nPor la gracia de Jesús libre estoy; Libre estoy, libre estoy,\n"
+    },
+    {
+      "id": "SION-033",
+      "titulo": "DILO A CRISTO",
+      "bloco": 1,
+      "palavras": 132,
+      "inicio": "1\nCuando estés cansado y abatido, Dilo a Cristo, dilo a Cristo;\nSi te sientes débil, confundido, Dilo a Cristo el Señor.\nCORO:\nDilo a Cristo, dilo a Cristo, Él es tu amigo más fiel;\nNo hay otro amigo como Cristo, Dilo tan sólo a él.\n2\nCuando estés de"
+    },
+    {
+      "id": "SION-034",
+      "titulo": "HAY QUIEN VIGILE",
+      "bloco": 1,
+      "palavras": 135,
+      "inicio": "1\nHay quien vele mis pisadas, En la sombra y en la luz; Por las sendas escarpadas Velará por mí, Jesús.\nPor los valles, por los montes, Do me lleva su bondad, Miro ya los horizontes\nDe una nueva claridad.\nCORO:\nHay quien vele mis pisadas, Y mi senda "
+    },
+    {
+      "id": "SION-036",
+      "titulo": "TUYO SOY, JESÚS",
+      "bloco": 1,
+      "palavras": 113,
+      "inicio": "1\nTuyo soy, Jesús, ya escuché la voz, De tu amor hablándome aquí; Mas anhelo en alas de fe subir,\nY más cerca estar de ti.\nCORO:\nAún más cerca, cerca de tu cruz: Llévame, ¡oh Salvador!\nAún más cerca, cerca, cerca de tu cruz, Llévame, ¡oh buen Pastor!"
+    },
+    {
+      "id": "SION-038",
+      "titulo": "LA BANDERA DE LA CRUZ",
+      "bloco": 1,
+      "palavras": 103,
+      "inicio": "1\nCual pendón hermoso despleguemos hoy La bandera de la cruz,\nLa verdad del evangelio, el blasón Del soldado de Jesús.\nCORO:\n¡Adelante, adelante,\nEn pos de nuestro Salvador! Con plena fe en nuestro Rey,\n¡Adelante con valor!\n2\nPrediquemos siempre lo q"
+    },
+    {
+      "id": "SION-039",
+      "titulo": "NADA HAY QUE ME PUEDA APARTAR",
+      "bloco": 1,
+      "palavras": 103,
+      "inicio": "1\nNada hay que me pueda apartar De Cristo y de su amor,\nPues él de veras sabe amar Al pobre pecador.\nCORO:\n¡Yo te amo, oh mi Salvador!, Más que a lo terrenal;\nMe das consuelo, paz y amor, Y el reino celestial.\n2\nSaber que Cristo es mi sostén, Me aleg"
+    },
+    {
+      "id": "SION-041",
+      "titulo": "YA SALVO SOY",
+      "bloco": 1,
+      "palavras": 103,
+      "inicio": "1\nMis culpas todas borró Jesús Con infinito amor;\nCargó con ellas en cruenta cruz En medio de mortal dolor.\nCORO:\nSalvo por él yo soy, Salvo por su poder:\nA vida nueva Jesús me ha llevado,\n¡Ya salvo soy!\n2\nEn densas sombras anduve yo Cuando en maldad"
+    },
+    {
+      "id": "SION-042",
+      "titulo": "MÁS CUAL JESÚS",
+      "bloco": 1,
+      "palavras": 105,
+      "inicio": "1\nMás cual mi Cristo quiero siempre ser, Más mansedumbre, y su amor tener; Celo en servirle, fidelidad mostrar, Más consagrado, y las nuevas publicar.\nCORO:\nToma mi ser, lo doy, Señor, a ti, Mi corazón, imploro limpies, sí; Toma mi ser, es tuyo en ve"
+    },
+    {
+      "id": "SION-043",
+      "titulo": "CUANDO LEO EN LA BIBLIA",
+      "bloco": 1,
+      "palavras": 182,
+      "inicio": "1\nCuando leo en la Biblia cómo llama Jesús Y bendice a los niños con amor:\nYo también quisiera estar, Y con ellos descansar,\nEn los brazos del tierno Salvador.\n2\nVer quisiera sus manos sobre mí reposar, Cariñosos abrazos de él sentir;\nSus miradas dis"
+    },
+    {
+      "id": "SION-044",
+      "titulo": "PODER PENTECOSTAL",
+      "bloco": 1,
+      "palavras": 94,
+      "inicio": "1\nUnánimes junto a la cruz, Pedimos con fervor; Según tu dicho, oh Jesús, Manda el Consolador.\nCORO:\nSí, manda otra lluvia,\n¡Oh buen Salvador!\nY con tu gran fuego avívanos, Señor;\n¡Oh!, danos la lluvia, del Consolador, Aviva tu iglesia con poder cele"
+    },
+    {
+      "id": "SION-047",
+      "titulo": "HUBO QUIEN POR MIS CULPAS",
+      "bloco": 1,
+      "palavras": 112,
+      "inicio": "1\nHubo quien por mis culpas muriera en la cruz Aun indigno y vil como soy;\nSoy feliz, pues su sangre vertió mi Jesús, Y con ella mis culpas borró.\nCORO:\nMis pecados llevó, en la cruz do murió El sublime, el tierno Jesús,\nLos desprecios sufrió, y mi a"
+    },
+    {
+      "id": "SION-048",
+      "titulo": "EL NOMBRE DE JESÚS",
+      "bloco": 1,
+      "palavras": 102,
+      "inicio": "1\n¡Tan dulce el nombre de Jesús!\nSus bellas notas al cantar; Que mi alma llena al proclamar\n¡El nombre de Jesús!\nCORO:\nCristo, ¡oh, qué dulce es! Cristo, para siempre es; Cristo, yo te aclamaré,\nPor siempre, ¡oh mi Cristo!\n2\nAdoro el nombre de Jesús;"
+    },
+    {
+      "id": "SION-051",
+      "titulo": "LAS PISADAS DEL MAESTRO",
+      "bloco": 1,
+      "palavras": 135,
+      "inicio": "1\nQuiero seguir las pisadas del Maestro: Quiero ir en pos de mi Rey y Señor;\nY modelando por él mi carácter, Canto con gozo a mi Redentor.\nCORO:\n¡Qué hermoso es seguir las pisadas del Maestro!\nSiempre en la luz, cerca de Jesús;\n¡Qué hermoso es seguir"
+    },
+    {
+      "id": "SION-052",
+      "titulo": "UN DÍA CRISTO VOLVERÁ",
+      "bloco": 1,
+      "palavras": 107,
+      "inicio": "1\nUn día Cristo volverá, Promesa fiel ¿faltar?, ¡jamás!\nComo se fue así vendrá\nY su pueblo ha de ver al Rey Jesús.\nCORO:\nMuy pronto, sí, Jesús vendrá, Y alegre le verá su pueblo;\n¡Velad! ¡Orad!, el Rey vendrá, Los suyos arrebatará.\n2\nLos mensajeros d"
+    },
+    {
+      "id": "SION-053",
+      "titulo": "DULCE PAZ",
+      "bloco": 1,
+      "palavras": 101,
+      "inicio": "1\nEn oscuridad sin Jesús me vi, Con mil penas y gran dolor;\nMas Jesús llamó, ven, sí, ven a mí, Quiero ser tu Salvador.\nCORO:\nEn mi alma hay dulce paz Desde que vine a Jesús;\nNo hay noche nunca, sino paz y gozo, Desde que vivo en su luz.\n2\nPor las gr"
+    },
+    {
+      "id": "SION-054",
+      "titulo": "AMA EL PASTOR SUS OVEJAS",
+      "bloco": 1,
+      "palavras": 165,
+      "inicio": "1\n¡Ama el Pastor sus ovejas! Con un amor paternal;\n¡Ama el Pastor su rebaño! Con un amor sin igual:\n¡Ama el Pastor a las otras Que descarriadas están, Y conmovido las busca\nPor dondequiera que van!\nCORO:\nPor el desierto errabundas Vense sufrir penas "
+    },
+    {
+      "id": "SION-056",
+      "titulo": "EL MEJOR AMIGO",
+      "bloco": 1,
+      "palavras": 111,
+      "inicio": "1\n¡Es Jesús el mejor amigo!\nCuando triste o tentado estés, Colmará de bendición\nTu transido corazón;\n¡Es Jesús el mejor amigo!\nCORO:\n¡Es Jesús el mejor amigo, Es Jesús el mejor amigo!\nEl tus súplicas oirá Y tu carga llevará;\n¡Es Jesús el mejor amigo!"
+    },
+    {
+      "id": "SION-057",
+      "titulo": "LA FUENTE ETERNAL HALLÉ",
+      "bloco": 1,
+      "palavras": 106,
+      "inicio": "1\nPor fe contemplo redención, La fuente carmesí;\nJesús nos da la salvación, Su vida dio por mí.\nCORO:\nLa fuente sin igual hall De vida y luz el manantial;\n¡Oh gloria a Dios, me limpia a mí, Me limpia a mí, me limpia a mí!\n2\nMi vida entrego a mi Jesús"
+    },
+    {
+      "id": "SION-058",
+      "titulo": "LAS PROMESAS DE JESÚS",
+      "bloco": 1,
+      "palavras": 97,
+      "inicio": "1\nTodas las promesas del Señor Jesús Son apoyo poderoso de mi fe;\nMientras luche aquí buscando yo su luz, Siempre en sus promesas confiaré.\nCORO:\nGrandes, fieles,\nLas promesas que el Señor Jesús ha dado Grandes, fieles,\nEn ellas para siempre confiaré"
+    },
+    {
+      "id": "SION-059",
+      "titulo": "A LOS PIES DE JESUCRISTO",
+      "bloco": 1,
+      "palavras": 116,
+      "inicio": "1\nA los pies de Jesucristo Es el sitio aquí mejor, Escuchando cual María Las palabras de su amor.\nCORO:\nA los pies de Jesucristo Gozaré su comunión, Pues su mano fiel y tierna\nMe ha provisto protección.\n2\nA los pies de Jesucristo Hallo tierna compasi"
+    },
+    {
+      "id": "SION-060",
+      "titulo": "SOY SALVO",
+      "bloco": 1,
+      "palavras": 122,
+      "inicio": "1\nCristo del cielo a buscarme Vino a la tierra, se humilló: Cuando vagaba yo en la noche, El me buscó y mi alma salvó.\nCORO:\n¡Soy salvo, éste es mi canto!\nCristo me salva, ¡oh cuán glorioso!\n¡Soy salvo, miro su gloria! Doy alabanzas al Salvador.\n2\nCr"
+    },
+    {
+      "id": "SION-061",
+      "titulo": "VIENE OTRA VEZ",
+      "bloco": 1,
+      "palavras": 118,
+      "inicio": "1\nCantan los ángeles con dulce voz, Canten los hombres con sonora voz: Cristo vendrá nuestro Rey vencedor, Cristo vendrá otra vez.\nCORO:\n¡Viene otra vez, viene otra vez, En gloria viene al mundo otra vez: Viene otra vez, viene otra vez,\nEl viene pron"
+    },
+    {
+      "id": "SION-062",
+      "titulo": "SIEMPRE ORAD",
+      "bloco": 1,
+      "palavras": 107,
+      "inicio": "1\n«Siempre orad», muy pronto viene Cristo, Guarda bien tu corazón;\nRetén firme todo lo que tienes, Tú tendrás tu galardón.\nCORO:\n«Siempre orad», nos manda Cristo, Y velad\ten oración;\nPronto vendrá\tél en las nubes,\nNos dará su bendición.\n2\n«Siempre or"
+    },
+    {
+      "id": "SION-063",
+      "titulo": "LA FUENTE SANADORA",
+      "bloco": 1,
+      "palavras": 95,
+      "inicio": "1\n¡Ved la fuente sanadora, La que abrió el Salvador! Cuyas aguas refrescantes Son de perennal valor.\nCORO:\n¡Oh preciosa fuente sanadora!\nPara todos fluye libre;\n¡Oh preciosa fuente sanadora!\n¡Gloria a Dios!, me sana a mí.\n2\nEn la fuente que nos sana "
+    },
+    {
+      "id": "SION-064",
+      "titulo": "QUIERO VER MI PATRIA",
+      "bloco": 1,
+      "palavras": 130,
+      "inicio": "1\nQuiero ver a Jesucristo mi precioso Salvador, Quiero ver el alto cielo, ver el trono del Señor;\nVer la faz de mi Maestro, quien por mi sufrió la cruz, Viviré en esa patria de eterno gozo y luz.\nCORO:\nQuiero ver\taquella tierra,\nDonde rei\tna eterno a"
+    },
+    {
+      "id": "SION-065",
+      "titulo": "MÁS SANTIDAD DAME",
+      "bloco": 1,
+      "palavras": 93,
+      "inicio": "1\nMás santidad dame, más odio al mal, Más calma en las penas, más alto ideal; Más fe en mi Maestro, más consagración, Más celo en servirle, más grata oración.\n2\nMás prudente hazme, más sabio en él, Más firme en su causa, más fuerte y más fiel:\nMás re"
+    },
+    {
+      "id": "SION-066",
+      "titulo": "FUENTE DE LA VIDA ETERNA",
+      "bloco": 1,
+      "palavras": 93,
+      "inicio": "1\nFuente de la vida eterna Y de toda bendición; Ensalzar tu gracia tierna Debe cada corazón;\nTu piedad inagotable, Abundante en perdonar; Único ser adorable, Gloria a ti debemos dar.\n2\nDe los cánticos celestes Te quisiéramos cantar, Entonados por las"
+    },
+    {
+      "id": "SION-067",
+      "titulo": "BAUTISMO",
+      "bloco": 1,
+      "palavras": 112,
+      "inicio": "1\nEn las aguas de la muerte Sumergido fue \"Jesús,\nMas su amor no fue apagado Por sus penas en la cruz: Levantóse de la tumba, Sus cadenas quebrantó,\nY triunfante y victorioso A los cielos ascendió.\n2\nEn las aguas del bautismo Hoy confieso yo mi fe: J"
+    },
+    {
+      "id": "SION-068",
+      "titulo": "LA PATRIA DEL ALMA",
+      "bloco": 1,
+      "palavras": 102,
+      "inicio": "1\nCantaré, cantaré, del hermoso país, El lejano, glorioso jardín,\n||Donde ha de vivir el alma feliz Mientras vuelen los siglos sin fin. ||\n2\n¡Oh la patria del alma! en sueños se ve Sus muros de jaspe y cristal;\n||Y cercano parece aquel bello Edén, Ra"
+    },
+    {
+      "id": "SION-069",
+      "titulo": "BIENAVENTURADOS LOS DE LIMPIO CORAZÓN",
+      "bloco": 1,
+      "palavras": 150,
+      "inicio": "1\nBienaventurados son los de limpio corazón, Que no aman el tesoro de aquí:\nDe tranquilidad y paz gozan cada día más Y del cielo el gozo tienen ya en sí.\nCORO:\n¡Oh, cantemos aleluya! Si, de todo corazón;\nPor amor al Salvador, a su nombre dad loor Y p"
+    },
+    {
+      "id": "SION-072",
+      "titulo": "CARA A CARA",
+      "bloco": 1,
+      "palavras": 106,
+      "inicio": "1\nEn presencia estar de Cristo, Ver su rostro, ¿qué será? Cuando al fin en pleno gozo Mi alma le contemplará.\nCORO:\n¡Cara a cara espero verle, Más allá del cielo azul; Cara a cara en plena\nHe de ver a mi Jesús!\n2\nSólo tras oscuro velo Hoy lo puedo aq"
+    },
+    {
+      "id": "SION-074",
+      "titulo": "¡OH, CRISTO MÍO!",
+      "bloco": 1,
+      "palavras": 110,
+      "inicio": "1\n¡Oh! Cristo mío, eres tú mi amigo fiel, Seguro amparo sólo en ti tendré;\nEn mis aflicciones, buen. Jesús, iré a ti Y consuelo y dicha me darás, ¡oh, sí!\nCORO:\nCristo, ven más cerca; Paz perfecta en mi alma pon,\nCerca, si, más cerca, de mi corazón.\n"
+    },
+    {
+      "id": "SION-075",
+      "titulo": "LA PALABRA HOY SEMBRADA",
+      "bloco": 1,
+      "palavras": 123,
+      "inicio": "1\nLa palabra hoy sembrada Hazla, Cristo, en mi nacer, Para darle crecimiento Sólo tienes tú poder:\n||Ricos frutos tú nos puedes conceder.||\n2\nLa semilla que tu siervo Ha sembrado con saber, No permitas que las aves Se la vengan a comer:\n||Ricos fruto"
+    },
+    {
+      "id": "SION-079",
+      "titulo": "GLORIA A TI, JESÚS DIVINO",
+      "bloco": 1,
+      "palavras": 102,
+      "inicio": "1\n¡Gloria a ti, Jesús Divino!\n¡Gloria a ti por tus bondades!\n¡Gloria eterna a tus piedades!\nQuerido Salvador.\nCORO:\n¡Gloria, gloria, aleluya!\n¡Gloria, gloria, aleluya!\n¡Gloria, gloria, aleluya! A nuestro Salvador.\n2.\nTú me amaste con ternura, Y por m"
+    },
+    {
+      "id": "SION-080",
+      "titulo": "¡TRABAJAD! ¡TRABAJAD!",
+      "bloco": 1,
+      "palavras": 100,
+      "inicio": "1\n¡Trabajad! ¡Trabajad! Somos siervos de Dios, Seguiremos la senda que el Maestro trazó; Renovando las fuerzas con bienes que da,\nEl deber que nos toca cumplido será.\nCORO:\n¡Trabajad! ¡Trabajad!\n¡Esperad, y velad!\n¡Confiad! ¡Siempre orad!\n¡Que el Mae"
+    },
+    {
+      "id": "SION-081",
+      "titulo": "LAS SANTAS ESCRITURAS",
+      "bloco": 1,
+      "palavras": 98,
+      "inicio": "1\nPadre, tu palabra es Mi delicia y mi solaz:\nGuíe siempre aquí mis pies Y a mi pecho traiga paz.\nCORO:\nEs tu ley, Señor, Faro celestial\nQue, en perenne resplandor, Norte y guía da al mortal.\n2\nSI, obediente oí tu voz; En tu gracia fuerza hallé Y con"
+    },
+    {
+      "id": "SION-084",
+      "titulo": "YO GUIARÉ",
+      "bloco": 1,
+      "palavras": 125,
+      "inicio": "1\nYo guiaré al peregrino extraviado, Bondadoso hasta el pie de la cruz; Yo diré al corazón angustiado: Hallarás tu consuelo en Jesús.\nCORO:\nYo guiaré, yo guiaré,\nAl sediento de vida y de luz; Yo guiaré, yo guiaré,\nAl perdido a los pies de Jesús.\n2\nYo"
+    },
+    {
+      "id": "SION-085",
+      "titulo": "DEJO EL MUNDO Y SIGO A CRISTO",
+      "bloco": 1,
+      "palavras": 106,
+      "inicio": "1\nDejo el mundo y sigo a Cristo, Porque el mundo pasará; Mas su amor, amor bendito, Por los siglos durará.\nCORO:\n¡Oh, qué gran misericordia!\n¡Oh, de amor sublime don!\n¡Plenitud de vida eterna, Prenda viva de perdón!\n2\nDejo el mundo y sigo a Cristo, P"
+    },
+    {
+      "id": "SION-088",
+      "titulo": "¡OH, JÓVENES, VENID!",
+      "bloco": 1,
+      "palavras": 158,
+      "inicio": "1\n¡Oh jóvenes, venid, su brillante pabellón Cristo ha desplegado ante la nación:\nA todos en sus filas os quiere recibir; Y con él a la pelea os hará salir!\nCORO:\n¡Vamos a Jesús, alistados sin temor; Vamos a la lid, inflamados de valor! Jóvenes, luche"
+    },
+    {
+      "id": "SION-094",
+      "titulo": "SUENEN DULCES HIMNOS",
+      "bloco": 1,
+      "palavras": 123,
+      "inicio": "1\n¡Suenen dulces himnos, gratos al Señor.\nY óiganse en concierto universal! Desde el alto cielo baja el Salvador Para beneficio del mortal.\nCORO:\n¡Gloria!, ¡gloria sea a nuestro Dios!\n¡Gloria, sí, cantemos a una voz!\nY el cantar de gloria que se oyó "
+    },
+    {
+      "id": "SION-095",
+      "titulo": "LUGAR PARA CRISTO",
+      "bloco": 1,
+      "palavras": 169,
+      "inicio": "1\nTú dejaste tu trono y corona por mí Al venir a Belén a nacer\nMas a ti no fue dado el entrar al mesón Y en pesebre te hicieron nacer.\nCORO:\nVen a mi corazón, ¡oh Cristo!, Pues en él hay lugar para ti;\nVen a mi corazón, ¡oh Cristo!, ven, Pues en él h"
+    },
+    {
+      "id": "SION-096",
+      "titulo": "DIOS BENDIGA LAS ALMAS UNIDAS",
+      "bloco": 1,
+      "palavras": 150,
+      "inicio": "1\nDios bendiga las almas unidas. Por los lazos de amor sacrosanto, Y las guarde de todo quebranto En el mundo de espinas erial.\nQue el hogar que a formarse comienza, Con la unión de estos dos corazones, Goce siempre de mil bendiciones\nAl amparo del D"
+    },
+    {
+      "id": "SION-097",
+      "titulo": "SANTA BIBLIA",
+      "bloco": 1,
+      "palavras": 115,
+      "inicio": "1\n¡Santa Biblia! para mí, Eres un tesoro aquí;\nTú contienes con verdad La divina voluntad;\nTú me dices lo que soy, De quién vine y a quién voy.\n2\nTú reprendes mi dudar; Tú me exhortas sin cesar; Eres faro que a mi pie, Va guiando por la fe,\nA las fue"
+    },
+    {
+      "id": "SION-099",
+      "titulo": "LA SANTA CENA",
+      "bloco": 1,
+      "palavras": 96,
+      "inicio": "1\nSanta Cena, para mí Eres memorial aquí;\nTú me enseñas con verdad El misterio de bondad; Me recuerdas de la cruz, Del Cordero, mi Jesús.\n2\nTú elevas nuestro ser Al angélico placer; Tipificas con señal\nLa crucifixión pascual. Comulguemos al tomar De "
+    },
+    {
+      "id": "SION-100",
+      "titulo": "¿QUIÉN A CRISTO QUIERE?",
+      "bloco": 1,
+      "palavras": 107,
+      "inicio": "1\n¿Quién a Cristo quiere De hoy en más seguir, Su pendón alzando, Yendo a combatir?\n¿Quién le quiere humilde Siempre aquí servir, Siempre obedecerle, Darle su existir?\nCORO:\n¿Quién seguirle quiere?\n¿Quién responderá Al buen Redentor:\n«Heme aquí, yo i"
+    },
+    {
+      "id": "SION-101",
+      "titulo": "JUNTO A LA CRUZ",
+      "bloco": 1,
+      "palavras": 105,
+      "inicio": "1\nJunto a la cruz do Jesús murió, Junto a la cruz do salud pedí, Ya mis maldades él perdonó,\n¡A su nombre gloria!\nCORO:\n¡A su nombre gloria!\n¡A su nombre gloria!\nYa mis maldades él perdonó,\n¡A su nombre gloria!\n2\nJunto a la cruz donde le busqué,\n¡Cuá"
+    },
+    {
+      "id": "SION-102",
+      "titulo": "PON TU CARGA EN JESÚS",
+      "bloco": 1,
+      "palavras": 104,
+      "inicio": "1\nEn Jesu-Cristo confía no más, Pon tu carga en Jesús;\nPaz y socorro de él obtendrás, Pon tu carga en Jesús.\nCORO:\nPon tu carga en Jesús Y dile tu cruel dolor; En Cristo tu Amigo Tendrás, un abrigo...\n¡Oh, pon tu carga en Jesús!\n2\nPaz redentora tu al"
+    },
+    {
+      "id": "SION-103",
+      "titulo": "ADORADLE",
+      "bloco": 1,
+      "palavras": 92,
+      "inicio": "1\nDad al Padre toda gloria, Dad al Hijo todo honor; Y al Espíritu divino Alabanzas de loor.\nCORO:\nAdoradle, adoradle, Adorad al Salvador; Tributadle toda gloria,\nPueblo suyo por su grande amor.\n2\nAdoradle, ¡oh iglesia!, Por Jesús tu Redentor; Rescata"
+    },
+    {
+      "id": "SION-104",
+      "titulo": "¡ALELUYA, ÉL ME SALVA!",
+      "bloco": 1,
+      "palavras": 92,
+      "inicio": "1\nJesús borró ya mi maldad Su sangre al derramar;\nÉl quiso en mí su gran bondad Venir a revelar.\nCORO:\n¡Aleluya! El me salva.\nPues en mí su amor probó;\n¡Aleluya! El me salva, Para siempre me libró.\n2\nÉl es mi paz, mi protección, Mi buen Consolador; A"
+    },
+    {
+      "id": "SION-105",
+      "titulo": "SALVADOR, MI BIEN ETERNO",
+      "bloco": 1,
+      "palavras": 111,
+      "inicio": "1\nSalvador, mi bien eterno, Más que vida para mí: En mi fatigosa senda\nCerca siempre te halle a ti,\n||Junto a ti, junto a ti.|| En mi fatigosa senda Cerca siempre te halle a ti.\n2\nNo los bienes, no placeres Ni renombre busco aquí;\nEn las pruebas, en "
+    },
+    {
+      "id": "SION-107",
+      "titulo": "GUARDA EL CONTACTO",
+      "bloco": 1,
+      "palavras": 142,
+      "inicio": "1\n¿Quieres sobre el mundo ser un vencedor?\n¿Quieres tú cantar aún cuando hay dolor?\n¿Quieres ser alegre cual fiel luchador? Guarda el contacto con el Salvador.\nCORO:\nGuarda el contacto con el Salvador, Luego las tinieblas no te cubrirán; Por la senda"
+    },
+    {
+      "id": "SION-108",
+      "titulo": "CREO EN LA BIBLIA",
+      "bloco": 1,
+      "palavras": 144,
+      "inicio": "1\nCreo en la Biblia, el libro redentor, Pues de Jesu-Cristo muestra el dulce amor,\nTodos mis pecados ya borrados son; Paz y gozo tengo en mi corazón.\nCORO:\nCreo en la Biblia, libro de mi Dios; Música del cielo para mí es su voz;\nMuéstrame el camino y"
+    },
+    {
+      "id": "SION-109",
+      "titulo": "EL QUE HA DE VENIR, VENDRÁ",
+      "bloco": 1,
+      "palavras": 114,
+      "inicio": "1\nAl rayar el alba tal vez venga Cristo Con aclamación y con voz de arcángel;\nLevanta los muertos, transforma los vivos, A los suyos él viene a llevar.\nCORO:\n¿Hasta cuándo? Señor Jesús,\n¿Hasta cuándo vendrás?\nCristo viene, aleluya, aleluya, amén; Ale"
+    },
+    {
+      "id": "SION-110",
+      "titulo": "MÁS CERCA DE CRISTO",
+      "bloco": 1,
+      "palavras": 117,
+      "inicio": "1\nDe Cristo cada día quiero yo más cerca estar, Él es mi Rey amable, mi precioso Salvador;\nNo puedo en todo el mundo amigo cual Jesús hallar, Quien maravillas hace y prodigios sin cesar.\nCORO:\nJamás\tpodrán contarme\nDe Cristo la mitad; De su\tamor divi"
+    },
+    {
+      "id": "SION-112",
+      "titulo": "POR LA SANGRE",
+      "bloco": 1,
+      "palavras": 117,
+      "inicio": "1\nPor el mundo brilla luz Desde que murió Jesús, Por nosotros en la cruz, Del Calvario;\nLos pecados él llevó, De la culpa nos libró\nCon la sangre que manó Del Calvario.\nCORO:\nPor la sangre, por la sangre Somos redimidos, sí, Por la sangre carmesí:\nPo"
+    },
+    {
+      "id": "SION-114",
+      "titulo": "SOLO CRISTO",
+      "bloco": 1,
+      "palavras": 102,
+      "inicio": "1\nYo hallé un fiel amigo para siempre, Más que hermano, padre o madre es él; Más que plata, o que oro, o que cobre, Es de todos Jesu-Cristo el más fiel.\nCORO:\n||Sólo Cristo,\t\tSólo Cristo, Sólo Cristo,\tSólo Cristo\nEs el lirio de los valles, mi Jesús.|"
+    },
+    {
+      "id": "SION-115",
+      "titulo": "LA GRACIA",
+      "bloco": 1,
+      "palavras": 106,
+      "inicio": "1\nLa gracia de Dios revelada En Cristo Jesús, mi Señor, Al mundo perdido presenta De Dios su infinito favor.\nCORO:\nGracia, gracia, me basta la gracia de Dios-Jesús; Gracia, gracia, yo miro su gracia en Jesús.\n2\nLa gracia de Dios es más dulce Que cosa"
+    },
+    {
+      "id": "SION-116",
+      "titulo": "JESÚS PRONTO VOLVERÁ",
+      "bloco": 1,
+      "palavras": 143,
+      "inicio": "1\nJesús pronto volverá Al mundo en gran poder;\nPromesa nos dio, él regresaré; Si, viene el Salvador.\nSeñales abundan hoy, Cumpliéndose ya estén, Por su gracia listo estoy, Le espero sin más afán.\nCORO:\nMuy pronto Jesús vendré, El viene no tardara;\nÉl"
+    },
+    {
+      "id": "SION-119",
+      "titulo": "DIOS OS GUARDE",
+      "bloco": 1,
+      "palavras": 115,
+      "inicio": "1\nDios os guarde en su santo amor, Hasta el día en que lleguemos,\nA la patria do estaremos; Para siempre con el Salvador.\nCORO:\nAl venir Jesús nos veremos A los pies de nuestro Salvador;\nReunidos todos seremos,\nUn redil con nuestro buen Pastor.\n2\nDio"
+    },
+    {
+      "id": "SION-120",
+      "titulo": "CUANDO ALLÁ SE PASE LISTA",
+      "bloco": 1,
+      "palavras": 128,
+      "inicio": "1\nCuando la trompeta suene En aquel día final,\nY que el alba eterna rompa en claridad; Cuando las naciones salvas\nA su patria lleguen ya,\nY que sea pasada lista, allí he de estar.\nCORO:\nCuando allá se pase lista, Cuando allá se pase lista, Cuando all"
+    },
+    {
+      "id": "SION-125",
+      "titulo": "FIRMES Y ADELANTE",
+      "bloco": 1,
+      "palavras": 126,
+      "inicio": "1\nFirmes y adelante, huestes de la fe, Sin temor alguno, que Jesús nos ve. Jefe soberano, Cristo al frente va,\nY la regia enseña tremolando está.\nCORO:\nFirmes y adelante, huestes de la fe, Sin temor alguno, que Jesús nos ve.\n2\nAl sagrado nombre de nu"
+    },
+    {
+      "id": "SION-126",
+      "titulo": "DULCE ORACIÓN",
+      "bloco": 1,
+      "palavras": 114,
+      "inicio": "1\nDulce oración, dulce oración, De toda influencia mundanal Elevas tú mi corazón,\nAl tierno Padre Celestial.\n¡Oh cuantas veces tuve en ti Auxilio en ruda tentación, Y cuantos bienes recibí,\nMediante ti, dulce oración!\n2\nDulce oración, dulce oración, "
+    },
+    {
+      "id": "SION-128",
+      "titulo": "GRATO ES DECIR LA HISTORIA",
+      "bloco": 1,
+      "palavras": 125,
+      "inicio": "1\nGrato es decir la historia Del celestial favor;\nDe Cristo y de su gloria, De Cristo y de su amor; Me agrada referirla, Pues sé que es la verdad, Y nada satisface\nCual ella, mi ansiedad.\nCORO:\n¡Cuán bella es esa historia! Mi tema allá en la gloria S"
+    },
+    {
+      "id": "SION-132",
+      "titulo": "EN JESÚS MI SEÑOR ENCONTRÉ DULCE PAZ",
+      "bloco": 1,
+      "palavras": 102,
+      "inicio": "1\nEn Jesús, mi Señor, encontré dulce paz, En Jesús quien por mí se entregó;\nSi acudieres a él este don tú tendrás Ve, que a nadie jamás rechazó.\nCORO:\n¡Sublime don!, ¡don sin igual! Solamente él podrá conceder;\nEs un rayo de luz de su luz celestial, "
+    },
+    {
+      "id": "SION-134",
+      "titulo": "¡OH, CUÁN DULCE!",
+      "bloco": 1,
+      "palavras": 103,
+      "inicio": "1\n¡Oh, cuán dulce es fiar en Cristo Y entregarse todo a él; Esperar en sus promesas,\nY en sus sendas serle fiel!\nCORO:\nJesucristo, Jesucristo, Ya tu amor probaste en mí\nJesucristo, Jesucristo Siempre quiero fiar en ti.\n2\nEs muy dulce fiar en Cristo Y"
+    },
+    {
+      "id": "SION-141",
+      "titulo": "VEN A CRISTO",
+      "bloco": 1,
+      "palavras": 102,
+      "inicio": "1\nMientras oro y mientras ruego, Mientras sientes convicción, Mientras Dios derrama el fuego, Ven, amigo, a Cristo, ven.\nCORO:\nVen a él,\tVen a él,\nDale hoy tu corazón; Ven a él, Ven a él, Dale hoy tu corazón.\n2\nHas vagado en este mundo Sin tranquilid"
+    },
+    {
+      "id": "SION-144",
+      "titulo": "VE Y VIVIRÁS",
+      "bloco": 1,
+      "palavras": 120,
+      "inicio": "1\nUn mensaje del Señor, ¡aleluya!, Anuncio yo que da la paz,\nEs de Dios el santo amor, ¡aleluya!\n«Ve tan sólo a Cristo y vivirás,»\nCORO:\nVe la cruz y vivirás, Ve a Cristo y vivirás;\nEs de Dios el santo amor, ¡aleluya!\nVe tan sólo a Cristo y vivirás.\n"
+    },
+    {
+      "id": "SION-148",
+      "titulo": "SI CREYERE PUEDE A ÉL VENIR",
+      "bloco": 1,
+      "palavras": 90,
+      "inicio": "1\n¡Oh qué gozo yo siento en mi corazón, No hay más oscuridad!\nEn Jesús he hallado gran bendición, Borró ya mi maldad.\nCORO:\nSi creyere, puede a él venir, Puede a él venir, si, puede a él venir;\nSi creyere puede a él venir, Jesucristo salvará.\n2\nAlaba"
+    },
+    {
+      "id": "SION-160",
+      "titulo": "GLORIA A DIOS EN LAS ALTURAS",
+      "bloco": 1,
+      "palavras": 150,
+      "inicio": "1\n¡Gloria a Dios en las alturas, Que mostró su gran amor! Dando a humanas criaturas Un potente Salvador.\nCon los himnos de los santos Hagan coro nuestros cantos De alabanza y gratitud\nPor la divinal salud, Y digamos a una voz:\n¡En los cielos gloria a"
+    },
+    {
+      "id": "SION-162",
+      "titulo": "PENTECOSTÉS PARA TODOS",
+      "bloco": 1,
+      "palavras": 106,
+      "inicio": "1\nDios no nos deja huérfanos, Más como prometió,\nNos manda el Santo Espíritu, Que llena de su gran virtud Al ser que le esperó.\nCORO\n¿Ha venido a ti? ¿Ha venido a ti, El Espíritu Consolador?\nDios convencerá al mundo de mal, Cuando venga el Consolador"
+    },
+    {
+      "id": "SION-165",
+      "titulo": "SANTO ESPÍRITU, DESCIENDE",
+      "bloco": 1,
+      "palavras": 123,
+      "inicio": "1\nSanto Espíritu, desciende A mi pobre corazón; Llénalo de tu presencia\nY haz en él tu habitación.\nCORO:\n¡Llena hoy, llena hoy, Llena hoy mi corazón!\n¡Santo Espíritu, desciende Gloria y haz en mi tu habitación!\n2\nDe tu gracia puedes darme Inundando e"
+    },
+    {
+      "id": "SION-187",
+      "titulo": "ÉL ME SOSTENDRÁ",
+      "bloco": 1,
+      "palavras": 90,
+      "inicio": "1\nSi la fe me abandonare, El me sostendrá;\nY si el mal me amenazare, El me sostendrá.\nCORO:\nEl me sostendrá, él me sostendrá: Mi Jesús que tanto me ama,\nEl me sostendrá.\n2\nNunca yo podré ser firme Con tan débil fe;\nMas él puede dirigirme, Y él me sos"
+    },
+    {
+      "id": "SION-199",
+      "titulo": "CRISTO VIENE",
+      "bloco": 1,
+      "palavras": 158,
+      "inicio": "1\nCristo viene, esto es cierto, Porque así está escrito Siempre fiel a su promesa, Por los suyos ya regresa:\n¡Vedle ya, ved al Señor!\nTrae a aquellos que han dormido Ni uno solo se ha perdido;\nSI vendrá – ¡Oh, sí vendrá!\n2\nEl que en la cruz muriendo "
+    },
+    {
+      "id": "SION-206",
+      "titulo": "JESÚS, YO HE PROMETIDO",
+      "bloco": 1,
+      "palavras": 132,
+      "inicio": "1\nJesús, yo he prometido Servirle con amor; Concédeme tu gracia, Mi amigo y Salvador.\nNo temeré la lucha\nSi tú a mi lado estás, Ni perderé el camino Si tú guiando vas.\n2\nEl mundo está muy cerca Y abunda en tentación; Suave es el engaño\nY es necia la "
+    },
+    {
+      "id": "SION-281",
+      "titulo": "¡SANTO, SANTO, SANTO!",
+      "bloco": 1,
+      "palavras": 146,
+      "inicio": "1\n¡Santo! ¡Santo! ¡Santo! Señor Omnipotente, Siempre el labio mío loores te dará;\n¡Santo! ¡Santo! ¡Santo! te adora reverente, Dios en tres personas, bendita Trinidad.\n2\n¡Santo! ¡Santo! ¡Santo! en numeroso coro, Santos escogidos te adoran con fervor; "
+    }
+  ],
+  "paresComDiferencaDeCoro": [
+    {
+      "tituloNormalizado": "VEN A CRISTO",
+      "gt": "GT-023",
+      "gtTitulo": "VEN A CRISTO",
+      "gtCoro": false,
+      "sion": "SION-141",
+      "sionTitulo": "VEN A CRISTO",
+      "sionCoro": true
+    },
+    {
+      "tituloNormalizado": "HAY UN LUGAR DO QUIERO ESTAR",
+      "gt": "GT-169",
+      "gtTitulo": "HAY UN LUGAR DO QUIERO ESTAR",
+      "gtCoro": true,
+      "sion": "SION-258",
+      "sionTitulo": "HAY UN LUGAR DO QUIERO ESTAR",
+      "sionCoro": false
+    },
+    {
+      "tituloNormalizado": "CRISTO ME AYUDA POR EL A VIVIR",
+      "gt": "GT-347",
+      "gtTitulo": "CRISTO ME AYUDA POR EL A VIVIR",
+      "gtCoro": false,
+      "sion": "SION-139",
+      "sionTitulo": "CRISTO ME AYUDA POR ÉL A VIVIR",
+      "sionCoro": true
+    },
+    {
+      "tituloNormalizado": "EL EVANGELIO",
+      "gt": "GT-356",
+      "gtTitulo": "EL EVANGELIO",
+      "gtCoro": false,
+      "sion": "SION-313",
+      "sionTitulo": "EL EVANGELIO",
+      "sionCoro": true
+    },
+    {
+      "tituloNormalizado": "OID OID LO QUE NOS MANDA",
+      "gt": "GT-373",
+      "gtTitulo": "OÍD, OÍD, LO QUE NOS MANDA",
+      "gtCoro": false,
+      "sion": "SION-219",
+      "sionTitulo": "OID, OID, LO QUE NOS MANDA",
+      "sionCoro": true
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "etapa": "10H",
+  "status": "APLICADO_COM_SUCESSO",
+  "correcoesEsperadas": 14,
+  "correcoesAplicadas": 14,
+  "hashAnteriorOficial": "a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41",
+  "novoHashOficial": "48cd4be20055aa9243a0a2223aef36376186dfd202f72ca4a4666015c44445a5",
+  "backup": {
+    "arquivo": "assets/base_mestre.bak-etapa-10h.json",
+    "hash": "a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41",
+    "integro": true
+  },
+  "aplicadas": [
+    {
+      "id": "GT-040",
+      "atual": "oid, .",
+      "proposta": "oid,",
+      "campo": "letra",
+      "substituicoes": 1
+    },
+    {
+      "id": "GT-056",
+      "atual": "serIe",
+      "proposta": "serle",
+      "campo": "letra",
+      "substituicoes": 1
+    },
+    {
+      "id": "SION-026",
+      "atual": "serIe",
+      "proposta": "serle",
+      "campo": "letra",
+      "substituicoes": 1
+    },
+    {
+      "id": "GT-161",
+      "atual": "serás . De",
+      "proposta": "serás. De",
+      "campo": "letra",
+      "substituicoes": 1
+    },
+    {
+      "id": "GT-018",
+      "atual": "referirIa",
+      "proposta": "referirla",
+      "campo": "letra",
+      "substituicoes": 1
+    },
+    {
+      "id": "GT-018",
+      "atual": "buen .Jesús",
+      "proposta": "buen Jesús",
+      "campo": "letra",
+      "substituicoes": 1
+    },
+    {
+      "id": "SION-128",
+      "atual": "referirIa",
+      "proposta": "referirla",
+      "campo": "letra",
+      "substituicoes": 1
+    },
+    {
+      "id": "SION-128",
+      "atual": "buen .Jesús",
+      "proposta": "buen Jesús",
+      "campo": "letra",
+      "substituicoes": 1
+    },
+    {
+      "id": "GT-007",
+      "atual": "serIe",
+      "proposta": "serle",
+      "campo": "letra",
+      "substituicoes": 1
+    },
+    {
+      "id": "SION-011",
+      "atual": "serIe",
+      "proposta": "serle",
+      "campo": "letra",
+      "substituicoes": 1
+    },
+    {
+      "id": "GT-025",
+      "atual": "serIe",
+      "proposta": "serle",
+      "campo": "letra",
+      "substituicoes": 1
+    },
+    {
+      "id": "SION-134",
+      "atual": "serIe",
+      "proposta": "serle",
+      "campo": "letra",
+      "substituicoes": 1
+    },
+    {
+      "id": "GT-102",
+      "atual": "hazIo",
+      "proposta": "hazlo",
+      "campo": "letra",
+      "substituicoes": 1
+    },
+    {
+      "id": "SION-044",
+      "atual": "hazIo",
+      "proposta": "hazlo",
+      "campo": "letra",
+      "substituicoes": 1
+    }
+  ],
+  "bloqueadosMantidos": [
+    "GT-283",
+    "GT-042",
+    "GT-182",
+    "SION-079"
+  ]
+}

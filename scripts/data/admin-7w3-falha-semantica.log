@@ -1,0 +1,27 @@
+======================================================
+ ADMFC — APLICADOR TRANSACIONAL 7R
+ MODO: APPLY
+======================================================
+
+BASE: assets/base_mestre.TESTE-7W3.json
+HASH: 29fe35592ba18e5ef8793dff6af2e59be0736dcf977422936014204b0052847d
+PACOTE: /data/data/com.termux/files/home/storage/downloads/ADMFC-TESTE-7J/admfc-correcciones-7j-ready-test.json
+
+=== ANÁLISE ===
+
+GT-001 — EL APOSENTO ALTO
+titulo: READY_TO_APPLY
+RESULTADO: READY_TO_APPLY
+
+=== RESUMO ===
+READY_TO_APPLY: 1
+ALREADY_APPLIED: 0
+CONFLICT: 0
+INVALID: 0
+DECISÃO: APTO PARA APLICAÇÃO
+
+=== APLICAÇÃO TRANSACIONAL ===
+BACKUP: assets/base_mestre.TESTE-7W3.json.bak-before-apply
+GT-001.titulo: APPLIED
+TRANSAÇÃO: NÃO COMMITADA
+FALHA INJETADA 7W.3: antes do rename/commit

@@ -1,0 +1,428 @@
+{
+  "etapa": "10D",
+  "descricao": "Pacote prioritário para cotejo documental",
+  "modo": "SOMENTE_LEITURA",
+  "status": "AGUARDANDO_COTEJO_COM_FONTES",
+  "base": {
+    "arquivo": "assets/base_mestre.json",
+    "hash": "a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41",
+    "total": 718
+  },
+  "origem": "scripts/data/etapa-10c-dossie-cotejo.json",
+  "regras": [
+    "Nenhuma hipótese é correção automática.",
+    "A grafia da fonte documental prevalece.",
+    "GT e Sión devem ser cotejados individualmente.",
+    "Texto compartilhado entre edições não autoriza propagação automática.",
+    "Correções somente serão aplicadas em etapa posterior e com backup."
+  ],
+  "resumo": {
+    "registros": 16,
+    "pontos_cotejo": 18,
+    "pontos_localizados": 16,
+    "pontos_nao_localizados": 2,
+    "pares_gt_sion": 6
+  },
+  "pares": [
+    {
+      "gt": "GT-056",
+      "sion": "SION-026",
+      "titulo_gt": "¡OH, YO QUIERO ANDAR CON CRISTO!",
+      "titulo_sion": "¡OH! YO QUIERO ANDAR CON CRISTO",
+      "titulo_normalizado_igual": true,
+      "letra_identica_na_base": true
+    },
+    {
+      "gt": "GT-018",
+      "sion": "SION-128",
+      "titulo_gt": "GRATO ES DECIR LA HISTORIA",
+      "titulo_sion": "GRATO ES DECIR LA HISTORIA",
+      "titulo_normalizado_igual": true,
+      "letra_identica_na_base": true
+    },
+    {
+      "gt": "GT-007",
+      "sion": "SION-011",
+      "titulo_gt": "TODO A CRISTO YO ME RINDO",
+      "titulo_sion": "TODO A CRISTO YO ME RINDO",
+      "titulo_normalizado_igual": true,
+      "letra_identica_na_base": true
+    },
+    {
+      "gt": "GT-025",
+      "sion": "SION-134",
+      "titulo_gt": "¡OH, CUAN DULCE!",
+      "titulo_sion": "¡OH, CUÁN DULCE!",
+      "titulo_normalizado_igual": true,
+      "letra_identica_na_base": true
+    },
+    {
+      "gt": "GT-102",
+      "sion": "SION-044",
+      "titulo_gt": "PODER PENTECOSTAL",
+      "titulo_sion": "PODER PENTECOSTAL",
+      "titulo_normalizado_igual": true,
+      "letra_identica_na_base": true
+    },
+    {
+      "gt": "GT-182",
+      "sion": "SION-079",
+      "titulo_gt": "¡GLORIA A TI, JESÚS DIVINO",
+      "titulo_sion": "GLORIA A TI, JESÚS DIVINO",
+      "titulo_normalizado_igual": true,
+      "letra_identica_na_base": true
+    }
+  ],
+  "registros": [
+    {
+      "id": "GT-040",
+      "numero": 40,
+      "titulo": "EN LOS NEGOCIOS DEL REY",
+      "titulo_normalizado": "EN LOS NEGOCIOS DEL REY",
+      "hipoteses": [
+        {
+          "atual": "oid, .",
+          "hipotese": "oid,",
+          "classe": "PONTUACAO_OCR",
+          "encontrado": true,
+          "contexto": "1 | Soy peregrino aquí, mi hogar lejano está, En la mansión de luz, eterna paz y amor: Embajador yo soy del reino celestial | En los negocios de mi Rey. | CORO: | Este mensaje fiel oid, . Que dijo ya celeste voz: | «Reconciliaos ya» – dice el Señor y Rey, | ¡Reconciliaos hoy con Dios! | 2 | Que del pecado vil arrepentidos ya, Han de reinar con él los que obedientes son: | Es"
+        }
+      ],
+      "letra_atual": "1\nSoy peregrino aquí, mi hogar lejano está, En la mansión de luz, eterna paz y amor: Embajador yo soy del reino celestial\nEn los negocios de mi Rey.\nCORO:\nEste mensaje fiel oid, . Que dijo ya celeste voz:\n«Reconciliaos ya» – dice el Señor y Rey,\n¡Reconciliaos hoy con Dios!\n2\nQue del pecado vil arrepentidos ya, Han de reinar con él los que obedientes son:\nEs el mensaje fiel que debo proclamar, En los negocios de mi Rey.\n3\nMi hogar más bello es que el Valle de Sarón, Eterno gozo y paz reinan por siempre en él, Y allí Jesús dará eterna habitación;\nEs el mensaje, de mi Rey.",
+      "decisao_documental": "PENDENTE",
+      "fonte_consultada": null,
+      "evidencia": null,
+      "correcao_autorizada": false,
+      "observacao": "A hipótese somente poderá ser promovida a correção após cotejo documental."
+    },
+    {
+      "id": "GT-056",
+      "numero": 56,
+      "titulo": "¡OH, YO QUIERO ANDAR CON CRISTO!",
+      "titulo_normalizado": "OH YO QUIERO ANDAR CON CRISTO",
+      "hipoteses": [
+        {
+          "atual": "serIe",
+          "hipotese": "serle",
+          "classe": "OCR_I_MAIUSCULO_POR_L",
+          "encontrado": true,
+          "contexto": "voluntad, | Y algún día con mi Cristo Gozaré la claridad. | CORO: | ¡Oh, sí, yo quiero andar con Cristo! | ¡Oh, sí, yo quiero vivir con Cristo! | ¡Oh, sí, yo quiero morir con Cristo! | Quiero serIe un testigo fiel. | 2 | ¡Oh!, yo quiero andar con Cristo, Él vivió en santidad, | En la Biblia yo lo leo | Y yo sé que es la verdad. Cristo era santo en todo, El Cordero de la cruz; | Y yo a"
+        }
+      ],
+      "letra_atual": "1\n¡Oh!, yo quiero andar con Cristo.\nQuiero oír su tierna voz, Meditar en su palabra, Siempre andar de él en pos: Consagrar a él mi vida, Cumplir fiel su voluntad,\nY algún día con mi Cristo Gozaré la claridad.\nCORO:\n¡Oh, sí, yo quiero andar con Cristo!\n¡Oh, sí, yo quiero vivir con Cristo!\n¡Oh, sí, yo quiero morir con Cristo!\nQuiero serIe un testigo fiel.\n2\n¡Oh!, yo quiero andar con Cristo, Él vivió en santidad,\nEn la Biblia yo lo leo\nY yo sé que es la verdad. Cristo era santo en todo, El Cordero de la cruz;\nY yo anhelo ser cristiano, Seguidor de mi Jesús.\n3\n¡Oh!, yo quiero andar con Cristo De mi senda él es la luz, Dejaré el perverso mundo\nY cargar aquí mi cruz. Este mundo nada ofrece, Cristo ofrece salvación;\nY es mi única esperanza Gozar vida eterna en Sion.",
+      "decisao_documental": "PENDENTE",
+      "fonte_consultada": null,
+      "evidencia": null,
+      "correcao_autorizada": false,
+      "observacao": "A hipótese somente poderá ser promovida a correção após cotejo documental."
+    },
+    {
+      "id": "SION-026",
+      "numero": 26,
+      "titulo": "¡OH! YO QUIERO ANDAR CON CRISTO",
+      "titulo_normalizado": "OH YO QUIERO ANDAR CON CRISTO",
+      "hipoteses": [
+        {
+          "atual": "serIe",
+          "hipotese": "serle",
+          "classe": "OCR_I_MAIUSCULO_POR_L",
+          "encontrado": true,
+          "contexto": "voluntad, | Y algún día con mi Cristo Gozaré la claridad. | CORO: | ¡Oh, sí, yo quiero andar con Cristo! | ¡Oh, sí, yo quiero vivir con Cristo! | ¡Oh, sí, yo quiero morir con Cristo! | Quiero serIe un testigo fiel. | 2 | ¡Oh!, yo quiero andar con Cristo, Él vivió en santidad, | En la Biblia yo lo leo | Y yo sé que es la verdad. Cristo era santo en todo, El Cordero de la cruz; | Y yo a"
+        }
+      ],
+      "letra_atual": "1\n¡Oh!, yo quiero andar con Cristo.\nQuiero oír su tierna voz, Meditar en su palabra, Siempre andar de él en pos: Consagrar a él mi vida, Cumplir fiel su voluntad,\nY algún día con mi Cristo Gozaré la claridad.\nCORO:\n¡Oh, sí, yo quiero andar con Cristo!\n¡Oh, sí, yo quiero vivir con Cristo!\n¡Oh, sí, yo quiero morir con Cristo!\nQuiero serIe un testigo fiel.\n2\n¡Oh!, yo quiero andar con Cristo, Él vivió en santidad,\nEn la Biblia yo lo leo\nY yo sé que es la verdad. Cristo era santo en todo, El Cordero de la cruz;\nY yo anhelo ser cristiano, Seguidor de mi Jesús.\n3\n¡Oh!, yo quiero andar con Cristo De mi senda él es la luz, Dejaré el perverso mundo\nY cargar aquí mi cruz. Este mundo nada ofrece, Cristo ofrece salvación;\nY es mi única esperanza Gozar vida eterna en Sion.",
+      "decisao_documental": "PENDENTE",
+      "fonte_consultada": null,
+      "evidencia": null,
+      "correcao_autorizada": false,
+      "observacao": "A hipótese somente poderá ser promovida a correção após cotejo documental."
+    },
+    {
+      "id": "GT-161",
+      "numero": 161,
+      "titulo": "PECADOR, VEN AL DULCE JESÚS",
+      "titulo_normalizado": "PECADOR VEN AL DULCE JESUS",
+      "hipoteses": [
+        {
+          "atual": "serás . De",
+          "hipotese": "serás. De",
+          "classe": "ESPACO_ANTES_PONTUACAO",
+          "encontrado": true,
+          "contexto": "es morir, El será tu Doctor celestial; | Y hallarás en su sangre también Medicina que cure tu mal. | 4 | Ovejuela que huyó del redil, | ¡He aquí tu benigno Señor! | Y en los hombros llevada serás . De tan dulce y amante Pastor."
+        }
+      ],
+      "letra_atual": "1\nPecador, ven al dulce Jesús, Y feliz para Siempre serás:\nSi en verdad le quisieres tener, Al divino Señor hallarás.\nCORO:\n||Ven a él, ven a él,\nQue te espera tu buen Salvador.||\n2\nSi cual hijo que necio pecó\nVas buscando a sus pies compasión, Tierno Padre en Jesús hallarás,\nY tendrás en sus brazos perdón.\n3\nSi enfermo te sientes morir, El será tu Doctor celestial;\nY hallarás en su sangre también Medicina que cure tu mal.\n4\nOvejuela que huyó del redil,\n¡He aquí tu benigno Señor!\nY en los hombros llevada serás . De tan dulce y amante Pastor.",
+      "decisao_documental": "PENDENTE",
+      "fonte_consultada": null,
+      "evidencia": null,
+      "correcao_autorizada": false,
+      "observacao": "A hipótese somente poderá ser promovida a correção após cotejo documental."
+    },
+    {
+      "id": "GT-283",
+      "numero": 283,
+      "titulo": "EN LA MAÑANA",
+      "titulo_normalizado": "EN LA MANANA",
+      "hipoteses": [
+        {
+          "atual": "tierra mis Allí",
+          "hipotese": null,
+          "classe": "TEXTO_SUSPEITO_REQUER_FONTE",
+          "encontrado": true,
+          "contexto": "1 | En el mundo la Iglesia Peregrina ha de estar; Anhelante ella espera Su feliz, eterno hogar. | CORO: | Nos veremos, nos veremos Pronto en gloria, pronto en gloria, Nos veremos en la tierra mis Allí; Nos veremos, nos veremos Pronto en gloria, pronto en gloria, Junto al rio cristalino más Allá. | 2 | Nada aquí es permanente, Todo ha de terminar; Mas miramos adelante, En el cielo n"
+        }
+      ],
+      "letra_atual": "1\nEn el mundo la Iglesia Peregrina ha de estar; Anhelante ella espera Su feliz, eterno hogar.\nCORO:\nNos veremos, nos veremos Pronto en gloria, pronto en gloria, Nos veremos en la tierra mis Allí; Nos veremos, nos veremos Pronto en gloria, pronto en gloria, Junto al rio cristalino más Allá.\n2\nNada aquí es permanente, Todo ha de terminar; Mas miramos adelante, En el cielo nuestro hogar.\n3\nLas familias en la tierra Se desunen al morir; Mas esperan la mañana En que se han de reunir.\n4\nCon Jesús cual unos reyes Pronto habremos de estar; Juntos, miles de millares, Con Jesús para morar.",
+      "decisao_documental": "PENDENTE",
+      "fonte_consultada": null,
+      "evidencia": null,
+      "correcao_autorizada": false,
+      "observacao": "A hipótese somente poderá ser promovida a correção após cotejo documental."
+    },
+    {
+      "id": "GT-018",
+      "numero": 18,
+      "titulo": "GRATO ES DECIR LA HISTORIA",
+      "titulo_normalizado": "GRATO ES DECIR LA HISTORIA",
+      "hipoteses": [
+        {
+          "atual": "referirIa",
+          "hipotese": "referirla",
+          "classe": "OCR_I_MAIUSCULO_POR_L",
+          "encontrado": true,
+          "contexto": "1 | Grato es decir la historia Del celestial favor; | De Cristo y de su gloria, De Cristo y de su amor; Me agrada referirIa, Pues sé que es la verdad, Y nada satisface | Cual ella, mi ansiedad. | CORO: | ¡Cuán bella es esa historia! Mi tema allá en la gloria Será la antigua historia De Cristo y de su amor. | 2"
+        },
+        {
+          "atual": "buen .Jesús",
+          "hipotese": "buen Jesús",
+          "classe": "PONTUACAO_OCR",
+          "encontrado": true,
+          "contexto": "rtela también. | 3 | Grato es decir la historia Que antigua, sin vejez, Parece al repetirla | Más dulce cada vez; Me agrada referirla, | Pues hay quien nunca oyó Que para hacerle salvo El buen .Jesús murió."
+        }
+      ],
+      "letra_atual": "1\nGrato es decir la historia Del celestial favor;\nDe Cristo y de su gloria, De Cristo y de su amor; Me agrada referirIa, Pues sé que es la verdad, Y nada satisface\nCual ella, mi ansiedad.\nCORO:\n¡Cuán bella es esa historia! Mi tema allá en la gloria Será la antigua historia De Cristo y de su amor.\n2\nGrato es decir la historia Que brilla cual fanal,\nY en glorias y portentos No reconoce igual;\nMe agrada referirla, Pues me hace mucho bien,\nPor eso a ti deseo Decírtela también.\n3\nGrato es decir la historia Que antigua, sin vejez, Parece al repetirla\nMás dulce cada vez; Me agrada referirla,\nPues hay quien nunca oyó Que para hacerle salvo El buen .Jesús murió.",
+      "decisao_documental": "PENDENTE",
+      "fonte_consultada": null,
+      "evidencia": null,
+      "correcao_autorizada": false,
+      "observacao": "A hipótese somente poderá ser promovida a correção após cotejo documental."
+    },
+    {
+      "id": "SION-128",
+      "numero": 128,
+      "titulo": "GRATO ES DECIR LA HISTORIA",
+      "titulo_normalizado": "GRATO ES DECIR LA HISTORIA",
+      "hipoteses": [
+        {
+          "atual": "referirIa",
+          "hipotese": "referirla",
+          "classe": "OCR_I_MAIUSCULO_POR_L",
+          "encontrado": true,
+          "contexto": "1 | Grato es decir la historia Del celestial favor; | De Cristo y de su gloria, De Cristo y de su amor; Me agrada referirIa, Pues sé que es la verdad, Y nada satisface | Cual ella, mi ansiedad. | CORO: | ¡Cuán bella es esa historia! Mi tema allá en la gloria Será la antigua historia De Cristo y de su amor. | 2"
+        },
+        {
+          "atual": "buen .Jesús",
+          "hipotese": "buen Jesús",
+          "classe": "PONTUACAO_OCR",
+          "encontrado": true,
+          "contexto": "rtela también. | 3 | Grato es decir la historia Que antigua, sin vejez, Parece al repetirla | Más dulce cada vez; Me agrada referirla, | Pues hay quien nunca oyó Que para hacerle salvo El buen .Jesús murió."
+        }
+      ],
+      "letra_atual": "1\nGrato es decir la historia Del celestial favor;\nDe Cristo y de su gloria, De Cristo y de su amor; Me agrada referirIa, Pues sé que es la verdad, Y nada satisface\nCual ella, mi ansiedad.\nCORO:\n¡Cuán bella es esa historia! Mi tema allá en la gloria Será la antigua historia De Cristo y de su amor.\n2\nGrato es decir la historia Que brilla cual fanal,\nY en glorias y portentos No reconoce igual;\nMe agrada referirla, Pues me hace mucho bien,\nPor eso a ti deseo Decírtela también.\n3\nGrato es decir la historia Que antigua, sin vejez, Parece al repetirla\nMás dulce cada vez; Me agrada referirla,\nPues hay quien nunca oyó Que para hacerle salvo El buen .Jesús murió.",
+      "decisao_documental": "PENDENTE",
+      "fonte_consultada": null,
+      "evidencia": null,
+      "correcao_autorizada": false,
+      "observacao": "A hipótese somente poderá ser promovida a correção após cotejo documental."
+    },
+    {
+      "id": "GT-007",
+      "numero": 7,
+      "titulo": "TODO A CRISTO YO ME RINDO",
+      "titulo_normalizado": "TODO A CRISTO YO ME RINDO",
+      "hipoteses": [
+        {
+          "atual": "serIe",
+          "hipotese": "serle",
+          "classe": "OCR_I_MAIUSCULO_POR_L",
+          "encontrado": true,
+          "contexto": "1 | Todo a Cristo yo me rindo, Con el fin de serie fiel; | Para siempre quiero amarle, Y agradarle sólo a él. | CORO: | Yo me rindo a él, Yo me rindo a él; | Todo a Cristo yo me entrego, Quiero serIe fiel. | 2 | Todo a Cristo yo me rindo, A s"
+        }
+      ],
+      "letra_atual": "1\nTodo a Cristo yo me rindo, Con el fin de serie fiel;\nPara siempre quiero amarle, Y agradarle sólo a él.\nCORO:\nYo me rindo a él, Yo me rindo a él;\nTodo a Cristo yo me entrego, Quiero serIe fiel.\n2\nTodo a Cristo yo me rindo, A sus pies postrado estoy; Los placeres he dejado,\nY le sigo desde hoy.\n3\nTodo a Cristo yo me rindo, Si, de todo corazón;\nYo le entrego alma y cuerpo, Busco hoy su santa unción.\n4\nTodo a Cristo he rendido, Siento el fuego de su amor;\n¡Oh, qué gozo hay en mi alma!\n¡Gloria, gloria a mi Señor!",
+      "decisao_documental": "PENDENTE",
+      "fonte_consultada": null,
+      "evidencia": null,
+      "correcao_autorizada": false,
+      "observacao": "A hipótese somente poderá ser promovida a correção após cotejo documental."
+    },
+    {
+      "id": "SION-011",
+      "numero": 11,
+      "titulo": "TODO A CRISTO YO ME RINDO",
+      "titulo_normalizado": "TODO A CRISTO YO ME RINDO",
+      "hipoteses": [
+        {
+          "atual": "serIe",
+          "hipotese": "serle",
+          "classe": "OCR_I_MAIUSCULO_POR_L",
+          "encontrado": true,
+          "contexto": "1 | Todo a Cristo yo me rindo, Con el fin de serie fiel; | Para siempre quiero amarle, Y agradarle sólo a él. | CORO: | Yo me rindo a él, Yo me rindo a él; | Todo a Cristo yo me entrego, Quiero serIe fiel. | 2 | Todo a Cristo yo me rindo, A s"
+        }
+      ],
+      "letra_atual": "1\nTodo a Cristo yo me rindo, Con el fin de serie fiel;\nPara siempre quiero amarle, Y agradarle sólo a él.\nCORO:\nYo me rindo a él, Yo me rindo a él;\nTodo a Cristo yo me entrego, Quiero serIe fiel.\n2\nTodo a Cristo yo me rindo, A sus pies postrado estoy; Los placeres he dejado,\nY le sigo desde hoy.\n3\nTodo a Cristo yo me rindo, Si, de todo corazón;\nYo le entrego alma y cuerpo, Busco hoy su santa unción.\n4\nTodo a Cristo he rendido, Siento el fuego de su amor;\n¡Oh, qué gozo hay en mi alma!\n¡Gloria, gloria a mi Señor!",
+      "decisao_documental": "PENDENTE",
+      "fonte_consultada": null,
+      "evidencia": null,
+      "correcao_autorizada": false,
+      "observacao": "A hipótese somente poderá ser promovida a correção após cotejo documental."
+    },
+    {
+      "id": "GT-025",
+      "numero": 25,
+      "titulo": "¡OH, CUAN DULCE!",
+      "titulo_normalizado": "OH CUAN DULCE",
+      "hipoteses": [
+        {
+          "atual": "serIe",
+          "hipotese": "serle",
+          "classe": "OCR_I_MAIUSCULO_POR_L",
+          "encontrado": true,
+          "contexto": "1 | ¡Oh, cuán dulce es fiar en Cristo Y entregarse todo a él; Esperar en sus promesas, | Y en sus sendas serIe fiel! | CORO: | Jesucristo, Jesucristo, Ya tu amor probaste en mí | Jesucristo, Jesucristo Siempre quiero fiar en ti. | 2 | Es muy dulce fiar en Cristo Y cumplir su voluntad; No dudando su"
+        }
+      ],
+      "letra_atual": "1\n¡Oh, cuán dulce es fiar en Cristo Y entregarse todo a él; Esperar en sus promesas,\nY en sus sendas serIe fiel!\nCORO:\nJesucristo, Jesucristo, Ya tu amor probaste en mí\nJesucristo, Jesucristo Siempre quiero fiar en ti.\n2\nEs muy dulce fiar en Cristo Y cumplir su voluntad; No dudando su palabra, Que es la luz y la verdad.\n3\nSiempre es grato fiar en Cristo Cuando busca el corazón,\nLos tesoros celestiales De la paz y del perdón.\n4\nSiempre en ti confiar yo quiero Mi precioso Salvador;\nEn la vida y en la muerte Protección me dé tu amor.",
+      "decisao_documental": "PENDENTE",
+      "fonte_consultada": null,
+      "evidencia": null,
+      "correcao_autorizada": false,
+      "observacao": "A hipótese somente poderá ser promovida a correção após cotejo documental."
+    },
+    {
+      "id": "SION-134",
+      "numero": 134,
+      "titulo": "¡OH, CUÁN DULCE!",
+      "titulo_normalizado": "OH CUAN DULCE",
+      "hipoteses": [
+        {
+          "atual": "serIe",
+          "hipotese": "serle",
+          "classe": "OCR_I_MAIUSCULO_POR_L",
+          "encontrado": true,
+          "contexto": "1 | ¡Oh, cuán dulce es fiar en Cristo Y entregarse todo a él; Esperar en sus promesas, | Y en sus sendas serIe fiel! | CORO: | Jesucristo, Jesucristo, Ya tu amor probaste en mí | Jesucristo, Jesucristo Siempre quiero fiar en ti. | 2 | Es muy dulce fiar en Cristo Y cumplir su voluntad; No dudando su"
+        }
+      ],
+      "letra_atual": "1\n¡Oh, cuán dulce es fiar en Cristo Y entregarse todo a él; Esperar en sus promesas,\nY en sus sendas serIe fiel!\nCORO:\nJesucristo, Jesucristo, Ya tu amor probaste en mí\nJesucristo, Jesucristo Siempre quiero fiar en ti.\n2\nEs muy dulce fiar en Cristo Y cumplir su voluntad; No dudando su palabra, Que es la luz y la verdad.\n3\nSiempre es grato fiar en Cristo Cuando busca el corazón,\nLos tesoros celestiales De la paz y del perdón.\n4\nSiempre en ti confiar yo quiero Mi precioso Salvador;\nEn la vida y en la muerte Protección me dé tu amor.",
+      "decisao_documental": "PENDENTE",
+      "fonte_consultada": null,
+      "evidencia": null,
+      "correcao_autorizada": false,
+      "observacao": "A hipótese somente poderá ser promovida a correção após cotejo documental."
+    },
+    {
+      "id": "GT-102",
+      "numero": 102,
+      "titulo": "PODER PENTECOSTAL",
+      "titulo_normalizado": "PODER PENTECOSTAL",
+      "hipoteses": [
+        {
+          "atual": "hazIo",
+          "hipotese": "hazlo",
+          "classe": "OCR_I_MAIUSCULO_POR_L",
+          "encontrado": true,
+          "contexto": "ra lluvia, | ¡Oh buen Salvador! | Y con tu gran fuego avívanos, Señor; | ¡Oh!, danos la lluvia, del Consolador, Aviva tu iglesia con poder celestial. | 2 | Cual vivo fuego o vendaval, | ¡Oh!, hazIo descender; Y pueda hoy en cada cual | Su templo establecer. | 3 | Mediante fe y oración, El cielo tú abrirás: | El santo fuego harás bajar Y nos avivarás. | 4 | Destruye el egoísmo, sí, Y que"
+        }
+      ],
+      "letra_atual": "1\nUnánimes junto a la cruz, Pedimos con fervor; Según tu dicho, oh Jesús, Manda el Consolador.\nCORO:\nSí, manda otra lluvia,\n¡Oh buen Salvador!\nY con tu gran fuego avívanos, Señor;\n¡Oh!, danos la lluvia, del Consolador, Aviva tu iglesia con poder celestial.\n2\nCual vivo fuego o vendaval,\n¡Oh!, hazIo descender; Y pueda hoy en cada cual\nSu templo establecer.\n3\nMediante fe y oración, El cielo tú abrirás:\nEl santo fuego harás bajar Y nos avivarás.\n4\nDestruye el egoísmo, sí, Y quema todo mal; Ven, vivifícanos aquí, Con fuego celestial.",
+      "decisao_documental": "PENDENTE",
+      "fonte_consultada": null,
+      "evidencia": null,
+      "correcao_autorizada": false,
+      "observacao": "A hipótese somente poderá ser promovida a correção após cotejo documental."
+    },
+    {
+      "id": "SION-044",
+      "numero": 44,
+      "titulo": "PODER PENTECOSTAL",
+      "titulo_normalizado": "PODER PENTECOSTAL",
+      "hipoteses": [
+        {
+          "atual": "hazIo",
+          "hipotese": "hazlo",
+          "classe": "OCR_I_MAIUSCULO_POR_L",
+          "encontrado": true,
+          "contexto": "ra lluvia, | ¡Oh buen Salvador! | Y con tu gran fuego avívanos, Señor; | ¡Oh!, danos la lluvia, del Consolador, Aviva tu iglesia con poder celestial. | 2 | Cual vivo fuego o vendaval, | ¡Oh!, hazIo descender; Y pueda hoy en cada cual | Su templo establecer. | 3 | Mediante fe y oración, El cielo tú abrirás: | El santo fuego harás bajar Y nos avivarás. | 4 | Destruye el egoísmo, sí, Y que"
+        }
+      ],
+      "letra_atual": "1\nUnánimes junto a la cruz, Pedimos con fervor; Según tu dicho, oh Jesús, Manda el Consolador.\nCORO:\nSí, manda otra lluvia,\n¡Oh buen Salvador!\nY con tu gran fuego avívanos, Señor;\n¡Oh!, danos la lluvia, del Consolador, Aviva tu iglesia con poder celestial.\n2\nCual vivo fuego o vendaval,\n¡Oh!, hazIo descender; Y pueda hoy en cada cual\nSu templo establecer.\n3\nMediante fe y oración, El cielo tú abrirás:\nEl santo fuego harás bajar Y nos avivarás.\n4\nDestruye el egoísmo, sí, Y quema todo mal; Ven, vivifícanos aquí, Con fuego celestial.",
+      "decisao_documental": "PENDENTE",
+      "fonte_consultada": null,
+      "evidencia": null,
+      "correcao_autorizada": false,
+      "observacao": "A hipótese somente poderá ser promovida a correção após cotejo documental."
+    },
+    {
+      "id": "GT-042",
+      "numero": 42,
+      "titulo": "HAY UN PRECIOSO MANANTIAL",
+      "titulo_normalizado": "HAY UN PRECIOSO MANANTIAL",
+      "hipoteses": [
+        {
+          "atual": null,
+          "hipotese": null,
+          "classe": "ESTRUTURA_NUMERACAO",
+          "encontrado": true,
+          "contexto": "Hay un precioso manantial De sangre de Emmanuel, Que purifica a cada cual Que se sumerge en él. | CORO: | Lávame, Señor Jesús, En la sangre de tu cruz: Lávame, Señor Jesús, | Y más blanco que la nieve yo seré: | 2 | El malhechor se convirtió Pendiente de una cruz; El vio la fuente y se lavó, Creyendo en Jesús. | 3 | Y yo también mi pobre ser Allí logré lavar: | La gloria de su gran poder Me gozo en ensalzar. | 4 | ¡Eterna fuente carmesí! | ¡Raudal de puro amor! Se lavará por siempre en ti | El pueblo del Señor. | HAY UN PRECIOSO MANANTIAL | 1 | Hay un precioso manantial De sangre de Emmanuel, Que purifica a cada cual Que se sumerge en él. | 2 | El malhechor se convirtió Pendiente de una cruz; El vio la fuente y se lavó, Creyendo en Jesús. | 3 | Y yo también mi pobre ser Allí logré lavar; | La gloria de su gran poder, Me gozo en "
+        }
+      ],
+      "letra_atual": "Hay un precioso manantial De sangre de Emmanuel, Que purifica a cada cual Que se sumerge en él.\nCORO:\nLávame, Señor Jesús, En la sangre de tu cruz: Lávame, Señor Jesús,\nY más blanco que la nieve yo seré:\n2\nEl malhechor se convirtió Pendiente de una cruz; El vio la fuente y se lavó, Creyendo en Jesús.\n3\nY yo también mi pobre ser Allí logré lavar:\nLa gloria de su gran poder Me gozo en ensalzar.\n4\n¡Eterna fuente carmesí!\n¡Raudal de puro amor! Se lavará por siempre en ti\nEl pueblo del Señor.\nHAY UN PRECIOSO MANANTIAL\n1\nHay un precioso manantial De sangre de Emmanuel, Que purifica a cada cual Que se sumerge en él.\n2\nEl malhechor se convirtió Pendiente de una cruz; El vio la fuente y se lavó, Creyendo en Jesús.\n3\nY yo también mi pobre ser Allí logré lavar;\nLa gloria de su gran poder, Me gozo en ensalzar.\n4\n¡Eterna fuente carmesí!\n¡Raudal de puro amor!\nSe lavará por siempre en ti, El pueblo del Señor.",
+      "decisao_documental": "PENDENTE",
+      "fonte_consultada": null,
+      "evidencia": null,
+      "correcao_autorizada": false,
+      "observacao": "A hipótese somente poderá ser promovida a correção após cotejo documental."
+    },
+    {
+      "id": "GT-182",
+      "numero": 182,
+      "titulo": "¡GLORIA A TI, JESÚS DIVINO",
+      "titulo_normalizado": "GLORIA A TI JESUS DIVINO",
+      "hipoteses": [
+        {
+          "atual": "1 -> 3",
+          "hipotese": null,
+          "classe": "SALTO_NUMERICO",
+          "encontrado": false,
+          "contexto": null
+        }
+      ],
+      "letra_atual": "1\n¡Gloria a ti, Jesús Divino!\n¡Gloria a ti por tus bondades!\n¡Gloria eterna a tus piedades!\nQuerido Salvador.\nCORO:\n¡Gloria, gloria, aleluya!\n¡Gloria, gloria, aleluya!\n¡Gloria, gloria, aleluya! A nuestro Salvador.\n2.\nTú me amaste con ternura, Y por mí en la cruz moriste, Con ternura me quisiste, Querido Salvador.\n3\nTengo fe sólo en tu muerte, Pues con ella me salvaste; Vida eterna me compraste, Querido Salvador.\n4\nTe veremos en el cielo: A vivir contigo iremos; Tu presencia gozaremos, Querido Salvador.\n5\nTen valor, valor cristiano, Cristo es tu mejor amigo: Él te llevará consigo; Jesús es tu Señor.",
+      "decisao_documental": "PENDENTE",
+      "fonte_consultada": null,
+      "evidencia": null,
+      "correcao_autorizada": false,
+      "observacao": "A hipótese somente poderá ser promovida a correção após cotejo documental."
+    },
+    {
+      "id": "SION-079",
+      "numero": 79,
+      "titulo": "GLORIA A TI, JESÚS DIVINO",
+      "titulo_normalizado": "GLORIA A TI JESUS DIVINO",
+      "hipoteses": [
+        {
+          "atual": "1 -> 3",
+          "hipotese": null,
+          "classe": "SALTO_NUMERICO",
+          "encontrado": false,
+          "contexto": null
+        }
+      ],
+      "letra_atual": "1\n¡Gloria a ti, Jesús Divino!\n¡Gloria a ti por tus bondades!\n¡Gloria eterna a tus piedades!\nQuerido Salvador.\nCORO:\n¡Gloria, gloria, aleluya!\n¡Gloria, gloria, aleluya!\n¡Gloria, gloria, aleluya! A nuestro Salvador.\n2.\nTú me amaste con ternura, Y por mí en la cruz moriste, Con ternura me quisiste, Querido Salvador.\n3\nTengo fe sólo en tu muerte, Pues con ella me salvaste; Vida eterna me compraste, Querido Salvador.\n4\nTe veremos en el cielo: A vivir contigo iremos; Tu presencia gozaremos, Querido Salvador.\n5\nTen valor, valor cristiano, Cristo es tu mejor amigo: Él te llevará consigo; Jesús es tu Señor.",
+      "decisao_documental": "PENDENTE",
+      "fonte_consultada": null,
+      "evidencia": null,
+      "correcao_autorizada": false,
+      "observacao": "A hipótese somente poderá ser promovida a correção após cotejo documental."
+    }
+  ]
+}

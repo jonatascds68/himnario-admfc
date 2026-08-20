@@ -1,0 +1,198 @@
+============================================
+ AUDITORIA HINÁRIA - ETAPA 10G
+ APROVAÇÃO TÉCNICA DO LOTE
+ SOMENTE LEITURA
+============================================
+
+============================================
+ 1. CONTROLE
+============================================
+HASH ATUAL:   a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41
+HASH OFICIAL: a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41
+HASH: OK
+CANDIDATOS RECEBIDOS DA 10F: 14
+CASOS BLOQUEADOS: 4
+
+============================================
+ 2. VALIDAÇÃO INDIVIDUAL
+============================================
+
+01. GT-040
+ATUAL:    "oid, ."
+PROPOSTA: "oid,"
+REGISTRO: LOCALIZADO
+OCORRÊNCIAS DO TEXTO ATUAL: 1
+OCORRÊNCIAS DA PROPOSTA JÁ EXISTENTES: 1
+CAMPO(S): letra
+DECISÃO: APROVADO TECNICAMENTE
+
+02. GT-056
+ATUAL:    "serIe"
+PROPOSTA: "serle"
+REGISTRO: LOCALIZADO
+OCORRÊNCIAS DO TEXTO ATUAL: 1
+OCORRÊNCIAS DA PROPOSTA JÁ EXISTENTES: 0
+CAMPO(S): letra
+DECISÃO: APROVADO TECNICAMENTE
+
+03. SION-026
+ATUAL:    "serIe"
+PROPOSTA: "serle"
+REGISTRO: LOCALIZADO
+OCORRÊNCIAS DO TEXTO ATUAL: 1
+OCORRÊNCIAS DA PROPOSTA JÁ EXISTENTES: 0
+CAMPO(S): letra
+DECISÃO: APROVADO TECNICAMENTE
+
+04. GT-161
+ATUAL:    "serás . De"
+PROPOSTA: "serás. De"
+REGISTRO: LOCALIZADO
+OCORRÊNCIAS DO TEXTO ATUAL: 1
+OCORRÊNCIAS DA PROPOSTA JÁ EXISTENTES: 0
+CAMPO(S): letra
+DECISÃO: APROVADO TECNICAMENTE
+
+05. GT-018
+ATUAL:    "referirIa"
+PROPOSTA: "referirla"
+REGISTRO: LOCALIZADO
+OCORRÊNCIAS DO TEXTO ATUAL: 1
+OCORRÊNCIAS DA PROPOSTA JÁ EXISTENTES: 2
+CAMPO(S): letra
+DECISÃO: APROVADO TECNICAMENTE
+
+06. GT-018
+ATUAL:    "buen .Jesús"
+PROPOSTA: "buen Jesús"
+REGISTRO: LOCALIZADO
+OCORRÊNCIAS DO TEXTO ATUAL: 1
+OCORRÊNCIAS DA PROPOSTA JÁ EXISTENTES: 0
+CAMPO(S): letra
+DECISÃO: APROVADO TECNICAMENTE
+
+07. SION-128
+ATUAL:    "referirIa"
+PROPOSTA: "referirla"
+REGISTRO: LOCALIZADO
+OCORRÊNCIAS DO TEXTO ATUAL: 1
+OCORRÊNCIAS DA PROPOSTA JÁ EXISTENTES: 2
+CAMPO(S): letra
+DECISÃO: APROVADO TECNICAMENTE
+
+08. SION-128
+ATUAL:    "buen .Jesús"
+PROPOSTA: "buen Jesús"
+REGISTRO: LOCALIZADO
+OCORRÊNCIAS DO TEXTO ATUAL: 1
+OCORRÊNCIAS DA PROPOSTA JÁ EXISTENTES: 0
+CAMPO(S): letra
+DECISÃO: APROVADO TECNICAMENTE
+
+09. GT-007
+ATUAL:    "serIe"
+PROPOSTA: "serle"
+REGISTRO: LOCALIZADO
+OCORRÊNCIAS DO TEXTO ATUAL: 1
+OCORRÊNCIAS DA PROPOSTA JÁ EXISTENTES: 0
+CAMPO(S): letra
+DECISÃO: APROVADO TECNICAMENTE
+
+10. SION-011
+ATUAL:    "serIe"
+PROPOSTA: "serle"
+REGISTRO: LOCALIZADO
+OCORRÊNCIAS DO TEXTO ATUAL: 1
+OCORRÊNCIAS DA PROPOSTA JÁ EXISTENTES: 0
+CAMPO(S): letra
+DECISÃO: APROVADO TECNICAMENTE
+
+11. GT-025
+ATUAL:    "serIe"
+PROPOSTA: "serle"
+REGISTRO: LOCALIZADO
+OCORRÊNCIAS DO TEXTO ATUAL: 1
+OCORRÊNCIAS DA PROPOSTA JÁ EXISTENTES: 0
+CAMPO(S): letra
+DECISÃO: APROVADO TECNICAMENTE
+
+12. SION-134
+ATUAL:    "serIe"
+PROPOSTA: "serle"
+REGISTRO: LOCALIZADO
+OCORRÊNCIAS DO TEXTO ATUAL: 1
+OCORRÊNCIAS DA PROPOSTA JÁ EXISTENTES: 0
+CAMPO(S): letra
+DECISÃO: APROVADO TECNICAMENTE
+
+13. GT-102
+ATUAL:    "hazIo"
+PROPOSTA: "hazlo"
+REGISTRO: LOCALIZADO
+OCORRÊNCIAS DO TEXTO ATUAL: 1
+OCORRÊNCIAS DA PROPOSTA JÁ EXISTENTES: 0
+CAMPO(S): letra
+DECISÃO: APROVADO TECNICAMENTE
+
+14. SION-044
+ATUAL:    "hazIo"
+PROPOSTA: "hazlo"
+REGISTRO: LOCALIZADO
+OCORRÊNCIAS DO TEXTO ATUAL: 1
+OCORRÊNCIAS DA PROPOSTA JÁ EXISTENTES: 0
+CAMPO(S): letra
+DECISÃO: APROVADO TECNICAMENTE
+
+============================================
+ 3. LOTE APROVADO
+============================================
+TOTAL APROVADO: 14
+01. GT-040: "oid, ." -> "oid,"
+02. GT-056: "serIe" -> "serle"
+03. SION-026: "serIe" -> "serle"
+04. GT-161: "serás . De" -> "serás. De"
+05. GT-018: "referirIa" -> "referirla"
+06. GT-018: "buen .Jesús" -> "buen Jesús"
+07. SION-128: "referirIa" -> "referirla"
+08. SION-128: "buen .Jesús" -> "buen Jesús"
+09. GT-007: "serIe" -> "serle"
+10. SION-011: "serIe" -> "serle"
+11. GT-025: "serIe" -> "serle"
+12. SION-134: "serIe" -> "serle"
+13. GT-102: "hazIo" -> "hazlo"
+14. SION-044: "hazIo" -> "hazlo"
+
+============================================
+ 4. REJEITADOS
+============================================
+TOTAL REJEITADO: 0
+NENHUM.
+
+============================================
+ 5. CASOS BLOQUEADOS
+============================================
+- GT-283: Texto suspeito requer cotejo visual com fonte.
+- GT-042: Estrutura/numeração requer cotejo documental.
+- GT-182: Salto numérico requer confirmação da fonte.
+- SION-079: Salto numérico requer confirmação da fonte.
+
+============================================
+ 6. REGRA DE SEGURANÇA
+============================================
+STATUS DO LOTE: APROVADO TECNICAMENTE
+O lote está apto para preparação da correção controlada.
+
+============================================
+ 7. CONTROLE DE IMUTABILIDADE
+============================================
+HASH ANTES:  a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41
+HASH DEPOIS: a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41
+BASE MESTRE ALTERADA: NÃO
+
+============================================
+ ETAPA 10G CONCLUÍDA
+ APROVADOS: 14
+ REJEITADOS: 0
+ BLOQUEADOS: 4
+ NENHUMA CORREÇÃO APLICADA
+============================================

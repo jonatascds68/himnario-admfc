@@ -1,0 +1,1523 @@
+{
+  "etapa": "10C",
+  "descricao": "Dossiê de alta prioridade para cotejo documental",
+  "modo": "SOMENTE_LEITURA",
+  "base": {
+    "arquivo": "assets/base_mestre.json",
+    "hash": "a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41",
+    "total": 718
+  },
+  "resumo": {
+    "prioridade_alta_10b": 44,
+    "pares_gt_sion": 12,
+    "casos_individuais": 20,
+    "casos_estruturais": 10,
+    "pendencias_lote_9": 5
+  },
+  "pendencias_lote_9": [
+    {
+      "id": "GT-040",
+      "titulo": "EN LOS NEGOCIOS DEL REY",
+      "termo": "oid, .",
+      "presente": true,
+      "trecho": "no aquí, mi hogar lejano está, En la mansión de luz, eterna paz y amor: Embajador yo soy del reino celestial | En los negocios de mi Rey. | CORO: | Este mensaje fiel oid, . Que dijo ya celeste voz: | «Reconciliaos ya» – dice el Señor y Rey, | ¡Reconciliaos hoy con Dios! | 2 | Que del pecado vil arrepentidos ya, Han de reinar con él los qu",
+      "detectado_10b": true
+    },
+    {
+      "id": "GT-056",
+      "titulo": "¡OH, YO QUIERO ANDAR CON CRISTO!",
+      "termo": "serIe",
+      "presente": true,
+      "trecho": "a con mi Cristo Gozaré la claridad. | CORO: | ¡Oh, sí, yo quiero andar con Cristo! | ¡Oh, sí, yo quiero vivir con Cristo! | ¡Oh, sí, yo quiero morir con Cristo! | Quiero serIe un testigo fiel. | 2 | ¡Oh!, yo quiero andar con Cristo, Él vivió en santidad, | En la Biblia yo lo leo | Y yo sé que es la verdad. Cristo era santo en todo, El Corder",
+      "detectado_10b": true
+    },
+    {
+      "id": "SION-026",
+      "titulo": "¡OH! YO QUIERO ANDAR CON CRISTO",
+      "termo": "serIe",
+      "presente": true,
+      "trecho": "a con mi Cristo Gozaré la claridad. | CORO: | ¡Oh, sí, yo quiero andar con Cristo! | ¡Oh, sí, yo quiero vivir con Cristo! | ¡Oh, sí, yo quiero morir con Cristo! | Quiero serIe un testigo fiel. | 2 | ¡Oh!, yo quiero andar con Cristo, Él vivió en santidad, | En la Biblia yo lo leo | Y yo sé que es la verdad. Cristo era santo en todo, El Corder",
+      "detectado_10b": true
+    },
+    {
+      "id": "GT-161",
+      "titulo": "PECADOR, VEN AL DULCE JESÚS",
+      "termo": "serás . De",
+      "presente": true,
+      "trecho": "Doctor celestial; | Y hallarás en su sangre también Medicina que cure tu mal. | 4 | Ovejuela que huyó del redil, | ¡He aquí tu benigno Señor! | Y en los hombros llevada serás . De tan dulce y amante Pastor.",
+      "detectado_10b": true
+    },
+    {
+      "id": "GT-283",
+      "titulo": "EN LA MAÑANA",
+      "termo": "tierra mis Allí",
+      "presente": true,
+      "trecho": "lesia Peregrina ha de estar; Anhelante ella espera Su feliz, eterno hogar. | CORO: | Nos veremos, nos veremos Pronto en gloria, pronto en gloria, Nos veremos en la tierra mis Allí; Nos veremos, nos veremos Pronto en gloria, pronto en gloria, Junto al rio cristalino más Allá. | 2 | Nada aquí es permanente, Todo ha de terminar; Mas miramos ade",
+      "detectado_10b": false
+    }
+  ],
+  "pares_gt_sion": [
+    {
+      "titulo_normalizado": "GLORIA A TI JESUS DIVINO",
+      "registros": [
+        {
+          "id": "GT-182",
+          "numero": 182,
+          "titulo": "¡GLORIA A TI, JESÚS DIVINO",
+          "prioridade": "ALTA",
+          "pontos": 8,
+          "tipos": [
+            "SALTO_NUMERICO"
+          ],
+          "total_achados": 1,
+          "termos_criticos": [],
+          "achados_10b": [
+            {
+              "tipo": "SALTO_NUMERICO",
+              "detalhe": "Sequência 1 -> 3.",
+              "trecho": ""
+            }
+          ]
+        },
+        {
+          "id": "SION-079",
+          "numero": 79,
+          "titulo": "GLORIA A TI, JESÚS DIVINO",
+          "prioridade": "ALTA",
+          "pontos": 8,
+          "tipos": [
+            "SALTO_NUMERICO"
+          ],
+          "total_achados": 1,
+          "termos_criticos": [],
+          "achados_10b": [
+            {
+              "tipo": "SALTO_NUMERICO",
+              "detalhe": "Sequência 1 -> 3.",
+              "trecho": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "titulo_normalizado": "GRATO ES DECIR LA HISTORIA",
+      "registros": [
+        {
+          "id": "GT-018",
+          "numero": 18,
+          "titulo": "GRATO ES DECIR LA HISTORIA",
+          "prioridade": "ALTA",
+          "pontos": 10,
+          "tipos": [
+            "ESPACO_ANTES_PONTUACAO",
+            "PALAVRA_OCR_MAIUSCULA_INTERNA"
+          ],
+          "total_achados": 2,
+          "termos_criticos": [
+            {
+              "termo": "referirIa",
+              "trecho": "1 | Grato es decir la historia Del celestial favor; | De Cristo y de su gloria, De Cristo y de su amor; Me agrada referirIa, Pues sé que es la verdad, Y nada satisface | Cual ella, mi ansiedad. | CORO: | ¡Cuán bella es esa historia! Mi tema allá en"
+            },
+            {
+              "termo": ".Jesús",
+              "trecho": "z, Parece al repetirla | Más dulce cada vez; Me agrada referirla, | Pues hay quien nunca oyó Que para hacerle salvo El buen .Jesús murió."
+            }
+          ],
+          "achados_10b": [
+            {
+              "tipo": "ESPACO_ANTES_PONTUACAO",
+              "detalhe": "Espaço encontrado antes de sinal de pontuação.",
+              "trecho": "Más dulce cada vez; Me agrada referirla, | Pues hay quien nunca oyó Que para hacerle salvo El buen .Jesús murió."
+            },
+            {
+              "tipo": "PALAVRA_OCR_MAIUSCULA_INTERNA",
+              "detalhe": "Possível OCR: \"referirIa\".",
+              "trecho": "referirIa"
+            }
+          ]
+        },
+        {
+          "id": "SION-128",
+          "numero": 128,
+          "titulo": "GRATO ES DECIR LA HISTORIA",
+          "prioridade": "ALTA",
+          "pontos": 10,
+          "tipos": [
+            "ESPACO_ANTES_PONTUACAO",
+            "PALAVRA_OCR_MAIUSCULA_INTERNA"
+          ],
+          "total_achados": 2,
+          "termos_criticos": [
+            {
+              "termo": "referirIa",
+              "trecho": "1 | Grato es decir la historia Del celestial favor; | De Cristo y de su gloria, De Cristo y de su amor; Me agrada referirIa, Pues sé que es la verdad, Y nada satisface | Cual ella, mi ansiedad. | CORO: | ¡Cuán bella es esa historia! Mi tema allá en"
+            },
+            {
+              "termo": ".Jesús",
+              "trecho": "z, Parece al repetirla | Más dulce cada vez; Me agrada referirla, | Pues hay quien nunca oyó Que para hacerle salvo El buen .Jesús murió."
+            }
+          ],
+          "achados_10b": [
+            {
+              "tipo": "ESPACO_ANTES_PONTUACAO",
+              "detalhe": "Espaço encontrado antes de sinal de pontuação.",
+              "trecho": "Más dulce cada vez; Me agrada referirla, | Pues hay quien nunca oyó Que para hacerle salvo El buen .Jesús murió."
+            },
+            {
+              "tipo": "PALAVRA_OCR_MAIUSCULA_INTERNA",
+              "detalhe": "Possível OCR: \"referirIa\".",
+              "trecho": "referirIa"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "titulo_normalizado": "HAY QUIEN VIGILE",
+      "registros": [
+        {
+          "id": "GT-072",
+          "numero": 72,
+          "titulo": "HAY QUIEN VIGILE",
+          "prioridade": "ALTA",
+          "pontos": 5,
+          "tipos": [
+            "ESPACO_ANTES_PONTUACAO"
+          ],
+          "total_achados": 1,
+          "termos_criticos": [
+            {
+              "termo": "; ,",
+              "trecho": "mante, De infinita compasión | Que confiere paz constante Al contrito corazón. | En su amor hay eficacia Él es un amigo fiel; , | Hay en él verdad y gracia, Suyo soy y mío es él."
+            }
+          ],
+          "achados_10b": [
+            {
+              "tipo": "ESPACO_ANTES_PONTUACAO",
+              "detalhe": "Espaço encontrado antes de sinal de pontuação.",
+              "trecho": "Que confiere paz constante Al contrito corazón. | En su amor hay eficacia Él es un amigo fiel; , | Hay en él verdad y gracia, Suyo soy y mío es él."
+            }
+          ]
+        },
+        {
+          "id": "SION-034",
+          "numero": 34,
+          "titulo": "HAY QUIEN VIGILE",
+          "prioridade": "ALTA",
+          "pontos": 5,
+          "tipos": [
+            "ESPACO_ANTES_PONTUACAO"
+          ],
+          "total_achados": 1,
+          "termos_criticos": [
+            {
+              "termo": "; ,",
+              "trecho": "mante, De infinita compasión | Que confiere paz constante Al contrito corazón. | En su amor hay eficacia Él es un amigo fiel; , | Hay en él verdad y gracia, Suyo soy y mío es él."
+            }
+          ],
+          "achados_10b": [
+            {
+              "tipo": "ESPACO_ANTES_PONTUACAO",
+              "detalhe": "Espaço encontrado antes de sinal de pontuação.",
+              "trecho": "Que confiere paz constante Al contrito corazón. | En su amor hay eficacia Él es un amigo fiel; , | Hay en él verdad y gracia, Suyo soy y mío es él."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "titulo_normalizado": "LA FUENTE SANADORA",
+      "registros": [
+        {
+          "id": "GT-138",
+          "numero": 138,
+          "titulo": "LA FUENTE SANADORA",
+          "prioridade": "ALTA",
+          "pontos": 5,
+          "tipos": [
+            "ESPACO_ANTES_PONTUACAO"
+          ],
+          "total_achados": 1,
+          "termos_criticos": [
+            {
+              "termo": "perdón, ,",
+              "trecho": "dos fluye libre; | ¡Oh preciosa fuente sanadora! | ¡Gloria a Dios!, me sana a mí. | 2 | En la fuente que nos sana He hallado el perdón, , Y lavado toda mancha De mi pobre corazón. | 3 | En la fuente que nos sana Cristo ofrece la salud; | Pues venid, enfermos todo"
+            }
+          ],
+          "achados_10b": [
+            {
+              "tipo": "ESPACO_ANTES_PONTUACAO",
+              "detalhe": "Espaço encontrado antes de sinal de pontuação.",
+              "trecho": "2 | En la fuente que nos sana He hallado el perdón, , Y lavado toda mancha De mi pobre corazón. | 3"
+            }
+          ]
+        },
+        {
+          "id": "SION-063",
+          "numero": 63,
+          "titulo": "LA FUENTE SANADORA",
+          "prioridade": "ALTA",
+          "pontos": 5,
+          "tipos": [
+            "ESPACO_ANTES_PONTUACAO"
+          ],
+          "total_achados": 1,
+          "termos_criticos": [
+            {
+              "termo": "perdón, ,",
+              "trecho": "dos fluye libre; | ¡Oh preciosa fuente sanadora! | ¡Gloria a Dios!, me sana a mí. | 2 | En la fuente que nos sana He hallado el perdón, , Y lavado toda mancha De mi pobre corazón. | 3 | En la fuente que nos sana Cristo ofrece la salud; | Pues venid, enfermos todo"
+            }
+          ],
+          "achados_10b": [
+            {
+              "tipo": "ESPACO_ANTES_PONTUACAO",
+              "detalhe": "Espaço encontrado antes de sinal de pontuação.",
+              "trecho": "2 | En la fuente que nos sana He hallado el perdón, , Y lavado toda mancha De mi pobre corazón. | 3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "titulo_normalizado": "LA PALABRA HOY SEMBRADA",
+      "registros": [
+        {
+          "id": "GT-170",
+          "numero": 170,
+          "titulo": "LA PALABRA HOY SEMBRADA",
+          "prioridade": "ALTA",
+          "pontos": 5,
+          "tipos": [
+            "RESIDUO_BARRAS",
+            "ESPACO_ANTES_PONTUACAO"
+          ],
+          "total_achados": 6,
+          "termos_criticos": [
+            {
+              "termo": "gracia .",
+              "trecho": "saber, No permitas que las aves Se la vengan a comer: | ||Ricos frutos tú nos puedes conceder.|| | 3 | Haz que crezca con tu gracia . | Y tu rica bendición; No la ahoguen las espinas De congojas y aflicción: | ||Ricos frutos tú nos puedes conceder.|| | 4 | Que"
+            }
+          ],
+          "achados_10b": [
+            {
+              "tipo": "RESIDUO_BARRAS",
+              "detalhe": "Encontrado marcador \"||\".",
+              "trecho": "La palabra hoy sembrada Hazla, Cristo, en mi nacer, Para darle crecimiento Sólo tienes tú poder: | ||Ricos frutos tú nos puedes conceder.|| | 2"
+            },
+            {
+              "tipo": "RESIDUO_BARRAS",
+              "detalhe": "Encontrado marcador \"||\".",
+              "trecho": "La semilla que tu siervo Ha sembrado con saber, No permitas que las aves Se la vengan a comer: | ||Ricos frutos tú nos puedes conceder.|| | 3"
+            },
+            {
+              "tipo": "RESIDUO_BARRAS",
+              "detalhe": "Encontrado marcador \"||\".",
+              "trecho": "Y tu rica bendición; No la ahoguen las espinas De congojas y aflicción: | ||Ricos frutos tú nos puedes conceder.|| | 4"
+            },
+            {
+              "tipo": "RESIDUO_BARRAS",
+              "detalhe": "Encontrado marcador \"||\".",
+              "trecho": "Que su efecto muy profundo, En la mente y corazón, Llevará consigo al mundo Que le das la salvación: | ||Ricos frutos tú nos puedes conceder.|| | 5"
+            },
+            {
+              "tipo": "RESIDUO_BARRAS",
+              "detalhe": "Encontrado marcador \"||\".",
+              "trecho": "Sembraremos la palabra, Con amor y profusión, Esperando la cosecha En la célica mansión: | ||Ricos frutos tú nos puedes conceder.||"
+            },
+            {
+              "tipo": "ESPACO_ANTES_PONTUACAO",
+              "detalhe": "Espaço encontrado antes de sinal de pontuação.",
+              "trecho": "3 | Haz que crezca con tu gracia . | Y tu rica bendición; No la ahoguen las espinas De congojas y aflicción:"
+            }
+          ]
+        },
+        {
+          "id": "SION-075",
+          "numero": 75,
+          "titulo": "LA PALABRA HOY SEMBRADA",
+          "prioridade": "ALTA",
+          "pontos": 5,
+          "tipos": [
+            "RESIDUO_BARRAS",
+            "ESPACO_ANTES_PONTUACAO"
+          ],
+          "total_achados": 6,
+          "termos_criticos": [
+            {
+              "termo": "gracia .",
+              "trecho": "saber, No permitas que las aves Se la vengan a comer: | ||Ricos frutos tú nos puedes conceder.|| | 3 | Haz que crezca con tu gracia . | Y tu rica bendición; No la ahoguen las espinas De congojas y aflicción: | ||Ricos frutos tú nos puedes conceder.|| | 4 | Que"
+            }
+          ],
+          "achados_10b": [
+            {
+              "tipo": "RESIDUO_BARRAS",
+              "detalhe": "Encontrado marcador \"||\".",
+              "trecho": "La palabra hoy sembrada Hazla, Cristo, en mi nacer, Para darle crecimiento Sólo tienes tú poder: | ||Ricos frutos tú nos puedes conceder.|| | 2"
+            },
+            {
+              "tipo": "RESIDUO_BARRAS",
+              "detalhe": "Encontrado marcador \"||\".",
+              "trecho": "La semilla que tu siervo Ha sembrado con saber, No permitas que las aves Se la vengan a comer: | ||Ricos frutos tú nos puedes conceder.|| | 3"
+            },
+            {
+              "tipo": "RESIDUO_BARRAS",
+              "detalhe": "Encontrado marcador \"||\".",
+              "trecho": "Y tu rica bendición; No la ahoguen las espinas De congojas y aflicción: | ||Ricos frutos tú nos puedes conceder.|| | 4"
+            },
+            {
+              "tipo": "RESIDUO_BARRAS",
+              "detalhe": "Encontrado marcador \"||\".",
+              "trecho": "Que su efecto muy profundo, En la mente y corazón, Llevará consigo al mundo Que le das la salvación: | ||Ricos frutos tú nos puedes conceder.|| | 5"
+            },
+            {
+              "tipo": "RESIDUO_BARRAS",
+              "detalhe": "Encontrado marcador \"||\".",
+              "trecho": "Sembraremos la palabra, Con amor y profusión, Esperando la cosecha En la célica mansión: | ||Ricos frutos tú nos puedes conceder.||"
+            },
+            {
+              "tipo": "ESPACO_ANTES_PONTUACAO",
+              "detalhe": "Espaço encontrado antes de sinal de pontuação.",
+              "trecho": "3 | Haz que crezca con tu gracia . | Y tu rica bendición; No la ahoguen las espinas De congojas y aflicción:"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "titulo_normalizado": "OH CUAN DULCE",
+      "registros": [
+        {
+          "id": "GT-025",
+          "numero": 25,
+          "titulo": "¡OH, CUAN DULCE!",
+          "prioridade": "ALTA",
+          "pontos": 8,
+          "tipos": [
+            "PALAVRA_OCR_MAIUSCULA_INTERNA"
+          ],
+          "total_achados": 1,
+          "termos_criticos": [
+            {
+              "termo": "serIe",
+              "trecho": "1 | ¡Oh, cuán dulce es fiar en Cristo Y entregarse todo a él; Esperar en sus promesas, | Y en sus sendas serIe fiel! | CORO: | Jesucristo, Jesucristo, Ya tu amor probaste en mí | Jesucristo, Jesucristo Siempre quiero fiar en ti. | 2 | Es mu"
+            }
+          ],
+          "achados_10b": [
+            {
+              "tipo": "PALAVRA_OCR_MAIUSCULA_INTERNA",
+              "detalhe": "Possível OCR: \"serIe\".",
+              "trecho": "serIe"
+            }
+          ]
+        },
+        {
+          "id": "SION-134",
+          "numero": 134,
+          "titulo": "¡OH, CUÁN DULCE!",
+          "prioridade": "ALTA",
+          "pontos": 8,
+          "tipos": [
+            "PALAVRA_OCR_MAIUSCULA_INTERNA"
+          ],
+          "total_achados": 1,
+          "termos_criticos": [
+            {
+              "termo": "serIe",
+              "trecho": "1 | ¡Oh, cuán dulce es fiar en Cristo Y entregarse todo a él; Esperar en sus promesas, | Y en sus sendas serIe fiel! | CORO: | Jesucristo, Jesucristo, Ya tu amor probaste en mí | Jesucristo, Jesucristo Siempre quiero fiar en ti. | 2 | Es mu"
+            }
+          ],
+          "achados_10b": [
+            {
+              "tipo": "PALAVRA_OCR_MAIUSCULA_INTERNA",
+              "detalhe": "Possível OCR: \"serIe\".",
+              "trecho": "serIe"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "titulo_normalizado": "OH YO QUIERO ANDAR CON CRISTO",
+      "registros": [
+        {
+          "id": "GT-056",
+          "numero": 56,
+          "titulo": "¡OH, YO QUIERO ANDAR CON CRISTO!",
+          "prioridade": "ALTA",
+          "pontos": 8,
+          "tipos": [
+            "PALAVRA_OCR_MAIUSCULA_INTERNA"
+          ],
+          "total_achados": 1,
+          "termos_criticos": [
+            {
+              "termo": "serIe",
+              "trecho": ": | ¡Oh, sí, yo quiero andar con Cristo! | ¡Oh, sí, yo quiero vivir con Cristo! | ¡Oh, sí, yo quiero morir con Cristo! | Quiero serIe un testigo fiel. | 2 | ¡Oh!, yo quiero andar con Cristo, Él vivió en santidad, | En la Biblia yo lo leo | Y yo sé que es la ver"
+            }
+          ],
+          "achados_10b": [
+            {
+              "tipo": "PALAVRA_OCR_MAIUSCULA_INTERNA",
+              "detalhe": "Possível OCR: \"serIe\".",
+              "trecho": "serIe"
+            }
+          ]
+        },
+        {
+          "id": "SION-026",
+          "numero": 26,
+          "titulo": "¡OH! YO QUIERO ANDAR CON CRISTO",
+          "prioridade": "ALTA",
+          "pontos": 8,
+          "tipos": [
+            "PALAVRA_OCR_MAIUSCULA_INTERNA"
+          ],
+          "total_achados": 1,
+          "termos_criticos": [
+            {
+              "termo": "serIe",
+              "trecho": ": | ¡Oh, sí, yo quiero andar con Cristo! | ¡Oh, sí, yo quiero vivir con Cristo! | ¡Oh, sí, yo quiero morir con Cristo! | Quiero serIe un testigo fiel. | 2 | ¡Oh!, yo quiero andar con Cristo, Él vivió en santidad, | En la Biblia yo lo leo | Y yo sé que es la ver"
+            }
+          ],
+          "achados_10b": [
+            {
+              "tipo": "PALAVRA_OCR_MAIUSCULA_INTERNA",
+              "detalhe": "Possível OCR: \"serIe\".",
+              "trecho": "serIe"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "titulo_normalizado": "PENTECOSTES PARA TODOS",
+      "registros": [
+        {
+          "id": "GT-048",
+          "numero": 48,
+          "titulo": "PENTECOSTÉS PARA TODOS",
+          "prioridade": "ALTA",
+          "pontos": 5,
+          "tipos": [
+            "CORO_SEM_DOIS_PONTOS"
+          ],
+          "total_achados": 1,
+          "termos_criticos": [],
+          "achados_10b": [
+            {
+              "tipo": "CORO_SEM_DOIS_PONTOS",
+              "detalhe": "Marcador CORO encontrado sem dois pontos.",
+              "trecho": "Nos manda el Santo Espíritu, Que llena de su gran virtud Al ser que le esperó. | CORO | ¿Ha venido a ti? ¿Ha venido a ti, El Espíritu Consolador?"
+            }
+          ]
+        },
+        {
+          "id": "SION-162",
+          "numero": 162,
+          "titulo": "PENTECOSTÉS PARA TODOS",
+          "prioridade": "ALTA",
+          "pontos": 5,
+          "tipos": [
+            "CORO_SEM_DOIS_PONTOS"
+          ],
+          "total_achados": 1,
+          "termos_criticos": [],
+          "achados_10b": [
+            {
+              "tipo": "CORO_SEM_DOIS_PONTOS",
+              "detalhe": "Marcador CORO encontrado sem dois pontos.",
+              "trecho": "Nos manda el Santo Espíritu, Que llena de su gran virtud Al ser que le esperó. | CORO | ¿Ha venido a ti? ¿Ha venido a ti, El Espíritu Consolador?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "titulo_normalizado": "PODER PENTECOSTAL",
+      "registros": [
+        {
+          "id": "GT-102",
+          "numero": 102,
+          "titulo": "PODER PENTECOSTAL",
+          "prioridade": "ALTA",
+          "pontos": 8,
+          "tipos": [
+            "PALAVRA_OCR_MAIUSCULA_INTERNA"
+          ],
+          "total_achados": 1,
+          "termos_criticos": [
+            {
+              "termo": "hazIo",
+              "trecho": "Señor; | ¡Oh!, danos la lluvia, del Consolador, Aviva tu iglesia con poder celestial. | 2 | Cual vivo fuego o vendaval, | ¡Oh!, hazIo descender; Y pueda hoy en cada cual | Su templo establecer. | 3 | Mediante fe y oración, El cielo tú abrirás: | El santo fuego"
+            }
+          ],
+          "achados_10b": [
+            {
+              "tipo": "PALAVRA_OCR_MAIUSCULA_INTERNA",
+              "detalhe": "Possível OCR: \"hazIo\".",
+              "trecho": "hazIo"
+            }
+          ]
+        },
+        {
+          "id": "SION-044",
+          "numero": 44,
+          "titulo": "PODER PENTECOSTAL",
+          "prioridade": "ALTA",
+          "pontos": 8,
+          "tipos": [
+            "PALAVRA_OCR_MAIUSCULA_INTERNA"
+          ],
+          "total_achados": 1,
+          "termos_criticos": [
+            {
+              "termo": "hazIo",
+              "trecho": "Señor; | ¡Oh!, danos la lluvia, del Consolador, Aviva tu iglesia con poder celestial. | 2 | Cual vivo fuego o vendaval, | ¡Oh!, hazIo descender; Y pueda hoy en cada cual | Su templo establecer. | 3 | Mediante fe y oración, El cielo tú abrirás: | El santo fuego"
+            }
+          ],
+          "achados_10b": [
+            {
+              "tipo": "PALAVRA_OCR_MAIUSCULA_INTERNA",
+              "detalhe": "Possível OCR: \"hazIo\".",
+              "trecho": "hazIo"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "titulo_normalizado": "SALUD SALUD",
+      "registros": [
+        {
+          "id": "GT-066",
+          "numero": 66,
+          "titulo": "¡SALUD! ¡SALUD!",
+          "prioridade": "ALTA",
+          "pontos": 5,
+          "tipos": [
+            "ESPACO_ANTES_PONTUACAO"
+          ],
+          "total_achados": 1,
+          "termos_criticos": [
+            {
+              "termo": "; ,",
+              "trecho": "da en loor; | ¡Oh Salvador, tierno Cristo! | CORO: | ¡Salud! ¡Salud!, cantad a nuestro Dios. La paz nos da, clamad en alta voz; , | Salvación ya tengo y descanso dulce en él, Yo soy salvado en Cristo. | 2 | Debo, pues, mis fuerzas y mi vida toda a i: Te l"
+            }
+          ],
+          "achados_10b": [
+            {
+              "tipo": "ESPACO_ANTES_PONTUACAO",
+              "detalhe": "Espaço encontrado antes de sinal de pontuação.",
+              "trecho": "CORO: | ¡Salud! ¡Salud!, cantad a nuestro Dios. La paz nos da, clamad en alta voz; , | Salvación ya tengo y descanso dulce en él, Yo soy salvado en Cristo."
+            }
+          ]
+        },
+        {
+          "id": "SION-030",
+          "numero": 30,
+          "titulo": "¡SALUD! ¡SALUD!",
+          "prioridade": "ALTA",
+          "pontos": 5,
+          "tipos": [
+            "ESPACO_ANTES_PONTUACAO"
+          ],
+          "total_achados": 1,
+          "termos_criticos": [
+            {
+              "termo": "; ,",
+              "trecho": "da en loor; | ¡Oh Salvador, tierno Cristo! | CORO: | ¡Salud! ¡Salud!, cantad a nuestro Dios. La paz nos da, clamad en alta voz; , | Salvación ya tengo y descanso dulce en él, Yo soy salvado en Cristo. | 2 | Debo, pues, mis fuerzas y mi vida toda a i: Te l"
+            }
+          ],
+          "achados_10b": [
+            {
+              "tipo": "ESPACO_ANTES_PONTUACAO",
+              "detalhe": "Espaço encontrado antes de sinal de pontuação.",
+              "trecho": "CORO: | ¡Salud! ¡Salud!, cantad a nuestro Dios. La paz nos da, clamad en alta voz; , | Salvación ya tengo y descanso dulce en él, Yo soy salvado en Cristo."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "titulo_normalizado": "SIEMPRE ORAD",
+      "registros": [
+        {
+          "id": "GT-137",
+          "numero": 137,
+          "titulo": "SIEMPRE ORAD",
+          "prioridade": "ALTA",
+          "pontos": 5,
+          "tipos": [
+            "ESPACO_ANTES_PONTUACAO"
+          ],
+          "total_achados": 1,
+          "termos_criticos": [],
+          "achados_10b": [
+            {
+              "tipo": "ESPACO_ANTES_PONTUACAO",
+              "detalhe": "Espaço encontrado antes de sinal de pontuação.",
+              "trecho": "2 | «Siempre orad», que si hoy viniere Cristo El te halle en la lid, , | Con la espada suya bien empleada, Fiel por nuestro Adalid."
+            }
+          ]
+        },
+        {
+          "id": "SION-062",
+          "numero": 62,
+          "titulo": "SIEMPRE ORAD",
+          "prioridade": "ALTA",
+          "pontos": 5,
+          "tipos": [
+            "ESPACO_ANTES_PONTUACAO"
+          ],
+          "total_achados": 1,
+          "termos_criticos": [],
+          "achados_10b": [
+            {
+              "tipo": "ESPACO_ANTES_PONTUACAO",
+              "detalhe": "Espaço encontrado antes de sinal de pontuação.",
+              "trecho": "2 | «Siempre orad», que si hoy viniere Cristo El te halle en la lid, , | Con la espada suya bien empleada, Fiel por nuestro Adalid."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "titulo_normalizado": "TODO A CRISTO YO ME RINDO",
+      "registros": [
+        {
+          "id": "GT-007",
+          "numero": 7,
+          "titulo": "TODO A CRISTO YO ME RINDO",
+          "prioridade": "ALTA",
+          "pontos": 8,
+          "tipos": [
+            "PALAVRA_OCR_MAIUSCULA_INTERNA"
+          ],
+          "total_achados": 1,
+          "termos_criticos": [
+            {
+              "termo": "serIe",
+              "trecho": "1 | Todo a Cristo yo me rindo, Con el fin de serie fiel; | Para siempre quiero amarle, Y agradarle sólo a él. | CORO: | Yo me rindo a él, Yo me rindo a él; | Todo a Cristo yo me"
+            }
+          ],
+          "achados_10b": [
+            {
+              "tipo": "PALAVRA_OCR_MAIUSCULA_INTERNA",
+              "detalhe": "Possível OCR: \"serIe\".",
+              "trecho": "serIe"
+            }
+          ]
+        },
+        {
+          "id": "SION-011",
+          "numero": 11,
+          "titulo": "TODO A CRISTO YO ME RINDO",
+          "prioridade": "ALTA",
+          "pontos": 8,
+          "tipos": [
+            "PALAVRA_OCR_MAIUSCULA_INTERNA"
+          ],
+          "total_achados": 1,
+          "termos_criticos": [
+            {
+              "termo": "serIe",
+              "trecho": "1 | Todo a Cristo yo me rindo, Con el fin de serie fiel; | Para siempre quiero amarle, Y agradarle sólo a él. | CORO: | Yo me rindo a él, Yo me rindo a él; | Todo a Cristo yo me"
+            }
+          ],
+          "achados_10b": [
+            {
+              "tipo": "PALAVRA_OCR_MAIUSCULA_INTERNA",
+              "detalhe": "Possível OCR: \"serIe\".",
+              "trecho": "serIe"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "casos_individuais": [
+    {
+      "id": "GT-042",
+      "numero": 42,
+      "titulo": "HAY UN PRECIOSO MANANTIAL",
+      "prioridade": "ALTA",
+      "pontos": 15,
+      "tipos": [
+        "PRIMEIRA_ESTROFE_SEM_NUMERO",
+        "NUMERO_REPETIDO",
+        "NUMERACAO_SUSPEITA"
+      ],
+      "total_achados": 5,
+      "termos_criticos": [],
+      "achados_10b": [
+        {
+          "tipo": "PRIMEIRA_ESTROFE_SEM_NUMERO",
+          "detalhe": "Primeiro número estrutural encontrado: 2.",
+          "trecho": "Y más blanco que la nieve yo seré: | 2 | El malhechor se convirtió Pendiente de una cruz; El vio la fuente y se lavó, Creyendo en Jesús."
+        },
+        {
+          "tipo": "NUMERO_REPETIDO",
+          "detalhe": "Número estrutural 2 repetido.",
+          "trecho": "Hay un precioso manantial De sangre de Emmanuel, Que purifica a cada cual Que se sumerge en él. | 2 | El malhechor se convirtió Pendiente de una cruz; El vio la fuente y se lavó, Creyendo en Jesús."
+        },
+        {
+          "tipo": "NUMERO_REPETIDO",
+          "detalhe": "Número estrutural 3 repetido.",
+          "trecho": "El malhechor se convirtió Pendiente de una cruz; El vio la fuente y se lavó, Creyendo en Jesús. | 3 | Y yo también mi pobre ser Allí logré lavar;"
+        },
+        {
+          "tipo": "NUMERO_REPETIDO",
+          "detalhe": "Número estrutural 4 repetido.",
+          "trecho": "La gloria de su gran poder, Me gozo en ensalzar. | 4 | ¡Eterna fuente carmesí!"
+        },
+        {
+          "tipo": "NUMERACAO_SUSPEITA",
+          "detalhe": "Sequência regressiva 4 -> 1.",
+          "trecho": ""
+        }
+      ]
+    },
+    {
+      "id": "GT-054",
+      "numero": 54,
+      "titulo": "QUE HAGA EN TI SU VOLUNTAD",
+      "prioridade": "ALTA",
+      "pontos": 10,
+      "tipos": [
+        "PRIMEIRA_ESTROFE_SEM_NUMERO",
+        "NUMERACAO_SUSPEITA"
+      ],
+      "total_achados": 2,
+      "termos_criticos": [],
+      "achados_10b": [
+        {
+          "tipo": "PRIMEIRA_ESTROFE_SEM_NUMERO",
+          "detalhe": "Primeiro número estrutural encontrado: 2.",
+          "trecho": "Su gran poder, sus dones te dará, El gozo y paz a tu alma volverá: Del corazón las manchas limpiará, Que haga en ti su santa voluntad. | 2 | ¿Quieres ir en pos de Cristo y llevar la cruz?"
+        },
+        {
+          "tipo": "NUMERACAO_SUSPEITA",
+          "detalhe": "Sequência regressiva 3 -> 1.",
+          "trecho": ""
+        }
+      ]
+    },
+    {
+      "id": "GT-040",
+      "numero": 40,
+      "titulo": "EN LOS NEGOCIOS DEL REY",
+      "prioridade": "ALTA",
+      "pontos": 7,
+      "tipos": [
+        "ESPACO_ANTES_PONTUACAO",
+        "PONTUACAO_DUPLA_SUSPEITA"
+      ],
+      "total_achados": 2,
+      "termos_criticos": [
+        {
+          "termo": "oid, .",
+          "trecho": "sión de luz, eterna paz y amor: Embajador yo soy del reino celestial | En los negocios de mi Rey. | CORO: | Este mensaje fiel oid, . Que dijo ya celeste voz: | «Reconciliaos ya» – dice el Señor y Rey, | ¡Reconciliaos hoy con Dios! | 2 | Que del pecado vil arre"
+        }
+      ],
+      "achados_10b": [
+        {
+          "tipo": "ESPACO_ANTES_PONTUACAO",
+          "detalhe": "Espaço encontrado antes de sinal de pontuação.",
+          "trecho": "CORO: | Este mensaje fiel oid, . Que dijo ya celeste voz: | «Reconciliaos ya» – dice el Señor y Rey,"
+        },
+        {
+          "tipo": "PONTUACAO_DUPLA_SUSPEITA",
+          "detalhe": "Combinação incomum de sinais de pontuação.",
+          "trecho": "CORO: | Este mensaje fiel oid, . Que dijo ya celeste voz: | «Reconciliaos ya» – dice el Señor y Rey,"
+        }
+      ]
+    },
+    {
+      "id": "GT-055",
+      "numero": 55,
+      "titulo": "EL MUNDO PERDIDO",
+      "prioridade": "ALTA",
+      "pontos": 7,
+      "tipos": [
+        "PRIMEIRA_ESTROFE_SEM_NUMERO",
+        "PONTUACAO_DUPLA_SUSPEITA"
+      ],
+      "total_achados": 2,
+      "termos_criticos": [],
+      "achados_10b": [
+        {
+          "tipo": "PRIMEIRA_ESTROFE_SEM_NUMERO",
+          "detalhe": "Primeiro número estrutural encontrado: 2.",
+          "trecho": "¡Jesús es la luz del mundo! | 2 | En día la noche se cambia con él, etc. Irás en la luz si a su ley eres fiel, etc."
+        },
+        {
+          "tipo": "PONTUACAO_DUPLA_SUSPEITA",
+          "detalhe": "Combinação incomum de sinais de pontuação.",
+          "trecho": "¡Oh, ciegos y presos del lóbrego error!, etc. | Él manda lavaros y ver su fulgor, etc., | 4"
+        }
+      ]
+    },
+    {
+      "id": "GT-069",
+      "numero": 69,
+      "titulo": "PRECIOSO ES JESÚS",
+      "prioridade": "ALTA",
+      "pontos": 7,
+      "tipos": [
+        "ESPACO_ANTES_PONTUACAO",
+        "PONTUACAO_DUPLA_SUSPEITA"
+      ],
+      "total_achados": 2,
+      "termos_criticos": [],
+      "achados_10b": [
+        {
+          "tipo": "ESPACO_ANTES_PONTUACAO",
+          "detalhe": "Espaço encontrado antes de sinal de pontuação.",
+          "trecho": "1 | Jesús es precioso, mi buen Salvador, . Por siempre le alabo por su gran amor, Si débil me encuentro su fuerza me da, Él es mi precioso Jesús. | CORO:"
+        },
+        {
+          "tipo": "PONTUACAO_DUPLA_SUSPEITA",
+          "detalhe": "Combinação incomum de sinais de pontuação.",
+          "trecho": "1 | Jesús es precioso, mi buen Salvador, . Por siempre le alabo por su gran amor, Si débil me encuentro su fuerza me da, Él es mi precioso Jesús. | CORO:"
+        }
+      ]
+    },
+    {
+      "id": "GT-079",
+      "numero": 79,
+      "titulo": "PUEDO OÍR TU VOZ LLAMANDO",
+      "prioridade": "ALTA",
+      "pontos": 7,
+      "tipos": [
+        "PRIMEIRA_ESTROFE_SEM_NUMERO",
+        "RESIDUO_BARRAS",
+        "ESPACO_ANTES_PONTUACAO"
+      ],
+      "total_achados": 7,
+      "termos_criticos": [],
+      "achados_10b": [
+        {
+          "tipo": "PRIMEIRA_ESTROFE_SEM_NUMERO",
+          "detalhe": "Primeiro número estrutural encontrado: 2.",
+          "trecho": "||Seguiré do tú me guíes, || Dondequiera fiel te seguiré e , | 2 | ||Yo te seguiré en el huerto|| Sufriré contigo, mi Jesús."
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "||Puedo oír tu voz llamando, || Trae tu cruz y ven en pos de mí. | CORO:"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "CORO: | ||Seguiré do tú me guíes, || Dondequiera fiel te seguiré e , | 2"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "2 | ||Yo te seguiré en el huerto|| Sufriré contigo, mi Jesús. | 3"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "3 | ||Sufriré por ti, Maestro,|| Moriré contigo, mi Jesús. | 4"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "4 | ||Medarás la gracia y gloria, || Y por siempre tú me guiarás."
+        },
+        {
+          "tipo": "ESPACO_ANTES_PONTUACAO",
+          "detalhe": "Espaço encontrado antes de sinal de pontuação.",
+          "trecho": "CORO: | ||Seguiré do tú me guíes, || Dondequiera fiel te seguiré e , | 2"
+        }
+      ]
+    },
+    {
+      "id": "GT-062",
+      "numero": 62,
+      "titulo": "CON CRISTO YO IRÉ",
+      "prioridade": "ALTA",
+      "pontos": 5,
+      "tipos": [
+        "ESPACO_ANTES_PONTUACAO"
+      ],
+      "total_achados": 1,
+      "termos_criticos": [],
+      "achados_10b": [
+        {
+          "tipo": "ESPACO_ANTES_PONTUACAO",
+          "detalhe": "Espaço encontrado antes de sinal de pontuação.",
+          "trecho": "Aunque mi parte sea mi dura cruz llevar, Diré a mis hermanos también su gran poder; Contento quedaré, mi luz haré brillar, | ¡Testigo de Cristo, doquiera yo iré! . | La voluntad de Cristo yo quiero obedecer, Pues en la Santa Biblia encuentro mi saber Y con su gran poder al mundo venceré,"
+        }
+      ]
+    },
+    {
+      "id": "GT-067",
+      "numero": 67,
+      "titulo": "DE MI TIERNO SALVADOR LIBRE ESTOY",
+      "prioridade": "ALTA",
+      "pontos": 5,
+      "tipos": [
+        "ESPACO_ANTES_PONTUACAO"
+      ],
+      "total_achados": 1,
+      "termos_criticos": [
+        {
+          "termo": "! ,",
+          "trecho": "favor de Jesús: De tinieblas me llamó, | De cadenas me libró, | De la muerte me salvó, mi Jesús. | CORO: | ¡Mi Jesús! ¡Mi Jesús! , | ¡Cuán precioso es el nombre de Jesús! | Con su sangre me limpié, De su gozo me llenó, | De su vida me dotó, mi Jesús. | 2 | ¡Oh"
+        }
+      ],
+      "achados_10b": [
+        {
+          "tipo": "ESPACO_ANTES_PONTUACAO",
+          "detalhe": "Espaço encontrado antes de sinal de pontuação.",
+          "trecho": "CORO: | ¡Mi Jesús! ¡Mi Jesús! , | ¡Cuán precioso es el nombre de Jesús!"
+        }
+      ]
+    },
+    {
+      "id": "GT-099",
+      "numero": 99,
+      "titulo": "NADA DE SOMBRAS",
+      "prioridade": "ALTA",
+      "pontos": 5,
+      "tipos": [
+        "ESPACO_ANTES_PONTUACAO"
+      ],
+      "total_achados": 1,
+      "termos_criticos": [
+        {
+          "termo": ".sombras",
+          "trecho": "1 | No habrá .sombras en el valle de la muerte Cuando cese de la vida el batallar, | Y escuchemos del Señor el llamamiento, Ya llevándonos con"
+        }
+      ],
+      "achados_10b": [
+        {
+          "tipo": "ESPACO_ANTES_PONTUACAO",
+          "detalhe": "Espaço encontrado antes de sinal de pontuação.",
+          "trecho": "1 | No habrá .sombras en el valle de la muerte Cuando cese de la vida el batallar, | Y escuchemos del Señor el llamamiento, Ya llevándonos con él a descansar."
+        }
+      ]
+    },
+    {
+      "id": "GT-128",
+      "numero": 128,
+      "titulo": "VALOR Y FE",
+      "prioridade": "ALTA",
+      "pontos": 5,
+      "tipos": [
+        "ESPACO_ANTES_PONTUACAO"
+      ],
+      "total_achados": 1,
+      "termos_criticos": [
+        {
+          "termo": ".las",
+          "trecho": "1 | Si en tu senda .las nubes Agolparse ves, | No vaciles por ello, Ni flaqueen tus pies; Cada nube que venga No podrá traer | Más que pruebas que"
+        }
+      ],
+      "achados_10b": [
+        {
+          "tipo": "ESPACO_ANTES_PONTUACAO",
+          "detalhe": "Espaço encontrado antes de sinal de pontuação.",
+          "trecho": "1 | Si en tu senda .las nubes Agolparse ves, | No vaciles por ello, Ni flaqueen tus pies; Cada nube que venga No podrá traer"
+        }
+      ]
+    },
+    {
+      "id": "GT-161",
+      "numero": 161,
+      "titulo": "PECADOR, VEN AL DULCE JESÚS",
+      "prioridade": "ALTA",
+      "pontos": 5,
+      "tipos": [
+        "RESIDUO_BARRAS",
+        "ESPACO_ANTES_PONTUACAO"
+      ],
+      "total_achados": 3,
+      "termos_criticos": [
+        {
+          "termo": "serás . De",
+          "trecho": "re también Medicina que cure tu mal. | 4 | Ovejuela que huyó del redil, | ¡He aquí tu benigno Señor! | Y en los hombros llevada serás . De tan dulce y amante Pastor."
+        }
+      ],
+      "achados_10b": [
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "CORO: | ||Ven a él, ven a él, | Que te espera tu buen Salvador.||"
+        },
+        {
+          "tipo": "RESIDUO_BARRAS",
+          "detalhe": "Encontrado marcador \"||\".",
+          "trecho": "||Ven a él, ven a él, | Que te espera tu buen Salvador.|| | 2"
+        },
+        {
+          "tipo": "ESPACO_ANTES_PONTUACAO",
+          "detalhe": "Espaço encontrado antes de sinal de pontuação.",
+          "trecho": "¡He aquí tu benigno Señor! | Y en los hombros llevada serás . De tan dulce y amante Pastor."
+        }
+      ]
+    },
+    {
+      "id": "GT-218",
+      "numero": 218,
+      "titulo": "YO ME ACUERDO",
+      "prioridade": "ALTA",
+      "pontos": 5,
+      "tipos": [
+        "ESPACO_ANTES_PONTUACAO"
+      ],
+      "total_achados": 1,
+      "termos_criticos": [
+        {
+          "termo": "murió. :",
+          "trecho": "ús el pan quebró, A los suyos todos con amor lo dio; | En su cuerpo el Señor ya llevó nuestro dolor, Pues por mí el Señor murió. : | 3 | Yo me acuerdo que el vino él les dio: | «Si, tomad de ello todos», les mandó; | «Es mi sangre de la cruz, por la cual os"
+        }
+      ],
+      "achados_10b": [
+        {
+          "tipo": "ESPACO_ANTES_PONTUACAO",
+          "detalhe": "Espaço encontrado antes de sinal de pontuação.",
+          "trecho": "Yo me acuerdo que Jesús el pan quebró, A los suyos todos con amor lo dio; | En su cuerpo el Señor ya llevó nuestro dolor, Pues por mí el Señor murió. : | 3"
+        }
+      ]
+    },
+    {
+      "id": "GT-220",
+      "numero": 220,
+      "titulo": "HOGAR DE MIS RECUERDOS",
+      "prioridade": "ALTA",
+      "pontos": 5,
+      "tipos": [
+        "ESPACO_ANTES_PONTUACAO"
+      ],
+      "total_achados": 1,
+      "termos_criticos": [
+        {
+          "termo": ".en",
+          "trecho": "1 | Hogar de mis recuerdos, A ti volver anhelo; | No hay sitio bajo el cielo Más dulce que el hogar. Posara yo .en palacios, Corriendo el mundo entero, A todos yo prefiero | Mi hogar, mi dulce hogar. | CORO: | ¡Mi hogar, mi hogar, mi dulce"
+        }
+      ],
+      "achados_10b": [
+        {
+          "tipo": "ESPACO_ANTES_PONTUACAO",
+          "detalhe": "Espaço encontrado antes de sinal de pontuação.",
+          "trecho": "Hogar de mis recuerdos, A ti volver anhelo; | No hay sitio bajo el cielo Más dulce que el hogar. Posara yo .en palacios, Corriendo el mundo entero, A todos yo prefiero | Mi hogar, mi dulce hogar."
+        }
+      ]
+    },
+    {
+      "id": "GT-265",
+      "numero": 265,
+      "titulo": "MAS ALLÁ EL DÍA VIENE",
+      "prioridade": "ALTA",
+      "pontos": 5,
+      "tipos": [
+        "ESPACO_ANTES_PONTUACAO"
+      ],
+      "total_achados": 1,
+      "termos_criticos": [
+        {
+          "termo": ".su",
+          "trecho": "llanto, | Sino notas\tde loor; | Más allá\tun día alegre | Que por siempre\tha de durar. | 2 | ¿Qué será estar con Cristo? | Escuchar .su dulce voz; Ver su rostro tan brillante Y andar de él en pos. | 3 | Con Jesús\tpor guía siempre | El camino\tseguiré, | Con confia"
+        }
+      ],
+      "achados_10b": [
+        {
+          "tipo": "ESPACO_ANTES_PONTUACAO",
+          "detalhe": "Espaço encontrado antes de sinal de pontuação.",
+          "trecho": "¿Qué será estar con Cristo? | Escuchar .su dulce voz; Ver su rostro tan brillante Y andar de él en pos. | 3"
+        }
+      ]
+    },
+    {
+      "id": "GT-303",
+      "numero": 303,
+      "titulo": "DE LA",
+      "prioridade": "ALTA",
+      "pontos": 5,
+      "tipos": [
+        "PRIMEIRA_ESTROFE_SEM_NUMERO"
+      ],
+      "total_achados": 1,
+      "termos_criticos": [],
+      "achados_10b": [
+        {
+          "tipo": "PRIMEIRA_ESTROFE_SEM_NUMERO",
+          "detalhe": "Primeiro número estrutural encontrado: 2.",
+          "trecho": "Para hacerla esposa quiso De los cielos descender, Y su sangre por limpiarla En la horrible cruz verter. | 2 | De entre todas las naciones Escogida en variedad,"
+        }
+      ]
+    },
+    {
+      "id": "GT-320",
+      "numero": 320,
+      "titulo": "EN LA NUEVA JERUSALÉN",
+      "prioridade": "ALTA",
+      "pontos": 5,
+      "tipos": [
+        "ESPACO_ANTES_PONTUACAO"
+      ],
+      "total_achados": 1,
+      "termos_criticos": [],
+      "achados_10b": [
+        {
+          "tipo": "ESPACO_ANTES_PONTUACAO",
+          "detalhe": "Espaço encontrado antes de sinal de pontuação.",
+          "trecho": "CORO: | Cantaremos con los santos la canción de redención, En Jerusalén …………, En Jerusalén\t, | Con acentos de alegría alabando al Salvador, En la gran Jerusalén."
+        }
+      ]
+    },
+    {
+      "id": "GT-322",
+      "numero": 322,
+      "titulo": "NO HAY TRISTEZA EN EL CIELO",
+      "prioridade": "ALTA",
+      "pontos": 5,
+      "tipos": [
+        "ESPACO_ANTES_PONTUACAO"
+      ],
+      "total_achados": 1,
+      "termos_criticos": [],
+      "achados_10b": [
+        {
+          "tipo": "ESPACO_ANTES_PONTUACAO",
+          "detalhe": "Espaço encontrado antes de sinal de pontuação.",
+          "trecho": "CORO: | Yo voy a la patria del alma, Do Cristo prepara mi hogar; Do todos los santificados Irán .para siempre a morar: El día feliz ya se acerca | En que el sol para mí se pondrá:"
+        }
+      ]
+    },
+    {
+      "id": "GT-325",
+      "numero": 325,
+      "titulo": "¿NOS VEREMOS EN EL RIO?",
+      "prioridade": "ALTA",
+      "pontos": 5,
+      "tipos": [
+        "ESPACO_ANTES_PONTUACAO"
+      ],
+      "total_achados": 1,
+      "termos_criticos": [
+        {
+          "termo": ".Jesús",
+          "trecho": "uel río Crece el árbol de la Vida Y a toda alma dolorida Dan sus hojas la salud. | 6 | Tiene faz risueña el río, Pues la de .Jesús refleja, La que de su grey aleja Todo mal, todo dolor. | 7 | Nos veremos en el río Nuestro viaje concluyendo, Suaves melodí"
+        }
+      ],
+      "achados_10b": [
+        {
+          "tipo": "ESPACO_ANTES_PONTUACAO",
+          "detalhe": "Espaço encontrado antes de sinal de pontuação.",
+          "trecho": "6 | Tiene faz risueña el río, Pues la de .Jesús refleja, La que de su grey aleja Todo mal, todo dolor. | 7"
+        }
+      ]
+    },
+    {
+      "id": "SION-007",
+      "numero": 7,
+      "titulo": "LA SIEMBRA",
+      "prioridade": "ALTA",
+      "pontos": 5,
+      "tipos": [
+        "PONTUACAO_DUPLA_SUSPEITA"
+      ],
+      "total_achados": 2,
+      "termos_criticos": [],
+      "achados_10b": [
+        {
+          "tipo": "PONTUACAO_DUPLA_SUSPEITA",
+          "detalhe": "Combinação incomum de sinais de pontuação.",
+          "trecho": "CORO: | Sembraré..., sembraré, | Mientras viva, simiente de amor;"
+        },
+        {
+          "tipo": "PONTUACAO_DUPLA_SUSPEITA",
+          "detalhe": "Combinação incomum de sinais de pontuação.",
+          "trecho": "Mientras viva, simiente de amor; | Segaré..., segaré..., | Al hallarme en la casa de Dios."
+        }
+      ]
+    },
+    {
+      "id": "SION-246",
+      "numero": 246,
+      "titulo": "CRISTIANOS, TODOS A PREPARARSE",
+      "prioridade": "ALTA",
+      "pontos": 5,
+      "tipos": [
+        "PRIMEIRA_ESTROFE_SEM_NUMERO"
+      ],
+      "total_achados": 1,
+      "termos_criticos": [],
+      "achados_10b": [
+        {
+          "tipo": "PRIMEIRA_ESTROFE_SEM_NUMERO",
+          "detalhe": "Primeiro número estrutural encontrado: 2.",
+          "trecho": "| 2 | Ya las señales cúmplense todas,"
+        }
+      ]
+    }
+  ],
+  "casos_estruturais": [
+    {
+      "id": "GT-042",
+      "numero": 42,
+      "titulo": "HAY UN PRECIOSO MANANTIAL",
+      "tipos": [
+        "PRIMEIRA_ESTROFE_SEM_NUMERO",
+        "NUMERO_REPETIDO",
+        "NUMERACAO_SUSPEITA"
+      ],
+      "achados": [
+        {
+          "tipo": "PRIMEIRA_ESTROFE_SEM_NUMERO",
+          "detalhe": "Primeiro número estrutural encontrado: 2.",
+          "trecho": "Y más blanco que la nieve yo seré: | 2 | El malhechor se convirtió Pendiente de una cruz; El vio la fuente y se lavó, Creyendo en Jesús."
+        },
+        {
+          "tipo": "NUMERO_REPETIDO",
+          "detalhe": "Número estrutural 2 repetido.",
+          "trecho": "Hay un precioso manantial De sangre de Emmanuel, Que purifica a cada cual Que se sumerge en él. | 2 | El malhechor se convirtió Pendiente de una cruz; El vio la fuente y se lavó, Creyendo en Jesús."
+        },
+        {
+          "tipo": "NUMERO_REPETIDO",
+          "detalhe": "Número estrutural 3 repetido.",
+          "trecho": "El malhechor se convirtió Pendiente de una cruz; El vio la fuente y se lavó, Creyendo en Jesús. | 3 | Y yo también mi pobre ser Allí logré lavar;"
+        },
+        {
+          "tipo": "NUMERO_REPETIDO",
+          "detalhe": "Número estrutural 4 repetido.",
+          "trecho": "La gloria de su gran poder, Me gozo en ensalzar. | 4 | ¡Eterna fuente carmesí!"
+        },
+        {
+          "tipo": "NUMERACAO_SUSPEITA",
+          "detalhe": "Sequência regressiva 4 -> 1.",
+          "trecho": ""
+        }
+      ]
+    },
+    {
+      "id": "GT-054",
+      "numero": 54,
+      "titulo": "QUE HAGA EN TI SU VOLUNTAD",
+      "tipos": [
+        "PRIMEIRA_ESTROFE_SEM_NUMERO",
+        "NUMERACAO_SUSPEITA"
+      ],
+      "achados": [
+        {
+          "tipo": "PRIMEIRA_ESTROFE_SEM_NUMERO",
+          "detalhe": "Primeiro número estrutural encontrado: 2.",
+          "trecho": "Su gran poder, sus dones te dará, El gozo y paz a tu alma volverá: Del corazón las manchas limpiará, Que haga en ti su santa voluntad. | 2 | ¿Quieres ir en pos de Cristo y llevar la cruz?"
+        },
+        {
+          "tipo": "NUMERACAO_SUSPEITA",
+          "detalhe": "Sequência regressiva 3 -> 1.",
+          "trecho": ""
+        }
+      ]
+    },
+    {
+      "id": "GT-182",
+      "numero": 182,
+      "titulo": "¡GLORIA A TI, JESÚS DIVINO",
+      "tipos": [
+        "SALTO_NUMERICO"
+      ],
+      "achados": [
+        {
+          "tipo": "SALTO_NUMERICO",
+          "detalhe": "Sequência 1 -> 3.",
+          "trecho": ""
+        }
+      ]
+    },
+    {
+      "id": "SION-079",
+      "numero": 79,
+      "titulo": "GLORIA A TI, JESÚS DIVINO",
+      "tipos": [
+        "SALTO_NUMERICO"
+      ],
+      "achados": [
+        {
+          "tipo": "SALTO_NUMERICO",
+          "detalhe": "Sequência 1 -> 3.",
+          "trecho": ""
+        }
+      ]
+    },
+    {
+      "id": "GT-055",
+      "numero": 55,
+      "titulo": "EL MUNDO PERDIDO",
+      "tipos": [
+        "PRIMEIRA_ESTROFE_SEM_NUMERO"
+      ],
+      "achados": [
+        {
+          "tipo": "PRIMEIRA_ESTROFE_SEM_NUMERO",
+          "detalhe": "Primeiro número estrutural encontrado: 2.",
+          "trecho": "¡Jesús es la luz del mundo! | 2 | En día la noche se cambia con él, etc. Irás en la luz si a su ley eres fiel, etc."
+        }
+      ]
+    },
+    {
+      "id": "GT-079",
+      "numero": 79,
+      "titulo": "PUEDO OÍR TU VOZ LLAMANDO",
+      "tipos": [
+        "PRIMEIRA_ESTROFE_SEM_NUMERO"
+      ],
+      "achados": [
+        {
+          "tipo": "PRIMEIRA_ESTROFE_SEM_NUMERO",
+          "detalhe": "Primeiro número estrutural encontrado: 2.",
+          "trecho": "||Seguiré do tú me guíes, || Dondequiera fiel te seguiré e , | 2 | ||Yo te seguiré en el huerto|| Sufriré contigo, mi Jesús."
+        }
+      ]
+    },
+    {
+      "id": "GT-048",
+      "numero": 48,
+      "titulo": "PENTECOSTÉS PARA TODOS",
+      "tipos": [
+        "CORO_SEM_DOIS_PONTOS"
+      ],
+      "achados": [
+        {
+          "tipo": "CORO_SEM_DOIS_PONTOS",
+          "detalhe": "Marcador CORO encontrado sem dois pontos.",
+          "trecho": "Nos manda el Santo Espíritu, Que llena de su gran virtud Al ser que le esperó. | CORO | ¿Ha venido a ti? ¿Ha venido a ti, El Espíritu Consolador?"
+        }
+      ]
+    },
+    {
+      "id": "GT-303",
+      "numero": 303,
+      "titulo": "DE LA",
+      "tipos": [
+        "PRIMEIRA_ESTROFE_SEM_NUMERO"
+      ],
+      "achados": [
+        {
+          "tipo": "PRIMEIRA_ESTROFE_SEM_NUMERO",
+          "detalhe": "Primeiro número estrutural encontrado: 2.",
+          "trecho": "Para hacerla esposa quiso De los cielos descender, Y su sangre por limpiarla En la horrible cruz verter. | 2 | De entre todas las naciones Escogida en variedad,"
+        }
+      ]
+    },
+    {
+      "id": "SION-162",
+      "numero": 162,
+      "titulo": "PENTECOSTÉS PARA TODOS",
+      "tipos": [
+        "CORO_SEM_DOIS_PONTOS"
+      ],
+      "achados": [
+        {
+          "tipo": "CORO_SEM_DOIS_PONTOS",
+          "detalhe": "Marcador CORO encontrado sem dois pontos.",
+          "trecho": "Nos manda el Santo Espíritu, Que llena de su gran virtud Al ser que le esperó. | CORO | ¿Ha venido a ti? ¿Ha venido a ti, El Espíritu Consolador?"
+        }
+      ]
+    },
+    {
+      "id": "SION-246",
+      "numero": 246,
+      "titulo": "CRISTIANOS, TODOS A PREPARARSE",
+      "tipos": [
+        "PRIMEIRA_ESTROFE_SEM_NUMERO"
+      ],
+      "achados": [
+        {
+          "tipo": "PRIMEIRA_ESTROFE_SEM_NUMERO",
+          "detalhe": "Primeiro número estrutural encontrado: 2.",
+          "trecho": "| 2 | Ya las señales cúmplense todas,"
+        }
+      ]
+    }
+  ],
+  "ordem_recomendada_cotejo": [
+    {
+      "id": "GT-040",
+      "numero": 40,
+      "titulo": "EN LOS NEGOCIOS DEL REY"
+    },
+    {
+      "id": "GT-056",
+      "numero": 56,
+      "titulo": "¡OH, YO QUIERO ANDAR CON CRISTO!"
+    },
+    {
+      "id": "SION-026",
+      "numero": 26,
+      "titulo": "¡OH! YO QUIERO ANDAR CON CRISTO"
+    },
+    {
+      "id": "GT-161",
+      "numero": 161,
+      "titulo": "PECADOR, VEN AL DULCE JESÚS"
+    },
+    {
+      "id": "GT-283",
+      "numero": 283,
+      "titulo": "EN LA MAÑANA"
+    },
+    {
+      "id": "GT-018",
+      "numero": 18,
+      "titulo": "GRATO ES DECIR LA HISTORIA"
+    },
+    {
+      "id": "SION-128",
+      "numero": 128,
+      "titulo": "GRATO ES DECIR LA HISTORIA"
+    },
+    {
+      "id": "GT-007",
+      "numero": 7,
+      "titulo": "TODO A CRISTO YO ME RINDO"
+    },
+    {
+      "id": "SION-011",
+      "numero": 11,
+      "titulo": "TODO A CRISTO YO ME RINDO"
+    },
+    {
+      "id": "GT-025",
+      "numero": 25,
+      "titulo": "¡OH, CUAN DULCE!"
+    },
+    {
+      "id": "SION-134",
+      "numero": 134,
+      "titulo": "¡OH, CUÁN DULCE!"
+    },
+    {
+      "id": "GT-102",
+      "numero": 102,
+      "titulo": "PODER PENTECOSTAL"
+    },
+    {
+      "id": "SION-044",
+      "numero": 44,
+      "titulo": "PODER PENTECOSTAL"
+    },
+    {
+      "id": "GT-042",
+      "numero": 42,
+      "titulo": "HAY UN PRECIOSO MANANTIAL"
+    },
+    {
+      "id": "GT-182",
+      "numero": 182,
+      "titulo": "¡GLORIA A TI, JESÚS DIVINO"
+    },
+    {
+      "id": "SION-079",
+      "numero": 79,
+      "titulo": "GLORIA A TI, JESÚS DIVINO"
+    }
+  ],
+  "observacao": "Nenhum item deste relatório constitui autorização automática de correção."
+}

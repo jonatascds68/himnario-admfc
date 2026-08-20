@@ -1,0 +1,158 @@
+{
+  "etapa": "10E",
+  "base": "assets/base_mestre.json",
+  "hashAntes": "a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41",
+  "hashDepois": "a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41",
+  "baseAlterada": false,
+  "registrosPrioritarios": 16,
+  "pontosDeCotejo": 18,
+  "candidatosCorrecaoSegura": 14,
+  "requerCotejoVisual": 3,
+  "requerCotejoEstrutural": 1,
+  "alvos": [
+    {
+      "id": "GT-040",
+      "classe": "PONTUACAO_OCR",
+      "atual": "oid, .",
+      "proposta": "oid,",
+      "decisao": "CANDIDATO_CORRECAO_SEGURA",
+      "motivo": "Sequência vírgula + espaço + ponto é forte resíduo de OCR."
+    },
+    {
+      "id": "GT-056",
+      "classe": "OCR_I_MAIUSCULO_POR_L",
+      "atual": "serIe",
+      "proposta": "serle",
+      "decisao": "CANDIDATO_CORRECAO_SEGURA",
+      "motivo": "I maiúsculo no interior da palavra é compatível com erro OCR de l minúsculo."
+    },
+    {
+      "id": "SION-026",
+      "classe": "OCR_I_MAIUSCULO_POR_L",
+      "atual": "serIe",
+      "proposta": "serle",
+      "decisao": "CANDIDATO_CORRECAO_SEGURA",
+      "motivo": "Mesmo erro presente no par GT/Sión."
+    },
+    {
+      "id": "GT-161",
+      "classe": "ESPACO_ANTES_PONTUACAO",
+      "atual": "serás . De",
+      "proposta": "serás. De",
+      "decisao": "CANDIDATO_CORRECAO_SEGURA",
+      "motivo": "Espaço indevido antes do ponto."
+    },
+    {
+      "id": "GT-283",
+      "classe": "TEXTO_SUSPEITO_REQUER_FONTE",
+      "atual": "tierra mis Allí",
+      "proposta": null,
+      "decisao": "REQUER_COTEJO_VISUAL",
+      "motivo": "Não deve ser reconstruído apenas por inferência textual."
+    },
+    {
+      "id": "GT-018",
+      "classe": "OCR_I_MAIUSCULO_POR_L",
+      "atual": "referirIa",
+      "proposta": "referirla",
+      "decisao": "CANDIDATO_CORRECAO_SEGURA",
+      "motivo": "Forma contextual e padrão OCR indicam l minúsculo."
+    },
+    {
+      "id": "GT-018",
+      "classe": "PONTUACAO_OCR",
+      "atual": "buen .Jesús",
+      "proposta": "buen Jesús",
+      "decisao": "CANDIDATO_CORRECAO_SEGURA",
+      "motivo": "Ponto intrusivo entre adjetivo e substantivo próprio."
+    },
+    {
+      "id": "SION-128",
+      "classe": "OCR_I_MAIUSCULO_POR_L",
+      "atual": "referirIa",
+      "proposta": "referirla",
+      "decisao": "CANDIDATO_CORRECAO_SEGURA",
+      "motivo": "Mesmo padrão OCR encontrado no correspondente GT."
+    },
+    {
+      "id": "SION-128",
+      "classe": "PONTUACAO_OCR",
+      "atual": "buen .Jesús",
+      "proposta": "buen Jesús",
+      "decisao": "CANDIDATO_CORRECAO_SEGURA",
+      "motivo": "Ponto intrusivo evidente."
+    },
+    {
+      "id": "GT-007",
+      "classe": "OCR_I_MAIUSCULO_POR_L",
+      "atual": "serIe",
+      "proposta": "serle",
+      "decisao": "CANDIDATO_CORRECAO_SEGURA",
+      "motivo": "Erro OCR recorrente."
+    },
+    {
+      "id": "SION-011",
+      "classe": "OCR_I_MAIUSCULO_POR_L",
+      "atual": "serIe",
+      "proposta": "serle",
+      "decisao": "CANDIDATO_CORRECAO_SEGURA",
+      "motivo": "Erro OCR recorrente no par correspondente."
+    },
+    {
+      "id": "GT-025",
+      "classe": "OCR_I_MAIUSCULO_POR_L",
+      "atual": "serIe",
+      "proposta": "serle",
+      "decisao": "CANDIDATO_CORRECAO_SEGURA",
+      "motivo": "Erro OCR recorrente."
+    },
+    {
+      "id": "SION-134",
+      "classe": "OCR_I_MAIUSCULO_POR_L",
+      "atual": "serIe",
+      "proposta": "serle",
+      "decisao": "CANDIDATO_CORRECAO_SEGURA",
+      "motivo": "Erro OCR recorrente no correspondente Sión."
+    },
+    {
+      "id": "GT-102",
+      "classe": "OCR_I_MAIUSCULO_POR_L",
+      "atual": "hazIo",
+      "proposta": "hazlo",
+      "decisao": "CANDIDATO_CORRECAO_SEGURA",
+      "motivo": "I maiúsculo é incompatível com a palavra espanhola; provável l minúsculo."
+    },
+    {
+      "id": "SION-044",
+      "classe": "OCR_I_MAIUSCULO_POR_L",
+      "atual": "hazIo",
+      "proposta": "hazlo",
+      "decisao": "CANDIDATO_CORRECAO_SEGURA",
+      "motivo": "Mesmo erro presente no par correspondente."
+    },
+    {
+      "id": "GT-042",
+      "classe": "ESTRUTURA_NUMERACAO",
+      "atual": null,
+      "proposta": null,
+      "decisao": "REQUER_COTEJO_ESTRUTURAL",
+      "motivo": "Há evidência de conteúdo duplicado/justaposto envolvendo os registros 41 e 42."
+    },
+    {
+      "id": "GT-182",
+      "classe": "SALTO_NUMERICO",
+      "atual": "1 -> 3",
+      "proposta": null,
+      "decisao": "REQUER_COTEJO_VISUAL",
+      "motivo": "O salto estrutural precisa ser confirmado na edição fonte."
+    },
+    {
+      "id": "SION-079",
+      "classe": "SALTO_NUMERICO",
+      "atual": "1 -> 3",
+      "proposta": null,
+      "decisao": "REQUER_COTEJO_VISUAL",
+      "motivo": "O salto estrutural precisa ser confirmado na edição fonte."
+    }
+  ]
+}

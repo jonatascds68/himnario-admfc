@@ -1,0 +1,288 @@
+AUDITORIA HINÁRIA ADMFC
+DOSSIÊ DOS NOVOS CASOS
+Data: 2026-08-19
+Base alterada: NÃO
+
+============================================================
+CASO 16 / 31
+CATEGORIA: SEM_EQUIVALENTE
+SCORE: 12
+TÍTULO: CRISTIANOS, TODOS A PREPARARSE
+============================================================
+
+------------------------------------------------------------
+SION-246 | CRISTIANOS, TODOS A PREPARARSE
+------------------------------------------------------------
+Hinário: Himnos de Sión
+Número: 246
+Equivalente: —
+Alertas: TEXTO_ANTES_DA_ESTROFE_1, CORO_VAZIO_OU_TRUNCADO
+Fonte declarada: PDF Himnario de Sión enviado por el usuario (136 págs.; escaneado)
+Observação: Letra transcrita y verificada visualmente del PDF de Sión; ortografía segura normalizada.
+
+LETRA:
+Cristianos, todos a prepararse,
+Ved al Esposo, vuestro Señor,
+Llenas tened las lámparas siempre,
+A su encuentro id con amor.
+
+CORO:
+Cristo ya viene, pronto, sí, viene,
+Sin tardanza aparecerá,
+Con Él iremos ¡Aleluya!
+A la mansión que Él nos dará.
+
+2
+Ya las señales cúmplense todas,
+Ya la higuera quiere brotar,
+Fieles venid, el Salvador llama;
+Nadie a sus bodas debe faltar.
+
+3
+Ya se termina la larga espera
+Y el esposo ha de venir,
+Piensa ¡Oh, alma! en recibirle,
+Porque sin Él, tendrás que sufrir.
+
+4
+Presto acude, alma acepta,
+Este convite de tu Señor,
+Él te dará su gozo y gloria,
+Ven y recibe hoy su amor.
+
+============================================================
+CASO 17 / 31
+CATEGORIA: PAR_EQUIVALENTE_SINALIZADO
+SCORE: 8
+TÍTULO: ¡OH, VEN SIN TARDAR!
+============================================================
+
+------------------------------------------------------------
+GT-083 | ¡OH, VEN SIN TARDAR!
+------------------------------------------------------------
+Hinário: Gloria y Triunfo
+Número: 83
+Equivalente: 37
+Alertas: TEXTO_ANTES_DA_ESTROFE_1
+Fonte declarada: Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada
+Observação: DOCX original 1–329
+
+LETRA:
+¡Oh, ven sin tardar! ¡Oh, ven sin tardar!
+Acepta a Jesús, y salvo serás.
+2
+Tus ojos ya tal vez el sol No más aquí contemplarán: Hoyes el día de salvación,
+¡Oh, ven a Jesús!
+3
+Jesús te tiene compasión;
+¿Con qué su amor le pagarás?
+Hoy trae a él tu corazón, Y salvo serás.
+4
+Jesús recibe al pecador Que quiera a él su alma unir; Ya no desprecies más su amor,
+¡Oh, ven a Jesús!
+
+>>>>>>>>>> EDIÇÃO EQUIVALENTE PARA COMPARAÇÃO <<<<<<<<<<
+
+------------------------------------------------------------
+SION-037 | ¡OH, VEN SIN TARDAR!
+------------------------------------------------------------
+Hinário: Himnos de Sión
+Número: 37
+Equivalente: 83
+Alertas: TEXTO_ANTES_DA_ESTROFE_1
+Fonte declarada: PDF Himnario de Sión enviado por el usuario (136 págs.; escaneado)
+Observação: Letra incorporada desde la equivalencia confirmada con Gloria y Triunfo; pendiente sólo de diferencias editoriales propias de Sión, si las hubiera.
+
+LETRA:
+¡Oh, ven sin tardar! ¡Oh, ven sin tardar!
+Acepta a Jesús, y salvo serás.
+2
+Tus ojos ya tal vez el sol No más aquí contemplarán: Hoyes el día de salvación,
+¡Oh, ven a Jesús!
+3
+Jesús te tiene compasión;
+¿Con qué su amor le pagarás?
+Hoy trae a él tu corazón, Y salvo serás.
+4
+Jesús recibe al pecador Que quiera a él su alma unir; Ya no desprecies más su amor,
+¡Oh, ven a Jesús!
+
+============================================================
+CASO 18 / 31
+CATEGORIA: PAR_EQUIVALENTE_SINALIZADO
+SCORE: 8
+TÍTULO: ¡GLORIA A TI, JESÚS DIVINO
+============================================================
+
+------------------------------------------------------------
+GT-182 | ¡GLORIA A TI, JESÚS DIVINO
+------------------------------------------------------------
+Hinário: Gloria y Triunfo
+Número: 182
+Equivalente: 79
+Alertas: NUMERACAO_ESTROFES_IRREGULAR
+Fonte declarada: Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada
+Observação: DOCX original 1–329
+
+LETRA:
+1
+¡Gloria a ti, Jesús Divino!
+¡Gloria a ti por tus bondades!
+¡Gloria eterna a tus piedades!
+Querido Salvador.
+CORO:
+¡Gloria, gloria, aleluya!
+¡Gloria, gloria, aleluya!
+¡Gloria, gloria, aleluya! A nuestro Salvador.
+2.
+Tú me amaste con ternura, Y por mí en la cruz moriste, Con ternura me quisiste, Querido Salvador.
+3
+Tengo fe sólo en tu muerte, Pues con ella me salvaste; Vida eterna me compraste, Querido Salvador.
+4
+Te veremos en el cielo: A vivir contigo iremos; Tu presencia gozaremos, Querido Salvador.
+5
+Ten valor, valor cristiano, Cristo es tu mejor amigo: Él te llevará consigo; Jesús es tu Señor.
+
+>>>>>>>>>> EDIÇÃO EQUIVALENTE PARA COMPARAÇÃO <<<<<<<<<<
+
+------------------------------------------------------------
+SION-079 | GLORIA A TI, JESÚS DIVINO
+------------------------------------------------------------
+Hinário: Himnos de Sión
+Número: 79
+Equivalente: 182
+Alertas: NUMERACAO_ESTROFES_IRREGULAR
+Fonte declarada: PDF Himnario de Sión enviado por el usuario (136 págs.; escaneado)
+Observação: Letra incorporada desde la equivalencia confirmada con Gloria y Triunfo; pendiente sólo de diferencias editoriales propias de Sión, si las hubiera.
+
+LETRA:
+1
+¡Gloria a ti, Jesús Divino!
+¡Gloria a ti por tus bondades!
+¡Gloria eterna a tus piedades!
+Querido Salvador.
+CORO:
+¡Gloria, gloria, aleluya!
+¡Gloria, gloria, aleluya!
+¡Gloria, gloria, aleluya! A nuestro Salvador.
+2.
+Tú me amaste con ternura, Y por mí en la cruz moriste, Con ternura me quisiste, Querido Salvador.
+3
+Tengo fe sólo en tu muerte, Pues con ella me salvaste; Vida eterna me compraste, Querido Salvador.
+4
+Te veremos en el cielo: A vivir contigo iremos; Tu presencia gozaremos, Querido Salvador.
+5
+Ten valor, valor cristiano, Cristo es tu mejor amigo: Él te llevará consigo; Jesús es tu Señor.
+
+============================================================
+CASO 19 / 31
+CATEGORIA: SEM_EQUIVALENTE
+SCORE: 8
+TÍTULO: JESÚS ME AMA
+============================================================
+
+------------------------------------------------------------
+SION-245 | JESÚS ME AMA
+------------------------------------------------------------
+Hinário: Himnos de Sión
+Número: 245
+Equivalente: —
+Alertas: CORO_VAZIO_OU_TRUNCADO
+Fonte declarada: PDF Himnario de Sión enviado por el usuario (136 págs.; escaneado)
+Observação: Letra transcrita y verificada visualmente del PDF de Sión; ortografía segura normalizada.
+
+LETRA:
+Jesús me amó aunque indigno yo fui
+Caminando en sendas de error.
+Llamaba, llamaba, por fin atendí,
+Hoy me lleva en brazos de amor.
+
+CORO:
+Y ahora yo amo a mi Salvador,
+Siento en mí muy profunda su paz,
+Y deseo servir a mi Rey y Señor,
+Hasta el día que veré su faz.
+
+Él ama, y el cielo resuena de loor,
+Por su gracia que tan grande fue.
+Y en gratitud al amor del Señor,
+Yo con gozo por Él viviré.
+
+Te ama amigo errante sin paz,
+Hoy tu alma Él puede librar,
+De dudas y miedo, si a Él tú vas.
+Y a Sí te podrá Él llevar.
+
+============================================================
+CASO 20 / 31
+CATEGORIA: SO_UMA_EDICAO_SINALIZADA
+SCORE: 6
+TÍTULO: PRECIOSO ES JESÚS
+============================================================
+
+------------------------------------------------------------
+GT-069 | PRECIOSO ES JESÚS
+------------------------------------------------------------
+Hinário: Gloria y Triunfo
+Número: 69
+Equivalente: 278
+Alertas: POSSIVEL_ERRO_OCR
+Fonte declarada: Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada
+Observação: DOCX original 1–329
+
+LETRA:
+1
+Jesús es precioso, mi buen Salvador, . Por siempre le alabo por su gran amor, Si débil me encuentro su fuerza me da, Él es mi precioso Jesús.
+CORO:
+Precioso es Jesús, mi Jesús, Precioso es Jesús, mi Jesús;
+Mi gloria será su rostro al mirar, Él es mi precioso Jesús.
+2
+Y cuando en pecado muy tris me vi, Llamando a las puertas de un corazón, Me dijo: «Tu alma yo quiero salvar»; Él es mi precioso Jesús.
+3
+Mas ya por su gracia la luz puedo ver, Quitó mi tristeza, mi llanto enjugó; Por fe yo contemplo un eterno hogar, Es mi precioso Jesús.
+4
+Jesús es precioso, mi fiel Redentor, Me gozo en su luz que en mi senda brilló;
+Yo sé que glorioso por mí viene aquí, Él es mi precioso Jesús.
+
+>>>>>>>>>> EDIÇÃO EQUIVALENTE PARA COMPARAÇÃO <<<<<<<<<<
+
+------------------------------------------------------------
+SION-278 | PRECIOSO ES JESÚS
+------------------------------------------------------------
+Hinário: Himnos de Sión
+Número: 278
+Equivalente: 69
+Alertas: SEM ALERTA
+Fonte declarada: PDF Himnario de Sión enviado por el usuario (136 págs.; escaneado)
+Observação: Letra transcrita y verificada visualmente del PDF de Sión; ortografía segura normalizada.
+
+LETRA:
+1
+Jesús es precioso, mi buen Salvador,
+Por siempre lo alabo por su gran amor;
+Si débil me encuentro su fuerza me da,
+Él es mi precioso Jesús.
+
+CORO:
+Precioso es Jesús, mi Jesús,
+Precioso es Jesús, mi Jesús;
+Mi gloria será su rostro al mirar,
+Él es mi precioso Jesús.
+
+2
+Y cuando en pecado muy triste me vi,
+Llamando a las puertas de mi corazón,
+Me dijo: “Tu alma yo quiero salvar”,
+Él es mi precioso Jesús.
+
+3
+Mas ya por su gracia la luz puedo ver,
+Quitó mi tristeza, mi llanto enjugó;
+Por fe yo contemplo mi eterno hogar,
+Él es mi precioso Jesús.
+
+4
+Jesús es precioso, mi fiel Redentor,
+Me gozo en su luz que en mi senda brilló;
+Yo sé que glorioso por mí viene aquí,
+Él es mi precioso Jesús.

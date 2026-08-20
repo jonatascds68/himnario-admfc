@@ -1,0 +1,113 @@
+============================================
+ 1. INTEGRIDADE
+============================================
+HASH ATUAL:   214d87c16a3a1a18c9bd525c5474dff344fa78857762960084de51771262cbfb
+HASH OFICIAL: 214d87c16a3a1a18c9bd525c5474dff344fa78857762960084de51771262cbfb
+TOTAL: 718
+
+============================================
+ 2. COMPARAÇÃO INDIVIDUAL
+============================================
+
+############################################
+GT-052 | CRISTO LA ROCA
+############################################
+
+TEM BLOCOS: NÃO
+GETSECTIONS USARIA: LETRA
+
+--- SEÇÕES GERADAS DA LETRA ---
+1. ESTROFA 1 | En las olas inmensas de embravecido mar, Que asaltan de mi alma la pobre embarcación, De rodillas a Cristo clamé, y el huracán Deshecho fue al instant
+2. CORO | Es Cristo la Roca, el ancla de mi fe; Los males, lamentos, y ayes de temor, Terminan por siempre, con mi supremo Rey; Es Jesucristo mi refugio.
+3. ESTROFA 2 | Me guarda de peligros, de pruebas, de dolor; Él manda que los vientos no agiten tempestad, Los mares se detienen, la ola reposó, Y en Cristo fijo el a
+4. ESTROFA 3 | Mi dulce Salvador, sí, mi hermoso amigo y Dios, Que libra de tristezas y aleja amarga hiel: Por fe yo iré al cielo, mansión del ser de amor, La fuente
+
+--- BLOCOS SALVOS NA BASE ---
+(nenhum)
+
+--- SEÇÕES EFETIVAMENTE USADAS ---
+1. ESTROFA 1 | En las olas inmensas de embravecido mar, Que asaltan de mi alma la pobre embarcación, De rodillas a Cristo clamé, y el huracán Deshecho fue al instant
+2. CORO | Es Cristo la Roca, el ancla de mi fe; Los males, lamentos, y ayes de temor, Terminan por siempre, con mi supremo Rey; Es Jesucristo mi refugio.
+3. ESTROFA 2 | Me guarda de peligros, de pruebas, de dolor; Él manda que los vientos no agiten tempestad, Los mares se detienen, la ola reposó, Y en Cristo fijo el a
+4. ESTROFA 3 | Mi dulce Salvador, sí, mi hermoso amigo y Dios, Que libra de tristezas y aleja amarga hiel: Por fe yo iré al cielo, mansión del ser de amor, La fuente
+
+--- DIAGNÓSTICO ---
+LETRA TEM CORO: SIM
+BLOCOS TÊM CORO: NÃO
+RESULTADO EFETIVO TEM CORO: SIM
+
+############################################
+GT-100 | A LOS PIES DE JESUCRISTO
+############################################
+
+TEM BLOCOS: NÃO
+GETSECTIONS USARIA: LETRA
+
+--- SEÇÕES GERADAS DA LETRA ---
+1. ESTROFA 1 | A los pies de Jesucristo Es el sitio aquí mejor, Escuchando cual María Las palabras de su amor.
+2. CORO | A los pies de Jesucristo Gozaré su comunión, Pues su mano fiel y tierna Me ha provisto protección.
+3. ESTROFA 2 | A los pies de Jesucristo Hallo tierna compasión; El quitó ya mis afanes, Ya me ha dado bendición. ¡Puedo yo decirle a Cristo Mis cuidados y temor! Y c
+4. ESTROFA 3 | A los pies de Jesucristo Yo tendré su bendición; En sus ojos hay dulzura Y en su seno protección. ¡Qué feliz es el momento Que yo paso junto a ti! Ya 
+
+--- BLOCOS SALVOS NA BASE ---
+(nenhum)
+
+--- SEÇÕES EFETIVAMENTE USADAS ---
+1. ESTROFA 1 | A los pies de Jesucristo Es el sitio aquí mejor, Escuchando cual María Las palabras de su amor.
+2. CORO | A los pies de Jesucristo Gozaré su comunión, Pues su mano fiel y tierna Me ha provisto protección.
+3. ESTROFA 2 | A los pies de Jesucristo Hallo tierna compasión; El quitó ya mis afanes, Ya me ha dado bendición. ¡Puedo yo decirle a Cristo Mis cuidados y temor! Y c
+4. ESTROFA 3 | A los pies de Jesucristo Yo tendré su bendición; En sus ojos hay dulzura Y en su seno protección. ¡Qué feliz es el momento Que yo paso junto a ti! Ya 
+
+--- DIAGNÓSTICO ---
+LETRA TEM CORO: SIM
+BLOCOS TÊM CORO: NÃO
+RESULTADO EFETIVO TEM CORO: SIM
+
+############################################
+GT-188 | BELLAS PALABRAS DE VIDA
+############################################
+
+TEM BLOCOS: NÃO
+GETSECTIONS USARIA: LETRA
+
+--- SEÇÕES GERADAS DA LETRA ---
+1. ESTROFA 1 | ¡Oh, cantádmelas otra vez! Bellas palabras de vida; Hallo en ellas mi gozo y luz, Bellas palabras de vida; Si, de luz y vida; Son sostén y a: || ¡Qué 
+2. ESTROFA 2 | Jesucristo a todos da Bellas palabras de vida; Hoy escúchalas, pecador, Bellas palabras de vida; Bondadoso te salva, Y al cielo te llama: || ¡Qué bell
+3. ESTROFA 3 | Grato el cántico sonará, Bellas palabras de vida; Tus pecados perdonará, Bellas palabras de vida; Si, de luz y vida, Son sostén y guía: || ¡Qué bellas
+
+--- BLOCOS SALVOS NA BASE ---
+(nenhum)
+
+--- SEÇÕES EFETIVAMENTE USADAS ---
+1. ESTROFA 1 | ¡Oh, cantádmelas otra vez! Bellas palabras de vida; Hallo en ellas mi gozo y luz, Bellas palabras de vida; Si, de luz y vida; Son sostén y a: || ¡Qué 
+2. ESTROFA 2 | Jesucristo a todos da Bellas palabras de vida; Hoy escúchalas, pecador, Bellas palabras de vida; Bondadoso te salva, Y al cielo te llama: || ¡Qué bell
+3. ESTROFA 3 | Grato el cántico sonará, Bellas palabras de vida; Tus pecados perdonará, Bellas palabras de vida; Si, de luz y vida, Son sostén y guía: || ¡Qué bellas
+
+--- DIAGNÓSTICO ---
+LETRA TEM CORO: NÃO
+BLOCOS TÊM CORO: NÃO
+RESULTADO EFETIVO TEM CORO: NÃO
+
+============================================
+ 3. AUDITORIA GLOBAL DE BLOCOS
+============================================
+HINOS COM BLOCOS: 0
+HINOS SEM BLOCOS: 718
+DIVERGÊNCIA LETRA/BLOCOS SOBRE CORO: 0
+
+============================================
+ 4. VERIFICAÇÃO DO CÓDIGO ATUAL
+============================================
+GETSECTIONS PRIORIZA BLOCOS: SIM
+
+============================================
+ 5. CONTROLE DE IMUTABILIDADE
+============================================
+HASH ANTES:  214d87c16a3a1a18c9bd525c5474dff344fa78857762960084de51771262cbfb
+HASH DEPOIS: 214d87c16a3a1a18c9bd525c5474dff344fa78857762960084de51771262cbfb
+BASE ALTERADA: NÃO
+
+============================================
+ ETAPA 11C CONCLUÍDA
+ SOMENTE DIAGNÓSTICO
+============================================

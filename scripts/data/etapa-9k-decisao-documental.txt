@@ -1,0 +1,51 @@
+TOTAL DE GRUPOS DOCUMENTAIS: 5
+TOTAL DE REGISTROS ENVOLVIDOS: 7
+
+TODOS OS IDS LOCALIZADOS NA BASE: SIM
+
+============================================
+ DECISÕES
+============================================
+
+GT-052 + SION-024 | CRISTO LA ROCA
+STATUS: CORRECAO_DOCUMENTAL_CONFIRMADA
+ATUAL:      confiando mis.
+CONFIRMADO: confiando más.
+APLICAR AGORA: NÃO
+
+GT-040 | EN LOS NEGOCIOS DEL REY
+STATUS: BLOQUEADO_FONTE
+PENDÊNCIA: Pontuação/OCR em "oid, ."
+APLICAR AGORA: NÃO
+
+GT-056 + SION-026 | ¡OH, YO QUIERO ANDAR CON CRISTO!
+STATUS: BLOQUEADO_FONTE
+PENDÊNCIA: Possível OCR "serIe"; provável "serle", ainda sem confirmação documental suficiente.
+APLICAR AGORA: NÃO
+
+GT-161 | PECADOR, VEN AL DULCE JESÚS
+STATUS: BLOQUEADO_FONTE
+PENDÊNCIA: Pontuação/espaçamento em "serás . De".
+APLICAR AGORA: NÃO
+
+GT-283 | EN LA MAÑANA
+STATUS: BLOQUEADO_FONTE
+PENDÊNCIA: Possível OCR "tierra mis Allí".
+PENDÊNCIA: Acentuação/editorial de "rio".
+APLICAR AGORA: NÃO
+
+============================================
+ RESUMO
+============================================
+GRUPOS COM CORREÇÃO CONFIRMADA: 1
+REGISTROS COM CORREÇÃO CONFIRMADA: 2
+GRUPOS AINDA BLOQUEADOS: 4
+ARQUIVO: scripts/data/etapa-9k-decisao-documental.json
+
+HASH ANTES:  9a8636c6a249a783a091f4dfd7fb8f36910019cb235d865486e316609365f17d
+HASH DEPOIS: 9a8636c6a249a783a091f4dfd7fb8f36910019cb235d865486e316609365f17d
+BASE MESTRE ALTERADA: NÃO
+
+============================================
+ ETAPA 9K CONCLUÍDA COM SUCESSO
+============================================

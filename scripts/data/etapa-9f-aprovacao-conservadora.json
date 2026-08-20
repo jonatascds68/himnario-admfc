@@ -1,0 +1,152 @@
+{
+  "etapa": "9F",
+  "base_alterada": false,
+  "criterio": "conservador",
+  "total": 20,
+  "resumo": {
+    "APROVADO_ESTRUTURAL": 16,
+    "BLOQUEADO_FONTE": 4
+  },
+  "registros": [
+    {
+      "id": "GT-040",
+      "titulo": "EN LOS NEGOCIOS DEL REY",
+      "decisao": "APROVADO_ESTRUTURAL",
+      "motivo": "Alteração estrutural candidata aprovada para futura aplicação controlada.",
+      "descricao_patch": "Inserir marcador CORO após a primeira estrofe."
+    },
+    {
+      "id": "GT-052",
+      "titulo": "CRISTO LA ROCA",
+      "decisao": "APROVADO_ESTRUTURAL",
+      "motivo": "Alteração estrutural candidata aprovada para futura aplicação controlada.",
+      "descricao_patch": "Separar coro da estrofe 1; correção textual permanece bloqueada."
+    },
+    {
+      "id": "SION-024",
+      "titulo": "CRISTO LA ROCA",
+      "decisao": "APROVADO_ESTRUTURAL",
+      "motivo": "Alteração estrutural candidata aprovada para futura aplicação controlada.",
+      "descricao_patch": "Separar coro da estrofe 1; correção textual permanece bloqueada."
+    },
+    {
+      "id": "GT-100",
+      "titulo": "A LOS PIES DE JESUCRISTO",
+      "decisao": "BLOQUEADO_FONTE",
+      "motivo": "Estrutura deve ser confirmada diretamente na edição-fonte antes de qualquer alteração.",
+      "descricao_patch": "Remover falso marcador CORO; preservar o texto como continuação da estrofe 1."
+    },
+    {
+      "id": "SION-059",
+      "titulo": "A LOS PIES DE JESUCRISTO",
+      "decisao": "BLOQUEADO_FONTE",
+      "motivo": "Estrutura deve ser confirmada diretamente na edição-fonte antes de qualquer alteração.",
+      "descricao_patch": "Remover falso marcador CORO; preservar o texto como continuação da estrofe 1."
+    },
+    {
+      "id": "GT-161",
+      "titulo": "PECADOR, VEN AL DULCE JESÚS",
+      "decisao": "APROVADO_ESTRUTURAL",
+      "motivo": "Alteração estrutural candidata aprovada para futura aplicação controlada.",
+      "descricao_patch": "Separar estrofe 4 da estrofe 3."
+    },
+    {
+      "id": "GT-186",
+      "titulo": "PRESENTIMOS DEL MUNDO DICHOSO",
+      "decisao": "APROVADO_ESTRUTURAL",
+      "motivo": "Alteração estrutural candidata aprovada para futura aplicação controlada.",
+      "descricao_patch": "Separar estrofe 4 da estrofe 3."
+    },
+    {
+      "id": "GT-259",
+      "titulo": "GUARDA EL CONTACTO",
+      "decisao": "APROVADO_ESTRUTURAL",
+      "motivo": "Alteração estrutural candidata aprovada para futura aplicação controlada.",
+      "descricao_patch": "Separar estrofe 4 da estrofe 3."
+    },
+    {
+      "id": "SION-107",
+      "titulo": "GUARDA EL CONTACTO",
+      "decisao": "APROVADO_ESTRUTURAL",
+      "motivo": "Alteração estrutural candidata aprovada para futura aplicação controlada.",
+      "descricao_patch": "Separar estrofe 4 da estrofe 3."
+    },
+    {
+      "id": "GT-283",
+      "titulo": "EN LA MAÑANA",
+      "decisao": "APROVADO_ESTRUTURAL",
+      "motivo": "Alteração estrutural candidata aprovada para futura aplicação controlada.",
+      "descricao_patch": "Separar coro da estrofe 1; possível OCR permanece bloqueado."
+    },
+    {
+      "id": "GT-056",
+      "titulo": "¡OH, YO QUIERO ANDAR CON CRISTO!",
+      "decisao": "APROVADO_ESTRUTURAL",
+      "motivo": "Alteração estrutural candidata aprovada para futura aplicação controlada.",
+      "descricao_patch": "Adicionar número 1 à primeira estrofe; possível OCR serIe permanece bloqueado."
+    },
+    {
+      "id": "SION-026",
+      "titulo": "¡OH! YO QUIERO ANDAR CON CRISTO",
+      "decisao": "APROVADO_ESTRUTURAL",
+      "motivo": "Alteração estrutural candidata aprovada para futura aplicação controlada.",
+      "descricao_patch": "Adicionar número 1 à primeira estrofe; possível OCR serIe permanece bloqueado."
+    },
+    {
+      "id": "GT-081",
+      "titulo": "LA BANDERA DE LA CRUZ",
+      "decisao": "APROVADO_ESTRUTURAL",
+      "motivo": "Alteração estrutural candidata aprovada para futura aplicação controlada.",
+      "descricao_patch": "Adicionar número 1 à primeira estrofe."
+    },
+    {
+      "id": "SION-038",
+      "titulo": "LA BANDERA DE LA CRUZ",
+      "decisao": "APROVADO_ESTRUTURAL",
+      "motivo": "Alteração estrutural candidata aprovada para futura aplicação controlada.",
+      "descricao_patch": "Adicionar número 1 à primeira estrofe."
+    },
+    {
+      "id": "GT-028",
+      "titulo": "MÁS DE JESÚS",
+      "decisao": "APROVADO_ESTRUTURAL",
+      "motivo": "Alteração estrutural candidata aprovada para futura aplicação controlada.",
+      "descricao_patch": "Separar estrofe 4 da estrofe 3."
+    },
+    {
+      "id": "SION-015",
+      "titulo": "MÁS DE JESÚS",
+      "decisao": "APROVADO_ESTRUTURAL",
+      "motivo": "Alteração estrutural candidata aprovada para futura aplicação controlada.",
+      "descricao_patch": "Separar estrofe 4 da estrofe 3."
+    },
+    {
+      "id": "GT-033",
+      "titulo": "GRANDE GOZO HAY EN MI ALMA HOY",
+      "decisao": "APROVADO_ESTRUTURAL",
+      "motivo": "Alteração estrutural candidata aprovada para futura aplicação controlada.",
+      "descricao_patch": "Separar estrofe 4 da estrofe 3."
+    },
+    {
+      "id": "SION-016",
+      "titulo": "GRANDE GOZO HAY EN MI ALMA",
+      "decisao": "APROVADO_ESTRUTURAL",
+      "motivo": "Alteração estrutural candidata aprovada para futura aplicação controlada.",
+      "descricao_patch": "Separar estrofe 4 da estrofe 3."
+    },
+    {
+      "id": "GT-036",
+      "titulo": "ENTERA CONSAGRACIÓN",
+      "decisao": "BLOQUEADO_FONTE",
+      "motivo": "Estrutura deve ser confirmada diretamente na edição-fonte antes de qualquer alteração.",
+      "descricao_patch": "Separar estrofe 5 da estrofe 4."
+    },
+    {
+      "id": "SION-019",
+      "titulo": "ENTERA CONSAGRACIÓN",
+      "decisao": "BLOQUEADO_FONTE",
+      "motivo": "Estrutura deve ser confirmada diretamente na edição-fonte antes de qualquer alteração.",
+      "descricao_patch": "Separar estrofe 5 da estrofe 4."
+    }
+  ]
+}

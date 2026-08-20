@@ -1,0 +1,251 @@
+AUDITORIA HINÁRIA ADMFC
+DOSSIÊ DOS NOVOS CASOS
+Data: 2026-08-19
+Base alterada: NÃO
+
+============================================================
+CASO 06 / 31
+CATEGORIA: SEM_EQUIVALENTE
+SCORE: 16
+TÍTULO: HAY UN PRECIOSO MANANTIAL
+============================================================
+
+------------------------------------------------------------
+GT-042 | HAY UN PRECIOSO MANANTIAL
+------------------------------------------------------------
+Hinário: Gloria y Triunfo
+Número: 42
+Equivalente: —
+Alertas: TEXTO_ANTES_DA_ESTROFE_1, CORO_VAZIO_OU_TRUNCADO, NUMERACAO_ESTROFES_IRREGULAR
+Fonte declarada: Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada
+Observação: DOCX original 1–329
+
+LETRA:
+Hay un precioso manantial De sangre de Emmanuel, Que purifica a cada cual Que se sumerge en él.
+CORO:
+Lávame, Señor Jesús, En la sangre de tu cruz: Lávame, Señor Jesús,
+Y más blanco que la nieve yo seré:
+2
+El malhechor se convirtió Pendiente de una cruz; El vio la fuente y se lavó, Creyendo en Jesús.
+3
+Y yo también mi pobre ser Allí logré lavar:
+La gloria de su gran poder Me gozo en ensalzar.
+4
+¡Eterna fuente carmesí!
+¡Raudal de puro amor! Se lavará por siempre en ti
+El pueblo del Señor.
+HAY UN PRECIOSO MANANTIAL
+1
+Hay un precioso manantial De sangre de Emmanuel, Que purifica a cada cual Que se sumerge en él.
+2
+El malhechor se convirtió Pendiente de una cruz; El vio la fuente y se lavó, Creyendo en Jesús.
+3
+Y yo también mi pobre ser Allí logré lavar;
+La gloria de su gran poder, Me gozo en ensalzar.
+4
+¡Eterna fuente carmesí!
+¡Raudal de puro amor!
+Se lavará por siempre en ti, El pueblo del Señor.
+
+============================================================
+CASO 07 / 31
+CATEGORIA: SEM_EQUIVALENTE
+SCORE: 15
+TÍTULO: CON CRISTO YO IRÉ
+============================================================
+
+------------------------------------------------------------
+GT-062 | CON CRISTO YO IRÉ
+------------------------------------------------------------
+Hinário: Gloria y Triunfo
+Número: 62
+Equivalente: —
+Alertas: POSSIVEL_ERRO_OCR, PRIMEIRA_ESTROFE_MUITO_CURTA, POSSIVEL_FALSO_CORO
+Fonte declarada: Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada
+Observação: DOCX original 1–329
+
+LETRA:
+1
+Ya sea en el valle do el peligro esté
+O que en la luz gloriosa de paz habite yo A mi Jesús diré: «Tu voluntad h;
+Si Cristo me gula doquiera yo iré.
+CORO:
+Si Cristo conmigo va, yo iré: Yo no temeré, con gozo iré,
+Conmigo va; es grato servir a Jesús, Llevar la cruz:
+Si Cristo conmigo va, yo iré.
+2
+Si al desierto quiere Jesús que vaya yo, Llevando buenas nuevas de santa salvación; Si Allí, en dura lid, mi campo señaló,
+A Cristo yo sigo sin más dilación.
+3
+Aunque mi parte sea mi dura cruz llevar, Diré a mis hermanos también su gran poder; Contento quedaré, mi luz haré brillar,
+¡Testigo de Cristo, doquiera yo iré! .
+La voluntad de Cristo yo quiero obedecer, Pues en la Santa Biblia encuentro mi saber Y con su gran poder al mundo venceré,
+Si él va conmigo, doquiera yo iré.
+
+============================================================
+CASO 08 / 31
+CATEGORIA: PAR_EQUIVALENTE_SINALIZADO
+SCORE: 12
+TÍTULO: ENTERA CONSAGRACIÓN
+============================================================
+
+------------------------------------------------------------
+GT-036 | ENTERA CONSAGRACIÓN
+------------------------------------------------------------
+Hinário: Gloria y Triunfo
+Número: 36
+Equivalente: 19
+Alertas: POSSIVEL_ESTROFE_FUNDIDA_4
+Fonte declarada: Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada
+Observação: DOCX original 1–329
+
+LETRA:
+1
+Que mi vida entera esté Consagrada a ti, Señor;
+Que a mis manos pueda guiar El impulso de tu amor.
+CORO:
+Lávame en tu sangre, Salvador, Límpiame de toda mi maldad; Traigo a ti mi vida, para ser, Señor,
+¡Tuya por la eternidad!
+2
+Que mis pies tan solo en pos De lo santo puedan ir,
+Y que a ti, Señor, mi voz Se complazca en bendecir.
+3
+Que mi tiempo todo esté Consagrado a tu loor, Que mis labios al hablar Hablen solo de tu amor.
+4
+Toma, ¡oh Dios!, mi voluntad, Y hazla tuya, nada más; Toma, sí, mi corazón
+Por tu trono lo tendrás.
+Toma tú mi amor, que hoy A tus pies vengo a poner;
+¡Toma todo lo que soy, Todo tuyo quiero ser!
+
+>>>>>>>>>> EDIÇÃO EQUIVALENTE PARA COMPARAÇÃO <<<<<<<<<<
+
+------------------------------------------------------------
+SION-019 | ENTERA CONSAGRACIÓN
+------------------------------------------------------------
+Hinário: Himnos de Sión
+Número: 19
+Equivalente: 36
+Alertas: POSSIVEL_ESTROFE_FUNDIDA_4
+Fonte declarada: PDF Himnario de Sión enviado por el usuario (136 págs.; escaneado)
+Observação: Letra cotejada con el PDF de Sión y la versión correspondiente de Gloria y Triunfo; correcciones ortográficas seguras normalizadas.
+
+LETRA:
+1
+Que mi vida entera esté Consagrada a ti, Señor;
+Que a mis manos pueda guiar El impulso de tu amor.
+CORO:
+Lávame en tu sangre, Salvador, Límpiame de toda mi maldad; Traigo a ti mi vida, para ser, Señor,
+¡Tuya por la eternidad!
+2
+Que mis pies tan solo en pos De lo santo puedan ir,
+Y que a ti, Señor, mi voz Se complazca en bendecir.
+3
+Que mi tiempo todo esté Consagrado a tu loor, Que mis labios al hablar Hablen solo de tu amor.
+4
+Toma, ¡oh Dios!, mi voluntad, Y hazla tuya, nada más; Toma, sí, mi corazón
+Por tu trono lo tendrás.
+Toma tú mi amor, que hoy A tus pies vengo a poner;
+¡Toma todo lo que soy, Todo tuyo quiero ser!
+
+============================================================
+CASO 09 / 31
+CATEGORIA: PAR_EQUIVALENTE_SINALIZADO
+SCORE: 12
+TÍTULO: EN LA CRUZ
+============================================================
+
+------------------------------------------------------------
+GT-053 | EN LA CRUZ
+------------------------------------------------------------
+Hinário: Gloria y Triunfo
+Número: 53
+Equivalente: 25
+Alertas: POSSIVEL_ESTROFE_FUNDIDA_4
+Fonte declarada: Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada
+Observação: DOCX original 1–329
+
+LETRA:
+1
+Me hirió el pecado, fui a Jesús, Mostréle mi dolor;
+Perdido, errante, vi su luz, Bendíjome en su amor.
+CORO:
+En la cruz, en la cruz, Do primero vi la luz,
+Y las manchas de mi alma yo lavé: Fue Allí por fe do vi a Jesús,
+Y siempre feliz con él seré.
+2
+Sobre una cruz, mi buen Señor, Su sangre derramó,
+Por este pobre pecador A quien así salvó.
+3
+Venció la muerte con poder, Y al cielo se exaltó;
+Confiar en él es mi placer, Morir no temo yo.
+4
+Aunque él se fue solo no estoy: Mandó al Consolador, Divino Espíritu, que hoy Me da perfecto amor.
+¿Vivirás por Cristo, fiel a él al fin serás?
+¿En la vía de paz, en pos de él andarás?
+¿De la cruz al pie tus cuitas todas dejaré?
+
+>>>>>>>>>> EDIÇÃO EQUIVALENTE PARA COMPARAÇÃO <<<<<<<<<<
+
+------------------------------------------------------------
+SION-025 | EN LA CRUZ
+------------------------------------------------------------
+Hinário: Himnos de Sión
+Número: 25
+Equivalente: 53
+Alertas: POSSIVEL_ESTROFE_FUNDIDA_4
+Fonte declarada: PDF Himnario de Sión enviado por el usuario (136 págs.; escaneado)
+Observação: Letra incorporada desde la equivalencia confirmada con Gloria y Triunfo; pendiente sólo de diferencias editoriales propias de Sión, si las hubiera.
+
+LETRA:
+1
+Me hirió el pecado, fui a Jesús, Mostréle mi dolor;
+Perdido, errante, vi su luz, Bendíjome en su amor.
+CORO:
+En la cruz, en la cruz, Do primero vi la luz,
+Y las manchas de mi alma yo lavé: Fue Allí por fe do vi a Jesús,
+Y siempre feliz con él seré.
+2
+Sobre una cruz, mi buen Señor, Su sangre derramó,
+Por este pobre pecador A quien así salvó.
+3
+Venció la muerte con poder, Y al cielo se exaltó;
+Confiar en él es mi placer, Morir no temo yo.
+4
+Aunque él se fue solo no estoy: Mandó al Consolador, Divino Espíritu, que hoy Me da perfecto amor.
+¿Vivirás por Cristo, fiel a él al fin serás?
+¿En la vía de paz, en pos de él andarás?
+¿De la cruz al pie tus cuitas todas dejaré?
+
+============================================================
+CASO 10 / 31
+CATEGORIA: SEM_EQUIVALENTE
+SCORE: 12
+TÍTULO: EL MUNDO PERDIDO
+============================================================
+
+------------------------------------------------------------
+GT-055 | EL MUNDO PERDIDO
+------------------------------------------------------------
+Hinário: Gloria y Triunfo
+Número: 55
+Equivalente: —
+Alertas: TEXTO_ANTES_DA_ESTROFE_1, CORO_VAZIO_OU_TRUNCADO
+Fonte declarada: Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada
+Observação: DOCX original 1–329
+
+LETRA:
+El mundo perdido en pecado se vio:
+¡Jesús, es la luz del mundo!
+Mas en las tinieblas la gloria brilló,
+¡Jesús es la luz del mundo!
+CORO:
+¡Ven a la luz, no quieras perder Gozo perfecto al amanecer!
+Yo ciego fui, mas ya puedo ver,
+¡Jesús es la luz del mundo!
+2
+En día la noche se cambia con él, etc. Irás en la luz si a su ley eres fiel, etc.
+3
+¡Oh, ciegos y presos del lóbrego error!, etc.
+Él manda lavaros y ver su fulgor, etc.,
+4
+Ni soles ni lunas el cielo tendrá, etc. La luz de su rostro lo iluminará, etc.

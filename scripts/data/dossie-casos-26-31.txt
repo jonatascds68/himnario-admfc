@@ -1,0 +1,214 @@
+AUDITORIA HINÁRIA ADMFC
+DOSSIÊ DOS NOVOS CASOS
+Data: 2026-08-19
+Base alterada: NÃO
+
+============================================================
+CASO 26 / 31
+CATEGORIA: SEM_EQUIVALENTE
+SCORE: 5
+TÍTULO: MI CULPA EL LLEVO
+============================================================
+
+------------------------------------------------------------
+GT-104 | MI CULPA EL LLEVO
+------------------------------------------------------------
+Hinário: Gloria y Triunfo
+Número: 104
+Equivalente: —
+Alertas: PRIMEIRA_ESTROFE_MUITO_LONGA
+Fonte declarada: Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada
+Observação: DOCX original 1–329
+
+LETRA:
+1
+Cansado y triste vine al Salvador, Mi culpa él llevó, mi culpa él llevó; Mi eterna dicha hallé en su amor, Mi culpa él llevó.
+CORO:
+Mi culpa él llevó, mi culpa él llevó,
+¡Alegre siempre cantaré! Al Señor gozoso alabaré, Porque él me salvó.
+2
+Borrados todos mis pecados son, etc.
+A él feliz elevo mi canción, etc.
+3
+Ya vivo libre de condenación, etc.
+Su dulce paz tengo en mi corazón, etc.
+4
+Si vienes hoy a Cristo, pecador, Tu culpa llevará, tu culpa llevará. Perdón tendrá si acudes al Señor, Tu culpa llevará,
+CORO:
+Tu culpa llevará, tu culpa llevará, Y limpiará tu corazón,
+Y dirás feliz en tu canción: Mi culpa él llevó.
+
+============================================================
+CASO 27 / 31
+CATEGORIA: SEM_EQUIVALENTE
+SCORE: 5
+TÍTULO: SOLO DE JESÚS LA SANGRE
+============================================================
+
+------------------------------------------------------------
+GT-151 | SOLO DE JESÚS LA SANGRE
+------------------------------------------------------------
+Hinário: Gloria y Triunfo
+Número: 151
+Equivalente: —
+Alertas: PRIMEIRA_ESTROFE_MUITO_LONGA
+Fonte declarada: Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada
+Observação: DOCX original 1–329
+
+LETRA:
+1
+¿Qué me puede dar perdón?
+¡Sólo de Jesús la sangre!
+¿Y un nuevo corazón?
+¡Sólo de Jesús la sangre!
+CORO:
+Precioso es el raudal Que limpia todo mal; No hay otro manantial,
+¡Sólo de Jesús la sangre!
+2
+Fue el rescate eficaz, etc. Trajo santidad y paz, etc.
+3
+Veo para mi salud, etc. Tiene de sanar virtud, etc.
+4
+Cantaré junto a sus pies, etc. El Cordero digno es, etc.
+
+============================================================
+CASO 28 / 31
+CATEGORIA: SEM_EQUIVALENTE
+SCORE: 5
+TÍTULO: VOY A VER A CRISTO EL REY
+============================================================
+
+------------------------------------------------------------
+GT-276 | VOY A VER A CRISTO EL REY
+------------------------------------------------------------
+Hinário: Gloria y Triunfo
+Número: 276
+Equivalente: —
+Alertas: PRIMEIRA_ESTROFE_MUITO_LONGA
+Fonte declarada: Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada
+Observação: DOCX original 1–329
+
+LETRA:
+1
+Aunque peregrino y pobre soy aquí, Voy a ver a Cristo el Rey;
+Cuando en las nubes venga él por mí, Voy a ver a Cristo el Rey.
+CORO:
+Voy a ver a Cristo el Rey Y sus glorias cantaré;
+Cuando al cielo allá a los suyos llamará, Voy a ver a Cristo el Rey.
+2
+Tras angustia y pena y tras cruel dolor, Voy a ver a Cristo el Rey.
+Perdurable gozo me dará el Señor, Voy, etc.
+3
+Tras las duras luchas que aquí tendré, etc. Cuando mi carrera acabado habré, etc.
+4
+Con los redimidos que se fueron ya, etc. Lágrimas y llanto nunca más habrá, etc.
+
+============================================================
+CASO 29 / 31
+CATEGORIA: SEM_EQUIVALENTE
+SCORE: 4
+TÍTULO: DE LA
+============================================================
+
+------------------------------------------------------------
+GT-303 | DE LA
+------------------------------------------------------------
+Hinário: Gloria y Triunfo
+Número: 303
+Equivalente: —
+Alertas: TEXTO_ANTES_DA_ESTROFE_1
+Fonte declarada: Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada
+Observação: DOCX original 1–329
+
+LETRA:
+De la Iglesia el fundamento Es Jesús el Salvador;
+Por el agua y la palabra Le dio vida su Señor:
+Para hacerla esposa quiso De los cielos descender, Y su sangre por limpiarla En la horrible cruz verter.
+2
+De entre todas las naciones Escogida en variedad,
+A través de las edades Se presenta en unidad; Y los títulos que ostenta
+Son: tener sólo un Señor, Una fe y un nacimiento, Un constante y puro amor.
+3
+Sólo un nombre ella bendice, Participa de un manjar,
+La consuela una esperanza Y en la cruz tiene su altar; Por el celo que la anima De las almas corre en pos Y ambiciona por la gracia Conducirlas hasta Dios.
+4
+Aunque el mundo, combatida Del error por el vaivén
+Y de cismas desgarrada, La contemple con desdén; En vigilia están los santos Y jamás cesan de orar:
+Lo que es hoy tristeza, pronto Será júbilo y cantar.
+5
+A través de sufrimientos Y fatigas y dolor,
+El glorioso día espera En que vuelva su Señor.
+Consumada y plena entonces Su carrera y su salud,
+Entrará libre y triunfante En la eterna beatitud.
+
+============================================================
+CASO 30 / 31
+CATEGORIA: SEM_EQUIVALENTE
+SCORE: 4
+TÍTULO: JERUSALÉN CELESTE
+============================================================
+
+------------------------------------------------------------
+GT-304 | JERUSALÉN CELESTE
+------------------------------------------------------------
+Hinário: Gloria y Triunfo
+Número: 304
+Equivalente: —
+Alertas: TEXTO_ANTES_DA_ESTROFE_1
+Fonte declarada: Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada
+Observação: DOCX original 1–329
+
+LETRA:
+Jerusalén celeste, Visión de paz dichosa,
+De Cristo santa esposa, Radiante de esplendor, Tu fábrica es divina, Son vivos tus sillares,
+Y de ángeles millares, Te ciñen en redor.
+2
+Ciudad del Rey eterno, De perlas son tus puertas, Continuamente abiertas Al mísero mortal;
+Y en tu recinto moran Los que por fe se elevan, Y el sello augusto llevan Del Verbo celestial.
+3
+Felices moradores, En ti perenne canto, Profieren al Dios santos, Que de ellos se apiadó; Y honor y gloria entonan Al ínclito Cordero
+Que, amante en el madero, Por ellos se inmoló.
+4
+Al mismo Cristo amamos y al mismo Dios servimos Los que por fe vivimos, Ansiando a ti volar:
+Y pronto gozaremos, Pasando tus umbrales, Las dichas eternales Del suspirado hogar.
+
+============================================================
+CASO 31 / 31
+CATEGORIA: SEM_EQUIVALENTE
+SCORE: 4
+TÍTULO: SI FUI MOTIVO DE DOLOR, SEÑOR
+============================================================
+
+------------------------------------------------------------
+SION-244 | SI FUI MOTIVO DE DOLOR, SEÑOR
+------------------------------------------------------------
+Hinário: Himnos de Sión
+Número: 244
+Equivalente: —
+Alertas: PRIMEIRA_ESTROFE_MUITO_CURTA
+Fonte declarada: PDF Himnario de Sión enviado por el usuario (136 págs.; escaneado)
+Observação: Letra transcrita y verificada visualmente del PDF de Sión; ortografía segura normalizada.
+
+LETRA:
+1
+Si fui motivo de dolor, Señor;
+Si por mi causa el débil tropezó;
+Si en tus caminos yo no quise andar,
+Perdón, Señor.
+
+2
+Si vana y fútil mi palabra fue;
+Si al que sufría en su dolor dejé,
+No me condenes, Dios, por mi maldad;
+¡Perdón, Señor!
+
+3
+Si por la vida quise andar en paz,
+Tranquilo, libre y sin luchar por Ti,
+Cuando anhelabas verme en la lid,
+Perdón, Señor.
+
+Escucha, ¡oh, Dios!, mi pobre confesión,
+Y líbrame de tentación sutil.
+Preserva siempre mi alma en tu redil,
+Amén, Amén.

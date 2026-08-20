@@ -1,0 +1,189 @@
+{
+  "etapa": "10J",
+  "descricao": "Investigação interna dos quatro casos bloqueados antes do cotejo documental/visual.",
+  "hashOficial": "48cd4be20055aa9243a0a2223aef36376186dfd202f72ca4a4666015c44445a5",
+  "hashAntes": "48cd4be20055aa9243a0a2223aef36376186dfd202f72ca4a4666015c44445a5",
+  "totalObjetosInspecionados": 744,
+  "totalRegistrosDetectados": 718,
+  "investigations": [
+    {
+      "key": "GT-283",
+      "type": "COTEJO_VISUAL",
+      "term": "tierra mis Allí",
+      "question": "Determinar a leitura correta do verso suspeito sem reconstrução por inferência.",
+      "found": true,
+      "title": "EN LA MAÑANA",
+      "number": 283,
+      "edition": "GT",
+      "path": "$.himnos[282]",
+      "structuralNumbers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "excerpt": "1\nEn el mundo la Iglesia Peregrina ha de estar; Anhelante ella espera Su feliz, eterno hogar.\nCORO:\nNos veremos, nos veremos Pronto en gloria, pronto en gloria, Nos veremos en la tierra mis Allí; Nos veremos, nos veremos Pronto en gloria, pronto en gloria, Junto al rio cristalino más Allá.\n2\nNada aquí es permanente, Todo ha de terminar; Mas miramos adelante, En el cielo n",
+      "fullText": "1\nEn el mundo la Iglesia Peregrina ha de estar; Anhelante ella espera Su feliz, eterno hogar.\nCORO:\nNos veremos, nos veremos Pronto en gloria, pronto en gloria, Nos veremos en la tierra mis Allí; Nos veremos, nos veremos Pronto en gloria, pronto en gloria, Junto al rio cristalino más Allá.\n2\nNada aquí es permanente, Todo ha de terminar; Mas miramos adelante, En el cielo nuestro hogar.\n3\nLas familias en la tierra Se desunen al morir; Mas esperan la mañana En que se han de reunir.\n4\nCon Jesús cual unos reyes Pronto habremos de estar; Juntos, miles de millares, Con Jesús para morar.",
+      "possiblePairs": []
+    },
+    {
+      "key": "GT-042",
+      "type": "ESTRUTURA_NUMERACAO",
+      "term": "",
+      "question": "Determinar se há duplicação/justaposição de conteúdo e qual é a estrutura correta das estrofes.",
+      "found": true,
+      "title": "HAY UN PRECIOSO MANANTIAL",
+      "number": 42,
+      "edition": "GT",
+      "path": "$.himnos[41]",
+      "structuralNumbers": [
+        2,
+        3,
+        4,
+        1,
+        2,
+        3,
+        4
+      ],
+      "excerpt": "Hay un precioso manantial De sangre de Emmanuel, Que purifica a cada cual Que se sumerge en él.\nCORO:\nLávame, Señor Jesús, En la sangre de tu cruz: Lávame, Señor Jesús,\nY más blanco que la nieve yo seré:\n2\nEl malhechor se convirtió Pendiente de una cruz; El vio la fuente y se lavó, Creyendo en Jesús.\n3\nY yo también mi pobre ser Allí logré lavar:\nLa gloria de su gran poder Me gozo en ensalzar.\n4\n¡Eterna fuente carmesí!\n¡Raudal de puro amor! Se lavará por siempre en ti\nEl pueblo del Señor.\nHAY UN ",
+      "fullText": "Hay un precioso manantial De sangre de Emmanuel, Que purifica a cada cual Que se sumerge en él.\nCORO:\nLávame, Señor Jesús, En la sangre de tu cruz: Lávame, Señor Jesús,\nY más blanco que la nieve yo seré:\n2\nEl malhechor se convirtió Pendiente de una cruz; El vio la fuente y se lavó, Creyendo en Jesús.\n3\nY yo también mi pobre ser Allí logré lavar:\nLa gloria de su gran poder Me gozo en ensalzar.\n4\n¡Eterna fuente carmesí!\n¡Raudal de puro amor! Se lavará por siempre en ti\nEl pueblo del Señor.\nHAY UN PRECIOSO MANANTIAL\n1\nHay un precioso manantial De sangre de Emmanuel, Que purifica a cada cual Que se sumerge en él.\n2\nEl malhechor se convirtió Pendiente de una cruz; El vio la fuente y se lavó, Creyendo en Jesús.\n3\nY yo también mi pobre ser Allí logré lavar;\nLa gloria de su gran poder, Me gozo en ensalzar.\n4\n¡Eterna fuente carmesí!\n¡Raudal de puro amor!\nSe lavará por siempre en ti, El pueblo del Señor.",
+      "possiblePairs": []
+    },
+    {
+      "key": "GT-182",
+      "type": "SALTO_NUMERICO",
+      "term": "",
+      "question": "Confirmar se a edição realmente salta da estrofe 1 para a 3 ou se existe estrofe 2 perdida.",
+      "found": true,
+      "title": "¡GLORIA A TI, JESÚS DIVINO",
+      "number": 182,
+      "edition": "GT",
+      "path": "$.himnos[181]",
+      "structuralNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "excerpt": "1\n¡Gloria a ti, Jesús Divino!\n¡Gloria a ti por tus bondades!\n¡Gloria eterna a tus piedades!\nQuerido Salvador.\nCORO:\n¡Gloria, gloria, aleluya!\n¡Gloria, gloria, aleluya!\n¡Gloria, gloria, aleluya! A nuestro Salvador.\n2.\nTú me amaste con ternura, Y por mí en la cruz moriste, Con ternura me quisiste, Querido Salvador.\n3\nTengo fe sólo en tu muerte, Pues con ella me salvaste; Vida eterna me compraste, Querido Salvador.\n4\nTe veremos en el cielo: A vivir contigo iremos; Tu presencia gozaremos, Querido Sa",
+      "fullText": "1\n¡Gloria a ti, Jesús Divino!\n¡Gloria a ti por tus bondades!\n¡Gloria eterna a tus piedades!\nQuerido Salvador.\nCORO:\n¡Gloria, gloria, aleluya!\n¡Gloria, gloria, aleluya!\n¡Gloria, gloria, aleluya! A nuestro Salvador.\n2.\nTú me amaste con ternura, Y por mí en la cruz moriste, Con ternura me quisiste, Querido Salvador.\n3\nTengo fe sólo en tu muerte, Pues con ella me salvaste; Vida eterna me compraste, Querido Salvador.\n4\nTe veremos en el cielo: A vivir contigo iremos; Tu presencia gozaremos, Querido Salvador.\n5\nTen valor, valor cristiano, Cristo es tu mejor amigo: Él te llevará consigo; Jesús es tu Señor.",
+      "possiblePairs": [
+        {
+          "key": "SION-079",
+          "title": "GLORIA A TI, JESÚS DIVINO",
+          "score": 100,
+          "textEqual": true
+        }
+      ]
+    },
+    {
+      "key": "SION-079",
+      "type": "SALTO_NUMERICO",
+      "term": "",
+      "question": "Confirmar se a edição realmente salta da estrofe 1 para a 3 ou se existe estrofe 2 perdida.",
+      "found": true,
+      "title": "GLORIA A TI, JESÚS DIVINO",
+      "number": 79,
+      "edition": "SION",
+      "path": "$.himnos[478]",
+      "structuralNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "excerpt": "1\n¡Gloria a ti, Jesús Divino!\n¡Gloria a ti por tus bondades!\n¡Gloria eterna a tus piedades!\nQuerido Salvador.\nCORO:\n¡Gloria, gloria, aleluya!\n¡Gloria, gloria, aleluya!\n¡Gloria, gloria, aleluya! A nuestro Salvador.\n2.\nTú me amaste con ternura, Y por mí en la cruz moriste, Con ternura me quisiste, Querido Salvador.\n3\nTengo fe sólo en tu muerte, Pues con ella me salvaste; Vida eterna me compraste, Querido Salvador.\n4\nTe veremos en el cielo: A vivir contigo iremos; Tu presencia gozaremos, Querido Sa",
+      "fullText": "1\n¡Gloria a ti, Jesús Divino!\n¡Gloria a ti por tus bondades!\n¡Gloria eterna a tus piedades!\nQuerido Salvador.\nCORO:\n¡Gloria, gloria, aleluya!\n¡Gloria, gloria, aleluya!\n¡Gloria, gloria, aleluya! A nuestro Salvador.\n2.\nTú me amaste con ternura, Y por mí en la cruz moriste, Con ternura me quisiste, Querido Salvador.\n3\nTengo fe sólo en tu muerte, Pues con ella me salvaste; Vida eterna me compraste, Querido Salvador.\n4\nTe veremos en el cielo: A vivir contigo iremos; Tu presencia gozaremos, Querido Salvador.\n5\nTen valor, valor cristiano, Cristo es tu mejor amigo: Él te llevará consigo; Jesús es tu Señor.",
+      "possiblePairs": [
+        {
+          "key": "GT-182",
+          "title": "¡GLORIA A TI, JESÚS DIVINO",
+          "score": 100,
+          "textEqual": true
+        }
+      ]
+    }
+  ],
+  "gt42Neighborhood": [
+    {
+      "key": "GT-040",
+      "title": "EN LOS NEGOCIOS DEL REY",
+      "structuralNumbers": [
+        1,
+        2,
+        3
+      ],
+      "textLength": 574,
+      "beginning": "1\nSoy peregrino aquí, mi hogar lejano está, En la mansión de luz, eterna paz y amor: Embajador yo soy del reino celestial\nEn los negocios de mi Rey.\nCORO:\nEste mensaje fiel oid, Que dijo ya celeste voz:\n«Reconciliaos ya» – dice el Señor y Rey,\n¡Reconciliaos hoy con Dios!\n2\nQue del pecado vil arrepen",
+      "ending": "Que del pecado vil arrepentidos ya, Han de reinar con él los que obedientes son:\nEs el mensaje fiel que debo proclamar, En los negocios de mi Rey.\n3\nMi hogar más bello es que el Valle de Sarón, Eterno gozo y paz reinan por siempre en él, Y allí Jesús dará eterna habitación;\nEs el mensaje, de mi Rey."
+    },
+    {
+      "key": "GT-041",
+      "title": "HAY UN PRECIOSO MANANTIAL",
+      "structuralNumbers": [
+        1
+      ],
+      "textLength": 1,
+      "beginning": "1",
+      "ending": "1"
+    },
+    {
+      "key": "GT-042",
+      "title": "HAY UN PRECIOSO MANANTIAL",
+      "structuralNumbers": [
+        2,
+        3,
+        4,
+        1,
+        2,
+        3,
+        4
+      ],
+      "textLength": 907,
+      "beginning": "Hay un precioso manantial De sangre de Emmanuel, Que purifica a cada cual Que se sumerge en él.\nCORO:\nLávame, Señor Jesús, En la sangre de tu cruz: Lávame, Señor Jesús,\nY más blanco que la nieve yo seré:\n2\nEl malhechor se convirtió Pendiente de una cruz; El vio la fuente y se lavó, Creyendo en Jesús",
+      "ending": "ge en él.\n2\nEl malhechor se convirtió Pendiente de una cruz; El vio la fuente y se lavó, Creyendo en Jesús.\n3\nY yo también mi pobre ser Allí logré lavar;\nLa gloria de su gran poder, Me gozo en ensalzar.\n4\n¡Eterna fuente carmesí!\n¡Raudal de puro amor!\nSe lavará por siempre en ti, El pueblo del Señor."
+    },
+    {
+      "key": "GT-043",
+      "title": "A JESUCRISTO VEN SIN TARDAR",
+      "structuralNumbers": [
+        1,
+        2,
+        3
+      ],
+      "textLength": 471,
+      "beginning": "1\nA Jesucristo ven sin tardar, Que entre nosotros hoy él esté, Y te convida con dulce afán, Tierno diciendo: «Ven»\nCORO:\n¡Oh!, cuán grata nuestra reunión, Cuando allá, Señor, en tu mansión, Contigo estemos en comunión, Gozando eterno bien.\n2\nPiensa que él sólo puede colmar Tu triste pecho de gozo y ",
+      "ending": "or, en tu mansión, Contigo estemos en comunión, Gozando eterno bien.\n2\nPiensa que él sólo puede colmar Tu triste pecho de gozo y paz; Y porque anhela tu bienestar\nVuelve a decirte: «Ven»\n3\nSu voz escucha sin vacilar,\nY grato acepta lo que hoy te da. Tal vez mañana no habrá lugar No te detengas, ven."
+    }
+  ],
+  "pair182079": {
+    "bothFound": true,
+    "titleGT": "¡GLORIA A TI, JESÚS DIVINO",
+    "titleSion": "GLORIA A TI, JESÚS DIVINO",
+    "normalizedTitleEqual": true,
+    "textEqual": true,
+    "gtNumbers": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "sionNumbers": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "gtText": "1\n¡Gloria a ti, Jesús Divino!\n¡Gloria a ti por tus bondades!\n¡Gloria eterna a tus piedades!\nQuerido Salvador.\nCORO:\n¡Gloria, gloria, aleluya!\n¡Gloria, gloria, aleluya!\n¡Gloria, gloria, aleluya! A nuestro Salvador.\n2.\nTú me amaste con ternura, Y por mí en la cruz moriste, Con ternura me quisiste, Querido Salvador.\n3\nTengo fe sólo en tu muerte, Pues con ella me salvaste; Vida eterna me compraste, Querido Salvador.\n4\nTe veremos en el cielo: A vivir contigo iremos; Tu presencia gozaremos, Querido Salvador.\n5\nTen valor, valor cristiano, Cristo es tu mejor amigo: Él te llevará consigo; Jesús es tu Señor.",
+    "sionText": "1\n¡Gloria a ti, Jesús Divino!\n¡Gloria a ti por tus bondades!\n¡Gloria eterna a tus piedades!\nQuerido Salvador.\nCORO:\n¡Gloria, gloria, aleluya!\n¡Gloria, gloria, aleluya!\n¡Gloria, gloria, aleluya! A nuestro Salvador.\n2.\nTú me amaste con ternura, Y por mí en la cruz moriste, Con ternura me quisiste, Querido Salvador.\n3\nTengo fe sólo en tu muerte, Pues con ella me salvaste; Vida eterna me compraste, Querido Salvador.\n4\nTe veremos en el cielo: A vivir contigo iremos; Tu presencia gozaremos, Querido Salvador.\n5\nTen valor, valor cristiano, Cristo es tu mejor amigo: Él te llevará consigo; Jesús es tu Señor."
+  },
+  "regras": {
+    "alteraBase": false,
+    "permiteInferenciaSemFonte": false,
+    "objetivo": "Separar o que pode ser resolvido por evidência cruzada do que obrigatoriamente depende da imagem/PDF da edição."
+  }
+}

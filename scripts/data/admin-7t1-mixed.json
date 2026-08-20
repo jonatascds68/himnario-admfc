@@ -1,0 +1,46 @@
+{
+  "schema_version": "admfc-admin-changes-1",
+  "release": "ADMFC_INDEPENDIENTE_1.0",
+  "exported_at": "2026-08-19T16:01:38.277Z",
+  "total_changes": 2,
+  "changes": [
+    {
+      "id": "admin-7t1-ready",
+      "hymn_id": "GT-001",
+      "himnario": "Gloria y Triunfo",
+      "numero": 1,
+      "titulo": "EL APOSENTO ALTO",
+      "action": "update",
+      "changed_fields": [
+        "titulo"
+      ],
+      "status": "pending",
+      "created_at": "2026-08-19T16:01:38.278Z",
+      "before": {
+        "titulo": "EL APOSENTO ALTO"
+      },
+      "after": {
+        "titulo": "EL APOSENTO ALTO [TESTE ATOMICIDADE 7T1]"
+      }
+    },
+    {
+      "id": "admin-7t1-conflict",
+      "hymn_id": "GT-002",
+      "himnario": "Gloria y Triunfo",
+      "numero": 2,
+      "titulo": "LLUVIAS DE GRACIA",
+      "action": "update",
+      "changed_fields": [
+        "titulo"
+      ],
+      "status": "pending",
+      "created_at": "2026-08-19T16:01:38.278Z",
+      "before": {
+        "titulo": "BEFORE FICTICIO INEXISTENTE 7T1"
+      },
+      "after": {
+        "titulo": "AFTER FICTICIO INEXISTENTE 7T1"
+      }
+    }
+  ]
+}

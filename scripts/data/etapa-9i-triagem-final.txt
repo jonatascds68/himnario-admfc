@@ -1,0 +1,57 @@
+TOTAL ESTRUTURALMENTE VALIDADO: 16
+SEM PENDÊNCIA TEXTUAL CONHECIDA: 9
+COM PENDÊNCIA TEXTUAL CONHECIDA: 7
+
+============================================
+ SEM PENDÊNCIA TEXTUAL CONHECIDA
+============================================
+GT-028 | Gloria y Triunfo 28 | MÁS DE JESÚS
+GT-033 | Gloria y Triunfo 33 | GRANDE GOZO HAY EN MI ALMA HOY
+GT-081 | Gloria y Triunfo 81 | LA BANDERA DE LA CRUZ
+GT-186 | Gloria y Triunfo 186 | PRESENTIMOS DEL MUNDO DICHOSO
+GT-259 | Gloria y Triunfo 259 | GUARDA EL CONTACTO
+SION-015 | Himnos de Sión 15 | MÁS DE JESÚS
+SION-016 | Himnos de Sión 16 | GRANDE GOZO HAY EN MI ALMA
+SION-038 | Himnos de Sión 38 | LA BANDERA DE LA CRUZ
+SION-107 | Himnos de Sión 107 | GUARDA EL CONTACTO
+
+============================================
+ PENDENTES DE COTEJO COM FONTE
+============================================
+
+GT-040 | Gloria y Triunfo 40 | EN LOS NEGOCIOS DEL REY
+  - Pontuação/OCR em "oid, ." permanece pendente.
+
+GT-052 | Gloria y Triunfo 52 | CRISTO LA ROCA
+  - Trecho truncado "confiando mis." permanece pendente.
+
+GT-056 | Gloria y Triunfo 56 | ¡OH, YO QUIERO ANDAR CON CRISTO!
+  - Possível OCR "serIe" permanece pendente.
+
+GT-161 | Gloria y Triunfo 161 | PECADOR, VEN AL DULCE JESÚS
+  - Pontuação/espaçamento em "serás . De" permanece pendente.
+
+GT-283 | Gloria y Triunfo 283 | EN LA MAÑANA
+  - Possível OCR "tierra mis Allí" permanece pendente.
+  - Revisar acentuação/editorial de "rio" conforme fonte.
+
+SION-024 | Himnos de Sión 24 | CRISTO LA ROCA
+  - Trecho truncado "confiando mis." permanece pendente.
+
+SION-026 | Himnos de Sión 26 | ¡OH! YO QUIERO ANDAR CON CRISTO
+  - Possível OCR "serIe" permanece pendente.
+
+============================================
+ CONTROLES
+============================================
+TOTAL BASE MESTRE: 718
+TOTAL BASE SIMULADA: 718
+TOTAL CLASSIFICADO: 16 / 16
+HASH BASE MESTRE: 9a8636c6a249a783a091f4dfd7fb8f36910019cb235d865486e316609365f17d
+
+ARQUIVO: scripts/data/etapa-9i-triagem-final.json
+BASE MESTRE NÃO ALTERADA.
+
+============================================
+ ETAPA 9I CONCLUÍDA COM SUCESSO
+============================================

@@ -1,0 +1,192 @@
+============================================
+ AUDITORIA HINÁRIA - ETAPA 10E
+ COTEJO DOCUMENTAL DOS 16 PRIORITÁRIOS
+ NENHUMA CORREÇÃO APLICADA
+============================================
+
+============================================
+ 1. CONTROLE DA BASE
+============================================
+HASH ATUAL:   a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41
+HASH OFICIAL: a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41
+HASH: OK
+TOTAL BASE: estrutura não-array
+
+============================================
+ 2. CLASSIFICAÇÃO DOS PONTOS DE COTEJO
+============================================
+
+01. GT-040
+CLASSE: PONTUACAO_OCR
+ATUAL: "oid, ."
+PROPOSTA: "oid,"
+CLASSIFICAÇÃO: CANDIDATO_CORRECAO_SEGURA
+MOTIVO: Sequência vírgula + espaço + ponto é forte resíduo de OCR.
+
+02. GT-056
+CLASSE: OCR_I_MAIUSCULO_POR_L
+ATUAL: "serIe"
+PROPOSTA: "serle"
+CLASSIFICAÇÃO: CANDIDATO_CORRECAO_SEGURA
+MOTIVO: I maiúsculo no interior da palavra é compatível com erro OCR de l minúsculo.
+
+03. SION-026
+CLASSE: OCR_I_MAIUSCULO_POR_L
+ATUAL: "serIe"
+PROPOSTA: "serle"
+CLASSIFICAÇÃO: CANDIDATO_CORRECAO_SEGURA
+MOTIVO: Mesmo erro presente no par GT/Sión.
+
+04. GT-161
+CLASSE: ESPACO_ANTES_PONTUACAO
+ATUAL: "serás . De"
+PROPOSTA: "serás. De"
+CLASSIFICAÇÃO: CANDIDATO_CORRECAO_SEGURA
+MOTIVO: Espaço indevido antes do ponto.
+
+05. GT-283
+CLASSE: TEXTO_SUSPEITO_REQUER_FONTE
+ATUAL: "tierra mis Allí"
+CLASSIFICAÇÃO: REQUER_COTEJO_VISUAL
+MOTIVO: Não deve ser reconstruído apenas por inferência textual.
+
+06. GT-018
+CLASSE: OCR_I_MAIUSCULO_POR_L
+ATUAL: "referirIa"
+PROPOSTA: "referirla"
+CLASSIFICAÇÃO: CANDIDATO_CORRECAO_SEGURA
+MOTIVO: Forma contextual e padrão OCR indicam l minúsculo.
+
+07. GT-018
+CLASSE: PONTUACAO_OCR
+ATUAL: "buen .Jesús"
+PROPOSTA: "buen Jesús"
+CLASSIFICAÇÃO: CANDIDATO_CORRECAO_SEGURA
+MOTIVO: Ponto intrusivo entre adjetivo e substantivo próprio.
+
+08. SION-128
+CLASSE: OCR_I_MAIUSCULO_POR_L
+ATUAL: "referirIa"
+PROPOSTA: "referirla"
+CLASSIFICAÇÃO: CANDIDATO_CORRECAO_SEGURA
+MOTIVO: Mesmo padrão OCR encontrado no correspondente GT.
+
+09. SION-128
+CLASSE: PONTUACAO_OCR
+ATUAL: "buen .Jesús"
+PROPOSTA: "buen Jesús"
+CLASSIFICAÇÃO: CANDIDATO_CORRECAO_SEGURA
+MOTIVO: Ponto intrusivo evidente.
+
+10. GT-007
+CLASSE: OCR_I_MAIUSCULO_POR_L
+ATUAL: "serIe"
+PROPOSTA: "serle"
+CLASSIFICAÇÃO: CANDIDATO_CORRECAO_SEGURA
+MOTIVO: Erro OCR recorrente.
+
+11. SION-011
+CLASSE: OCR_I_MAIUSCULO_POR_L
+ATUAL: "serIe"
+PROPOSTA: "serle"
+CLASSIFICAÇÃO: CANDIDATO_CORRECAO_SEGURA
+MOTIVO: Erro OCR recorrente no par correspondente.
+
+12. GT-025
+CLASSE: OCR_I_MAIUSCULO_POR_L
+ATUAL: "serIe"
+PROPOSTA: "serle"
+CLASSIFICAÇÃO: CANDIDATO_CORRECAO_SEGURA
+MOTIVO: Erro OCR recorrente.
+
+13. SION-134
+CLASSE: OCR_I_MAIUSCULO_POR_L
+ATUAL: "serIe"
+PROPOSTA: "serle"
+CLASSIFICAÇÃO: CANDIDATO_CORRECAO_SEGURA
+MOTIVO: Erro OCR recorrente no correspondente Sión.
+
+14. GT-102
+CLASSE: OCR_I_MAIUSCULO_POR_L
+ATUAL: "hazIo"
+PROPOSTA: "hazlo"
+CLASSIFICAÇÃO: CANDIDATO_CORRECAO_SEGURA
+MOTIVO: I maiúsculo é incompatível com a palavra espanhola; provável l minúsculo.
+
+15. SION-044
+CLASSE: OCR_I_MAIUSCULO_POR_L
+ATUAL: "hazIo"
+PROPOSTA: "hazlo"
+CLASSIFICAÇÃO: CANDIDATO_CORRECAO_SEGURA
+MOTIVO: Mesmo erro presente no par correspondente.
+
+16. GT-042
+CLASSE: ESTRUTURA_NUMERACAO
+CLASSIFICAÇÃO: REQUER_COTEJO_ESTRUTURAL
+MOTIVO: Há evidência de conteúdo duplicado/justaposto envolvendo os registros 41 e 42.
+
+17. GT-182
+CLASSE: SALTO_NUMERICO
+ATUAL: "1 -> 3"
+CLASSIFICAÇÃO: REQUER_COTEJO_VISUAL
+MOTIVO: O salto estrutural precisa ser confirmado na edição fonte.
+
+18. SION-079
+CLASSE: SALTO_NUMERICO
+ATUAL: "1 -> 3"
+CLASSIFICAÇÃO: REQUER_COTEJO_VISUAL
+MOTIVO: O salto estrutural precisa ser confirmado na edição fonte.
+
+============================================
+ 3. CANDIDATOS A CORREÇÃO SEGURA
+============================================
+TOTAL: 14
+- GT-040: "oid, ." -> "oid,"
+- GT-056: "serIe" -> "serle"
+- SION-026: "serIe" -> "serle"
+- GT-161: "serás . De" -> "serás. De"
+- GT-018: "referirIa" -> "referirla"
+- GT-018: "buen .Jesús" -> "buen Jesús"
+- SION-128: "referirIa" -> "referirla"
+- SION-128: "buen .Jesús" -> "buen Jesús"
+- GT-007: "serIe" -> "serle"
+- SION-011: "serIe" -> "serle"
+- GT-025: "serIe" -> "serle"
+- SION-134: "serIe" -> "serle"
+- GT-102: "hazIo" -> "hazlo"
+- SION-044: "hazIo" -> "hazlo"
+
+============================================
+ 4. CASOS QUE CONTINUAM DEPENDENTES DA FONTE
+============================================
+- GT-283: Não deve ser reconstruído apenas por inferência textual.
+- GT-182: O salto estrutural precisa ser confirmado na edição fonte.
+- SION-079: O salto estrutural precisa ser confirmado na edição fonte.
+
+============================================
+ 5. CASOS ESTRUTURAIS
+============================================
+- GT-042: Há evidência de conteúdo duplicado/justaposto envolvendo os registros 41 e 42.
+
+============================================
+ 6. REGRA PARA A PRÓXIMA ETAPA
+============================================
+NENHUMA hipótese será aplicada automaticamente.
+A Etapa 10F deverá simular cada alteração sobre uma cópia
+e demonstrar exatamente o ANTES e o DEPOIS.
+Casos visuais/estruturais permanecem bloqueados.
+
+============================================
+ 7. CONTROLE DE IMUTABILIDADE
+============================================
+HASH ANTES:  a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41
+HASH DEPOIS: a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41
+BASE MESTRE ALTERADA: NÃO
+
+============================================
+ ETAPA 10E CONCLUÍDA
+ CANDIDATOS SEGUROS: 14
+ PENDENTES VISUAIS: 3
+ PENDENTES ESTRUTURAIS: 1
+ NENHUMA CORREÇÃO APLICADA
+============================================

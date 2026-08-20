@@ -155,28 +155,88 @@ const insets = useSafeAreaInsets();
           </View>
         ) : <ActivityIndicator color={c.brand} />}
 
-        <Text style={[styles.section, { color: c.muted }]}>Editor de la Base</Text>
+        <View style={styles.sectionHeader}>
+          <View style={[styles.sectionIcon, { backgroundColor: c.surfaceSecondary }]}>
+            <Feather name="database" size={17} color={c.brand} />
+          </View>
+          <View style={{ flex: 1 }}>
+            <Text style={[styles.sectionTitle, { color: c.onSurface }]}>
+              Editor de la Base
+            </Text>
+            <Text style={[styles.sectionSubtitle, { color: c.muted }]}>
+              Administración y corrección del himnario
+            </Text>
+          </View>
+        </View>
         <View style={[styles.actionCard, { borderColor: c.border, backgroundColor: c.surfaceSecondary }]}>
-          <ActionBtn c={c} icon="edit-3" label="Editor de Himnos (título, letra, número, equivalencia)" onPress={() => router.push('/admin/hymns' as any)} testID="admin-editor" />
+          <ActionBtn
+            c={c}
+            icon="edit-3"
+            label="Editor de Himnos"
+            description="Título, letra, número, categorías y equivalencias"
+            onPress={() => router.push('/admin/hymns' as any)}
+            testID="admin-editor"
+          />
           <ActionBtn
             c={c}
             icon="clock"
-            label={`Cambios pendientes (${stats?.pendingChanges ?? 0})`}
+            label="Cambios pendientes"
+            description={`${stats?.pendingChanges ?? 0} correcciones pendientes de revisión`}
             onPress={() => router.push('/admin/changes' as any)}
             testID="admin-changes"
           />
         </View>
 
-        <Text style={[styles.section, { color: c.muted }]}>Importación / Exportación</Text>
+        <View style={styles.sectionHeader}>
+          <View style={[styles.sectionIcon, { backgroundColor: c.surfaceSecondary }]}>
+            <Feather name="hard-drive" size={17} color={c.brand} />
+          </View>
+          <View style={{ flex: 1 }}>
+            <Text style={[styles.sectionTitle, { color: c.onSurface }]}>
+              Importación / Exportación
+            </Text>
+            <Text style={[styles.sectionSubtitle, { color: c.muted }]}>
+              Seguridad y restauración de la base
+            </Text>
+          </View>
+        </View>
         <View style={[styles.actionCard, { borderColor: c.border, backgroundColor: c.surfaceSecondary }]}>
-          <ActionBtn c={c} icon="download" label="Exportar backup (JSON)" onPress={doExport} busy={busy === 'export'} testID="admin-export" />
-          <ActionBtn c={c} icon="rotate-ccw" label="Restaurar backup (JSON)" onPress={doRestore} busy={busy === 'restore'} testID="admin-restore" />
+          <ActionBtn
+            c={c}
+            icon="download"
+            label="Exportar backup"
+            description="Guardar una copia completa en formato JSON"
+            onPress={doExport}
+            busy={busy === 'export'}
+            testID="admin-export"
+          />
+          <ActionBtn
+            c={c}
+            icon="rotate-ccw"
+            label="Restaurar backup"
+            description="Recuperar la base desde un archivo JSON"
+            onPress={doRestore}
+            busy={busy === 'restore'}
+            testID="admin-restore"
+          />
         </View>
 
         {msg ? <Text style={{ color: c.info, marginTop: SPACING.md, textAlign: 'center' }} testID="admin-msg">{msg}</Text> : null}
         {/* ADMFC 7AA.42: removido bloco legado de importação CSV/XLSX. */}
 
-        <Text style={[styles.section, { color: c.muted }]}>Notas</Text>
+        <View style={styles.sectionHeader}>
+          <View style={[styles.sectionIcon, { backgroundColor: c.surfaceSecondary }]}>
+            <Feather name="info" size={17} color={c.brand} />
+          </View>
+          <View style={{ flex: 1 }}>
+            <Text style={[styles.sectionTitle, { color: c.onSurface }]}>
+              Notas
+            </Text>
+            <Text style={[styles.sectionSubtitle, { color: c.muted }]}>
+              Información del módulo administrativo
+            </Text>
+          </View>
+        </View>
         <Text style={{ color: c.muted, fontSize: 13, lineHeight: 20 }}>
           {/* ADMFC 7AA.40: notas atualizadas ao estado real do painel administrativo. */}
           • El Editor de Himnos permite corregir título, letra, número, equivalencias y demás datos administrables.{'\n'}
@@ -312,12 +372,55 @@ function Stat({ label, value, c }: any) {
     </View>
   );
 }
-function ActionBtn({ c, icon, label, onPress, busy, testID }: any) {
+function ActionBtn({ c, icon, label, description, onPress, busy, testID }: any) {
   return (
-    <Pressable onPress={onPress} disabled={busy} style={[styles.actionBtn, { borderColor: c.border, opacity: busy ? 0.6 : 1 }]} testID={testID}>
-      <Feather name={icon} size={18} color={c.brand} />
-      <Text style={{ color: c.onSurface, fontWeight: '600', flex: 1 }}>{label}</Text>
-      {busy ? <ActivityIndicator size="small" color={c.brand} /> : <Feather name="chevron-right" size={18} color={c.muted} />}
+    <Pressable
+      onPress={onPress}
+      disabled={busy}
+      style={[
+        styles.actionBtn,
+        {
+          borderColor: c.border,
+          backgroundColor: c.surface,
+          opacity: busy ? 0.6 : 1,
+        },
+      ]}
+      testID={testID}
+    >
+      <View
+        style={[
+          styles.actionIconBox,
+          { backgroundColor: c.surfaceSecondary },
+        ]}
+      >
+        <Feather name={icon} size={20} color={c.brand} />
+      </View>
+
+      <View style={styles.actionTextBox}>
+        <Text
+          numberOfLines={2}
+          style={[styles.actionTitle, { color: c.onSurface }]}
+        >
+          {label}
+        </Text>
+
+        {description ? (
+          <Text
+            numberOfLines={2}
+            style={[styles.actionDescription, { color: c.muted }]}
+          >
+            {description}
+          </Text>
+        ) : null}
+      </View>
+
+      <View style={styles.actionEnd}>
+        {busy ? (
+          <ActivityIndicator size="small" color={c.brand} />
+        ) : (
+          <Feather name="chevron-right" size={20} color={c.muted} />
+        )}
+      </View>
     </Pressable>
   );
 }
@@ -326,11 +429,108 @@ const styles = StyleSheet.create({
   container: { flex: 1 },
   header: { flexDirection: 'row', alignItems: 'center', gap: SPACING.sm, paddingHorizontal: SPACING.md, paddingTop: SPACING.sm, paddingBottom: SPACING.md },
   title: { fontSize: 22, fontWeight: '800', letterSpacing: 1 },
-  statCard: { borderRadius: RADIUS.lg, borderWidth: 1, padding: SPACING.lg, gap: SPACING.md },
-  statRow: { flexDirection: 'row', gap: SPACING.md },
-  section: { fontSize: 11, fontWeight: '800', textTransform: 'uppercase', letterSpacing: 1, marginTop: SPACING.lg, marginBottom: SPACING.sm },
-  actionCard: { borderRadius: RADIUS.lg, borderWidth: 1, padding: SPACING.md, gap: SPACING.sm },
-  actionBtn: { flexDirection: 'row', alignItems: 'center', gap: SPACING.md, paddingVertical: SPACING.md, paddingHorizontal: SPACING.sm, borderRadius: RADIUS.md, borderWidth: 1, minHeight: 52 },
+  statCard: {
+    borderRadius: RADIUS.lg,
+    borderWidth: 1,
+    padding: SPACING.lg,
+    gap: SPACING.lg,
+  },
+
+  statRow: {
+    flexDirection: 'row',
+    gap: SPACING.lg,
+  },
+
+  section: {
+    fontSize: 12,
+    fontWeight: '800',
+    textTransform: 'uppercase',
+    letterSpacing: 1,
+    marginTop: SPACING.xl,
+    marginBottom: SPACING.sm,
+  },
+
+  sectionHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+    marginTop: SPACING.xl,
+    marginBottom: 10,
+    minHeight: 48,
+  },
+
+  sectionIcon: {
+    width: 38,
+    height: 38,
+    borderRadius: 12,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+
+  sectionTitle: {
+    fontSize: 16,
+    lineHeight: 21,
+    fontWeight: '900',
+    letterSpacing: 0.2,
+  },
+
+  sectionSubtitle: {
+    fontSize: 11.5,
+    lineHeight: 16,
+    marginTop: 1,
+  },
+
+  actionCard: {
+    borderRadius: RADIUS.lg,
+    borderWidth: 1,
+    padding: 10,
+    gap: 9,
+  },
+
+  actionBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    borderRadius: RADIUS.md,
+    borderWidth: 1,
+    paddingVertical: 12,
+    paddingHorizontal: 12,
+    minHeight: 74,
+  },
+
+  actionIconBox: {
+    width: 44,
+    height: 44,
+    borderRadius: 13,
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexShrink: 0,
+  },
+
+  actionTextBox: {
+    flex: 1,
+    minWidth: 0,
+    marginLeft: 12,
+    marginRight: 8,
+  },
+
+  actionTitle: {
+    fontSize: 14.5,
+    lineHeight: 19,
+    fontWeight: '800',
+  },
+
+  actionDescription: {
+    fontSize: 11.5,
+    lineHeight: 16,
+    marginTop: 3,
+  },
+
+  actionEnd: {
+    width: 24,
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexShrink: 0,
+  },
 
   // ADMFC 7AA.41 — confirmação visual segura de restauração.
   modalOverlay: {

@@ -1,0 +1,23 @@
+{
+  "etapa": "10P",
+  "status": "CONCLUIDA",
+  "evidencia": {
+    "tipo": "documental_visual_e_fontes_independentes",
+    "decisao": "GT-041 com coro; GT-042 sem coro"
+  },
+  "gt041": {
+    "id": "GT-041",
+    "titulo": "HAY UN PRECIOSO MANANTIAL",
+    "possui_coro": true
+  },
+  "gt042": {
+    "id": "GT-042",
+    "titulo": "HAY UN PRECIOSO MANANTIAL",
+    "possui_coro": false
+  },
+  "total_hinos": 718,
+  "hash_anterior": "8c6b5ae3d1dd4701a75602e2e9ff20ce13c4ce4c831f3d6a39e51e9affb80185",
+  "hash_novo": "214d87c16a3a1a18c9bd525c5474dff344fa78857762960084de51771262cbfb",
+  "backup": "assets/base_mestre.bak-etapa-10p-gt041-gt042.json",
+  "hash_backup": "8c6b5ae3d1dd4701a75602e2e9ff20ce13c4ce4c831f3d6a39e51e9affb80185"
+}

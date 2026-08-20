@@ -1,0 +1,77 @@
+TOTAL BASE MESTRE: 718
+TOTAL BASE 9G: 718
+TOTAL CONSOLIDADA: 718
+
+CORREÇÃO DOCUMENTAL: "confiando mis." -> "confiando más."
+REGISTROS AUTORIZADOS: GT-052, SION-024
+
+============================================
+ APLICAÇÃO TEXTUAL NA SIMULAÇÃO
+============================================
+
+GT-052 | CRISTO LA ROCA
+OCORRÊNCIAS DE "confiando mis.": 1
+RESULTADO: CORREÇÃO TEXTUAL SIMULADA
+ANTES:  confiando mis.
+DEPOIS: confiando más.
+
+SION-024 | CRISTO LA ROCA
+OCORRÊNCIAS DE "confiando mis.": 1
+RESULTADO: CORREÇÃO TEXTUAL SIMULADA
+ANTES:  confiando mis.
+DEPOIS: confiando más.
+
+============================================
+ RESULTADO CONSOLIDADO
+============================================
+REGISTROS: 718
+ALTERAÇÕES TEXTUAIS 9K APLICADAS NA SIMULAÇÃO: 2
+REGISTROS ALTERADOS 9G -> 9L: 2
+- GT-052
+- SION-024
+
+REGISTROS DIFERENTES DA BASE MESTRE: 16
+- GT-028
+- GT-033
+- GT-040
+- GT-052
+- GT-056
+- GT-081
+- GT-161
+- GT-186
+- GT-259
+- GT-283
+- SION-015
+- SION-016
+- SION-024
+- SION-026
+- SION-038
+- SION-107
+
+BLOQUEADOS 9F PRESERVADOS: 4
+- GT-100
+- SION-059
+- GT-036
+- SION-019
+
+PENDÊNCIAS TEXTUAIS NÃO CORRIGIDAS: 5
+- GT-040
+- GT-056
+- SION-026
+- GT-161
+- GT-283
+
+============================================
+ HASHES
+============================================
+BASE MESTRE:      9a8636c6a249a783a091f4dfd7fb8f36910019cb235d865486e316609365f17d
+SIMULAÇÃO 9G:     87736cf68b63e14bfe4d6c9a4253a8ccc88bbb4d486a76686d85f7b2afe2e905
+SIMULAÇÃO 9L:     a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41
+BASE APÓS 9L:     9a8636c6a249a783a091f4dfd7fb8f36910019cb235d865486e316609365f17d
+BASE MESTRE ALTERADA: NÃO
+
+ARQUIVO CONSOLIDADO: scripts/data/etapa-9l-base-simulada-consolidada.json
+
+============================================
+ ETAPA 9L VALIDADA COM SUCESSO
+============================================

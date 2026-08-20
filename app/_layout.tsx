@@ -82,9 +82,12 @@ export default function RootLayout() {
     };
   }, []);
 
-  const spin = useRef(new Animated.Value(0)).current;
-  const grow = useRef(new Animated.Value(1)).current;
-  const fade = useRef(new Animated.Value(1)).current;
+  // ADMFC — abertura clean
+  const logoScale = useRef(new Animated.Value(0.58)).current;
+  const logoOpacity = useRef(new Animated.Value(0)).current;
+  const titleOpacity = useRef(new Animated.Value(0)).current;
+  const titleTranslateY = useRef(new Animated.Value(8)).current;
+  const introOpacity = useRef(new Animated.Value(1)).current;
 
   const ready =
     (loaded || error) &&
@@ -99,46 +102,81 @@ export default function RootLayout() {
       await SplashScreen.hideAsync();
 
       Animated.sequence([
-        // Uma única volta suave antes da abertura
-        Animated.timing(spin, {
-          toValue: 1,
-          duration: 1250,
-          easing: Easing.inOut(Easing.cubic),
-          useNativeDriver: true,
-        }),
 
-        // Ao terminar a volta, o brasão ocupa rapidamente a tela
+        // Logo surge e cresce lentamente
         Animated.parallel([
-          Animated.timing(grow, {
-            toValue: 6.5,
-            duration: 420,
-            easing: Easing.in(Easing.cubic),
+          Animated.timing(logoOpacity, {
+            toValue: 1,
+            duration: 650,
+            easing: Easing.out(Easing.cubic),
             useNativeDriver: true,
           }),
+
+          Animated.timing(logoScale, {
+            toValue: 1,
+            duration: 1500,
+            easing: Easing.out(Easing.cubic),
+            useNativeDriver: true,
+          }),
+
+          // O nome começa a aparecer enquanto
+          // o brasão ainda está crescendo
           Animated.sequence([
-            Animated.delay(220),
-            Animated.timing(fade, {
-              toValue: 0,
-              duration: 200,
-              easing: Easing.out(Easing.quad),
-              useNativeDriver: true,
-            }),
+            Animated.delay(650),
+
+            Animated.parallel([
+              Animated.timing(titleOpacity, {
+                toValue: 1,
+                duration: 650,
+                easing: Easing.out(Easing.quad),
+                useNativeDriver: true,
+              }),
+
+              Animated.timing(titleTranslateY, {
+                toValue: 0,
+                duration: 650,
+                easing: Easing.out(Easing.cubic),
+                useNativeDriver: true,
+              }),
+            ]),
           ]),
         ]),
-      ]).start(async () => {
-        if (!active) return;
+
+        // Marca completamente formada
+        Animated.delay(500),
+
+        // Saída limpa e simultânea
+        Animated.parallel([
+          Animated.timing(introOpacity, {
+            toValue: 0,
+            duration: 500,
+            easing: Easing.inOut(Easing.quad),
+            useNativeDriver: true,
+          }),
+
+          Animated.timing(logoScale, {
+            toValue: 1.035,
+            duration: 500,
+            easing: Easing.inOut(Easing.quad),
+            useNativeDriver: true,
+          }),
+        ]),
+      ]).start(async ({ finished }) => {
+        if (!active || !finished) return;
 
         setIntroVisible(false);
 
         try {
-
           const hasSeenGuide = await guideStorage.hasSeen();
 
           if (!hasSeenGuide && active) {
             router.replace('/guide' as any);
           }
         } catch (error) {
-          console.warn('No se pudo verificar la guía inicial:', error);
+          console.warn(
+            'No se pudo verificar la guía inicial:',
+            error
+          );
         }
       });
     };
@@ -148,16 +186,19 @@ export default function RootLayout() {
     return () => {
       active = false;
     };
-  }, [ready, spin, grow, fade, router]);
+  }, [
+    ready,
+    logoScale,
+    logoOpacity,
+    titleOpacity,
+    titleTranslateY,
+    introOpacity,
+    router,
+  ]);
 
   if (!ready) return null;
 
-  const rotateY = spin.interpolate({
-    inputRange: [0, 1],
-    outputRange: ['0deg', '360deg'],
-  });
-
-  return (
+return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <SafeAreaProvider>
         <ThemeProvider>
@@ -174,16 +215,15 @@ export default function RootLayout() {
                 pointerEvents="none"
                 style={[
                   styles.intro,
-                  { opacity: fade },
+                  { opacity: introOpacity },
                 ]}
               >
+
+
                 <Animated.View
                   style={{
-                    transform: [
-                      { perspective: 900 },
-                      { rotateY },
-                      { scale: grow },
-                    ],
+                    opacity: logoOpacity,
+                    transform: [{ scale: logoScale }],
                   }}
                 >
                   <Image
@@ -196,11 +236,17 @@ export default function RootLayout() {
                 <Animated.Text
                   style={[
                     styles.introTitle,
-                    { opacity: fade },
+                    {
+                      opacity: titleOpacity,
+                      transform: [
+                        { translateY: titleTranslateY },
+                      ],
+                    },
                   ]}
                 >
                   HIMNARIO ADMFC
                 </Animated.Text>
+
               </Animated.View>
             ) : null}
           </View>
@@ -221,8 +267,8 @@ const styles = StyleSheet.create({
   },
 
   logo: {
-    width: 250,
-    height: 250,
+    width: 270,
+    height: 270,
   },
 
   introTitle: {

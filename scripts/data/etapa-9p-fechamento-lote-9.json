@@ -1,0 +1,90 @@
+{
+  "etapa": "9P",
+  "descricao": "Auditoria pós-aplicação e fechamento do lote 9",
+  "status": "LOTE_9_VALIDADO_E_FECHADO",
+  "base_mestre": {
+    "arquivo": "assets/base_mestre.json",
+    "total_registros": 718,
+    "hash_anterior": "9a8636c6a249a783a091f4dfd7fb8f36910019cb235d865486e316609365f17d",
+    "hash_atual": "a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41"
+  },
+  "backup": {
+    "arquivo": "assets/base_mestre.backup-pre-9n.json",
+    "hash": "9a8636c6a249a783a091f4dfd7fb8f36910019cb235d865486e316609365f17d",
+    "integro": true
+  },
+  "simulacao_aprovada": {
+    "arquivo": "scripts/data/etapa-9l-base-simulada-consolidada.json",
+    "hash": "a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41",
+    "corresponde_base_atual": true
+  },
+  "alteracoes": {
+    "total": 16,
+    "ids": [
+      "GT-028",
+      "GT-033",
+      "GT-040",
+      "GT-052",
+      "GT-056",
+      "GT-081",
+      "GT-161",
+      "GT-186",
+      "GT-259",
+      "GT-283",
+      "SION-015",
+      "SION-016",
+      "SION-024",
+      "SION-026",
+      "SION-038",
+      "SION-107"
+    ],
+    "somente_campo_letra": true
+  },
+  "correcao_documental_confirmada": [
+    "GT-052",
+    "SION-024"
+  ],
+  "pendencias_textuais_preservadas": [
+    {
+      "id": "GT-040",
+      "trecho": "oid, .",
+      "descricao": "Pontuação/OCR pendente de cotejo documental."
+    },
+    {
+      "id": "GT-056",
+      "trecho": "serIe",
+      "descricao": "Possível OCR; provável \"serle\", ainda sem confirmação documental."
+    },
+    {
+      "id": "SION-026",
+      "trecho": "serIe",
+      "descricao": "Possível OCR; provável \"serle\", ainda sem confirmação documental."
+    },
+    {
+      "id": "GT-161",
+      "trecho": "serás . De",
+      "descricao": "Pontuação/espaçamento pendente de cotejo documental."
+    },
+    {
+      "id": "GT-283",
+      "trecho": "tierra mis Allí",
+      "descricao": "Possível OCR pendente de cotejo documental."
+    }
+  ],
+  "bloqueados_preservados": [
+    "GT-036",
+    "GT-100",
+    "SION-019",
+    "SION-059"
+  ],
+  "alteracoes_nao_autorizadas": [],
+  "resultado": {
+    "total_registros": 718,
+    "ids_unicos": 718,
+    "alteracoes_autorizadas": 16,
+    "alteracoes_nao_autorizadas": 0,
+    "bloqueados_preservados": 4,
+    "pendencias_preservadas": 5,
+    "lote_encerrado": true
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "etapa": "9I",
+  "base_alterada": false,
+  "total_patches_estruturais_validados": 16,
+  "sem_pendencia_textual_conhecida": 9,
+  "com_pendencia_textual_conhecida": 7,
+  "registros": [
+    {
+      "id": "GT-028",
+      "himnario": "Gloria y Triunfo",
+      "numero": 28,
+      "titulo": "MÁS DE JESÚS",
+      "patch_estrutural": "VALIDADO",
+      "texto_integral": "SEM_PENDENCIA_CONHECIDA_NESTA_ETAPA",
+      "pendencias": []
+    },
+    {
+      "id": "GT-033",
+      "himnario": "Gloria y Triunfo",
+      "numero": 33,
+      "titulo": "GRANDE GOZO HAY EN MI ALMA HOY",
+      "patch_estrutural": "VALIDADO",
+      "texto_integral": "SEM_PENDENCIA_CONHECIDA_NESTA_ETAPA",
+      "pendencias": []
+    },
+    {
+      "id": "GT-040",
+      "himnario": "Gloria y Triunfo",
+      "numero": 40,
+      "titulo": "EN LOS NEGOCIOS DEL REY",
+      "patch_estrutural": "VALIDADO",
+      "texto_integral": "PENDENTE_DE_FONTE",
+      "pendencias": [
+        "Pontuação/OCR em \"oid, .\" permanece pendente."
+      ]
+    },
+    {
+      "id": "GT-052",
+      "himnario": "Gloria y Triunfo",
+      "numero": 52,
+      "titulo": "CRISTO LA ROCA",
+      "patch_estrutural": "VALIDADO",
+      "texto_integral": "PENDENTE_DE_FONTE",
+      "pendencias": [
+        "Trecho truncado \"confiando mis.\" permanece pendente."
+      ]
+    },
+    {
+      "id": "GT-056",
+      "himnario": "Gloria y Triunfo",
+      "numero": 56,
+      "titulo": "¡OH, YO QUIERO ANDAR CON CRISTO!",
+      "patch_estrutural": "VALIDADO",
+      "texto_integral": "PENDENTE_DE_FONTE",
+      "pendencias": [
+        "Possível OCR \"serIe\" permanece pendente."
+      ]
+    },
+    {
+      "id": "GT-081",
+      "himnario": "Gloria y Triunfo",
+      "numero": 81,
+      "titulo": "LA BANDERA DE LA CRUZ",
+      "patch_estrutural": "VALIDADO",
+      "texto_integral": "SEM_PENDENCIA_CONHECIDA_NESTA_ETAPA",
+      "pendencias": []
+    },
+    {
+      "id": "GT-161",
+      "himnario": "Gloria y Triunfo",
+      "numero": 161,
+      "titulo": "PECADOR, VEN AL DULCE JESÚS",
+      "patch_estrutural": "VALIDADO",
+      "texto_integral": "PENDENTE_DE_FONTE",
+      "pendencias": [
+        "Pontuação/espaçamento em \"serás . De\" permanece pendente."
+      ]
+    },
+    {
+      "id": "GT-186",
+      "himnario": "Gloria y Triunfo",
+      "numero": 186,
+      "titulo": "PRESENTIMOS DEL MUNDO DICHOSO",
+      "patch_estrutural": "VALIDADO",
+      "texto_integral": "SEM_PENDENCIA_CONHECIDA_NESTA_ETAPA",
+      "pendencias": []
+    },
+    {
+      "id": "GT-259",
+      "himnario": "Gloria y Triunfo",
+      "numero": 259,
+      "titulo": "GUARDA EL CONTACTO",
+      "patch_estrutural": "VALIDADO",
+      "texto_integral": "SEM_PENDENCIA_CONHECIDA_NESTA_ETAPA",
+      "pendencias": []
+    },
+    {
+      "id": "GT-283",
+      "himnario": "Gloria y Triunfo",
+      "numero": 283,
+      "titulo": "EN LA MAÑANA",
+      "patch_estrutural": "VALIDADO",
+      "texto_integral": "PENDENTE_DE_FONTE",
+      "pendencias": [
+        "Possível OCR \"tierra mis Allí\" permanece pendente.",
+        "Revisar acentuação/editorial de \"rio\" conforme fonte."
+      ]
+    },
+    {
+      "id": "SION-015",
+      "himnario": "Himnos de Sión",
+      "numero": 15,
+      "titulo": "MÁS DE JESÚS",
+      "patch_estrutural": "VALIDADO",
+      "texto_integral": "SEM_PENDENCIA_CONHECIDA_NESTA_ETAPA",
+      "pendencias": []
+    },
+    {
+      "id": "SION-016",
+      "himnario": "Himnos de Sión",
+      "numero": 16,
+      "titulo": "GRANDE GOZO HAY EN MI ALMA",
+      "patch_estrutural": "VALIDADO",
+      "texto_integral": "SEM_PENDENCIA_CONHECIDA_NESTA_ETAPA",
+      "pendencias": []
+    },
+    {
+      "id": "SION-024",
+      "himnario": "Himnos de Sión",
+      "numero": 24,
+      "titulo": "CRISTO LA ROCA",
+      "patch_estrutural": "VALIDADO",
+      "texto_integral": "PENDENTE_DE_FONTE",
+      "pendencias": [
+        "Trecho truncado \"confiando mis.\" permanece pendente."
+      ]
+    },
+    {
+      "id": "SION-026",
+      "himnario": "Himnos de Sión",
+      "numero": 26,
+      "titulo": "¡OH! YO QUIERO ANDAR CON CRISTO",
+      "patch_estrutural": "VALIDADO",
+      "texto_integral": "PENDENTE_DE_FONTE",
+      "pendencias": [
+        "Possível OCR \"serIe\" permanece pendente."
+      ]
+    },
+    {
+      "id": "SION-038",
+      "himnario": "Himnos de Sión",
+      "numero": 38,
+      "titulo": "LA BANDERA DE LA CRUZ",
+      "patch_estrutural": "VALIDADO",
+      "texto_integral": "SEM_PENDENCIA_CONHECIDA_NESTA_ETAPA",
+      "pendencias": []
+    },
+    {
+      "id": "SION-107",
+      "himnario": "Himnos de Sión",
+      "numero": 107,
+      "titulo": "GUARDA EL CONTACTO",
+      "patch_estrutural": "VALIDADO",
+      "texto_integral": "SEM_PENDENCIA_CONHECIDA_NESTA_ETAPA",
+      "pendencias": []
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+AUDITORIA HINÁRIA ADMFC - ETAPA 9B
+TOTAL: 12
+
+============================================================
+CASO 01 / 12
+IDS: GT-040
+TÍTULO: EN LOS NEGOCIOS DEL REY
+STATUS: CONFIRMADO_ERRO
+CONFIANÇA: alta
+AÇÕES REGISTRADAS:
+1. separar_coro_da_estrofe_1
+
+============================================================
+CASO 02 / 12
+IDS: GT-052 + SION-024
+TÍTULO: CRISTO LA ROCA
+STATUS: CONFIRMADO_ERRO
+CONFIANÇA: alta
+AÇÕES REGISTRADAS:
+1. separar_coro_da_estrofe_1
+2. corrigir_truncamento_confiando_mis
+
+============================================================
+CASO 03 / 12
+IDS: GT-100 + SION-059
+TÍTULO: A LOS PIES DE JESUCRISTO
+STATUS: CONFIRMADO_ERRO
+CONFIANÇA: alta
+AÇÕES REGISTRADAS:
+1. remover_marcador_coro
+2. incorporar_falso_coro_na_estrofe_1
+
+============================================================
+CASO 04 / 12
+IDS: GT-161
+TÍTULO: PECADOR, VEN AL DULCE JESÚS
+STATUS: ESTROFES_FUNDIDAS
+CONFIANÇA: alta
+AÇÕES REGISTRADAS:
+1. manter_coro
+2. separar_estrofe_4_da_estrofe_3
+
+============================================================
+CASO 05 / 12
+IDS: GT-186
+TÍTULO: PRESENTIMOS DEL MUNDO DICHOSO
+STATUS: ESTROFES_FUNDIDAS
+CONFIANÇA: alta
+AÇÕES REGISTRADAS:
+1. manter_coro
+2. separar_estrofe_4_da_estrofe_3
+
+============================================================
+CASO 06 / 12
+IDS: GT-259 + SION-107
+TÍTULO: GUARDA EL CONTACTO
+STATUS: ESTROFES_FUNDIDAS
+CONFIANÇA: alta
+AÇÕES REGISTRADAS:
+1. manter_coro
+2. separar_estrofe_4_da_estrofe_3
+
+============================================================
+CASO 07 / 12
+IDS: GT-283
+TÍTULO: EN LA MAÑANA
+STATUS: CONFIRMADO_ERRO
+CONFIANÇA: alta
+AÇÕES REGISTRADAS:
+1. separar_coro_da_estrofe_1
+
+============================================================
+CASO 08 / 12
+IDS: GT-056 + SION-026
+TÍTULO: ¡OH, YO QUIERO ANDAR CON CRISTO!
+STATUS: ERRO_ESTRUTURAL
+CONFIANÇA: alta
+AÇÕES REGISTRADAS:
+1. marcar_primeira_estrofe_como_1
+2. manter_coro
+3. revisar_serIe_para_serle
+
+============================================================
+CASO 09 / 12
+IDS: GT-081 + SION-038
+TÍTULO: LA BANDERA DE LA CRUZ
+STATUS: ERRO_ESTRUTURAL
+CONFIANÇA: alta
+AÇÕES REGISTRADAS:
+1. marcar_primeira_estrofe_como_1
+2. manter_coro
+
+============================================================
+CASO 10 / 12
+IDS: GT-028 + SION-015
+TÍTULO: MÁS DE JESÚS
+STATUS: ESTROFES_FUNDIDAS
+CONFIANÇA: alta
+AÇÕES REGISTRADAS:
+1. manter_coro
+2. separar_estrofe_4_da_estrofe_3
+
+============================================================
+CASO 11 / 12
+IDS: GT-033 + SION-016
+TÍTULO: GRANDE GOZO HAY EN MI ALMA
+STATUS: ESTROFES_FUNDIDAS
+CONFIANÇA: alta
+AÇÕES REGISTRADAS:
+1. manter_coro
+2. separar_estrofe_4_da_estrofe_3
+
+============================================================
+CASO 12 / 12
+IDS: GT-036 + SION-019
+TÍTULO: ENTERA CONSAGRACIÓN
+STATUS: ESTROFES_FUNDIDAS
+CONFIANÇA: alta
+AÇÕES REGISTRADAS:
+1. manter_coro
+2. separar_estrofe_5_da_estrofe_4
+3. inicio_estrofe_5_toma_tu_mi_amor
+
+============================================================
+TOTAL INSPECIONADO: 12
+BASE MESTRE NÃO ALTERADA.

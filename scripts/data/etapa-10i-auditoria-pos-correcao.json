@@ -1,0 +1,16 @@
+{
+  "etapa": "10I",
+  "status": "APROVADO",
+  "hashOficial": "48cd4be20055aa9243a0a2223aef36376186dfd202f72ca4a4666015c44445a5",
+  "hashBase": "48cd4be20055aa9243a0a2223aef36376186dfd202f72ca4a4666015c44445a5",
+  "hashBackup": "a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41",
+  "totalHinos": 718,
+  "correcoes": {
+    "esperadas": 14,
+    "ok": 14,
+    "falhas": 0
+  },
+  "residuosAntigos": 0,
+  "bloqueadosPresentes": 4,
+  "baseAlterada": false
+}

@@ -1,0 +1,203 @@
+============================================
+ AUDITORIA HINÁRIA - ETAPA 11A
+ DIAGNÓSTICO ESTRUTURAL DAS LETRAS
+ SOMENTE LEITURA
+============================================
+
+============================================
+ 1. CONTROLE
+============================================
+HASH ATUAL:   214d87c16a3a1a18c9bd525c5474dff344fa78857762960084de51771262cbfb
+HASH OFICIAL: 214d87c16a3a1a18c9bd525c5474dff344fa78857762960084de51771262cbfb
+HASH: OK
+TOTAL DE HINOS: 718
+
+============================================
+ 2. CASOS-TESTEMUNHA
+============================================
+
+GT-052 | CRISTO LA ROCA
+TAMANHO: 675
+MARCADOR CORO: SIM
+OCORRÊNCIAS "CORO": 1
+INÍCIO: 1 | En las olas inmensas de embravecido mar, Que asaltan de mi alma la pobre embarcación, De rodillas a Cristo clamé, y el huracán Deshecho fue al instante a la voz de Dios. | CORO: | Es Cristo la Roca, el ancla de mi fe; Los males, lamentos, y ayes de temor, | Terminan por siempre, con mi supremo Rey; Es Jesucristo mi refugio. | 2 | Me guarda de peligros, de pruebas, de dolor; Él manda que los vientos no agiten tempestad, Los mares se detienen, la ola reposó, | Y en Cristo fijo el ancla, confiando más. | 3 | Mi dulce Salvador, sí, mi hermoso amigo y Dios, Que libra de tristezas y aleja amarga hiel: | Por fe yo i
+
+GT-100 | A LOS PIES DE JESUCRISTO
+TAMANHO: 596
+MARCADOR CORO: SIM
+OCORRÊNCIAS "CORO": 1
+INÍCIO: 1 | A los pies de Jesucristo Es el sitio aquí mejor, Escuchando cual María Las palabras de su amor. | CORO: | A los pies de Jesucristo Gozaré su comunión, Pues su mano fiel y tierna | Me ha provisto protección. | 2 | A los pies de Jesucristo Hallo tierna compasión; El quitó ya mis afanes, | Ya me ha dado bendición. | ¡Puedo yo decirle a Cristo Mis cuidados y temor! | Y con él tendrá mi alma Gozo, paz, eterno amor. | 3 | A los pies de Jesucristo Yo tendré su bendición; En sus ojos hay dulzura Y en su seno protección. | ¡Qué feliz es el momento Que yo paso junto a ti! Ya anhelo el encuentro Cuando vengas tú por mí.
+
+GT-188 | BELLAS PALABRAS DE VIDA
+TAMANHO: 610
+MARCADOR CORO: NÃO
+OCORRÊNCIAS "CORO": 0
+INÍCIO: 1 | ¡Oh, cantádmelas otra vez! Bellas palabras de vida; Hallo en ellas mi gozo y luz, Bellas palabras de vida; | Si, de luz y vida; Son sostén y a: | || ¡Qué bellas son, qué bellas son! | Bellas palabras de vida.|| | 2 | Jesucristo a todos da Bellas palabras de vida; Hoy escúchalas, pecador, Bellas palabras de vida; Bondadoso te salva, | Y al cielo te llama: | || ¡Qué bellas son, qué bellas son! | Bellas palabras de vida.|| | 3 | Grato el cántico sonará, Bellas palabras de vida; Tus pecados perdonará, Bellas palabras de vida; Si, de luz y vida, | Son sostén y guía: | || ¡Qué bellas son, qué bellas son! | Bellas palabras 
+
+============================================
+ 3. VARREDURA DE MARCADORES DE CORO
+============================================
+HINOS COM MARCADOR EXPLÍCITO CORO: 525
+HINOS COM MAIS DE UM MARCADOR CORO: 18
+- GT-046 | MÁS BLANCO QUE LA NIEVE | CORO x 2
+- GT-074 | DILO A CRISTO | CORO x 4
+- GT-104 | MI CULPA EL LLEVO | CORO x 2
+- GT-119 | JESÚS ES MI AMIGO | CORO x 2
+- GT-131 | PAZ | CORO x 2
+- GT-139 | QUIERO VER MI PATRIA | CORO x 2
+- GT-146 | ME BUSCA A MÍ | CORO x 4
+- GT-153 | ¡ALELUYA, AMEN! | CORO x 2
+- GT-171 | MEDITAD | CORO x 4
+- GT-244 | ADORADLE | CORO x 2
+- GT-262 | EL QUE HA DE VENIR, VENDRÁ | CORO x 2
+- SION-033 | DILO A CRISTO | CORO x 4
+- SION-064 | QUIERO VER MI PATRIA | CORO x 2
+- SION-103 | ADORADLE | CORO x 2
+- SION-109 | EL QUE HA DE VENIR, VENDRÁ | CORO x 2
+- SION-267 | GLORIOSO GÓLGOTA | CORO x 2
+- SION-272 | DE LA NOCHE OSCURA | CORO x 2
+- SION-277 | UN CORTO TIEMPO MÁS | CORO x 2
+
+============================================
+ 4. FRAGMENTOS / LINHAS SUSPEITAS
+============================================
+FRAGMENTOS SUSPEITOS ENCONTRADOS: 1
+- GT-177 | NO TE DE TEMOR HABLAR POR CRISTO | linha 17 | "S"
+   ¡Note dé temor vivir por Cristo Esa vida que te da! | Si tan sólo en él por siempre fiares, El con bien te sacará. | S | ¡No te dé temor morir por Cristo! | Vía, verdad y vida es él; Él te llevará con su ternura
+
+============================================
+ 5. BLOCOS EXCESSIVAMENTE LONGOS
+============================================
+BLOCOS >= 90 PALAVRAS: 357
+- GT-003 | JESÚS VENDRÁ OTRA VEZ | bloco 1 | 166 palavras
+- GT-004 | DULCE COMUNIÓN | bloco 1 | 99 palavras
+- GT-005 | DESDE QUE SALVO ESTOY | bloco 1 | 102 palavras
+- GT-006 | LIBERTAD | bloco 1 | 106 palavras
+- GT-007 | TODO A CRISTO YO ME RINDO | bloco 1 | 109 palavras
+- GT-009 | GLORIA SIN FIN | bloco 1 | 104 palavras
+- GT-010 | CRISTO QUIERE LIMPIOS CORAZONES | bloco 1 | 139 palavras
+- GT-011 | CARIÑOSO SALVADOR | bloco 1 | 105 palavras
+- GT-013 | DULCE ORACIÓN | bloco 1 | 114 palavras
+- GT-014 | ¡OH QUE AMIGO! | bloco 1 | 111 palavras
+- GT-015 | FIRMES Y ADELANTE | bloco 1 | 126 palavras
+- GT-018 | GRATO ES DECIR LA HISTORIA | bloco 1 | 125 palavras
+- GT-019 | ¿OYES COMO EL EVANGELIO? | bloco 1 | 111 palavras
+- GT-020 | CUANDO ALLÁ SE PASE LISTA | bloco 1 | 128 palavras
+- GT-024 | ANDANDO EN LA LUZ | bloco 1 | 114 palavras
+- GT-025 | ¡OH, CUAN DULCE! | bloco 1 | 103 palavras
+- GT-026 | ALLÍ NO HABRÁ TRIBULACIÓN | bloco 1 | 98 palavras
+- GT-027 | ¡PAZ! ¡PAZ! ¡CUAN DULCE PAZ! | bloco 1 | 177 palavras
+- GT-028 | MÁS DE JESÚS | bloco 1 | 105 palavras
+- GT-029 | ACEPTA EL PERDÓN DE JESÚS | bloco 1 | 122 palavras
+- GT-030 | HAY PODER EN JESÚS | bloco 1 | 103 palavras
+- GT-031 | CRISTO ES MI DULCE SALVADOR | bloco 1 | 138 palavras
+- GT-032 | ¡LOORES A DIOS! | bloco 1 | 104 palavras
+- GT-033 | GRANDE GOZO HAY EN MI ALMA HOY | bloco 1 | 111 palavras
+- GT-034 | TENDRÁS QUE RENACER | bloco 1 | 114 palavras
+- GT-035 | CANTARE LA MARAVILLA | bloco 1 | 97 palavras
+- GT-036 | ENTERA CONSAGRACIÓN | bloco 1 | 129 palavras
+- GT-037 | ¿LLEVAS SOLO TU CARGA? | bloco 1 | 96 palavras
+- GT-038 | LA CRUZ ME GUIARA | bloco 1 | 101 palavras
+- GT-039 | SANTA BIBLIA | bloco 1 | 115 palavras
+- GT-040 | EN LOS NEGOCIOS DEL REY | bloco 1 | 112 palavras
+- GT-041 | HAY UN PRECIOSO MANANTIAL | bloco 1 | 97 palavras
+- GT-044 | YA TODO DEJÉ | bloco 1 | 140 palavras
+- GT-045 | ¿ERES LIMPIO EN LA SANGRE? | bloco 1 | 131 palavras
+- GT-046 | MÁS BLANCO QUE LA NIEVE | bloco 1 | 148 palavras
+- GT-047 | DONDEQUIERA CON JESÚS | bloco 1 | 124 palavras
+- GT-048 | PENTECOSTÉS PARA TODOS | bloco 1 | 106 palavras
+- GT-049 | EN LA VIÑA DEL SEÑOR | bloco 1 | 95 palavras
+- GT-051 | LA CRUZ Y LA GRACIA DE DIOS | bloco 1 | 95 palavras
+- GT-052 | CRISTO LA ROCA | bloco 1 | 129 palavras
+- GT-053 | EN LA CRUZ | bloco 1 | 140 palavras
+- GT-054 | QUE HAGA EN TI SU VOLUNTAD | bloco 1 | 99 palavras
+- GT-055 | EL MUNDO PERDIDO | bloco 1 | 106 palavras
+- GT-056 | ¡OH, YO QUIERO ANDAR CON CRISTO! | bloco 1 | 150 palavras
+- GT-057 | GLORIA AL CORDERO | bloco 1 | 98 palavras
+- GT-058 | PUEDO ENTONCES CONOCERLE | bloco 1 | 154 palavras
+- GT-060 | ESTRELLAS EN MI CORONA | bloco 1 | 118 palavras
+- GT-061 | NADA HAY QUE ME PUEDA APARTAR | bloco 1 | 103 palavras
+- GT-062 | CON CRISTO YO IRÉ | bloco 1 | 153 palavras
+- GT-063 | DIOS OS GUARDE | bloco 1 | 115 palavras
+- GT-064 | VOLUNTARIOS DE JESÚS | bloco 1 | 146 palavras
+- GT-065 | A SOLAS CON JESÚS | bloco 1 | 105 palavras
+- GT-066 | ¡SALUD! ¡SALUD! | bloco 1 | 149 palavras
+- GT-067 | DE MI TIERNO SALVADOR LIBRE ESTOY | bloco 1 | 151 palavras
+- GT-068 | LIBRE ESTOY | bloco 1 | 117 palavras
+- GT-069 | PRECIOSO ES JESÚS | bloco 1 | 137 palavras
+- GT-070 | MI SUEÑO INEFABLE | bloco 1 | 117 palavras
+- GT-071 | DÍA FELIZ | bloco 1 | 121 palavras
+- GT-072 | HAY QUIEN VIGILE | bloco 1 | 135 palavras
+- GT-074 | DILO A CRISTO | bloco 1 | 132 palavras
+- GT-075 | TUYO SOY, JESÚS | bloco 1 | 113 palavras
+- GT-076 | EL CONSOLADOR HA VENIDO | bloco 1 | 130 palavras
+- GT-077 | CUANDO DIOS LA SANGRE VE | bloco 1 | 112 palavras
+- GT-080 | PUEDO OÍR TU VOZ LLAMANDO | bloco 1 | 102 palavras
+- GT-081 | LA BANDERA DE LA CRUZ | bloco 1 | 103 palavras
+- GT-082 | VEN PECADOR | bloco 1 | 95 palavras
+- GT-084 | ¿SOY YO SOLDADO DE JESÚS? | bloco 1 | 102 palavras
+- GT-085 | ¡OJALA FUERA HOY! | bloco 1 | 142 palavras
+- GT-087 | EL AMOR DE JESUCRISTO | bloco 1 | 166 palavras
+- GT-088 | CERCA, MAS CERCA | bloco 1 | 99 palavras
+- GT-089 | ¡OH, EXCELSA GRACIA DEL AMOR | bloco 1 | 97 palavras
+- GT-090 | YO ANDO CON CRISTO | bloco 1 | 126 palavras
+- GT-091 | YA SALVO SOY | bloco 1 | 103 palavras
+- GT-092 | BRILLA EN TU LUGAR | bloco 1 | 112 palavras
+- GT-094 | DIOS ES AMOR | bloco 1 | 116 palavras
+- GT-095 | MAS CUAL JESÚS | bloco 1 | 105 palavras
+- GT-096 | ¡SANTO! ¡SANTO! ¡SANTO! | bloco 1 | 146 palavras
+- GT-097 | CUANDO EL VINO A MI CORAZÓN | bloco 1 | 116 palavras
+- GT-099 | NADA DE SOMBRAS | bloco 1 | 106 palavras
+- GT-100 | A LOS PIES DE JESUCRISTO | bloco 1 | 116 palavras
+
+============================================
+ 6. COMPARAÇÃO GT / SIÓN POR TÍTULO
+============================================
+PARES COM DIFERENÇA DE MARCADOR CORO: 5
+- GT-023 <-> SION-141 | VEN A CRISTO | GT CORO: NÃO | SIÓN CORO: SIM
+- GT-169 <-> SION-258 | HAY UN LUGAR DO QUIERO ESTAR | GT CORO: SIM | SIÓN CORO: NÃO
+- GT-347 <-> SION-139 | CRISTO ME AYUDA POR EL A VIVIR | GT CORO: NÃO | SIÓN CORO: SIM
+- GT-356 <-> SION-313 | EL EVANGELIO | GT CORO: NÃO | SIÓN CORO: SIM
+- GT-373 <-> SION-219 | OÍD, OÍD, LO QUE NOS MANDA | GT CORO: NÃO | SIÓN CORO: SIM
+
+============================================
+ 7. INVESTIGAÇÃO ESPECÍFICA GT-052
+============================================
+TÍTULO: CRISTO LA ROCA
+MARCADOR CORO: SIM
+"Es Cristo la Roca" LOCALIZADO: SIM
+CONTEXTO:
+1 | En las olas inmensas de embravecido mar, Que asaltan de mi alma la pobre embarcación, De rodillas a Cristo clamé, y el huracán Deshecho fue al instante a la voz de Dios. | CORO: | Es Cristo la Roca, el ancla de mi fe; Los males, lamentos, y ayes de temor, | Terminan por siempre, con mi supremo Rey; Es Jesucristo mi refugio. | 2 | Me guarda de peligros, de pruebas, de dolor; Él manda que los vientos no agiten tempestad, Los mares se detienen, la ola reposó, | Y en Cristo fijo el ancla, confiando más. | 3 | Mi dulce Salvador, sí, mi hermo
+
+============================================
+ 8. INVESTIGAÇÃO ESPECÍFICA GT-100
+============================================
+TÍTULO: A LOS PIES DE JESUCRISTO
+MARCADOR CORO: SIM
+CONTEXTO:
+1 | A los pies de Jesucristo Es el sitio aquí mejor, Escuchando cual María Las palabras de su amor. | CORO: | A los pies de Jesucristo Gozaré su comunión, Pues su mano fiel y tierna | Me ha provisto protección. | 2 | A los pies de Jesucristo Hallo tierna compasión; El quitó ya mis afanes, | Ya me ha dado bendición. | ¡Puedo yo decirle a Cristo Mis cuidados y temor! | Y con él tendrá mi alma Gozo, paz, eterno amor. | 3 | A los pies de Jesucristo Yo tendré su bendició
+
+============================================
+ 9. INVESTIGAÇÃO ESPECÍFICA GT-188
+============================================
+TÍTULO: BELLAS PALABRAS DE VIDA
+MARCADOR CORO: NÃO
+"Son sostén y" LOCALIZADO: SIM
+1 | ¡Oh, cantádmelas otra vez! Bellas palabras de vida; Hallo en ellas mi gozo y luz, Bellas palabras de vida; | Si, de luz y vida; Son sostén y a: | || ¡Qué bellas son, qué bellas son! | Bellas palabras de vida.|| | 2 | Jesucristo a todos da Bellas palabras de vida; Hoy escúchalas, pecador, Bellas palabras de vida; Bondadoso te salva, | Y al cielo te llama: | || ¡Qué bellas son, qué bellas 
+"guía" LOCALIZADO: SIM
+bras de vida; Bondadoso te salva, | Y al cielo te llama: | || ¡Qué bellas son, qué bellas son! | Bellas palabras de vida.|| | 3 | Grato el cántico sonará, Bellas palabras de vida; Tus pecados perdonará, Bellas palabras de vida; Si, de luz y vida, | Son sostén y guía: | || ¡Qué bellas son, qué bellas son! | Bellas palabras de vida.||
+"a:" LOCALIZADO: SIM
+1 | ¡Oh, cantádmelas otra vez! Bellas palabras de vida; Hallo en ellas mi gozo y luz, Bellas palabras de vida; | Si, de luz y vida; Son sostén y a: | || ¡Qué bellas son, qué bellas son! | Bellas palabras de vida.|| | 2 | Jesucristo a todos da Bellas palabras de vida; Hoy escúchalas, pecador, Bellas palabras de vida; Bondadoso te salva, | Y al cielo te llama: | || ¡Qué bellas son, qué bellas son! | Bellas p
+
+============================================
+ 10. CONTROLE DE IMUTABILIDADE
+============================================
+HASH ANTES:  214d87c16a3a1a18c9bd525c5474dff344fa78857762960084de51771262cbfb
+HASH DEPOIS: 214d87c16a3a1a18c9bd525c5474dff344fa78857762960084de51771262cbfb
+BASE ALTERADA: NÃO
+
+============================================
+ ETAPA 11A CONCLUÍDA
+ DIAGNÓSTICO ESTRUTURAL GERADO
+ NENHUMA CORREÇÃO APLICADA
+============================================

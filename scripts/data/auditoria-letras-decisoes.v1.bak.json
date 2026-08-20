@@ -1,0 +1,73 @@
+{
+  "versao": "1.0",
+  "data": "2026-08-19",
+  "metodo": "detector estrutural + comparação hinológica + fontes externas",
+  "base_alterada": false,
+  "decisoes": [
+    {
+      "ids": ["GT-040"],
+      "titulo": "EN LOS NEGOCIOS DEL REY",
+      "status": "CONFIRMADO_ERRO",
+      "acao": "separar_coro_da_estrofe_1",
+      "confianca": "alta"
+    },
+    {
+      "ids": ["GT-052", "SION-024"],
+      "titulo": "CRISTO LA ROCA",
+      "status": "CONFIRMADO_ERRO",
+      "acao": [
+        "separar_coro_da_estrofe_1",
+        "revisar_confiando_mis_para_confiando_mas"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "ids": ["GT-091", "SION-041"],
+      "titulo": "YA SALVO SOY",
+      "status": "FALSO_POSITIVO",
+      "acao": "manter_coro",
+      "confianca": "alta"
+    },
+    {
+      "ids": ["GT-259", "SION-107"],
+      "titulo": "GUARDA EL CONTACTO",
+      "status": "ESTROFES_FUNDIDAS",
+      "acao": [
+        "manter_coro",
+        "separar_estrofe_4_da_estrofe_3"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "ids": ["GT-284"],
+      "titulo": "SIGUE ORANDO",
+      "status": "ESTROFES_FUNDIDAS",
+      "acao": [
+        "manter_coro",
+        "separar_estrofe_4_da_estrofe_3",
+        "corrigir_erro_ocr_tu_z_eleva"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "ids": ["GT-054"],
+      "titulo": "QUE HAGA EN TI SU VOLUNTAD",
+      "status": "CORROMPIDO_TRUNCADO",
+      "acao": [
+        "reconstruir_estrofe_1",
+        "remover_vazamento_hino_55",
+        "conferir_texto_integral"
+      ],
+      "confianca": "alta"
+    }
+  ],
+  "pendentes": [
+    "GT-100",
+    "SION-059",
+    "GT-161",
+    "GT-186",
+    "GT-277",
+    "GT-283",
+    "GT-328"
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "etapa": "10O",
+  "hash": "8c6b5ae3d1dd4701a75602e2e9ff20ce13c4ce4c831f3d6a39e51e9affb80185",
+  "total_hinos": 718,
+  "faixa_39_44": [
+    {
+      "numero": 39,
+      "localizado": true,
+      "id": "GT-039",
+      "titulo": "SANTA BIBLIA",
+      "tamanho_letra": 566,
+      "numeros": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "numero": 40,
+      "localizado": true,
+      "id": "GT-040",
+      "titulo": "EN LOS NEGOCIOS DEL REY",
+      "tamanho_letra": 574,
+      "numeros": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "numero": 41,
+      "localizado": true,
+      "id": "GT-041",
+      "titulo": "HAY UN PRECIOSO MANANTIAL",
+      "tamanho_letra": 1,
+      "numeros": [
+        1
+      ]
+    },
+    {
+      "numero": 42,
+      "localizado": true,
+      "id": "GT-042",
+      "titulo": "HAY UN PRECIOSO MANANTIAL",
+      "tamanho_letra": 907,
+      "numeros": [
+        2,
+        3,
+        4,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "numero": 43,
+      "localizado": true,
+      "id": "GT-043",
+      "titulo": "A JESUCRISTO VEN SIN TARDAR",
+      "tamanho_letra": 471,
+      "numeros": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "numero": 44,
+      "localizado": true,
+      "id": "GT-044",
+      "titulo": "YA TODO DEJÉ",
+      "tamanho_letra": 651,
+      "numeros": [
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  ],
+  "gt041": {
+    "titulo": "HAY UN PRECIOSO MANANTIAL",
+    "letra": "1",
+    "apenas_marcador_1": true
+  },
+  "gt042": {
+    "titulo": "HAY UN PRECIOSO MANANTIAL",
+    "tamanho_letra": 907,
+    "numeros": [
+      2,
+      3,
+      4,
+      1,
+      2,
+      3,
+      4
+    ],
+    "titulo_interno": 3,
+    "primeira_parte": "",
+    "segunda_parte": "De sangre de Emmanuel, Que purifica a cada cual Que se sumerge en él.\nCORO:\nLávame, Señor Jesús, En la sangre de tu cruz: Lávame, Señor Jesús,\nY más blanco que la nieve yo seré:\n2\nEl malhechor se convirtió Pendiente de una cruz; El vio la fuente y se lavó, Creyendo en Jesús.\n3\nY yo también mi pobre ser Allí logré lavar:\nLa gloria de su gran poder Me gozo en ensalzar.\n4\n¡Eterna fuente carmesí!\n¡Raudal de puro amor! Se lavará por siempre en ti\nEl pueblo del Señor.\nHAY UN PRECIOSO MANANTIAL\n1\nHay un precioso manantial De sangre de Emmanuel, Que purifica a cada cual Que se sumerge en él.\n2\nEl malhechor se convirtió Pendiente de una cruz; El vio la fuente y se lavó, Creyendo en Jesús.\n3\nY yo también mi pobre ser Allí logré lavar;\nLa gloria de su gran poder, Me gozo en ensalzar.\n4\n¡Eterna fuente carmesí!\n¡Raudal de puro amor!\nSe lavará por siempre en ti, El pueblo del Señor.",
+    "semelhanca_vocabular": null
+  },
+  "diagnostico": {
+    "gt041_apenas_marcador_1": true,
+    "mesmo_titulo": true,
+    "titulo_repetido_no_gt042": true,
+    "sequencia_gt042": [
+      2,
+      3,
+      4,
+      1,
+      2,
+      3,
+      4
+    ],
+    "erro_segmentacao": true,
+    "numeracao_editorial_confirmada": false
+  },
+  "decisao": "AGUARDAR_FONTE_ORIGINAL",
+  "alteracao_base": false
+}

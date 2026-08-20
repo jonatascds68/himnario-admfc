@@ -1,0 +1,923 @@
+============================================
+ 1. BASE MESTRE
+============================================
+ARQUIVO: assets/base_mestre.json
+HASH: 214d87c16a3a1a18c9bd525c5474dff344fa78857762960084de51771262cbfb
+HASH OFICIAL: OK
+
+============================================
+ 2. REFERÊNCIAS À BASE MESTRE
+============================================
+
+ARQUIVO: app/admin/edit/[id].tsx
+  FileSystem -> 8
+  cache -> 1
+
+ARQUIVO: app/admin.tsx
+  FileSystem -> 4
+  JSON\.parse -> 1
+  JSON\.stringify -> 2
+  restore -> 8
+  backup -> 7
+  cache -> 2
+
+ARQUIVO: src/lib/api.ts
+  base_mestre -> 1
+  JSON\.parse -> 2
+  JSON\.stringify -> 1
+  restore -> 3
+  backup -> 4
+  seed -> 3
+
+ARQUIVO: src/lib/collections.ts
+  JSON\.parse -> 1
+  JSON\.stringify -> 1
+
+ARQUIVO: src/lib/storage.ts
+  AsyncStorage -> 8
+  SecureStore -> 4
+  getItem\s*\( -> 3
+  setItem\s*\( -> 2
+  restore -> 4
+
+ARQUIVO: src/utils/storage/index.ts
+  AsyncStorage -> 6
+  SecureStore -> 4
+  getItem\s*\( -> 2
+  setItem\s*\( -> 1
+  JSON\.stringify -> 3
+  restore -> 4
+
+ARQUIVO: src/utils/storage/index.web.ts
+  AsyncStorage -> 7
+  getItem\s*\( -> 3
+  setItem\s*\( -> 2
+  JSON\.stringify -> 1
+
+ARQUIVO: src/utils/storage/storage-base.ts
+  AsyncStorage -> 1
+  SecureStore -> 1
+  JSON\.parse -> 2
+  restore -> 1
+
+ARQUIVO: scripts/aplicar-fontes-gt.js
+  base_mestre -> 2
+  JSON\.parse -> 2
+  JSON\.stringify -> 1
+
+ARQUIVO: scripts/cmd-guard/matcher.js
+  cache -> 3
+
+ARQUIVO: scripts/cmd-guard/modes.js
+  JSON\.parse -> 1
+
+ARQUIVO: scripts/cmd-guard/rules.js
+  JSON\.parse -> 1
+  JSON\.stringify -> 1
+
+ARQUIVO: scripts/data/auditoria-letras-estrutural-v2.json
+  base_mestre -> 1
+
+ARQUIVO: scripts/data/auditoria-letras-estrutural.json
+  base_mestre -> 1
+
+ARQUIVO: scripts/data/etapa-10a-varredura-global.json
+  base_mestre -> 1
+
+ARQUIVO: scripts/data/etapa-10b-triagem-inteligente.json
+  base_mestre -> 1
+
+ARQUIVO: scripts/data/etapa-10c-dossie-cotejo.json
+  base_mestre -> 1
+
+ARQUIVO: scripts/data/etapa-10d-pacote-cotejo.json
+  base_mestre -> 1
+  backup -> 1
+
+ARQUIVO: scripts/data/etapa-10e-cotejo-documental.json
+  base_mestre -> 1
+
+ARQUIVO: scripts/data/etapa-10h-aplicacao-transacional.json
+  base_mestre -> 1
+  backup -> 1
+
+ARQUIVO: scripts/data/etapa-10i-auditoria-pos-correcao.json
+  backup -> 1
+
+ARQUIVO: scripts/data/etapa-10n-correcao-documental-gt283.json
+  base_mestre -> 1
+  backup -> 2
+
+ARQUIVO: scripts/data/etapa-10p-correcao-gt041-gt042.json
+  base_mestre -> 1
+  backup -> 2
+
+ARQUIVO: scripts/data/etapa-9k-decisao-documental.json
+  base_mestre -> 1
+
+ARQUIVO: scripts/data/etapa-9n-manifesto-rollback.json
+  base_mestre -> 8
+  backup -> 7
+
+ARQUIVO: scripts/data/etapa-9o-aplicacao-real.json
+  base_mestre -> 4
+  backup -> 4
+
+ARQUIVO: scripts/data/etapa-9p-fechamento-lote-9.json
+  base_mestre -> 3
+  backup -> 2
+
+ARQUIVO: scripts/etapa-10e-cotejo-documental.js
+  base_mestre -> 1
+  JSON\.parse -> 2
+  JSON\.stringify -> 1
+
+ARQUIVO: scripts/etapa-10f-simulacao-controlada.js
+  base_mestre -> 2
+  JSON\.parse -> 2
+  JSON\.stringify -> 2
+
+ARQUIVO: scripts/etapa-10g-aprovacao-tecnica.js
+  base_mestre -> 1
+  JSON\.parse -> 2
+  JSON\.stringify -> 1
+
+ARQUIVO: scripts/etapa-10h-aplicacao-transacional.js
+  base_mestre -> 3
+  FileSystem -> 1
+  JSON\.parse -> 4
+  JSON\.stringify -> 2
+  backup -> 33
+
+ARQUIVO: scripts/etapa-10i-auditoria-pos-correcao.js
+  base_mestre -> 2
+  JSON\.parse -> 2
+  JSON\.stringify -> 1
+  backup -> 23
+
+ARQUIVO: scripts/etapa-10j-investigacao-bloqueados.js
+  base_mestre -> 1
+  JSON\.parse -> 1
+  JSON\.stringify -> 1
+
+ARQUIVO: scripts/etapa-10k-resolucao-bloqueados.js
+  base_mestre -> 1
+  JSON\.parse -> 1
+  JSON\.stringify -> 1
+
+ARQUIVO: scripts/etapa-10l-diagnostico-documental.js
+  base_mestre -> 1
+  JSON\.parse -> 1
+  JSON\.stringify -> 2
+
+ARQUIVO: scripts/etapa-10m-resolucao-editorial.js
+  base_mestre -> 1
+  JSON\.parse -> 1
+  JSON\.stringify -> 2
+
+ARQUIVO: scripts/etapa-10n-correcao-documental-gt283.js
+  base_mestre -> 3
+  JSON\.parse -> 3
+  JSON\.stringify -> 2
+  backup -> 18
+
+ARQUIVO: scripts/etapa-10o-investigacao-gt041-gt042.js
+  base_mestre -> 1
+  JSON\.parse -> 1
+  JSON\.stringify -> 3
+
+ARQUIVO: scripts/etapa-10p-correcao-gt041-gt042.js
+  base_mestre -> 3
+  JSON\.parse -> 3
+  JSON\.stringify -> 3
+  backup -> 18
+
+ARQUIVO: scripts/etapa-10q-auditoria-final.js
+  base_mestre -> 1
+  JSON\.parse -> 1
+  JSON\.stringify -> 2
+
+ARQUIVO: scripts/etapa-11a-diagnostico-estrutural.js
+  base_mestre -> 1
+  JSON\.parse -> 1
+  JSON\.stringify -> 2
+
+ARQUIVO: scripts/etapa-11b-base-vs-parser.js
+  base_mestre -> 1
+  JSON\.parse -> 1
+  JSON\.stringify -> 6
+
+ARQUIVO: scripts/etapa-11c-letra-vs-bloques.js
+  base_mestre -> 1
+  JSON\.parse -> 1
+
+ARQUIVO: scripts/etapa-11d-rastrear-fonte-runtime.js
+  base_mestre -> 4
+  AsyncStorage -> 3
+  SecureStore -> 2
+  FileSystem -> 2
+  SQLite -> 4
+  expo-sqlite -> 2
+  localStorage -> 2
+  restore -> 4
+  backup -> 2
+  seed -> 2
+  cache -> 3
+
+ARQUIVO: scripts/importar-lacuerda-gt.js
+  base_mestre -> 1
+  JSON\.parse -> 2
+  JSON\.stringify -> 2
+
+ARQUIVO: scripts/preparar-lote-04.js
+  base_mestre -> 1
+  JSON\.parse -> 2
+  JSON\.stringify -> 1
+
+============================================
+ 3. LINHAS COM BASE / STORAGE / CACHE
+============================================
+
+--------------------------------------------
+app/admin/edit/[id].tsx
+--------------------------------------------
+0010 | import * as FileSystem from 'expo-file-system/legacy';
+0206 | const base = FileSystem.documentDirectory;
+0221 | const info = await FileSystem.getInfoAsync(uri!);
+0224 | await FileSystem.deleteAsync(uri!, {
+0247 | copyToCacheDirectory: true,
+0254 | const dir = `${FileSystem.documentDirectory}audios/`;
+0255 | const info = await FileSystem.getInfoAsync(dir);
+0258 | await FileSystem.makeDirectoryAsync(dir, {
+0271 | await FileSystem.copyAsync({
+
+--------------------------------------------
+app/admin.tsx
+--------------------------------------------
+0008 | import * as FileSystem from 'expo-file-system';
+0048 | const uri = (FileSystem as any).cacheDirectory + filename;
+0049 | await (FileSystem as any).writeAsStringAsync(uri, JSON.stringify(data, null, 2));
+0059 | const res = await DocumentPicker.getDocumentAsync({ type: ['application/json', '*/*'], copyToCacheDirectory: true });
+0067 | text = await (FileSystem as any).readAsStringAsync(res.assets[0].uri);
+
+--------------------------------------------
+src/lib/api.ts
+--------------------------------------------
+0002 | import seed from '../../assets/base_mestre.json';
+0113 | const freshHymns = ((seed as any).himnos || []) as Hymn[];
+0135 | const hymns = ((seed as any).himnos || []) as Hymn[];
+
+--------------------------------------------
+src/lib/storage.ts
+--------------------------------------------
+0002 | import AsyncStorage from '@react-native-async-storage/async-storage';
+0003 | import * as SecureStore from 'expo-secure-store';
+0009 | if (isWeb) return AsyncStorage.getItem(key);
+0010 | return AsyncStorage.getItem(key);
+0013 | return AsyncStorage.setItem(key, value);
+0016 | return AsyncStorage.removeItem(key);
+0022 | if (isWeb) return AsyncStorage.getItem(`sec_${key}`);
+0023 | return SecureStore.getItemAsync(key);
+0026 | if (isWeb) return AsyncStorage.setItem(`sec_${key}`, value);
+0027 | return SecureStore.setItemAsync(key, value);
+0030 | if (isWeb) return AsyncStorage.removeItem(`sec_${key}`);
+0031 | return SecureStore.deleteItemAsync(key);
+
+--------------------------------------------
+src/utils/storage/index.ts
+--------------------------------------------
+0006 | //   await storage.getItem(key, fallback);      // the `fallback` arg is REQUIRED
+0008 | // Namespaces: general KV -> getItem/setItem/removeItem (AsyncStorage);
+0020 | import AsyncStorage from "@react-native-async-storage/async-storage";
+0021 | import * as SecureStore from "expo-secure-store";
+0026 | // General KV — backed by AsyncStorage.
+0033 | const raw = await AsyncStorage.getItem(key);
+0046 | await AsyncStorage.setItem(key, JSON.stringify(value));
+0056 | await AsyncStorage.removeItem(key);
+0071 | const raw = await SecureStore.getItemAsync(key);
+0084 | await SecureStore.setItemAsync(key, JSON.stringify(value));
+0094 | await SecureStore.deleteItemAsync(key);
+
+--------------------------------------------
+src/utils/storage/index.web.ts
+--------------------------------------------
+0004 | // Usage: import { storage } from "@/src/utils/storage"; await storage.getItem(key, fallback);
+0005 | // No Keychain on web — secure* helpers reuse AsyncStorage (no expo-secure-store).
+0007 | import AsyncStorage from "@react-native-async-storage/async-storage";
+0012 | // General KV — backed by AsyncStorage (its built-in web shim uses IndexedDB).
+0018 | const raw = await AsyncStorage.getItem(key);
+0031 | await AsyncStorage.setItem(key, JSON.stringify(value));
+0041 | await AsyncStorage.removeItem(key);
+0049 | // Browsers have no Keychain — secure* helpers fall through to AsyncStorage.
+0054 | return this.getItem(key, fallback);
+0061 | return this.setItem(key, value);
+
+--------------------------------------------
+src/utils/storage/storage-base.ts
+--------------------------------------------
+0016 | // raw is whatever AsyncStorage / SecureStore returned: a JSON-encoded string
+
+--------------------------------------------
+scripts/aplicar-fontes-gt.js
+--------------------------------------------
+0003 | const basePath = 'assets/base_mestre.json';
+0087 | 'assets/base_mestre.bak-antes-fontes-gt.json'
+
+--------------------------------------------
+scripts/cmd-guard/matcher.js
+--------------------------------------------
+0007 | const cache = new Map();
+0010 | let isMatch = cache.get(pattern);
+0013 | cache.set(pattern, isMatch);
+
+--------------------------------------------
+scripts/data/auditoria-letras-estrutural-v2.json
+--------------------------------------------
+0003 | "source": "assets/base_mestre.json",
+
+--------------------------------------------
+scripts/data/auditoria-letras-estrutural.json
+--------------------------------------------
+0003 | "source": "assets/base_mestre.json",
+
+--------------------------------------------
+scripts/data/etapa-10a-varredura-global.json
+--------------------------------------------
+0006 | "arquivo": "assets/base_mestre.json",
+
+--------------------------------------------
+scripts/data/etapa-10b-triagem-inteligente.json
+--------------------------------------------
+0006 | "arquivo": "assets/base_mestre.json",
+
+--------------------------------------------
+scripts/data/etapa-10c-dossie-cotejo.json
+--------------------------------------------
+0006 | "arquivo": "assets/base_mestre.json",
+
+--------------------------------------------
+scripts/data/etapa-10d-pacote-cotejo.json
+--------------------------------------------
+0007 | "arquivo": "assets/base_mestre.json",
+
+--------------------------------------------
+scripts/data/etapa-10e-cotejo-documental.json
+--------------------------------------------
+0003 | "base": "assets/base_mestre.json",
+
+--------------------------------------------
+scripts/data/etapa-10h-aplicacao-transacional.json
+--------------------------------------------
+0009 | "arquivo": "assets/base_mestre.bak-etapa-10h.json",
+
+--------------------------------------------
+scripts/data/etapa-10n-correcao-documental-gt283.json
+--------------------------------------------
+0016 | "backup": "assets/base_mestre.bak-etapa-10n-gt283.json",
+
+--------------------------------------------
+scripts/data/etapa-10p-correcao-gt041-gt042.json
+--------------------------------------------
+0021 | "backup": "assets/base_mestre.bak-etapa-10p-gt041-gt042.json",
+
+--------------------------------------------
+scripts/data/etapa-9k-decisao-documental.json
+--------------------------------------------
+0005 | "hash_base_mestre": "9a8636c6a249a783a091f4dfd7fb8f36910019cb235d865486e316609365f17d",
+
+--------------------------------------------
+scripts/data/etapa-9n-manifesto-rollback.json
+--------------------------------------------
+0004 | "base_mestre": "assets/base_mestre.json",
+0005 | "backup_pre_aplicacao": "assets/base_mestre.backup-pre-9n.json",
+0054 | "origem": "assets/base_mestre.backup-pre-9n.json",
+0055 | "destino": "assets/base_mestre.json",
+0056 | "instrucao": "cp \"assets/base_mestre.backup-pre-9n.json\" \"assets/base_mestre.json\""
+0058 | "base_mestre_alterada_nesta_etapa": false
+
+--------------------------------------------
+scripts/data/etapa-9o-aplicacao-real.json
+--------------------------------------------
+0004 | "base": "assets/base_mestre.json",
+0005 | "backup_rollback": "assets/base_mestre.backup-pre-9n.json",
+0071 | "comando": "cp \"assets/base_mestre.backup-pre-9n.json\" \"assets/base_mestre.json\""
+
+--------------------------------------------
+scripts/data/etapa-9p-fechamento-lote-9.json
+--------------------------------------------
+0005 | "base_mestre": {
+0006 | "arquivo": "assets/base_mestre.json",
+0012 | "arquivo": "assets/base_mestre.backup-pre-9n.json",
+
+--------------------------------------------
+scripts/etapa-10e-cotejo-documental.js
+--------------------------------------------
+0004 | const BASE = 'assets/base_mestre.json';
+
+--------------------------------------------
+scripts/etapa-10f-simulacao-controlada.js
+--------------------------------------------
+0004 | const BASE = 'assets/base_mestre.json';
+0032 | * Isso evita assumir que base_mestre.json seja array.
+
+--------------------------------------------
+scripts/etapa-10g-aprovacao-tecnica.js
+--------------------------------------------
+0005 | 'assets/base_mestre.json';
+
+--------------------------------------------
+scripts/etapa-10h-aplicacao-transacional.js
+--------------------------------------------
+0006 | 'assets/base_mestre.json';
+0012 | 'assets/base_mestre.bak-etapa-10h.json';
+0015 | 'assets/base_mestre.tmp-etapa-10h.json';
+0480 | * rename no mesmo filesystem.
+
+--------------------------------------------
+scripts/etapa-10i-auditoria-pos-correcao.js
+--------------------------------------------
+0005 | 'assets/base_mestre.json';
+0008 | 'assets/base_mestre.bak-etapa-10h.json';
+
+--------------------------------------------
+scripts/etapa-10j-investigacao-bloqueados.js
+--------------------------------------------
+0004 | const BASE = 'assets/base_mestre.json';
+
+--------------------------------------------
+scripts/etapa-10k-resolucao-bloqueados.js
+--------------------------------------------
+0004 | const BASE = 'assets/base_mestre.json';
+
+--------------------------------------------
+scripts/etapa-10l-diagnostico-documental.js
+--------------------------------------------
+0004 | const BASE = 'assets/base_mestre.json';
+
+--------------------------------------------
+scripts/etapa-10m-resolucao-editorial.js
+--------------------------------------------
+0004 | const BASE = 'assets/base_mestre.json';
+
+--------------------------------------------
+scripts/etapa-10n-correcao-documental-gt283.js
+--------------------------------------------
+0005 | const BASE = 'assets/base_mestre.json';
+0008 | 'assets/base_mestre.bak-etapa-10n-gt283.json';
+0017 | 'assets/base_mestre.tmp-etapa-10n.json';
+
+--------------------------------------------
+scripts/etapa-10o-investigacao-gt041-gt042.js
+--------------------------------------------
+0004 | const BASE = 'assets/base_mestre.json';
+
+--------------------------------------------
+scripts/etapa-10p-correcao-gt041-gt042.js
+--------------------------------------------
+0004 | const BASE = 'assets/base_mestre.json';
+0005 | const BACKUP = 'assets/base_mestre.bak-etapa-10p-gt041-gt042.json';
+0006 | const TEMP = 'assets/base_mestre.tmp-etapa-10p.json';
+
+--------------------------------------------
+scripts/etapa-10q-auditoria-final.js
+--------------------------------------------
+0004 | const BASE = 'assets/base_mestre.json';
+
+--------------------------------------------
+scripts/etapa-11a-diagnostico-estrutural.js
+--------------------------------------------
+0004 | const BASE = 'assets/base_mestre.json';
+
+--------------------------------------------
+scripts/etapa-11b-base-vs-parser.js
+--------------------------------------------
+0004 | const BASE = 'assets/base_mestre.json';
+
+--------------------------------------------
+scripts/etapa-11c-letra-vs-bloques.js
+--------------------------------------------
+0004 | const BASE = 'assets/base_mestre.json';
+
+--------------------------------------------
+scripts/etapa-11d-rastrear-fonte-runtime.js
+--------------------------------------------
+0005 | const BASE = 'assets/base_mestre.json';
+0098 | /base_mestre/gi,
+0100 | /AsyncStorage/gi,
+0101 | /SecureStore/gi,
+0102 | /FileSystem/gi,
+0103 | /SQLite/gi,
+0104 | /expo-sqlite/gi,
+0105 | /localStorage/gi,
+0112 | /seed/gi,
+0113 | /cache/gi
+0158 | console.log(' 3. LINHAS COM BASE / STORAGE / CACHE');
+0162 | /base_mestre|AsyncStorage|SecureStore|FileSystem|SQLite|expo-sqlite|localStorage|getItem\s*\(|setItem\s*\(|seed|cache/i;
+0218 | 'base_mestre',
+0219 | 'AsyncStorage',
+
+--------------------------------------------
+scripts/importar-lacuerda-gt.js
+--------------------------------------------
+0007 | 'assets/base_mestre.json';
+
+--------------------------------------------
+scripts/preparar-lote-04.js
+--------------------------------------------
+0003 | const BASE = "assets/base_mestre.json";
+
+============================================
+ 4. INSPEÇÃO ESPECIAL src/lib/api.ts
+============================================
+0001 | import { kv, secureKv } from './storage';
+0002 | import seed from '../../assets/base_mestre.json';
+0003 | 
+0004 | // HIMNARIO ADMFC — modo independiente/local-first.
+0005 | // La lectura y edición de la base no dependen de ningún servidor Emergent.
+0006 | 
+0007 | let sessionToken: string | null = null;
+0008 | export const adminSession = {
+0009 |   set: (t: string) => { sessionToken = t; },
+0010 |   get: () => sessionToken,
+0011 |   clear: () => { sessionToken = null; },
+0012 | };
+0013 | 
+0014 | export type Himnario = 'Gloria y Triunfo' | 'Himnos de Sión';
+0015 | export interface Bloque { tipo: 'estrofa' | 'coro'; numero?: number | null; texto: string; }
+0016 | export interface CifraSegmento {
+0017 |   texto: string;
+0018 |   acorde?: string | null;
+0019 | }
+0020 | 
+0021 | export interface CifraLinea {
+0022 |   segmentos: CifraSegmento[];
+0060 | cifra_procedencia?: MediaProvenance | null;
+0061 | audio_autorizado?: boolean;
+0062 | audio_procedencia?: MediaProvenance | null;
+0063 | }
+0064 | interface LocalDb { hymns: Hymn[]; categories: { id: string; name: string }[]; }
+0065 | 
+0066 | const DEFAULT_CATEGORIES = [
+0067 |   "Actividad Cristiana",
+0068 |   "Alabanza a Dios",
+0069 |   "Amor y Gracia de Dios",
+0070 |   "Año Nuevo",
+0071 |   "Apertura de Cultos",
+0072 |   "Ayuda de Dios en las Pruebas",
+0103 | 
+0104 | function normalize(s: string) {
+0105 |   return (s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+0106 | }
+0107 | async function loadDb(): Promise<LocalDb> {
+0108 |   const raw = await kv.get(DB_KEY);
+0109 | const dataVersion = await kv.get(DB_DATA_VERSION_KEY);
+0110 | if (raw && dataVersion !== DB_DATA_VERSION) {
+0111 |   try {
+0112 |     const db = JSON.parse(raw) as LocalDb;
+0113 |     const freshHymns = ((seed as any).himnos || []) as Hymn[];
+0114 |     db.hymns = freshHymns;
+0115 |     await saveDb(db);
+0116 |     await kv.set(DB_DATA_VERSION_KEY, DB_DATA_VERSION);
+0117 |     return db;
+0118 |   } catch {}
+0119 | }
+0120 |   if (raw) {
+0121 |     try {
+0122 |       const db = JSON.parse(raw) as LocalDb;
+0131 |       if (changed) await saveDb(db);
+0132 |       return db;
+0133 |     } catch {}
+0134 |   }
+0135 |   const hymns = ((seed as any).himnos || []) as Hymn[];
+0136 |   const db: LocalDb = {
+0137 |     hymns,
+0138 |     categories: DEFAULT_CATEGORIES.map((name, i) => ({ id: `default-${i + 1}`, name }))
+0139 |   };
+0140 | await saveDb(db); await kv.set(DB_DATA_VERSION_KEY, DB_DATA_VERSION); return db;
+0141 | }
+0142 | async function saveDb(db: LocalDb) { await kv.set(DB_KEY, JSON.stringify(db)); }
+0143 | function keyToName(k?: 'gt'|'sion') { return k === 'gt' ? 'Gloria y Triunfo' : k === 'sion' ? 'Himnos de Sión' : undefined; }
+0144 | function nameToKey(n?: string) { return n === 'Gloria y Triunfo' ? 'gt' : 'sion'; }
+0145 | function requireAuth() { if (!sessionToken) throw new Error('No autorizado'); }
+0146 | 
+0147 | async function sha256(value: string): Promise<string> {
+0148 |   const Crypto = await import('expo-crypto');
+0149 |   return Crypto.digestStringAsync(
+0150 |     Crypto.CryptoDigestAlgorithm.SHA256,
+0151 |     value
+0152 |   );
+0153 | }
+0154 | 
+0155 | export const api = {
+0156 |   listHymns: async (p: { himnario?: 'gt'|'sion'; q?: string; category?: string } = {}) => {
+0157 |     const db = await loadDb(); let items = [...db.hymns]; const hn = keyToName(p.himnario);
+0158 |     if (hn) items = items.filter(h => h.himnario === hn);
+0159 |     if (p.category) items = items.filter(h => (h.categorias || []).includes(p.category!));
+0160 |     if (p.q) { const q = normalize(p.q); items = items.filter(h => String(h.numero) === p.q!.trim() || normalize(h.titulo).includes(q) || normalize(h.letra || '').includes(q)); }
+0161 |     items.sort((a,b) => a.himnario.localeCompare(b.himnario) || a.numero-b.numero);
+0162 |     return { items, count: items.length };
+0163 |   },
+0164 |   getHymn: async (id: string) => { const h=(await loadDb()).hymns.find(x=>x.id===id); if(!h) throw new Error('Himno no encontrado'); return h; },
+0165 |   getByNumber: async (himnario:'gt'|'sion', numero:number) => { const h=(await loadDb()).hymns.find(x=>x.himnario===keyToName(himnario)&&x.numero===numero); if(!h) throw new Error('Himno no encontrado'); return h; },
+0166 |   listCategories: async () => { const db=await loadDb(); return { items: db.categories.map(c=>({...c,count:db.hymns.filter(h=>(h.categorias||[]).includes(c.name)).length})) }; },
+0167 |   createCategory: async (name:string) => { requireAuth(); const db=await loadDb(); if(!db.categories.some(c=>normalize(c.name)===normalize(name))) db.categories.push({id:`cat-${Date.now()}`,name}); await saveDb(db); return {ok:true}; },
+0168 |   renameCategory: async (id:string,name:string) => { requireAuth(); const db=await loadDb(); const c=db.categories.find(x=>x.id===id); if(!c) throw new Error('Categoría no encontrada'); const old=c.name; c.name=name; db.hymns.forEach(h=>{h.categorias=(h.categorias||[]).map(x=>x===old?name:x)}); await saveDb(db); return {ok:true}; },
+0169 |   deleteCategory: async (id:string) => { requireAuth(); const db=await loadDb(); const c=db.categories.find(x=>x.id===id); if(c) db.hymns.forEach(h=>{h.categorias=(h.categorias||[]).filter(x=>x!==c.name)}); db.categories=db.categories.filter(x=>x.id!==id); await saveDb(db); return {ok:true}; },
+0170 |   stats: async () => { const hs=(await loadDb()).hymns; return {total:hs.length,gt:hs.filter(h=>h.himnario==='Gloria y Triunfo').length,sion:hs.filter(h=>h.himnario==='Himnos de Sión').length,equivalences:hs.filter(h=>h.numero_equivalente!=null).length,with_lyrics:hs.filter(h=>(h.letra||'').trim()).length}; },
+0171 | 
+0172 |   // Administración local protegida por credencial fija.
+0173 |   // La contraseña nunca se almacena en texto plano.
+0174 |   login: async (email:string,password:string) => {
+0175 |     if (!email || !password) throw new Error('Ingrese email y contraseña');
+0176 | 
+0177 |     const normalizedEmail = email.trim().toLowerCase();
+0178 | 
+0197 |   },
+0198 |   logout: async () => { adminSession.clear(); },
+0199 |   isAuth: async () => !!adminSession.get(),
+0200 | 
+0201 |   createHymn: async (payload:Partial<Hymn>) => { requireAuth(); const db=await loadDb(); const h={...payload,id:payload.id||`LOCAL-${Date.now()}`} as Hymn; db.hymns.push(h); await saveDb(db); return h; },
+0202 |   updateHymn: async (id:string,payload:Partial<Hymn>) => {
+0203 |     requireAuth();
+0204 | 
+0205 |     const db = await loadDb();
+0206 |     const i = db.hymns.findIndex(h => h.id === id);
+0207 | 
+0208 |     if (i < 0) {
+0209 |       throw new Error('Himno no encontrado');
+0210 |     }
+0211 | 
+0212 |     db.hymns[i] = {
+0213 |       ...db.hymns[i],
+0214 |       ...payload,
+0215 |       id,
+0216 |     };
+0217 | 
+0218 |     const updated = db.hymns[i];
+0219 | 
+0220 |     if (
+0221 |       updated.numero_equivalente != null &&
+0222 |       updated.himnario_equivalente
+0223 |     ) {
+0224 |       const target = db.hymns.find(
+0225 |         h =>
+0226 |           h.himnario === updated.himnario_equivalente &&
+0227 |           h.numero === updated.numero_equivalente
+0228 |       );
+0229 | 
+0230 |       if (target) {
+0231 |         const sharedKeys: (keyof Hymn)[] = [
+0232 |           'tom',
+0242 | 
+0243 |         for (const key of sharedKeys) {
+0244 |           if (
+0245 |             Object.prototype.hasOwnProperty.call(
+0246 |               payload,
+0247 |               key
+0248 |             )
+0249 |           ) {
+0250 |             (target as any)[key] =
+0251 |               (payload as any)[key];
+0252 |           }
+0253 |         }
+0254 |       }
+0255 |     }
+0256 | 
+0257 |     await saveDb(db);
+0258 |     return updated;
+0259 |   },
+0260 |   deleteHymn: async (id:string) => { requireAuth(); const db=await loadDb(); db.hymns=db.hymns.filter(h=>h.id!==id); await saveDb(db); return {ok:true}; },
+0261 |   setEquivalence: async (
+0262 |     id:string,
+0263 |     himnario:'gt'|'sion',
+0264 |     numero:number
+0265 |   ) => {
+0266 |     requireAuth();
+0267 | 
+0268 |     const db = await loadDb();
+0269 | 
+0270 |     const h = db.hymns.find(x => x.id === id);
+0271 |     const target = db.hymns.find(
+0272 |       x =>
+0273 |         x.himnario === keyToName(himnario) &&
+0274 |         x.numero === numero
+0275 |     );
+0276 | 
+0277 |     if (!h || !target) {
+0278 |       throw new Error('Himno no encontrado');
+0279 |     }
+0320 |     return {
+0321 |       hymn: h,
+0322 |     };
+0323 |   },
+0324 |   removeEquivalence: async (id:string) => { requireAuth(); const db=await loadDb(); const h=db.hymns.find(x=>x.id===id); if(!h) throw new Error('Himno no encontrado'); const oldN=h.numero_equivalente, oldH=h.himnario_equivalente; h.numero_equivalente=null; h.himnario_equivalente=null; const target=db.hymns.find(x=>x.himnario===oldH&&x.numero===oldN); if(target&&target.numero_equivalente===h.numero){target.numero_equivalente=null;target.himnario_equivalente=null;} await saveDb(db); return {hymn:h}; },
+0325 |   exportBackup: async () => { requireAuth(); const db=await loadDb(); return {schema_version:'local-1',release:'ADMFC_INDEPENDIENTE_1.0',total:db.hymns.length,himnos:db.hymns,categories:db.categories}; },
+0326 |   restoreBackup: async (p:any) => { requireAuth(); const hymns=(p.himnos||p.hymns||[]) as Hymn[]; if(!Array.isArray(hymns)||!hymns.length) throw new Error('Backup inválido'); const categories=p.categories||p.categorias||[]; await saveDb({hymns,categories}); return {restored_hymns:hymns.length,restored_categories:categories.length}; },
+0327 |   importFile: async () => { throw new Error('Importación CSV/XLSX no disponible en modo local. Use Restaurar backup (JSON).'); },
+0328 | };
+0329 | 
+0330 | export interface Section { kind:'verse'|'chorus'; index?:number; text:string; }
+0331 | export function getSections(hymn:{bloques?:Bloque[]|null;letra?:string}):Section[]{ if(hymn.bloques?.length) return hymn.bloques.map(b=>({kind:b.tipo==='coro'?'chorus':'verse',index:b.numero??undefined,text:b.texto||''})); return parseLetra(hymn.letra||''); }
+0332 | export function parseLetra(letra:string):Section[]{ if(!letra)return[]; const lines=letra.replace(/\r\n/g,'\n').split('\n'); const out:Section[]=[]; let current:Section|null=null; const push=()=>{if(current&&current.text.trim())out.push(current);current=null}; for(const raw of lines){const line=raw.trimEnd(),trimmed=line.trim(),m=/^(\d+)\.?$/.exec(trimmed),chorus=/^\s*CORO\s*:?\s*$/i.test(trimmed); if(m){push();current={kind:'verse',index:parseInt(m[1],10),text:''};}else if(chorus){push();current={kind:'chorus',text:''};}else if(trimmed===''){if(current)current.text+='\n';}else{if(!current)current={kind:'verse',text:''};current.text+=(current.text?'\n':'')+line;}} push(); return out; }
+0333 | 
+
+============================================
+ 5. OUTROS JSON COM HINOS
+============================================
+assets/base_mestre.ANTES_CATEGORIAS_SION.json
+  HASH: 3a9752d9a701e963676c7d595b1678a78e8fe5b4132f870624371889b1cf5d27
+assets/base_mestre.ANTES_CORRECAO_ESTROFES.json
+  HASH: 55bbc0248eedad1f9a9a94a9dbf5944e63346d8a62d87aa3b26eff5db4991abb
+assets/base_mestre.ANTES_CORRECAO_VINCULOS.json
+  HASH: 8bcda2b9f9b3a0d42c0c2483f2ac702fe8ae85155894dad97a76289205f7b2b8
+assets/base_mestre.ANTES_NUMEROS_INLINE.json
+  HASH: c7c0f2751745b1530f924fb46835e6ea11b9f06c323f9b76581374b9b70624bb
+assets/base_mestre.backup-pre-9n.json
+  HASH: 9a8636c6a249a783a091f4dfd7fb8f36910019cb235d865486e316609365f17d
+assets/base_mestre.bak-antes-auditoria-gt400.json
+  HASH: 4f27a120525965c771a4b0c169dc1ae264c0656cde7e03ab8fadfa2393349e61
+assets/base_mestre.bak-antes-fontes-gt.json
+  HASH: 07ff0ec8ce0aa681088431497239dd3c9c7ec17919bfcc1c061fd2d2763405c8
+assets/base_mestre.bak-etapa-10h.json
+  HASH: a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41
+assets/base_mestre.bak-etapa-10n-gt283.json
+  HASH: 48cd4be20055aa9243a0a2223aef36376186dfd202f72ca4a4666015c44445a5
+assets/base_mestre.bak-etapa-10p-gt041-gt042.json
+  HASH: 8c6b5ae3d1dd4701a75602e2e9ff20ce13c4ce4c831f3d6a39e51e9affb80185
+assets/base_mestre.bak-gt-fontes-lote1.json
+  HASH: 348b86c04b764f5eee27249c6c696840b98612f3c1e3370b69f67fdea8f2f87f
+assets/base_mestre.bak-gt147-cifra-sion001.json
+  HASH: f1786c4c6512388f005c47a0f663dc7db2bbc8a76fcb78590766141af0e1486d
+assets/base_mestre.bak-integracao-60-cifras-validadas.json
+  HASH: d0e8e79e8bd40bd6fd745864252bfaf45021d00991d85e09bc434a53747888f2
+assets/base_mestre.bak-remocao-definitiva-gt014.json
+  HASH: 07ff0ec8ce0aa681088431497239dd3c9c7ec17919bfcc1c061fd2d2763405c8
+assets/base_mestre.bak-remover-cifra-gt010.json
+  HASH: f83e32198ac2ff2f69d1208152022f20117b2ebab390a17d5f8818244467a18f
+assets/base_mestre.bak-remover-cifra-gt039.json
+  HASH: 55440a8d2d8f3df0e0389ccc23fb1c20ab39179c3d2209faee730e3b57044d3f
+assets/base_mestre.pre-cifras.json
+  HASH: 95c564624d7a1fe44261a9c238fecfcb43548b295eeddd663b149279c2420efd
+scripts/data/auditoria-letras-decisoes.json
+  HASH: 8a105b8aad61357a13c49a119b1f6f5c28130f936f41dcd30145e855442c3d2b
+scripts/data/auditoria-letras-decisoes.v1.bak.json
+  HASH: 7f0f9c5649a78611e89b97802f5c8cbd3a486c1d5f64ec5a96e894e4f4e5b687
+scripts/data/auditoria-letras-estrutural-v2.json
+  HASH: af8e249d4679d0fedd6b53edbd5925742be8f974a0c0e9b5dc322ede7ca6ed5e
+scripts/data/auditoria-letras-estrutural.json
+  HASH: 48f4cff09b1bf9b14cba96739742a099514179a282d130f30965ecaf622359df
+scripts/data/auditoria-letras-global.json
+  HASH: 9567299a00b419de16072bb360ac498ead377f20e32fae62811a800502a2ce7e
+scripts/data/auditoria-letras-plano-operacional.json
+  HASH: 5f6e154e13bc58dd534fe25ec0233676e6ec8b02d8afbb3146bf9f4ae81a9dcc
+scripts/data/auditoria-letras-triagem.json
+  HASH: f246f41eacf1225e8235c7cf26b25290804b4af35ab15409d956bd35fcef8c01
+scripts/data/etapa-10a-varredura-global.json
+  HASH: 52606eb3a682342ec8b43c12cbdc18ab5d77a4f098158a2b52ab6a2ecb22ef44
+scripts/data/etapa-10b-triagem-inteligente.json
+  HASH: 9c192cb29c2f52e982d83296c2519ff6aeba6f2a6be85b4b47101cf7ce9a8ea7
+scripts/data/etapa-11a-diagnostico-estrutural.json
+  HASH: b1569c79671d6a5468f45f3606494062a3d94dd1c2e7045f6a83a61c6725040b
+scripts/data/etapa-9d-patches-candidatos.json
+  HASH: a4b6bddcb1e5607335e3439d40e6efeeb4afa6d4a7891d429cd389656efdd3a2
+scripts/data/etapa-9f-aprovacao-conservadora.json
+  HASH: 1561368f6c9778fb46d4bdebc028cbdcea88c4142b18ec9948667df0dc1db002
+scripts/data/etapa-9g-base-simulada.json
+  HASH: 87736cf68b63e14bfe4d6c9a4253a8ccc88bbb4d486a76686d85f7b2afe2e905
+scripts/data/etapa-9i-triagem-final.json
+  HASH: be7fd6544903ed683aa3fd0f7f570b080fc868ac7e86ad7bc0b26ec2cdd07e23
+scripts/data/etapa-9k-decisao-documental.json
+  HASH: e15cd17df49f58a5e38c8deeba5de009d559492bfdf46ec1b9b60b8b3256115b
+scripts/data/etapa-9l-base-simulada-consolidada.json
+  HASH: a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41
+scripts/data/etapa-9m-auditoria-final.json
+  HASH: 8a09bc1d95201e75bb57885153214751c4d2ebd5b11fa5e68ee90fb4d8a7f012
+scripts/data/gt-auditoria-cifras.bak-bloco-03.json
+  HASH: 7f6e34328cc6e761625aa906fcc678e48c1d906083b0c284e4468d87b12e5718
+scripts/data/gt-auditoria-cifras.bak-bloco-04.json
+  HASH: 6ad69a9243b509fed5583ee537e6027b87b69e89220ad75bda747f6ad68ea4ff
+scripts/data/gt-auditoria-cifras.bak-bloco-05.json
+  HASH: 0318fdf70be71a662efb79f79bf7878c4af9b2d42eee540ec5068b4be0e5afc0
+scripts/data/gt-auditoria-cifras.bak-bloco-06-final.json
+  HASH: 850a76d00df204692f4a84bf90876e19170139ad6718488d8a859fa673d7c25c
+scripts/data/gt-auditoria-cifras.bak-gt010-039.json
+  HASH: 79bb16c7e0cdb91ec3b6cb9084a29e4813490162457080fee58b8dd7870f3961
+scripts/data/gt-auditoria-cifras.bak-gt049.json
+  HASH: 33578af8e4d094e770be669b825b31ecbfac13a232c831ce6efd955f778b7a25
+scripts/data/gt-auditoria-cifras.bak-marcar-039-incorreto.json
+  HASH: f53dd54f17492173e971104734b8f5c48939ddaf2b78d732184d49b4ce934002
+scripts/data/gt-auditoria-cifras.bak-primeiros-10.json
+  HASH: c2a9d11651a95b8439ea14e57c5d2d6b77e05d93730bfbc9fe9f6c42e22a149f
+scripts/data/gt-auditoria-cifras.bak-validar-bloco-02.json
+  HASH: e9d8481d9125f165c1674c50f30eaca943dab730c8fcf0f1ba7b551edc13704c
+scripts/data/gt-auditoria-cifras.json
+  HASH: ff30cacc089c85753c4ee646bd2f79ad89a98b9c3745fde2577418df464260c6
+scripts/data/gt-equivalentes-pendentes.json
+  HASH: 5474c40a80f759549e25fd1230372da5dae01e04f409ad6f63ecde98b7e4e924
+scripts/data/gt-equivalentes-prioridade-real.json
+  HASH: ee9681f1043507203dfd852ebcc39be550a15063aa6217833d659d99ca7f7213
+scripts/data/gt-equivalentes-priorizados.json
+  HASH: 99d7fd3b7b3a5c429aea1092ceb7ecded10ec38c966004913a0ffce368c8f1e8
+scripts/data/gt-fontes.bak-antes-lote-consolidado-01.json
+  HASH: a4213c34fe0185ba28dc16eb61cea84f777e01d0eec42e917c7e0b78a84144dd
+scripts/data/gt-fontes.bak-antes-lote-consolidado-02.json
+  HASH: a1fd55e75b7d4fef94b18541b2f5747d5b18688b3c537b9d7073dc76c1b6668a
+scripts/data/gt-fontes.bak-antes-lote-consolidado-03.json
+  HASH: 4d77f9f5975ba8d3c8241eb8c0431a51eb9cbcfd1cc59e3fd9ff5be3dbe51f5f
+scripts/data/gt-fontes.bak-antes-lote-consolidado-04.json
+  HASH: 172e4afca7e4480d7fbe5eebff151ca923c238a4b3f9fbc490cafd6fd3828344
+scripts/data/gt-fontes.bak-antes-lote-consolidado-05.json
+  HASH: d56c3da749b0a55962ea33d231a5269ece7d6f10b8f062dbde9bc5fd94f8ff04
+scripts/data/gt-fontes.bak-corrigir-audio-gt014.json
+  HASH: 172e4afca7e4480d7fbe5eebff151ca923c238a4b3f9fbc490cafd6fd3828344
+scripts/data/gt-fontes.bak-equivalentes-lote1.json
+  HASH: d38beea9e7c49e56c9e8e9ab90a4c0ddc140fb286264f72457050901e27708c0
+scripts/data/gt-fontes.bak-lote-exatos-4.json
+  HASH: a4213c34fe0185ba28dc16eb61cea84f777e01d0eec42e917c7e0b78a84144dd
+scripts/data/gt-fontes.bak-remover-cifra-gt010.json
+  HASH: 172e4afca7e4480d7fbe5eebff151ca923c238a4b3f9fbc490cafd6fd3828344
+scripts/data/gt-fontes.bak-remover-cifra-gt039.json
+  HASH: aa5870bcc54fd972e0057d141f01428ba1a5c588d8fe420045c0c898e3364226
+scripts/data/gt-fontes.bak-tom-gt103.json
+  HASH: db4c88efddabacecf4753a65ea106fea47a3dfda7217617ffca50fe43f153039
+scripts/data/gt-fontes.json
+  HASH: df503d8c3381ee26130e196c84b0a38e3a7d5d52ff1ff5125ca3faaea79c0b60
+scripts/data/gt-lote-consolidado-02.json
+  HASH: 95a20a9bae68c4e9b6d3c5939bf4b3b69240d119f43dda05e832dc90c250494f
+
+============================================
+ 6. BUSCA DE GT-052 FORA DA BASE
+============================================
+ENCONTRADO: assets/base_mestre.ANTES_CATEGORIAS_SION.json
+ENCONTRADO: assets/base_mestre.ANTES_CORRECAO_ESTROFES.json
+ENCONTRADO: assets/base_mestre.ANTES_CORRECAO_VINCULOS.json
+ENCONTRADO: assets/base_mestre.ANTES_NUMEROS_INLINE.json
+ENCONTRADO: assets/base_mestre.backup-pre-9n.json
+ENCONTRADO: assets/base_mestre.bak-antes-auditoria-gt400.json
+ENCONTRADO: assets/base_mestre.bak-antes-fontes-gt.json
+ENCONTRADO: assets/base_mestre.bak-etapa-10h.json
+ENCONTRADO: assets/base_mestre.bak-etapa-10n-gt283.json
+ENCONTRADO: assets/base_mestre.bak-etapa-10p-gt041-gt042.json
+ENCONTRADO: assets/base_mestre.bak-gt-fontes-lote1.json
+ENCONTRADO: assets/base_mestre.bak-gt147-cifra-sion001.json
+ENCONTRADO: assets/base_mestre.bak-integracao-60-cifras-validadas.json
+ENCONTRADO: assets/base_mestre.bak-remocao-definitiva-gt014.json
+ENCONTRADO: assets/base_mestre.bak-remover-cifra-gt010.json
+ENCONTRADO: assets/base_mestre.bak-remover-cifra-gt039.json
+ENCONTRADO: assets/base_mestre.pre-cifras.json
+ENCONTRADO: scripts/data/auditoria-letras-decisoes.json
+ENCONTRADO: scripts/data/auditoria-letras-decisoes.v1.bak.json
+ENCONTRADO: scripts/data/auditoria-letras-estrutural-v2.json
+ENCONTRADO: scripts/data/auditoria-letras-global.json
+ENCONTRADO: scripts/data/auditoria-letras-plano-operacional.json
+ENCONTRADO: scripts/data/auditoria-letras-triagem.json
+ENCONTRADO: scripts/data/etapa-11a-diagnostico-estrutural.json
+ENCONTRADO: scripts/data/etapa-9d-patches-candidatos.json
+ENCONTRADO: scripts/data/etapa-9f-aprovacao-conservadora.json
+ENCONTRADO: scripts/data/etapa-9g-base-simulada.json
+ENCONTRADO: scripts/data/etapa-9i-triagem-final.json
+ENCONTRADO: scripts/data/etapa-9k-decisao-documental.json
+ENCONTRADO: scripts/data/etapa-9l-base-simulada-consolidada.json
+ENCONTRADO: scripts/data/etapa-9m-auditoria-final.json
+ENCONTRADO: scripts/data/etapa-9n-manifesto-rollback.json
+ENCONTRADO: scripts/data/etapa-9o-aplicacao-real.json
+ENCONTRADO: scripts/data/etapa-9p-fechamento-lote-9.json
+ENCONTRADO: scripts/data/gt-auditoria-cifras.bak-bloco-03.json
+ENCONTRADO: scripts/data/gt-auditoria-cifras.bak-bloco-04.json
+ENCONTRADO: scripts/data/gt-auditoria-cifras.bak-bloco-05.json
+ENCONTRADO: scripts/data/gt-auditoria-cifras.bak-bloco-06-final.json
+ENCONTRADO: scripts/data/gt-auditoria-cifras.bak-gt010-039.json
+ENCONTRADO: scripts/data/gt-auditoria-cifras.bak-gt049.json
+ENCONTRADO: scripts/data/gt-auditoria-cifras.bak-marcar-039-incorreto.json
+ENCONTRADO: scripts/data/gt-auditoria-cifras.bak-primeiros-10.json
+ENCONTRADO: scripts/data/gt-auditoria-cifras.bak-validar-bloco-02.json
+ENCONTRADO: scripts/data/gt-auditoria-cifras.json
+ENCONTRADO: scripts/data/gt-equivalentes-pendentes.json
+ENCONTRADO: scripts/data/gt-equivalentes-prioridade-real.json
+ENCONTRADO: scripts/data/gt-equivalentes-priorizados.json
+ENCONTRADO: scripts/data/gt-fontes.bak-antes-lote-consolidado-03.json
+ENCONTRADO: scripts/data/gt-fontes.bak-antes-lote-consolidado-04.json
+ENCONTRADO: scripts/data/gt-fontes.bak-antes-lote-consolidado-05.json
+ENCONTRADO: scripts/data/gt-fontes.bak-corrigir-audio-gt014.json
+ENCONTRADO: scripts/data/gt-fontes.bak-remover-cifra-gt010.json
+ENCONTRADO: scripts/data/gt-fontes.bak-remover-cifra-gt039.json
+ENCONTRADO: scripts/data/gt-fontes.bak-tom-gt103.json
+ENCONTRADO: scripts/data/gt-fontes.json
+ENCONTRADO: scripts/data/gt-lote-consolidado-02.json
+ENCONTRADO: scripts/etapa-11a-diagnostico-estrutural.js
+ENCONTRADO: scripts/etapa-11b-base-vs-parser.js
+ENCONTRADO: scripts/etapa-11c-letra-vs-bloques.js
+ENCONTRADO: scripts/etapa-11d-rastrear-fonte-runtime.js
+
+============================================
+ 7. IMUTABILIDADE
+============================================
+HASH ANTES:  214d87c16a3a1a18c9bd525c5474dff344fa78857762960084de51771262cbfb
+HASH DEPOIS: 214d87c16a3a1a18c9bd525c5474dff344fa78857762960084de51771262cbfb
+BASE ALTERADA: NÃO
+
+============================================
+ ETAPA 11D CONCLUÍDA
+ FONTE DE RUNTIME MAPEADA
+ NENHUMA ALTERAÇÃO APLICADA
+============================================

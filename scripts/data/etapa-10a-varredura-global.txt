@@ -1,0 +1,922 @@
+============================================
+ AUDITORIA HINÁRIA - ETAPA 10A
+ VARREDURA GLOBAL DE ANOMALIAS
+ SOMENTE LEITURA
+============================================
+
+HASH ATUAL:    a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41
+HASH OFICIAL:  a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41
+HASH: OK
+
+TOTAL DE REGISTROS: 718
+IDS ÚNICOS: 718
+
+============================================
+ RESULTADO DA VARREDURA
+============================================
+REGISTROS COM ALGUM SINAL: 77
+REGISTROS SEM SINAL: 641
+TOTAL DE ACHADOS ÚNICOS: 162
+
+============================================
+ CONTAGEM POR TIPO
+============================================
+CORO_SEM_DOIS_PONTOS: 2
+MARCADOR_CORO_REPETIDO: 0
+PRIMEIRA_ESTROFE_SEM_NUMERO: 9
+NUMERACAO_SUSPEITA: 2
+NUMERO_REPETIDO: 3
+SALTO_NUMERICO: 2
+RESIDUO_BARRAS: 103
+ESPACO_ANTES_PONTUACAO: 26
+PONTUACAO_DUPLA_SUSPEITA: 5
+PALAVRA_OCR_MAIUSCULA_INTERNA: 10
+CARACTERE_SUBSTITUICAO: 0
+ESPACOS_MULTIPLOS: 0
+LETRA_VAZIA: 0
+
+============================================
+ REGISTROS SINALIZADOS
+============================================
+
+--------------------------------------------
+GT-288 | — 288
+TÍTULO: UNOS SI, OTROS NO
+ACHADOS: 8
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: De alguien las glorias sin fin serán; | ||¿Y tú? ¿Y yo?|| Calles de oro, mar de cristal, Pleno reposo, perfecto amor; Unos tendrán celestial hogar; | ||¿Y tú? ¿Y yo?||
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: ||¿Y tú? ¿Y yo?|| Calles de oro, mar de cristal, Pleno reposo, perfecto amor; Unos tendrán celestial hogar; | ||¿Y tú? ¿Y yo?|| | 2
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: Logran corona en vez de cruz; | ||¿Y tú? ¿Y yo?|| Mora el Rey en gloriosa luz, Con él no puede haber dolor; De alguien es esta beatitud; | ||¿Y tú? ¿Y yo?||
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: ||¿Y tú? ¿Y yo?|| Mora el Rey en gloriosa luz, Con él no puede haber dolor; De alguien es esta beatitud; | ||¿Y tú? ¿Y yo?|| | 3
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: Estos las puertas cerradas ven; | ||¿Y tú? ¿Y yo?|| | Ciegos y sordos hoy nada creen; Tarde lamentarán tal error;
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: Al que desdeñan será su juez; | ||¿Y tú? ¿Y yo?|| | 4
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: Los que procuran por Dios vivir; | ||¿Y tú? ¿Y yo?|| Cuando concluya la dura lid, En compañía del Salvador, Alguien será sin cesar feliz; | ||¿Y tú? ¿Y yo?||
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: ||¿Y tú? ¿Y yo?|| Cuando concluya la dura lid, En compañía del Salvador, Alguien será sin cesar feliz; | ||¿Y tú? ¿Y yo?||
+
+--------------------------------------------
+GT-079 | — 79
+TÍTULO: PUEDO OÍR TU VOZ LLAMANDO
+ACHADOS: 7
+  - PRIMEIRA_ESTROFE_SEM_NUMERO
+    Primeiro número estrutural encontrado: 2.
+    TRECHO: ||Seguiré do tú me guíes, || Dondequiera fiel te seguiré e , | 2 | ||Yo te seguiré en el huerto|| Sufriré contigo, mi Jesús.
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: ||Puedo oír tu voz llamando, || Trae tu cruz y ven en pos de mí. | CORO:
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: CORO: | ||Seguiré do tú me guíes, || Dondequiera fiel te seguiré e , | 2
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: 2 | ||Yo te seguiré en el huerto|| Sufriré contigo, mi Jesús. | 3
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: 3 | ||Sufriré por ti, Maestro,|| Moriré contigo, mi Jesús. | 4
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: 4 | ||Medarás la gracia y gloria, || Y por siempre tú me guiarás.
+  - ESPACO_ANTES_PONTUACAO
+    Espaço encontrado antes de sinal de pontuação.
+    TRECHO: CORO: | ||Seguiré do tú me guíes, || Dondequiera fiel te seguiré e , | 2
+
+--------------------------------------------
+GT-230 | — 230
+TÍTULO: CIMIENTO ETERNO DE LA FE
+ACHADOS: 7
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: ¿Qué más él pudiera en su libro añadir | ||Si todo a sus hijos lo ha dicho el Señor? || | 2
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: «Ya te halles enfermo o en plena salud, Ya rico, ya pobre se encuentre tu ser, En casa o viajando, por tierra o por mar, | ||Conforme a tus años será tu poder.»|| | 3
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: Tu fuerza y firmeza en mi diestra estarán, | ||Y en ella sostén y poder te daré.»|| | 4
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: Pues siempre contigo seré en tus angustias | ||Y todas tus penas podré bendecir.»|| | 5
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: El oro de tu alma más puro será, | ||pues sólo la escoria se habrá de quemar»|| | 6
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: Si nívea corona ya ciñe su sien, | ||¡Cual tierno cordero aún cuidaré!»|| | 7
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: «Al alma que anhele la paz que hay en mí, Jamás en sus luchas la habré de dejar; Si todo el infierno la quiere perder, | ||¡Yo nunca, no nunca, la puedo olvidar!»||
+
+--------------------------------------------
+GT-273 | — 273
+TÍTULO: MI PASTOR
+ACHADOS: 7
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: Un corderito débil soy, Mas cerca del Pastor estoy, | ||Su seno a todos da lugar, Conmigo tú podrás estar.|| | 2
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: Jesús se llama mi Pastor, De quien disfruto tal amor, | ||El cuida mucho a su grey, Pues él también es nuestro Rey.|| | 3
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: Recuerdo yo mi perdición, Estuve en otra condición, | ||Mas el Pastor me encontró, Me rescató y paz me dio.|| | 4
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: ¡Oh, cuán benigno es, y ved! En pastos verdes yo yacer, | ||EI agua fresca me dará, Ninguna gracia faltará." | 5
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: Si pasos inciertos doy, Me dice: «Yo contigo estoy»: | ||Conoce mi camino él, Promete serme Guía fiel.|| | 6
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: Aun cuando haya lobos mil, El corderito en su redil, | ||No teme, porque su Pastor Los ahuyenta con valor.|| | 7
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: ¡Si mucho más he de gozar! | ||Al cielo pronto yo iré Y con Jesús descansaré.||
+
+--------------------------------------------
+GT-170 | — 170
+TÍTULO: LA PALABRA HOY SEMBRADA
+ACHADOS: 6
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: La palabra hoy sembrada Hazla, Cristo, en mi nacer, Para darle crecimiento Sólo tienes tú poder: | ||Ricos frutos tú nos puedes conceder.|| | 2
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: La semilla que tu siervo Ha sembrado con saber, No permitas que las aves Se la vengan a comer: | ||Ricos frutos tú nos puedes conceder.|| | 3
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: Y tu rica bendición; No la ahoguen las espinas De congojas y aflicción: | ||Ricos frutos tú nos puedes conceder.|| | 4
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: Que su efecto muy profundo, En la mente y corazón, Llevará consigo al mundo Que le das la salvación: | ||Ricos frutos tú nos puedes conceder.|| | 5
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: Sembraremos la palabra, Con amor y profusión, Esperando la cosecha En la célica mansión: | ||Ricos frutos tú nos puedes conceder.||
+  - ESPACO_ANTES_PONTUACAO
+    Espaço encontrado antes de sinal de pontuação.
+    TRECHO: 3 | Haz que crezca con tu gracia . | Y tu rica bendición; No la ahoguen las espinas De congojas y aflicción:
+
+--------------------------------------------
+GT-188 | — 188
+TÍTULO: BELLAS PALABRAS DE VIDA
+ACHADOS: 6
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: Si, de luz y vida; Son sostén y a: | || ¡Qué bellas son, qué bellas son! | Bellas palabras de vida.||
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: || ¡Qué bellas son, qué bellas son! | Bellas palabras de vida.|| | 2
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: Y al cielo te llama: | || ¡Qué bellas son, qué bellas son! | Bellas palabras de vida.||
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: || ¡Qué bellas son, qué bellas son! | Bellas palabras de vida.|| | 3
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: Son sostén y guía: | || ¡Qué bellas son, qué bellas son! | Bellas palabras de vida.||
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: || ¡Qué bellas son, qué bellas son! | Bellas palabras de vida.||
+
+--------------------------------------------
+SION-075 | — 75
+TÍTULO: LA PALABRA HOY SEMBRADA
+ACHADOS: 6
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: La palabra hoy sembrada Hazla, Cristo, en mi nacer, Para darle crecimiento Sólo tienes tú poder: | ||Ricos frutos tú nos puedes conceder.|| | 2
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: La semilla que tu siervo Ha sembrado con saber, No permitas que las aves Se la vengan a comer: | ||Ricos frutos tú nos puedes conceder.|| | 3
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: Y tu rica bendición; No la ahoguen las espinas De congojas y aflicción: | ||Ricos frutos tú nos puedes conceder.|| | 4
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: Que su efecto muy profundo, En la mente y corazón, Llevará consigo al mundo Que le das la salvación: | ||Ricos frutos tú nos puedes conceder.|| | 5
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: Sembraremos la palabra, Con amor y profusión, Esperando la cosecha En la célica mansión: | ||Ricos frutos tú nos puedes conceder.||
+  - ESPACO_ANTES_PONTUACAO
+    Espaço encontrado antes de sinal de pontuação.
+    TRECHO: 3 | Haz que crezca con tu gracia . | Y tu rica bendición; No la ahoguen las espinas De congojas y aflicción:
+
+--------------------------------------------
+GT-042 | — 42
+TÍTULO: HAY UN PRECIOSO MANANTIAL
+ACHADOS: 5
+  - PRIMEIRA_ESTROFE_SEM_NUMERO
+    Primeiro número estrutural encontrado: 2.
+    TRECHO: Y más blanco que la nieve yo seré: | 2 | El malhechor se convirtió Pendiente de una cruz; El vio la fuente y se lavó, Creyendo en Jesús.
+  - NUMERO_REPETIDO
+    Número estrutural 2 repetido.
+    TRECHO: Hay un precioso manantial De sangre de Emmanuel, Que purifica a cada cual Que se sumerge en él. | 2 | El malhechor se convirtió Pendiente de una cruz; El vio la fuente y se lavó, Creyendo en Jesús.
+  - NUMERO_REPETIDO
+    Número estrutural 3 repetido.
+    TRECHO: El malhechor se convirtió Pendiente de una cruz; El vio la fuente y se lavó, Creyendo en Jesús. | 3 | Y yo también mi pobre ser Allí logré lavar;
+  - NUMERO_REPETIDO
+    Número estrutural 4 repetido.
+    TRECHO: La gloria de su gran poder, Me gozo en ensalzar. | 4 | ¡Eterna fuente carmesí!
+  - NUMERACAO_SUSPEITA
+    Sequência regressiva 4 -> 1.
+
+--------------------------------------------
+GT-088 | — 88
+TÍTULO: CERCA, MAS CERCA
+ACHADOS: 4
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: Cerca, más cerca, ¡oh Dios, de ti! Cerca yo quiero mi vida llevar; Cerca, más cerca, ¡oh Dios, de ti! | ||Cerca a tu gracia que puede salvar.|| | 2
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: Cerca, más cerca, cual pobre soy, Nada, Señor, yo te puedo ofrecer: Sólo mi ser contrito te doy, | ||Pueda contigo la paz obtener.|| | 3
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: Cerca, más cerca, Señor, de ti, Quiero ser tuyo, dejando el pecar: Goces y pompas vanas aquí, | ||Todo, Señor, pronto quiero dejar.|| | 4
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: Y cuando al cielo pueda ascender, | ||Ya para siempre conmigo estarás.||
+
+--------------------------------------------
+GT-146 | — 146
+TÍTULO: ME BUSCA A MÍ
+ACHADOS: 4
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: CORO: | ||Me busca a mí, a mí,|| Maravilloso es su gran amor; Me busca a mí, a mí. | 2
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: CORO: | ||Muere por mí, por mí,|| Sufre la muerte amarga en la cruz; | Muere por mí, por mí.
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: CORO: | ||Me llama a mí, a mí;|| Con tierna voz y profundo amor. | Me llama a mí, a mí.
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: CORO: | ||Viene por mí, por mí;|| | ¡Oh, en las nubes veré a Jesús!
+
+--------------------------------------------
+GT-159 | — 159
+TÍTULO: LA PATRIA DEL ALMA
+ACHADOS: 4
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: Cantaré, cantaré, del hermoso país, El lejano, glorioso jardín, | ||Donde ha de vivir el alma feliz Mientras vuelen los siglos sin fin. || | 2
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: ¡Oh la patria del alma! en sueños se ve Sus muros de jaspe y cristal; | ||Y cercano parece aquel bello Edén, Radiante de luz celestial.|| | 3
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: Y el árbol de vida florece allá, Do fluye el río de amor; | ||Y jamás en la santa ciudad entrará Ni la muerte, ni amargo dolor.|| | 4
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: ¡Oh cuán dulce será en el santo país, Pasadas las penas aquí, | ||Volvernos a ver en la vida feliz, Que tendremos con Cristo Allí!||
+
+--------------------------------------------
+GT-164 | — 164
+TÍTULO: JESÚS ES TODO PARA MÍ
+ACHADOS: 4
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: Si en mis tristezas voy a él, | ||Hallo un amigo siempre fiel,|| En Jesús. | 2
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: Yendo conmigo el Salvador | ||Ya nada puede el tentador|| Contra mí. | 3
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: Nada en el mundo igualará | ||A lo que en Cristo encontrará|| El mortal. | 4
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: Quien vida tal me aseguró Muriendo en cruenta cruz; | ||Ensalzará su salivación.|| Sin igual.
+
+--------------------------------------------
+GT-165 | — 165
+TÍTULO: AUNQUE SEAN COMO ESCARLATA
+ACHADOS: 4
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: Y si fueren como grana Níveos los haré. | ||Aunque sean como escarlata, Tus pecados lavaré. || | 2
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: Y de tierno amor. | ||Oye voz que te suplica: Vuelve, vuelve a tu Señor.|| | 3
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: «Venid a mí, y sed salvos», Dice nuestro Dios. | ||El aleja tus pecados | Y su consecuencia atroz.||
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: ||El aleja tus pecados | Y su consecuencia atroz.||
+
+--------------------------------------------
+GT-268 | — 268
+TÍTULO: CRISTO EL HIJO DEL SANTO DIOS
+ACHADOS: 4
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: Por su sangre pura, por su muerte dura, | ||Sólo Jesús, sólo Jesús hizo la salvación.|| | 2
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: Para los dolientes, que le son creyentes, | ||Sólo Jesús, sólo Jesús hizo la salvación.|| | 3
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: Sin ayuda nuestra, por su propia diestra, | ||Sólo Jesús, sólo Jesús hizo la salvación.|| | 4
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: Su favor tenemos, siempre cantaremos: | ||Sólo Jesús, sólo Jesús hizo la salvación.||
+
+--------------------------------------------
+SION-068 | — 68
+TÍTULO: LA PATRIA DEL ALMA
+ACHADOS: 4
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: Cantaré, cantaré, del hermoso país, El lejano, glorioso jardín, | ||Donde ha de vivir el alma feliz Mientras vuelen los siglos sin fin. || | 2
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: ¡Oh la patria del alma! en sueños se ve Sus muros de jaspe y cristal; | ||Y cercano parece aquel bello Edén, Radiante de luz celestial.|| | 3
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: Y el árbol de vida florece allá, Do fluye el río de amor; | ||Y jamás en la santa ciudad entrará Ni la muerte, ni amargo dolor.|| | 4
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: ¡Oh cuán dulce será en el santo país, Pasadas las penas aquí, | ||Volvernos a ver en la vida feliz, Que tendremos con Cristo Allí!||
+
+--------------------------------------------
+GT-156 | — 156
+TÍTULO: EL CUIDARA DE MÍ
+ACHADOS: 3
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: Si Cristo es mi consuelo, Mi amigo siempre fiel, | ||Si aún las aves tienen Seguro asilo en él? || | CORO:
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: A Cristo pasó a paso Yo sigo sin cesar, | ||Y todas sus bondades Me da sin limitar. || | 3
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: Si en mi la fe desmaya Y caigo en la ansiedad, | ||¡Tan sólo él me levanta, Me da seguridad!||
+
+--------------------------------------------
+GT-161 | — 161
+TÍTULO: PECADOR, VEN AL DULCE JESÚS
+ACHADOS: 3
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: CORO: | ||Ven a él, ven a él, | Que te espera tu buen Salvador.||
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: ||Ven a él, ven a él, | Que te espera tu buen Salvador.|| | 2
+  - ESPACO_ANTES_PONTUACAO
+    Espaço encontrado antes de sinal de pontuação.
+    TRECHO: ¡He aquí tu benigno Señor! | Y en los hombros llevada serás . De tan dulce y amante Pastor.
+
+--------------------------------------------
+GT-212 | — 212
+TÍTULO: ¡NOCHE DE PAZ, NOCHE DE AMOR!
+ACHADOS: 3
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: Entre los astros que esparcen su luz: Bella anunciando al niñito Jesús: | ||Brilla la estrella de paz. || | 2
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: Oye humilde el fiel pastor Coros celestes que anuncian salud, Gracias y glorias en gran plenitud | ¡¡Por nuestro buen Redentor.|| | 3
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: Ved qué bello resplandor Luce en el rostro del niño Jesús; En el pesebre, del mundo la luz: | ||Astro de eterno fulgor.||
+
+--------------------------------------------
+GT-255 | — 255
+TÍTULO: SALVADOR, MI BIEN ETERNO
+ACHADOS: 3
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: Cerca siempre te halle a ti, | ||Junto a ti, junto a ti.|| En mi fatigosa senda Cerca siempre te halle a ti. | 2
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: En las pruebas, en desdenes, Cerca siempre te halle a ti; | ||Junto a ti, junto a ti.|| En las pruebas, en desdenes, Cerca siempre te halle a ti. | 3
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: Yendo por sombrío valle, En rugiente mar hostil, Antes y después del trance, Cerca siempre te halle a ti; | ||Junto a ti, junto a ti.|| Antes y después del trance, Cerca siempre te halle a ti.
+
+--------------------------------------------
+SION-105 | — 105
+TÍTULO: SALVADOR, MI BIEN ETERNO
+ACHADOS: 3
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: Cerca siempre te halle a ti, | ||Junto a ti, junto a ti.|| En mi fatigosa senda Cerca siempre te halle a ti. | 2
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: En las pruebas, en desdenes, Cerca siempre te halle a ti; | ||Junto a ti, junto a ti.|| En las pruebas, en desdenes, Cerca siempre te halle a ti. | 3
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: Yendo por sombrío valle, En rugiente mar hostil, Antes y después del trance, Cerca siempre te halle a ti; | ||Junto a ti, junto a ti.|| Antes y después del trance, Cerca siempre te halle a ti.
+
+--------------------------------------------
+GT-018 | — 18
+TÍTULO: GRATO ES DECIR LA HISTORIA
+ACHADOS: 2
+  - ESPACO_ANTES_PONTUACAO
+    Espaço encontrado antes de sinal de pontuação.
+    TRECHO: Más dulce cada vez; Me agrada referirla, | Pues hay quien nunca oyó Que para hacerle salvo El buen .Jesús murió.
+  - PALAVRA_OCR_MAIUSCULA_INTERNA
+    Possível OCR: "referirIa".
+    TRECHO: referirIa
+
+--------------------------------------------
+GT-040 | — 40
+TÍTULO: EN LOS NEGOCIOS DEL REY
+ACHADOS: 2
+  - ESPACO_ANTES_PONTUACAO
+    Espaço encontrado antes de sinal de pontuação.
+    TRECHO: CORO: | Este mensaje fiel oid, . Que dijo ya celeste voz: | «Reconciliaos ya» – dice el Señor y Rey,
+  - PONTUACAO_DUPLA_SUSPEITA
+    Combinação incomum de sinais de pontuação.
+    TRECHO: CORO: | Este mensaje fiel oid, . Que dijo ya celeste voz: | «Reconciliaos ya» – dice el Señor y Rey,
+
+--------------------------------------------
+GT-054 | — 54
+TÍTULO: QUE HAGA EN TI SU VOLUNTAD
+ACHADOS: 2
+  - PRIMEIRA_ESTROFE_SEM_NUMERO
+    Primeiro número estrutural encontrado: 2.
+    TRECHO: Su gran poder, sus dones te dará, El gozo y paz a tu alma volverá: Del corazón las manchas limpiará, Que haga en ti su santa voluntad. | 2 | ¿Quieres ir en pos de Cristo y llevar la cruz?
+  - NUMERACAO_SUSPEITA
+    Sequência regressiva 3 -> 1.
+
+--------------------------------------------
+GT-055 | — 55
+TÍTULO: EL MUNDO PERDIDO
+ACHADOS: 2
+  - PRIMEIRA_ESTROFE_SEM_NUMERO
+    Primeiro número estrutural encontrado: 2.
+    TRECHO: ¡Jesús es la luz del mundo! | 2 | En día la noche se cambia con él, etc. Irás en la luz si a su ley eres fiel, etc.
+  - PONTUACAO_DUPLA_SUSPEITA
+    Combinação incomum de sinais de pontuação.
+    TRECHO: ¡Oh, ciegos y presos del lóbrego error!, etc. | Él manda lavaros y ver su fulgor, etc., | 4
+
+--------------------------------------------
+GT-069 | — 69
+TÍTULO: PRECIOSO ES JESÚS
+ACHADOS: 2
+  - ESPACO_ANTES_PONTUACAO
+    Espaço encontrado antes de sinal de pontuação.
+    TRECHO: 1 | Jesús es precioso, mi buen Salvador, . Por siempre le alabo por su gran amor, Si débil me encuentro su fuerza me da, Él es mi precioso Jesús. | CORO:
+  - PONTUACAO_DUPLA_SUSPEITA
+    Combinação incomum de sinais de pontuação.
+    TRECHO: 1 | Jesús es precioso, mi buen Salvador, . Por siempre le alabo por su gran amor, Si débil me encuentro su fuerza me da, Él es mi precioso Jesús. | CORO:
+
+--------------------------------------------
+GT-251 | — 251
+TÍTULO: EL HIJO PRODIGO
+ACHADOS: 2
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: CORO: | ||Lla…	mando por ti | (Llamando por ti	llamando por ti)
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: (Llamando por ti	llamando por ti) | Perdi	do pródigo ven;|| | (Perdido pródigo ven. Ven, ¡oh pródigo!, ven).
+
+--------------------------------------------
+GT-290 | — 290
+TÍTULO: SOLO CRISTO
+ACHADOS: 2
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: CORO: | ||Sólo Cristo,		Sólo Cristo, Sólo Cristo,	Sólo Cristo | Es el lirio de los valles, mi Jesús.||
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: ||Sólo Cristo,		Sólo Cristo, Sólo Cristo,	Sólo Cristo | Es el lirio de los valles, mi Jesús.|| | 2
+
+--------------------------------------------
+SION-007 | — 7
+TÍTULO: LA SIEMBRA
+ACHADOS: 2
+  - PONTUACAO_DUPLA_SUSPEITA
+    Combinação incomum de sinais de pontuação.
+    TRECHO: CORO: | Sembraré..., sembraré, | Mientras viva, simiente de amor;
+  - PONTUACAO_DUPLA_SUSPEITA
+    Combinação incomum de sinais de pontuação.
+    TRECHO: Mientras viva, simiente de amor; | Segaré..., segaré..., | Al hallarme en la casa de Dios.
+
+--------------------------------------------
+SION-114 | — 114
+TÍTULO: SOLO CRISTO
+ACHADOS: 2
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: CORO: | ||Sólo Cristo,		Sólo Cristo, Sólo Cristo,	Sólo Cristo | Es el lirio de los valles, mi Jesús.||
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: ||Sólo Cristo,		Sólo Cristo, Sólo Cristo,	Sólo Cristo | Es el lirio de los valles, mi Jesús.|| | 2
+
+--------------------------------------------
+SION-128 | — 128
+TÍTULO: GRATO ES DECIR LA HISTORIA
+ACHADOS: 2
+  - ESPACO_ANTES_PONTUACAO
+    Espaço encontrado antes de sinal de pontuação.
+    TRECHO: Más dulce cada vez; Me agrada referirla, | Pues hay quien nunca oyó Que para hacerle salvo El buen .Jesús murió.
+  - PALAVRA_OCR_MAIUSCULA_INTERNA
+    Possível OCR: "referirIa".
+    TRECHO: referirIa
+
+--------------------------------------------
+GT-001 | — 1
+TÍTULO: EL APOSENTO ALTO
+ACHADOS: 1
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: CORO: | ||¡Dios manda tu gran poder!|| A cada corazón. | 2
+
+--------------------------------------------
+GT-005 | — 5
+TÍTULO: DESDE QUE SALVO ESTOY
+ACHADOS: 1
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: CORO: | ||Desde que salvo estoy|| Sólo en él me gloriaré; Desde que salvo estoy | En mi Salvador me gloriaré.
+
+--------------------------------------------
+GT-007 | — 7
+TÍTULO: TODO A CRISTO YO ME RINDO
+ACHADOS: 1
+  - PALAVRA_OCR_MAIUSCULA_INTERNA
+    Possível OCR: "serIe".
+    TRECHO: serIe
+
+--------------------------------------------
+GT-025 | — 25
+TÍTULO: ¡OH, CUAN DULCE!
+ACHADOS: 1
+  - PALAVRA_OCR_MAIUSCULA_INTERNA
+    Possível OCR: "serIe".
+    TRECHO: serIe
+
+--------------------------------------------
+GT-034 | — 34
+TÍTULO: TENDRÁS QUE RENACER
+ACHADOS: 1
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: CORO: | ||Tendrás que renacer,|| De cierto, de cierto te digo a ti: | Tendrás que renacer.
+
+--------------------------------------------
+GT-048 | — 48
+TÍTULO: PENTECOSTÉS PARA TODOS
+ACHADOS: 1
+  - CORO_SEM_DOIS_PONTOS
+    Marcador CORO encontrado sem dois pontos.
+    TRECHO: Nos manda el Santo Espíritu, Que llena de su gran virtud Al ser que le esperó. | CORO | ¿Ha venido a ti? ¿Ha venido a ti, El Espíritu Consolador?
+
+--------------------------------------------
+GT-056 | — 56
+TÍTULO: ¡OH, YO QUIERO ANDAR CON CRISTO!
+ACHADOS: 1
+  - PALAVRA_OCR_MAIUSCULA_INTERNA
+    Possível OCR: "serIe".
+    TRECHO: serIe
+
+--------------------------------------------
+GT-062 | — 62
+TÍTULO: CON CRISTO YO IRÉ
+ACHADOS: 1
+  - ESPACO_ANTES_PONTUACAO
+    Espaço encontrado antes de sinal de pontuação.
+    TRECHO: Aunque mi parte sea mi dura cruz llevar, Diré a mis hermanos también su gran poder; Contento quedaré, mi luz haré brillar, | ¡Testigo de Cristo, doquiera yo iré! . | La voluntad de Cristo yo quiero obedecer, Pues en la Santa Biblia encuentro mi saber Y con su gran poder al mundo venceré,
+
+--------------------------------------------
+GT-066 | — 66
+TÍTULO: ¡SALUD! ¡SALUD!
+ACHADOS: 1
+  - ESPACO_ANTES_PONTUACAO
+    Espaço encontrado antes de sinal de pontuação.
+    TRECHO: CORO: | ¡Salud! ¡Salud!, cantad a nuestro Dios. La paz nos da, clamad en alta voz; , | Salvación ya tengo y descanso dulce en él, Yo soy salvado en Cristo.
+
+--------------------------------------------
+GT-067 | — 67
+TÍTULO: DE MI TIERNO SALVADOR LIBRE ESTOY
+ACHADOS: 1
+  - ESPACO_ANTES_PONTUACAO
+    Espaço encontrado antes de sinal de pontuação.
+    TRECHO: CORO: | ¡Mi Jesús! ¡Mi Jesús! , | ¡Cuán precioso es el nombre de Jesús!
+
+--------------------------------------------
+GT-072 | — 72
+TÍTULO: HAY QUIEN VIGILE
+ACHADOS: 1
+  - ESPACO_ANTES_PONTUACAO
+    Espaço encontrado antes de sinal de pontuação.
+    TRECHO: Que confiere paz constante Al contrito corazón. | En su amor hay eficacia Él es un amigo fiel; , | Hay en él verdad y gracia, Suyo soy y mío es él.
+
+--------------------------------------------
+GT-083 | — 83
+TÍTULO: ¡OH, VEN SIN TARDAR!
+ACHADOS: 1
+  - PRIMEIRA_ESTROFE_SEM_NUMERO
+    Primeiro número estrutural encontrado: 2.
+    TRECHO: Acepta a Jesús, y salvo serás. | 2 | Tus ojos ya tal vez el sol No más aquí contemplarán: Hoyes el día de salvación,
+
+--------------------------------------------
+GT-099 | — 99
+TÍTULO: NADA DE SOMBRAS
+ACHADOS: 1
+  - ESPACO_ANTES_PONTUACAO
+    Espaço encontrado antes de sinal de pontuação.
+    TRECHO: 1 | No habrá .sombras en el valle de la muerte Cuando cese de la vida el batallar, | Y escuchemos del Señor el llamamiento, Ya llevándonos con él a descansar.
+
+--------------------------------------------
+GT-102 | — 102
+TÍTULO: PODER PENTECOSTAL
+ACHADOS: 1
+  - PALAVRA_OCR_MAIUSCULA_INTERNA
+    Possível OCR: "hazIo".
+    TRECHO: hazIo
+
+--------------------------------------------
+GT-118 | — 118
+TÍTULO: EL MUNDO NO ES MI HOGAR
+ACHADOS: 1
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: CORO: | ||No puede el mundo ser mi hogar,|| En gloria tengo mi mansión; | No puede el mundo ser mi hogar.
+
+--------------------------------------------
+GT-128 | — 128
+TÍTULO: VALOR Y FE
+ACHADOS: 1
+  - ESPACO_ANTES_PONTUACAO
+    Espaço encontrado antes de sinal de pontuação.
+    TRECHO: 1 | Si en tu senda .las nubes Agolparse ves, | No vaciles por ello, Ni flaqueen tus pies; Cada nube que venga No podrá traer
+
+--------------------------------------------
+GT-137 | — 137
+TÍTULO: SIEMPRE ORAD
+ACHADOS: 1
+  - ESPACO_ANTES_PONTUACAO
+    Espaço encontrado antes de sinal de pontuação.
+    TRECHO: 2 | «Siempre orad», que si hoy viniere Cristo El te halle en la lid, , | Con la espada suya bien empleada, Fiel por nuestro Adalid.
+
+--------------------------------------------
+GT-138 | — 138
+TÍTULO: LA FUENTE SANADORA
+ACHADOS: 1
+  - ESPACO_ANTES_PONTUACAO
+    Espaço encontrado antes de sinal de pontuação.
+    TRECHO: 2 | En la fuente que nos sana He hallado el perdón, , Y lavado toda mancha De mi pobre corazón. | 3
+
+--------------------------------------------
+GT-142 | — 142
+TÍTULO: CUANDO TE QUIERO MAS
+ACHADOS: 1
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: CORO: | ||Cuando te quiero más.|| Cerca tú estás, mi buen Salvador, Cuando te quiero más. | 2
+
+--------------------------------------------
+GT-160 | — 160
+TÍTULO: HAY UN MUNDO FELIZ MÁS ALLÁ
+ACHADOS: 1
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: CORO: | ||¡En el mundo feliz Reinaremos con nuestro Señor!|| | 2
+
+--------------------------------------------
+GT-182 | — 182
+TÍTULO: ¡GLORIA A TI, JESÚS DIVINO
+ACHADOS: 1
+  - SALTO_NUMERICO
+    Sequência 1 -> 3.
+
+--------------------------------------------
+GT-218 | — 218
+TÍTULO: YO ME ACUERDO
+ACHADOS: 1
+  - ESPACO_ANTES_PONTUACAO
+    Espaço encontrado antes de sinal de pontuação.
+    TRECHO: Yo me acuerdo que Jesús el pan quebró, A los suyos todos con amor lo dio; | En su cuerpo el Señor ya llevó nuestro dolor, Pues por mí el Señor murió. : | 3
+
+--------------------------------------------
+GT-220 | — 220
+TÍTULO: HOGAR DE MIS RECUERDOS
+ACHADOS: 1
+  - ESPACO_ANTES_PONTUACAO
+    Espaço encontrado antes de sinal de pontuação.
+    TRECHO: Hogar de mis recuerdos, A ti volver anhelo; | No hay sitio bajo el cielo Más dulce que el hogar. Posara yo .en palacios, Corriendo el mundo entero, A todos yo prefiero | Mi hogar, mi dulce hogar.
+
+--------------------------------------------
+GT-225 | — 225
+TÍTULO: SU SANGRE DERRAMO JESÚS
+ACHADOS: 1
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: CORO: | ||La sangre te puede limpiar,|| | Tus muchos pecados Dios puede quitarte.
+
+--------------------------------------------
+GT-242 | — 242
+TÍTULO: EL ES MI FUERTE SALVADOR
+ACHADOS: 1
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: CORO: | ||Él es mi fuerte y gran Salvador," Yo perdido fui, mas. Cristo me salvó, Él es mi fuerte y gran Salvador. | 2
+
+--------------------------------------------
+GT-265 | — 265
+TÍTULO: MAS ALLÁ EL DÍA VIENE
+ACHADOS: 1
+  - ESPACO_ANTES_PONTUACAO
+    Espaço encontrado antes de sinal de pontuação.
+    TRECHO: ¿Qué será estar con Cristo? | Escuchar .su dulce voz; Ver su rostro tan brillante Y andar de él en pos. | 3
+
+--------------------------------------------
+GT-285 | — 285
+TÍTULO: ALLÍ QUIERO IR, ¿Y TU?
+ACHADOS: 1
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: CORO: | ||Allí quiero ir, allí quiero ir, Allí quiero ir, ¿y tú?|| | 2
+
+--------------------------------------------
+GT-303 | — 303
+TÍTULO: DE LA
+ACHADOS: 1
+  - PRIMEIRA_ESTROFE_SEM_NUMERO
+    Primeiro número estrutural encontrado: 2.
+    TRECHO: Para hacerla esposa quiso De los cielos descender, Y su sangre por limpiarla En la horrible cruz verter. | 2 | De entre todas las naciones Escogida en variedad,
+
+--------------------------------------------
+GT-304 | — 304
+TÍTULO: JERUSALÉN CELESTE
+ACHADOS: 1
+  - PRIMEIRA_ESTROFE_SEM_NUMERO
+    Primeiro número estrutural encontrado: 2.
+    TRECHO: Y de ángeles millares, Te ciñen en redor. | 2 | Ciudad del Rey eterno, De perlas son tus puertas, Continuamente abiertas Al mísero mortal;
+
+--------------------------------------------
+GT-320 | — 320
+TÍTULO: EN LA NUEVA JERUSALÉN
+ACHADOS: 1
+  - ESPACO_ANTES_PONTUACAO
+    Espaço encontrado antes de sinal de pontuação.
+    TRECHO: CORO: | Cantaremos con los santos la canción de redención, En Jerusalén …………, En Jerusalén	, | Con acentos de alegría alabando al Salvador, En la gran Jerusalén.
+
+--------------------------------------------
+GT-322 | — 322
+TÍTULO: NO HAY TRISTEZA EN EL CIELO
+ACHADOS: 1
+  - ESPACO_ANTES_PONTUACAO
+    Espaço encontrado antes de sinal de pontuação.
+    TRECHO: CORO: | Yo voy a la patria del alma, Do Cristo prepara mi hogar; Do todos los santificados Irán .para siempre a morar: El día feliz ya se acerca | En que el sol para mí se pondrá:
+
+--------------------------------------------
+GT-325 | — 325
+TÍTULO: ¿NOS VEREMOS EN EL RIO?
+ACHADOS: 1
+  - ESPACO_ANTES_PONTUACAO
+    Espaço encontrado antes de sinal de pontuação.
+    TRECHO: 6 | Tiene faz risueña el río, Pues la de .Jesús refleja, La que de su grey aleja Todo mal, todo dolor. | 7
+
+--------------------------------------------
+GT-328 | — 328
+TÍTULO: LLAMA
+ACHADOS: 1
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: Tu Amigo es él, tu bienhechor, Te llama hoy, ve sin tardar: | ||¿Darás lugar al Salvador?|| | 2
+
+--------------------------------------------
+SION-011 | — 11
+TÍTULO: TODO A CRISTO YO ME RINDO
+ACHADOS: 1
+  - PALAVRA_OCR_MAIUSCULA_INTERNA
+    Possível OCR: "serIe".
+    TRECHO: serIe
+
+--------------------------------------------
+SION-017 | — 17
+TÍTULO: TENDRÁS QUE RENACER
+ACHADOS: 1
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: CORO: | ||Tendrás que renacer,|| De cierto, de cierto te digo a ti: | Tendrás que renacer.
+
+--------------------------------------------
+SION-026 | — 26
+TÍTULO: ¡OH! YO QUIERO ANDAR CON CRISTO
+ACHADOS: 1
+  - PALAVRA_OCR_MAIUSCULA_INTERNA
+    Possível OCR: "serIe".
+    TRECHO: serIe
+
+--------------------------------------------
+SION-030 | — 30
+TÍTULO: ¡SALUD! ¡SALUD!
+ACHADOS: 1
+  - ESPACO_ANTES_PONTUACAO
+    Espaço encontrado antes de sinal de pontuação.
+    TRECHO: CORO: | ¡Salud! ¡Salud!, cantad a nuestro Dios. La paz nos da, clamad en alta voz; , | Salvación ya tengo y descanso dulce en él, Yo soy salvado en Cristo.
+
+--------------------------------------------
+SION-034 | — 34
+TÍTULO: HAY QUIEN VIGILE
+ACHADOS: 1
+  - ESPACO_ANTES_PONTUACAO
+    Espaço encontrado antes de sinal de pontuação.
+    TRECHO: Que confiere paz constante Al contrito corazón. | En su amor hay eficacia Él es un amigo fiel; , | Hay en él verdad y gracia, Suyo soy y mío es él.
+
+--------------------------------------------
+SION-037 | — 37
+TÍTULO: ¡OH, VEN SIN TARDAR!
+ACHADOS: 1
+  - PRIMEIRA_ESTROFE_SEM_NUMERO
+    Primeiro número estrutural encontrado: 2.
+    TRECHO: Acepta a Jesús, y salvo serás. | 2 | Tus ojos ya tal vez el sol No más aquí contemplarán: Hoyes el día de salvación,
+
+--------------------------------------------
+SION-044 | — 44
+TÍTULO: PODER PENTECOSTAL
+ACHADOS: 1
+  - PALAVRA_OCR_MAIUSCULA_INTERNA
+    Possível OCR: "hazIo".
+    TRECHO: hazIo
+
+--------------------------------------------
+SION-055 | — 55
+TÍTULO: EL MUNDO NO ES MI HOGAR
+ACHADOS: 1
+  - RESIDUO_BARRAS
+    Encontrado marcador "||".
+    TRECHO: CORO: | ||No puede el mundo ser mi hogar,|| En gloria tengo mi mansión; | No puede el mundo ser mi hogar.
+
+--------------------------------------------
+SION-062 | — 62
+TÍTULO: SIEMPRE ORAD
+ACHADOS: 1
+  - ESPACO_ANTES_PONTUACAO
+    Espaço encontrado antes de sinal de pontuação.
+    TRECHO: 2 | «Siempre orad», que si hoy viniere Cristo El te halle en la lid, , | Con la espada suya bien empleada, Fiel por nuestro Adalid.
+
+--------------------------------------------
+SION-063 | — 63
+TÍTULO: LA FUENTE SANADORA
+ACHADOS: 1
+  - ESPACO_ANTES_PONTUACAO
+    Espaço encontrado antes de sinal de pontuação.
+    TRECHO: 2 | En la fuente que nos sana He hallado el perdón, , Y lavado toda mancha De mi pobre corazón. | 3
+
+--------------------------------------------
+SION-079 | — 79
+TÍTULO: GLORIA A TI, JESÚS DIVINO
+ACHADOS: 1
+  - SALTO_NUMERICO
+    Sequência 1 -> 3.
+
+--------------------------------------------
+SION-134 | — 134
+TÍTULO: ¡OH, CUÁN DULCE!
+ACHADOS: 1
+  - PALAVRA_OCR_MAIUSCULA_INTERNA
+    Possível OCR: "serIe".
+    TRECHO: serIe
+
+--------------------------------------------
+SION-162 | — 162
+TÍTULO: PENTECOSTÉS PARA TODOS
+ACHADOS: 1
+  - CORO_SEM_DOIS_PONTOS
+    Marcador CORO encontrado sem dois pontos.
+    TRECHO: Nos manda el Santo Espíritu, Que llena de su gran virtud Al ser que le esperó. | CORO | ¿Ha venido a ti? ¿Ha venido a ti, El Espíritu Consolador?
+
+--------------------------------------------
+SION-246 | — 246
+TÍTULO: CRISTIANOS, TODOS A PREPARARSE
+ACHADOS: 1
+  - PRIMEIRA_ESTROFE_SEM_NUMERO
+    Primeiro número estrutural encontrado: 2.
+    TRECHO: | 2 | Ya las señales cúmplense todas,
+
+============================================
+ CONTROLE DE IMUTABILIDADE
+============================================
+HASH ANTES:  a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41
+HASH DEPOIS: a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41
+BASE MESTRE ALTERADA: NÃO
+
+RELATÓRIO JSON: scripts/data/etapa-10a-varredura-global.json
+
+============================================
+ ETAPA 10A CONCLUÍDA COM SUCESSO
+ NENHUMA CORREÇÃO FOI APLICADA
+ PRÓXIMO PASSO: TRIAGEM DOS ACHADOS
+============================================

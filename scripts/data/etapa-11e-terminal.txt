@@ -1,0 +1,155 @@
+============================================
+ 1. INTEGRIDADE DA BASE
+============================================
+HASH ATUAL:   214d87c16a3a1a18c9bd525c5474dff344fa78857762960084de51771262cbfb
+HASH OFICIAL: 214d87c16a3a1a18c9bd525c5474dff344fa78857762960084de51771262cbfb
+STATUS: OK
+
+============================================
+ 2. CONSTANTES DE BANCO / VERSÃO
+============================================
+0098 | const DB_KEY = 'admfc_local_db_v1';
+0099 | const DB_DATA_VERSION_KEY = 'admfc_local_db_data_version';
+0100 | const DB_DATA_VERSION = '7';
+0108 |   const raw = await kv.get(DB_KEY);
+0109 | const dataVersion = await kv.get(DB_DATA_VERSION_KEY);
+0110 | if (raw && dataVersion !== DB_DATA_VERSION) {
+0116 |     await kv.set(DB_DATA_VERSION_KEY, DB_DATA_VERSION);
+0140 | await saveDb(db); await kv.set(DB_DATA_VERSION_KEY, DB_DATA_VERSION); return db;
+0142 | async function saveDb(db: LocalDb) { await kv.set(DB_KEY, JSON.stringify(db)); }
+
+============================================
+ 3. BLOCO COMPLETO DE loadDb()
+============================================
+0107 | async function loadDb(): Promise<LocalDb> {
+0108 |   const raw = await kv.get(DB_KEY);
+0109 | const dataVersion = await kv.get(DB_DATA_VERSION_KEY);
+0110 | if (raw && dataVersion !== DB_DATA_VERSION) {
+0111 |   try {
+0112 |     const db = JSON.parse(raw) as LocalDb;
+0113 |     const freshHymns = ((seed as any).himnos || []) as Hymn[];
+0114 |     db.hymns = freshHymns;
+0115 |     await saveDb(db);
+0116 |     await kv.set(DB_DATA_VERSION_KEY, DB_DATA_VERSION);
+0117 |     return db;
+0118 |   } catch {}
+0119 | }
+0120 |   if (raw) {
+0121 |     try {
+0122 |       const db = JSON.parse(raw) as LocalDb;
+0123 |       if (!Array.isArray(db.categories)) db.categories = [];
+0124 |       let changed = false;
+0125 |       for (const name of DEFAULT_CATEGORIES) {
+0126 |         if (!db.categories.some(c => normalize(c.name) === normalize(name))) {
+0127 |           db.categories.push({ id: `default-${normalize(name).replace(/[^a-z0-9]+/g, '-')}`, name });
+0128 |           changed = true;
+0129 |         }
+0130 |       }
+0131 |       if (changed) await saveDb(db);
+0132 |       return db;
+0133 |     } catch {}
+0134 |   }
+0135 |   const hymns = ((seed as any).himnos || []) as Hymn[];
+0136 |   const db: LocalDb = {
+0137 |     hymns,
+0138 |     categories: DEFAULT_CATEGORIES.map((name, i) => ({ id: `default-${i + 1}`, name }))
+0139 |   };
+0140 | await saveDb(db); await kv.set(DB_DATA_VERSION_KEY, DB_DATA_VERSION); return db;
+0141 | }
+
+============================================
+ 4. TODOS OS USOS DAS CHAVES
+============================================
+
+--- DB_KEY ---
+0098 | const DB_KEY = 'admfc_local_db_v1';
+0108 |   const raw = await kv.get(DB_KEY);
+0142 | async function saveDb(db: LocalDb) { await kv.set(DB_KEY, JSON.stringify(db)); }
+OCORRÊNCIAS: 3
+
+--- DB_DATA_VERSION_KEY ---
+0099 | const DB_DATA_VERSION_KEY = 'admfc_local_db_data_version';
+0109 | const dataVersion = await kv.get(DB_DATA_VERSION_KEY);
+0116 |     await kv.set(DB_DATA_VERSION_KEY, DB_DATA_VERSION);
+0140 | await saveDb(db); await kv.set(DB_DATA_VERSION_KEY, DB_DATA_VERSION); return db;
+OCORRÊNCIAS: 4
+
+--- DB_DATA_VERSION ---
+0099 | const DB_DATA_VERSION_KEY = 'admfc_local_db_data_version';
+0100 | const DB_DATA_VERSION = '7';
+0109 | const dataVersion = await kv.get(DB_DATA_VERSION_KEY);
+0110 | if (raw && dataVersion !== DB_DATA_VERSION) {
+0116 |     await kv.set(DB_DATA_VERSION_KEY, DB_DATA_VERSION);
+0140 | await saveDb(db); await kv.set(DB_DATA_VERSION_KEY, DB_DATA_VERSION); return db;
+OCORRÊNCIAS: 6
+
+============================================
+ 5. OPERAÇÕES SOBRE O BANCO LOCAL
+============================================
+0107 | async function loadDb(): Promise<LocalDb> {
+0108 | const raw = await kv.get(DB_KEY);
+0109 | const dataVersion = await kv.get(DB_DATA_VERSION_KEY);
+0112 | const db = JSON.parse(raw) as LocalDb;
+0115 | await saveDb(db);
+0116 | await kv.set(DB_DATA_VERSION_KEY, DB_DATA_VERSION);
+0122 | const db = JSON.parse(raw) as LocalDb;
+0131 | if (changed) await saveDb(db);
+0140 | await saveDb(db); await kv.set(DB_DATA_VERSION_KEY, DB_DATA_VERSION); return db;
+0142 | async function saveDb(db: LocalDb) { await kv.set(DB_KEY, JSON.stringify(db)); }
+0157 | const db = await loadDb(); let items = [...db.hymns]; const hn = keyToName(p.himnario);
+0164 | getHymn: async (id: string) => { const h=(await loadDb()).hymns.find(x=>x.id===id); if(!h) throw new Error('Himno no encontrado'); return h; },
+0165 | getByNumber: async (himnario:'gt'|'sion', numero:number) => { const h=(await loadDb()).hymns.find(x=>x.himnario===keyToName(himnario)&&x.numero===numero); if(!h) throw new Error('Himno no encontrado'); return h; },
+0166 | listCategories: async () => { const db=await loadDb(); return { items: db.categories.map(c=>({...c,count:db.hymns.filter(h=>(h.categorias||[]).includes(c.name)).length})) }; },
+0167 | createCategory: async (name:string) => { requireAuth(); const db=await loadDb(); if(!db.categories.some(c=>normalize(c.name)===normalize(name))) db.categories.push({id:`cat-${Date.now()}`,name}); await saveDb(db); return {ok:true}; },
+0168 | renameCategory: async (id:string,name:string) => { requireAuth(); const db=await loadDb(); const c=db.categories.find(x=>x.id===id); if(!c) throw new Error('Categoría no encontrada'); const old=c.name; c.name=name; db.hymns.forEach(h=>{h.categorias=(h.categorias||[]).map(x=>x===old?name:x)}); await saveDb(db); return {ok:true}; },
+0169 | deleteCategory: async (id:string) => { requireAuth(); const db=await loadDb(); const c=db.categories.find(x=>x.id===id); if(c) db.hymns.forEach(h=>{h.categorias=(h.categorias||[]).filter(x=>x!==c.name)}); db.categories=db.categories.filter(x=>x.id!==id); await saveDb(db); return {ok:true}; },
+0170 | stats: async () => { const hs=(await loadDb()).hymns; return {total:hs.length,gt:hs.filter(h=>h.himnario==='Gloria y Triunfo').length,sion:hs.filter(h=>h.himnario==='Himnos de Sión').length,equivalences:hs.filter(h=>h.numero_equivalente!=null).length,with_lyrics:hs.filter(h=>(h.letra||'').trim()).length}; },
+0201 | createHymn: async (payload:Partial<Hymn>) => { requireAuth(); const db=await loadDb(); const h={...payload,id:payload.id||`LOCAL-${Date.now()}`} as Hymn; db.hymns.push(h); await saveDb(db); return h; },
+0205 | const db = await loadDb();
+0257 | await saveDb(db);
+0260 | deleteHymn: async (id:string) => { requireAuth(); const db=await loadDb(); db.hymns=db.hymns.filter(h=>h.id!==id); await saveDb(db); return {ok:true}; },
+0268 | const db = await loadDb();
+0318 | await saveDb(db);
+0324 | removeEquivalence: async (id:string) => { requireAuth(); const db=await loadDb(); const h=db.hymns.find(x=>x.id===id); if(!h) throw new Error('Himno no encontrado'); const oldN=h.numero_equivalente, oldH=h.himnario_equivalente; h.numero_equivalente=null; h.himnario_equivalente=null; const target=db.hymns.find(x=>x.himnario===oldH&&x.numero===oldN); if(target&&target.numero_equivalente===h.numero){target.numero_equivalente=null;target.himnario_equivalente=null;} await saveDb(db); return {hymn:h}; },
+0325 | exportBackup: async () => { requireAuth(); const db=await loadDb(); return {schema_version:'local-1',release:'ADMFC_INDEPENDIENTE_1.0',total:db.hymns.length,himnos:db.hymns,categories:db.categories}; },
+0326 | restoreBackup: async (p:any) => { requireAuth(); const hymns=(p.himnos||p.hymns||[]) as Hymn[]; if(!Array.isArray(hymns)||!hymns.length) throw new Error('Backup inválido'); const categories=p.categories||p.categorias||[]; await saveDb({hymns,categories}); return {restored_hymns:hymns.length,restored_categories:categories.length}; },
+
+============================================
+ 6. RESTORE BACKUP E VERSIONAMENTO
+============================================
+0321 |       hymn: h,
+0322 |     };
+0323 |   },
+0324 |   removeEquivalence: async (id:string) => { requireAuth(); const db=await loadDb(); const h=db.hymns.find(x=>x.id===id); if(!h) throw new Error('Himno no encontrado'); const oldN=h.numero_equivalente, oldH=h.himnario_equivalente; h.numero_equivalente=null; h.himnario_equivalente=null; const target=db.hymns.find(x=>x.himnario===oldH&&x.numero===oldN); if(target&&target.numero_equivalente===h.numero){target.numero_equivalente=null;target.himnario_equivalente=null;} await saveDb(db); return {hymn:h}; },
+0325 |   exportBackup: async () => { requireAuth(); const db=await loadDb(); return {schema_version:'local-1',release:'ADMFC_INDEPENDIENTE_1.0',total:db.hymns.length,himnos:db.hymns,categories:db.categories}; },
+0326 |   restoreBackup: async (p:any) => { requireAuth(); const hymns=(p.himnos||p.hymns||[]) as Hymn[]; if(!Array.isArray(hymns)||!hymns.length) throw new Error('Backup inválido'); const categories=p.categories||p.categorias||[]; await saveDb({hymns,categories}); return {restored_hymns:hymns.length,restored_categories:categories.length}; },
+0327 |   importFile: async () => { throw new Error('Importación CSV/XLSX no disponible en modo local. Use Restaurar backup (JSON).'); },
+0328 | };
+0329 | 
+0330 | export interface Section { kind:'verse'|'chorus'; index?:number; text:string; }
+0331 | export function getSections(hymn:{bloques?:Bloque[]|null;letra?:string}):Section[]{ if(hymn.bloques?.length) return hymn.bloques.map(b=>({kind:b.tipo==='coro'?'chorus':'verse',index:b.numero??undefined,text:b.texto||''})); return parseLetra(hymn.letra||''); }
+0332 | export function parseLetra(letra:string):Section[]{ if(!letra)return[]; const lines=letra.replace(/\r\n/g,'\n').split('\n'); const out:Section[]=[]; let current:Section|null=null; const push=()=>{if(current&&current.text.trim())out.push(current);current=null}; for(const raw of lines){const line=raw.trimEnd(),trimmed=line.trim(),m=/^(\d+)\.?$/.exec(trimmed),chorus=/^\s*CORO\s*:?\s*$/i.test(trimmed); if(m){push();current={kind:'verse',index:parseInt(m[1],10),text:''};}else if(chorus){push();current={kind:'chorus',text:''};}else if(trimmed===''){if(current)current.text+='\n';}else{if(!current)current={kind:'verse',text:''};current.text+=(current.text?'\n':'')+line;}} push(); return out; }
+0333 | 
+
+============================================
+ 7. HIPÓTESE TÉCNICA
+============================================
+Se DB_DATA_VERSION permanece igual após mudanças
+em assets/base_mestre.json, uma instalação que já
+possua DB_KEY persistida pode continuar usando
+db.hymns antigo em vez do seed atualizado.
+
+ESTA ETAPA NÃO CONFIRMA O CONTEÚDO DO ASYNCSTORAGE
+DO APARELHO; ELA AUDITA A POLÍTICA DE SINCRONIZAÇÃO.
+
+============================================
+ 8. CONTROLE DE IMUTABILIDADE
+============================================
+HASH ANTES:  214d87c16a3a1a18c9bd525c5474dff344fa78857762960084de51771262cbfb
+HASH DEPOIS: 214d87c16a3a1a18c9bd525c5474dff344fa78857762960084de51771262cbfb
+BASE ALTERADA: NÃO
+
+============================================
+ ETAPA 11E CONCLUÍDA
+ NENHUMA ALTERAÇÃO APLICADA
+============================================

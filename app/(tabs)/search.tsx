@@ -2,6 +2,7 @@ import React, { useEffect, useState, useCallback, useRef } from 'react';
 import { View, Text, StyleSheet, TextInput, FlatList, Pressable, ActivityIndicator, Keyboard } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
+import { useFocusEffect } from '@react-navigation/native';
 import { Feather } from '@expo/vector-icons';
 import { useTheme } from '@/src/theme/ThemeContext';
 import { SPACING, RADIUS } from '@/src/theme/tokens';
@@ -18,6 +19,18 @@ export default function Search() {
   const [items, setItems] = useState<Hymn[]>([]);
   const [loading, setLoading] = useState(true);
   const inputRef = useRef<TextInput>(null);
+
+  // ADMFC — sempre que Buscar recebe foco, reativa o teclado.
+  // Isso vale tanto na primeira abertura quanto ao voltar de um hino.
+  useFocusEffect(
+    useCallback(() => {
+      const timer = setTimeout(() => {
+        inputRef.current?.focus();
+      }, 320);
+
+      return () => clearTimeout(timer);
+    }, [])
+  );
 
   const load = useCallback(async () => {
     setLoading(true);

@@ -1,0 +1,73 @@
+{
+  "etapa": "9O",
+  "status": "APLICACAO_REAL_CONCLUIDA",
+  "base": "assets/base_mestre.json",
+  "backup_rollback": "assets/base_mestre.backup-pre-9n.json",
+  "simulacao_origem": "scripts/data/etapa-9l-base-simulada-consolidada.json",
+  "total_registros": 718,
+  "registros_alterados": [
+    "GT-028",
+    "GT-033",
+    "GT-040",
+    "GT-052",
+    "GT-056",
+    "GT-081",
+    "GT-161",
+    "GT-186",
+    "GT-259",
+    "GT-283",
+    "SION-015",
+    "SION-016",
+    "SION-024",
+    "SION-026",
+    "SION-038",
+    "SION-107"
+  ],
+  "total_alterados": 16,
+  "alteracoes_nao_autorizadas": [],
+  "bloqueados_preservados": [
+    "GT-036",
+    "GT-100",
+    "SION-019",
+    "SION-059"
+  ],
+  "correcao_documental_aplicada": {
+    "ids": [
+      "GT-052",
+      "SION-024"
+    ],
+    "de": "confiando mis.",
+    "para": "confiando más."
+  },
+  "pendencias_textuais_preservadas": [
+    {
+      "id": "GT-040",
+      "trecho": "oid, ."
+    },
+    {
+      "id": "GT-056",
+      "trecho": "serIe"
+    },
+    {
+      "id": "SION-026",
+      "trecho": "serIe"
+    },
+    {
+      "id": "GT-161",
+      "trecho": "serás . De"
+    },
+    {
+      "id": "GT-283",
+      "trecho": "tierra mis Allí"
+    }
+  ],
+  "hashes": {
+    "base_original": "9a8636c6a249a783a091f4dfd7fb8f36910019cb235d865486e316609365f17d",
+    "backup_original": "9a8636c6a249a783a091f4dfd7fb8f36910019cb235d865486e316609365f17d",
+    "simulacao_9l": "a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41",
+    "base_final": "a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41"
+  },
+  "rollback": {
+    "comando": "cp \"assets/base_mestre.backup-pre-9n.json\" \"assets/base_mestre.json\""
+  }
+}

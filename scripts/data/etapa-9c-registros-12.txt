@@ -1,0 +1,617 @@
+ARRAY PRINCIPAL DETECTADO: himnos
+TOTAL DE CASOS: 12
+TOTAL DE REGISTROS NA BASE: 718
+
+======================================================================
+CASO 01 / 12
+IDS: GT-040
+TÍTULO: EN LOS NEGOCIOS DEL REY
+STATUS: CONFIRMADO_ERRO
+
+AÇÕES PLANEJADAS:
+1. separar_coro_da_estrofe_1
+
+>>> GT-040
+RESULTADO: ENCONTRADO
+{
+  "id": "GT-040",
+  "himnario": "Gloria y Triunfo",
+  "numero": 40,
+  "titulo": "EN LOS NEGOCIOS DEL REY",
+  "letra": "1\nSoy peregrino aquí, mi hogar lejano está, En la mansión de luz, eterna paz y amor: Embajador yo soy del reino celestial\nEn los negocios de mi Rey.\nEste mensaje fiel oid, . Que dijo ya celeste voz:\n«Reconciliaos ya» – dice el Señor y Rey,\n¡Reconciliaos hoy con Dios!\n2\nQue del pecado vil arrepentidos ya, Han de reinar con él los que obedientes son:\nEs el mensaje fiel que debo proclamar, En los negocios de mi Rey.\n3\nMi hogar más bello es que el Valle de Sarón, Eterno gozo y paz reinan por siempre en él, Y allí Jesús dará eterna habitación;\nEs el mensaje, de mi Rey.",
+  "numero_equivalente": null,
+  "himnario_equivalente": null,
+  "estado": "VERIFICADO_FONTE",
+  "fuente": "Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada",
+  "observacion": "DOCX original 1–329",
+  "cifra_procedencia": {
+    "fuente": null,
+    "tipo": "desconocido",
+    "autorizado": false,
+    "notas": "Pendiente de verificación documental de procedencia."
+  },
+  "audio_procedencia": {
+    "fuente": null,
+    "tipo": "desconocido",
+    "autorizado": false,
+    "notas": "Pendiente de verificación documental de procedencia."
+  }
+}
+
+======================================================================
+CASO 02 / 12
+IDS: GT-052 + SION-024
+TÍTULO: CRISTO LA ROCA
+STATUS: CONFIRMADO_ERRO
+
+AÇÕES PLANEJADAS:
+1. separar_coro_da_estrofe_1
+2. corrigir_truncamento_confiando_mis
+
+>>> GT-052
+RESULTADO: ENCONTRADO
+{
+  "id": "GT-052",
+  "himnario": "Gloria y Triunfo",
+  "numero": 52,
+  "titulo": "CRISTO LA ROCA",
+  "letra": "1\nEn las olas inmensas de embravecido mar, Que asaltan de mi alma la pobre embarcación, De rodillas a Cristo clamé, y el huracán Deshecho fue al instante a la voz de Dios.\nEs Cristo la Roca, el ancla de mi fe; Los males, lamentos, y ayes de temor,\nTerminan por siempre, con mi supremo Rey; Es Jesucristo mi refugio.\n2\nMe guarda de peligros, de pruebas, de dolor; Él manda que los vientos no agiten tempestad, Los mares se detienen, la ola reposó,\nY en Cristo fijo el ancla, confiando mis.\n3\nMi dulce Salvador, sí, mi hermoso amigo y Dios, Que libra de tristezas y aleja amarga hiel:\nPor fe yo iré al cielo, mansión del ser de amor, La fuente inagotable de dicha y bien.",
+  "numero_equivalente": 24,
+  "himnario_equivalente": "Himnos de Sión",
+  "estado": "VERIFICADO_FONTE",
+  "fuente": "Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada",
+  "observacion": "DOCX original 1–329",
+  "cifra_procedencia": {
+    "fuente": "https://chordify.net/es/chords/es-cristo-la-roca-himnos-de-gloria-y-triunfo-pentecostes",
+    "tipo": "enlace_externo",
+    "autorizado": false,
+    "notas": "Fuente externa verificada individualmente durante la auditoría de cifras GT. Fuente externa verificada individualmente; título y contenido corresponden al himno."
+  },
+  "audio_procedencia": {
+    "fuente": null,
+    "tipo": "desconocido",
+    "autorizado": false,
+    "notas": "Pendiente de verificación documental de procedencia."
+  },
+  "cifra_url": "https://chordify.net/es/chords/es-cristo-la-roca-himnos-de-gloria-y-triunfo-pentecostes",
+  "tom": "G",
+  "cifra_autorizada": false
+}
+
+>>> SION-024
+RESULTADO: ENCONTRADO
+{
+  "id": "SION-024",
+  "himnario": "Himnos de Sión",
+  "numero": 24,
+  "titulo": "CRISTO LA ROCA",
+  "letra": "1\nEn las olas inmensas de embravecido mar, Que asaltan de mi alma la pobre embarcación, De rodillas a Cristo clamé, y el huracán Deshecho fue al instante a la voz de Dios.\nEs Cristo la Roca, el ancla de mi fe; Los males, lamentos, y ayes de temor,\nTerminan por siempre, con mi supremo Rey; Es Jesucristo mi refugio.\n2\nMe guarda de peligros, de pruebas, de dolor; Él manda que los vientos no agiten tempestad, Los mares se detienen, la ola reposó,\nY en Cristo fijo el ancla, confiando mis.\n3\nMi dulce Salvador, sí, mi hermoso amigo y Dios, Que libra de tristezas y aleja amarga hiel:\nPor fe yo iré al cielo, mansión del ser de amor, La fuente inagotable de dicha y bien.",
+  "numero_equivalente": 52,
+  "himnario_equivalente": "Gloria y Triunfo",
+  "estado": "VERIFICADA_GT_COTEJO_SION",
+  "fuente": "PDF Himnario de Sión enviado por el usuario (136 págs.; escaneado)",
+  "observacion": "Letra incorporada desde la equivalencia confirmada con Gloria y Triunfo; pendiente sólo de diferencias editoriales propias de Sión, si las hubiera.",
+  "categorias": [
+    "Ayuda de Dios en las Pruebas"
+  ]
+}
+
+======================================================================
+CASO 03 / 12
+IDS: GT-100 + SION-059
+TÍTULO: A LOS PIES DE JESUCRISTO
+STATUS: CONFIRMADO_ERRO
+
+AÇÕES PLANEJADAS:
+1. remover_marcador_coro
+2. incorporar_falso_coro_na_estrofe_1
+
+>>> GT-100
+RESULTADO: ENCONTRADO
+{
+  "id": "GT-100",
+  "himnario": "Gloria y Triunfo",
+  "numero": 100,
+  "titulo": "A LOS PIES DE JESUCRISTO",
+  "letra": "1\nA los pies de Jesucristo Es el sitio aquí mejor, Escuchando cual María Las palabras de su amor.\nCORO:\nA los pies de Jesucristo Gozaré su comunión, Pues su mano fiel y tierna\nMe ha provisto protección.\n2\nA los pies de Jesucristo Hallo tierna compasión; El quitó ya mis afanes,\nYa me ha dado bendición.\n¡Puedo yo decirle a Cristo Mis cuidados y temor!\nY con él tendrá mi alma Gozo, paz, eterno amor.\n3\nA los pies de Jesucristo Yo tendré su bendición; En sus ojos hay dulzura Y en su seno protección.\n¡Qué feliz es el momento Que yo paso junto a ti! Ya anhelo el encuentro Cuando vengas tú por mí.",
+  "numero_equivalente": 59,
+  "himnario_equivalente": "Himnos de Sión",
+  "estado": "VERIFICADO_FONTE",
+  "fuente": "Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada",
+  "observacion": "DOCX original 1–329",
+  "cifra_procedencia": {
+    "fuente": null,
+    "tipo": "desconocido",
+    "autorizado": false,
+    "notas": "Pendiente de verificación documental de procedencia."
+  },
+  "audio_procedencia": {
+    "fuente": null,
+    "tipo": "desconocido",
+    "autorizado": false,
+    "notas": "Pendiente de verificación documental de procedencia."
+  }
+}
+
+>>> SION-059
+RESULTADO: ENCONTRADO
+{
+  "id": "SION-059",
+  "himnario": "Himnos de Sión",
+  "numero": 59,
+  "titulo": "A LOS PIES DE JESUCRISTO",
+  "letra": "1\nA los pies de Jesucristo Es el sitio aquí mejor, Escuchando cual María Las palabras de su amor.\nCORO:\nA los pies de Jesucristo Gozaré su comunión, Pues su mano fiel y tierna\nMe ha provisto protección.\n2\nA los pies de Jesucristo Hallo tierna compasión; El quitó ya mis afanes,\nYa me ha dado bendición.\n¡Puedo yo decirle a Cristo Mis cuidados y temor!\nY con él tendrá mi alma Gozo, paz, eterno amor.\n3\nA los pies de Jesucristo Yo tendré su bendición; En sus ojos hay dulzura Y en su seno protección.\n¡Qué feliz es el momento Que yo paso junto a ti! Ya anhelo el encuentro Cuando vengas tú por mí.",
+  "numero_equivalente": 100,
+  "himnario_equivalente": "Gloria y Triunfo",
+  "estado": "VERIFICADA_GT_COTEJO_SION",
+  "fuente": "PDF Himnario de Sión enviado por el usuario (136 págs.; escaneado)",
+  "observacion": "Letra incorporada desde la equivalencia confirmada con Gloria y Triunfo; pendiente sólo de diferencias editoriales propias de Sión, si las hubiera."
+}
+
+======================================================================
+CASO 04 / 12
+IDS: GT-161
+TÍTULO: PECADOR, VEN AL DULCE JESÚS
+STATUS: ESTROFES_FUNDIDAS
+
+AÇÕES PLANEJADAS:
+1. manter_coro
+2. separar_estrofe_4_da_estrofe_3
+
+>>> GT-161
+RESULTADO: ENCONTRADO
+{
+  "id": "GT-161",
+  "himnario": "Gloria y Triunfo",
+  "numero": 161,
+  "titulo": "PECADOR, VEN AL DULCE JESÚS",
+  "letra": "1\nPecador, ven al dulce Jesús, Y feliz para Siempre serás:\nSi en verdad le quisieres tener, Al divino Señor hallarás.\nCORO:\n||Ven a él, ven a él,\nQue te espera tu buen Salvador.||\n2\nSi cual hijo que necio pecó\nVas buscando a sus pies compasión, Tierno Padre en Jesús hallarás,\nY tendrás en sus brazos perdón.\n3\nSi enfermo te sientes morir, El será tu Doctor celestial;\nY hallarás en su sangre también Medicina que cure tu mal.\nOvejuela que huyó del redil,\n¡He aquí tu benigno Señor!\nY en los hombros llevada serás . De tan dulce y amante Pastor.",
+  "numero_equivalente": null,
+  "himnario_equivalente": null,
+  "estado": "VERIFICADO_FONTE",
+  "fuente": "Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada",
+  "observacion": "DOCX original 1–329",
+  "cifra_procedencia": {
+    "fuente": "https://acordes.lacuerda.net/himnos_de_gloria_y_triunfo/pecador_ven_al_dulce_jesus",
+    "tipo": "enlace_externo",
+    "autorizado": false,
+    "notas": "Fuente externa verificada individualmente durante la auditoría de cifras GT. Fuente externa verificada individualmente; título, contenido y armonización corresponden al himno."
+  },
+  "audio_procedencia": {
+    "fuente": null,
+    "tipo": "desconocido",
+    "autorizado": false,
+    "notas": "Pendiente de verificación documental de procedencia."
+  },
+  "cifra_url": "https://acordes.lacuerda.net/himnos_de_gloria_y_triunfo/pecador_ven_al_dulce_jesus",
+  "cifra_autorizada": false,
+  "tom": "G"
+}
+
+======================================================================
+CASO 05 / 12
+IDS: GT-186
+TÍTULO: PRESENTIMOS DEL MUNDO DICHOSO
+STATUS: ESTROFES_FUNDIDAS
+
+AÇÕES PLANEJADAS:
+1. manter_coro
+2. separar_estrofe_4_da_estrofe_3
+
+>>> GT-186
+RESULTADO: ENCONTRADO
+{
+  "id": "GT-186",
+  "himnario": "Gloria y Triunfo",
+  "numero": 186,
+  "titulo": "PRESENTIMOS DEL MUNDO DICHOSO",
+  "letra": "1\nPresentimos del mundo dichoso. Los placeres que Dios nos dará; El país lo creemos hermoso: Mas hallarnos allí ¿qué será?\nCORO:\n¿Qué será? ¿Qué será?\nMas hallarnos allí ¿qué será?\n¿Qué será? ¿Qué será?\nMas hallarnos allí ¿qué será?\n2\nEsperamos el gozo, la gloria, La grandeza sin fin que tendrá El mortal que ganó la victoria: Mas hallarnos allí ¿qué será?\n3\nAnhelamos el día esplendente Que en el santo país brillará Por Jesús el Cordero inocente: Mas hallarnos allí ¿qué será?\nBien sabemos que llanto, ni duelo, Ni pecados, ni males habrá\nEn la casa de Dios en el cielo: Mas hallarnos allí ¿qué será?",
+  "numero_equivalente": null,
+  "himnario_equivalente": null,
+  "estado": "VERIFICADO_FONTE",
+  "fuente": "Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada",
+  "observacion": "DOCX original 1–329",
+  "cifra_procedencia": {
+    "fuente": null,
+    "tipo": "desconocido",
+    "autorizado": false,
+    "notas": "Pendiente de verificación documental de procedencia."
+  },
+  "audio_procedencia": {
+    "fuente": null,
+    "tipo": "desconocido",
+    "autorizado": false,
+    "notas": "Pendiente de verificación documental de procedencia."
+  }
+}
+
+======================================================================
+CASO 06 / 12
+IDS: GT-259 + SION-107
+TÍTULO: GUARDA EL CONTACTO
+STATUS: ESTROFES_FUNDIDAS
+
+AÇÕES PLANEJADAS:
+1. manter_coro
+2. separar_estrofe_4_da_estrofe_3
+
+>>> GT-259
+RESULTADO: ENCONTRADO
+{
+  "id": "GT-259",
+  "himnario": "Gloria y Triunfo",
+  "numero": 259,
+  "titulo": "GUARDA EL CONTACTO",
+  "letra": "1\n¿Quieres sobre el mundo ser un vencedor?\n¿Quieres tú cantar aún cuando hay dolor?\n¿Quieres ser alegre cual fiel luchador? Guarda el contacto con el Salvador.\nCORO:\nGuarda el contacto con el Salvador, Luego las tinieblas no te cubrirán; Por la senda alegre tú caminarás,\nA causa del contacto con el Salvador.\n2\nEn el mundo hay muchos, tristes en pecar, Cuyos corazones lloran de pesar;\nDales el mensaje, no hay que callar, Con Dios el contacto debes de guardar.\n3\n¿Quieres tú con Dios la comunión tener?\n¿Y su gloria siempre en ti permanecer?\n¿Que el mundo a Cristo pueda en ti hoy ver?\nGuarda el contacto con el Supremo Ser.\nDeja que el Espíritu implante en ti La humildad de Cristo y su santo amor; Ora siempre y vela, que Jesús vendrá;\nGuarda el contacto con el Salvador.",
+  "numero_equivalente": 107,
+  "himnario_equivalente": "Himnos de Sión",
+  "estado": "VERIFICADO_FONTE",
+  "fuente": "Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada",
+  "observacion": "DOCX original 1–329",
+  "cifra_procedencia": {
+    "fuente": null,
+    "tipo": "desconocido",
+    "autorizado": false,
+    "notas": "Pendiente de verificación documental de procedencia."
+  },
+  "audio_procedencia": {
+    "fuente": null,
+    "tipo": "desconocido",
+    "autorizado": false,
+    "notas": "Pendiente de verificación documental de procedencia."
+  }
+}
+
+>>> SION-107
+RESULTADO: ENCONTRADO
+{
+  "id": "SION-107",
+  "himnario": "Himnos de Sión",
+  "numero": 107,
+  "titulo": "GUARDA EL CONTACTO",
+  "letra": "1\n¿Quieres sobre el mundo ser un vencedor?\n¿Quieres tú cantar aún cuando hay dolor?\n¿Quieres ser alegre cual fiel luchador? Guarda el contacto con el Salvador.\nCORO:\nGuarda el contacto con el Salvador, Luego las tinieblas no te cubrirán; Por la senda alegre tú caminarás,\nA causa del contacto con el Salvador.\n2\nEn el mundo hay muchos, tristes en pecar, Cuyos corazones lloran de pesar;\nDales el mensaje, no hay que callar, Con Dios el contacto debes de guardar.\n3\n¿Quieres tú con Dios la comunión tener?\n¿Y su gloria siempre en ti permanecer?\n¿Que el mundo a Cristo pueda en ti hoy ver?\nGuarda el contacto con el Supremo Ser.\nDeja que el Espíritu implante en ti La humildad de Cristo y su santo amor; Ora siempre y vela, que Jesús vendrá;\nGuarda el contacto con el Salvador.",
+  "numero_equivalente": 259,
+  "himnario_equivalente": "Gloria y Triunfo",
+  "estado": "VERIFICADA_GT_COTEJO_SION",
+  "fuente": "PDF Himnario de Sión enviado por el usuario (136 págs.; escaneado)",
+  "observacion": "Letra incorporada desde la equivalencia confirmada con Gloria y Triunfo; pendiente sólo de diferencias editoriales propias de Sión, si las hubiera.",
+  "categorias": [
+    "Jesús Salvador y Amigo"
+  ]
+}
+
+======================================================================
+CASO 07 / 12
+IDS: GT-283
+TÍTULO: EN LA MAÑANA
+STATUS: CONFIRMADO_ERRO
+
+AÇÕES PLANEJADAS:
+1. separar_coro_da_estrofe_1
+
+>>> GT-283
+RESULTADO: ENCONTRADO
+{
+  "id": "GT-283",
+  "himnario": "Gloria y Triunfo",
+  "numero": 283,
+  "titulo": "EN LA MAÑANA",
+  "letra": "1\nEn el mundo la Iglesia Peregrina ha de estar; Anhelante ella espera Su feliz, eterno hogar.\nNos veremos, nos veremos Pronto en gloria, pronto en gloria, Nos veremos en la tierra mis Allí; Nos veremos, nos veremos Pronto en gloria, pronto en gloria, Junto al rio cristalino más Allá.\n2\nNada aquí es permanente, Todo ha de terminar; Mas miramos adelante, En el cielo nuestro hogar.\n3\nLas familias en la tierra Se desunen al morir; Mas esperan la mañana En que se han de reunir.\n4\nCon Jesús cual unos reyes Pronto habremos de estar; Juntos, miles de millares, Con Jesús para morar.",
+  "numero_equivalente": null,
+  "himnario_equivalente": null,
+  "estado": "VERIFICADO_FONTE",
+  "fuente": "Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada",
+  "observacion": "DOCX original 1–329",
+  "cifra_procedencia": {
+    "fuente": null,
+    "tipo": "desconocido",
+    "autorizado": false,
+    "notas": "Pendiente de verificación documental de procedencia."
+  },
+  "audio_procedencia": {
+    "fuente": null,
+    "tipo": "desconocido",
+    "autorizado": false,
+    "notas": "Pendiente de verificación documental de procedencia."
+  }
+}
+
+======================================================================
+CASO 08 / 12
+IDS: GT-056 + SION-026
+TÍTULO: ¡OH, YO QUIERO ANDAR CON CRISTO!
+STATUS: ERRO_ESTRUTURAL
+
+AÇÕES PLANEJADAS:
+1. marcar_primeira_estrofe_como_1
+2. manter_coro
+3. revisar_serIe_para_serle
+
+>>> GT-056
+RESULTADO: ENCONTRADO
+{
+  "id": "GT-056",
+  "himnario": "Gloria y Triunfo",
+  "numero": 56,
+  "titulo": "¡OH, YO QUIERO ANDAR CON CRISTO!",
+  "letra": "¡Oh!, yo quiero andar con Cristo.\nQuiero oír su tierna voz, Meditar en su palabra, Siempre andar de él en pos: Consagrar a él mi vida, Cumplir fiel su voluntad,\nY algún día con mi Cristo Gozaré la claridad.\nCORO:\n¡Oh, sí, yo quiero andar con Cristo!\n¡Oh, sí, yo quiero vivir con Cristo!\n¡Oh, sí, yo quiero morir con Cristo!\nQuiero serIe un testigo fiel.\n2\n¡Oh!, yo quiero andar con Cristo, Él vivió en santidad,\nEn la Biblia yo lo leo\nY yo sé que es la verdad. Cristo era santo en todo, El Cordero de la cruz;\nY yo anhelo ser cristiano, Seguidor de mi Jesús.\n3\n¡Oh!, yo quiero andar con Cristo De mi senda él es la luz, Dejaré el perverso mundo\nY cargar aquí mi cruz. Este mundo nada ofrece, Cristo ofrece salvación;\nY es mi única esperanza Gozar vida eterna en Sion.",
+  "numero_equivalente": 26,
+  "himnario_equivalente": "Himnos de Sión",
+  "estado": "VERIFICADO_FONTE",
+  "fuente": "Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada",
+  "observacion": "DOCX original 1–329",
+  "cifra_procedencia": {
+    "fuente": "https://acordes.lacuerda.net/himnos_de_gloria_y_triunfo/oh_yo_quiero_andar_con_cristo",
+    "tipo": "enlace_externo",
+    "autorizado": false,
+    "notas": "Fuente externa verificada individualmente durante la auditoría de cifras GT. Fuente externa verificada individualmente; título y contenido corresponden al himno."
+  },
+  "audio_procedencia": {
+    "fuente": null,
+    "tipo": "desconocido",
+    "autorizado": false,
+    "notas": "Pendiente de verificación documental de procedencia."
+  },
+  "cifra_url": "https://acordes.lacuerda.net/himnos_de_gloria_y_triunfo/oh_yo_quiero_andar_con_cristo",
+  "cifra_autorizada": false,
+  "tom": null
+}
+
+>>> SION-026
+RESULTADO: ENCONTRADO
+{
+  "id": "SION-026",
+  "himnario": "Himnos de Sión",
+  "numero": 26,
+  "titulo": "¡OH! YO QUIERO ANDAR CON CRISTO",
+  "letra": "¡Oh!, yo quiero andar con Cristo.\nQuiero oír su tierna voz, Meditar en su palabra, Siempre andar de él en pos: Consagrar a él mi vida, Cumplir fiel su voluntad,\nY algún día con mi Cristo Gozaré la claridad.\nCORO:\n¡Oh, sí, yo quiero andar con Cristo!\n¡Oh, sí, yo quiero vivir con Cristo!\n¡Oh, sí, yo quiero morir con Cristo!\nQuiero serIe un testigo fiel.\n2\n¡Oh!, yo quiero andar con Cristo, Él vivió en santidad,\nEn la Biblia yo lo leo\nY yo sé que es la verdad. Cristo era santo en todo, El Cordero de la cruz;\nY yo anhelo ser cristiano, Seguidor de mi Jesús.\n3\n¡Oh!, yo quiero andar con Cristo De mi senda él es la luz, Dejaré el perverso mundo\nY cargar aquí mi cruz. Este mundo nada ofrece, Cristo ofrece salvación;\nY es mi única esperanza Gozar vida eterna en Sion.",
+  "numero_equivalente": 56,
+  "himnario_equivalente": "Gloria y Triunfo",
+  "estado": "VERIFICADA_GT_COTEJO_SION",
+  "fuente": "PDF Himnario de Sión enviado por el usuario (136 págs.; escaneado)",
+  "observacion": "Letra incorporada desde la equivalencia confirmada con Gloria y Triunfo; pendiente sólo de diferencias editoriales propias de Sión, si las hubiera.",
+  "categorias": [
+    "Jesús Salvador y Amigo"
+  ]
+}
+
+======================================================================
+CASO 09 / 12
+IDS: GT-081 + SION-038
+TÍTULO: LA BANDERA DE LA CRUZ
+STATUS: ERRO_ESTRUTURAL
+
+AÇÕES PLANEJADAS:
+1. marcar_primeira_estrofe_como_1
+2. manter_coro
+
+>>> GT-081
+RESULTADO: ENCONTRADO
+{
+  "id": "GT-081",
+  "himnario": "Gloria y Triunfo",
+  "numero": 81,
+  "titulo": "LA BANDERA DE LA CRUZ",
+  "letra": "Cual pendón hermoso despleguemos hoy La bandera de la cruz,\nLa verdad del evangelio, el blasón Del soldado de Jesús.\nCORO:\n¡Adelante, adelante,\nEn pos de nuestro Salvador! Con plena fe en nuestro Rey,\n¡Adelante con valor!\n2\nPrediquemos siempre lo que dice Dios De la sangre de Jesús;\nCómo limpia del pecado al mortal, Y le compra la salud.\n3\nEn el mundo proclamemos con fervor Esta historia de la cruz:\nBendigamos sin cesar al Redentor Que nos dio su paz y luz.\n4\nEn el cielo nuestro cántico será:\n¡Aleluya a Jesús!\nNuestro corazón allí rebosará De amor y gratitud.",
+  "numero_equivalente": 38,
+  "himnario_equivalente": "Himnos de Sión",
+  "estado": "VERIFICADO_FONTE",
+  "fuente": "Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada",
+  "observacion": "DOCX original 1–329",
+  "cifra_procedencia": {
+    "fuente": "https://acordes.lacuerda.net/himnos_de_gloria_y_triunfo/la_bandera_de_la_cruz",
+    "tipo": "enlace_externo",
+    "autorizado": false,
+    "notas": "Fuente externa verificada individualmente durante la auditoría de cifras GT. Fuente externa verificada individualmente; título, contenido y armonización corresponden al himno."
+  },
+  "audio_procedencia": {
+    "fuente": null,
+    "tipo": "desconocido",
+    "autorizado": false,
+    "notas": "Pendiente de verificación documental de procedencia."
+  },
+  "cifra_url": "https://acordes.lacuerda.net/himnos_de_gloria_y_triunfo/la_bandera_de_la_cruz",
+  "cifra_autorizada": false,
+  "tom": "E"
+}
+
+>>> SION-038
+RESULTADO: ENCONTRADO
+{
+  "id": "SION-038",
+  "himnario": "Himnos de Sión",
+  "numero": 38,
+  "titulo": "LA BANDERA DE LA CRUZ",
+  "letra": "Cual pendón hermoso despleguemos hoy La bandera de la cruz,\nLa verdad del evangelio, el blasón Del soldado de Jesús.\nCORO:\n¡Adelante, adelante,\nEn pos de nuestro Salvador! Con plena fe en nuestro Rey,\n¡Adelante con valor!\n2\nPrediquemos siempre lo que dice Dios De la sangre de Jesús;\nCómo limpia del pecado al mortal, Y le compra la salud.\n3\nEn el mundo proclamemos con fervor Esta historia de la cruz:\nBendigamos sin cesar al Redentor Que nos dio su paz y luz.\n4\nEn el cielo nuestro cántico será:\n¡Aleluya a Jesús!\nNuestro corazón allí rebosará De amor y gratitud.",
+  "numero_equivalente": 81,
+  "himnario_equivalente": "Gloria y Triunfo",
+  "estado": "VERIFICADA_GT_COTEJO_SION",
+  "fuente": "PDF Himnario de Sión enviado por el usuario (136 págs.; escaneado)",
+  "observacion": "Letra incorporada desde la equivalencia confirmada con Gloria y Triunfo; pendiente sólo de diferencias editoriales propias de Sión, si las hubiera.",
+  "categorias": [
+    "Actividad Cristiana"
+  ]
+}
+
+======================================================================
+CASO 10 / 12
+IDS: GT-028 + SION-015
+TÍTULO: MÁS DE JESÚS
+STATUS: ESTROFES_FUNDIDAS
+
+AÇÕES PLANEJADAS:
+1. manter_coro
+2. separar_estrofe_4_da_estrofe_3
+
+>>> GT-028
+RESULTADO: ENCONTRADO
+{
+  "id": "GT-028",
+  "himnario": "Gloria y Triunfo",
+  "numero": 28,
+  "titulo": "MÁS DE JESÚS",
+  "letra": "1\nMás de Jesús deseo saber, Más de su gracia y poder: Más de su salvación gozar: Más de su dulce amor gustar.\nCORO:\nMás quiero amarle, Más quiero honrarle:\nMás de su salvación gozar, Más de su dulce amor gustar.\n2\nMás quiero a Jesús seguir, Más de su santa ley cumplir: Más de su voluntad saber, Más de su Espíritu tener.\n3\nMás de Jesús, más oración, Más cerca estar en comunión; Más su palabra meditar,\nMás sus promesas alcanzar.\nMás de Jesús allá veré, Más semejante a él seré:\nMás de su gloria he de gozar, Más su gran nombre alabar.",
+  "numero_equivalente": 15,
+  "himnario_equivalente": "Himnos de Sión",
+  "estado": "VERIFICADO_FONTE",
+  "fuente": "Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada",
+  "observacion": "DOCX original 1–329",
+  "cifra_procedencia": {
+    "fuente": "https://acordes.lacuerda.net/himnos_de_gloria_y_triunfo/himno_28",
+    "tipo": "enlace_externo",
+    "autorizado": false,
+    "notas": "Fuente externa verificada individualmente durante la auditoría de cifras GT. Fuente externa verificada y compatible con el título/número del himno dentro de Himnos de Gloria y Triunfo."
+  },
+  "audio_procedencia": {
+    "fuente": null,
+    "tipo": "desconocido",
+    "autorizado": false,
+    "notas": "Pendiente de verificación documental de procedencia."
+  },
+  "cifra_url": "https://acordes.lacuerda.net/himnos_de_gloria_y_triunfo/himno_28",
+  "cifra_autorizada": false,
+  "tom": null
+}
+
+>>> SION-015
+RESULTADO: ENCONTRADO
+{
+  "id": "SION-015",
+  "himnario": "Himnos de Sión",
+  "numero": 15,
+  "titulo": "MÁS DE JESÚS",
+  "letra": "1\nMás de Jesús deseo saber, Más de su gracia y poder: Más de su salvación gozar: Más de su dulce amor gustar.\nCORO:\nMás quiero amarle, Más quiero honrarle:\nMás de su salvación gozar, Más de su dulce amor gustar.\n2\nMás quiero a Jesús seguir, Más de su santa ley cumplir: Más de su voluntad saber, Más de su Espíritu tener.\n3\nMás de Jesús, más oración, Más cerca estar en comunión; Más su palabra meditar,\nMás sus promesas alcanzar.\nMás de Jesús allá veré, Más semejante a él seré:\nMás de su gloria he de gozar, Más su gran nombre alabar.",
+  "numero_equivalente": 28,
+  "himnario_equivalente": "Gloria y Triunfo",
+  "estado": "VERIFICADA_PDF_Y_GT",
+  "fuente": "PDF Himnario de Sión enviado por el usuario (136 págs.; escaneado)",
+  "observacion": "Letra cotejada con el PDF de Sión y la versión correspondiente de Gloria y Triunfo; correcciones ortográficas seguras normalizadas.",
+  "categorias": [
+    "Cielo - Gloriosa Esperanza"
+  ]
+}
+
+======================================================================
+CASO 11 / 12
+IDS: GT-033 + SION-016
+TÍTULO: GRANDE GOZO HAY EN MI ALMA
+STATUS: ESTROFES_FUNDIDAS
+
+AÇÕES PLANEJADAS:
+1. manter_coro
+2. separar_estrofe_4_da_estrofe_3
+
+>>> GT-033
+RESULTADO: ENCONTRADO
+{
+  "id": "GT-033",
+  "himnario": "Gloria y Triunfo",
+  "numero": 33,
+  "titulo": "GRANDE GOZO HAY EN MI ALMA HOY",
+  "letra": "1\nGrande gozo hay en mi alma hoy, Pues Jesús conmigo está;\nY su paz, que ya gozando estoy Por siempre durará\nCORO:\nGrande gozo, ¡cuán hermoso! Paso todo el tiempo bien feliz;\nPorque veo de Cristo la sonriente faz, Grande gozo siento en mí.\n2\nHay un canto en mi alma hoy; Melodías a mi Rey:\nEn su amor feliz y libre soy.\nY salvo por la fe.\n3\nPaz divina hay en mi alma hoy, Porque Cristo me salvó;\nLas cadenas rotas ya están, Jesús me libertó.\nGratitud hay en mi alma hoy, Y alabanzas a Jesús;\nPor su gracia a la gloria voy, Gozándome en la luz.",
+  "numero_equivalente": 16,
+  "himnario_equivalente": "Himnos de Sión",
+  "estado": "VERIFICADO_FONTE",
+  "fuente": "Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada",
+  "observacion": "DOCX original 1–329",
+  "cifra_procedencia": {
+    "fuente": "https://acordes.lacuerda.net/himnos_de_gloria_y_triunfo/grande_gozo_hay_en_mi_alma_hoy",
+    "tipo": "enlace_externo",
+    "autorizado": false,
+    "notas": "Fuente externa verificada individualmente durante la auditoría de cifras GT. Fuente externa verificada y compatible con el título/número del himno dentro de Himnos de Gloria y Triunfo."
+  },
+  "audio_procedencia": {
+    "fuente": null,
+    "tipo": "desconocido",
+    "autorizado": false,
+    "notas": "Pendiente de verificación documental de procedencia."
+  },
+  "cifra_url": "https://acordes.lacuerda.net/himnos_de_gloria_y_triunfo/grande_gozo_hay_en_mi_alma_hoy",
+  "cifra_autorizada": false,
+  "tom": null
+}
+
+>>> SION-016
+RESULTADO: ENCONTRADO
+{
+  "id": "SION-016",
+  "himnario": "Himnos de Sión",
+  "numero": 16,
+  "titulo": "GRANDE GOZO HAY EN MI ALMA",
+  "letra": "1\nGrande gozo hay en mi alma hoy, Pues Jesús conmigo está;\nY su paz, que ya gozando estoy Por siempre durará\nCORO:\nGrande gozo, ¡cuán hermoso! Paso todo el tiempo bien feliz;\nPorque veo de Cristo la sonriente faz, Grande gozo siento en mí.\n2\nHay un canto en mi alma hoy; Melodías a mi Rey:\nEn su amor feliz y libre soy.\nY salvo por la fe.\n3\nPaz divina hay en mi alma hoy, Porque Cristo me salvó;\nLas cadenas rotas ya están, Jesús me libertó.\nGratitud hay en mi alma hoy, Y alabanzas a Jesús;\nPor su gracia a la gloria voy, Gozándome en la luz.",
+  "numero_equivalente": "33",
+  "himnario_equivalente": "Gloria y Triunfo",
+  "estado": "VERIFICADA_PDF_Y_GT",
+  "fuente": "PDF Himnario de Sión enviado por el usuario (136 págs.; escaneado)",
+  "observacion": "Letra cotejada con el PDF de Sión y la versión correspondiente de Gloria y Triunfo; correcciones ortográficas seguras normalizadas.",
+  "categorias": [
+    "Gozo y Paz de los Creyentes"
+  ]
+}
+
+======================================================================
+CASO 12 / 12
+IDS: GT-036 + SION-019
+TÍTULO: ENTERA CONSAGRACIÓN
+STATUS: ESTROFES_FUNDIDAS
+
+AÇÕES PLANEJADAS:
+1. manter_coro
+2. separar_estrofe_5_da_estrofe_4
+3. inicio_estrofe_5_toma_tu_mi_amor
+
+>>> GT-036
+RESULTADO: ENCONTRADO
+{
+  "id": "GT-036",
+  "himnario": "Gloria y Triunfo",
+  "numero": 36,
+  "titulo": "ENTERA CONSAGRACIÓN",
+  "letra": "1\nQue mi vida entera esté Consagrada a ti, Señor;\nQue a mis manos pueda guiar El impulso de tu amor.\nCORO:\nLávame en tu sangre, Salvador, Límpiame de toda mi maldad; Traigo a ti mi vida, para ser, Señor,\n¡Tuya por la eternidad!\n2\nQue mis pies tan solo en pos De lo santo puedan ir,\nY que a ti, Señor, mi voz Se complazca en bendecir.\n3\nQue mi tiempo todo esté Consagrado a tu loor, Que mis labios al hablar Hablen solo de tu amor.\n4\nToma, ¡oh Dios!, mi voluntad, Y hazla tuya, nada más; Toma, sí, mi corazón\nPor tu trono lo tendrás.\nToma tú mi amor, que hoy A tus pies vengo a poner;\n¡Toma todo lo que soy, Todo tuyo quiero ser!",
+  "numero_equivalente": 19,
+  "himnario_equivalente": "Himnos de Sión",
+  "estado": "VERIFICADO_FONTE",
+  "fuente": "Himnos de Gloria y Triunfo — Editorial Vida, edición revisada y aumentada",
+  "observacion": "DOCX original 1–329",
+  "cifra_procedencia": {
+    "fuente": "https://acordes.lacuerda.net/himnos_de_gloria_y_triunfo/36_entera_consagracion",
+    "tipo": "enlace_externo",
+    "autorizado": false,
+    "notas": "Fuente externa verificada individualmente durante la auditoría de cifras GT. Fuente externa verificada y compatible con el título/número del himno dentro de Himnos de Gloria y Triunfo."
+  },
+  "audio_procedencia": {
+    "fuente": null,
+    "tipo": "desconocido",
+    "autorizado": false,
+    "notas": "Pendiente de verificación documental de procedencia."
+  },
+  "cifra_url": "https://acordes.lacuerda.net/himnos_de_gloria_y_triunfo/36_entera_consagracion",
+  "cifra_autorizada": false,
+  "tom": null
+}
+
+>>> SION-019
+RESULTADO: ENCONTRADO
+{
+  "id": "SION-019",
+  "himnario": "Himnos de Sión",
+  "numero": 19,
+  "titulo": "ENTERA CONSAGRACIÓN",
+  "letra": "1\nQue mi vida entera esté Consagrada a ti, Señor;\nQue a mis manos pueda guiar El impulso de tu amor.\nCORO:\nLávame en tu sangre, Salvador, Límpiame de toda mi maldad; Traigo a ti mi vida, para ser, Señor,\n¡Tuya por la eternidad!\n2\nQue mis pies tan solo en pos De lo santo puedan ir,\nY que a ti, Señor, mi voz Se complazca en bendecir.\n3\nQue mi tiempo todo esté Consagrado a tu loor, Que mis labios al hablar Hablen solo de tu amor.\n4\nToma, ¡oh Dios!, mi voluntad, Y hazla tuya, nada más; Toma, sí, mi corazón\nPor tu trono lo tendrás.\nToma tú mi amor, que hoy A tus pies vengo a poner;\n¡Toma todo lo que soy, Todo tuyo quiero ser!",
+  "numero_equivalente": 36,
+  "himnario_equivalente": "Gloria y Triunfo",
+  "estado": "VERIFICADA_PDF_Y_GT",
+  "fuente": "PDF Himnario de Sión enviado por el usuario (136 págs.; escaneado)",
+  "observacion": "Letra cotejada con el PDF de Sión y la versión correspondiente de Gloria y Triunfo; correcciones ortográficas seguras normalizadas.",
+  "categorias": [
+    "Consagración"
+  ]
+}
+
+======================================================================
+RESUMO
+REGISTROS ENCONTRADOS: 20
+BUSCAS AMBÍGUAS: 0
+BUSCAS NÃO ENCONTRADAS: 0
+
+BASE MESTRE NÃO ALTERADA.

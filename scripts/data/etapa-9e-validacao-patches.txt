@@ -1,0 +1,392 @@
+TOTAL RECEBIDO: 20
+
+============================================================
+PATCH 01 / 20
+ID: GT-040
+TÍTULO: EN LOS NEGOCIOS DEL REY
+AÇÃO: Inserir marcador CORO após a primeira estrofe.
+VALIDAÇÃO BÁSICA: OK
+
+--------------- ANTES ---------------
+Soy peregrino aquí, mi hogar lejano está, En la mansión de luz, eterna paz y amor: Embajador yo soy del reino celestial
+En los negocios de mi Rey.
+Este mensaje fiel oid, . Que dijo ya celeste voz:
+«Reconciliaos ya» – dice el Señor y Rey,
+
+--------------- DEPOIS --------------
+Soy peregrino aquí, mi hogar lejano está, En la mansión de luz, eterna paz y amor: Embajador yo soy del reino celestial
+En los negocios de mi Rey.
+CORO:
+Este mensaje fiel oid, . Que dijo ya celeste voz:
+«Reconciliaos ya» – dice el Señor y Rey,
+
+============================================================
+PATCH 02 / 20
+ID: GT-052
+TÍTULO: CRISTO LA ROCA
+AÇÃO: Separar coro da estrofe 1; correção textual permanece bloqueada.
+VALIDAÇÃO BÁSICA: OK
+
+--------------- ANTES ---------------
+1
+En las olas inmensas de embravecido mar, Que asaltan de mi alma la pobre embarcación, De rodillas a Cristo clamé, y el huracán Deshecho fue al instante a la voz de Dios.
+Es Cristo la Roca, el ancla de mi fe; Los males, lamentos, y ayes de temor,
+Terminan por siempre, con mi supremo Rey; Es Jesucristo mi refugio.
+
+--------------- DEPOIS --------------
+1
+En las olas inmensas de embravecido mar, Que asaltan de mi alma la pobre embarcación, De rodillas a Cristo clamé, y el huracán Deshecho fue al instante a la voz de Dios.
+CORO:
+Es Cristo la Roca, el ancla de mi fe; Los males, lamentos, y ayes de temor,
+Terminan por siempre, con mi supremo Rey; Es Jesucristo mi refugio.
+
+============================================================
+PATCH 03 / 20
+ID: SION-024
+TÍTULO: CRISTO LA ROCA
+AÇÃO: Separar coro da estrofe 1; correção textual permanece bloqueada.
+VALIDAÇÃO BÁSICA: OK
+
+--------------- ANTES ---------------
+1
+En las olas inmensas de embravecido mar, Que asaltan de mi alma la pobre embarcación, De rodillas a Cristo clamé, y el huracán Deshecho fue al instante a la voz de Dios.
+Es Cristo la Roca, el ancla de mi fe; Los males, lamentos, y ayes de temor,
+Terminan por siempre, con mi supremo Rey; Es Jesucristo mi refugio.
+
+--------------- DEPOIS --------------
+1
+En las olas inmensas de embravecido mar, Que asaltan de mi alma la pobre embarcación, De rodillas a Cristo clamé, y el huracán Deshecho fue al instante a la voz de Dios.
+CORO:
+Es Cristo la Roca, el ancla de mi fe; Los males, lamentos, y ayes de temor,
+Terminan por siempre, con mi supremo Rey; Es Jesucristo mi refugio.
+
+============================================================
+PATCH 04 / 20
+ID: GT-100
+TÍTULO: A LOS PIES DE JESUCRISTO
+AÇÃO: Remover falso marcador CORO; preservar o texto como continuação da estrofe 1.
+VALIDAÇÃO BÁSICA: OK
+
+--------------- ANTES ---------------
+1
+A los pies de Jesucristo Es el sitio aquí mejor, Escuchando cual María Las palabras de su amor.
+CORO:
+A los pies de Jesucristo Gozaré su comunión, Pues su mano fiel y tierna
+Me ha provisto protección.
+
+--------------- DEPOIS --------------
+1
+A los pies de Jesucristo Es el sitio aquí mejor, Escuchando cual María Las palabras de su amor.
+A los pies de Jesucristo Gozaré su comunión, Pues su mano fiel y tierna
+Me ha provisto protección.
+
+============================================================
+PATCH 05 / 20
+ID: SION-059
+TÍTULO: A LOS PIES DE JESUCRISTO
+AÇÃO: Remover falso marcador CORO; preservar o texto como continuação da estrofe 1.
+VALIDAÇÃO BÁSICA: OK
+
+--------------- ANTES ---------------
+1
+A los pies de Jesucristo Es el sitio aquí mejor, Escuchando cual María Las palabras de su amor.
+CORO:
+A los pies de Jesucristo Gozaré su comunión, Pues su mano fiel y tierna
+Me ha provisto protección.
+
+--------------- DEPOIS --------------
+1
+A los pies de Jesucristo Es el sitio aquí mejor, Escuchando cual María Las palabras de su amor.
+A los pies de Jesucristo Gozaré su comunión, Pues su mano fiel y tierna
+Me ha provisto protección.
+
+============================================================
+PATCH 06 / 20
+ID: GT-161
+TÍTULO: PECADOR, VEN AL DULCE JESÚS
+AÇÃO: Separar estrofe 4 da estrofe 3.
+VALIDAÇÃO BÁSICA: OK
+
+--------------- ANTES ---------------
+Si enfermo te sientes morir, El será tu Doctor celestial;
+Y hallarás en su sangre también Medicina que cure tu mal.
+Ovejuela que huyó del redil,
+¡He aquí tu benigno Señor!
+
+--------------- DEPOIS --------------
+Si enfermo te sientes morir, El será tu Doctor celestial;
+Y hallarás en su sangre también Medicina que cure tu mal.
+4
+Ovejuela que huyó del redil,
+¡He aquí tu benigno Señor!
+
+============================================================
+PATCH 07 / 20
+ID: GT-186
+TÍTULO: PRESENTIMOS DEL MUNDO DICHOSO
+AÇÃO: Separar estrofe 4 da estrofe 3.
+VALIDAÇÃO BÁSICA: OK
+
+--------------- ANTES ---------------
+3
+Anhelamos el día esplendente Que en el santo país brillará Por Jesús el Cordero inocente: Mas hallarnos allí ¿qué será?
+Bien sabemos que llanto, ni duelo, Ni pecados, ni males habrá
+En la casa de Dios en el cielo: Mas hallarnos allí ¿qué será?
+
+--------------- DEPOIS --------------
+3
+Anhelamos el día esplendente Que en el santo país brillará Por Jesús el Cordero inocente: Mas hallarnos allí ¿qué será?
+4
+Bien sabemos que llanto, ni duelo, Ni pecados, ni males habrá
+En la casa de Dios en el cielo: Mas hallarnos allí ¿qué será?
+
+============================================================
+PATCH 08 / 20
+ID: GT-259
+TÍTULO: GUARDA EL CONTACTO
+AÇÃO: Separar estrofe 4 da estrofe 3.
+VALIDAÇÃO BÁSICA: OK
+
+--------------- ANTES ---------------
+¿Que el mundo a Cristo pueda en ti hoy ver?
+Guarda el contacto con el Supremo Ser.
+Deja que el Espíritu implante en ti La humildad de Cristo y su santo amor; Ora siempre y vela, que Jesús vendrá;
+Guarda el contacto con el Salvador.
+
+--------------- DEPOIS --------------
+¿Que el mundo a Cristo pueda en ti hoy ver?
+Guarda el contacto con el Supremo Ser.
+4
+Deja que el Espíritu implante en ti La humildad de Cristo y su santo amor; Ora siempre y vela, que Jesús vendrá;
+Guarda el contacto con el Salvador.
+
+============================================================
+PATCH 09 / 20
+ID: SION-107
+TÍTULO: GUARDA EL CONTACTO
+AÇÃO: Separar estrofe 4 da estrofe 3.
+VALIDAÇÃO BÁSICA: OK
+
+--------------- ANTES ---------------
+¿Que el mundo a Cristo pueda en ti hoy ver?
+Guarda el contacto con el Supremo Ser.
+Deja que el Espíritu implante en ti La humildad de Cristo y su santo amor; Ora siempre y vela, que Jesús vendrá;
+Guarda el contacto con el Salvador.
+
+--------------- DEPOIS --------------
+¿Que el mundo a Cristo pueda en ti hoy ver?
+Guarda el contacto con el Supremo Ser.
+4
+Deja que el Espíritu implante en ti La humildad de Cristo y su santo amor; Ora siempre y vela, que Jesús vendrá;
+Guarda el contacto con el Salvador.
+
+============================================================
+PATCH 10 / 20
+ID: GT-283
+TÍTULO: EN LA MAÑANA
+AÇÃO: Separar coro da estrofe 1; possível OCR permanece bloqueado.
+VALIDAÇÃO BÁSICA: OK
+
+--------------- ANTES ---------------
+1
+En el mundo la Iglesia Peregrina ha de estar; Anhelante ella espera Su feliz, eterno hogar.
+Nos veremos, nos veremos Pronto en gloria, pronto en gloria, Nos veremos en la tierra mis Allí; Nos veremos, nos veremos Pronto en gloria, pronto en gloria, Junto al rio cristalino más Allá.
+2
+
+--------------- DEPOIS --------------
+1
+En el mundo la Iglesia Peregrina ha de estar; Anhelante ella espera Su feliz, eterno hogar.
+CORO:
+Nos veremos, nos veremos Pronto en gloria, pronto en gloria, Nos veremos en la tierra mis Allí; Nos veremos, nos veremos Pronto en gloria, pronto en gloria, Junto al rio cristalino más Allá.
+2
+
+============================================================
+PATCH 11 / 20
+ID: GT-056
+TÍTULO: ¡OH, YO QUIERO ANDAR CON CRISTO!
+AÇÃO: Adicionar número 1 à primeira estrofe; possível OCR serIe permanece bloqueado.
+VALIDAÇÃO BÁSICA: OK
+
+--------------- ANTES ---------------
+¡Oh!, yo quiero andar con Cristo.
+Quiero oír su tierna voz, Meditar en su palabra, Siempre andar de él en pos: Consagrar a él mi vida, Cumplir fiel su voluntad,
+
+--------------- DEPOIS --------------
+1
+¡Oh!, yo quiero andar con Cristo.
+Quiero oír su tierna voz, Meditar en su palabra, Siempre andar de él en pos: Consagrar a él mi vida, Cumplir fiel su voluntad,
+
+============================================================
+PATCH 12 / 20
+ID: SION-026
+TÍTULO: ¡OH! YO QUIERO ANDAR CON CRISTO
+AÇÃO: Adicionar número 1 à primeira estrofe; possível OCR serIe permanece bloqueado.
+VALIDAÇÃO BÁSICA: OK
+
+--------------- ANTES ---------------
+¡Oh!, yo quiero andar con Cristo.
+Quiero oír su tierna voz, Meditar en su palabra, Siempre andar de él en pos: Consagrar a él mi vida, Cumplir fiel su voluntad,
+
+--------------- DEPOIS --------------
+1
+¡Oh!, yo quiero andar con Cristo.
+Quiero oír su tierna voz, Meditar en su palabra, Siempre andar de él en pos: Consagrar a él mi vida, Cumplir fiel su voluntad,
+
+============================================================
+PATCH 13 / 20
+ID: GT-081
+TÍTULO: LA BANDERA DE LA CRUZ
+AÇÃO: Adicionar número 1 à primeira estrofe.
+VALIDAÇÃO BÁSICA: OK
+
+--------------- ANTES ---------------
+Cual pendón hermoso despleguemos hoy La bandera de la cruz,
+La verdad del evangelio, el blasón Del soldado de Jesús.
+
+--------------- DEPOIS --------------
+1
+Cual pendón hermoso despleguemos hoy La bandera de la cruz,
+La verdad del evangelio, el blasón Del soldado de Jesús.
+
+============================================================
+PATCH 14 / 20
+ID: SION-038
+TÍTULO: LA BANDERA DE LA CRUZ
+AÇÃO: Adicionar número 1 à primeira estrofe.
+VALIDAÇÃO BÁSICA: OK
+
+--------------- ANTES ---------------
+Cual pendón hermoso despleguemos hoy La bandera de la cruz,
+La verdad del evangelio, el blasón Del soldado de Jesús.
+
+--------------- DEPOIS --------------
+1
+Cual pendón hermoso despleguemos hoy La bandera de la cruz,
+La verdad del evangelio, el blasón Del soldado de Jesús.
+
+============================================================
+PATCH 15 / 20
+ID: GT-028
+TÍTULO: MÁS DE JESÚS
+AÇÃO: Separar estrofe 4 da estrofe 3.
+VALIDAÇÃO BÁSICA: OK
+
+--------------- ANTES ---------------
+Más de Jesús, más oración, Más cerca estar en comunión; Más su palabra meditar,
+Más sus promesas alcanzar.
+Más de Jesús allá veré, Más semejante a él seré:
+Más de su gloria he de gozar, Más su gran nombre alabar.
+
+--------------- DEPOIS --------------
+Más de Jesús, más oración, Más cerca estar en comunión; Más su palabra meditar,
+Más sus promesas alcanzar.
+4
+Más de Jesús allá veré, Más semejante a él seré:
+Más de su gloria he de gozar, Más su gran nombre alabar.
+
+============================================================
+PATCH 16 / 20
+ID: SION-015
+TÍTULO: MÁS DE JESÚS
+AÇÃO: Separar estrofe 4 da estrofe 3.
+VALIDAÇÃO BÁSICA: OK
+
+--------------- ANTES ---------------
+Más de Jesús, más oración, Más cerca estar en comunión; Más su palabra meditar,
+Más sus promesas alcanzar.
+Más de Jesús allá veré, Más semejante a él seré:
+Más de su gloria he de gozar, Más su gran nombre alabar.
+
+--------------- DEPOIS --------------
+Más de Jesús, más oración, Más cerca estar en comunión; Más su palabra meditar,
+Más sus promesas alcanzar.
+4
+Más de Jesús allá veré, Más semejante a él seré:
+Más de su gloria he de gozar, Más su gran nombre alabar.
+
+============================================================
+PATCH 17 / 20
+ID: GT-033
+TÍTULO: GRANDE GOZO HAY EN MI ALMA HOY
+AÇÃO: Separar estrofe 4 da estrofe 3.
+VALIDAÇÃO BÁSICA: OK
+
+--------------- ANTES ---------------
+Paz divina hay en mi alma hoy, Porque Cristo me salvó;
+Las cadenas rotas ya están, Jesús me libertó.
+Gratitud hay en mi alma hoy, Y alabanzas a Jesús;
+Por su gracia a la gloria voy, Gozándome en la luz.
+
+--------------- DEPOIS --------------
+Paz divina hay en mi alma hoy, Porque Cristo me salvó;
+Las cadenas rotas ya están, Jesús me libertó.
+4
+Gratitud hay en mi alma hoy, Y alabanzas a Jesús;
+Por su gracia a la gloria voy, Gozándome en la luz.
+
+============================================================
+PATCH 18 / 20
+ID: SION-016
+TÍTULO: GRANDE GOZO HAY EN MI ALMA
+AÇÃO: Separar estrofe 4 da estrofe 3.
+VALIDAÇÃO BÁSICA: OK
+
+--------------- ANTES ---------------
+Paz divina hay en mi alma hoy, Porque Cristo me salvó;
+Las cadenas rotas ya están, Jesús me libertó.
+Gratitud hay en mi alma hoy, Y alabanzas a Jesús;
+Por su gracia a la gloria voy, Gozándome en la luz.
+
+--------------- DEPOIS --------------
+Paz divina hay en mi alma hoy, Porque Cristo me salvó;
+Las cadenas rotas ya están, Jesús me libertó.
+4
+Gratitud hay en mi alma hoy, Y alabanzas a Jesús;
+Por su gracia a la gloria voy, Gozándome en la luz.
+
+============================================================
+PATCH 19 / 20
+ID: GT-036
+TÍTULO: ENTERA CONSAGRACIÓN
+AÇÃO: Separar estrofe 5 da estrofe 4.
+VALIDAÇÃO BÁSICA: OK
+
+--------------- ANTES ---------------
+Toma, ¡oh Dios!, mi voluntad, Y hazla tuya, nada más; Toma, sí, mi corazón
+Por tu trono lo tendrás.
+Toma tú mi amor, que hoy A tus pies vengo a poner;
+¡Toma todo lo que soy, Todo tuyo quiero ser!
+
+--------------- DEPOIS --------------
+Toma, ¡oh Dios!, mi voluntad, Y hazla tuya, nada más; Toma, sí, mi corazón
+Por tu trono lo tendrás.
+5
+Toma tú mi amor, que hoy A tus pies vengo a poner;
+¡Toma todo lo que soy, Todo tuyo quiero ser!
+
+============================================================
+PATCH 20 / 20
+ID: SION-019
+TÍTULO: ENTERA CONSAGRACIÓN
+AÇÃO: Separar estrofe 5 da estrofe 4.
+VALIDAÇÃO BÁSICA: OK
+
+--------------- ANTES ---------------
+Toma, ¡oh Dios!, mi voluntad, Y hazla tuya, nada más; Toma, sí, mi corazón
+Por tu trono lo tendrás.
+Toma tú mi amor, que hoy A tus pies vengo a poner;
+¡Toma todo lo que soy, Todo tuyo quiero ser!
+
+--------------- DEPOIS --------------
+Toma, ¡oh Dios!, mi voluntad, Y hazla tuya, nada más; Toma, sí, mi corazón
+Por tu trono lo tendrás.
+5
+Toma tú mi amor, que hoy A tus pies vengo a poner;
+¡Toma todo lo que soy, Todo tuyo quiero ser!
+
+============================================================
+RESUMO DA VALIDAÇÃO
+TOTAL: 20
+VALIDAÇÃO BÁSICA OK: 20
+FALHAS: 0
+BASE MESTRE NÃO ALTERADA.

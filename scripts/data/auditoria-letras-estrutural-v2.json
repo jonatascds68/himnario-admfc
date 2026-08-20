@@ -1,0 +1,266 @@
+{
+  "generated_at": "2026-08-19T03:44:15.526Z",
+  "source": "assets/base_mestre.json",
+  "total_hymns": 718,
+  "total_candidates": 16,
+  "candidates": [
+    {
+      "id": "GT-040",
+      "himnario": "Gloria y Triunfo",
+      "numero": 40,
+      "titulo": "EN LOS NEGOCIOS DEL REY",
+      "tipo": "POSSIVEL_CORO_INCORPORADO_E1",
+      "score": 3,
+      "primeira": {
+        "words": 50,
+        "chars": 265,
+        "clauses": 9
+      },
+      "mediana_demais": {
+        "words": 29.5,
+        "chars": 148.5,
+        "clauses": 4.5
+      },
+      "ratios": {
+        "words": 1.69,
+        "chars": 1.78,
+        "clauses": 2
+      }
+    },
+    {
+      "id": "GT-052",
+      "himnario": "Gloria y Triunfo",
+      "numero": 52,
+      "titulo": "CRISTO LA ROCA",
+      "tipo": "POSSIVEL_CORO_INCORPORADO_E1",
+      "score": 3,
+      "primeira": {
+        "words": 59,
+        "chars": 313,
+        "clauses": 12
+      },
+      "mediana_demais": {
+        "words": 33,
+        "chars": 174,
+        "clauses": 7.5
+      },
+      "ratios": {
+        "words": 1.79,
+        "chars": 1.8,
+        "clauses": 1.6
+      }
+    },
+    {
+      "id": "GT-091",
+      "himnario": "Gloria y Triunfo",
+      "numero": 91,
+      "titulo": "YA SALVO SOY",
+      "tipo": "POSSIVEL_FALSO_CORO",
+      "score": 3,
+      "estrofe1_words": 19,
+      "coro_words": 19,
+      "combinado_words": 38,
+      "mediana_demais_words": 30.5
+    },
+    {
+      "id": "GT-100",
+      "himnario": "Gloria y Triunfo",
+      "numero": 100,
+      "titulo": "A LOS PIES DE JESUCRISTO",
+      "tipo": "POSSIVEL_FALSO_CORO",
+      "score": 3,
+      "estrofe1_words": 18,
+      "coro_words": 18,
+      "combinado_words": 36,
+      "mediana_demais_words": 38
+    },
+    {
+      "id": "GT-161",
+      "himnario": "Gloria y Triunfo",
+      "numero": 161,
+      "titulo": "PECADOR, VEN AL DULCE JESÚS",
+      "tipo": "POSSIVEL_FALSO_CORO",
+      "score": 3,
+      "estrofe1_words": 20,
+      "coro_words": 12,
+      "combinado_words": 32,
+      "mediana_demais_words": 33.5
+    },
+    {
+      "id": "GT-186",
+      "himnario": "Gloria y Triunfo",
+      "numero": 186,
+      "titulo": "PRESENTIMOS DEL MUNDO DICHOSO",
+      "tipo": "POSSIVEL_FALSO_CORO",
+      "score": 3,
+      "estrofe1_words": 20,
+      "coro_words": 18,
+      "combinado_words": 38,
+      "mediana_demais_words": 33
+    },
+    {
+      "id": "GT-259",
+      "himnario": "Gloria y Triunfo",
+      "numero": 259,
+      "titulo": "GUARDA EL CONTACTO",
+      "tipo": "POSSIVEL_FALSO_CORO",
+      "score": 3,
+      "estrofe1_words": 26,
+      "coro_words": 25,
+      "combinado_words": 51,
+      "mediana_demais_words": 43
+    },
+    {
+      "id": "GT-277",
+      "himnario": "Gloria y Triunfo",
+      "numero": 277,
+      "titulo": "LA PALABRA DIVINA",
+      "tipo": "POSSIVEL_FALSO_CORO",
+      "score": 3,
+      "estrofe1_words": 35,
+      "coro_words": 19,
+      "combinado_words": 54,
+      "mediana_demais_words": 53
+    },
+    {
+      "id": "GT-283",
+      "himnario": "Gloria y Triunfo",
+      "numero": 283,
+      "titulo": "EN LA MAÑANA",
+      "tipo": "POSSIVEL_CORO_INCORPORADO_E1",
+      "score": 3,
+      "primeira": {
+        "words": 49,
+        "chars": 282,
+        "clauses": 11
+      },
+      "mediana_demais": {
+        "words": 17,
+        "chars": 94,
+        "clauses": 4
+      },
+      "ratios": {
+        "words": 2.88,
+        "chars": 3,
+        "clauses": 2.75
+      }
+    },
+    {
+      "id": "GT-328",
+      "himnario": "Gloria y Triunfo",
+      "numero": 328,
+      "titulo": "LLAMA",
+      "tipo": "POSSIVEL_CORO_INCORPORADO_E1",
+      "score": 3,
+      "primeira": {
+        "words": 41,
+        "chars": 221,
+        "clauses": 10
+      },
+      "mediana_demais": {
+        "words": 26,
+        "chars": 135.5,
+        "clauses": 6
+      },
+      "ratios": {
+        "words": 1.58,
+        "chars": 1.63,
+        "clauses": 1.67
+      }
+    },
+    {
+      "id": "SION-024",
+      "himnario": "Himnos de Sión",
+      "numero": 24,
+      "titulo": "CRISTO LA ROCA",
+      "tipo": "POSSIVEL_CORO_INCORPORADO_E1",
+      "score": 3,
+      "primeira": {
+        "words": 59,
+        "chars": 313,
+        "clauses": 12
+      },
+      "mediana_demais": {
+        "words": 33,
+        "chars": 174,
+        "clauses": 7.5
+      },
+      "ratios": {
+        "words": 1.79,
+        "chars": 1.8,
+        "clauses": 1.6
+      }
+    },
+    {
+      "id": "SION-041",
+      "himnario": "Himnos de Sión",
+      "numero": 41,
+      "titulo": "YA SALVO SOY",
+      "tipo": "POSSIVEL_FALSO_CORO",
+      "score": 3,
+      "estrofe1_words": 19,
+      "coro_words": 19,
+      "combinado_words": 38,
+      "mediana_demais_words": 30.5
+    },
+    {
+      "id": "SION-059",
+      "himnario": "Himnos de Sión",
+      "numero": 59,
+      "titulo": "A LOS PIES DE JESUCRISTO",
+      "tipo": "POSSIVEL_FALSO_CORO",
+      "score": 3,
+      "estrofe1_words": 18,
+      "coro_words": 18,
+      "combinado_words": 36,
+      "mediana_demais_words": 38
+    },
+    {
+      "id": "SION-107",
+      "himnario": "Himnos de Sión",
+      "numero": 107,
+      "titulo": "GUARDA EL CONTACTO",
+      "tipo": "POSSIVEL_FALSO_CORO",
+      "score": 3,
+      "estrofe1_words": 26,
+      "coro_words": 25,
+      "combinado_words": 51,
+      "mediana_demais_words": 43
+    },
+    {
+      "id": "GT-054",
+      "himnario": "Gloria y Triunfo",
+      "numero": 54,
+      "titulo": "QUE HAGA EN TI SU VOLUNTAD",
+      "tipo": "POSSIVEL_CORO_INCORPORADO_E1",
+      "score": 2,
+      "primeira": {
+        "words": 31,
+        "chars": 155,
+        "clauses": 4
+      },
+      "mediana_demais": {
+        "words": 15.5,
+        "chars": 84,
+        "clauses": 3
+      },
+      "ratios": {
+        "words": 2,
+        "chars": 1.85,
+        "clauses": 1.33
+      }
+    },
+    {
+      "id": "GT-284",
+      "himnario": "Gloria y Triunfo",
+      "numero": 284,
+      "titulo": "SIGUE ORANDO",
+      "tipo": "POSSIVEL_FALSO_CORO",
+      "score": 2,
+      "estrofe1_words": 16,
+      "coro_words": 14,
+      "combinado_words": 30,
+      "mediana_demais_words": 27
+    }
+  ]
+}

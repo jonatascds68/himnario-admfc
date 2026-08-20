@@ -1,0 +1,233 @@
+============================================
+ 1. CONTROLE DA BASE
+============================================
+HASH ATUAL:   a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41
+HASH OFICIAL: a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41
+HASH: OK
+
+TOTAL BASE: 718
+ALVOS DO COTEJO: 16
+
+============================================
+ 2. PACOTE PRIORITÁRIO
+============================================
+
+--------------------------------------------
+GT-040 | 40 | EN LOS NEGOCIOS DEL REY
+
+CLASSE: PONTUACAO_OCR
+ATUAL: "oid, ."
+HIPÓTESE: "oid,"
+LOCALIZADO: SIM
+CONTEXTO: 1 | Soy peregrino aquí, mi hogar lejano está, En la mansión de luz, eterna paz y amor: Embajador yo soy del reino celestial | En los negocios de mi Rey. | CORO: | Este mensaje fiel oid, . Que dijo ya celeste voz: | «Reconciliaos ya» – dice el Señor y Rey, | ¡Reconciliaos hoy con Dios! | 2 | Que del pecado vil arrepentidos ya, Han de reinar con él los que obedientes son: | Es
+DECISÃO DOCUMENTAL: PENDENTE
+
+--------------------------------------------
+GT-056 | 56 | ¡OH, YO QUIERO ANDAR CON CRISTO!
+
+CLASSE: OCR_I_MAIUSCULO_POR_L
+ATUAL: "serIe"
+HIPÓTESE: "serle"
+LOCALIZADO: SIM
+CONTEXTO: voluntad, | Y algún día con mi Cristo Gozaré la claridad. | CORO: | ¡Oh, sí, yo quiero andar con Cristo! | ¡Oh, sí, yo quiero vivir con Cristo! | ¡Oh, sí, yo quiero morir con Cristo! | Quiero serIe un testigo fiel. | 2 | ¡Oh!, yo quiero andar con Cristo, Él vivió en santidad, | En la Biblia yo lo leo | Y yo sé que es la verdad. Cristo era santo en todo, El Cordero de la cruz; | Y yo a
+DECISÃO DOCUMENTAL: PENDENTE
+
+--------------------------------------------
+SION-026 | 26 | ¡OH! YO QUIERO ANDAR CON CRISTO
+
+CLASSE: OCR_I_MAIUSCULO_POR_L
+ATUAL: "serIe"
+HIPÓTESE: "serle"
+LOCALIZADO: SIM
+CONTEXTO: voluntad, | Y algún día con mi Cristo Gozaré la claridad. | CORO: | ¡Oh, sí, yo quiero andar con Cristo! | ¡Oh, sí, yo quiero vivir con Cristo! | ¡Oh, sí, yo quiero morir con Cristo! | Quiero serIe un testigo fiel. | 2 | ¡Oh!, yo quiero andar con Cristo, Él vivió en santidad, | En la Biblia yo lo leo | Y yo sé que es la verdad. Cristo era santo en todo, El Cordero de la cruz; | Y yo a
+DECISÃO DOCUMENTAL: PENDENTE
+
+--------------------------------------------
+GT-161 | 161 | PECADOR, VEN AL DULCE JESÚS
+
+CLASSE: ESPACO_ANTES_PONTUACAO
+ATUAL: "serás . De"
+HIPÓTESE: "serás. De"
+LOCALIZADO: SIM
+CONTEXTO: es morir, El será tu Doctor celestial; | Y hallarás en su sangre también Medicina que cure tu mal. | 4 | Ovejuela que huyó del redil, | ¡He aquí tu benigno Señor! | Y en los hombros llevada serás . De tan dulce y amante Pastor.
+DECISÃO DOCUMENTAL: PENDENTE
+
+--------------------------------------------
+GT-283 | 283 | EN LA MAÑANA
+
+CLASSE: TEXTO_SUSPEITO_REQUER_FONTE
+ATUAL: "tierra mis Allí"
+LOCALIZADO: SIM
+CONTEXTO: 1 | En el mundo la Iglesia Peregrina ha de estar; Anhelante ella espera Su feliz, eterno hogar. | CORO: | Nos veremos, nos veremos Pronto en gloria, pronto en gloria, Nos veremos en la tierra mis Allí; Nos veremos, nos veremos Pronto en gloria, pronto en gloria, Junto al rio cristalino más Allá. | 2 | Nada aquí es permanente, Todo ha de terminar; Mas miramos adelante, En el cielo n
+DECISÃO DOCUMENTAL: PENDENTE
+
+--------------------------------------------
+GT-018 | 18 | GRATO ES DECIR LA HISTORIA
+
+CLASSE: OCR_I_MAIUSCULO_POR_L
+ATUAL: "referirIa"
+HIPÓTESE: "referirla"
+LOCALIZADO: SIM
+CONTEXTO: 1 | Grato es decir la historia Del celestial favor; | De Cristo y de su gloria, De Cristo y de su amor; Me agrada referirIa, Pues sé que es la verdad, Y nada satisface | Cual ella, mi ansiedad. | CORO: | ¡Cuán bella es esa historia! Mi tema allá en la gloria Será la antigua historia De Cristo y de su amor. | 2
+
+CLASSE: PONTUACAO_OCR
+ATUAL: "buen .Jesús"
+HIPÓTESE: "buen Jesús"
+LOCALIZADO: SIM
+CONTEXTO: rtela también. | 3 | Grato es decir la historia Que antigua, sin vejez, Parece al repetirla | Más dulce cada vez; Me agrada referirla, | Pues hay quien nunca oyó Que para hacerle salvo El buen .Jesús murió.
+DECISÃO DOCUMENTAL: PENDENTE
+
+--------------------------------------------
+SION-128 | 128 | GRATO ES DECIR LA HISTORIA
+
+CLASSE: OCR_I_MAIUSCULO_POR_L
+ATUAL: "referirIa"
+HIPÓTESE: "referirla"
+LOCALIZADO: SIM
+CONTEXTO: 1 | Grato es decir la historia Del celestial favor; | De Cristo y de su gloria, De Cristo y de su amor; Me agrada referirIa, Pues sé que es la verdad, Y nada satisface | Cual ella, mi ansiedad. | CORO: | ¡Cuán bella es esa historia! Mi tema allá en la gloria Será la antigua historia De Cristo y de su amor. | 2
+
+CLASSE: PONTUACAO_OCR
+ATUAL: "buen .Jesús"
+HIPÓTESE: "buen Jesús"
+LOCALIZADO: SIM
+CONTEXTO: rtela también. | 3 | Grato es decir la historia Que antigua, sin vejez, Parece al repetirla | Más dulce cada vez; Me agrada referirla, | Pues hay quien nunca oyó Que para hacerle salvo El buen .Jesús murió.
+DECISÃO DOCUMENTAL: PENDENTE
+
+--------------------------------------------
+GT-007 | 7 | TODO A CRISTO YO ME RINDO
+
+CLASSE: OCR_I_MAIUSCULO_POR_L
+ATUAL: "serIe"
+HIPÓTESE: "serle"
+LOCALIZADO: SIM
+CONTEXTO: 1 | Todo a Cristo yo me rindo, Con el fin de serie fiel; | Para siempre quiero amarle, Y agradarle sólo a él. | CORO: | Yo me rindo a él, Yo me rindo a él; | Todo a Cristo yo me entrego, Quiero serIe fiel. | 2 | Todo a Cristo yo me rindo, A s
+DECISÃO DOCUMENTAL: PENDENTE
+
+--------------------------------------------
+SION-011 | 11 | TODO A CRISTO YO ME RINDO
+
+CLASSE: OCR_I_MAIUSCULO_POR_L
+ATUAL: "serIe"
+HIPÓTESE: "serle"
+LOCALIZADO: SIM
+CONTEXTO: 1 | Todo a Cristo yo me rindo, Con el fin de serie fiel; | Para siempre quiero amarle, Y agradarle sólo a él. | CORO: | Yo me rindo a él, Yo me rindo a él; | Todo a Cristo yo me entrego, Quiero serIe fiel. | 2 | Todo a Cristo yo me rindo, A s
+DECISÃO DOCUMENTAL: PENDENTE
+
+--------------------------------------------
+GT-025 | 25 | ¡OH, CUAN DULCE!
+
+CLASSE: OCR_I_MAIUSCULO_POR_L
+ATUAL: "serIe"
+HIPÓTESE: "serle"
+LOCALIZADO: SIM
+CONTEXTO: 1 | ¡Oh, cuán dulce es fiar en Cristo Y entregarse todo a él; Esperar en sus promesas, | Y en sus sendas serIe fiel! | CORO: | Jesucristo, Jesucristo, Ya tu amor probaste en mí | Jesucristo, Jesucristo Siempre quiero fiar en ti. | 2 | Es muy dulce fiar en Cristo Y cumplir su voluntad; No dudando su
+DECISÃO DOCUMENTAL: PENDENTE
+
+--------------------------------------------
+SION-134 | 134 | ¡OH, CUÁN DULCE!
+
+CLASSE: OCR_I_MAIUSCULO_POR_L
+ATUAL: "serIe"
+HIPÓTESE: "serle"
+LOCALIZADO: SIM
+CONTEXTO: 1 | ¡Oh, cuán dulce es fiar en Cristo Y entregarse todo a él; Esperar en sus promesas, | Y en sus sendas serIe fiel! | CORO: | Jesucristo, Jesucristo, Ya tu amor probaste en mí | Jesucristo, Jesucristo Siempre quiero fiar en ti. | 2 | Es muy dulce fiar en Cristo Y cumplir su voluntad; No dudando su
+DECISÃO DOCUMENTAL: PENDENTE
+
+--------------------------------------------
+GT-102 | 102 | PODER PENTECOSTAL
+
+CLASSE: OCR_I_MAIUSCULO_POR_L
+ATUAL: "hazIo"
+HIPÓTESE: "hazlo"
+LOCALIZADO: SIM
+CONTEXTO: ra lluvia, | ¡Oh buen Salvador! | Y con tu gran fuego avívanos, Señor; | ¡Oh!, danos la lluvia, del Consolador, Aviva tu iglesia con poder celestial. | 2 | Cual vivo fuego o vendaval, | ¡Oh!, hazIo descender; Y pueda hoy en cada cual | Su templo establecer. | 3 | Mediante fe y oración, El cielo tú abrirás: | El santo fuego harás bajar Y nos avivarás. | 4 | Destruye el egoísmo, sí, Y que
+DECISÃO DOCUMENTAL: PENDENTE
+
+--------------------------------------------
+SION-044 | 44 | PODER PENTECOSTAL
+
+CLASSE: OCR_I_MAIUSCULO_POR_L
+ATUAL: "hazIo"
+HIPÓTESE: "hazlo"
+LOCALIZADO: SIM
+CONTEXTO: ra lluvia, | ¡Oh buen Salvador! | Y con tu gran fuego avívanos, Señor; | ¡Oh!, danos la lluvia, del Consolador, Aviva tu iglesia con poder celestial. | 2 | Cual vivo fuego o vendaval, | ¡Oh!, hazIo descender; Y pueda hoy en cada cual | Su templo establecer. | 3 | Mediante fe y oración, El cielo tú abrirás: | El santo fuego harás bajar Y nos avivarás. | 4 | Destruye el egoísmo, sí, Y que
+DECISÃO DOCUMENTAL: PENDENTE
+
+--------------------------------------------
+GT-042 | 42 | HAY UN PRECIOSO MANANTIAL
+
+CLASSE: ESTRUTURA_NUMERACAO
+LOCALIZADO: SIM
+CONTEXTO: Hay un precioso manantial De sangre de Emmanuel, Que purifica a cada cual Que se sumerge en él. | CORO: | Lávame, Señor Jesús, En la sangre de tu cruz: Lávame, Señor Jesús, | Y más blanco que la nieve yo seré: | 2 | El malhechor se convirtió Pendiente de una cruz; El vio la fuente y se lavó, Creyendo en Jesús. | 3 | Y yo también mi pobre ser Allí logré lavar: | La gloria de su gran poder Me gozo en ensalzar. | 4 | ¡Eterna fuente carmesí! | ¡Raudal de puro amor! Se lavará por siempre en ti | El pueblo del Señor. | HAY UN PRECIOSO MANANTIAL | 1 | Hay un precioso manantial De sangre de Emmanuel, Que purifica a cada cual Que se sumerge en él. | 2 | El malhechor se convirtió Pendiente de una cruz; El vio la fuente y se lavó, Creyendo en Jesús. | 3 | Y yo también mi pobre ser Allí logré lavar; | La gloria de su gran poder, Me gozo en 
+DECISÃO DOCUMENTAL: PENDENTE
+
+--------------------------------------------
+GT-182 | 182 | ¡GLORIA A TI, JESÚS DIVINO
+
+CLASSE: SALTO_NUMERICO
+ATUAL: "1 -> 3"
+LOCALIZADO: NÃO
+DECISÃO DOCUMENTAL: PENDENTE
+
+--------------------------------------------
+SION-079 | 79 | GLORIA A TI, JESÚS DIVINO
+
+CLASSE: SALTO_NUMERICO
+ATUAL: "1 -> 3"
+LOCALIZADO: NÃO
+DECISÃO DOCUMENTAL: PENDENTE
+
+============================================
+ 3. PARES DE EDIÇÕES
+============================================
+
+GT-056 <-> SION-026
+TÍTULO NORMALIZADO: IGUAL
+LETRA NA BASE: IDÊNTICA
+
+GT-018 <-> SION-128
+TÍTULO NORMALIZADO: IGUAL
+LETRA NA BASE: IDÊNTICA
+
+GT-007 <-> SION-011
+TÍTULO NORMALIZADO: IGUAL
+LETRA NA BASE: IDÊNTICA
+
+GT-025 <-> SION-134
+TÍTULO NORMALIZADO: IGUAL
+LETRA NA BASE: IDÊNTICA
+
+GT-102 <-> SION-044
+TÍTULO NORMALIZADO: IGUAL
+LETRA NA BASE: IDÊNTICA
+
+GT-182 <-> SION-079
+TÍTULO NORMALIZADO: IGUAL
+LETRA NA BASE: IDÊNTICA
+
+============================================
+ 4. RESUMO
+============================================
+REGISTROS NO PACOTE: 16
+HIPÓTESES / PONTOS DE COTEJO: 18
+LOCALIZADOS NA BASE: 16
+NÃO LOCALIZADOS: 2
+PARES GT/SIÓN: 6
+
+ATENÇÃO — HIPÓTESES NÃO LOCALIZADAS:
+- GT-182: "1 -> 3"
+- SION-079: "1 -> 3"
+
+============================================
+ 5. CONTROLE DE IMUTABILIDADE
+============================================
+HASH ANTES:  a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41
+HASH DEPOIS: a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41
+BASE MESTRE ALTERADA: NÃO
+RELATÓRIO: scripts/data/etapa-10d-pacote-cotejo.json
+
+============================================
+ ETAPA 10D CONCLUÍDA COM SUCESSO
+ 16 REGISTROS PREPARADOS PARA COTEJO
+ NENHUMA CORREÇÃO FOI APLICADA
+============================================

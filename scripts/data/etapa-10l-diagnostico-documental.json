@@ -1,0 +1,35 @@
+{
+  "etapa": "10L",
+  "hash_oficial": "48cd4be20055aa9243a0a2223aef36376186dfd202f72ca4a4666015c44445a5",
+  "gt283": {
+    "id": "GT-283",
+    "numero": 283,
+    "titulo": "EN LA MAÑANA",
+    "termo_suspeito": "tierra mis Allí",
+    "ocorrencias": 1,
+    "decisao": "BLOQUEADO_DOCUMENTAL",
+    "motivo": "A fonte textual anteriormente usada também contém a leitura suspeita; não existe evidência suficiente para reconstrução automática."
+  },
+  "gt041_gt042": {
+    "gt041": {
+      "titulo": "HAY UN PRECIOSO MANANTIAL",
+      "letra": "1"
+    },
+    "gt042": {
+      "titulo": "HAY UN PRECIOSO MANANTIAL",
+      "tamanho": 907,
+      "ocorrencias_titulo_interno": 1
+    },
+    "titulo_igual": true,
+    "evidencia": [
+      "GT-041 possui apenas o marcador estrutural \"1\".",
+      "GT-041 e GT-042 possuem o mesmo título.",
+      "GT-042 contém repetição interna do título.",
+      "GT-042 contém duas sequências do mesmo conteúdo.",
+      "O padrão é compatível com deslocamento de fronteira durante importação/transcrição."
+    ],
+    "decisao": "ERRO_DE_SEGMENTACAO_FORTEMENTE_CONFIRMADO",
+    "regra": "NÃO aplicar correção até definir documentalmente qual número pertence ao hino e qual conteúdo deveria ocupar o outro registro."
+  },
+  "alteracao_base": false
+}

@@ -1,0 +1,381 @@
+const fs = require('fs');
+const crypto = require('crypto');
+
+const EXPECTED_HASH =
+  '29fe35592ba18e5ef8793dff6af2e59be0736dcf977422936014204b0052847d';
+
+const ALLOWED_FIELDS = new Set([
+  'titulo',
+  'letra',
+  'bloques',
+  'numero_equivalente',
+  'himnario_equivalente',
+  'estado',
+  'fuente',
+  'observacion',
+  'categorias',
+  'has_lyrics',
+  'tom',
+  'cifra',
+  'cifra_bloques',
+  'cifra_url',
+  'audio_url',
+  'audio_local',
+  'audio_external_url',
+  'cifra_autorizada',
+  'cifra_procedencia',
+  'audio_autorizado',
+  'audio_procedencia',
+]);
+
+function sha256(file) {
+  return crypto
+    .createHash('sha256')
+    .update(fs.readFileSync(file))
+    .digest('hex');
+}
+
+function same(a, b) {
+  return JSON.stringify(a ?? null) ===
+         JSON.stringify(b ?? null);
+}
+
+function fail(message, code = 2) {
+  console.error('ERRO:', message);
+  process.exitCode = code;
+}
+
+const baseFile = process.argv[2];
+const packageFile = process.argv[3];
+const applyMode = process.argv.includes('--apply');
+
+console.log('======================================================');
+console.log(' ADMFC — APLICADOR TRANSACIONAL 7R');
+console.log(' MODO:', applyMode ? 'APPLY' : 'DRY-RUN');
+console.log('======================================================');
+
+if (!baseFile || !packageFile) {
+  console.error(
+    'USO: node scripts/admin-7r-aplicador.js BASE PACOTE'
+  );
+  process.exitCode = 1;
+} else if (
+  !fs.existsSync(baseFile) ||
+  !fs.existsSync(packageFile)
+) {
+  fail('Base ou pacote não encontrado.', 1);
+} else {
+  const hashBefore = sha256(baseFile);
+
+  console.log('');
+  console.log('BASE:', baseFile);
+  console.log('HASH:', hashBefore);
+  console.log('PACOTE:', packageFile);
+
+  let base;
+  let pack;
+
+  try {
+    base = JSON.parse(
+      fs.readFileSync(baseFile, 'utf8')
+    );
+
+    pack = JSON.parse(
+      fs.readFileSync(packageFile, 'utf8')
+    );
+  } catch (e) {
+    fail('JSON inválido: ' + e.message);
+  }
+
+  if (!process.exitCode) {
+    if (
+      !base ||
+      !Array.isArray(base.himnos)
+    ) {
+      fail('Estrutura base.himnos inválida.');
+    } else if (
+      typeof base.total === 'number' &&
+      base.total !== base.himnos.length
+    ) {
+      fail('base.total diverge de himnos.length.');
+    } else if (
+      pack.schema_version !==
+      'admfc-admin-changes-1'
+    ) {
+      fail('schema_version inválido.');
+    } else if (!Array.isArray(pack.changes)) {
+      fail('changes inválido.');
+    } else if (
+      pack.total_changes !== pack.changes.length
+    ) {
+      fail('total_changes divergente.');
+    }
+  }
+
+  if (!process.exitCode) {
+    let ready = 0;
+    let already = 0;
+    let conflict = 0;
+    let invalid = 0;
+
+    console.log('');
+    console.log('=== ANÁLISE ===');
+
+    for (const change of pack.changes) {
+      console.log('');
+      console.log(
+        change.hymn_id,
+        '—',
+        change.titulo
+      );
+
+      let recordInvalid = false;
+      let recordConflict = false;
+      let recordReady = false;
+      let recordAlready = false;
+
+      if (change.action !== 'update') {
+        console.log('INVALID: action');
+        recordInvalid = true;
+      }
+
+      const hymn = base.himnos.find(
+        h => h.id === change.hymn_id
+      );
+
+      if (!hymn) {
+        console.log('INVALID: hymn_id');
+        recordInvalid = true;
+      }
+
+      if (
+        hymn &&
+        (
+          hymn.himnario !== change.himnario ||
+          hymn.numero !== change.numero
+        )
+      ) {
+        console.log('INVALID: identidade');
+        recordInvalid = true;
+      }
+
+      if (
+        !Array.isArray(change.changed_fields) ||
+        change.changed_fields.length === 0
+      ) {
+        console.log('INVALID: changed_fields');
+        recordInvalid = true;
+      }
+
+      if (
+        !recordInvalid &&
+        hymn
+      ) {
+        for (const field of change.changed_fields) {
+          if (!ALLOWED_FIELDS.has(field)) {
+            console.log(field + ': INVALID_FIELD');
+            recordInvalid = true;
+            continue;
+          }
+
+          const current = hymn[field];
+          const before = change.before?.[field];
+          const after = change.after?.[field];
+
+          if (same(current, after)) {
+            console.log(field + ': ALREADY_APPLIED');
+            recordAlready = true;
+          } else if (same(current, before)) {
+            console.log(field + ': READY_TO_APPLY');
+            recordReady = true;
+          } else {
+            console.log(field + ': CONFLICT');
+            recordConflict = true;
+          }
+        }
+      }
+
+      if (recordInvalid) {
+        invalid++;
+        console.log('RESULTADO: INVALID');
+      } else if (recordConflict) {
+        conflict++;
+        console.log('RESULTADO: CONFLICT');
+      } else if (recordReady) {
+        ready++;
+        console.log('RESULTADO: READY_TO_APPLY');
+      } else if (recordAlready) {
+        already++;
+        console.log('RESULTADO: ALREADY_APPLIED');
+      } else {
+        invalid++;
+        console.log('RESULTADO: INVALID');
+      }
+    }
+
+    console.log('');
+    console.log('=== RESUMO ===');
+    console.log('READY_TO_APPLY:', ready);
+    console.log('ALREADY_APPLIED:', already);
+    console.log('CONFLICT:', conflict);
+    console.log('INVALID:', invalid);
+
+    if (conflict || invalid) {
+      console.log('DECISÃO: BLOQUEADO');
+      process.exitCode = 2;
+    } else if (ready) {
+      console.log('DECISÃO: APTO PARA APLICAÇÃO');
+    } else {
+      console.log('DECISÃO: JÁ SINCRONIZADO');
+    }
+
+    if (
+      applyMode &&
+      ready > 0 &&
+      conflict === 0 &&
+      invalid === 0
+    ) {
+      console.log('');
+      console.log('=== APLICAÇÃO TRANSACIONAL ===');
+
+      /*
+       * Proteção crítica:
+       * nesta fase 7R.3 é proibido aplicar diretamente
+       * na Base Mestre oficial.
+       */
+      if (baseFile === 'assets/base_mestre.json') {
+        console.error(
+          'BLOQUEADO: 7R.3 não permite escrita na Base Mestre oficial.'
+        );
+        process.exitCode = 4;
+      } else {
+        const backupFile =
+          baseFile + '.bak-before-apply';
+
+        const tempFile =
+          baseFile + '.tmp';
+
+        fs.copyFileSync(
+          baseFile,
+          backupFile
+        );
+
+        console.log(
+          'BACKUP:',
+          backupFile
+        );
+
+        let appliedFields = 0;
+
+        for (const change of pack.changes) {
+          const hymn = base.himnos.find(
+            h => h.id === change.hymn_id
+          );
+
+          if (!hymn) continue;
+
+          for (const field of change.changed_fields) {
+            if (!ALLOWED_FIELDS.has(field)) continue;
+
+            const current = hymn[field];
+            const before = change.before?.[field];
+            const after = change.after?.[field];
+
+            if (same(current, before)) {
+              hymn[field] = after;
+              appliedFields++;
+
+              console.log(
+                change.hymn_id + '.' + field +
+                ': APPLIED'
+              );
+            }
+          }
+        }
+
+        const serialized =
+          JSON.stringify(base, null, 2) + '\n';
+
+        fs.writeFileSync(
+          tempFile,
+          serialized,
+          'utf8'
+        );
+
+        /*
+         * Valida o JSON temporário antes da substituição.
+         */
+        JSON.parse(
+          fs.readFileSync(tempFile, 'utf8')
+        );
+
+        /*
+         * ADMIN 7W.2:
+         * falha artificial imediatamente antes
+         * do commit físico por rename.
+         */
+        console.error(
+          'FALHA INJETADA 7W.2: antes do rename/commit'
+        );
+
+        process.exitCode = 7;
+
+        /*
+         * rename propositalmente NÃO executado.
+         */
+
+        console.log(
+          'CAMPOS APLICADOS:',
+          appliedFields
+        );
+
+        console.log(
+          'TRANSAÇÃO: CONCLUÍDA'
+        );
+      }
+    }
+
+    console.log('');
+    console.log(
+      applyMode
+        ? '=== GARANTIA PÓS-TRANSAÇÃO ==='
+        : '=== GARANTIA DRY-RUN ==='
+    );
+
+    const hashAfter = sha256(baseFile);
+
+    console.log('HASH ANTES:', hashBefore);
+    console.log('HASH DEPOIS:', hashAfter);
+
+    if (!applyMode) {
+      if (hashBefore !== hashAfter) {
+        console.error(
+          'ERRO CRÍTICO: DRY-RUN ALTEROU A BASE.'
+        );
+        process.exitCode = 3;
+      } else {
+        console.log('BASE: INTACTA');
+      }
+    } else {
+      console.log(
+        'HASH ALTERADO:',
+        hashBefore !== hashAfter ? 'SIM' : 'NÃO'
+      );
+    }
+
+    if (
+      baseFile === 'assets/base_mestre.json'
+    ) {
+      console.log(
+        'CHECKPOINT OFICIAL:',
+        hashAfter === EXPECTED_HASH
+          ? 'OK'
+          : 'DIVERGENTE'
+      );
+
+      if (hashAfter !== EXPECTED_HASH) {
+        process.exitCode = 3;
+      }
+    }
+  }
+}

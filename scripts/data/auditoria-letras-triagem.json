@@ -1,0 +1,1048 @@
+{
+  "versao": "1.0",
+  "data": "2026-08-19",
+  "base_alterada": false,
+  "resumo": {
+    "total_candidatos_originais": 59,
+    "grupos_formados": 43,
+    "grupos_ja_decididos": 12,
+    "grupos_novos_para_investigar": 31,
+    "pares_equivalentes_sinalizados": 12,
+    "uma_edicao_sinalizada": 2,
+    "sem_equivalente": 17
+  },
+  "novos": [
+    {
+      "ids": [
+        "GT-082"
+      ],
+      "titulo": "VEN PECADOR",
+      "categoria": "SEM_EQUIVALENTE",
+      "score": 26,
+      "principal": {
+        "id": "GT-082",
+        "alertas": [
+          "TEXTO_ANTES_DA_ESTROFE_1",
+          "POSSIVEL_VAZAMENTO_HINO_SEGUINTE",
+          "PRIMEIRA_ESTROFE_MUITO_CURTA",
+          "CORO_VAZIO_OU_TRUNCADO"
+        ]
+      },
+      "equivalente": null,
+      "decisoes_existentes": []
+    },
+    {
+      "ids": [
+        "GT-056",
+        "SION-026"
+      ],
+      "titulo": "¡OH, YO QUIERO ANDAR CON CRISTO!",
+      "categoria": "PAR_EQUIVALENTE_SINALIZADO",
+      "score": 24,
+      "principal": {
+        "id": "GT-056",
+        "alertas": [
+          "TEXTO_ANTES_DA_ESTROFE_1",
+          "CORO_VAZIO_OU_TRUNCADO"
+        ]
+      },
+      "equivalente": {
+        "id": "SION-026",
+        "alertas": [
+          "TEXTO_ANTES_DA_ESTROFE_1",
+          "CORO_VAZIO_OU_TRUNCADO"
+        ]
+      },
+      "decisoes_existentes": []
+    },
+    {
+      "ids": [
+        "GT-081",
+        "SION-038"
+      ],
+      "titulo": "LA BANDERA DE LA CRUZ",
+      "categoria": "PAR_EQUIVALENTE_SINALIZADO",
+      "score": 24,
+      "principal": {
+        "id": "GT-081",
+        "alertas": [
+          "TEXTO_ANTES_DA_ESTROFE_1",
+          "CORO_VAZIO_OU_TRUNCADO"
+        ]
+      },
+      "equivalente": {
+        "id": "SION-038",
+        "alertas": [
+          "TEXTO_ANTES_DA_ESTROFE_1",
+          "CORO_VAZIO_OU_TRUNCADO"
+        ]
+      },
+      "decisoes_existentes": []
+    },
+    {
+      "ids": [
+        "GT-028",
+        "SION-015"
+      ],
+      "titulo": "MÁS DE JESÚS",
+      "categoria": "PAR_EQUIVALENTE_SINALIZADO",
+      "score": 18,
+      "principal": {
+        "id": "GT-028",
+        "alertas": [
+          "PRIMEIRA_ESTROFE_MUITO_CURTA",
+          "POSSIVEL_FALSO_CORO"
+        ]
+      },
+      "equivalente": {
+        "id": "SION-015",
+        "alertas": [
+          "PRIMEIRA_ESTROFE_MUITO_CURTA",
+          "POSSIVEL_FALSO_CORO"
+        ]
+      },
+      "decisoes_existentes": []
+    },
+    {
+      "ids": [
+        "GT-033",
+        "SION-016"
+      ],
+      "titulo": "GRANDE GOZO HAY EN MI ALMA HOY",
+      "categoria": "PAR_EQUIVALENTE_SINALIZADO",
+      "score": 18,
+      "principal": {
+        "id": "GT-033",
+        "alertas": [
+          "PRIMEIRA_ESTROFE_MUITO_CURTA",
+          "POSSIVEL_FALSO_CORO"
+        ]
+      },
+      "equivalente": {
+        "id": "SION-016",
+        "alertas": [
+          "PRIMEIRA_ESTROFE_MUITO_CURTA",
+          "POSSIVEL_FALSO_CORO"
+        ]
+      },
+      "decisoes_existentes": []
+    },
+    {
+      "ids": [
+        "GT-042"
+      ],
+      "titulo": "HAY UN PRECIOSO MANANTIAL",
+      "categoria": "SEM_EQUIVALENTE",
+      "score": 16,
+      "principal": {
+        "id": "GT-042",
+        "alertas": [
+          "TEXTO_ANTES_DA_ESTROFE_1",
+          "CORO_VAZIO_OU_TRUNCADO",
+          "NUMERACAO_ESTROFES_IRREGULAR"
+        ]
+      },
+      "equivalente": null,
+      "decisoes_existentes": []
+    },
+    {
+      "ids": [
+        "GT-062"
+      ],
+      "titulo": "CON CRISTO YO IRÉ",
+      "categoria": "SEM_EQUIVALENTE",
+      "score": 15,
+      "principal": {
+        "id": "GT-062",
+        "alertas": [
+          "POSSIVEL_ERRO_OCR",
+          "PRIMEIRA_ESTROFE_MUITO_CURTA",
+          "POSSIVEL_FALSO_CORO"
+        ]
+      },
+      "equivalente": null,
+      "decisoes_existentes": []
+    },
+    {
+      "ids": [
+        "GT-036",
+        "SION-019"
+      ],
+      "titulo": "ENTERA CONSAGRACIÓN",
+      "categoria": "PAR_EQUIVALENTE_SINALIZADO",
+      "score": 12,
+      "principal": {
+        "id": "GT-036",
+        "alertas": [
+          "POSSIVEL_ESTROFE_FUNDIDA_4"
+        ]
+      },
+      "equivalente": {
+        "id": "SION-019",
+        "alertas": [
+          "POSSIVEL_ESTROFE_FUNDIDA_4"
+        ]
+      },
+      "decisoes_existentes": []
+    },
+    {
+      "ids": [
+        "GT-053",
+        "SION-025"
+      ],
+      "titulo": "EN LA CRUZ",
+      "categoria": "PAR_EQUIVALENTE_SINALIZADO",
+      "score": 12,
+      "principal": {
+        "id": "GT-053",
+        "alertas": [
+          "POSSIVEL_ESTROFE_FUNDIDA_4"
+        ]
+      },
+      "equivalente": {
+        "id": "SION-025",
+        "alertas": [
+          "POSSIVEL_ESTROFE_FUNDIDA_4"
+        ]
+      },
+      "decisoes_existentes": []
+    },
+    {
+      "ids": [
+        "GT-055"
+      ],
+      "titulo": "EL MUNDO PERDIDO",
+      "categoria": "SEM_EQUIVALENTE",
+      "score": 12,
+      "principal": {
+        "id": "GT-055",
+        "alertas": [
+          "TEXTO_ANTES_DA_ESTROFE_1",
+          "CORO_VAZIO_OU_TRUNCADO"
+        ]
+      },
+      "equivalente": null,
+      "decisoes_existentes": []
+    },
+    {
+      "ids": [
+        "GT-079"
+      ],
+      "titulo": "PUEDO OÍR TU VOZ LLAMANDO",
+      "categoria": "SEM_EQUIVALENTE",
+      "score": 12,
+      "principal": {
+        "id": "GT-079",
+        "alertas": [
+          "TEXTO_ANTES_DA_ESTROFE_1",
+          "CORO_VAZIO_OU_TRUNCADO"
+        ]
+      },
+      "equivalente": null,
+      "decisoes_existentes": []
+    },
+    {
+      "ids": [
+        "GT-137",
+        "SION-062"
+      ],
+      "titulo": "SIEMPRE ORAD",
+      "categoria": "PAR_EQUIVALENTE_SINALIZADO",
+      "score": 12,
+      "principal": {
+        "id": "GT-137",
+        "alertas": [
+          "POSSIVEL_ERRO_OCR"
+        ]
+      },
+      "equivalente": {
+        "id": "SION-062",
+        "alertas": [
+          "POSSIVEL_ERRO_OCR"
+        ]
+      },
+      "decisoes_existentes": []
+    },
+    {
+      "ids": [
+        "GT-138",
+        "SION-063"
+      ],
+      "titulo": "LA FUENTE SANADORA",
+      "categoria": "PAR_EQUIVALENTE_SINALIZADO",
+      "score": 12,
+      "principal": {
+        "id": "GT-138",
+        "alertas": [
+          "POSSIVEL_ERRO_OCR"
+        ]
+      },
+      "equivalente": {
+        "id": "SION-063",
+        "alertas": [
+          "POSSIVEL_ERRO_OCR"
+        ]
+      },
+      "decisoes_existentes": []
+    },
+    {
+      "ids": [
+        "GT-170",
+        "SION-075"
+      ],
+      "titulo": "LA PALABRA HOY SEMBRADA",
+      "categoria": "PAR_EQUIVALENTE_SINALIZADO",
+      "score": 12,
+      "principal": {
+        "id": "GT-170",
+        "alertas": [
+          "POSSIVEL_ERRO_OCR"
+        ]
+      },
+      "equivalente": {
+        "id": "SION-075",
+        "alertas": [
+          "POSSIVEL_ERRO_OCR"
+        ]
+      },
+      "decisoes_existentes": []
+    },
+    {
+      "ids": [
+        "GT-293",
+        "SION-102"
+      ],
+      "titulo": "PON TU CARGA EN JESÚS",
+      "categoria": "PAR_EQUIVALENTE_SINALIZADO",
+      "score": 12,
+      "principal": {
+        "id": "GT-293",
+        "alertas": [
+          "POSSIVEL_ERRO_OCR"
+        ]
+      },
+      "equivalente": {
+        "id": "SION-102",
+        "alertas": [
+          "POSSIVEL_ERRO_OCR"
+        ]
+      },
+      "decisoes_existentes": []
+    },
+    {
+      "ids": [
+        "SION-246"
+      ],
+      "titulo": "CRISTIANOS, TODOS A PREPARARSE",
+      "categoria": "SEM_EQUIVALENTE",
+      "score": 12,
+      "principal": {
+        "id": "SION-246",
+        "alertas": [
+          "TEXTO_ANTES_DA_ESTROFE_1",
+          "CORO_VAZIO_OU_TRUNCADO"
+        ]
+      },
+      "equivalente": null,
+      "decisoes_existentes": []
+    },
+    {
+      "ids": [
+        "GT-083",
+        "SION-037"
+      ],
+      "titulo": "¡OH, VEN SIN TARDAR!",
+      "categoria": "PAR_EQUIVALENTE_SINALIZADO",
+      "score": 8,
+      "principal": {
+        "id": "GT-083",
+        "alertas": [
+          "TEXTO_ANTES_DA_ESTROFE_1"
+        ]
+      },
+      "equivalente": {
+        "id": "SION-037",
+        "alertas": [
+          "TEXTO_ANTES_DA_ESTROFE_1"
+        ]
+      },
+      "decisoes_existentes": []
+    },
+    {
+      "ids": [
+        "GT-182",
+        "SION-079"
+      ],
+      "titulo": "¡GLORIA A TI, JESÚS DIVINO",
+      "categoria": "PAR_EQUIVALENTE_SINALIZADO",
+      "score": 8,
+      "principal": {
+        "id": "GT-182",
+        "alertas": [
+          "NUMERACAO_ESTROFES_IRREGULAR"
+        ]
+      },
+      "equivalente": {
+        "id": "SION-079",
+        "alertas": [
+          "NUMERACAO_ESTROFES_IRREGULAR"
+        ]
+      },
+      "decisoes_existentes": []
+    },
+    {
+      "ids": [
+        "SION-245"
+      ],
+      "titulo": "JESÚS ME AMA",
+      "categoria": "SEM_EQUIVALENTE",
+      "score": 8,
+      "principal": {
+        "id": "SION-245",
+        "alertas": [
+          "CORO_VAZIO_OU_TRUNCADO"
+        ]
+      },
+      "equivalente": null,
+      "decisoes_existentes": []
+    },
+    {
+      "ids": [
+        "GT-069"
+      ],
+      "titulo": "PRECIOSO ES JESÚS",
+      "categoria": "SO_UMA_EDICAO_SINALIZADA",
+      "score": 6,
+      "principal": {
+        "id": "GT-069",
+        "alertas": [
+          "POSSIVEL_ERRO_OCR"
+        ]
+      },
+      "equivalente": {
+        "id": "SION-278",
+        "alertas": [],
+        "sinalizado": false
+      },
+      "decisoes_existentes": []
+    },
+    {
+      "ids": [
+        "GT-177"
+      ],
+      "titulo": "NO TE DE TEMOR HABLAR POR CRISTO",
+      "categoria": "SEM_EQUIVALENTE",
+      "score": 6,
+      "principal": {
+        "id": "GT-177",
+        "alertas": [
+          "POSSIVEL_ESTROFE_FUNDIDA_4"
+        ]
+      },
+      "equivalente": null,
+      "decisoes_existentes": []
+    },
+    {
+      "ids": [
+        "GT-291"
+      ],
+      "titulo": "HOGAR CELESTIAL",
+      "categoria": "SEM_EQUIVALENTE",
+      "score": 6,
+      "principal": {
+        "id": "GT-291",
+        "alertas": [
+          "POSSIVEL_ERRO_OCR"
+        ]
+      },
+      "equivalente": null,
+      "decisoes_existentes": []
+    },
+    {
+      "ids": [
+        "SION-007"
+      ],
+      "titulo": "LA SIEMBRA",
+      "categoria": "SO_UMA_EDICAO_SINALIZADA",
+      "score": 6,
+      "principal": {
+        "id": "SION-007",
+        "alertas": [
+          "POSSIVEL_ERRO_OCR"
+        ]
+      },
+      "equivalente": {
+        "id": "GT-008",
+        "alertas": [],
+        "sinalizado": false
+      },
+      "decisoes_existentes": []
+    },
+    {
+      "ids": [
+        "SION-267"
+      ],
+      "titulo": "GLORIOSO GÓLGOTA",
+      "categoria": "SEM_EQUIVALENTE",
+      "score": 6,
+      "principal": {
+        "id": "SION-267",
+        "alertas": [
+          "POSSIVEL_ESTROFE_FUNDIDA_4"
+        ]
+      },
+      "equivalente": null,
+      "decisoes_existentes": []
+    },
+    {
+      "ids": [
+        "SION-293"
+      ],
+      "titulo": "EN SU PROFUNDO AMOR",
+      "categoria": "SEM_EQUIVALENTE",
+      "score": 6,
+      "principal": {
+        "id": "SION-293",
+        "alertas": [
+          "POSSIVEL_ERRO_OCR"
+        ]
+      },
+      "equivalente": null,
+      "decisoes_existentes": []
+    },
+    {
+      "ids": [
+        "GT-104"
+      ],
+      "titulo": "MI CULPA EL LLEVO",
+      "categoria": "SEM_EQUIVALENTE",
+      "score": 5,
+      "principal": {
+        "id": "GT-104",
+        "alertas": [
+          "PRIMEIRA_ESTROFE_MUITO_LONGA"
+        ]
+      },
+      "equivalente": null,
+      "decisoes_existentes": []
+    },
+    {
+      "ids": [
+        "GT-151"
+      ],
+      "titulo": "SOLO DE JESÚS LA SANGRE",
+      "categoria": "SEM_EQUIVALENTE",
+      "score": 5,
+      "principal": {
+        "id": "GT-151",
+        "alertas": [
+          "PRIMEIRA_ESTROFE_MUITO_LONGA"
+        ]
+      },
+      "equivalente": null,
+      "decisoes_existentes": []
+    },
+    {
+      "ids": [
+        "GT-276"
+      ],
+      "titulo": "VOY A VER A CRISTO EL REY",
+      "categoria": "SEM_EQUIVALENTE",
+      "score": 5,
+      "principal": {
+        "id": "GT-276",
+        "alertas": [
+          "PRIMEIRA_ESTROFE_MUITO_LONGA"
+        ]
+      },
+      "equivalente": null,
+      "decisoes_existentes": []
+    },
+    {
+      "ids": [
+        "GT-303"
+      ],
+      "titulo": "DE LA",
+      "categoria": "SEM_EQUIVALENTE",
+      "score": 4,
+      "principal": {
+        "id": "GT-303",
+        "alertas": [
+          "TEXTO_ANTES_DA_ESTROFE_1"
+        ]
+      },
+      "equivalente": null,
+      "decisoes_existentes": []
+    },
+    {
+      "ids": [
+        "GT-304"
+      ],
+      "titulo": "JERUSALÉN CELESTE",
+      "categoria": "SEM_EQUIVALENTE",
+      "score": 4,
+      "principal": {
+        "id": "GT-304",
+        "alertas": [
+          "TEXTO_ANTES_DA_ESTROFE_1"
+        ]
+      },
+      "equivalente": null,
+      "decisoes_existentes": []
+    },
+    {
+      "ids": [
+        "SION-244"
+      ],
+      "titulo": "SI FUI MOTIVO DE DOLOR, SEÑOR",
+      "categoria": "SEM_EQUIVALENTE",
+      "score": 4,
+      "principal": {
+        "id": "SION-244",
+        "alertas": [
+          "PRIMEIRA_ESTROFE_MUITO_CURTA"
+        ]
+      },
+      "equivalente": null,
+      "decisoes_existentes": []
+    }
+  ],
+  "ja_decididos": [
+    {
+      "ids": [
+        "GT-054"
+      ],
+      "titulo": "QUE HAGA EN TI SU VOLUNTAD",
+      "categoria": "JA_DECIDIDO",
+      "score": 22,
+      "principal": {
+        "id": "GT-054",
+        "alertas": [
+          "TEXTO_ANTES_DA_ESTROFE_1",
+          "POSSIVEL_VAZAMENTO_HINO_SEGUINTE",
+          "CORO_VAZIO_OU_TRUNCADO"
+        ]
+      },
+      "equivalente": null,
+      "decisoes_existentes": [
+        {
+          "id": "GT-054",
+          "decision": {
+            "status": "CORROMPIDO_TRUNCADO",
+            "acao": [
+              "reconstruir_estrofe_1",
+              "remover_vazamento_hino_55",
+              "conferir_texto_integral"
+            ],
+            "confianca": "alta",
+            "titulo": "QUE HAGA EN TI SU VOLUNTAD"
+          }
+        }
+      ]
+    },
+    {
+      "ids": [
+        "GT-091",
+        "SION-041"
+      ],
+      "titulo": "YA SALVO SOY",
+      "categoria": "JA_DECIDIDO",
+      "score": 18,
+      "principal": {
+        "id": "GT-091",
+        "alertas": [
+          "PRIMEIRA_ESTROFE_MUITO_CURTA",
+          "POSSIVEL_FALSO_CORO"
+        ]
+      },
+      "equivalente": {
+        "id": "SION-041",
+        "alertas": [
+          "PRIMEIRA_ESTROFE_MUITO_CURTA",
+          "POSSIVEL_FALSO_CORO"
+        ]
+      },
+      "decisoes_existentes": [
+        {
+          "id": "GT-091",
+          "decision": {
+            "status": "FALSO_POSITIVO",
+            "acao": [
+              "manter_coro"
+            ],
+            "confianca": "alta",
+            "titulo": "YA SALVO SOY"
+          }
+        },
+        {
+          "id": "SION-041",
+          "decision": {
+            "status": "FALSO_POSITIVO",
+            "acao": [
+              "manter_coro"
+            ],
+            "confianca": "alta",
+            "titulo": "YA SALVO SOY"
+          }
+        }
+      ]
+    },
+    {
+      "ids": [
+        "GT-100",
+        "SION-059"
+      ],
+      "titulo": "A LOS PIES DE JESUCRISTO",
+      "categoria": "JA_DECIDIDO",
+      "score": 18,
+      "principal": {
+        "id": "GT-100",
+        "alertas": [
+          "PRIMEIRA_ESTROFE_MUITO_CURTA",
+          "POSSIVEL_FALSO_CORO"
+        ]
+      },
+      "equivalente": {
+        "id": "SION-059",
+        "alertas": [
+          "PRIMEIRA_ESTROFE_MUITO_CURTA",
+          "POSSIVEL_FALSO_CORO"
+        ]
+      },
+      "decisoes_existentes": [
+        {
+          "id": "GT-100",
+          "decision": {
+            "status": "CONFIRMADO_ERRO",
+            "acao": [
+              "remover_marcador_coro",
+              "incorporar_falso_coro_na_estrofe_1"
+            ],
+            "confianca": "alta",
+            "titulo": "A LOS PIES DE JESUCRISTO"
+          }
+        },
+        {
+          "id": "SION-059",
+          "decision": {
+            "status": "CONFIRMADO_ERRO",
+            "acao": [
+              "remover_marcador_coro",
+              "incorporar_falso_coro_na_estrofe_1"
+            ],
+            "confianca": "alta",
+            "titulo": "A LOS PIES DE JESUCRISTO"
+          }
+        }
+      ]
+    },
+    {
+      "ids": [
+        "GT-259",
+        "SION-107"
+      ],
+      "titulo": "GUARDA EL CONTACTO",
+      "categoria": "JA_DECIDIDO",
+      "score": 18,
+      "principal": {
+        "id": "GT-259",
+        "alertas": [
+          "PRIMEIRA_ESTROFE_MUITO_CURTA",
+          "POSSIVEL_FALSO_CORO"
+        ]
+      },
+      "equivalente": {
+        "id": "SION-107",
+        "alertas": [
+          "PRIMEIRA_ESTROFE_MUITO_CURTA",
+          "POSSIVEL_FALSO_CORO"
+        ]
+      },
+      "decisoes_existentes": [
+        {
+          "id": "GT-259",
+          "decision": {
+            "status": "ESTROFES_FUNDIDAS",
+            "acao": [
+              "manter_coro",
+              "separar_estrofe_4_da_estrofe_3"
+            ],
+            "confianca": "alta",
+            "titulo": "GUARDA EL CONTACTO"
+          }
+        },
+        {
+          "id": "SION-107",
+          "decision": {
+            "status": "ESTROFES_FUNDIDAS",
+            "acao": [
+              "manter_coro",
+              "separar_estrofe_4_da_estrofe_3"
+            ],
+            "confianca": "alta",
+            "titulo": "GUARDA EL CONTACTO"
+          }
+        }
+      ]
+    },
+    {
+      "ids": [
+        "GT-161"
+      ],
+      "titulo": "PECADOR, VEN AL DULCE JESÚS",
+      "categoria": "JA_DECIDIDO",
+      "score": 15,
+      "principal": {
+        "id": "GT-161",
+        "alertas": [
+          "POSSIVEL_ERRO_OCR",
+          "PRIMEIRA_ESTROFE_MUITO_CURTA",
+          "POSSIVEL_FALSO_CORO"
+        ]
+      },
+      "equivalente": null,
+      "decisoes_existentes": [
+        {
+          "id": "GT-161",
+          "decision": {
+            "status": "ESTROFES_FUNDIDAS",
+            "acao": [
+              "manter_coro",
+              "separar_estrofe_4_da_estrofe_3"
+            ],
+            "confianca": "alta",
+            "titulo": "PECADOR, VEN AL DULCE JESÚS"
+          }
+        }
+      ]
+    },
+    {
+      "ids": [
+        "GT-284"
+      ],
+      "titulo": "SIGUE ORANDO",
+      "categoria": "JA_DECIDIDO",
+      "score": 15,
+      "principal": {
+        "id": "GT-284",
+        "alertas": [
+          "POSSIVEL_ERRO_OCR",
+          "PRIMEIRA_ESTROFE_MUITO_CURTA",
+          "POSSIVEL_FALSO_CORO"
+        ]
+      },
+      "equivalente": null,
+      "decisoes_existentes": [
+        {
+          "id": "GT-284",
+          "decision": {
+            "status": "ERRO_TEXTUAL_E_ESTRUTURAL",
+            "acao": [
+              "manter_coro",
+              "separar_estrofe_4_da_estrofe_3",
+              "corrigir_tu_z_eleva_para_tu_voz_eleva"
+            ],
+            "confianca": "alta",
+            "titulo": "SIGUE ORANDO"
+          }
+        }
+      ]
+    },
+    {
+      "ids": [
+        "GT-040"
+      ],
+      "titulo": "EN LOS NEGOCIOS DEL REY",
+      "categoria": "JA_DECIDIDO",
+      "score": 11,
+      "principal": {
+        "id": "GT-040",
+        "alertas": [
+          "POSSIVEL_ERRO_OCR",
+          "PRIMEIRA_ESTROFE_MUITO_LONGA"
+        ]
+      },
+      "equivalente": null,
+      "decisoes_existentes": [
+        {
+          "id": "GT-040",
+          "decision": {
+            "status": "CONFIRMADO_ERRO",
+            "acao": [
+              "separar_coro_da_estrofe_1"
+            ],
+            "confianca": "alta",
+            "titulo": "EN LOS NEGOCIOS DEL REY"
+          }
+        }
+      ]
+    },
+    {
+      "ids": [
+        "GT-052",
+        "SION-024"
+      ],
+      "titulo": "CRISTO LA ROCA",
+      "categoria": "JA_DECIDIDO",
+      "score": 10,
+      "principal": {
+        "id": "GT-052",
+        "alertas": [
+          "PRIMEIRA_ESTROFE_MUITO_LONGA"
+        ]
+      },
+      "equivalente": {
+        "id": "SION-024",
+        "alertas": [
+          "PRIMEIRA_ESTROFE_MUITO_LONGA"
+        ]
+      },
+      "decisoes_existentes": [
+        {
+          "id": "GT-052",
+          "decision": {
+            "status": "CONFIRMADO_ERRO",
+            "acao": [
+              "separar_coro_da_estrofe_1",
+              "corrigir_truncamento_confiando_mis"
+            ],
+            "confianca": "alta",
+            "titulo": "CRISTO LA ROCA"
+          }
+        },
+        {
+          "id": "SION-024",
+          "decision": {
+            "status": "CONFIRMADO_ERRO",
+            "acao": [
+              "separar_coro_da_estrofe_1",
+              "corrigir_truncamento_confiando_mis"
+            ],
+            "confianca": "alta",
+            "titulo": "CRISTO LA ROCA"
+          }
+        }
+      ]
+    },
+    {
+      "ids": [
+        "GT-277"
+      ],
+      "titulo": "LA PALABRA DIVINA",
+      "categoria": "JA_DECIDIDO",
+      "score": 10,
+      "principal": {
+        "id": "GT-277",
+        "alertas": [
+          "POSSIVEL_ERRO_OCR",
+          "PRIMEIRA_ESTROFE_MUITO_CURTA"
+        ]
+      },
+      "equivalente": null,
+      "decisoes_existentes": [
+        {
+          "id": "GT-277",
+          "decision": {
+            "status": "ERRO_TEXTUAL_E_ESTRUTURAL",
+            "acao": [
+              "manter_coro",
+              "separar_estrofe_4_da_estrofe_3",
+              "corrigir_off_para_oir",
+              "revisar_variante_final_com_impresso"
+            ],
+            "confianca": "alta",
+            "titulo": "LA PALABRA DIVINA"
+          }
+        }
+      ]
+    },
+    {
+      "ids": [
+        "GT-186"
+      ],
+      "titulo": "PRESENTIMOS DEL MUNDO DICHOSO",
+      "categoria": "JA_DECIDIDO",
+      "score": 9,
+      "principal": {
+        "id": "GT-186",
+        "alertas": [
+          "PRIMEIRA_ESTROFE_MUITO_CURTA",
+          "POSSIVEL_FALSO_CORO"
+        ]
+      },
+      "equivalente": null,
+      "decisoes_existentes": [
+        {
+          "id": "GT-186",
+          "decision": {
+            "status": "ESTROFES_FUNDIDAS",
+            "acao": [
+              "manter_coro",
+              "separar_estrofe_4_da_estrofe_3"
+            ],
+            "confianca": "alta",
+            "titulo": "PRESENTIMOS DEL MUNDO DICHOSO"
+          }
+        }
+      ]
+    },
+    {
+      "ids": [
+        "GT-283"
+      ],
+      "titulo": "EN LA MAÑANA",
+      "categoria": "JA_DECIDIDO",
+      "score": 5,
+      "principal": {
+        "id": "GT-283",
+        "alertas": [
+          "PRIMEIRA_ESTROFE_MUITO_LONGA"
+        ]
+      },
+      "equivalente": null,
+      "decisoes_existentes": [
+        {
+          "id": "GT-283",
+          "decision": {
+            "status": "CONFIRMADO_ERRO",
+            "acao": [
+              "separar_coro_da_estrofe_1"
+            ],
+            "confianca": "alta",
+            "titulo": "EN LA MAÑANA"
+          }
+        }
+      ]
+    },
+    {
+      "ids": [
+        "GT-328"
+      ],
+      "titulo": "LLAMA",
+      "categoria": "JA_DECIDIDO",
+      "score": 4,
+      "principal": {
+        "id": "GT-328",
+        "alertas": [
+          "TEXTO_ANTES_DA_ESTROFE_1"
+        ]
+      },
+      "equivalente": null,
+      "decisoes_existentes": [
+        {
+          "id": "GT-328",
+          "decision": {
+            "status": "ERRO_ESTRUTURAL_E_CONTAMINACAO",
+            "acao": [
+              "preservar_texto_introdutorio",
+              "separar_coro_da_estrofe_1",
+              "remover_contaminacao_do_hino_seguinte"
+            ],
+            "confianca": "alta",
+            "titulo": "LLAMA"
+          }
+        }
+      ]
+    }
+  ]
+}

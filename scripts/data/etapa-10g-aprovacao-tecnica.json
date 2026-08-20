@@ -1,0 +1,130 @@
+{
+  "etapa": "10G",
+  "hashAntes": "a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41",
+  "hashDepois": "a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41",
+  "baseAlterada": false,
+  "candidatosRecebidos": 14,
+  "aprovados": 14,
+  "rejeitados": 0,
+  "bloqueados": 4,
+  "statusLote": "APROVADO_TECNICAMENTE",
+  "loteAprovado": [
+    {
+      "id": "GT-040",
+      "atual": "oid, .",
+      "proposta": "oid,",
+      "campo": "letra",
+      "ocorrencias": 1
+    },
+    {
+      "id": "GT-056",
+      "atual": "serIe",
+      "proposta": "serle",
+      "campo": "letra",
+      "ocorrencias": 1
+    },
+    {
+      "id": "SION-026",
+      "atual": "serIe",
+      "proposta": "serle",
+      "campo": "letra",
+      "ocorrencias": 1
+    },
+    {
+      "id": "GT-161",
+      "atual": "serás . De",
+      "proposta": "serás. De",
+      "campo": "letra",
+      "ocorrencias": 1
+    },
+    {
+      "id": "GT-018",
+      "atual": "referirIa",
+      "proposta": "referirla",
+      "campo": "letra",
+      "ocorrencias": 1
+    },
+    {
+      "id": "GT-018",
+      "atual": "buen .Jesús",
+      "proposta": "buen Jesús",
+      "campo": "letra",
+      "ocorrencias": 1
+    },
+    {
+      "id": "SION-128",
+      "atual": "referirIa",
+      "proposta": "referirla",
+      "campo": "letra",
+      "ocorrencias": 1
+    },
+    {
+      "id": "SION-128",
+      "atual": "buen .Jesús",
+      "proposta": "buen Jesús",
+      "campo": "letra",
+      "ocorrencias": 1
+    },
+    {
+      "id": "GT-007",
+      "atual": "serIe",
+      "proposta": "serle",
+      "campo": "letra",
+      "ocorrencias": 1
+    },
+    {
+      "id": "SION-011",
+      "atual": "serIe",
+      "proposta": "serle",
+      "campo": "letra",
+      "ocorrencias": 1
+    },
+    {
+      "id": "GT-025",
+      "atual": "serIe",
+      "proposta": "serle",
+      "campo": "letra",
+      "ocorrencias": 1
+    },
+    {
+      "id": "SION-134",
+      "atual": "serIe",
+      "proposta": "serle",
+      "campo": "letra",
+      "ocorrencias": 1
+    },
+    {
+      "id": "GT-102",
+      "atual": "hazIo",
+      "proposta": "hazlo",
+      "campo": "letra",
+      "ocorrencias": 1
+    },
+    {
+      "id": "SION-044",
+      "atual": "hazIo",
+      "proposta": "hazlo",
+      "campo": "letra",
+      "ocorrencias": 1
+    }
+  ],
+  "loteRejeitado": [],
+  "casosBloqueados": [
+    {
+      "id": "GT-283",
+      "motivo": "Texto suspeito requer cotejo visual com fonte."
+    },
+    {
+      "id": "GT-042",
+      "motivo": "Estrutura/numeração requer cotejo documental."
+    },
+    {
+      "id": "GT-182",
+      "motivo": "Salto numérico requer confirmação da fonte."
+    },
+    {
+      "id": "SION-079",
+      "motivo": "Salto numérico requer confirmação da fonte."
+    }
+  ]
+}

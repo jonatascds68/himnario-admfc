@@ -1,0 +1,94 @@
+============================================
+ AUDITORIA HINÁRIA - ETAPA 10K
+ RESOLUÇÃO DOS BLOQUEADOS
+ FALSOS POSITIVOS + CASOS DOCUMENTAIS
+ SOMENTE LEITURA
+============================================
+
+============================================
+ 1. CONTROLE
+============================================
+HASH ATUAL:   48cd4be20055aa9243a0a2223aef36376186dfd202f72ca4a4666015c44445a5
+HASH OFICIAL: 48cd4be20055aa9243a0a2223aef36376186dfd202f72ca4a4666015c44445a5
+HASH: OK
+
+============================================
+ 2. CORREÇÃO DO DETECTOR ESTRUTURAL
+============================================
+AGORA SÃO RECONHECIDOS:
+  2
+  2.
+  2)
+  2. texto
+  2) texto
+
+============================================
+ 3. GT-182
+============================================
+TÍTULO: ¡GLORIA A TI, JESÚS DIVINO
+SEQUÊNCIA: 1 -> 2 -> 3 -> 4 -> 5
+ANOMALIAS: 0
+DECISÃO: FALSO POSITIVO — RESOLVIDO
+
+============================================
+ 4. SION-079
+============================================
+TÍTULO: GLORIA A TI, JESÚS DIVINO
+SEQUÊNCIA: 1 -> 2 -> 3 -> 4 -> 5
+ANOMALIAS: 0
+DECISÃO: FALSO POSITIVO — RESOLVIDO
+
+============================================
+ 5. GT-283
+============================================
+TÍTULO: EN LA MAÑANA
+"tierra mis Allí": 1 ocorrência(s)
+DECISÃO: MANTER BLOQUEADO PARA COTEJO DOCUMENTAL
+MOTIVO: NÃO HÁ PAR FORTE NA OUTRA EDIÇÃO.
+NÃO RECONSTRUIR O VERSO POR INFERÊNCIA.
+
+============================================
+ 6. GT-041 / GT-042
+============================================
+GT-041: HAY UN PRECIOSO MANANTIAL
+GT-041 LETRA: "1"
+GT-041 NÚMEROS: 1
+
+GT-042: HAY UN PRECIOSO MANANTIAL
+GT-042 NÚMEROS: 2 -> 3 -> 4 -> 1 -> 2 -> 3 -> 4
+ANOMALIAS:
+  REGRESSAO: 4 -> 1
+
+DECISÃO: MANTER GT-042 BLOQUEADO PARA COTEJO DOCUMENTAL.
+EVIDÊNCIA FORTE DE DUPLICAÇÃO/JUSTAPOSIÇÃO.
+NÃO RECONSTRUIR AUTOMATICAMENTE.
+
+============================================
+ 7. NOVO ESTADO DOS 4 BLOQUEADOS
+============================================
+GT-182   -> RESOLVIDO COMO FALSO POSITIVO
+SION-079 -> RESOLVIDO COMO FALSO POSITIVO
+GT-283   -> AINDA DEPENDE DA FONTE
+GT-042   -> AINDA DEPENDE DA FONTE
+
+BLOQUEADOS REAIS RESTANTES: 2
+
+============================================
+ 8. PRÓXIMA DECISÃO
+============================================
+PARA GT-283 E GT-042 É NECESSÁRIO COTEJO COM
+A EDIÇÃO/FONTE DOCUMENTAL ANTES DE QUALQUER ALTERAÇÃO.
+
+============================================
+ 9. CONTROLE DE IMUTABILIDADE
+============================================
+HASH ANTES:  48cd4be20055aa9243a0a2223aef36376186dfd202f72ca4a4666015c44445a5
+HASH DEPOIS: 48cd4be20055aa9243a0a2223aef36376186dfd202f72ca4a4666015c44445a5
+BASE ALTERADA PELA 10K: NÃO
+
+============================================
+ ETAPA 10K CONCLUÍDA
+ FALSOS POSITIVOS RESOLVIDOS: 2
+ BLOQUEADOS DOCUMENTAIS RESTANTES: 2
+ NENHUMA ALTERAÇÃO NA BASE
+============================================

@@ -1,0 +1,130 @@
+============================================
+ 1. PRÉ-CHECAGEM DE SEGURANÇA
+============================================
+OK: assets/base_mestre.json
+OK: assets/base_mestre.backup-pre-9n.json
+OK: scripts/data/etapa-9l-base-simulada-consolidada.json
+OK: scripts/data/etapa-9n-manifesto-rollback.json
+
+HASH BASE:   9a8636c6a249a783a091f4dfd7fb8f36910019cb235d865486e316609365f17d
+HASH BACKUP: 9a8636c6a249a783a091f4dfd7fb8f36910019cb235d865486e316609365f17d
+HASH 9L:     a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41
+
+PRÉ-CHECAGEM DE HASHES: OK
+
+ESTRUTURA DOS 718 REGISTROS: OK
+
+============================================
+ 2. AUDITORIA DAS DIFERENÇAS ANTES DA GRAVAÇÃO
+============================================
+DIFERENÇAS BASE -> 9L: 16
+- GT-028
+- GT-033
+- GT-040
+- GT-052
+- GT-056
+- GT-081
+- GT-161
+- GT-186
+- GT-259
+- GT-283
+- SION-015
+- SION-016
+- SION-024
+- SION-026
+- SION-038
+- SION-107
+
+SOMENTE CAMPO "letra" DIFERE NOS 16 IDS: SIM
+4 BLOQUEADOS PRESERVADOS: SIM
+
+============================================
+ 3. CONSTRUÇÃO DA NOVA BASE EM MEMÓRIA
+============================================
+APLICADO EM MEMÓRIA: GT-028
+APLICADO EM MEMÓRIA: GT-033
+APLICADO EM MEMÓRIA: GT-040
+APLICADO EM MEMÓRIA: GT-052
+APLICADO EM MEMÓRIA: GT-056
+APLICADO EM MEMÓRIA: GT-081
+APLICADO EM MEMÓRIA: GT-161
+APLICADO EM MEMÓRIA: GT-186
+APLICADO EM MEMÓRIA: GT-259
+APLICADO EM MEMÓRIA: GT-283
+APLICADO EM MEMÓRIA: SION-015
+APLICADO EM MEMÓRIA: SION-016
+APLICADO EM MEMÓRIA: SION-024
+APLICADO EM MEMÓRIA: SION-026
+APLICADO EM MEMÓRIA: SION-038
+APLICADO EM MEMÓRIA: SION-107
+
+TOTAL PREPARADO EM MEMÓRIA: 16
+ALTERAÇÕES NÃO AUTORIZADAS EM MEMÓRIA: 0
+
+HASH NOVA BASE EM MEMÓRIA: a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41
+
+============================================
+ 4. GRAVAÇÃO ATÔMICA DA BASE MESTRE
+============================================
+GRAVAÇÃO ATÔMICA: CONCLUÍDA
+
+============================================
+ 5. AUDITORIA IMEDIATA PÓS-GRAVAÇÃO
+============================================
+REGISTROS ALTERADOS APÓS GRAVAÇÃO: 16
+- GT-028
+- GT-033
+- GT-040
+- GT-052
+- GT-056
+- GT-081
+- GT-161
+- GT-186
+- GT-259
+- GT-283
+- SION-015
+- SION-016
+- SION-024
+- SION-026
+- SION-038
+- SION-107
+
+ALTERAÇÕES NÃO AUTORIZADAS: 0
+16 LETRAS CORRESPONDEM À SIMULAÇÃO 9L: SIM
+DEMAIS CAMPOS DOS 16 REGISTROS PRESERVADOS: SIM
+4 BLOQUEADOS CONTINUAM PRESERVADOS: SIM
+
+============================================
+ 6. VALIDAÇÕES TEXTUAIS ESPECÍFICAS
+============================================
+GT-052 | "confiando mis.": AUSENTE
+GT-052 | "confiando más.": PRESENTE
+SION-024 | "confiando mis.": AUSENTE
+SION-024 | "confiando más.": PRESENTE
+GT-040 | "oid, ." | PRESERVADA
+GT-056 | "serIe" | PRESERVADA
+SION-026 | "serIe" | PRESERVADA
+GT-161 | "serás . De" | PRESERVADA
+GT-283 | "tierra mis Allí" | PRESERVADA
+
+5 PENDÊNCIAS TEXTUAIS PRESERVADAS: SIM
+
+============================================
+ 7. HASH FINAL E RELATÓRIO
+============================================
+HASH ORIGINAL: 9a8636c6a249a783a091f4dfd7fb8f36910019cb235d865486e316609365f17d
+HASH BACKUP:   9a8636c6a249a783a091f4dfd7fb8f36910019cb235d865486e316609365f17d
+HASH FINAL:    a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41
+HASH 9L:       a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41
+
+RELATÓRIO: scripts/data/etapa-9o-aplicacao-real.json
+
+============================================
+ ETAPA 9O VALIDADA COM SUCESSO
+============================================
+BASE MESTRE ALTERADA: SIM
+REGISTROS ALTERADOS: 16
+ALTERAÇÕES NÃO AUTORIZADAS: 0
+BLOQUEADOS PRESERVADOS: 4/4
+BACKUP DE ROLLBACK: ÍNTEGRO
+============================================

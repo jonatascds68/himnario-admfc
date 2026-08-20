@@ -1,0 +1,97 @@
+VERIFICANDO ARQUIVOS OBRIGATÓRIOS...
+
+OK: assets/base_mestre.json
+OK: scripts/data/etapa-9l-base-simulada-consolidada.json
+OK: scripts/data/etapa-9m-auditoria-final.json
+
+============================================
+ VERIFICAÇÃO DOS HASHES
+============================================
+HASH BASE ATUAL:    9a8636c6a249a783a091f4dfd7fb8f36910019cb235d865486e316609365f17d
+HASH BASE ESPERADO: 9a8636c6a249a783a091f4dfd7fb8f36910019cb235d865486e316609365f17d
+
+HASH 9L ATUAL:      a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41
+HASH 9L ESPERADO:   a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41
+
+HASHES: OK
+
+============================================
+ CONTROLE ESTRUTURAL
+============================================
+TOTAL BASE: 718
+TOTAL 9L:   718
+IDS ÚNICOS BASE: 718
+IDS ÚNICOS 9L:   718
+IDS AUSENTES:    0
+IDS EXTRAS:      0
+
+ESTRUTURA: OK
+
+============================================
+ CRIAÇÃO DO BACKUP FINAL
+============================================
+BACKUP: assets/base_mestre.backup-pre-9n.json
+HASH BACKUP: 9a8636c6a249a783a091f4dfd7fb8f36910019cb235d865486e316609365f17d
+BACKUP BYTE A BYTE IDÊNTICO: SIM
+
+BACKUP VALIDADO: SIM
+
+============================================
+ VERIFICAÇÃO DA LISTA AUTORIZADA
+============================================
+REGISTROS DIFERENTES BASE -> 9L: 16
+- GT-028
+- GT-033
+- GT-040
+- GT-052
+- GT-056
+- GT-081
+- GT-161
+- GT-186
+- GT-259
+- GT-283
+- SION-015
+- SION-016
+- SION-024
+- SION-026
+- SION-038
+- SION-107
+
+LISTA AUTORIZADA: OK
+
+============================================
+ VERIFICAÇÃO DOS BLOQUEADOS
+============================================
+GT-036 | PRESERVADO
+GT-100 | PRESERVADO
+SION-019 | PRESERVADO
+SION-059 | PRESERVADO
+
+BLOQUEADOS PRESERVADOS: 4/4
+
+============================================
+ MANIFESTO DE ROLLBACK
+============================================
+MANIFESTO: scripts/data/etapa-9n-manifesto-rollback.json
+BACKUP:    assets/base_mestre.backup-pre-9n.json
+
+============================================
+ VERIFICAÇÃO FINAL
+============================================
+HASH BASE ANTES:  9a8636c6a249a783a091f4dfd7fb8f36910019cb235d865486e316609365f17d
+HASH BASE DEPOIS: 9a8636c6a249a783a091f4dfd7fb8f36910019cb235d865486e316609365f17d
+HASH BACKUP:      9a8636c6a249a783a091f4dfd7fb8f36910019cb235d865486e316609365f17d
+HASH 9L:          a0a97173c5ce6fd7d39e22813a15576304218bfce2f85dbd694a726364835d41
+
+BASE MESTRE ALTERADA: NÃO
+BACKUP VALIDADO: SIM
+MANIFESTO DE ROLLBACK: CRIADO
+16 REGISTROS AUTORIZADOS: CONFIRMADOS
+4 BLOQUEADOS: PRESERVADOS
+5 PENDÊNCIAS TEXTUAIS: PRESERVADAS
+
+============================================
+ ETAPA 9N VALIDADA COM SUCESSO
+ BACKUP E ROLLBACK PRONTOS
+ APLICAÇÃO REAL AINDA NÃO EXECUTADA
+============================================
