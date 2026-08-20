@@ -317,7 +317,35 @@ async function registerHymnUpdate(
     const afterValues: Partial<Hymn> = {};
 
     for (const key of changedFields) {
-      (beforeValues as any)[key] = (before as any)[key];
+      /*
+       * ADMFC — compatibilidade editorial com hinos legados.
+       *
+       * A Base Mestre histórica pode possuir somente `letra`.
+       * Quando o administrador edita a estrutura, o editor trabalha
+       * com `bloques`, mas o estado anterior ainda não possui esse
+       * campo fisicamente.
+       *
+       * Para que a revisão administrativa mostre corretamente
+       * ANTES / DESPUÉS por estrofa e coro, reconstruímos SOMENTE
+       * o valor administrativo de before.bloques a partir da letra
+       * original. A Base Mestre e o próprio hino não são alterados.
+       */
+      if (
+        key === 'bloques' &&
+        !Array.isArray(before.bloques)
+      ) {
+        (beforeValues as any)[key] = getSections(before).map(sec => ({
+          tipo: sec.kind === 'chorus' ? 'coro' : 'estrofa',
+          numero:
+            sec.kind === 'verse'
+              ? sec.index ?? null
+              : null,
+          texto: sec.text,
+        }));
+      } else {
+        (beforeValues as any)[key] = (before as any)[key];
+      }
+
       (afterValues as any)[key] = (after as any)[key];
     }
 
@@ -347,7 +375,29 @@ async function registerHymnUpdate(
      */
     if (!existing.changed_fields.includes(key)) {
       existing.changed_fields.push(key);
-      (existing.before as any)[key] = (before as any)[key];
+
+      /*
+       * ADMFC — o mesmo tratamento de compatibilidade é necessário
+       * quando o hino já possui outra alteração administrativa pendente.
+       *
+       * Se `bloques` ainda não existia fisicamente no hino legado,
+       * reconstruímos o BEFORE administrativo a partir da letra original.
+       */
+      if (
+        key === 'bloques' &&
+        !Array.isArray(before.bloques)
+      ) {
+        (existing.before as any)[key] = getSections(before).map(sec => ({
+          tipo: sec.kind === 'chorus' ? 'coro' : 'estrofa',
+          numero:
+            sec.kind === 'verse'
+              ? sec.index ?? null
+              : null,
+          texto: sec.text,
+        }));
+      } else {
+        (existing.before as any)[key] = (before as any)[key];
+      }
     }
 
     (existing.after as any)[key] = (after as any)[key];
@@ -764,11 +814,65 @@ export const api = {
 
   listAdminChanges: async () => {
     requireAuth();
+
     const items = await loadAdminChanges();
+    const db = await loadDb();
+
+    /*
+     * ADMFC — compatibilidade visual com pendências antigas.
+     *
+     * Algumas correções de estrutura foram registradas antes de
+     * before.bloques passar a ser armazenado. Para a tela administrativa,
+     * reconstruímos SOMENTE uma cópia visual do BEFORE a partir da
+     * `letra` histórica do hino.
+     *
+     * A fila persistida, a Base Mestre e os pacotes de atualização
+     * permanecem intocados.
+     */
+    const displayItems = items.map(item => {
+      if (
+        !item.changed_fields.includes('bloques') ||
+        Array.isArray(item.before?.bloques)
+      ) {
+        return item;
+      }
+
+      const hymn = db.hymns.find(
+        current => current.id === item.hymn_id
+      );
+
+      if (!hymn?.letra) {
+        return item;
+      }
+
+      const legacyBlocks: Bloque[] = parseLetra(hymn.letra).map(sec => ({
+        tipo:
+          sec.kind === 'chorus'
+            ? 'coro'
+            : 'estrofa',
+        numero:
+          sec.kind === 'verse'
+            ? sec.index ?? null
+            : null,
+        texto: sec.text,
+      }));
+
+      if (!legacyBlocks.length) {
+        return item;
+      }
+
+      return {
+        ...item,
+        before: {
+          ...item.before,
+          bloques: legacyBlocks,
+        },
+      };
+    });
 
     return {
-      items,
-      count: items.length,
+      items: displayItems,
+      count: displayItems.length,
     };
   },
 
