@@ -41,6 +41,123 @@ function displayValue(value: any): string {
   return String(value);
 }
 
+
+function blockLabel(block: any, index: number): string {
+  const tipo = String(
+    block?.tipo ?? block?.type ?? block?.kind ?? ''
+  ).toLowerCase();
+
+  if (tipo.includes('coro') || tipo.includes('chorus')) {
+    return 'CORO';
+  }
+
+  const numero =
+    block?.numero ??
+    block?.number ??
+    block?.n ??
+    index + 1;
+
+  return `ESTROFA ${numero}`;
+}
+
+function blockText(block: any): string {
+  if (!block) return '—';
+
+  const value =
+    block?.texto ??
+    block?.text ??
+    block?.letra ??
+    block?.content ??
+    '';
+
+  if (Array.isArray(value)) {
+    return value.join('\n').trim() || '—';
+  }
+
+  return String(value ?? '').trim() || '—';
+}
+
+function ChangedBlocksView({
+  before,
+  after,
+  c,
+}: {
+  before: any;
+  after: any;
+  c: any;
+}) {
+  const oldBlocks = Array.isArray(before) ? before : [];
+  const newBlocks = Array.isArray(after) ? after : [];
+
+  const total = Math.max(oldBlocks.length, newBlocks.length);
+
+  const changed = Array.from({ length: total }, (_, index) => ({
+    index,
+    oldBlock: oldBlocks[index],
+    newBlock: newBlocks[index],
+  })).filter(
+    ({ oldBlock, newBlock }) =>
+      JSON.stringify(oldBlock ?? null) !==
+      JSON.stringify(newBlock ?? null)
+  );
+
+  if (!changed.length) {
+    return (
+      <Text style={[styles.valueText, { color: c.muted }]}>
+        Sin diferencias visibles
+      </Text>
+    );
+  }
+
+  return (
+    <View style={styles.blocksReview}>
+      {changed.map(({ index, oldBlock, newBlock }) => {
+        const reference = newBlock ?? oldBlock;
+
+        return (
+          <View
+            key={`${index}-${blockLabel(reference, index)}`}
+            style={[
+              styles.blockReview,
+              {
+                borderColor: c.border,
+                backgroundColor: c.surfaceSecondary,
+              },
+            ]}
+          >
+            <Text style={[styles.blockTitle, { color: c.brand }]}>
+              {blockLabel(reference, index)}
+            </Text>
+
+            <Text style={[styles.valueLabel, { color: c.muted }]}>
+              ANTES
+            </Text>
+
+            <Text style={[styles.blockText, { color: c.onSurface }]}>
+              {blockText(oldBlock)}
+            </Text>
+
+            <View
+              style={[
+                styles.blockDivider,
+                { backgroundColor: c.divider },
+              ]}
+            />
+
+            <Text style={[styles.valueLabel, { color: c.muted }]}>
+              DESPUÉS
+            </Text>
+
+            <Text style={[styles.blockText, { color: c.onSurface }]}>
+              {blockText(newBlock)}
+            </Text>
+          </View>
+        );
+      })}
+    </View>
+  );
+}
+
 export default function AdminChanges() {
   const router = useRouter();
   const { c } = useTheme();
@@ -468,40 +585,48 @@ export default function AdminChanges() {
                       {field}
                     </Text>
 
-                    <View style={styles.valueRow}>
-                      <View style={styles.valueColumn}>
-                        <Text style={[styles.valueLabel, { color: c.muted }]}>
-                          ANTES
-                        </Text>
-
-                        <Text
-                          style={[styles.valueText, { color: c.onSurface }]}
-                          numberOfLines={4}
-                        >
-                          {displayValue((item.before as any)?.[field])}
-                        </Text>
-                      </View>
-
-                      <Feather
-                        name="arrow-right"
-                        size={16}
-                        color={c.muted}
-                        style={styles.arrow}
+                    {field === 'bloques' ? (
+                      <ChangedBlocksView
+                        before={(item.before as any)?.[field]}
+                        after={(item.after as any)?.[field]}
+                        c={c}
                       />
+                    ) : (
+                      <View style={styles.valueRow}>
+                        <View style={styles.valueColumn}>
+                          <Text style={[styles.valueLabel, { color: c.muted }]}>
+                            ANTES
+                          </Text>
 
-                      <View style={styles.valueColumn}>
-                        <Text style={[styles.valueLabel, { color: c.muted }]}>
-                          DESPUÉS
-                        </Text>
+                          <Text
+                            style={[styles.valueText, { color: c.onSurface }]}
+                            numberOfLines={4}
+                          >
+                            {displayValue((item.before as any)?.[field])}
+                          </Text>
+                        </View>
 
-                        <Text
-                          style={[styles.valueText, { color: c.onSurface }]}
-                          numberOfLines={4}
-                        >
-                          {displayValue((item.after as any)?.[field])}
-                        </Text>
+                        <Feather
+                          name="arrow-right"
+                          size={16}
+                          color={c.muted}
+                          style={styles.arrow}
+                        />
+
+                        <View style={styles.valueColumn}>
+                          <Text style={[styles.valueLabel, { color: c.muted }]}>
+                            DESPUÉS
+                          </Text>
+
+                          <Text
+                            style={[styles.valueText, { color: c.onSurface }]}
+                            numberOfLines={4}
+                          >
+                            {displayValue((item.after as any)?.[field])}
+                          </Text>
+                        </View>
                       </View>
-                    </View>
+                    )}
                   </View>
                 ))}
               </View>
@@ -692,6 +817,30 @@ export default function AdminChanges() {
 }
 
 const styles = StyleSheet.create({
+  blocksReview: {
+    gap: SPACING.sm,
+    marginTop: SPACING.sm,
+  },
+  blockReview: {
+    borderWidth: 1,
+    borderRadius: RADIUS.md,
+    padding: SPACING.md,
+  },
+  blockTitle: {
+    fontSize: 13,
+    fontWeight: '800',
+    marginBottom: SPACING.md,
+  },
+  blockText: {
+    fontSize: 14,
+    lineHeight: 21,
+    marginTop: 5,
+  },
+  blockDivider: {
+    height: StyleSheet.hairlineWidth,
+    marginVertical: SPACING.md,
+  },
+
   container: {
     flex: 1,
   },
