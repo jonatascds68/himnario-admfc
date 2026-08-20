@@ -1,0 +1,45 @@
+{
+  "schema_version": "admfc-content-patch-1",
+  "revision": 2,
+  "patches": [
+    {
+      "hymn_id": "SION-006",
+      "fields": {
+        "bloques": [
+          {
+            "tipo": "estrofa",
+            "numero": 1,
+            "texto": "Dulce comunión la que gozo ya\nEn los brazos de mi Salvador;\n¡Qué gran bendición en su paz me da!\n¡Oh, yo siento en mí su tierno amor!"
+          },
+          {
+            "tipo": "coro",
+            "numero": null,
+            "texto": "Libre, salvo,\nDe aflicción y de temor,\nLibre, salvo,\nEn los brazos de mi Salvador."
+          },
+          {
+            "tipo": "estrofa",
+            "numero": 2,
+            "texto": "¡Cuán dulce es vivir, cuán dulce es gozar!\nEn los brazos de mi Salvador;\nAllí quiero ir y con Él morar,\nSiendo objeto de su tierno amor."
+          },
+          {
+            "tipo": "estrofa",
+            "numero": 3,
+            "texto": "No hay que temer, ni que desconfiar,\nEn los brazos de mi Salvador;\nPor su gran poder Él me guardará\nDe los lazos del engañador."
+          }
+        ]
+      }
+    },
+    {
+      "hymn_id": "SION-059",
+      "fields": {
+        "tom": "A"
+      }
+    },
+    {
+      "hymn_id": "GT-100",
+      "fields": {
+        "tom": "A"
+      }
+    }
+  ]
+}

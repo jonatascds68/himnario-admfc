@@ -1,0 +1,75 @@
+{
+  "schema_version": "admfc-content-patch-1",
+  "revision": 1,
+  "patches": [
+    {
+      "hymn_id": "SION-059",
+      "fields": {
+        "titulo": "A LOS PIES DE JESUCRISTO CORRIGIDO",
+        "bloques": [
+          {
+            "tipo": "estrofa",
+            "numero": 1,
+            "texto": "A los pies de Jesucristo Es el sitio aquí mejor, Escuchando cual María Las palabras de su amor.\nA los pies de Jesucristo Gozaré su comunión, Pues su mano fiel y tierna\nMe ha provisto protección."
+          },
+          {
+            "tipo": "estrofa",
+            "numero": 2,
+            "texto": "A los pies de Jesucristo Hallo tierna compasión; El quitó ya mis afanes,\nYa me ha dado bendición.\n¡Puedo yo decirle a Cristo Mis cuidados y temor!\nY con él tendrá mi alma Gozo, paz, eterno amor."
+          },
+          {
+            "tipo": "estrofa",
+            "numero": 3,
+            "texto": "A los pies de Jesucristo Yo tendré su bendición; En sus ojos hay dulzura Y en su seno protección.\n¡Qué feliz es el momento Que yo paso junto a ti! Ya anhelo el encuentro Cuando vengas tú por mí."
+          }
+        ]
+      }
+    },
+    {
+      "hymn_id": "GT-188",
+      "fields": {
+        "titulo": "BELLAS PALABRAS DE VIDA CORRIGIDO",
+        "bloques": [
+          {
+            "tipo": "estrofa",
+            "numero": 1,
+            "texto": "¡Oh, cantádmelas otra vez! Bellas palabras de vida; Hallo en ellas mi gozo y luz, Bellas palabras de vida;\nSi, de luz y vida; Son sostén y guia:\n|| ¡Qué bellas son, qué bellas son!\nBellas palabras de vida.||"
+          },
+          {
+            "tipo": "estrofa",
+            "numero": 2,
+            "texto": "Jesucristo a todos da Bellas palabras de vida; Hoy escúchalas, pecador, Bellas palabras de vida; Bondadoso te salva,\nY al cielo te llama:\n|| ¡Qué bellas son, qué bellas son!\nBellas palabras de vida.||"
+          },
+          {
+            "tipo": "estrofa",
+            "numero": 3,
+            "texto": "Grato el cántico sonará, Bellas palabras de vida; Tus pecados perdonará, Bellas palabras de vida; Si, de luz y vida,\nSon sostén y guía:\n|| ¡Qué bellas son, qué bellas son!\nBellas palabras de vida.||"
+          }
+        ]
+      }
+    },
+    {
+      "hymn_id": "GT-100",
+      "fields": {
+        "titulo": "A LOS PIES DE JESUCRISTO CORRIGIDO",
+        "bloques": [
+          {
+            "tipo": "estrofa",
+            "numero": 1,
+            "texto": "A los pies de Jesucristo Es el sitio aquí mejor, Escuchando cual María Las palabras de su amor.\nA los pies de Jesucristo Gozaré su comunión, Pues su mano fiel y tierna\nMe ha provisto protección."
+          },
+          {
+            "tipo": "estrofa",
+            "numero": 2,
+            "texto": "A los pies de Jesucristo Hallo tierna compasión; El quitó ya mis afanes,\nYa me ha dado bendición.\n¡Puedo yo decirle a Cristo Mis cuidados y temor!\nY con él tendrá mi alma Gozo, paz, eterno amor."
+          },
+          {
+            "tipo": "estrofa",
+            "numero": 3,
+            "texto": "A los pies de Jesucristo Yo tendré su bendición; En sus ojos hay dulzura Y en su seno protección.\n¡Qué feliz es el momento Que yo paso junto a ti! Ya anhelo el encuentro Cuando vengas tú por mí."
+          }
+        ]
+      }
+    }
+  ]
+}
