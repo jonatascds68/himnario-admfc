@@ -11,6 +11,12 @@ import { useTheme } from '@/src/theme/ThemeContext';
 import { SPACING, RADIUS } from '@/src/theme/tokens';
 import { api, AdminHymnChange } from '@/src/lib/api';
 
+type PreparedContentPublication = {
+  revision: number;
+  generated_at: string | null;
+  total_changes: number;
+};
+
 function displayValue(value: any): string {
   if (value === undefined || value === null || value === '') {
     return '—';
@@ -164,6 +170,12 @@ export default function AdminChanges() {
   const [changes, setChanges] = useState<AdminHymnChange[]>([]);
   const [loading, setLoading] = useState(true);
   const [exporting, setExporting] = useState(false);
+  const [preparedPublication, setPreparedPublication] =
+    useState<PreparedContentPublication | null>(null);
+  const [confirmingPublication, setConfirmingPublication] =
+    useState(false);
+  const [publicationTarget, setPublicationTarget] =
+    useState<PreparedContentPublication | null>(null);
   const [reviewTarget, setReviewTarget] =
     useState<AdminHymnChange | null>(null);
   const [reviewingId, setReviewingId] = useState<string | null>(null);
@@ -171,8 +183,13 @@ export default function AdminChanges() {
   const loadChanges = useCallback(async () => {
     setLoading(true);
     try {
-      const result = await api.listAdminChanges();
+      const [result, prepared] = await Promise.all([
+        api.listAdminChanges(),
+        api.getPreparedContentPublication(),
+      ]);
+
       setChanges(result.items);
+      setPreparedPublication(prepared);
     } finally {
       setLoading(false);
     }
@@ -336,12 +353,17 @@ export default function AdminChanges() {
    * A revisão só será confirmada quando existir publicação remota real.
    */
   const generateContentUpdate = async () => {
-    if (!changes.length || exporting) return;
+    if (!changes.length || exporting || preparedPublication) return;
 
     try {
       setExporting(true);
 
       const data = await api.exportContentUpdates();
+
+      const prepared =
+        await api.getPreparedContentPublication();
+
+      setPreparedPublication(prepared);
 
       const filename =
         `admfc-update-r${String(data.revision).padStart(6, '0')}.json`;
@@ -398,6 +420,36 @@ export default function AdminChanges() {
     }
   };
 
+  const confirmPublication = async () => {
+    if (!publicationTarget || confirmingPublication) return;
+
+    const target = publicationTarget;
+
+    try {
+      setConfirmingPublication(true);
+
+      const result = await api.confirmContentPublished(
+        target.revision
+      );
+
+      setPublicationTarget(null);
+
+      await loadChanges();
+
+      Alert.alert(
+        'Publicación confirmada',
+        `La revisión R${String(result.revision).padStart(6, '0')} fue confirmada correctamente.`
+      );
+    } catch (e: any) {
+      Alert.alert(
+        'Error',
+        e?.message || 'No se pudo confirmar la publicación'
+      );
+    } finally {
+      setConfirmingPublication(false);
+    }
+  };
+
   const markAsReviewed = (item: AdminHymnChange) => {
     setReviewTarget(item);
   };
@@ -410,7 +462,7 @@ export default function AdminChanges() {
     try {
       setReviewingId(item.id);
 
-      await api.removeAdminChange(item.id);
+      await api.markAdminChangeReviewed(item.id);
 
       setReviewTarget(null);
       await loadChanges();
@@ -507,14 +559,17 @@ export default function AdminChanges() {
 
           <Pressable
             onPress={generateContentUpdate}
-            disabled={exporting}
+            disabled={exporting || !!preparedPublication}
             style={[
               styles.exportButton,
               {
                 backgroundColor: c.surfaceSecondary,
                 borderWidth: 1,
                 borderColor: c.brand,
-                opacity: exporting ? 0.65 : 1,
+                opacity:
+                  exporting || preparedPublication
+                    ? 0.55
+                    : 1,
               },
             ]}
           >
@@ -530,9 +585,107 @@ export default function AdminChanges() {
                 { color: c.brand },
               ]}
             >
-              Generar actualización
+              {preparedPublication
+                ? 'Actualización preparada'
+                : 'Generar actualización'}
             </Text>
           </Pressable>
+
+          {preparedPublication ? (
+            <View
+              style={[
+                styles.preparedCard,
+                {
+                  backgroundColor: c.surface,
+                  borderColor: c.brand,
+                },
+              ]}
+            >
+              <View style={styles.preparedHeader}>
+                <Feather
+                  name="upload-cloud"
+                  size={22}
+                  color={c.brand}
+                />
+
+                <View style={styles.preparedHeaderText}>
+                  <Text
+                    style={[
+                      styles.preparedTitle,
+                      { color: c.onSurface },
+                    ]}
+                  >
+                    Actualización preparada
+                  </Text>
+
+                  <Text
+                    style={[
+                      styles.preparedRevision,
+                      { color: c.brand },
+                    ]}
+                  >
+                    R{String(preparedPublication.revision).padStart(6, '0')}
+                  </Text>
+                </View>
+              </View>
+
+              <Text
+                style={[
+                  styles.preparedDescription,
+                  { color: c.muted },
+                ]}
+              >
+                {preparedPublication.total_changes}{' '}
+                {preparedPublication.total_changes === 1
+                  ? 'corrección revisada'
+                  : 'correcciones revisadas'}{' '}
+                esperan confirmación de publicación.
+              </Text>
+
+              {preparedPublication.generated_at ? (
+                <Text
+                  style={[
+                    styles.preparedDate,
+                    { color: c.muted },
+                  ]}
+                >
+                  Preparada:{' '}
+                  {new Date(
+                    preparedPublication.generated_at
+                  ).toLocaleString()}
+                </Text>
+              ) : null}
+
+              <Pressable
+                onPress={() =>
+                  setPublicationTarget(preparedPublication)
+                }
+                disabled={confirmingPublication}
+                style={[
+                  styles.confirmPublicationButton,
+                  {
+                    backgroundColor: c.brand,
+                    opacity: confirmingPublication ? 0.65 : 1,
+                  },
+                ]}
+              >
+                <Feather
+                  name="check-circle"
+                  size={17}
+                  color={c.surface}
+                />
+
+                <Text
+                  style={[
+                    styles.confirmPublicationButtonText,
+                    { color: c.surface },
+                  ]}
+                >
+                  Confirmar publicación
+                </Text>
+              </Pressable>
+            </View>
+          ) : null}
 
           {changes.map((item) => (
             <View
@@ -640,13 +793,22 @@ export default function AdminChanges() {
                 </View>
 
                 <Pressable
-                  onPress={() => markAsReviewed(item)}
+                  onPress={() => {
+                    if (item.status !== 'reviewed') {
+                      markAsReviewed(item);
+                    }
+                  }}
                   disabled={reviewingId === item.id}
                   style={[
                     styles.reviewButton,
                     {
                       borderColor: c.brand,
-                      opacity: reviewingId === item.id ? 0.6 : 1,
+                      opacity:
+                        reviewingId === item.id
+                          ? 0.6
+                          : item.status === 'reviewed'
+                            ? 0.72
+                            : 1,
                     },
                   ]}
                 >
@@ -662,7 +824,7 @@ export default function AdminChanges() {
                       { color: c.brand },
                     ]}
                   >
-                    Revisado
+                    {item.status === 'reviewed' ? '✓ Revisado' : 'Revisado'}
                   </Text>
                 </Pressable>
               </View>
@@ -670,6 +832,147 @@ export default function AdminChanges() {
           ))}
         </ScrollView>
       )}
+    <Modal
+      visible={!!publicationTarget}
+      transparent
+      animationType="fade"
+      onRequestClose={() => {
+        if (!confirmingPublication) {
+          setPublicationTarget(null);
+        }
+      }}
+    >
+      <View style={styles.reviewOverlay}>
+        <View
+          style={[
+            styles.reviewCard,
+            {
+              backgroundColor: c.surface,
+              borderColor: c.border,
+            },
+          ]}
+        >
+          <View
+            style={[
+              styles.reviewIcon,
+              { backgroundColor: c.surfaceSecondary },
+            ]}
+          >
+            <Feather
+              name="upload-cloud"
+              size={29}
+              color={c.brand}
+            />
+          </View>
+
+          <Text
+            style={[
+              styles.reviewTitle,
+              { color: c.onSurface },
+            ]}
+          >
+            Confirmar publicación
+          </Text>
+
+          {publicationTarget ? (
+            <Text
+              style={[
+                styles.publicationRevision,
+                { color: c.brand },
+              ]}
+            >
+              R{String(publicationTarget.revision).padStart(6, '0')}
+            </Text>
+          ) : null}
+
+          <Text
+            style={[
+              styles.reviewText,
+              { color: c.muted },
+            ]}
+          >
+            Confirme solamente después de que el archivo de
+            actualización haya sido publicado correctamente.
+          </Text>
+
+          <Text
+            style={[
+              styles.reviewWarning,
+              { color: c.muted },
+            ]}
+          >
+            Al confirmar, las correcciones incluidas en esta
+            revisión serán retiradas de la fila administrativa.
+            Cualquier corrección realizada después de generar el
+            archivo será preservada.
+          </Text>
+
+          <View style={styles.reviewActions}>
+            <Pressable
+              onPress={() => setPublicationTarget(null)}
+              disabled={confirmingPublication}
+              style={[
+                styles.reviewModalButton,
+                {
+                  backgroundColor: c.surfaceSecondary,
+                  borderColor: c.borderStrong,
+                },
+              ]}
+            >
+              <Feather
+                name="x"
+                size={18}
+                color={c.onSurface}
+              />
+              <Text
+                style={[
+                  styles.reviewModalButtonText,
+                  { color: c.onSurface },
+                ]}
+              >
+                Cancelar
+              </Text>
+            </Pressable>
+
+            <Pressable
+              onPress={confirmPublication}
+              disabled={confirmingPublication}
+              style={[
+                styles.reviewModalButton,
+                styles.reviewConfirmButton,
+                {
+                  backgroundColor: c.brand,
+                  opacity: confirmingPublication ? 0.65 : 1,
+                },
+              ]}
+            >
+              {confirmingPublication ? (
+                <ActivityIndicator
+                  size="small"
+                  color={c.onSurfaceInverse}
+                />
+              ) : (
+                <Feather
+                  name="check"
+                  size={18}
+                  color={c.onSurfaceInverse}
+                />
+              )}
+
+              <Text
+                style={[
+                  styles.reviewModalButtonText,
+                  { color: c.onSurfaceInverse },
+                ]}
+              >
+                Confirmar
+              </Text>
+            </Pressable>
+          </View>
+        </View>
+      </View>
+    </Modal>
+
     <Modal
       visible={!!reviewTarget}
       transparent
@@ -714,8 +1017,8 @@ export default function AdminChanges() {
               { color: c.muted },
             ]}
           >
-            Esta corrección dejará de aparecer entre los cambios
-            pendientes.
+            Esta corrección quedará marcada como revisada y se conservará
+            para la próxima publicación.
           </Text>
 
           {reviewTarget ? (
@@ -755,8 +1058,9 @@ export default function AdminChanges() {
               { color: c.muted },
             ]}
           >
-            Marque como revisado solamente cuando esta corrección
-            ya no necesite permanecer en la fila administrativa.
+            Marque como revisado solamente después de comprobar que
+            la corrección está correcta. Solo los cambios revisados podrán
+            formar parte de la próxima actualización.
           </Text>
 
           <View style={styles.reviewActions}>
@@ -817,6 +1121,58 @@ export default function AdminChanges() {
 }
 
 const styles = StyleSheet.create({
+  preparedCard: {
+    borderWidth: 1.5,
+    borderRadius: RADIUS.md,
+    padding: SPACING.md,
+    marginBottom: SPACING.md,
+  },
+  preparedHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: SPACING.sm,
+  },
+  preparedHeaderText: {
+    flex: 1,
+  },
+  preparedTitle: {
+    fontSize: 16,
+    fontWeight: '800',
+  },
+  preparedRevision: {
+    fontSize: 14,
+    fontWeight: '800',
+    marginTop: 2,
+  },
+  preparedDescription: {
+    fontSize: 14,
+    lineHeight: 20,
+    marginTop: SPACING.md,
+  },
+  preparedDate: {
+    fontSize: 12,
+    marginTop: SPACING.sm,
+  },
+  confirmPublicationButton: {
+    minHeight: 44,
+    borderRadius: RADIUS.md,
+    marginTop: SPACING.md,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: SPACING.sm,
+    paddingHorizontal: SPACING.md,
+  },
+  confirmPublicationButtonText: {
+    fontSize: 14,
+    fontWeight: '800',
+  },
+  publicationRevision: {
+    fontSize: 18,
+    fontWeight: '900',
+    textAlign: 'center',
+    marginBottom: SPACING.md,
+  },
   blocksReview: {
     gap: SPACING.sm,
     marginTop: SPACING.sm,

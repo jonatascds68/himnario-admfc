@@ -74,7 +74,8 @@ export interface AdminHymnChange {
   before: Partial<Hymn>;
   after: Partial<Hymn>;
   created_at: string;
-  status: 'pending';
+  status: 'pending' | 'reviewed';
+  reviewed_at?: string | null;
 }
 
 const DEFAULT_CATEGORIES = [
@@ -127,6 +128,16 @@ const CONTENT_REVISION_KEY = 'admfc_content_revision_v1';
  */
 const PUBLISHED_CONTENT_REVISION_KEY =
   'admfc_published_content_revision_v1';
+
+/*
+ * ADMFC — snapshot da atualização preparada para publicação.
+ *
+ * Guarda exatamente quais correções e quais valores AFTER
+ * pertencem ao pacote que foi gerado, permitindo confirmar
+ * posteriormente sem apagar edições realizadas nesse intervalo.
+ */
+const PREPARED_CONTENT_PUBLICATION_KEY =
+  'admfc_prepared_content_publication_v1';
 
 const ADMIN_EMAIL = 'jonatascds68@gmail.com';
 const ADMIN_PASSWORD_HASH = 'edf29432fb85857e36c029fffe09af9b1e02b1474dcc7b384fed25a121645900';
@@ -428,6 +439,17 @@ async function registerHymnUpdate(
   existing.numero = after.numero;
   existing.titulo = after.titulo;
   existing.created_at = new Date().toISOString();
+
+  /*
+   * ADMFC — qualquer nova edição invalida a revisão anterior.
+   *
+   * Uma correção marcada como reviewed representa exatamente
+   * o estado que foi conferido pelo administrador.
+   * Se o hino sofrer nova alteração antes da publicação,
+   * essa nova versão precisa obrigatoriamente ser revisada.
+   */
+  existing.status = 'pending';
+  existing.reviewed_at = null;
 
   /*
    * Se todos os campos retornaram ao estado original,
@@ -885,11 +907,79 @@ export const api = {
   exportContentUpdates: async () => {
     requireAuth();
 
+    /*
+     * ADMFC — somente uma publicação pode ficar preparada
+     * por vez.
+     *
+     * Enquanto existir um snapshot aguardando confirmação,
+     * não permitimos gerar outro pacote e sobrescrevê-lo.
+     */
+    const preparedRaw = await kv.get(
+      PREPARED_CONTENT_PUBLICATION_KEY
+    );
+
+    if (preparedRaw) {
+      try {
+        const prepared = JSON.parse(preparedRaw);
+
+        if (
+          prepared &&
+          Number.isInteger(prepared.revision) &&
+          Array.isArray(prepared.changes)
+        ) {
+          throw new Error(
+            `La revisión R${String(prepared.revision).padStart(6, '0')} ya está preparada y espera confirmación de publicación. Confírmela antes de generar otra actualización.`
+          );
+        }
+      } catch (error: any) {
+        /*
+         * Se o JSON é válido e o erro é nosso bloqueio acima,
+         * ele deve chegar à interface.
+         */
+        if (
+          error?.message?.includes(
+            'espera confirmación de publicación'
+          )
+        ) {
+          throw error;
+        }
+
+        /*
+         * Snapshot inválido/corrompido também não deve ser
+         * sobrescrito silenciosamente.
+         */
+        throw new Error(
+          'Existe una actualización preparada inválida. No se generará otra hasta resolver este estado.'
+        );
+      }
+    }
+
     const items = await loadAdminChanges();
 
     if (!items.length) {
       throw new Error('No hay correcciones pendientes para publicar');
     }
+
+    /*
+     * Uma atualização oficial só pode ser gerada quando TODAS
+     * as correções da fila tiverem sido revisadas.
+     *
+     * Isso impede publicar acidentalmente uma edição ainda
+     * pendente de conferência.
+     */
+    const notReviewed = items.filter(
+      item => item.status !== 'reviewed'
+    );
+
+    if (notReviewed.length) {
+      throw new Error(
+        `Hay ${notReviewed.length} corrección(es) todavía sin revisar. Revise todas antes de publicar.`
+      );
+    }
+
+    const reviewedItems = items.filter(
+      item => item.status === 'reviewed'
+    );
 
     const raw = await kv.get(PUBLISHED_CONTENT_REVISION_KEY);
     const storedRevision = Number(raw);
@@ -905,11 +995,73 @@ export const api = {
      * Gerar o pacote NÃO avança ainda o contador.
      * A revisão só deverá ser confirmada depois que a
      * publicação efetivamente for concluída.
+     *
+     * Entretanto, registramos exatamente o estado que entrou
+     * nesse pacote. Assim, se algum hino for novamente editado
+     * antes da confirmação, essa nova edição não será apagada.
      */
-    return adminChangesToContentPackage(
-      items,
+    const contentPackage = adminChangesToContentPackage(
+      reviewedItems,
       nextRevision
     );
+
+    await kv.set(
+      PREPARED_CONTENT_PUBLICATION_KEY,
+      JSON.stringify({
+        revision: nextRevision,
+        generated_at: new Date().toISOString(),
+        changes: reviewedItems.map(item => ({
+          id: item.id,
+          hymn_id: item.hymn_id,
+          changed_fields: [...item.changed_fields],
+          after: { ...item.after },
+        })),
+      })
+    );
+
+    return contentPackage;
+  },
+
+  /*
+   * ADMFC — informa à interface se existe uma atualização
+   * já preparada e aguardando confirmação de publicação.
+   *
+   * Esta função é somente leitura: não altera revisão,
+   * fila administrativa nem snapshot.
+   */
+  getPreparedContentPublication: async () => {
+    requireAuth();
+
+    const raw = await kv.get(
+      PREPARED_CONTENT_PUBLICATION_KEY
+    );
+
+    if (!raw) {
+      return null;
+    }
+
+    try {
+      const prepared = JSON.parse(raw);
+
+      if (
+        !prepared ||
+        !Number.isInteger(prepared.revision) ||
+        !Array.isArray(prepared.changes)
+      ) {
+        return null;
+      }
+
+      return {
+        revision: prepared.revision,
+        generated_at:
+          typeof prepared.generated_at === 'string'
+            ? prepared.generated_at
+            : null,
+        total_changes: prepared.changes.length,
+      };
+    } catch {
+      return null;
+    }
   },
 
   confirmContentPublished: async (revision: number) => {
@@ -944,15 +1096,111 @@ export const api = {
       );
     }
 
+    /*
+     * Recupera o snapshot correspondente ao pacote preparado.
+     */
+    const preparedRaw = await kv.get(
+      PREPARED_CONTENT_PUBLICATION_KEY
+    );
+
+    if (!preparedRaw) {
+      throw new Error(
+        'No existe una actualización preparada para confirmar'
+      );
+    }
+
+    let prepared: any;
+
+    try {
+      prepared = JSON.parse(preparedRaw);
+    } catch {
+      throw new Error(
+        'La actualización preparada está dañada'
+      );
+    }
+
+    if (
+      !prepared ||
+      prepared.revision !== revision ||
+      !Array.isArray(prepared.changes)
+    ) {
+      throw new Error(
+        'La actualización preparada no corresponde a esta revisión'
+      );
+    }
+
+    const currentItems = await loadAdminChanges();
+
+    /*
+     * Uma correção somente pode sair da fila quando:
+     *
+     * 1. fazia parte do pacote publicado;
+     * 2. continua com os mesmos campos;
+     * 3. continua com exatamente os mesmos valores AFTER;
+     * 4. continua revisada.
+     *
+     * Qualquer edição posterior permanece na fila.
+     */
+    const remainingItems = currentItems.filter(current => {
+      const published = prepared.changes.find(
+        (candidate: any) =>
+          candidate.id === current.id &&
+          candidate.hymn_id === current.hymn_id
+      );
+
+      if (!published) {
+        return true;
+      }
+
+      if (current.status !== 'reviewed') {
+        return true;
+      }
+
+      if (
+        !sameValue(
+          [...current.changed_fields].sort(),
+          [...published.changed_fields].sort()
+        )
+      ) {
+        return true;
+      }
+
+      for (const field of current.changed_fields) {
+        if (
+          !sameValue(
+            (current.after as any)[field],
+            (published.after as any)[field]
+          )
+        ) {
+          return true;
+        }
+      }
+
+      return false;
+    });
+
+    /*
+     * Primeiro preservamos a fila resultante.
+     * Somente depois registramos a revisão como publicada.
+     */
+    await saveAdminChanges(remainingItems);
+
     await kv.set(
       PUBLISHED_CONTENT_REVISION_KEY,
       String(revision)
+    );
+
+    await kv.remove(
+      PREPARED_CONTENT_PUBLICATION_KEY
     );
 
     return {
       ok: true,
       revision,
       already_confirmed: false,
+      published_changes:
+        currentItems.length - remainingItems.length,
+      remaining_changes: remainingItems.length,
     };
   },
 
@@ -974,6 +1222,36 @@ export const api = {
     requireAuth();
     await saveAdminChanges([]);
     return { ok: true };
+  },
+
+  /*
+   * ADMFC — revisão administrativa.
+   *
+   * Revisar NÃO remove a correção da fila.
+   * Apenas muda seu estado de pending -> reviewed.
+   * A correção continuará preservada até a publicação.
+   */
+  markAdminChangeReviewed: async (changeId: string) => {
+    requireAuth();
+
+    const items = await loadAdminChanges();
+    const item = items.find(current => current.id === changeId);
+
+    if (!item) {
+      throw new Error('Alteración administrativa no encontrada');
+    }
+
+    item.status = 'reviewed';
+    item.reviewed_at = new Date().toISOString();
+
+    await saveAdminChanges(items);
+
+    return {
+      ok: true,
+      reviewed_id: changeId,
+      status: item.status,
+      reviewed_at: item.reviewed_at,
+    };
   },
 
   removeAdminChange: async (changeId: string) => {
