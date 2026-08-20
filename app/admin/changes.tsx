@@ -267,7 +267,10 @@ export default function AdminChanges() {
 
   const loadChanges = useCallback(async () => {
     setLoading(true);
+
     try {
+      await api.me();
+
       const [result, prepared] = await Promise.all([
         api.listAdminChanges(),
         api.getPreparedContentPublication(),
@@ -275,10 +278,13 @@ export default function AdminChanges() {
 
       setChanges(result.items);
       setPreparedPublication(prepared);
+    } catch {
+      router.replace('/admin-login' as any);
+      return;
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [router]);
 
   useFocusEffect(
     useCallback(() => {

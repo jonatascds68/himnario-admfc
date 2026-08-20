@@ -454,7 +454,7 @@ backgroundColor:
               >
                 <MaterialCommunityIcons
                   name={item.icon}
-                  size={27}
+                  size={24}
                   color={
                     c.brandSecondary
                   }
@@ -666,43 +666,55 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: SPACING.md,
-    paddingHorizontal: SPACING.lg,
-    paddingTop: SPACING.sm,
-    paddingBottom: SPACING.lg,
+    gap: 14,
+    paddingHorizontal: 20,
+    paddingTop: 12,
+    paddingBottom: 16,
   },
 
   logo: {
-    width: 66,
-    height: 66,
+    width: 58,
+    height: 58,
   },
 
   brand: {
-    fontSize: 21,
+    fontSize: 22,
     fontWeight: '800',
-    letterSpacing: 0.8,
+    letterSpacing: 0.2,
   },
 
   brandSub: {
-    fontSize: 11.5,
-    marginTop: 3,
+    fontSize: 11,
+    lineHeight: 15,
+    marginTop: 2,
   },
 
   searchBar: {
-    marginHorizontal: SPACING.lg,
+    marginHorizontal: 20,
     flexDirection: 'row',
     alignItems: 'center',
-    gap: SPACING.sm,
-    paddingHorizontal: SPACING.md,
-    height: 54,
-    borderRadius: RADIUS.lg,
+    gap: 10,
+    paddingLeft: 16,
+    paddingRight: 14,
+    height: 56,
+    borderRadius: 22,
     borderWidth: 1,
-    marginBottom: SPACING.xl,
+    marginBottom: 28,
+
+    shadowColor: '#000000',
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    shadowOpacity: 0.05,
+    shadowRadius: 12,
+    elevation: 2,
   },
 
   searchText: {
     flex: 1,
     fontSize: 14,
+    fontWeight: '500',
   },
 
   sectionHeader: {
@@ -710,9 +722,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent:
       'space-between',
-    paddingHorizontal: SPACING.lg,
-    marginBottom: SPACING.md,
-    marginTop: SPACING.sm,
+    paddingHorizontal: 18,
+    marginBottom: 11,
+    marginTop: 6,
   },
 
   sectionTitleWrap: {
@@ -723,165 +735,196 @@ const styles = StyleSheet.create({
   },
 
   sectionLine: {
-    width: 3,
-    height: 18,
-    borderRadius: 3,
+    width: 4,
+    height: 16,
+    borderRadius: 4,
   },
 
   sectionTitle: {
-    fontSize: 15,
+    fontSize: 16,
     fontWeight: '800',
-    textTransform: 'uppercase',
-    letterSpacing: 0.5,
+    letterSpacing: -0.1,
   },
 
   sectionAction: {
-    fontSize: 12,
+    fontSize: 12.5,
     fontWeight: '700',
   },
 
   horizontalContent: {
-    paddingHorizontal: SPACING.lg,
-    paddingBottom: SPACING.xl,
-    gap: SPACING.md,
+    paddingHorizontal: 18,
+    paddingBottom: 22,
+    gap: 10,
   },
 
-hymnalsRow: {
-  flexDirection: 'row',
-  gap: SPACING.md,
-  paddingHorizontal: SPACING.lg,
-  marginBottom: SPACING.xl,
-},
+  hymnalsRow: {
+    flexDirection: 'row',
+    gap: 12,
+    paddingHorizontal: 20,
+    marginBottom: 26,
+  },
 
-hymnalCard: {
-  flex: 1,
-  height: 190,
-  borderRadius: RADIUS.lg,
-  padding: SPACING.lg,
-  position: 'relative',
-  justifyContent: 'space-between',
-},
+  hymnalCard: {
+    flex: 1,
+    height: 176,
+    borderRadius: 24,
+    paddingHorizontal: 16,
+    paddingVertical: 16,
+    position: 'relative',
+    justifyContent: 'space-between',
+    overflow: 'hidden',
+    shadowColor: '#000000',
+    shadowOffset: {
+      width: 0,
+      height: 5,
+    },
+    shadowOpacity: 0.08,
+    shadowRadius: 12,
+    elevation: 3,
+  },
 
-hymnalIcon: {
-  width: 48,
-  height: 48,
-  borderRadius: 24,
-  borderWidth: 1.5,
-  alignItems: 'center',
-  justifyContent: 'center',
-},
-
-hymnalTextArea: {
-  paddingRight: 46,
-},
-
-hymnalTitle: {
-  fontSize: 18,
-  fontWeight: '800',
-  lineHeight: 23,
-},
-
-hymnalCount: {
-  fontSize: 13,
-  marginTop: 6,
-  fontWeight: '700',
-},
-
-goldArrow: {
-  position: 'absolute',
-  right: SPACING.md,
-  bottom: SPACING.md,
-  width: 40,
-  height: 40,
-  borderRadius: 20,
-  alignItems: 'center',
-  justifyContent: 'center',
-},
-  featureCard: {
-    marginHorizontal: SPACING.lg,
-    marginBottom: SPACING.xl,
-    borderRadius: RADIUS.lg,
+  hymnalIcon: {
+    width: 46,
+    height: 46,
+    borderRadius: 14,
     borderWidth: 1,
-    padding: SPACING.md,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+
+  hymnalTextArea: {
+    paddingRight: 42,
+  },
+
+  hymnalTitle: {
+    fontSize: 17.5,
+    fontWeight: '800',
+    lineHeight: 21,
+    letterSpacing: -0.25,
+  },
+
+  hymnalCount: {
+    fontSize: 12,
+    marginTop: 5,
+    fontWeight: '700',
+    opacity: 0.92,
+  },
+
+  goldArrow: {
+    position: 'absolute',
+    right: 14,
+    bottom: 14,
+    width: 38,
+    height: 38,
+    borderRadius: 12,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  featureCard: {
+    marginHorizontal: 18,
+    marginBottom: 22,
+    borderRadius: 18,
+    borderWidth: 1,
+    paddingHorizontal: 14,
+    paddingVertical: 11,
     flexDirection: 'row',
     alignItems: 'center',
-    gap: SPACING.md,
+    gap: 12,
   },
 
   featureIcon: {
-    width: 48,
-    height: 48,
-    borderRadius: 24,
-    borderWidth: 1.5,
+    width: 44,
+    height: 44,
+    borderRadius: 22,
+    borderWidth: 1,
     alignItems: 'center',
     justifyContent: 'center',
   },
 
   featureTitle: {
-    fontSize: 15,
+    fontSize: 14.5,
     fontWeight: '800',
+    letterSpacing: -0.1,
   },
 
   featureSub: {
-    fontSize: 11.5,
-    marginTop: 3,
+    fontSize: 11,
+    lineHeight: 15,
+    marginTop: 2,
   },
 
   quickCard: {
-    width: 132,
-    minHeight: 145,
-    borderRadius: RADIUS.lg,
+    width: 148,
+    minHeight: 108,
+    borderRadius: 20,
     borderWidth: 1,
-    padding: SPACING.md,
-    alignItems: 'center',
+    paddingHorizontal: 14,
+    paddingVertical: 12,
+    alignItems: 'flex-start',
     justifyContent: 'center',
+
+    shadowColor: '#000000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.025,
+    shadowRadius: 6,
+    elevation: 1,
   },
 
   quickIcon: {
-    width: 48,
-    height: 48,
-    borderRadius: 24,
-    borderWidth: 1.5,
+    width: 36,
+    height: 36,
+    borderRadius: 12,
+    borderWidth: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    marginBottom: SPACING.sm,
+    marginBottom: 10,
   },
 
   quickTitle: {
     fontSize: 13,
-    fontWeight: '800',
-    textAlign: 'center',
+    fontWeight: '700',
+    textAlign: 'left',
+    letterSpacing: -0.15,
   },
 
   quickSub: {
     fontSize: 10.5,
-    textAlign: 'center',
-    marginTop: 4,
+    lineHeight: 14,
+    textAlign: 'left',
+    marginTop: 3,
   },
 
   categoryCard: {
-    width: 115,
+    width: 112,
+    minHeight: 126,
     alignItems: 'center',
+    justifyContent: 'flex-start',
   },
 
   categoryIcon: {
-    width: 64,
-    height: 64,
-    borderRadius: 32,
+    width: 56,
+    height: 56,
+    borderRadius: 28,
     alignItems: 'center',
     justifyContent: 'center',
-    marginBottom: SPACING.sm,
+    marginBottom: 9,
   },
 
   categoryTitle: {
-    fontSize: 12,
+    fontSize: 11.5,
+    lineHeight: 14,
     fontWeight: '700',
     textAlign: 'center',
-    minHeight: 34,
+    minHeight: 30,
+    letterSpacing: -0.1,
   },
 
   categoryCount: {
-    fontSize: 10.5,
+    fontSize: 10,
+    lineHeight: 13,
     marginTop: 3,
     textAlign: 'center',
   },

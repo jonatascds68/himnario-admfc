@@ -19,50 +19,6 @@ import {
 } from '@/src/lib/storage';
 import { SPACING, RADIUS } from '@/src/theme/tokens';
 
-const LINKS: {
-  key: string;
-  label: string;
-  icon: string;
-  href: string;
-}[] = [
-  {
-    key: 'gt',
-    label: 'Gloria y Triunfo (índice)',
-    icon: 'book',
-    href: '/collection?type=gt',
-  },
-  {
-    key: 'sion',
-    label: 'Himnos de Sión (índice)',
-    icon: 'book-open',
-    href: '/collection?type=sion',
-  },
-  {
-    key: 'cat',
-    label: 'Categorías',
-    icon: 'grid',
-    href: '/categories',
-  },
-  {
-    key: 'fav',
-    label: 'Favoritos',
-    icon: 'star',
-    href: '/favorites',
-  },
-  {
-    key: 'rec',
-    label: 'Recientes',
-    icon: 'clock',
-    href: '/recents',
-  },
-  {
-    key: 'about',
-    label: 'Acerca de',
-    icon: 'info',
-    href: '/about',
-  },
-];
-
 const FONT_OPTIONS: {
   value: HymnFont;
   label: string;
@@ -118,23 +74,37 @@ export default function More() {
         contentContainerStyle={styles.scroll}
         showsVerticalScrollIndicator={false}
       >
-        <Text
-          style={[
-            styles.title,
-            { color: c.brand },
-          ]}
-        >
-          Más
-        </Text>
+        <View style={styles.header}>
+          <View style={styles.titleAccent} />
 
-        <Text
-          style={[
-            styles.subtitle,
-            { color: c.muted },
-          ]}
-        >
-          Preferencias y herramientas
-        </Text>
+          <View style={styles.headerText}>
+            <Text
+              style={[
+                styles.title,
+                { color: c.onSurface },
+              ]}
+            >
+              Más
+            </Text>
+
+            <View style={styles.headerSubtitleRow}>
+              <Feather
+                name="settings"
+                size={13}
+                color={c.brandSecondary}
+              />
+
+              <Text
+                style={[
+                  styles.subtitle,
+                  { color: c.muted },
+                ]}
+              >
+                Preferencias y herramientas
+              </Text>
+            </View>
+          </View>
+        </View>
 
         <View
           style={[
@@ -145,14 +115,33 @@ export default function More() {
             },
           ]}
         >
-          <Text
-            style={[
-              styles.section,
-              { color: c.brandSecondary },
-            ]}
-          >
-            PREFERENCIAS
-          </Text>
+          <View style={styles.sectionHeader}>
+            <Feather
+              name="sliders"
+              size={20}
+              color={c.brandSecondary}
+            />
+
+            <View style={{ flex: 1 }}>
+              <Text
+                style={[
+                  styles.section,
+                  { color: c.onSurface },
+                ]}
+              >
+                Preferencias
+              </Text>
+
+              <Text
+                style={[
+                  styles.sectionSub,
+                  { color: c.muted },
+                ]}
+              >
+                Personaliza tu experiencia de lectura
+              </Text>
+            </View>
+          </View>
 
           {/* TEMA OSCURO */}
 
@@ -165,13 +154,18 @@ export default function More() {
             <View
               style={[
                 styles.iconCircle,
-                { borderColor: c.border },
+                {
+                  backgroundColor: isDark
+                    ? '#0B1B3D'
+                    : c.surface,
+                  borderColor: c.brandSecondary,
+                },
               ]}
             >
               <Feather
                 name="moon"
-                size={18}
-                color={c.brand}
+                size={17}
+                color={c.brandSecondary}
               />
             </View>
 
@@ -215,14 +209,19 @@ export default function More() {
             <View
               style={[
                 styles.iconCircle,
-                { borderColor: c.border },
+                {
+                  backgroundColor: isDark
+                    ? '#0B1B3D'
+                    : c.surface,
+                  borderColor: c.brandSecondary,
+                },
               ]}
             >
               <Text
                 style={{
-                  color: c.onSurface,
-                  fontSize: 19,
-                  fontWeight: '700',
+                  color: c.brandSecondary,
+                  fontSize: 17,
+                  fontWeight: '800',
                 }}
               >
                 A
@@ -254,7 +253,10 @@ export default function More() {
                 onPress={() => bumpFont(-0.1)}
                 style={[
                   styles.smallBtn,
-                  { borderColor: c.border },
+                  {
+                    backgroundColor: c.surface,
+                    borderColor: c.brandSecondary,
+                  },
                 ]}
                 testID="pref-font-minus"
               >
@@ -281,7 +283,10 @@ export default function More() {
                 onPress={() => bumpFont(0.1)}
                 style={[
                   styles.smallBtn,
-                  { borderColor: c.border },
+                  {
+                    backgroundColor: c.surface,
+                    borderColor: c.brandSecondary,
+                  },
                 ]}
                 testID="pref-font-plus"
               >
@@ -308,13 +313,18 @@ export default function More() {
             <View
               style={[
                 styles.iconCircle,
-                { borderColor: c.border },
+                {
+                  backgroundColor: isDark
+                    ? '#0B1B3D'
+                    : c.surface,
+                  borderColor: c.brandSecondary,
+                },
               ]}
             >
               <Feather
                 name="align-left"
-                size={18}
-                color={c.brand}
+                size={17}
+                color={c.brandSecondary}
               />
             </View>
 
@@ -402,23 +412,45 @@ export default function More() {
           {/* FONTES */}
 
           <View style={styles.fontSection}>
-            <Text
-              style={[
-                styles.fontSectionTitle,
-                { color: c.onSurface },
-              ]}
-            >
-              Fuente de los himnos
-            </Text>
+            <View style={styles.fontSectionHeader}>
+              <View
+                style={[
+                  styles.iconCircle,
+                  {
+                    backgroundColor: isDark
+                      ? '#0B1B3D'
+                      : c.surface,
+                    borderColor: c.brandSecondary,
+                  },
+                ]}
+              >
+                <Feather
+                  name="type"
+                  size={17}
+                  color={c.brandSecondary}
+                />
+              </View>
 
-            <Text
-              style={[
-                styles.fontSectionSub,
-                { color: c.muted },
-              ]}
-            >
-              Elige la fuente que prefieras para leer los himnos
-            </Text>
+              <View style={styles.fontSectionHeaderText}>
+                <Text
+                  style={[
+                    styles.fontSectionTitle,
+                    { color: c.onSurface },
+                  ]}
+                >
+                  Fuente de los himnos
+                </Text>
+
+                <Text
+                  style={[
+                    styles.fontSectionSub,
+                    { color: c.muted },
+                  ]}
+                >
+                  Elige la fuente que prefieras para leer los himnos
+                </Text>
+              </View>
+            </View>
 
             <ScrollView
               horizontal
@@ -442,12 +474,24 @@ export default function More() {
                           ? c.brand
                           : c.border,
                         borderWidth: selected
-                          ? 1.8
+                          ? 1.5
                           : 1,
                         backgroundColor:
-                          selected
-                            ? c.surface
-                            : 'transparent',
+                          c.surface,
+                        shadowColor: '#000000',
+                        shadowOffset: {
+                          width: 0,
+                          height: 2,
+                        },
+                        shadowOpacity: selected
+                          ? 0.10
+                          : 0.05,
+                        shadowRadius: selected
+                          ? 5
+                          : 3,
+                        elevation: selected
+                          ? 3
+                          : 1,
                       },
                     ]}
                   >
@@ -640,61 +684,60 @@ export default function More() {
           />
         </Pressable>
 
-        {/* LINKS EXISTENTES */}
-
-        <View
+        {/* ACERCA DE */}
+        <Pressable
+          onPress={() => router.push('/about' as any)}
           style={[
-            styles.linksCard,
+            styles.actionCard,
             {
               backgroundColor:
                 c.surfaceSecondary,
               borderColor: c.border,
             },
           ]}
+          testID="more-link-about"
         >
-          {LINKS.map((l, i) => (
-            <Pressable
-              key={l.key}
-              onPress={() =>
-                router.push(l.href as any)
-              }
+          <View
+            style={[
+              styles.iconCircle,
+              { borderColor: c.border },
+            ]}
+          >
+            <Feather
+              name="info"
+              size={19}
+              color={c.brandSecondary}
+            />
+          </View>
+
+          <View style={styles.prefText}>
+            <Text
               style={[
-                styles.link,
-                {
-                  borderBottomColor:
-                    c.divider,
-                  borderBottomWidth:
-                    i === LINKS.length - 1
-                      ? 0
-                      : StyleSheet.hairlineWidth,
-                },
+                styles.prefTitle,
+                { color: c.onSurface },
               ]}
-              testID={`more-link-${l.key}`}
             >
-              <Feather
-                name={l.icon as any}
-                size={19}
-                color={c.brand}
-              />
+              Acerca de
+            </Text>
 
-              <Text
-                style={[
-                  styles.linkText,
-                  { color: c.onSurface },
-                ]}
-              >
-                {l.label}
-              </Text>
+            <Text
+              style={[
+                styles.prefSubtitle,
+                { color: c.muted },
+              ]}
+            >
+              Información sobre el himnario y ADMFC
+            </Text>
+          </View>
 
-              <Feather
-                name="chevron-right"
-                size={19}
-                color={c.muted}
-              />
-            </Pressable>
-          ))}
-        </View>
-      </ScrollView>
+          <Feather
+            name="chevron-right"
+            size={21}
+            color={c.muted}
+          />
+        </Pressable>
+
+        </ScrollView>
     </SafeAreaView>
   );
 }
@@ -705,20 +748,45 @@ const styles = StyleSheet.create({
   },
 
   scroll: {
-    padding: SPACING.lg,
+    paddingHorizontal: SPACING.lg,
+    paddingTop: SPACING.md,
     paddingBottom: SPACING.xxxl,
   },
 
+  header: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: SPACING.md,
+    marginBottom: SPACING.lg,
+  },
+
+  titleAccent: {
+    width: 4,
+    height: 36,
+    borderRadius: RADIUS.pill,
+    backgroundColor: '#D4AF37',
+  },
+
+  headerText: {
+    flex: 1,
+  },
+
   title: {
-    fontSize: 30,
+    fontSize: 25,
     fontWeight: '800',
-    letterSpacing: 0.5,
+    letterSpacing: 0.2,
+  },
+
+  headerSubtitleRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 5,
+    marginTop: 3,
   },
 
   subtitle: {
-    fontSize: 13,
-    marginTop: 2,
-    marginBottom: SPACING.lg,
+    fontSize: 12,
+    fontWeight: '500',
   },
 
   card: {
@@ -729,11 +797,23 @@ const styles = StyleSheet.create({
     paddingBottom: 12,
   },
 
+  sectionHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
+    paddingBottom: 10,
+  },
+
   section: {
-    fontSize: 11,
+    fontSize: 14,
     fontWeight: '800',
-    letterSpacing: 0.8,
-    marginBottom: 5,
+    letterSpacing: 0.2,
+  },
+
+  sectionSub: {
+    fontSize: 10.5,
+    fontWeight: '500',
+    marginTop: 1,
   },
 
   prefRow: {
@@ -807,6 +887,17 @@ const styles = StyleSheet.create({
     paddingTop: 14,
   },
 
+  fontSectionHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 11,
+    marginBottom: 11,
+  },
+
+  fontSectionHeaderText: {
+    flex: 1,
+  },
+
   fontSectionTitle: {
     fontSize: 15,
     fontWeight: '700',
@@ -815,7 +906,6 @@ const styles = StyleSheet.create({
   fontSectionSub: {
     fontSize: 11,
     marginTop: 3,
-    marginBottom: 11,
   },
 
   fontList: {
@@ -826,7 +916,7 @@ const styles = StyleSheet.create({
   fontCard: {
     width: 138,
     height: 122,
-    borderRadius: 13,
+    borderRadius: RADIUS.lg,
     paddingHorizontal: 10,
     paddingVertical: 10,
     justifyContent: 'space-between',
@@ -878,25 +968,6 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
 
-  linksCard: {
-    borderRadius: RADIUS.lg,
-    borderWidth: 1,
-    paddingHorizontal: SPACING.md,
-    marginTop: SPACING.lg,
-  },
 
-  link: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: SPACING.md,
-    paddingVertical: SPACING.md,
-    minHeight: 48,
-  },
-
-  linkText: {
-    flex: 1,
-    fontSize: 14,
-    fontWeight: '600',
-  },
 });
 

@@ -56,6 +56,8 @@ export default function AdminPublicationHistory() {
     setLoading(true);
 
     try {
+      await api.me();
+
       const result = await api.getContentPublicationHistory();
 
       setItems(
@@ -63,10 +65,13 @@ export default function AdminPublicationHistory() {
           ? (result as PublicationHistoryItem[])
           : []
       );
+    } catch {
+      router.replace('/admin-login' as any);
+      return;
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [router]);
 
   useFocusEffect(
     useCallback(() => {

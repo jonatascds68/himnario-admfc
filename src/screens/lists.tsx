@@ -5,7 +5,7 @@ import { useRouter } from 'expo-router';
 import { Feather } from '@expo/vector-icons';
 import { useFocusEffect } from '@react-navigation/native';
 import { useTheme } from '@/src/theme/ThemeContext';
-import { SPACING } from '@/src/theme/tokens';
+import { SPACING, RADIUS } from '@/src/theme/tokens';
 import { api, Hymn } from '@/src/lib/api';
 import { favorites, recents } from '@/src/lib/collections';
 import { HymnRow } from '../../app/(tabs)/search';
@@ -39,12 +39,41 @@ function ListScreen({
   return (
     <SafeAreaView style={[styles.container, { backgroundColor: c.surface }]} edges={['top']} testID={testID}>
       <View style={styles.header}>
-        <Pressable onPress={() => router.back()} hitSlop={10}>
-          <Feather name="chevron-left" size={28} color={c.brand} />
+        <Pressable
+          onPress={() => router.back()}
+          hitSlop={10}
+          style={[
+            styles.backBtn,
+            {
+              backgroundColor: c.surfaceSecondary,
+              borderColor: c.border,
+            },
+          ]}
+        >
+          <Feather
+            name="chevron-left"
+            size={21}
+            color={c.onSurface}
+          />
         </Pressable>
-        <View style={{ flex: 1 }}>
-          <Text style={[styles.title, { color: c.brand }]}>{title}</Text>
-          <Text style={[styles.sub, { color: c.muted }]}>{sub}</Text>
+
+        <View style={styles.titleAccent} />
+
+        <View style={styles.headerText}>
+          <Text style={[styles.title, { color: c.onSurface }]}>
+            {title}
+          </Text>
+
+          <View style={styles.subRow}>
+            <Feather
+              name={testID === 'favorites-screen' ? 'heart' : 'clock'}
+              size={12}
+              color={c.brandSecondary}
+            />
+            <Text style={[styles.sub, { color: c.muted }]}>
+              {sub}
+            </Text>
+          </View>
         </View>
 
         {action && onAction ? (
@@ -56,20 +85,22 @@ function ListScreen({
             hitSlop={8}
             style={[
               styles.headerAction,
-              { borderColor: c.border },
+              {
+                backgroundColor: c.surfaceSecondary,
+                borderColor: c.border,
+              },
             ]}
           >
             <Feather
               name="trash-2"
-              size={13}
-              color={c.muted}
+              size={14}
+              color={c.error}
             />
             <Text
-              style={{
-                color: c.muted,
-                fontSize: 11,
-                fontWeight: '700',
-              }}
+              style={[
+                styles.headerActionText,
+                { color: c.muted },
+              ]}
             >
               {action}
             </Text>
@@ -82,10 +113,52 @@ function ListScreen({
         <FlatList
           data={items}
           keyExtractor={(h) => h.id}
-          contentContainerStyle={{ paddingHorizontal: SPACING.lg, paddingBottom: SPACING.xxxl }}
-          ItemSeparatorComponent={() => <View style={{ height: StyleSheet.hairlineWidth, backgroundColor: c.divider }} />}
-          renderItem={({ item }) => <HymnRow hymn={item} onPress={() => router.push(`/hymn/${item.id}`)} />}
-          ListEmptyComponent={<Text style={{ color: c.muted, textAlign: 'center', marginTop: SPACING.xxxl }}>{empty}</Text>}
+          contentContainerStyle={{
+            paddingHorizontal: SPACING.lg,
+            paddingTop: SPACING.sm,
+            paddingBottom: SPACING.xxxl,
+            flexGrow: 1,
+          }}
+          ItemSeparatorComponent={() => (
+            <View style={{ height: SPACING.sm }} />
+          )}
+          renderItem={({ item }) => (
+            <HymnRow
+              hymn={item}
+              onPress={() => router.push(`/hymn/${item.id}`)}
+            />
+          )}
+          ListEmptyComponent={
+            <View style={styles.empty}>
+              <View
+                style={[
+                  styles.emptyIcon,
+                  {
+                    backgroundColor: c.surfaceSecondary,
+                    borderColor: c.brandSecondary,
+                  },
+                ]}
+              >
+                <Feather
+                  name={testID === 'favorites-screen' ? 'heart' : 'clock'}
+                  size={27}
+                  color={c.brandSecondary}
+                />
+              </View>
+
+              <Text style={[styles.emptyTitle, { color: c.onSurface }]}>
+                {testID === 'favorites-screen'
+                  ? 'Aún no tienes favoritos'
+                  : 'Sin himnos recientes'}
+              </Text>
+
+              <Text style={[styles.emptySub, { color: c.muted }]}>
+                {testID === 'favorites-screen'
+                  ? 'Marca tus himnos preferidos con el corazón y aparecerán aquí.'
+                  : 'Los himnos que abras recientemente aparecerán aquí.'}
+              </Text>
+            </View>
+          }
         />
       )}
     </SafeAreaView>
@@ -130,18 +203,104 @@ export function RecentsScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1 },
-  header: { flexDirection: 'row', alignItems: 'center', gap: SPACING.sm, paddingHorizontal: SPACING.md, paddingTop: SPACING.sm, paddingBottom: SPACING.md },
-  title: { fontSize: 22, fontWeight: '800', letterSpacing: 1 },
-  sub: { fontSize: 12, marginTop: 2 },
+  container: {
+    flex: 1,
+  },
 
-  headerAction: {
+  header: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: SPACING.sm,
+    paddingHorizontal: SPACING.lg,
+    paddingTop: SPACING.md,
+    paddingBottom: SPACING.lg,
+  },
+
+  backBtn: {
+    width: 40,
+    height: 40,
+    borderRadius: RADIUS.md,
+    borderWidth: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+
+  titleAccent: {
+    width: 4,
+    height: 36,
+    marginLeft: 2,
+    borderRadius: RADIUS.pill,
+    backgroundColor: '#D4AF37',
+  },
+
+  headerText: {
+    flex: 1,
+    marginLeft: 2,
+  },
+
+  title: {
+    fontSize: 23,
+    fontWeight: '800',
+    letterSpacing: 0.2,
+  },
+
+  subRow: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 5,
+    marginTop: 3,
+  },
+
+  sub: {
+    fontSize: 12,
+    fontWeight: '500',
+  },
+
+  headerAction: {
+    minHeight: 36,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 5,
     borderWidth: 1,
-    borderRadius: 14,
-    paddingHorizontal: 9,
-    paddingVertical: 6,
+    borderRadius: RADIUS.md,
+    paddingHorizontal: 10,
+  },
+
+  headerActionText: {
+    fontSize: 11,
+    fontWeight: '700',
+  },
+
+  empty: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingHorizontal: SPACING.xxl,
+    paddingBottom: 80,
+  },
+
+  emptyIcon: {
+    width: 70,
+    height: 70,
+    borderRadius: RADIUS.pill,
+    borderWidth: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: SPACING.lg,
+  },
+
+  emptyTitle: {
+    fontSize: 19,
+    fontWeight: '800',
+    textAlign: 'center',
+  },
+
+  emptySub: {
+    maxWidth: 300,
+    marginTop: SPACING.sm,
+    fontSize: 14,
+    lineHeight: 20,
+    textAlign: 'center',
   },
 });
