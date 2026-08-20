@@ -801,6 +801,10 @@ export const api = {
 
     const updated = db.hymns[i];
 
+    let equivalentBefore: Hymn | null = null;
+    let equivalentUpdated: Hymn | null = null;
+    let equivalentPayload: Partial<Hymn> = {};
+
     if (
       updated.numero_equivalente != null &&
       updated.himnario_equivalente
@@ -812,6 +816,10 @@ export const api = {
       );
 
       if (target) {
+        equivalentBefore = JSON.parse(
+          JSON.stringify(target)
+        ) as Hymn;
+
         const sharedKeys: (keyof Hymn)[] = [
           'tom',
           'cifra',
@@ -829,21 +837,46 @@ export const api = {
             Object.prototype.hasOwnProperty.call(
               effectivePayload,
               key
+            ) &&
+            !sameValue(
+              (target as any)[key],
+              (effectivePayload as any)[key]
             )
           ) {
+            (equivalentPayload as any)[key] =
+              (effectivePayload as any)[key];
+
             (target as any)[key] =
               (effectivePayload as any)[key];
           }
+        }
+
+        if (Object.keys(equivalentPayload).length) {
+          equivalentUpdated = target;
         }
       }
     }
 
     await saveDb(db);
+
     await registerHymnUpdate(
       before,
       updated,
       effectivePayload
     );
+
+    if (
+      equivalentBefore &&
+      equivalentUpdated &&
+      Object.keys(equivalentPayload).length
+    ) {
+      await registerHymnUpdate(
+        equivalentBefore,
+        equivalentUpdated,
+        equivalentPayload
+      );
+    }
+
     return updated;
   },
 
