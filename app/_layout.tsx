@@ -99,27 +99,27 @@ export default function RootLayout() {
       await SplashScreen.hideAsync();
 
       Animated.sequence([
-        // Uma única volta, mais suave e confortável visualmente
+        // Uma única volta suave antes da abertura
         Animated.timing(spin, {
           toValue: 1,
-          duration: 1800,
+          duration: 1250,
           easing: Easing.inOut(Easing.cubic),
           useNativeDriver: true,
         }),
 
-        // Depois da volta completa, o brasão expande
+        // Ao terminar a volta, o brasão ocupa rapidamente a tela
         Animated.parallel([
           Animated.timing(grow, {
             toValue: 6.5,
-            duration: 750,
+            duration: 420,
             easing: Easing.in(Easing.cubic),
             useNativeDriver: true,
           }),
           Animated.sequence([
-            Animated.delay(330),
+            Animated.delay(220),
             Animated.timing(fade, {
               toValue: 0,
-              duration: 380,
+              duration: 200,
               easing: Easing.out(Easing.quad),
               useNativeDriver: true,
             }),
@@ -157,15 +157,6 @@ export default function RootLayout() {
     outputRange: ['0deg', '360deg'],
   });
 
-  const squash = spin.interpolate({
-    inputRange: [
-      0, 0.25, 0.5, 0.75, 1,
-    ],
-    outputRange: [
-      1, 0.18, 1, 0.18, 1,
-    ],
-  });
-
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <SafeAreaProvider>
@@ -191,7 +182,6 @@ export default function RootLayout() {
                     transform: [
                       { perspective: 900 },
                       { rotateY },
-                      { scaleX: squash },
                       { scale: grow },
                     ],
                   }}
@@ -231,8 +221,8 @@ const styles = StyleSheet.create({
   },
 
   logo: {
-    width: 220,
-    height: 220,
+    width: 250,
+    height: 250,
   },
 
   introTitle: {

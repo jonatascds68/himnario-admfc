@@ -1,5 +1,6 @@
 import React, { useCallback, useState } from 'react';
-import { View, Text, StyleSheet, Pressable, ScrollView, ActivityIndicator, Alert, Platform } from 'react-native';
+import { View, Text, StyleSheet, Pressable, ScrollView, ActivityIndicator, Alert, Platform, Modal,
+} from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
 import { useFocusEffect } from '@react-navigation/native';
@@ -7,7 +8,7 @@ import { Feather } from '@expo/vector-icons';
 import * as FileSystem from 'expo-file-system/legacy';
 import * as Sharing from 'expo-sharing';
 import { useTheme } from '@/src/theme/ThemeContext';
-import { SPACING } from '@/src/theme/tokens';
+import { SPACING, RADIUS } from '@/src/theme/tokens';
 import { api, AdminHymnChange } from '@/src/lib/api';
 
 function displayValue(value: any): string {
@@ -46,6 +47,8 @@ export default function AdminChanges() {
   const [changes, setChanges] = useState<AdminHymnChange[]>([]);
   const [loading, setLoading] = useState(true);
   const [exporting, setExporting] = useState(false);
+  const [reviewTarget, setReviewTarget] =
+    useState<AdminHymnChange | null>(null);
   const [reviewingId, setReviewingId] = useState<string | null>(null);
 
   const loadChanges = useCallback(async () => {
@@ -279,37 +282,29 @@ export default function AdminChanges() {
   };
 
   const markAsReviewed = (item: AdminHymnChange) => {
-    Alert.alert(
-      'Marcar como revisado',
-      `¿Confirmar que la corrección de ${item.himnario === 'Gloria y Triunfo' ? 'GT' : 'Sión'} Nº ${item.numero} ya fue revisada?`,
-      [
-        {
-          text: 'Cancelar',
-          style: 'cancel',
-        },
-        {
-          text: 'Sí, revisado',
-          onPress: async () => {
-            try {
-              setReviewingId(item.id);
+    setReviewTarget(item);
+  };
 
-              await api.removeAdminChange(item.id);
+  const confirmReviewed = async () => {
+    if (!reviewTarget || reviewingId) return;
 
-              setChanges(current =>
-                current.filter(change => change.id !== item.id)
-              );
-            } catch (e: any) {
-              Alert.alert(
-                'Error',
-                e?.message || 'No se pudo marcar la corrección como revisada'
-              );
-            } finally {
-              setReviewingId(null);
-            }
-          },
-        },
-      ]
-    );
+    const item = reviewTarget;
+
+    try {
+      setReviewingId(item.id);
+
+      await api.removeAdminChange(item.id);
+
+      setReviewTarget(null);
+      await loadChanges();
+    } catch (e: any) {
+      Alert.alert(
+        'Error',
+        e?.message || 'No se pudo marcar como revisado'
+      );
+    } finally {
+      setReviewingId(null);
+    }
   };
 
   return (
@@ -550,6 +545,148 @@ export default function AdminChanges() {
           ))}
         </ScrollView>
       )}
+    <Modal
+      visible={!!reviewTarget}
+      transparent
+      animationType="fade"
+      onRequestClose={() => setReviewTarget(null)}
+    >
+      <View style={styles.reviewOverlay}>
+        <View
+          style={[
+            styles.reviewCard,
+            {
+              backgroundColor: c.surface,
+              borderColor: c.border,
+            },
+          ]}
+        >
+          <View
+            style={[
+              styles.reviewIcon,
+              { backgroundColor: c.surfaceSecondary },
+            ]}
+          >
+            <Feather
+              name="check-circle"
+              size={29}
+              color={c.brand}
+            />
+          </View>
+
+          <Text
+            style={[
+              styles.reviewTitle,
+              { color: c.onSurface },
+            ]}
+          >
+            Marcar como revisado
+          </Text>
+
+          <Text
+            style={[
+              styles.reviewText,
+              { color: c.muted },
+            ]}
+          >
+            Esta corrección dejará de aparecer entre los cambios
+            pendientes.
+          </Text>
+
+          {reviewTarget ? (
+            <View
+              style={[
+                styles.reviewHymnBox,
+                {
+                  backgroundColor: c.surfaceSecondary,
+                  borderColor: c.border,
+                },
+              ]}
+            >
+              <Text
+                style={[
+                  styles.reviewHymnMeta,
+                  { color: c.brand },
+                ]}
+              >
+                {reviewTarget.himnario} · Nº {reviewTarget.numero}
+              </Text>
+
+              <Text
+                numberOfLines={2}
+                style={[
+                  styles.reviewHymnTitle,
+                  { color: c.onSurface },
+                ]}
+              >
+                {reviewTarget.titulo}
+              </Text>
+            </View>
+          ) : null}
+
+          <Text
+            style={[
+              styles.reviewWarning,
+              { color: c.muted },
+            ]}
+          >
+            Marque como revisado solamente cuando esta corrección
+            ya no necesite permanecer en la fila administrativa.
+          </Text>
+
+          <View style={styles.reviewActions}>
+            <Pressable
+              onPress={() => setReviewTarget(null)}
+              style={[
+                styles.reviewModalButton,
+                {
+                  backgroundColor: c.surfaceSecondary,
+                  borderColor: c.borderStrong,
+                },
+              ]}
+            >
+              <Feather
+                name="x"
+                size={18}
+                color={c.onSurface}
+              />
+              <Text
+                style={[
+                  styles.reviewModalButtonText,
+                  { color: c.onSurface },
+                ]}
+              >
+                Cancelar
+              </Text>
+            </Pressable>
+
+            <Pressable
+              onPress={confirmReviewed}
+              style={[
+                styles.reviewModalButton,
+                styles.reviewConfirmButton,
+                { backgroundColor: c.brand },
+              ]}
+            >
+              <Feather
+                name="check"
+                size={18}
+                color={c.onSurfaceInverse}
+              />
+              <Text
+                style={[
+                  styles.reviewModalButtonText,
+                  { color: c.onSurfaceInverse },
+                ]}
+              >
+                Marcar revisado
+              </Text>
+            </Pressable>
+          </View>
+        </View>
+      </View>
+    </Modal>
+
     </SafeAreaView>
   );
 }
@@ -721,4 +858,102 @@ const styles = StyleSheet.create({
     fontSize: 11,
     fontWeight: '700',
   },
+
+  reviewOverlay: {
+    flex: 1,
+    backgroundColor: 'rgba(0,0,0,0.58)',
+    justifyContent: 'center',
+    padding: SPACING.lg,
+  },
+
+  reviewCard: {
+    width: '100%',
+    maxWidth: 390,
+    alignSelf: 'center',
+    borderRadius: RADIUS.lg,
+    borderWidth: 1,
+    padding: SPACING.xl,
+    alignItems: 'center',
+  },
+
+  reviewIcon: {
+    width: 58,
+    height: 58,
+    borderRadius: 29,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: SPACING.md,
+  },
+
+  reviewTitle: {
+    fontSize: 20,
+    fontWeight: '900',
+    textAlign: 'center',
+  },
+
+  reviewText: {
+    fontSize: 13.5,
+    lineHeight: 20,
+    textAlign: 'center',
+    marginTop: 6,
+  },
+
+  reviewHymnBox: {
+    width: '100%',
+    borderWidth: 1,
+    borderRadius: RADIUS.md,
+    padding: SPACING.md,
+    marginTop: SPACING.lg,
+  },
+
+  reviewHymnMeta: {
+    fontSize: 10.5,
+    fontWeight: '900',
+    textTransform: 'uppercase',
+    letterSpacing: 0.7,
+    marginBottom: 4,
+  },
+
+  reviewHymnTitle: {
+    fontSize: 14,
+    lineHeight: 19,
+    fontWeight: '800',
+  },
+
+  reviewWarning: {
+    fontSize: 11.5,
+    lineHeight: 17,
+    textAlign: 'center',
+    marginTop: SPACING.md,
+  },
+
+  reviewActions: {
+    width: '100%',
+    flexDirection: 'row',
+    gap: SPACING.sm,
+    marginTop: SPACING.xl,
+  },
+
+  reviewModalButton: {
+    flex: 1,
+    minHeight: 50,
+    borderRadius: RADIUS.md,
+    borderWidth: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 6,
+    paddingHorizontal: SPACING.sm,
+  },
+
+  reviewConfirmButton: {
+    borderWidth: 0,
+  },
+
+  reviewModalButtonText: {
+    fontSize: 13,
+    fontWeight: '800',
+    textAlign: 'center',
+  },
+
 });

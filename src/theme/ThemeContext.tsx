@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useEffect, useMemo, useState, useCallback } from 'react';
-import { useColorScheme } from 'react-native';
+import { Platform, useColorScheme } from 'react-native';
 import { COLORS } from './tokens';
+import * as NavigationBar from 'expo-navigation-bar';
 import { kv, hymnFontStorage, HymnFont } from '../lib/storage';
 
 type Mode = 'light' | 'dark' | 'system';
@@ -76,6 +77,34 @@ if (!migrated && m === 'system') {
 
   const isDark = mode === 'system' ? system === 'dark' : mode === 'dark';
   const c = isDark ? COLORS.dark : COLORS.light;
+
+  /*
+   * ADMFC — integra a barra de navegação nativa do Android
+   * ao tema visual do aplicativo.
+   *
+   * Tema claro: ícones escuros e bem visíveis.
+   * Tema escuro: ícones claros.
+   */
+  useEffect(() => {
+    if (Platform.OS !== 'android') return;
+
+    const syncAndroidNavigationBar = async () => {
+      try {
+        await NavigationBar.setButtonStyleAsync(
+          isDark ? 'light' : 'dark'
+        );
+
+        await NavigationBar.setBackgroundColorAsync(
+          c.surface
+        );
+      } catch {
+        // Não interrompe o aplicativo caso o dispositivo
+        // controle a barra de navegação de outra forma.
+      }
+    };
+
+    syncAndroidNavigationBar();
+  }, [isDark, c.surface]);
 
   const value = useMemo(() => ({
     mode,

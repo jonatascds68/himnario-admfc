@@ -103,6 +103,7 @@ const insets = useSafeAreaInsets();
   const [titulo, setTitulo] = useState('');
   const [blocks, setBlocks] = useState<BlockState[]>([]);
   const [selectedCats, setSelectedCats] = useState<string[]>([]);
+  const [categoriesExpanded, setCategoriesExpanded] = useState(false);
   const [allCats, setAllCats] = useState<{ id: string; name: string }[]>([]);
   const [msg, setMsg] = useState('');
 
@@ -661,38 +662,236 @@ const insets = useSafeAreaInsets();
           <TextInput value={titulo} onChangeText={setTitulo} placeholder="Título del himno"
             placeholderTextColor={c.muted} style={[styles.input, { backgroundColor: c.surfaceSecondary, borderColor: c.border, color: c.onSurface }]} testID="edit-titulo" />
 
-          {/* CATEGORIES */}
-          <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
-            <Label c={c}>Categorías</Label>
-            <Pressable onPress={() => router.push('/admin/categories' as any)} hitSlop={8}>
-              <Text style={{ color: c.info, fontSize: 12, marginTop: SPACING.lg }}>Gestionar</Text>
+          {/* CATEGORIES — ADMFC UI compacta */}
+          <View style={styles.sectionHead}>
+            <View>
+              <Label c={c}>Categorías</Label>
+              <Text style={[styles.sectionHint, { color: c.muted }]}>
+                {selectedCats.length
+                  ? `${selectedCats.length} seleccionada${selectedCats.length === 1 ? '' : 's'}`
+                  : 'Sin categorías seleccionadas'}
+              </Text>
+            </View>
+
+            <Pressable
+              onPress={() => setCategoriesExpanded((v) => !v)}
+              style={[
+                styles.manageBtn,
+                {
+                  backgroundColor: c.surfaceSecondary,
+                  borderColor: c.border,
+                },
+              ]}
+            >
+              <Feather
+                name={categoriesExpanded ? 'chevron-up' : 'sliders'}
+                size={15}
+                color={c.brand}
+              />
+              <Text style={[styles.manageBtnText, { color: c.brand }]}>
+                {categoriesExpanded ? 'Cerrar' : 'Gestionar'}
+              </Text>
             </Pressable>
           </View>
-          <View style={styles.chipsWrap}>
-            {allCats.map((cat) => {
-              const on = selectedCats.includes(cat.name);
-              return (
-                <Pressable key={cat.id} onPress={() => toggleCat(cat.name)}
-                  style={[styles.catChip, { backgroundColor: on ? c.brand : c.surfaceSecondary, borderColor: on ? c.brand : c.border }]}
-                  testID={`edit-cat-${cat.name}`}>
-                  {on ? <Feather name="check" size={13} color={c.onSurfaceInverse} /> : null}
-                  <Text style={{ color: on ? c.onSurfaceInverse : c.onSurface, fontSize: 12.5, fontWeight: '600' }}>{cat.name}</Text>
+
+          <View
+            style={[
+              styles.categorySummary,
+              {
+                backgroundColor: c.surfaceSecondary,
+                borderColor: c.border,
+              },
+            ]}
+          >
+            {selectedCats.length ? (
+              <View style={styles.chipsWrapCompact}>
+                {selectedCats.slice(0, 4).map((name) => (
+                  <Pressable
+                    key={name}
+                    onPress={() => toggleCat(name)}
+                    style={[
+                      styles.catChipCompact,
+                      {
+                        backgroundColor: c.brand,
+                        borderColor: c.brand,
+                      },
+                    ]}
+                  >
+                    <Feather
+                      name="check"
+                      size={12}
+                      color={c.onSurfaceInverse}
+                    />
+                    <Text
+                      numberOfLines={1}
+                      style={{
+                        color: c.onSurfaceInverse,
+                        fontSize: 11.5,
+                        fontWeight: '700',
+                        maxWidth: 150,
+                      }}
+                    >
+                      {name}
+                    </Text>
+                  </Pressable>
+                ))}
+
+                {selectedCats.length > 4 ? (
+                  <Pressable
+                    onPress={() => setCategoriesExpanded(true)}
+                    style={[
+                      styles.moreCatsChip,
+                      { borderColor: c.borderStrong },
+                    ]}
+                  >
+                    <Text style={{ color: c.brand, fontWeight: '800', fontSize: 12 }}>
+                      +{selectedCats.length - 4}
+                    </Text>
+                  </Pressable>
+                ) : null}
+              </View>
+            ) : (
+              <Pressable
+                onPress={() => setCategoriesExpanded(true)}
+                style={styles.emptyCategoryRow}
+              >
+                <Feather name="tag" size={17} color={c.muted} />
+                <Text style={{ color: c.muted, fontSize: 13, flex: 1 }}>
+                  Toque en Gestionar para seleccionar categorías
+                </Text>
+                <Feather name="chevron-right" size={17} color={c.muted} />
+              </Pressable>
+            )}
+
+            {categoriesExpanded ? (
+              <View
+                style={[
+                  styles.categoryManager,
+                  { borderTopColor: c.border },
+                ]}
+              >
+                <View style={styles.chipsWrap}>
+                  {allCats.map((cat) => {
+                    const on = selectedCats.includes(cat.name);
+
+                    return (
+                      <Pressable
+                        key={cat.id}
+                        onPress={() => toggleCat(cat.name)}
+                        style={[
+                          styles.catChip,
+                          {
+                            backgroundColor: on
+                              ? c.brand
+                              : c.surface,
+                            borderColor: on
+                              ? c.brand
+                              : c.border,
+                          },
+                        ]}
+                        testID={`edit-cat-${cat.name}`}
+                      >
+                        {on ? (
+                          <Feather
+                            name="check"
+                            size={13}
+                            color={c.onSurfaceInverse}
+                          />
+                        ) : null}
+
+                        <Text
+                          style={{
+                            color: on
+                              ? c.onSurfaceInverse
+                              : c.onSurface,
+                            fontSize: 12,
+                            fontWeight: '600',
+                          }}
+                        >
+                          {cat.name}
+                        </Text>
+                      </Pressable>
+                    );
+                  })}
+                </View>
+
+                <View style={styles.newCategoryRow}>
+                  <TextInput
+                    value={newCat}
+                    onChangeText={setNewCat}
+                    placeholder="Nueva categoría…"
+                    placeholderTextColor={c.muted}
+                    style={[
+                      styles.input,
+                      {
+                        flex: 1,
+                        height: 44,
+                        backgroundColor: c.surface,
+                        borderColor: c.border,
+                        color: c.onSurface,
+                      },
+                    ]}
+                    testID="edit-new-cat"
+                  />
+
+                  <Pressable
+                    onPress={createCat}
+                    style={[
+                      styles.addCatBtn,
+                      {
+                        borderColor: c.brand,
+                        backgroundColor: c.surface,
+                      },
+                    ]}
+                    testID="edit-create-cat"
+                  >
+                    <Feather name="plus" size={18} color={c.brand} />
+                  </Pressable>
+                </View>
+
+                <Pressable
+                  onPress={() => router.push('/admin/categories' as any)}
+                  style={styles.fullCategoryManager}
+                >
+                  <Feather name="settings" size={14} color={c.brand} />
+                  <Text style={{ color: c.brand, fontSize: 12, fontWeight: '700' }}>
+                    Administrar nombres y categorías
+                  </Text>
                 </Pressable>
-              );
-            })}
-          </View>
-          <View style={{ flexDirection: 'row', gap: SPACING.sm, marginTop: SPACING.sm }}>
-            <TextInput value={newCat} onChangeText={setNewCat} placeholder="Nueva categoría…" placeholderTextColor={c.muted}
-              style={[styles.input, { flex: 1, height: 44, backgroundColor: c.surfaceSecondary, borderColor: c.border, color: c.onSurface }]} testID="edit-new-cat" />
-            <Pressable onPress={createCat} style={[styles.addCatBtn, { borderColor: c.brand }]} testID="edit-create-cat">
-              <Feather name="plus" size={18} color={c.brand} />
-            </Pressable>
+              </View>
+            ) : null}
           </View>
 
           {/* MUSICA / CIFRAS / AUDIO */}
           <Label c={c}>Música, cifras y audio</Label>
 
-          <View style={[styles.musicBox, { backgroundColor: c.surfaceSecondary, borderColor: c.border }]}>
+          <View
+            style={[
+              styles.musicBox,
+              {
+                backgroundColor: c.surfaceSecondary,
+                borderColor: c.borderStrong,
+              },
+            ]}
+          >
+            <View style={styles.cardTitleRow}>
+              <View
+                style={[
+                  styles.cardIcon,
+                  { backgroundColor: c.surface },
+                ]}
+              >
+                <Feather name="music" size={18} color={c.brand} />
+              </View>
+              <View style={{ flex: 1 }}>
+                <Text style={[styles.cardTitle, { color: c.onSurface }]}>
+                  Recursos musicales
+                </Text>
+                <Text style={[styles.cardSubtitle, { color: c.muted }]}>
+                  Tono, cifra y fuentes de audio
+                </Text>
+              </View>
+            </View>
             <Text style={[styles.musicHelp, { color: c.muted }]}>
               Guarda solo datos livianos. El audio puede quedar en una URL externa o como referencia a un archivo local del dispositivo.
             </Text>
@@ -827,6 +1026,25 @@ const insets = useSafeAreaInsets();
               },
             ]}
           >
+            <View style={styles.cardTitleRow}>
+              <View
+                style={[
+                  styles.cardIcon,
+                  { backgroundColor: c.surface },
+                ]}
+              >
+                <Feather name="shield" size={18} color={c.brand} />
+              </View>
+              <View style={{ flex: 1 }}>
+                <Text style={[styles.cardTitle, { color: c.onSurface }]}>
+                  Procedencia y derechos
+                </Text>
+                <Text style={[styles.cardSubtitle, { color: c.muted }]}>
+                  Fuente, autorización y observaciones
+                </Text>
+              </View>
+            </View>
+
             <Text
               style={[
                 styles.provenanceTitle,
@@ -1208,6 +1426,84 @@ const styles = StyleSheet.create({
   title: { fontSize: 20, fontWeight: '800', letterSpacing: 1 },
   input: { height: 50, borderRadius: RADIUS.md, borderWidth: 1, paddingHorizontal: SPACING.md, fontSize: 15 },
   himBtn: { flex: 1, height: 46, borderRadius: RADIUS.md, borderWidth: 1, alignItems: 'center', justifyContent: 'center' },
+  sectionHead: {
+    flexDirection: 'row',
+    alignItems: 'flex-end',
+    justifyContent: 'space-between',
+    gap: SPACING.md,
+  },
+  sectionHint: {
+    fontSize: 11,
+    marginTop: -2,
+    marginBottom: 6,
+  },
+  manageBtn: {
+    minHeight: 36,
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+    paddingHorizontal: 12,
+    borderWidth: 1,
+    borderRadius: RADIUS.pill,
+    marginBottom: 6,
+  },
+  manageBtnText: {
+    fontSize: 12,
+    fontWeight: '800',
+  },
+  categorySummary: {
+    borderWidth: 1,
+    borderRadius: RADIUS.lg,
+    padding: SPACING.sm,
+  },
+  chipsWrapCompact: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 6,
+  },
+  catChipCompact: {
+    minHeight: 30,
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+    paddingHorizontal: 10,
+    borderRadius: RADIUS.pill,
+    borderWidth: 1,
+  },
+  moreCatsChip: {
+    minHeight: 30,
+    minWidth: 42,
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingHorizontal: 10,
+    borderRadius: RADIUS.pill,
+    borderWidth: 1,
+  },
+  emptyCategoryRow: {
+    minHeight: 40,
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: SPACING.sm,
+    paddingHorizontal: 4,
+  },
+  categoryManager: {
+    borderTopWidth: 1,
+    marginTop: SPACING.sm,
+    paddingTop: SPACING.md,
+  },
+  newCategoryRow: {
+    flexDirection: 'row',
+    gap: SPACING.sm,
+    marginTop: SPACING.md,
+  },
+  fullCategoryManager: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 6,
+    minHeight: 38,
+    marginTop: SPACING.sm,
+  },
   chipsWrap: { flexDirection: 'row', flexWrap: 'wrap', gap: SPACING.sm },
   catChip: { flexDirection: 'row', alignItems: 'center', gap: 4, height: 34, paddingHorizontal: 12, borderRadius: RADIUS.pill, borderWidth: 1 },
   addCatBtn: { width: 44, height: 44, borderRadius: RADIUS.md, borderWidth: 1, alignItems: 'center', justifyContent: 'center' },
@@ -1299,11 +1595,38 @@ const styles = StyleSheet.create({
     marginVertical: SPACING.sm,
   },
 
+  cardTitleRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: SPACING.sm,
+    marginBottom: SPACING.sm,
+  },
+
+  cardIcon: {
+    width: 40,
+    height: 40,
+    borderRadius: RADIUS.md,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+
+  cardTitle: {
+    fontSize: 15,
+    fontWeight: '900',
+  },
+
+  cardSubtitle: {
+    fontSize: 11,
+    lineHeight: 16,
+    marginTop: 1,
+  },
+
   musicBox: {
     borderRadius: RADIUS.lg,
-    borderWidth: 1,
+    borderWidth: 1.5,
     padding: SPACING.md,
     gap: SPACING.sm,
+    marginBottom: SPACING.sm,
   },
 
   musicHelp: {
