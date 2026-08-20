@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import {
   Animated,
+  AppState,
   Easing,
   Image,
   LogBox,
@@ -24,6 +25,7 @@ import { Montserrat_400Regular } from '@expo-google-fonts/montserrat';
 import { AtkinsonHyperlegible_400Regular } from '@expo-google-fonts/atkinson-hyperlegible';
 import { ThemeProvider } from '@/src/theme/ThemeContext';
 import { guideStorage } from '@/src/lib/storage';
+import { syncContentUpdates } from '@/src/lib/content-sync';
 
 LogBox.ignoreAllLogs(true);
 SplashScreen.preventAutoHideAsync();
@@ -43,6 +45,42 @@ export default function RootLayout() {
   });
 
   const [introVisible, setIntroVisible] = useState(true);
+
+  /*
+   * ADMFC — atualização automática das letras e demais conteúdos.
+   *
+   * - consulta ao iniciar;
+   * - consulta novamente quando o app volta ao primeiro plano;
+   * - nunca bloqueia a abertura do hinário;
+   * - falha de internet é silenciosa para o usuário.
+   */
+  useEffect(() => {
+    let active = true;
+
+    const runSync = () => {
+      if (!active) return;
+
+      syncContentUpdates().catch(() => {
+        // A sincronização jamais deve interromper o aplicativo.
+      });
+    };
+
+    runSync();
+
+    const subscription = AppState.addEventListener(
+      'change',
+      nextState => {
+        if (nextState === 'active') {
+          runSync();
+        }
+      }
+    );
+
+    return () => {
+      active = false;
+      subscription.remove();
+    };
+  }, []);
 
   const spin = useRef(new Animated.Value(0)).current;
   const grow = useRef(new Animated.Value(1)).current;
