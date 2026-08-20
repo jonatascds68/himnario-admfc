@@ -1509,9 +1509,14 @@ export const api = {
   },
   removeEquivalence: async (id:string) => { requireAuth(); const db=await loadDb(); const h=db.hymns.find(x=>x.id===id); if(!h) throw new Error('Himno no encontrado'); const oldN=h.numero_equivalente, oldH=h.himnario_equivalente; h.numero_equivalente=null; h.himnario_equivalente=null; const target=db.hymns.find(x=>x.himnario===oldH&&x.numero===oldN); if(target&&target.numero_equivalente===h.numero){target.numero_equivalente=null;target.himnario_equivalente=null;} await saveDb(db); return {hymn:h}; },
   /*
-   * ADMFC 7AA.41:
-   * O backup representa o estado administrativo completo:
-   * base local + categorias + correções pendentes.
+   * ADMFC — backup administrativo completo.
+   *
+   * Preserva:
+   * - base local;
+   * - categorias;
+   * - correções pendentes;
+   * - histórico de publicações confirmadas;
+   * - última revisão de conteúdo publicada.
    */
   exportBackup: async () => {
     requireAuth();
@@ -1519,13 +1524,44 @@ export const api = {
     const db = await loadDb();
     const adminChanges = await loadAdminChanges();
 
+    const historyRaw = await kv.get(
+      CONTENT_PUBLICATION_HISTORY_KEY
+    );
+
+    let publicationHistory: any[] = [];
+
+    if (historyRaw) {
+      try {
+        const parsedHistory = JSON.parse(historyRaw);
+
+        if (Array.isArray(parsedHistory)) {
+          publicationHistory = parsedHistory;
+        }
+      } catch {
+        publicationHistory = [];
+      }
+    }
+
+    const revisionRaw = await kv.get(
+      PUBLISHED_CONTENT_REVISION_KEY
+    );
+
+    const parsedRevision = Number(revisionRaw);
+
+    const publishedContentRevision =
+      Number.isInteger(parsedRevision) && parsedRevision >= 0
+        ? parsedRevision
+        : 0;
+
     return {
-      schema_version: 'local-2',
+      schema_version: 'local-3',
       release: 'ADMFC_INDEPENDIENTE_1.0',
       total: db.hymns.length,
       himnos: db.hymns,
       categories: db.categories,
       admin_changes: adminChanges,
+      publication_history: publicationHistory,
+      published_content_revision: publishedContentRevision,
     };
   },
 
@@ -1546,7 +1582,7 @@ export const api = {
     }
 
     /*
-     * Backups local-2 restauram a fila administrativa.
+     * Backups local-2+ podem restaurar a fila administrativa.
      * Backups antigos não possuíam essa informação;
      * nesse caso a fila é zerada para não misturar
      * correções de estados diferentes da base.
@@ -1559,6 +1595,29 @@ export const api = {
       );
     }
 
+    /*
+     * ADMFC local-3 — estado de publicação.
+     *
+     * Em backups anteriores a local-3 esses campos não existem.
+     * Nesse caso usamos estado vazio/zero, preservando
+     * compatibilidade com os backups antigos.
+     */
+    const publicationHistory = Array.isArray(
+      p.publication_history
+    )
+      ? p.publication_history
+      : [];
+
+    const parsedPublishedRevision = Number(
+      p.published_content_revision
+    );
+
+    const publishedContentRevision =
+      Number.isInteger(parsedPublishedRevision) &&
+      parsedPublishedRevision >= 0
+        ? parsedPublishedRevision
+        : 0;
+
     await saveDb({
       hymns,
       categories,
@@ -1566,10 +1625,32 @@ export const api = {
 
     await saveAdminChanges(adminChanges);
 
+    await kv.set(
+      CONTENT_PUBLICATION_HISTORY_KEY,
+      JSON.stringify(publicationHistory)
+    );
+
+    await kv.set(
+      PUBLISHED_CONTENT_REVISION_KEY,
+      String(publishedContentRevision)
+    );
+
+    /*
+     * Uma atualização apenas preparada não representa
+     * conteúdo efetivamente publicado e não pertence ao backup.
+     * Ao restaurar, removemos qualquer snapshot preparado
+     * anteriormente no aparelho.
+     */
+    await kv.remove(
+      PREPARED_CONTENT_PUBLICATION_KEY
+    );
+
     return {
       restored_hymns: hymns.length,
       restored_categories: categories.length,
       restored_changes: adminChanges.length,
+      restored_publications: publicationHistory.length,
+      restored_revision: publishedContentRevision,
     };
   },
   // ADMFC 7AA.43: API legada de importação CSV/XLSX removida.

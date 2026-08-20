@@ -18,6 +18,10 @@ const insets = useSafeAreaInsets();
   const [stats, setStats] = useState<any>(null);
   const [busy, setBusy] = useState('');
   const [msg, setMsg] = useState('');
+  const [backupExportData, setBackupExportData] = useState<{
+    data: any;
+    filename: string;
+  } | null>(null);
   // ADMFC 7AA.41 — confirmação visual própria para restauração.
   const [restoreConfirm, setRestoreConfirm] = useState<{
     data: any;
@@ -38,25 +42,147 @@ const insets = useSafeAreaInsets();
 
   const logout = async () => { await api.logout(); router.replace('/(tabs)' as any); };
   const doExport = async () => {
-    setBusy('export'); setMsg('');
+    setBusy('export');
+    setMsg('');
+
     try {
       const data = await api.exportBackup();
-      const ts = new Date().toISOString().replace(/[:.]/g, '-');
+      const ts = new Date()
+        .toISOString()
+        .replace(/[:.]/g, '-');
+
       const filename = `admfc-backup-${ts}.json`;
+
       if (Platform.OS === 'web') {
-        const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+        const blob = new Blob(
+          [JSON.stringify(data, null, 2)],
+          { type: 'application/json' }
+        );
+
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
-        a.href = url; a.download = filename; a.click();
+
+        a.href = url;
+        a.download = filename;
+        a.click();
+
         URL.revokeObjectURL(url);
-      } else {
-        const uri = (FileSystem as any).cacheDirectory + filename;
-        await (FileSystem as any).writeAsStringAsync(uri, JSON.stringify(data, null, 2));
-        if (await Sharing.isAvailableAsync()) await Sharing.shareAsync(uri);
+
+        setMsg('Backup exportado');
+        return;
       }
-      setMsg('Backup exportado');
-    } catch (e: any) { setMsg(e?.message || 'Error exportando'); }
-    finally { setBusy(''); }
+
+      setBackupExportData({
+        data,
+        filename,
+      });
+    } catch (e: any) {
+      setMsg(
+        e?.message ||
+          'Error preparando el backup'
+      );
+    } finally {
+      setBusy('');
+    }
+  };
+
+  const saveBackupFile = async () => {
+    if (!backupExportData) return;
+
+    setBusy('save-backup');
+    setMsg('');
+
+    try {
+      if (Platform.OS !== 'android') {
+        throw new Error(
+          'Guardar archivo directamente está disponible en Android'
+        );
+      }
+
+      const SAF = (FileSystem as any).StorageAccessFramework;
+
+      if (!SAF) {
+        throw new Error(
+          'El selector de carpetas no está disponible'
+        );
+      }
+
+      const permission =
+        await SAF.requestDirectoryPermissionsAsync();
+
+      if (!permission.granted) {
+        setMsg('Guardado cancelado');
+        return;
+      }
+
+      const fileUri = await SAF.createFileAsync(
+        permission.directoryUri,
+        backupExportData.filename,
+        'application/json'
+      );
+
+      await (FileSystem as any).writeAsStringAsync(
+        fileUri,
+        JSON.stringify(
+          backupExportData.data,
+          null,
+          2
+        )
+      );
+
+      setBackupExportData(null);
+      setMsg('Backup guardado correctamente');
+    } catch (e: any) {
+      setMsg(
+        e?.message ||
+          'Error guardando el backup'
+      );
+    } finally {
+      setBusy('');
+    }
+  };
+
+  const shareBackupFile = async () => {
+    if (!backupExportData) return;
+
+    setBusy('share-backup');
+    setMsg('');
+
+    try {
+      const uri =
+        (FileSystem as any).cacheDirectory +
+        backupExportData.filename;
+
+      await (FileSystem as any).writeAsStringAsync(
+        uri,
+        JSON.stringify(
+          backupExportData.data,
+          null,
+          2
+        )
+      );
+
+      if (!(await Sharing.isAvailableAsync())) {
+        throw new Error(
+          'Compartir archivos no está disponible'
+        );
+      }
+
+      await Sharing.shareAsync(uri, {
+        mimeType: 'application/json',
+        dialogTitle: 'Compartir backup ADMFC',
+      });
+
+      setBackupExportData(null);
+      setMsg('Backup compartido');
+    } catch (e: any) {
+      setMsg(
+        e?.message ||
+          'Error compartiendo el backup'
+      );
+    } finally {
+      setBusy('');
+    }
   };
 
   /*
@@ -254,6 +380,149 @@ const insets = useSafeAreaInsets();
         </Text>
       </ScrollView>
     </SafeAreaView>
+
+    <Modal
+      visible={!!backupExportData}
+      transparent
+      animationType="fade"
+      onRequestClose={() => {
+        if (!busy) {
+          setBackupExportData(null);
+        }
+      }}
+    >
+      <View style={styles.modalOverlay}>
+        <View
+          style={[
+            styles.modalCard,
+            {
+              backgroundColor: c.surface,
+              borderColor: c.border,
+            },
+          ]}
+        >
+          <View
+            style={[
+              styles.modalIcon,
+              { backgroundColor: c.surfaceSecondary },
+            ]}
+          >
+            <Feather
+              name="download"
+              size={28}
+              color={c.brand}
+            />
+          </View>
+
+          <Text
+            style={{
+              color: c.onSurface,
+              fontSize: 20,
+              fontWeight: '700',
+              textAlign: 'center',
+            }}
+          >
+            Exportar backup
+          </Text>
+
+          <Text
+            style={{
+              color: c.muted,
+              fontSize: 14,
+              lineHeight: 21,
+              textAlign: 'center',
+              marginTop: SPACING.sm,
+              marginBottom: SPACING.lg,
+            }}
+          >
+            Elija cómo desea guardar su copia de seguridad.
+          </Text>
+
+          <Pressable
+            onPress={saveBackupFile}
+            disabled={!!busy}
+            style={[
+              styles.modalButton,
+              {
+                backgroundColor: c.brand,
+                opacity: busy ? 0.65 : 1,
+              },
+            ]}
+          >
+            {busy === 'save-backup' ? (
+              <ActivityIndicator color={c.surface} />
+            ) : (
+              <Feather
+                name="folder"
+                size={18}
+                color={c.surface}
+              />
+            )}
+
+            <Text
+              style={[
+                styles.modalButtonText,
+                { color: c.surface },
+              ]}
+            >
+              Guardar archivo
+            </Text>
+          </Pressable>
+
+          <Pressable
+            onPress={shareBackupFile}
+            disabled={!!busy}
+            style={[
+              styles.modalButton,
+              {
+                borderWidth: 1,
+                borderColor: c.brand,
+                backgroundColor: c.surface,
+                opacity: busy ? 0.65 : 1,
+              },
+            ]}
+          >
+            {busy === 'share-backup' ? (
+              <ActivityIndicator color={c.brand} />
+            ) : (
+              <Feather
+                name="share-2"
+                size={18}
+                color={c.brand}
+              />
+            )}
+
+            <Text
+              style={[
+                styles.modalButtonText,
+                { color: c.brand },
+              ]}
+            >
+              Compartir
+            </Text>
+          </Pressable>
+
+          <Pressable
+            onPress={() => setBackupExportData(null)}
+            disabled={!!busy}
+            style={{
+              alignItems: 'center',
+              paddingVertical: SPACING.md,
+            }}
+          >
+            <Text
+              style={{
+                color: c.muted,
+                fontSize: 15,
+                fontWeight: '600',
+              }}
+            >
+              Cancelar
+            </Text>
+          </Pressable>
+        </View>
+      </View>
+    </Modal>
 
     <Modal
       visible={!!restoreConfirm}
