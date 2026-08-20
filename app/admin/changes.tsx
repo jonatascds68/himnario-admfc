@@ -95,17 +95,102 @@ function ChangedBlocksView({
   const oldBlocks = Array.isArray(before) ? before : [];
   const newBlocks = Array.isArray(after) ? after : [];
 
-  const total = Math.max(oldBlocks.length, newBlocks.length);
+  /*
+   * ADMFC — revisão estrutural por identidade lógica.
+   *
+   * Não podemos comparar bloques apenas pela posição no array.
+   * Exemplo: ao eliminar um falso CORO entre as estrofes 1 e 2,
+   * as estrofes 2 e 3 mudam de índice, mas continuam sendo as
+   * mesmas estrofes e não devem aparecer como modificadas.
+   *
+   * Identidade:
+   * - estrofa numerada -> estrofa:<numero>
+   * - coro             -> coro:<ocorrência>
+   * - casos sem número -> posição como fallback seguro
+   */
 
-  const changed = Array.from({ length: total }, (_, index) => ({
-    index,
-    oldBlock: oldBlocks[index],
-    newBlock: newBlocks[index],
-  })).filter(
-    ({ oldBlock, newBlock }) =>
-      JSON.stringify(oldBlock ?? null) !==
-      JSON.stringify(newBlock ?? null)
+  const logicalEntries = (blocks: any[]) => {
+    let chorusCount = 0;
+
+    return blocks.map((block, index) => {
+      const tipo = String(
+        block?.tipo ?? block?.type ?? block?.kind ?? ''
+      ).toLowerCase();
+
+      const isChorus =
+        tipo.includes('coro') ||
+        tipo.includes('chorus');
+
+      if (isChorus) {
+        chorusCount += 1;
+
+        return {
+          key: `coro:${chorusCount}`,
+          block,
+          index,
+        };
+      }
+
+      const numero =
+        block?.numero ??
+        block?.number ??
+        block?.n;
+
+      return {
+        key:
+          numero !== undefined &&
+          numero !== null &&
+          String(numero).trim() !== ''
+            ? `estrofa:${String(numero)}`
+            : `estrofa-pos:${index}`,
+        block,
+        index,
+      };
+    });
+  };
+
+  const oldEntries = logicalEntries(oldBlocks);
+  const newEntries = logicalEntries(newBlocks);
+
+  const oldByKey = new Map(
+    oldEntries.map((entry) => [entry.key, entry])
   );
+
+  const newByKey = new Map(
+    newEntries.map((entry) => [entry.key, entry])
+  );
+
+  /*
+   * Mantemos primeiro a ordem do estado anterior e acrescentamos
+   * ao final identidades que existam somente no estado novo.
+   */
+  const keys = [
+    ...oldEntries.map((entry) => entry.key),
+    ...newEntries
+      .map((entry) => entry.key)
+      .filter((key) => !oldByKey.has(key)),
+  ];
+
+  const changed = keys
+    .map((key) => {
+      const oldEntry = oldByKey.get(key);
+      const newEntry = newByKey.get(key);
+
+      return {
+        key,
+        index:
+          newEntry?.index ??
+          oldEntry?.index ??
+          0,
+        oldBlock: oldEntry?.block,
+        newBlock: newEntry?.block,
+      };
+    })
+    .filter(
+      ({ oldBlock, newBlock }) =>
+        JSON.stringify(oldBlock ?? null) !==
+        JSON.stringify(newBlock ?? null)
+    );
 
   if (!changed.length) {
     return (
@@ -117,12 +202,12 @@ function ChangedBlocksView({
 
   return (
     <View style={styles.blocksReview}>
-      {changed.map(({ index, oldBlock, newBlock }) => {
+      {changed.map(({ key, index, oldBlock, newBlock }) => {
         const reference = newBlock ?? oldBlock;
 
         return (
           <View
-            key={`${index}-${blockLabel(reference, index)}`}
+            key={key}
             style={[
               styles.blockReview,
               {
@@ -352,6 +437,129 @@ export default function AdminChanges() {
    * Gerar/compartilhar NÃO significa publicar.
    * A revisão só será confirmada quando existir publicação remota real.
    */
+  /*
+   * ADMFC — salva novamente a atualização JÁ preparada.
+   *
+   * Não gera nova revisão.
+   * Não altera correções pendentes.
+   * Não confirma publicação.
+   */
+  const savePreparedContentUpdate = async () => {
+    if (!preparedPublication || exporting) return;
+
+    try {
+      setExporting(true);
+
+      const data =
+        await api.exportPreparedContentUpdate();
+
+      if (
+        data.revision !==
+        preparedPublication.revision
+      ) {
+        throw new Error(
+          'La revisión preparada no coincide con el archivo'
+        );
+      }
+
+      const filename =
+        `admfc-update-r${String(data.revision).padStart(6, '0')}.json`;
+
+      const content =
+        JSON.stringify(data, null, 2);
+
+      if (Platform.OS === 'web') {
+        const blob = new Blob(
+          [content],
+          { type: 'application/json' }
+        );
+
+        const url =
+          URL.createObjectURL(blob);
+
+        const a =
+          document.createElement('a');
+
+        a.href = url;
+        a.download = filename;
+        a.click();
+
+        URL.revokeObjectURL(url);
+        return;
+      }
+
+      if (Platform.OS === 'android') {
+        const SAF =
+          (FileSystem as any).StorageAccessFramework;
+
+        if (!SAF) {
+          throw new Error(
+            'El selector de carpetas no está disponible'
+          );
+        }
+
+        const permission =
+          await SAF.requestDirectoryPermissionsAsync();
+
+        if (!permission.granted) {
+          return;
+        }
+
+        const fileUri =
+          await SAF.createFileAsync(
+            permission.directoryUri,
+            filename,
+            'application/json'
+          );
+
+        await (FileSystem as any).writeAsStringAsync(
+          fileUri,
+          content
+        );
+
+        Alert.alert(
+          'Actualización guardada',
+          `${filename} fue guardado correctamente.`
+        );
+
+        return;
+      }
+
+      /*
+       * Fallback para outras plataformas:
+       * mantém o comportamento de compartilhamento.
+       */
+      const uri =
+        (FileSystem as any).cacheDirectory +
+        filename;
+
+      await (FileSystem as any).writeAsStringAsync(
+        uri,
+        content
+      );
+
+      if (!(await Sharing.isAvailableAsync())) {
+        throw new Error(
+          'El sistema no permite compartir archivos'
+        );
+      }
+
+      await Sharing.shareAsync(uri, {
+        mimeType: 'application/json',
+        dialogTitle:
+          `Actualización ADMFC — revisión ${data.revision}`,
+      });
+    } catch (e: any) {
+      Alert.alert(
+        'Error',
+        e?.message ||
+          'No se pudo guardar la actualización preparada'
+      );
+    } finally {
+      setExporting(false);
+    }
+  };
+
   const generateContentUpdate = async () => {
     if (!changes.length || exporting || preparedPublication) return;
 
@@ -655,6 +863,42 @@ export default function AdminChanges() {
                   ).toLocaleString()}
                 </Text>
               ) : null}
+
+              <Pressable
+                onPress={savePreparedContentUpdate}
+                disabled={exporting}
+                style={[
+                  styles.confirmPublicationButton,
+                  {
+                    backgroundColor: c.surface,
+                    borderWidth: 1.5,
+                    borderColor: c.brand,
+                    opacity: exporting ? 0.65 : 1,
+                  },
+                ]}
+              >
+                {exporting ? (
+                  <ActivityIndicator
+                    size="small"
+                    color={c.brand}
+                  />
+                ) : (
+                  <Feather
+                    name="download"
+                    size={17}
+                    color={c.brand}
+                  />
+                )}
+
+                <Text
+                  style={[
+                    styles.confirmPublicationButtonText,
+                    { color: c.brand },
+                  ]}
+                >
+                  Guardar actualización
+                </Text>
+              </Pressable>
 
               <Pressable
                 onPress={() =>

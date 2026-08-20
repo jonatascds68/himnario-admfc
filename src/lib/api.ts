@@ -1042,6 +1042,107 @@ export const api = {
    * Esta função é somente leitura: não altera revisão,
    * fila administrativa nem snapshot.
    */
+  /*
+   * ADMFC — reexporta exatamente a atualização já preparada.
+   *
+   * Não cria nova revisão.
+   * Não altera a fila administrativa.
+   * Não confirma publicação.
+   * Não modifica o snapshot preparado.
+   *
+   * Reconstrói o ContentPatchPackage usando os AFTER preservados
+   * no snapshot de PREPARED_CONTENT_PUBLICATION_KEY.
+   */
+  exportPreparedContentUpdate: async (): Promise<ContentPatchPackage> => {
+    requireAuth();
+
+    const raw = await kv.get(
+      PREPARED_CONTENT_PUBLICATION_KEY
+    );
+
+    if (!raw) {
+      throw new Error(
+        'No existe una actualización preparada'
+      );
+    }
+
+    let prepared: any;
+
+    try {
+      prepared = JSON.parse(raw);
+    } catch {
+      throw new Error(
+        'La actualización preparada está dañada'
+      );
+    }
+
+    if (
+      !prepared ||
+      !Number.isInteger(prepared.revision) ||
+      prepared.revision < 1 ||
+      !Array.isArray(prepared.changes)
+    ) {
+      throw new Error(
+        'La actualización preparada es inválida'
+      );
+    }
+
+    const patches: ContentPatch[] =
+      prepared.changes.map((change: any) => {
+        if (
+          !change ||
+          typeof change.hymn_id !== 'string' ||
+          !change.hymn_id.trim() ||
+          !Array.isArray(change.changed_fields) ||
+          !change.after ||
+          typeof change.after !== 'object'
+        ) {
+          throw new Error(
+            'Cambio preparado inválido'
+          );
+        }
+
+        const fields: Partial<Hymn> = {};
+
+        for (const field of change.changed_fields) {
+          if (
+            field === 'id' ||
+            field === 'audio_local' ||
+            !REMOTE_HYMN_FIELDS.has(field as keyof Hymn)
+          ) {
+            throw new Error(
+              `Campo no publicable: ${field}`
+            );
+          }
+
+          if (
+            !Object.prototype.hasOwnProperty.call(
+              change.after,
+              field
+            )
+          ) {
+            throw new Error(
+              `Valor final ausente para: ${field}`
+            );
+          }
+
+          (fields as any)[field] =
+            change.after[field];
+        }
+
+        return {
+          hymn_id: change.hymn_id,
+          fields,
+        };
+      });
+
+    return {
+      schema_version: 'admfc-content-patch-1',
+      revision: prepared.revision,
+      patches,
+    };
+  },
+
   getPreparedContentPublication: async () => {
     requireAuth();
 
