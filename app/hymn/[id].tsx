@@ -1,5 +1,7 @@
 import React, { useCallback, useEffect, useState, useRef } from 'react';
-import { View, Text, StyleSheet, ScrollView, Pressable, ActivityIndicator, Linking, Share, Animated, Modal, Platform } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, Pressable, ActivityIndicator, Linking, Share, Animated, Modal, Platform, BackHandler,
+  AppState,
+} from 'react-native';
 import { Gesture, GestureDetector } from 'react-native-gesture-handler';
 import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useFocusEffect, useLocalSearchParams, useRouter } from 'expo-router';
@@ -31,7 +33,7 @@ function cleanBlockText(raw: string): string {
   return (raw || '')
     .replace(/\r\n/g, '\n')
     .replace(/\|+/g, '')          // quita "||" y "|" internos
-    .replace(/^\s*CORO\s*:?\s*$/gim, '') // etiqueta CORO redundante dentro del texto
+    .replace(/^\s*CORO(?:\s+\d+[ºo])?\s*:?\s*$/gim, '') // etiqueta CORO redundante dentro del texto
     .split('\n')
     .map((l) => l.trim())
     .filter((l, i, arr) => !(l === '' && arr[i - 1] === '')) // evita dobles vacíos
@@ -139,6 +141,45 @@ function transposeChord(
   );
 }
 
+function buildChordDisplayLine(
+  segmentos: {
+    texto: string;
+    acorde?: string | null;
+  }[],
+  steps: number
+): string {
+  let out = '';
+  let pos = 0;
+
+  for (const segmento of segmentos) {
+    if (segmento.acorde) {
+      if (out.length < pos) {
+        out += ' '.repeat(pos - out.length);
+      }
+
+      out += transposeChord(
+        segmento.acorde,
+        steps
+      );
+    }
+
+    pos += (segmento.texto || '').length;
+  }
+
+  return out.replace(/\s+$/g, '');
+}
+
+function buildChordLyricsLine(
+  segmentos: {
+    texto: string;
+    acorde?: string | null;
+  }[]
+): string {
+  return segmentos
+    .map(segmento => segmento.texto || '')
+    .join('');
+}
+
 function buildShareText(hymn: Hymn): string {
   const sections = getSections(hymn);
   const lines: string[] = [];
@@ -148,11 +189,10 @@ function buildShareText(hymn: Hymn): string {
   lines.push(hymn.titulo);
   lines.push('');
   sections.forEach((s, i) => {
-    const label = s.kind === 'chorus' ? 'CORO' : `${s.index ?? i + 1}ª `;
+    const label = s.kind === 'chorus' ? (s.label || 'CORO') : hymn.id.startsWith('CANT-') && s.index == null ? '' : `${s.index ?? i + 1}ª `;
     const body = cleanBlockText(s.text);
     if (!body) return;
-    lines.push(label);
-    lines.push('');
+    if (label) { lines.push(label); lines.push(''); }
     lines.push(body);
     lines.push('');
   });
@@ -167,7 +207,10 @@ function buildShareText(hymn: Hymn): string {
 
 
 export default function HymnDetail() {
-  const { id } = useLocalSearchParams<{ id: string }>();
+  const { id, view } = useLocalSearchParams<{
+    id: string;
+    view?: 'gt' | 'sion' | 'cant';
+  }>();
   const router = useRouter();
   const { c, isDark, fontScale, setFontScale, bumpFont, hymnFont } = useTheme();
 const insets = useSafeAreaInsets();
@@ -179,6 +222,50 @@ const insets = useSafeAreaInsets();
   const [shareOpen, setShareOpen] = useState(false);
   const [sharing, setSharing] = useState(false);
 const [contentMode, setContentMode] = useState<'lyrics' | 'chords' | 'audio'>('lyrics');
+
+  // ADMFC_YOUTUBE_RETURN_TO_LYRICS
+  // Ao voltar do YouTube/áudio externo para o app,
+  // retorna automaticamente para a letra.
+  // Se o YouTube mantiver Picture-in-Picture,
+  // o vídeo continua sobre a tela da letra.
+  useEffect(() => {
+    const subscription = AppState.addEventListener(
+      'change',
+      (nextAppState) => {
+        if (nextAppState === 'active' && contentMode === 'audio') {
+          setContentMode('lyrics');
+        }
+      },
+    );
+
+    return () => {
+      subscription.remove();
+    };
+  }, [contentMode]);
+
+
+useFocusEffect(
+  useCallback(() => {
+    if (Platform.OS !== 'android') {
+      return undefined;
+    }
+
+    const subscription = BackHandler.addEventListener(
+      'hardwareBackPress',
+      () => {
+        if (contentMode !== 'lyrics') {
+          setDragTime(null);
+          setContentMode('lyrics');
+          return true;
+        }
+
+        return false;
+      }
+    );
+
+    return () => subscription.remove();
+  }, [contentMode])
+);
 const [transposeSteps, setTransposeSteps] = useState(0);
 
 const [hymnAlign, setHymnAlign] = useState<HymnAlign>('center');
@@ -262,7 +349,7 @@ const [hymnAlign, setHymnAlign] = useState<HymnAlign>('center');
     if (!id) return;
     setLoading(true);
     try {
-      const h = await api.getHymn(id);
+      const h = await api.getHymnView(id, view);
       setHymn(h); recents.push(h.id);
       setIsFav(await favorites.has(h.id));
       setInList((await playlist.list()).includes(h.id));
@@ -272,8 +359,14 @@ const [hymnAlign, setHymnAlign] = useState<HymnAlign>('center');
         catch { setEquivId(null); }
       } else setEquivId(null);
     } catch { setHymn(null); } finally { setLoading(false); }
-  }, [id]);
+  }, [id, view]);
   useEffect(() => { load(); }, [load]);
+
+  useFocusEffect(
+    useCallback(() => {
+      load();
+    }, [load])
+  );
 
   useEffect(() => {
     setTransposeSteps(0);
@@ -286,10 +379,18 @@ hymnAlignStorage.get().then(setHymnAlign);
 );
   const nav = async (delta: number) => {
     if (!hymn) return;
-    const k = hymn.himnario === 'Gloria y Triunfo' ? 'gt' : 'sion';
+    const k =
+      hymn.himnario === 'Gloria y Triunfo'
+        ? 'gt'
+        : hymn.himnario === 'Himnos de Sión'
+          ? 'sion'
+          : 'cant';
     try {
       const n = await api.getByNumber(k as any, hymn.numero + delta);
-      router.replace(`/hymn/${n.id}`);
+      router.replace({
+        pathname: '/hymn/[id]',
+        params: { id: n.id, view: k },
+      });
     } catch {}
   };
   const toggleFav = async () => {
@@ -452,15 +553,19 @@ hymnAlignStorage.get().then(setHymnAlign);
             ]}
             testID="hymn-open-chords"
           >
-            <MaterialCommunityIcons
-              name="music-clef-treble"
-              size={23}
-              color={
-                contentMode === 'chords'
-                  ? c.brand
-                  : c.muted
-              }
-            />
+            {contentMode === 'chords' ? (
+              <Feather
+                name="file-text"
+                size={22}
+                color={c.brand}
+              />
+            ) : (
+              <MaterialCommunityIcons
+                name="music-clef-treble"
+                size={23}
+                color={c.muted}
+              />
+            )}
           </Pressable>
         ) : null}
 
@@ -487,7 +592,11 @@ hymnAlignStorage.get().then(setHymnAlign);
             testID="hymn-open-audio"
           >
             <Feather
-              name="headphones"
+              name={
+                contentMode === 'audio'
+                  ? 'file-text'
+                  : 'headphones'
+              }
               size={22}
               color={
                 contentMode === 'audio'
@@ -594,10 +703,20 @@ hymnAlignStorage.get().then(setHymnAlign);
         ) : (
           <View testID="hymn-lyrics">
             {sections.map((s, i) => (
-<View key={i} style={{ marginBottom: s.kind === 'chorus' ? SPACING.xxl : SPACING.xl }}>
+<View
+  key={i}
+  style={{
+    marginBottom:
+      i === sections.length - 1
+        ? 0
+        : s.kind === 'chorus'
+          ? SPACING.xxxl
+          : SPACING.xxl,
+  }}
+>
 {s.kind === 'chorus' ? (
   <>
-    <Text style={[styles.stanzaTitle, { color: c.brand, textAlign: hymnAlign }]}>CORO</Text>
+    <Text style={[styles.stanzaTitle, { color: c.brand, textAlign: hymnAlign }]}>{s.label || 'CORO'}</Text>
     <View style={styles.chorusClean}>
 <Text
       style={[
@@ -617,7 +736,7 @@ hymnAlignStorage.get().then(setHymnAlign);
   </>
 ) : (
   <View style={{ flexDirection: 'row', alignItems: 'flex-start' }}>
-    <Text style={[styles.stanzaTitle, { color: c.brand, width: 28, marginTop: 3 }]}>{`${s.index ?? i + 1}.`}</Text>
+    {hymn.id.startsWith('CANT-') && s.index == null ? null : (<Text style={[styles.stanzaTitle, { color: c.brand, width: 28, marginTop: 3 }]}>{`${s.index ?? i + 1}.`}</Text>)}
     <Text style={[styles.verse, { flex: 1, color: c.onSurface, fontSize: baseSize, lineHeight: baseSize * 1.55, fontFamily: hymnFont, textAlign: hymnAlign }]}>{s.text.replace(/\|+/g, '')}</Text>
   </View>
 )}
@@ -754,44 +873,54 @@ hymnAlignStorage.get().then(setHymnAlign);
                     key={lineaIndex}
                     style={styles.chordLine}
                   >
-                    {linea.segmentos.map((segmento, segmentoIndex) => (
-                      <View
-                        key={segmentoIndex}
-                        style={styles.chordSegment}
-                      >
-                        <Text
-                          style={[
-                            styles.chordName,
-                            {
-                              color: segmento.acorde
-                                ? c.brandSecondary
-                                : 'transparent',
-                            },
-                          ]}
-                        >
-                          {segmento.acorde
-  ? transposeChord(
-      segmento.acorde,
-      transposeSteps
-    )
-  : '·'}
-                        </Text>
+                    {(() => {
+                      const chordLine =
+                        buildChordDisplayLine(
+                          linea.segmentos,
+                          transposeSteps
+                        );
 
-                        <Text
-                          style={[
-                            styles.chordLyrics,
-                            {
-                              color: c.onSurface,
-                              fontFamily: hymnFont,
-                              fontSize: baseSize,
-                              lineHeight: baseSize * 1.4,
-                            },
-                          ]}
-                        >
-                          {segmento.texto}
-                        </Text>
-                      </View>
-                    ))}
+                      const lyricLine =
+                        buildChordLyricsLine(
+                          linea.segmentos
+                        );
+
+                      return (
+                        <View style={styles.chordAlignedLine}>
+                          {chordLine ? (
+                            <Text
+                              style={[
+                                styles.chordAlignedChord,
+                                {
+                                  color: isDark
+                                    ? '#F2C14E'
+                                    : '#A56A00',
+                                  fontSize: baseSize,
+                                  lineHeight:
+                                    baseSize * 1.25,
+                                },
+                              ]}
+                            >
+                              {chordLine}
+                            </Text>
+                          ) : null}
+
+                          <Text
+                            style={[
+                              styles.chordAlignedLyrics,
+                              {
+                                color: c.onSurface,
+                                fontSize: baseSize,
+                                lineHeight:
+                                  baseSize * 1.4,
+                              },
+                            ]}
+                          >
+                            {lyricLine || ' '}
+                          </Text>
+                        </View>
+                      );
+                    })()}
                   </View>
                 ))}
               </View>
@@ -873,14 +1002,44 @@ hymnAlignStorage.get().then(setHymnAlign);
         {hymn.cifra}
       </Text>
     ) : (
-      <Text
+      <View
         style={[
-          styles.experimentalText,
-          { color: c.muted },
+          styles.musicStatusCard,
+          {
+            backgroundColor: '#FFF8E6',
+            borderColor: '#E7C85B',
+          },
         ]}
       >
-        Cifra todavía no disponible para este himno.
-      </Text>
+        <View
+          style={[
+            styles.musicStatusIcon,
+            { backgroundColor: '#F8E8A6' },
+          ]}
+        >
+          <Feather name="info" size={20} color="#8A6A00" />
+        </View>
+
+        <View style={{ flex: 1 }}>
+          <Text
+            style={[
+              styles.musicStatusTitle,
+              { color: '#6F5600' },
+            ]}
+          >
+            Cifra no disponible
+          </Text>
+
+          <Text
+            style={[
+              styles.musicStatusDescription,
+              { color: '#776B48' },
+            ]}
+          >
+            Este himno todavía no tiene una cifra registrada.
+          </Text>
+        </View>
+      </View>
     )}
   </View>
 ) : (
@@ -912,10 +1071,12 @@ hymnAlignStorage.get().then(setHymnAlign);
           ]}
         >
           {hymn.audio_url
-            ? 'Fuente remota'
+            ? 'Audio disponible'
             : hymn.audio_local
-              ? 'Archivo local'
-              : 'Sin audio disponible'}
+              ? 'Audio disponible'
+              : hymn.audio_external_url
+                ? 'Audio disponible por enlace externo'
+                : 'Audio no disponible'}
         </Text>
       </View>
     </View>
@@ -1128,60 +1289,118 @@ hymnAlignStorage.get().then(setHymnAlign);
         ) : null}
       </View>
     ) : hymn.audio_external_url ? (
-      <View style={{ alignItems: 'center', gap: SPACING.md }}>
-        <Text
-          style={[
-            styles.experimentalText,
-            { color: c.muted },
-          ]}
-        >
-          Audio disponible mediante enlace externo.
-        </Text>
-
+      <View style={styles.externalAudioOnlyWrap}>
         <Pressable
           onPress={async () => {
             try {
               await Linking.openURL(hymn.audio_external_url!);
             } catch {
-              // enlace inválido o aplicación no disponible
+              // enlace inválido ou aplicação não disponível
             }
           }}
           style={[
-            styles.externalAudioBtn,
-            { borderColor: c.brandSecondary },
+            styles.externalAudioPrimaryBtn,
+            {
+              backgroundColor: c.brand,
+              borderColor: c.brand,
+            },
+          ]}
+          accessibilityRole="button"
+          accessibilityLabel="Escuchar audio"
+        >
+          <View
+            style={[
+              styles.externalAudioPrimaryIcon,
+              {
+                backgroundColor: c.onSurfaceInverse,
+              },
+            ]}
+          >
+            <Feather
+              name="external-link"
+              size={22}
+              color={c.brand}
+            />
+          </View>
+
+          <View style={{ flex: 1 }}>
+            <Text
+              style={[
+                styles.externalAudioPrimaryTitle,
+                { color: c.onSurfaceInverse },
+              ]}
+            >
+              Escuchar audio
+            </Text>
+
+            <Text
+              style={[
+                styles.externalAudioPrimarySubtitle,
+                { color: c.onSurfaceInverse },
+              ]}
+            >
+              Abrir enlace externo
+            </Text>
+          </View>
+
+          <Feather
+            name="chevron-right"
+            size={23}
+            color={c.onSurfaceInverse}
+          />
+        </Pressable>
+
+        <Text
+          style={[
+            styles.externalAudioHint,
+            { color: c.muted },
           ]}
         >
-          <Feather
-            name="external-link"
-            size={18}
-            color={c.brandSecondary}
-          />
-
-          <Text
-            style={{
-              color: c.brandSecondary,
-              fontWeight: '800',
-              fontSize: 13,
-            }}
-          >
-            Abrir enlace externo
-          </Text>
-        </Pressable>
+          Se abrirá en una aplicación externa.
+        </Text>
       </View>
     ) : (
-      <Text
+      <View
         style={[
-          styles.experimentalText,
-          { color: c.muted },
+          styles.musicStatusCard,
+          {
+            backgroundColor: '#FFF8E6',
+            borderColor: '#E7C85B',
+          },
         ]}
       >
-        No hay audio registrado para este himno.
-      </Text>
+        <View
+          style={[
+            styles.musicStatusIcon,
+            { backgroundColor: '#F8E8A6' },
+          ]}
+        >
+          <Feather name="info" size={20} color="#8A6A00" />
+        </View>
+
+        <View style={{ flex: 1 }}>
+          <Text
+            style={[
+              styles.musicStatusTitle,
+              { color: '#6F5600' },
+            ]}
+          >
+            Audio no disponible
+          </Text>
+
+          <Text
+            style={[
+              styles.musicStatusDescription,
+              { color: '#776B48' },
+            ]}
+          >
+            Este himno todavía no tiene un audio registrado.
+          </Text>
+        </View>
+      </View>
     )}
   </View>
 )}
-        {hymn.fuente ? <Text style={[styles.meta, { color: c.muted, marginTop: SPACING.lg }]}>Fuente: {hymn.fuente}</Text> : null}
-        {hymn.observacion ? <Text style={[styles.meta, { color: c.muted, marginTop: 4 }]}>Nota: {hymn.observacion}</Text> : null}
         </ScrollView>
       </GestureDetector>
 <View
@@ -1339,6 +1558,39 @@ controlBar: { position: 'absolute', left: 0, right: 0, bottom: 0, flexDirection:
     marginBottom: SPACING.sm,
   },
 
+  musicStatusCard: {
+    width: '100%',
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    gap: SPACING.md,
+    borderWidth: 1,
+    borderRadius: RADIUS.lg,
+    paddingHorizontal: SPACING.lg,
+    paddingVertical: SPACING.md,
+    marginTop: SPACING.sm,
+    marginBottom: SPACING.md,
+  },
+
+  musicStatusIcon: {
+    width: 38,
+    height: 38,
+    borderRadius: 19,
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexShrink: 0,
+  },
+
+  musicStatusTitle: {
+    fontSize: 15,
+    fontWeight: '800',
+    marginBottom: 4,
+  },
+
+  musicStatusDescription: {
+    fontSize: 13,
+    lineHeight: 19,
+  },
+
   audioWrap: {
     paddingVertical: SPACING.md,
   },
@@ -1432,6 +1684,59 @@ controlBar: { position: 'absolute', left: 0, right: 0, bottom: 0, flexDirection:
     alignItems: 'center',
     justifyContent: 'center',
     gap: SPACING.sm,
+  },
+
+  externalAudioBtnAvailable: {
+    backgroundColor: '#EDF8F0',
+    borderColor: '#8AC59A',
+    marginTop: 0,
+  },
+
+  externalAudioBtnAvailableText: {
+    color: '#287A40',
+    fontWeight: '800',
+    fontSize: 13,
+  },
+
+  externalAudioOnlyWrap: {
+    gap: 10,
+  },
+
+  externalAudioPrimaryBtn: {
+    minHeight: 86,
+    borderWidth: 1,
+    borderRadius: RADIUS.lg,
+    paddingHorizontal: SPACING.md,
+    paddingVertical: 14,
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: SPACING.md,
+  },
+
+  externalAudioPrimaryIcon: {
+    width: 48,
+    height: 48,
+    borderRadius: 24,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+
+  externalAudioPrimaryTitle: {
+    fontSize: 18,
+    fontWeight: '800',
+  },
+
+  externalAudioPrimarySubtitle: {
+    fontSize: 12,
+    fontWeight: '600',
+    marginTop: 3,
+    opacity: 0.82,
+  },
+
+  externalAudioHint: {
+    fontSize: 12,
+    lineHeight: 17,
+    textAlign: 'center',
   },
 
   audioLoading: {
@@ -1531,6 +1836,23 @@ controlBar: { position: 'absolute', left: 0, right: 0, bottom: 0, flexDirection:
     fontSize: 14,
     fontWeight: '800',
     marginTop: 18,
+  },
+
+  chordAlignedLine: {
+    marginBottom: 14,
+  },
+
+  chordAlignedChord: {
+    fontFamily: Platform.OS === 'ios'
+      ? 'Courier'
+      : 'monospace',
+    fontWeight: '800',
+  },
+
+  chordAlignedLyrics: {
+    fontFamily: Platform.OS === 'ios'
+      ? 'Courier'
+      : 'monospace',
   },
 
   chordLine: {

@@ -46,12 +46,16 @@ const CATEGORY_ICONS: Record<
   'Despedida': 'hand-wave-outline',
 
   'Escuela Dominical': 'school',
+  'Evangelismo': 'bullhorn',
+  'Funeral': 'coffin',
+  'Presentación de Niños': 'baby-face-outline',
+  'Reunión de Obreros': 'account-group',
   'Fe y Confianza': 'anchor',
 
   'Gozo y Paz de los Creyentes': 'weather-sunny',
 
   'Iglesia': 'church',
-  'Invitación': 'account-heart',
+  'Invitación al Pecador': 'account-heart',
 
   'Jesús Salvador y Amigo': 'heart-circle',
 

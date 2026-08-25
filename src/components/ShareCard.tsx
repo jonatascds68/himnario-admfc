@@ -1,5 +1,11 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import {
+  View,
+  Text,
+  StyleSheet,
+  Image,
+} from 'react-native';
+import { LOGO_LOCAL } from '@/src/theme/tokens';
 import { Section } from '@/src/lib/api';
 import { HymnFont, HymnAlign } from '@/src/lib/storage';
 
@@ -73,69 +79,115 @@ export const ShareCard = React.forwardRef<View, Props>(
         ]}
       >
         {page.pageIndex === 1 ? (
-          <>
-            <Text
-              style={[
-                styles.himnario,
-                { color: colors.muted },
-              ]}
-            >
-              {himnario.toUpperCase()}
-            </Text>
+            <>
+              <View style={styles.brandHeader}>
+                <Image
+                  source={LOGO_LOCAL}
+                  style={styles.logo}
+                  resizeMode="contain"
+                />
 
-            <Text
-              style={[
-                styles.number,
-                { color: colors.brand },
-              ]}
-            >
-              Nº {numero}
-            </Text>
+                <View style={styles.brandText}>
+                  <Text
+                    style={[
+                      styles.brandName,
+                      { color: colors.onSurface },
+                    ]}
+                  >
+                    HIMNARIO ADMFC
+                  </Text>
 
-            <Text
-              style={[
-                styles.title,
-                {
-                  color: colors.onSurface,
-                  textAlign: 'center',
-                },
-              ]}
-            >
-              {titulo}
-            </Text>
+                  <Text
+                    style={[
+                      styles.brandSubtitle,
+                      { color: colors.muted },
+                    ]}
+                  >
+                    ASAMBLEA DE DIOS · MISIÓN DE LA FE CRISTIANA
+                  </Text>
+                </View>
+              </View>
 
-            {equivalencia ? (
-              <View style={styles.equivWrap}>
-                <Text
+              <View
+                style={[
+                  styles.headerRule,
+                  {
+                    backgroundColor:
+                      colors.borderStrong,
+                  },
+                ]}
+              />
+
+              <Text
+                style={[
+                  styles.himnario,
+                  { color: colors.muted },
+                ]}
+              >
+                {himnario.toUpperCase()}
+              </Text>
+
+              <Text
+                style={[
+                  styles.number,
+                  { color: colors.brand },
+                ]}
+              >
+                Nº {numero}
+              </Text>
+
+              <Text
+                style={[
+                  styles.title,
+                  {
+                    color: colors.onSurface,
+                    textAlign: 'center',
+                  },
+                ]}
+              >
+                {titulo}
+              </Text>
+
+              {equivalencia ? (
+                <View
                   style={[
-                    styles.equivPrefix,
-                    { color: colors.muted },
+                    styles.equivWrap,
+                    {
+                      borderColor:
+                        colors.borderStrong,
+                    },
                   ]}
                 >
-                  🔗 También en:{' '}
                   <Text
-                    style={{
-                      color: colors.brand,
-                      fontWeight: '700',
-                    }}
+                    style={[
+                      styles.equivPrefix,
+                      { color: colors.muted },
+                    ]}
                   >
-                    {equivalencia}
+                    También en{' '}
+                    <Text
+                      style={{
+                        color: colors.brand,
+                        fontWeight: '800',
+                      }}
+                    >
+                      {equivalencia}
+                    </Text>
                   </Text>
-                </Text>
-              </View>
-            ) : null}
+                </View>
+              ) : null}
 
-            <View
-              style={[
-                styles.divider,
-                {
-                  backgroundColor:
-                    colors.borderStrong,
-                },
-              ]}
-            />
-          </>
-        ) : (
+              <View
+                style={[
+                  styles.divider,
+                  {
+                    backgroundColor:
+                      colors.borderStrong,
+                  },
+                ]}
+              />
+            </>
+          ) : (
           <>
             <Text
               style={[
@@ -199,8 +251,7 @@ export const ShareCard = React.forwardRef<View, Props>(
                         : '#75612F',
                       fontSize: baseSize,
                       lineHeight: baseSize * 1.55,
-                      fontFamily:
-                        'MerriweatherItalic',
+                      fontFamily: hymnFont,
                       textAlign: hymnAlign,
                     },
                   ]}
@@ -263,6 +314,44 @@ export const ShareCard = React.forwardRef<View, Props>(
             {page.pageIndex}/{page.pageTotal}
           </Text>
         ) : null}
+
+          <View
+            style={[
+              styles.footerRule,
+              {
+                backgroundColor:
+                  colors.borderStrong,
+              },
+            ]}
+          />
+
+          <View style={styles.footer}>
+            <Image
+              source={LOGO_LOCAL}
+              style={styles.footerLogo}
+              resizeMode="contain"
+            />
+
+            <View style={styles.footerTextWrap}>
+              <Text
+                style={[
+                  styles.footerTitle,
+                  { color: colors.onSurface },
+                ]}
+              >
+                HIMNARIO ADMFC
+              </Text>
+
+              <Text
+                style={[
+                  styles.footerSubtitle,
+                  { color: colors.muted },
+                ]}
+              >
+                Asamblea de Dios · Misión de la Fe Cristiana
+              </Text>
+            </View>
+          </View>
       </View>
     );
   }
@@ -273,49 +362,92 @@ ShareCard.displayName = 'ShareCard';
 const styles = StyleSheet.create({
   card: {
     width: 400,
-    paddingHorizontal: 16,
-    paddingTop: 18,
-    paddingBottom: 24,
+    paddingHorizontal: 22,
+    paddingTop: 22,
+    paddingBottom: 22,
+  },
+
+  brandHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+
+  logo: {
+    width: 52,
+    height: 52,
+  },
+
+  brandText: {
+    flex: 1,
+    marginLeft: 12,
+  },
+
+  brandName: {
+    fontSize: 13,
+    fontWeight: '900',
+    letterSpacing: 1.5,
+  },
+
+  brandSubtitle: {
+    fontSize: 8,
+    fontWeight: '700',
+    letterSpacing: 0.65,
+    lineHeight: 12,
+    marginTop: 3,
+  },
+
+  headerRule: {
+    height: 1,
+    width: '100%',
+    marginTop: 16,
+    marginBottom: 22,
+    opacity: 0.75,
   },
 
   himnario: {
-    fontSize: 11,
+    fontSize: 10,
     fontWeight: '800',
     letterSpacing: 2,
+    textAlign: 'center',
   },
 
   number: {
-    fontSize: 34,
+    fontSize: 32,
     fontWeight: '900',
-    letterSpacing: 1,
-    marginTop: 4,
+    letterSpacing: 0.5,
+    marginTop: 5,
+    textAlign: 'center',
   },
 
   title: {
     fontSize: 20,
-    fontWeight: '700',
-    marginTop: 3,
+    fontWeight: '800',
+    marginTop: 4,
     lineHeight: 25,
   },
 
   equivWrap: {
     alignSelf: 'center',
-    marginTop: 7,
-    paddingVertical: 3,
-    paddingHorizontal: 6,
+    marginTop: 11,
+    paddingVertical: 5,
+    paddingHorizontal: 10,
+    borderWidth: 1,
+    borderRadius: 999,
   },
 
   equivPrefix: {
-    fontSize: 11,
-    lineHeight: 15,
+    fontSize: 10,
+    lineHeight: 14,
     textAlign: 'center',
   },
 
   divider: {
     height: 2,
-    width: 60,
-    marginVertical: 16,
-    opacity: 0.7,
+    width: 54,
+    alignSelf: 'center',
+    marginTop: 20,
+    marginBottom: 24,
+    opacity: 0.85,
   },
 
   contHead: {
@@ -361,5 +493,40 @@ const styles = StyleSheet.create({
     fontSize: 10,
     textAlign: 'right',
     marginTop: 4,
+  },
+
+  footerRule: {
+    height: 1,
+    width: '100%',
+    marginTop: 10,
+    marginBottom: 16,
+    opacity: 0.65,
+  },
+
+  footer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+
+  footerLogo: {
+    width: 30,
+    height: 30,
+  },
+
+  footerTextWrap: {
+    flex: 1,
+    marginLeft: 9,
+  },
+
+  footerTitle: {
+    fontSize: 9,
+    fontWeight: '900',
+    letterSpacing: 1.1,
+  },
+
+  footerSubtitle: {
+    fontSize: 7,
+    lineHeight: 10,
+    marginTop: 2,
   },
 });

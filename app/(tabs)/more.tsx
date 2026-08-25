@@ -190,10 +190,14 @@ export default function More() {
             </View>
 
             <Switch
-              value={isDark}
+              value={mode === 'dark'}
               onValueChange={(v) =>
                 setMode(v ? 'dark' : 'light')
               }
+              disabled={mode === 'system'}
+              style={{
+                opacity: mode === 'system' ? 0.45 : 1,
+              }}
               testID="pref-dark-toggle"
             />
           </View>
@@ -576,7 +580,7 @@ export default function More() {
           onPress={() =>
             setMode(
               mode === 'system'
-                ? 'light'
+                ? (isDark ? 'dark' : 'light')
                 : 'system'
             )
           }
@@ -626,7 +630,11 @@ export default function More() {
           <Switch
             value={mode === 'system'}
             onValueChange={(v) =>
-              setMode(v ? 'system' : 'light')
+              setMode(
+                v
+                  ? 'system'
+                  : (isDark ? 'dark' : 'light')
+              )
             }
           />
         </Pressable>

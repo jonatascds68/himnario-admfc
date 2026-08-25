@@ -15,15 +15,32 @@ export default function Search() {
   const { c, isDark } = useTheme();
   const [q, setQ] = useState('');
   const [mode, setMode] = useState<'123' | 'abc'>(lastMode);
-  const [him, setHim] = useState<'gt' | 'sion'>('gt');
+  const [him, setHim] = useState<'gt' | 'sion' | 'cant'>('gt');
   const [items, setItems] = useState<Hymn[]>([]);
   const [loading, setLoading] = useState(true);
   const inputRef = useRef<TextInput>(null);
+
+  /*
+   * ADMFC — limpar Buscar somente ao retornar de um hino
+   * aberto a partir desta própria tela.
+   *
+   * Não apagamos a busca simplesmente por trocar de aba.
+   */
+  const clearSearchOnReturnRef = useRef(false);
 
   // ADMFC — sempre que Buscar recebe foco, reativa o teclado.
   // Isso vale tanto na primeira abertura quanto ao voltar de um hino.
   useFocusEffect(
     useCallback(() => {
+      /*
+       * Se o usuário acabou de voltar de um hino aberto por Buscar,
+       * deixamos o campo vazio para a próxima consulta.
+       */
+      if (clearSearchOnReturnRef.current) {
+        clearSearchOnReturnRef.current = false;
+        setQ('');
+      }
+
       const timer = setTimeout(() => {
         inputRef.current?.focus();
       }, 320);
@@ -62,7 +79,22 @@ export default function Search() {
       const result = r.items[0];
       if (!result) return;
 
-      router.push(`/hymn/${result.id}`);
+      const view =
+        result.himnario === 'Gloria y Triunfo'
+          ? 'gt'
+          : result.himnario === 'Himnos de Sión'
+            ? 'sion'
+            : 'cant';
+
+      clearSearchOnReturnRef.current = true;
+
+      router.push({
+        pathname: '/hymn/[id]',
+        params: {
+          id: result.id,
+          view,
+        },
+      });
     } catch {}
   };
 
@@ -73,7 +105,7 @@ export default function Search() {
         <View>
           <Text style={[styles.title, { color: c.onSurface }]}>Buscar</Text>
           <Text style={[styles.subtitle, { color: c.muted }]}>
-            Encuentra tu himno rápidamente
+            Encuentra tu himno o cántico rápidamente
           </Text>
         </View>
       </View>
@@ -149,7 +181,7 @@ export default function Search() {
 
       {mode === '123' && (
         <View style={styles.himRow}>
-          {(['gt', 'sion'] as const).map((h) => {
+          {(['gt', 'sion', 'cant'] as const).map((h) => {
             const active = him === h;
             return (
               <Pressable
@@ -183,7 +215,7 @@ export default function Search() {
                   },
                 ]}
               >
-                {h === 'gt' ? 'Gloria y Triunfo' : 'Himnos de Sión'}
+                {h === 'gt' ? 'Gloria y Triunfo' : h === 'sion' ? 'Himnos de Sión' : 'Cánticos'}
               </Text>
             </Pressable>
             );
@@ -199,7 +231,29 @@ export default function Search() {
             paddingBottom: SPACING.xxxl,
           }}
           ItemSeparatorComponent={() => <View style={{ height: SPACING.sm }} />}
-          renderItem={({ item }) => <HymnRow hymn={item} onPress={() => router.push(`/hymn/${item.id}`)} />}
+          renderItem={({ item }) => (
+            <HymnRow
+              hymn={item}
+              onPress={() => {
+                const view =
+                  item.himnario === 'Gloria y Triunfo'
+                    ? 'gt'
+                    : item.himnario === 'Himnos de Sión'
+                      ? 'sion'
+                      : 'cant';
+
+                clearSearchOnReturnRef.current = true;
+
+                router.push({
+                  pathname: '/hymn/[id]',
+                  params: {
+                    id: item.id,
+                    view,
+                  },
+                });
+              }}
+            />
+          )}
           ListEmptyComponent={<View style={styles.empty}><Feather name="inbox" size={32} color={c.muted} /><Text style={{ color: c.muted, marginTop: SPACING.md }}>No se encontraron himnos.</Text></View>}
           testID="search-results" keyboardShouldPersistTaps="handled" />
       )}
@@ -209,8 +263,44 @@ export default function Search() {
 
 export function HymnRow({ hymn, onPress }: { hymn: Hymn; onPress: () => void }) {
   const { c, isDark } = useTheme();
-  const short = hymn.himnario === 'Gloria y Triunfo' ? 'GT' : 'SN';
-  const eq = hymn.numero_equivalente ? `${short === 'GT' ? 'SIÓN' : 'GT'} Nº ${hymn.numero_equivalente}` : null;
+  const short =
+    hymn.himnario === 'Gloria y Triunfo'
+      ? 'GT'
+      : hymn.himnario === 'Himnos de Sión'
+        ? 'SN'
+        : 'CA';
+
+  const collectionRefs = (hymn.colecciones || [])
+    .filter((ref) => ref.himnario !== hymn.himnario)
+    .map((ref) => {
+      const label =
+        ref.himnario === 'Gloria y Triunfo'
+          ? 'GT'
+          : ref.himnario === 'Himnos de Sión'
+            ? 'SIÓN'
+            : 'CA';
+
+      return `${label} Nº ${ref.numero}`;
+    });
+
+  const legacyEq =
+    hymn.numero_equivalente && hymn.himnario_equivalente
+      ? `${
+          hymn.himnario_equivalente === 'Gloria y Triunfo'
+            ? 'GT'
+            : hymn.himnario_equivalente === 'Himnos de Sión'
+              ? 'SIÓN'
+              : 'CA'
+        } Nº ${hymn.numero_equivalente}`
+      : null;
+
+  const refs = [...collectionRefs];
+
+  if (legacyEq && !refs.includes(legacyEq)) {
+    refs.push(legacyEq);
+  }
+
+  const eq = refs.length ? refs.join(' · ') : null;
   return (
     <Pressable
       onPress={onPress}
@@ -232,6 +322,10 @@ export function HymnRow({ hymn, onPress }: { hymn: Hymn; onPress: () => void }) 
           },
         ]}
       >
+        <Text style={[styles.rowCollection, { color: c.brandSecondary }]}>
+          {short}
+        </Text>
+
         <Text style={[styles.rowNumber, { color: c.brandSecondary }]}>
           {hymn.numero}
         </Text>
@@ -402,9 +496,19 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 
+  rowCollection: {
+    fontSize: 9,
+    fontWeight: '800',
+    letterSpacing: 0.7,
+    lineHeight: 10,
+    textAlign: 'center',
+    marginBottom: 1,
+  },
+
   rowNumber: {
     fontSize: 17,
     fontWeight: '800',
+    lineHeight: 20,
     textAlign: 'center',
   },
 

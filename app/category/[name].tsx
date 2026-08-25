@@ -80,7 +80,22 @@ export default function CategoryHymns() {
           renderItem={({ item }) => (
             <HymnRow
               hymn={item}
-              onPress={() => router.push(`/hymn/${item.id}`)}
+              onPress={() => {
+                const view =
+                  item.himnario === 'Gloria y Triunfo'
+                    ? 'gt'
+                    : item.himnario === 'Himnos de Sión'
+                      ? 'sion'
+                      : 'cant';
+
+                router.push({
+                  pathname: '/hymn/[id]',
+                  params: {
+                    id: item.id,
+                    view,
+                  },
+                });
+              }}
             />
           )}
           ListEmptyComponent={

@@ -18,7 +18,10 @@ import {
   useSafeAreaInsets,
 } from 'react-native-safe-area-context';
 
-import { Feather } from '@expo/vector-icons';
+import {
+  Feather,
+  MaterialCommunityIcons,
+} from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 
 import { useTheme } from '@/src/theme/ThemeContext';
@@ -67,31 +70,167 @@ function MiniTopBar({
 }
 
 
-function Finger({
+/*
+ * ADMFC 7AA.58 — PROFESSIONAL GESTURE ICONS
+ *
+ * O guia não desenha mais anatomia humana.
+ *
+ * Usa ícones vetoriais profissionais já disponíveis
+ * no MaterialCommunityIcons:
+ *
+ * - gesture-tap
+ * - gesture-swipe-horizontal
+ * - gesture-pinch
+ *
+ * O Animated controla apenas movimento e feedback.
+ */
+
+type GestureHandMode =
+  | 'tap'
+  | 'point'
+  | 'pinch';
+
+function GestureHand({
+  mode = 'tap',
   style,
 }: {
+  mode?: GestureHandMode;
   style?: any;
 }) {
+  const motion = useRef(
+    new Animated.Value(0),
+  ).current;
+
+  useEffect(() => {
+    motion.setValue(0);
+
+    const animation = Animated.loop(
+      Animated.sequence([
+        Animated.delay(500),
+
+        Animated.timing(motion, {
+          toValue: 1,
+          duration:
+            mode === 'pinch'
+              ? 700
+              : 380,
+          easing:
+            Easing.inOut(Easing.cubic),
+          useNativeDriver: true,
+        }),
+
+        Animated.delay(
+          mode === 'pinch'
+            ? 450
+            : 220
+        ),
+
+        Animated.timing(motion, {
+          toValue: 0,
+          duration:
+            mode === 'pinch'
+              ? 700
+              : 420,
+          easing:
+            Easing.inOut(Easing.cubic),
+          useNativeDriver: true,
+        }),
+
+        Animated.delay(650),
+      ]),
+    );
+
+    animation.start();
+
+    return () => animation.stop();
+  }, [mode, motion]);
+
+  const iconName =
+    mode === 'pinch'
+      ? 'gesture-pinch'
+      : 'gesture-tap';
+
+  const translateY =
+    motion.interpolate({
+      inputRange: [0, 1],
+      outputRange:
+        mode === 'tap'
+          ? [7, 0]
+          : [0, 0],
+    });
+
+  const scale =
+    motion.interpolate({
+      inputRange: [0, 1],
+      outputRange:
+        mode === 'pinch'
+          ? [0.80, 1.16]
+          : mode === 'tap'
+            ? [1, 0.92]
+            : [1, 0.92],
+    });
+
+  const pulseOpacity =
+    motion.interpolate({
+      inputRange: [0, 0.25, 1],
+      outputRange:
+        mode === 'tap'
+          ? [0, 0.42, 0]
+          : [0, 0, 0],
+    });
+
+  const pulseScale =
+    motion.interpolate({
+      inputRange: [0, 1],
+      outputRange: [0.7, 1.5],
+    });
+
   return (
     <View
       pointerEvents="none"
       style={[
-        styles.fingerHand,
+        styles.gestureHandRoot,
         style,
       ]}
     >
-      <View style={styles.fingerShadow} />
+      {mode === 'tap' ? (
+        <Animated.View
+          style={[
+            styles.gestureTouchPulse,
+            {
+              opacity: pulseOpacity,
+              transform: [
+                { scale: pulseScale },
+              ],
+            },
+          ]}
+        />
+      ) : null}
 
-      <View style={styles.fingerBody}>
-        <View style={styles.fingerNail} />
-        <View style={styles.fingerJoint} />
-      </View>
-
-      <View style={styles.fingerPalm} />
+      <Animated.View
+        style={[
+          styles.gestureIconMotion,
+          {
+            transform: [
+              { translateY },
+              { scale },
+            ],
+          },
+        ]}
+      >
+        <MaterialCommunityIcons
+          name={iconName as any}
+          size={
+            mode === 'pinch'
+              ? 70
+              : 72
+          }
+          color="#D88A68"
+        />
+      </Animated.View>
     </View>
   );
 }
-
 
 /* =========================================================
    PASSO 1
@@ -231,7 +370,7 @@ function HymnalDemo({
           },
         ]}
       >
-        <Finger />
+        <GestureHand mode="tap" />
       </Animated.View>
     </View>
   );
@@ -249,42 +388,94 @@ function SearchDemo({
 }: {
   c: any;
 }) {
-  const cursor = useRef(
+  const [queryText, setQueryText] =
+    useState('');
+
+  const [resultVisible, setResultVisible] =
+    useState(false);
+
+  /*
+   * ADMFC 7AA.58C — busca demonstrativa 1 -> 2 -> 3.
+   *
+   * O gesto toca cada tecla da primeira linha.
+   * O campo é preenchido progressivamente.
+   * O resultado surge somente depois de "123".
+   */
+  const tapX = useRef(
     new Animated.Value(0),
   ).current;
 
   useEffect(() => {
-    const animation = Animated.loop(
-      Animated.sequence([
-        Animated.timing(cursor, {
-          toValue: 1,
-          duration: 900,
-          easing: Easing.inOut(Easing.quad),
+    let cancelled = false;
+
+    const sleep = (ms: number) =>
+      new Promise<void>(resolve => {
+        setTimeout(resolve, ms);
+      });
+
+    const moveTo = (
+      toValue: number,
+      duration = 260,
+    ) =>
+      new Promise<void>(resolve => {
+        Animated.timing(tapX, {
+          toValue,
+          duration,
+          easing: Easing.inOut(Easing.cubic),
           useNativeDriver: true,
-        }),
+        }).start(() => resolve());
+      });
 
-        Animated.delay(700),
+    const run = async () => {
+      while (!cancelled) {
+        setQueryText('');
+        setResultVisible(false);
+        tapX.setValue(0);
 
-        Animated.timing(cursor, {
-          toValue: 0,
-          duration: 500,
-          useNativeDriver: true,
-        }),
+        await sleep(650);
+        if (cancelled) break;
 
-        Animated.delay(500),
-      ]),
-    );
+        setQueryText('1');
 
-    animation.start();
+        await sleep(430);
+        if (cancelled) break;
 
-    return () => animation.stop();
-  }, [cursor]);
+        await moveTo(43);
+        if (cancelled) break;
 
-  const translateX =
-    cursor.interpolate({
-      inputRange: [0, 1],
-      outputRange: [0, 108],
-    });
+        await sleep(180);
+        setQueryText('12');
+
+        await sleep(430);
+        if (cancelled) break;
+
+        await moveTo(86);
+        if (cancelled) break;
+
+        await sleep(180);
+        setQueryText('123');
+
+        await sleep(350);
+        if (cancelled) break;
+
+        setResultVisible(true);
+
+        await sleep(1500);
+        if (cancelled) break;
+
+        await moveTo(0, 420);
+
+        await sleep(500);
+      }
+    };
+
+    run();
+
+    return () => {
+      cancelled = true;
+      tapX.stopAnimation();
+    };
+  }, [tapX]);
 
   return (
     <View
@@ -293,7 +484,7 @@ function SearchDemo({
         {
           backgroundColor: c.surface,
           borderColor: c.border,
-        },
+          },
       ]}
     >
       <MiniTopBar
@@ -323,7 +514,7 @@ function SearchDemo({
             { color: c.onSurface },
           ]}
         >
-          123
+          {queryText || ' '}
         </Text>
       </View>
 
@@ -345,7 +536,11 @@ function SearchDemo({
               styles.key,
               {
                 borderColor: c.border,
-              },
+                  backgroundColor:
+                    queryText.endsWith(n)
+                      ? 'rgba(221,182,46,0.12)'
+                      : 'transparent',
+                },
             ]}
           >
             <Text
@@ -365,6 +560,7 @@ function SearchDemo({
           styles.resultCard,
           {
             borderColor: c.border,
+              opacity: resultVisible ? 1 : 0,
           },
         ]}
       >
@@ -423,12 +619,12 @@ function SearchDemo({
           styles.searchFinger,
           {
             transform: [
-              { translateX },
+              { translateX: tapX },
             ],
           },
         ]}
       >
-        <Finger />
+        <GestureHand mode="point" />
       </Animated.View>
     </View>
   );
@@ -569,8 +765,11 @@ function FavoritesDemo({
     new Animated.Value(1),
   ).current;
 
+  const [sortMode, setSortMode] =
+    useState<'az' | '123' | 'star'>('az');
+
   useEffect(() => {
-    const animation = Animated.loop(
+    const favoriteAnimation = Animated.loop(
       Animated.sequence([
         Animated.delay(500),
 
@@ -590,10 +789,57 @@ function FavoritesDemo({
       ]),
     );
 
-    animation.start();
+    favoriteAnimation.start();
 
-    return () => animation.stop();
+    let cancelled = false;
+
+    const sleep = (ms: number) =>
+      new Promise<void>(resolve => {
+        setTimeout(resolve, ms);
+      });
+
+    const cycleSort = async () => {
+      while (!cancelled) {
+        setSortMode('az');
+        await sleep(1200);
+
+        if (cancelled) break;
+
+        setSortMode('123');
+        await sleep(1200);
+
+        if (cancelled) break;
+
+        setSortMode('star');
+        await sleep(1400);
+      }
+    };
+
+    cycleSort();
+
+    return () => {
+      cancelled = true;
+      favoriteAnimation.stop();
+    };
   }, [favorite]);
+
+  const sortItems = [
+    {
+      key: 'az' as const,
+      label: 'A–Z',
+      text: 'Por título',
+    },
+    {
+      key: '123' as const,
+      label: '123',
+      text: 'Por número',
+    },
+    {
+      key: 'star' as const,
+      label: '★',
+      text: 'Por orden de favoritación',
+    },
+  ];
 
   return (
     <View
@@ -669,9 +915,7 @@ function FavoritesDemo({
       <View
         style={[
           styles.favoriteHint,
-          {
-            borderColor: c.border,
-          },
+          { borderColor: c.border },
         ]}
       >
         <Feather
@@ -689,10 +933,79 @@ function FavoritesDemo({
           Toca la estrella para guardar
         </Text>
       </View>
+
+      <View
+        style={[
+          styles.favoriteSortBox,
+          {
+            backgroundColor:
+              c.surfaceSecondary,
+            borderColor: c.border,
+          },
+        ]}
+      >
+        <Text
+          style={[
+            styles.favoriteSortTitle,
+            { color: c.onSurface },
+          ]}
+        >
+          Ordena tus favoritos
+        </Text>
+
+        <View style={styles.favoriteSortRow}>
+          {sortItems.map(item => {
+            const active =
+              sortMode === item.key;
+
+            return (
+              <View
+                key={item.key}
+                style={[
+                  styles.favoriteSortOption,
+                  {
+                    borderColor:
+                      active
+                        ? '#DDB62E'
+                        : c.border,
+                    backgroundColor:
+                      active
+                        ? 'rgba(221,182,46,0.12)'
+                        : c.surface,
+                  },
+                ]}
+              >
+                <Text
+                  style={[
+                    styles.favoriteSortLabel,
+                    {
+                      color:
+                        active
+                          ? c.brand
+                          : c.onSurface,
+                    },
+                  ]}
+                >
+                  {item.label}
+                </Text>
+
+                <Text
+                  numberOfLines={2}
+                  style={[
+                    styles.favoriteSortText,
+                    { color: c.muted },
+                  ]}
+                >
+                  {item.text}
+                </Text>
+              </View>
+            );
+          })}
+        </View>
+      </View>
     </View>
   );
 }
-
 
 /* =========================================================
    PASSO 5
@@ -744,22 +1057,10 @@ function PinchDemo({
       outputRange: [0.90, 1.14],
     });
 
-  const leftX =
-    zoom.interpolate({
-      inputRange: [0, 1],
-      outputRange: [18, -18],
-    });
-
-  const rightX =
-    zoom.interpolate({
-      inputRange: [0, 1],
-      outputRange: [-18, 18],
-    });
-
   const fingerScale =
     zoom.interpolate({
       inputRange: [0, 0.5, 1],
-      outputRange: [0.94, 1, 0.96],
+      outputRange: [0.96, 1.03, 0.96],
     });
 
   return (
@@ -840,27 +1141,16 @@ function PinchDemo({
 
       <View style={styles.pinchArea}>
         <Animated.View
-          style={{
-            transform: [
-              { translateX: leftX },
-              { scale: fingerScale },
-              { rotate: '-24deg' },
-            ],
-          }}
+          style={[
+            styles.pinchHandMotion,
+            {
+              transform: [
+                { scale: fingerScale },
+              ],
+            },
+          ]}
         >
-          <Finger />
-        </Animated.View>
-
-        <Animated.View
-          style={{
-            transform: [
-              { translateX: rightX },
-              { scale: fingerScale },
-              { rotate: '24deg' },
-            ],
-          }}
-        >
-          <Finger />
+          <GestureHand mode="pinch" />
         </Animated.View>
       </View>
 
@@ -909,6 +1199,10 @@ function CultoDemo({
     new Animated.Value(0),
   ).current;
 
+  const cultoTap = useRef(
+    new Animated.Value(0),
+  ).current;
+
   useEffect(() => {
     const animation = Animated.loop(
       Animated.sequence([
@@ -941,6 +1235,51 @@ function CultoDemo({
       outputRange: [1, 1.035],
     });
 
+  useEffect(() => {
+    const animation = Animated.loop(
+      Animated.sequence([
+        Animated.delay(450),
+
+        Animated.timing(cultoTap, {
+          toValue: 1,
+          duration: 360,
+          easing: Easing.out(Easing.quad),
+          useNativeDriver: true,
+        }),
+
+        Animated.delay(240),
+
+        Animated.timing(cultoTap, {
+          toValue: 0,
+          duration: 420,
+          easing: Easing.inOut(Easing.quad),
+          useNativeDriver: true,
+        }),
+
+        Animated.delay(900),
+      ]),
+    );
+
+    animation.start();
+
+    return () => animation.stop();
+  }, [cultoTap]);
+
+  const cultoTapY = cultoTap.interpolate({
+    inputRange: [0, 1],
+    outputRange: [10, 0],
+  });
+
+  const cultoTapScale = cultoTap.interpolate({
+    inputRange: [0, 1],
+    outputRange: [0.96, 1.03],
+  });
+
+  const cultoTapOpacity = cultoTap.interpolate({
+    inputRange: [0, 0.2, 1],
+    outputRange: [0, 1, 1],
+  });
+
   const hymns = [
     ['1', '123', 'Jehová es mi pastor'],
     ['2', '45', 'Santo, santo, santo'],
@@ -971,10 +1310,7 @@ function CultoDemo({
               {
                 borderBottomColor:
                   c.divider,
-                transform:
-                  index === 0
-                    ? [{ scale }]
-                    : [],
+                transform: [],
               },
             ]}
           >
@@ -1015,23 +1351,47 @@ function CultoDemo({
         ),
       )}
 
-      <View
-        style={[
-          styles.startCulto,
-          {
-            backgroundColor: c.brand,
-          },
-        ]}
-      >
-        <Feather
-          name="play"
-          size={16}
-          color="#FFFFFF"
-        />
+      <View style={styles.startCultoArea}>
+        <Animated.View
+          pointerEvents="none"
+          style={[
+            styles.cultoHandDemo,
+            {
+              opacity: cultoTapOpacity,
+              transform: [
+                { translateY: cultoTapY },
+                { scale: cultoTapScale },
+              ],
+            },
+          ]}
+        >
+          <GestureHand mode="tap" />
+        </Animated.View>
 
-        <Text style={styles.startCultoText}>
-          Iniciar culto
-        </Text>
+        <Animated.View
+          style={{
+            transform: [{ scale }],
+          }}
+        >
+          <View
+            style={[
+              styles.startCulto,
+              {
+                backgroundColor: c.brand,
+              },
+            ]}
+          >
+            <Feather
+              name="play"
+              size={16}
+              color="#FFFFFF"
+            />
+
+            <Text style={styles.startCultoText}>
+              Iniciar culto
+            </Text>
+          </View>
+        </Animated.View>
       </View>
 
       <View style={styles.cultoTips}>
@@ -1101,9 +1461,9 @@ const STEPS = [
   },
 
   {
-    title: 'Guarda tus favoritos',
+    title: 'Guarda y organiza tus favoritos',
     text:
-      'Marca los himnos que más utilizas y accede a ellos rápidamente.',
+      'Marca tus himnos favoritos y ordénalos por título, por número o por el orden en que los agregaste.',
     Demo: FavoritesDemo,
   },
 
@@ -1160,7 +1520,7 @@ export default function Guide() {
        * com router.replace(), portanto pode não
        * existir uma tela anterior válida.
        */
-      router.replace('/' as any);
+      router.replace('/(tabs)' as any);
     }
   };
 
@@ -1568,76 +1928,53 @@ const styles =
       textAlign: 'center',
     },
 
-    fingerHand: {
-      width: 30,
-      height: 62,
-      alignItems: 'center',
+    /* =====================================================
+       ADMFC 7AA.58 — PROFESSIONAL GESTURE ICONS
+       ===================================================== */
+
+    gestureHandRoot: {
+      width: 100,
+      height: 100,
       position: 'relative',
-    },
-
-    fingerShadow: {
-      position: 'absolute',
-      width: 22,
-      height: 50,
-      top: 4,
-      borderRadius: 13,
-      backgroundColor:
-        'rgba(0,0,0,0.13)',
-      transform: [
-        { translateX: 2 },
-        { translateY: 3 },
-      ],
-    },
-
-    fingerBody: {
-      width: 21,
-      height: 48,
-      borderRadius: 12,
-      backgroundColor: '#D7A47D',
-      borderWidth: 1,
-      borderColor: '#B9825D',
       alignItems: 'center',
-      paddingTop: 5,
-      zIndex: 2,
+      justifyContent: 'center',
+      overflow: 'visible',
     },
 
-    fingerNail: {
-      width: 11,
-      height: 13,
-      borderRadius: 6,
-      backgroundColor: '#F1CBB3',
-      borderWidth: 0.7,
-      borderColor: '#C99473',
+    gestureIconMotion: {
+      width: 88,
+      height: 88,
+      alignItems: 'center',
+      justifyContent: 'center',
     },
 
-    fingerJoint: {
+    gestureTouchPulse: {
       position: 'absolute',
-      width: 13,
-      height: 1,
-      bottom: 10,
-      borderRadius: 1,
-      backgroundColor:
-        'rgba(128,79,52,0.25)',
-    },
-
-    fingerPalm: {
-      position: 'absolute',
+      top: 2,
+      left: 36,
       width: 28,
-      height: 22,
-      bottom: 0,
+      height: 28,
       borderRadius: 14,
-      backgroundColor: '#D7A47D',
-      borderWidth: 1,
-      borderColor: '#B9825D',
-      zIndex: 1,
+      borderWidth: 2,
+      borderColor: '#DDB62E',
+      backgroundColor:
+        'rgba(221,182,46,0.08)',
+      zIndex: 5,
     },
 
     demoFingerPosition: {
       position: 'absolute',
-      bottom: 20,
-      left: 69,
+      bottom: 58,
+      left: 51,
     },
 
+    pinchHandMotion: {
+      width: 112,
+      height: 100,
+      alignItems: 'center',
+      justifyContent: 'center',
+      overflow: 'visible',
+    },
     searchBox: {
       height: 42,
       borderWidth: 1,
@@ -1710,8 +2047,8 @@ const styles =
 
     searchFinger: {
       position: 'absolute',
-      bottom: 27,
-      left: 62,
+      bottom: 144,
+      left: -1,
     },
 
     categoryIntro: {
@@ -1788,6 +2125,49 @@ const styles =
       fontWeight: '600',
     },
 
+    favoriteSortBox: {
+      marginTop: 12,
+      borderWidth: 1,
+      borderRadius: 12,
+      padding: 10,
+    },
+
+    favoriteSortTitle: {
+      fontSize: 11,
+      fontWeight: '800',
+      textAlign: 'center',
+      marginBottom: 8,
+    },
+
+    favoriteSortRow: {
+      flexDirection: 'row',
+      gap: 6,
+    },
+
+    favoriteSortOption: {
+      flex: 1,
+      minHeight: 60,
+      borderWidth: 1,
+      borderRadius: 9,
+      paddingHorizontal: 4,
+      paddingVertical: 7,
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+
+    favoriteSortLabel: {
+      fontSize: 14,
+      fontWeight: '900',
+      marginBottom: 2,
+    },
+
+    favoriteSortText: {
+      fontSize: 8,
+      lineHeight: 11,
+      textAlign: 'center',
+      fontWeight: '600',
+    },
+
     readingControls: {
       flexDirection: 'row',
       alignItems: 'center',
@@ -1812,11 +2192,11 @@ const styles =
     },
 
     pinchArea: {
-      height: 55,
-      marginTop: 12,
-      flexDirection: 'row',
+      height: 112,
+      marginTop: 0,
+      alignItems: 'center',
       justifyContent: 'center',
-      gap: 12,
+      overflow: 'visible',
     },
 
     pinchHint: {
@@ -1859,6 +2239,22 @@ const styles =
     cultoTitle: {
       flex: 1,
       fontSize: 10,
+    },
+
+    startCultoArea: {
+      position: 'relative',
+      alignItems: 'center',
+      justifyContent: 'center',
+      marginTop: 10,
+      marginBottom: 8,
+      minHeight: 82,
+    },
+
+    cultoHandDemo: {
+      position: 'absolute',
+      bottom: -18,
+      zIndex: 5,
+      alignSelf: 'center',
     },
 
     startCulto: {

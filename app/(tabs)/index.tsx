@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import {
   View,
   Text,
@@ -6,9 +6,11 @@ import {
   Pressable,
   ScrollView,
   Image,
+  Animated,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
+import { useFocusEffect } from '@react-navigation/native';
 import {
   Feather,
   MaterialCommunityIcons,
@@ -37,11 +39,11 @@ const QUICK_ACCESS = [
     href: '/favorites',
   },
   {
-    key: 'categories',
-    title: 'Categorías',
-    subtitle: 'Explora temas',
-    icon: 'view-grid-outline',
-    href: '/categories',
+    key: 'recents',
+    title: 'Recientes',
+    subtitle: 'Últimos vistos',
+    icon: 'clock-outline',
+    href: '/recents',
   },
   {
     key: 'culto',
@@ -51,11 +53,11 @@ const QUICK_ACCESS = [
     href: '/(tabs)/culto',
   },
   {
-    key: 'recents',
-    title: 'Recientes',
-    subtitle: 'Últimos vistos',
-    icon: 'clock-outline',
-    href: '/recents',
+    key: 'categories',
+    title: 'Categorías',
+    subtitle: 'Explora temas',
+    icon: 'view-grid-outline',
+    href: '/categories',
   },
 ] as const;
 
@@ -93,16 +95,95 @@ const { c, isDark } = useTheme();
   const [categories, setCategories] =
     useState<CategoryItem[]>([]);
 
-  useEffect(() => {
-    (async () => {
-      try {
-        const r = await api.listCategories();
-        setCategories(r.items);
-      } catch {
-        setCategories([]);
-      }
-    })();
+  const [hymnalCounts, setHymnalCounts] = useState({
+    total: 0,
+    gt: 0,
+    sion: 0,
+    canticos: 0,
+  });
+
+  const homeScrollRef = useRef<ScrollView>(null);
+  const scrollHintY = useRef(new Animated.Value(0)).current;
+  const scrollYRef = useRef(0);
+  const viewportHeightRef = useRef(0);
+  const contentHeightRef = useRef(0);
+
+  const [showScrollHint, setShowScrollHint] = useState(true);
+
+  const loadHomeData = useCallback(async () => {
+    try {
+      const [categoryResult, stats] = await Promise.all([
+        api.listCategories(),
+        api.stats(),
+      ]);
+
+      setCategories(categoryResult.items);
+      setHymnalCounts({
+        total: stats.total,
+        gt: stats.gt,
+        sion: stats.sion,
+        canticos: stats.canticos,
+      });
+    } catch {
+      setCategories([]);
+      setHymnalCounts({
+        total: 0,
+        gt: 0,
+        sion: 0,
+        canticos: 0,
+      });
+    }
   }, []);
+
+  useFocusEffect(
+    useCallback(() => {
+      loadHomeData();
+    }, [loadHomeData])
+  );
+
+  useEffect(() => {
+    const animation = Animated.loop(
+      Animated.sequence([
+        Animated.delay(650),
+        Animated.timing(scrollHintY, {
+          toValue: 6,
+          duration: 320,
+          useNativeDriver: true,
+        }),
+        Animated.timing(scrollHintY, {
+          toValue: 0,
+          duration: 320,
+          useNativeDriver: true,
+        }),
+        Animated.delay(350),
+      ]),
+      { iterations: 3 }
+    );
+
+    animation.start();
+
+    return () => animation.stop();
+  }, [scrollHintY]);
+
+  const updateScrollHint = () => {
+    const remaining =
+      contentHeightRef.current -
+      viewportHeightRef.current -
+      scrollYRef.current;
+
+    setShowScrollHint(remaining > 80);
+  };
+
+  const scrollHomeDown = () => {
+    const viewport = viewportHeightRef.current || 500;
+
+    homeScrollRef.current?.scrollTo({
+      y:
+        scrollYRef.current +
+        Math.max(280, viewport * 0.72),
+      animated: true,
+    });
+  };
 
   const categoryCount = (name: string) =>
     categories.find((item) => item.name === name)
@@ -118,8 +199,24 @@ const { c, isDark } = useTheme();
       testID="home-screen"
     >
       <ScrollView
+        ref={homeScrollRef}
         contentContainerStyle={styles.scroll}
         showsVerticalScrollIndicator={false}
+        scrollEventThrottle={16}
+        onLayout={(event) => {
+          viewportHeightRef.current =
+            event.nativeEvent.layout.height;
+          updateScrollHint();
+        }}
+        onContentSizeChange={(_, height) => {
+          contentHeightRef.current = height;
+          updateScrollHint();
+        }}
+        onScroll={(event) => {
+          scrollYRef.current =
+            event.nativeEvent.contentOffset.y;
+          updateScrollHint();
+        }}
       >
         {/* CABEÇALHO */}
         <View style={styles.header}>
@@ -202,13 +299,13 @@ const { c, isDark } = useTheme();
     {
       key: 'gt',
       title: 'Gloria y Triunfo',
-      count: '400 himnos',
+      count: `${hymnalCounts.gt} himnos`,
       href: '/collection?type=gt',
     },
     {
       key: 'sion',
       title: 'Himnos de Sión',
-      count: '318 himnos',
+      count: `${hymnalCounts.sion} himnos`,
       href: '/collection?type=sion',
     },
   ].map((item) => (
@@ -223,6 +320,22 @@ const { c, isDark } = useTheme();
       ]}
       testID={`home-tile-${item.key}`}
     >
+      <View
+        style={[
+          styles.collectionCodeBadge,
+          { borderColor: c.brandSecondary },
+        ]}
+      >
+        <Text
+          style={[
+            styles.collectionCodeText,
+            { color: c.brandSecondary },
+          ]}
+        >
+          {item.key === 'gt' ? 'GT' : 'SN'}
+        </Text>
+      </View>
+
       <View
         style={[
           styles.hymnalIcon,
@@ -255,7 +368,7 @@ const { c, isDark } = useTheme();
           style={[
             styles.hymnalCount,
             {
-              color: isDark ? '#F0D77A' : c.brandTertiary,
+              color: c.brandSecondary,
             },
           ]}
         >
@@ -280,71 +393,54 @@ const { c, isDark } = useTheme();
     </Pressable>
   ))}
 </View>
-
-        {/* CONTINUAR / RECENTES */}
-        <SectionTitle
-          title="Continúa donde paraste"
-          action="Ver recientes"
-          onAction={() =>
-            router.push('/recents' as any)
-          }
-          c={c}
-        />
-
+        {/* CÁNTICOS DE ALABANZA */}
         <Pressable
-          onPress={() =>
-            router.push('/recents' as any)
-          }
+          onPress={() => router.push('/collection?type=cant' as any)}
           style={[
             styles.featureCard,
             {
-              backgroundColor:
-                c.surfaceSecondary,
-              borderColor: c.border,
+              backgroundColor: isDark ? '#0B1B3D' : c.brand,
+              borderColor: c.brand,
+              marginBottom: SPACING.xl,
             },
           ]}
+          testID="home-tile-cant"
         >
           <View
             style={[
-              styles.featureIcon,
-              {
-                borderColor:
-                  c.brandSecondary,
-              },
+              styles.collectionCodeBadge,
+              { borderColor: c.brandSecondary, right: 64 },
             ]}
           >
-            <MaterialCommunityIcons
-              name="history"
-              size={25}
-              color={c.brand}
-            />
-          </View>
-
-          <View style={{ flex: 1 }}>
             <Text
               style={[
-                styles.featureTitle,
-                { color: c.onSurface },
+                styles.collectionCodeText,
+                { color: c.brandSecondary },
               ]}
             >
-              Tus himnos recientes
-            </Text>
-
-            <Text
-              style={[
-                styles.featureSub,
-                { color: c.muted },
-              ]}
-            >
-              Continúa rápidamente desde donde estabas
+              CA
             </Text>
           </View>
 
-          <Feather
-            name="chevron-right"
-            size={22}
-            color={c.brand}
-          />
+          <View style={[styles.featureIcon, { borderColor: c.brandSecondary }]}>
+            <MaterialCommunityIcons name="music-note" size={26} color={c.brandSecondary} />
+          </View>
+          <View style={{ flex: 1, minWidth: 0, paddingRight: 14 }}>
+            <Text
+              style={[styles.featureTitle, { color: '#FFFFFF' }]}
+              numberOfLines={1}
+              adjustsFontSizeToFit
+              minimumFontScale={0.88}
+            >
+              Cánticos de Alabanza
+            </Text>
+            <Text style={[styles.featureSub, { color: c.brandSecondary }]}>
+              {hymnalCounts.canticos} cánticos
+            </Text>
+          </View>
+          <View style={[styles.goldArrow, { backgroundColor: c.brandSecondary }]}>
+            <Feather name="chevron-right" size={22} color="#0B1B3D" />
+          </View>
         </Pressable>
 
         {/* ACESSO RÁPIDO */}
@@ -523,7 +619,7 @@ backgroundColor:
                 },
               ]}
             >
-              Explora todos los himnos
+              Explora todos los himnos y cánticos
             </Text>
 
             <Text
@@ -535,7 +631,7 @@ backgroundColor:
                 },
               ]}
             >
-              718 himnos disponibles
+              {hymnalCounts.total} himnos y cánticos disponibles
             </Text>
           </View>
 
@@ -597,6 +693,41 @@ backgroundColor:
           </View>
         </View>
       </ScrollView>
+
+      {showScrollHint ? (
+        <Animated.View
+          pointerEvents="box-none"
+          style={[
+            styles.scrollHintWrap,
+            {
+              transform: [
+                { translateY: scrollHintY },
+              ],
+            },
+          ]}
+        >
+          <Pressable
+            onPress={scrollHomeDown}
+            hitSlop={12}
+            style={[
+              styles.scrollHintButton,
+              {
+                backgroundColor: c.surface,
+                borderColor: c.border,
+              },
+            ]}
+            accessibilityRole="button"
+            accessibilityLabel="Ver más contenido"
+            testID="home-scroll-hint"
+          >
+            <Feather
+              name="chevron-down"
+              size={23}
+              color={c.brandSecondary}
+            />
+          </Pressable>
+        </Animated.View>
+      ) : null}
     </SafeAreaView>
   );
 }
@@ -661,6 +792,34 @@ const styles = StyleSheet.create({
 
   scroll: {
     paddingBottom: SPACING.xxxl,
+  },
+
+  scrollHintWrap: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    bottom: 10,
+    alignItems: 'center',
+    zIndex: 20,
+    elevation: 20,
+  },
+
+  scrollHintButton: {
+    width: 42,
+    height: 30,
+    borderRadius: 15,
+    borderWidth: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+
+    shadowColor: '#000000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.08,
+    shadowRadius: 5,
+    elevation: 4,
   },
 
   header: {
@@ -801,6 +960,28 @@ const styles = StyleSheet.create({
     fontWeight: '800',
     lineHeight: 21,
     letterSpacing: -0.25,
+  },
+
+  collectionCodeBadge: {
+    position: 'absolute',
+    top: 10,
+    right: 12,
+    minWidth: 27,
+    height: 20,
+    paddingHorizontal: 6,
+    borderRadius: 10,
+    borderWidth: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    zIndex: 5,
+  },
+
+  collectionCodeText: {
+    fontSize: 9,
+    fontWeight: '900',
+    letterSpacing: 0.7,
+    lineHeight: 11,
+    textAlign: 'center',
   },
 
   hymnalCount: {

@@ -8,10 +8,56 @@ import { useTheme } from '@/src/theme/ThemeContext';
 import { SPACING, RADIUS } from '@/src/theme/tokens';
 import { api, Hymn } from '@/src/lib/api';
 
-type Key = 'all' | 'gt' | 'sion';
+type Key = 'all' | 'gt' | 'sion' | 'cant';
 const SEG: { key: Key; label: string }[] = [
-  { key: 'all', label: 'Todos' }, { key: 'gt', label: 'Gloria y Triunfo' }, { key: 'sion', label: 'Himnos de Sión' },
+  { key: 'all', label: 'Todos' }, { key: 'gt', label: 'Gloria y Triunfo' }, { key: 'sion', label: 'Himnos de Sión' }, { key: 'cant', label: 'Cánticos de Alabanza' },
 ];
+
+
+// ADMFC_ADMIN_LOGICAL_COLLECTIONS
+// No Administrativo, "Todos" representa as entradas lógicas
+// de GT, Sión e Cánticos. Um único registro físico pode aparecer
+// em mais de uma coleção sem duplicar sua letra na Base Mestre.
+async function listAdminHymns(
+  col: 'all' | 'gt' | 'sion' | 'cant',
+  q: string,
+) {
+  const query = q || undefined;
+
+  if (col !== 'all') {
+    return api.listHymns({
+      himnario: col,
+      q: query,
+    });
+  }
+
+  const [gt, sion, cant] = await Promise.all([
+    api.listHymns({ himnario: 'gt', q: query }),
+    api.listHymns({ himnario: 'sion', q: query }),
+    api.listHymns({ himnario: 'cant', q: query }),
+  ]);
+
+  return {
+    ...gt,
+    items: [
+      ...gt.items,
+      ...sion.items,
+      ...cant.items,
+    ],
+    total:
+      gt.items.length +
+      sion.items.length +
+      cant.items.length,
+  };
+}
+
+function adminViewForHymn(item: {
+  himnario: string;
+}): 'gt' | 'sion' | 'cant' {
+  if (item.himnario === 'Gloria y Triunfo') return 'gt';
+  if (item.himnario === 'Himnos de Sión') return 'sion';
+  return 'cant';
+}
 
 export default function AdminHymns() {
   const router = useRouter();
@@ -21,12 +67,13 @@ export default function AdminHymns() {
   const [items, setItems] = useState<Hymn[]>([]);
   const [loading, setLoading] = useState(true);
   const inputRef = useRef<TextInput>(null);
+  const clearSearchOnReturnRef = useRef(false);
 
   const load = useCallback(async () => {
     try { await api.me(); } catch { router.replace('/admin-login' as any); return; }
     setLoading(true);
     try {
-      const r = await api.listHymns({ himnario: col === 'all' ? undefined : col, q: q || undefined });
+      const r = await listAdminHymns(col, q);
       setItems(r.items);
     } catch { setItems([]); } finally { setLoading(false); }
   }, [q, col, router]);
@@ -34,6 +81,11 @@ export default function AdminHymns() {
   useEffect(() => { const t = setTimeout(load, 220); return () => clearTimeout(t); }, [load]);
 
   useFocusEffect(useCallback(() => {
+    if (clearSearchOnReturnRef.current) {
+      clearSearchOnReturnRef.current = false;
+      setQ('');
+    }
+
     load();
 
     // ADMFC — ao voltar da edição, reabre o teclado da busca.
@@ -59,7 +111,15 @@ export default function AdminHymns() {
       const result = r.items[0];
       if (!result) return;
 
-      router.push(`/admin/edit/${result.id}` as any);
+      clearSearchOnReturnRef.current = true;
+
+      router.push({
+        pathname: '/admin/edit/[id]',
+        params: {
+          id: result.id,
+          view: adminViewForHymn(result),
+        },
+      } as any);
     } catch {}
   };
 
@@ -67,7 +127,7 @@ export default function AdminHymns() {
     <SafeAreaView style={[styles.container, { backgroundColor: c.surface }]} edges={['top']} testID="admin-hymns-screen">
       <View style={styles.header}>
         <Pressable onPress={() => router.back()} hitSlop={10}><Feather name="chevron-left" size={28} color={c.brand} /></Pressable>
-        <Text style={[styles.title, { color: c.brand }]}>Editor de Himnos</Text>
+        <Text style={[styles.title, { color: c.brand }]}>Editor de Himnos y Cánticos</Text>
         <View style={{ flex: 1 }} />
         <Pressable onPress={() => router.push('/admin/edit/new' as any)} hitSlop={10} testID="admin-new-hymn">
           <Feather name="plus-circle" size={24} color={c.brand} />
@@ -103,9 +163,23 @@ export default function AdminHymns() {
           contentContainerStyle={{ paddingHorizontal: SPACING.lg, paddingBottom: SPACING.xxxl }}
           ItemSeparatorComponent={() => <View style={{ height: StyleSheet.hairlineWidth, backgroundColor: c.divider }} />}
           renderItem={({ item }) => {
-            const short = item.himnario === 'Gloria y Triunfo' ? 'GT' : 'SN';
+            const short = item.himnario === 'Gloria y Triunfo' ? 'GT' : item.himnario === 'Himnos de Sión' ? 'SN' : 'CA';
             return (
-              <Pressable onPress={() => router.push(`/admin/edit/${item.id}` as any)} style={styles.row} testID={`admin-hymn-${item.id}`}>
+              <Pressable
+                onPress={() => {
+                  clearSearchOnReturnRef.current = true;
+
+                  router.push({
+                    pathname: '/admin/edit/[id]',
+                    params: {
+                      id: item.id,
+                      view: adminViewForHymn(item),
+                    },
+                  } as any);
+                }}
+                style={styles.row}
+                testID={`admin-hymn-${item.id}`}
+              >
                 <View style={[styles.badge, { borderColor: c.borderStrong }]}>
                   <Text style={{ color: c.muted, fontSize: 10, fontWeight: '700' }}>{short}</Text>
                   <Text style={{ color: c.brand, fontSize: 17, fontWeight: '800' }}>{item.numero}</Text>
@@ -113,7 +187,7 @@ export default function AdminHymns() {
                 <View style={{ flex: 1 }}>
                   <Text style={{ color: c.onSurface, fontSize: 15, fontWeight: '600' }} numberOfLines={1}>{item.titulo}</Text>
                   <Text style={{ color: c.muted, fontSize: 12 }}>
-                    {item.numero_equivalente ? `Equiv: ${short === 'GT' ? 'Sión' : 'GT'} ${item.numero_equivalente}` : 'Sin equivalencia'}
+                    {item.numero_equivalente ? `Equiv: ${short === 'GT' ? 'Sión' : 'GT'} ${item.numero_equivalente}` : short === 'CA' ? 'Cántico de Alabanza' : 'Sin equivalencia'}
                   </Text>
                 </View>
                 <Feather name="edit-2" size={18} color={c.muted} />

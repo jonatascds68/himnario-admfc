@@ -14,10 +14,12 @@ import { api, Hymn, Bloque, getSections, MediaProvenanceType } from '@/src/lib/a
 
 const GT = 'Gloria y Triunfo';
 const SN = 'Himnos de Sión';
+const CA = 'Cánticos de Alabanza';
 
 interface BlockState {
   tipo: 'estrofa' | 'coro';
   numero: string;
+  rotulo?: string;
   texto: string;
   cifras: string[];
 }
@@ -89,7 +91,10 @@ function parseChordLine(
 }
 
 export default function EditHymn() {
-  const { id } = useLocalSearchParams<{ id: string }>();
+  const { id, view } = useLocalSearchParams<{
+    id: string;
+    view?: 'gt' | 'sion' | 'cant';
+  }>();
   const router = useRouter();
   const { c } = useTheme();
 const insets = useSafeAreaInsets();
@@ -106,6 +111,16 @@ const insets = useSafeAreaInsets();
   const [categoriesExpanded, setCategoriesExpanded] = useState(false);
   const [allCats, setAllCats] = useState<{ id: string; name: string }[]>([]);
   const [msg, setMsg] = useState('');
+
+  /*
+   * ADMFC 7AA.53B:
+   * decisão exclusivamente desta edição.
+   * Sempre inicia desmarcada e não é persistida.
+   */
+  const [
+    propagateLyricsToEquivalent,
+    setPropagateLyricsToEquivalent
+  ] = useState(false);
 
   const [tom, setTom] = useState('');
   const [cifraUrl, setCifraUrl] = useState('');
@@ -142,8 +157,15 @@ const insets = useSafeAreaInsets();
     if (isNew) { setLoading(false); return; }
     setLoading(true);
     try {
-      const h = await api.getHymn(id!);
-      setHymn(h); setHimnario(h.himnario); setNumero(String(h.numero));
+      const rawH = await api.getHymn(id!);
+      const h =
+        rawH && view
+          ? await api.getHymnView(id!, view)
+          : rawH;
+      setPropagateLyricsToEquivalent(false);
+      setHymn(rawH);
+      setHimnario(h.himnario);
+      setNumero(String(h.numero));
       setTitulo(h.titulo); setSelectedCats(h.categorias || []);
       setTom(h.tom || '');
       setCifraUrl(h.cifra_url || '');
@@ -195,12 +217,16 @@ const insets = useSafeAreaInsets();
         return {
           tipo,
           numero,
+          rotulo:
+            sec.kind === 'chorus'
+              ? sec.label ?? 'CORO'
+              : undefined,
           texto: sec.text,
           cifras,
         };
       }));
     } catch { setMsg('No se pudo cargar'); } finally { setLoading(false); }
-  }, [id, isNew, router, loadCats]);
+  }, [id, view, isNew, router, loadCats]);
   useEffect(() => { load(); }, [load]);
 
   const isManagedAudio = (uri?: string | null) => {
@@ -288,12 +314,16 @@ const insets = useSafeAreaInsets();
     }
   };
 
-  const otherHim = himnario === GT ? SN : GT;
-  const otherKey = himnario === GT ? 'sion' : 'gt';
+  const otherHim = himnario === GT ? SN : himnario === SN ? GT : null;
+  const otherKey = himnario === GT ? 'sion' : himnario === SN ? 'gt' : null;
 
   const toBloques = (): Bloque[] => blocks.map((b) => ({
     tipo: b.tipo,
     numero: b.tipo === 'estrofa' && b.numero ? parseInt(b.numero, 10) : null,
+    rotulo:
+      b.tipo === 'coro'
+        ? (b.rotulo || 'CORO')
+        : undefined,
     texto: b.texto,
   }));
 
@@ -315,8 +345,35 @@ const insets = useSafeAreaInsets();
         return;
       }
 
+      const adminViewHimnario =
+        view === 'gt'
+          ? GT
+          : view === 'sion'
+            ? SN
+            : view === 'cant'
+              ? CA
+              : null;
+
+      const isAliasCollectionView =
+        !isNew &&
+        !!hymn &&
+        !!adminViewHimnario &&
+        hymn.himnario !== adminViewHimnario;
+
+      const persistedHimnario =
+        isAliasCollectionView && hymn
+          ? hymn.himnario
+          : himnario;
+
+      const persistedNumero =
+        isAliasCollectionView && hymn
+          ? hymn.numero
+          : n;
+
       const fullPayload: Partial<Hymn> = {
-        himnario, numero: n, titulo: titulo.trim(),
+        himnario: persistedHimnario,
+        numero: persistedNumero,
+        titulo: titulo.trim(),
         categorias: selectedCats,
         bloques: toBloques(),
         cifra_bloques: toCifraBloques(),
@@ -384,6 +441,10 @@ const insets = useSafeAreaInsets();
               sec.kind === 'verse'
                 ? sec.index ?? null
                 : null,
+            rotulo:
+              sec.kind === 'chorus'
+                ? sec.label ?? 'CORO'
+                : undefined,
             texto: sec.text,
           }));
 
@@ -488,7 +549,39 @@ const insets = useSafeAreaInsets();
         const created = await api.createHymn(payload);
         setMsg('Himno creado'); router.replace(`/admin/edit/${created.id}` as any);
       } else {
-        const updated = await api.updateHymn(hymn!.id, payload);
+        /*
+         * ADMFC 7AA.53C:
+         *
+         * A opção "Aplicar también al himno equivalente" é uma
+         * autorização explícita para copiar a LETRA ATUAL do editor.
+         *
+         * Ela não depende de `payload.bloques` ter sobrevivido à poda
+         * administrativa 7AA.39. Essa poda apenas significa que a letra
+         * não mudou novamente no hino de origem.
+         *
+         * Portanto:
+         * - sem autorização: comportamento normal;
+         * - com autorização: envia os bloques atuais + flag transitória;
+         * - a API compara o equivalente e só registra alteração real.
+         */
+        const shouldPropagateLyrics =
+          propagateLyricsToEquivalent &&
+          hymn?.numero_equivalente != null;
+
+        const updatePayload = {
+          ...payload,
+          ...(shouldPropagateLyrics
+            ? {
+                bloques: toBloques(),
+                __propagate_bloques_to_equivalent: true,
+              }
+            : {}),
+        };
+
+        const updated = await api.updateHymn(
+          hymn!.id,
+          updatePayload
+        );
 
         if (
           originalAudioLocal &&
@@ -499,6 +592,7 @@ const insets = useSafeAreaInsets();
 
         setOriginalAudioLocal(audioLocal);
         setHymn(updated);
+        setPropagateLyricsToEquivalent(false);
         setMsg('Cambios guardados');
       }
     } catch (e: any) { setMsg(e?.message || 'Error al guardar'); }
@@ -613,15 +707,15 @@ const insets = useSafeAreaInsets();
   };
 
   // equivalence
-  const openPicker = () => { setPickerQ(''); setPickerResults([]); setPickerOpen(true); searchPicker(''); };
+  const openPicker = () => { if (!otherKey) return; setPickerQ(''); setPickerResults([]); setPickerOpen(true); searchPicker(''); };
   const searchPicker = async (query: string) => {
-    try { const r = await api.listHymns({ himnario: otherKey as any, q: query || undefined }); setPickerResults(r.items.slice(0, 60)); }
+    try { if (!otherKey) { setPickerResults([]); return; } const r = await api.listHymns({ himnario: otherKey as any, q: query || undefined }); setPickerResults(r.items.slice(0, 60)); }
     catch { setPickerResults([]); }
   };
   useEffect(() => { if (pickerOpen) { const t = setTimeout(() => searchPicker(pickerQ), 220); return () => clearTimeout(t); } }, [pickerQ, pickerOpen]);
   const linkEquiv = async (target: Hymn) => {
     setPickerOpen(false); setSaving(true); setMsg('');
-    try { const res = await api.setEquivalence(hymn!.id, otherKey as any, target.numero); setHymn(res.hymn); setMsg(`Equivalencia: ${otherHim} Nº ${target.numero}`); }
+    try { if (!otherKey || !otherHim) throw new Error('Cánticos de Alabanza no usan equivalencia GT/Sión'); const res = await api.setEquivalence(hymn!.id, otherKey as any, target.numero); setHymn(res.hymn); setMsg(`Equivalencia: ${otherHim} Nº ${target.numero}`); }
     catch (e: any) { setMsg(e?.message || 'Error al vincular'); } finally { setSaving(false); }
   };
   const unlinkEquiv = async () => {
@@ -636,18 +730,18 @@ const insets = useSafeAreaInsets();
     <SafeAreaView style={[styles.container, { backgroundColor: c.surface }]} edges={['top']} testID="admin-edit-screen">
       <View style={styles.header}>
         <Pressable onPress={() => router.back()} hitSlop={10}><Feather name="chevron-left" size={28} color={c.brand} /></Pressable>
-        <Text style={[styles.title, { color: c.brand }]}>{isNew ? 'Nuevo Himno' : 'Editar Himno'}</Text>
+        <Text style={[styles.title, { color: c.brand }]}>{isNew ? (himnario === CA ? 'Nuevo Cántico' : 'Nuevo Himno') : (himnario === CA ? 'Editar Cántico' : 'Editar Himno')}</Text>
       </View>
       <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : undefined} style={{ flex: 1 }}>
         <ScrollView contentContainerStyle={{ paddingHorizontal: SPACING.lg, paddingTop: SPACING.sm, paddingBottom: 125 }} keyboardShouldPersistTaps="handled">
           <Label c={c}>Himnario</Label>
           <View style={{ flexDirection: 'row', gap: SPACING.sm }}>
-            {([GT, SN] as Hymn['himnario'][]).map((h) => {
+            {([GT, SN, CA] as Hymn['himnario'][]).map((h) => {
               const active = himnario === h;
               return (
                 <Pressable key={h} onPress={() => setHimnario(h)}
                   style={[styles.himBtn, { borderColor: active ? c.brand : c.border, backgroundColor: active ? c.brand : c.surfaceSecondary }]}
-                  testID={`edit-him-${h === GT ? 'gt' : 'sion'}`}>
+                  testID={`edit-him-${h === GT ? 'gt' : h === SN ? 'sion' : 'cant'}`}>
                   <Text style={{ color: active ? c.onSurfaceInverse : c.onSurface, fontWeight: '600', fontSize: 13 }}>{h}</Text>
                 </Pressable>
               );
@@ -1248,6 +1342,80 @@ const insets = useSafeAreaInsets();
           <Text style={{ color: c.muted, fontSize: 12, marginBottom: SPACING.sm }}>
             Cada bloque es una ESTROFA o el CORO. Solo el CORO recibe el destaque visual.
           </Text>
+
+          {!isNew && hymn?.numero_equivalente != null ? (
+            <Pressable
+              onPress={() =>
+                setPropagateLyricsToEquivalent(
+                  value => !value
+                )
+              }
+              style={[
+                styles.propagateLyricsBox,
+                {
+                  backgroundColor:
+                    propagateLyricsToEquivalent
+                      ? c.surfaceSecondary
+                      : c.surface,
+                  borderColor:
+                    propagateLyricsToEquivalent
+                      ? c.brand
+                      : c.border,
+                },
+              ]}
+              testID="edit-propagate-lyrics"
+            >
+              <View
+                style={[
+                  styles.propagateLyricsCheck,
+                  {
+                    backgroundColor:
+                      propagateLyricsToEquivalent
+                        ? c.brand
+                        : 'transparent',
+                    borderColor:
+                      propagateLyricsToEquivalent
+                        ? c.brand
+                        : c.borderStrong,
+                  },
+                ]}
+              >
+                {propagateLyricsToEquivalent ? (
+                  <Feather
+                    name="check"
+                    size={15}
+                    color={c.onSurfaceInverse}
+                  />
+                ) : null}
+              </View>
+
+              <View style={{ flex: 1 }}>
+                <Text
+                  style={{
+                    color: c.onSurface,
+                    fontWeight: '800',
+                    fontSize: 13,
+                  }}
+                >
+                  Aplicar también al himno equivalente
+                </Text>
+
+                <Text
+                  style={{
+                    color: c.muted,
+                    fontSize: 11,
+                    lineHeight: 16,
+                    marginTop: 2,
+                  }}
+                >
+                  {otherHim} — Nº {hymn.numero_equivalente}.
+                  La letra se mantendrá independiente si esta opción
+                  permanece desmarcada.
+                </Text>
+              </View>
+            </Pressable>
+          ) : null}
+
           {blocks.map((b, i) => (
             <View key={i} style={[styles.blockCard, { borderColor: b.tipo === 'coro' ? c.brandSecondary : c.border, backgroundColor: c.surfaceSecondary }]} testID={`block-${i}`}>
               <View style={styles.blockHead}>
@@ -1566,6 +1734,24 @@ const styles = StyleSheet.create({
   chipsWrap: { flexDirection: 'row', flexWrap: 'wrap', gap: SPACING.sm },
   catChip: { flexDirection: 'row', alignItems: 'center', gap: 4, height: 34, paddingHorizontal: 12, borderRadius: RADIUS.pill, borderWidth: 1 },
   addCatBtn: { width: 44, height: 44, borderRadius: RADIUS.md, borderWidth: 1, alignItems: 'center', justifyContent: 'center' },
+  propagateLyricsBox: {
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    gap: SPACING.sm,
+    borderWidth: 1.5,
+    borderRadius: RADIUS.md,
+    padding: SPACING.md,
+    marginBottom: SPACING.md,
+  },
+  propagateLyricsCheck: {
+    width: 24,
+    height: 24,
+    borderRadius: 6,
+    borderWidth: 1.5,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 1,
+  },
   blockCard: {
     borderRadius: RADIUS.lg,
     borderWidth: 1.5,

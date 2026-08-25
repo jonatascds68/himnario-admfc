@@ -13,9 +13,11 @@ export default function Collection() {
   const router = useRouter();
   const { c } = useTheme();
   const isSion = type === 'sion';
-  const himnario = isSion ? 'sion' : 'gt';
-  const title = isSion ? 'Himnos de Sión' : 'Gloria y Triunfo';
-  const total = isSion ? 318 : 400;
+  const isCant = type === 'cant';
+  const himnario = isCant ? 'cant' : isSion ? 'sion' : 'gt';
+  const title = isCant ? 'Cánticos de Alabanza' : isSion ? 'Himnos de Sión' : 'Gloria y Triunfo';
+  const total = isCant ? 63 : isSion ? 318 : 392;
+  const noun = isCant ? 'cánticos' : 'himnos';
 
   const [all, setAll] = useState<Hymn[]>([]);
   const [items, setItems] = useState<Hymn[]>([]);
@@ -23,15 +25,22 @@ export default function Collection() {
   const [q, setQ] = useState('');
   const [mode, setMode] = useState<'123' | 'abc'>('123');
   const inputRef = useRef<TextInput>(null);
+  const clearSearchOnReturnRef = useRef(false);
 
   useFocusEffect(
     useCallback(() => {
+      if (clearSearchOnReturnRef.current) {
+        clearSearchOnReturnRef.current = false;
+        setQ('');
+        setItems(all);
+      }
+
       const timer = setTimeout(() => {
         inputRef.current?.focus();
       }, 250);
 
       return () => clearTimeout(timer);
-    }, [])
+    }, [all])
   );
 
   useEffect(() => {
@@ -72,7 +81,19 @@ export default function Collection() {
       const result = r.items[0];
       if (!result) return;
 
-      router.push(`/hymn/${result.id}`);
+      const view =
+        result.himnario === 'Gloria y Triunfo'
+          ? 'gt'
+          : result.himnario === 'Himnos de Sión'
+            ? 'sion'
+            : 'cant';
+
+      clearSearchOnReturnRef.current = true;
+
+      router.push({
+        pathname: '/hymn/[id]',
+        params: { id: result.id, view },
+      });
     } catch {}
   };
 
@@ -82,7 +103,7 @@ export default function Collection() {
         <Pressable onPress={() => router.back()} hitSlop={10}><Feather name="chevron-left" size={28} color={c.brand} /></Pressable>
         <View style={{ flex: 1 }}>
           <Text style={[styles.title, { color: c.brand }]}>{title}</Text>
-          <Text style={[styles.sub, { color: c.muted }]}>{total} himnos</Text>
+          <Text style={[styles.sub, { color: c.muted }]}>{total} {noun}</Text>
         </View>
       </View>
 
@@ -90,7 +111,7 @@ export default function Collection() {
         <View style={[styles.box, { backgroundColor: c.surfaceSecondary, borderColor: c.border }]}>
           <Feather name={mode === '123' ? 'hash' : 'search'} size={17} color={c.muted} />
           <TextInput ref={inputRef} value={q} onChangeText={setQ}
-            placeholder={mode === '123' ? 'Número del himno…' : 'Título o palabra de la letra…'}
+            placeholder={mode === '123' ? 'Número…' : 'Título o palabra de la letra…'}
             placeholderTextColor={c.muted} keyboardType={mode === '123' ? 'number-pad' : 'default'}
             autoCorrect={false} autoCapitalize="none" returnKeyType="search" onSubmitEditing={submitSearch}
             style={[styles.input, { color: c.onSurface }]} testID="collection-search-input" />
@@ -113,7 +134,26 @@ export default function Collection() {
         <FlatList data={items} keyExtractor={(h) => h.id}
           contentContainerStyle={{ paddingHorizontal: SPACING.lg, paddingBottom: SPACING.xxxl }}
           ItemSeparatorComponent={() => <View style={{ height: StyleSheet.hairlineWidth, backgroundColor: c.divider }} />}
-          renderItem={({ item }) => <HymnRow hymn={item} onPress={() => router.push(`/hymn/${item.id}`)} />}
+          renderItem={({ item }) => (
+            <HymnRow
+              hymn={item}
+              onPress={() => {
+                const view =
+                  item.himnario === 'Gloria y Triunfo'
+                    ? 'gt'
+                    : item.himnario === 'Himnos de Sión'
+                      ? 'sion'
+                      : 'cant';
+
+                clearSearchOnReturnRef.current = true;
+
+                router.push({
+                  pathname: '/hymn/[id]',
+                  params: { id: item.id, view },
+                });
+              }}
+            />
+          )}
           keyboardShouldPersistTaps="handled"
           ListEmptyComponent={<Text style={{ color: c.muted, textAlign: 'center', marginTop: SPACING.xxxl }}>No se encontraron himnos.</Text>} />
       )}

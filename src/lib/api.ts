@@ -11,8 +11,8 @@ export const adminSession = {
   clear: () => { sessionToken = null; },
 };
 
-export type Himnario = 'Gloria y Triunfo' | 'Himnos de Sión';
-export interface Bloque { tipo: 'estrofa' | 'coro'; numero?: number | null; texto: string; }
+export type Himnario = 'Gloria y Triunfo' | 'Himnos de Sión' | 'Cánticos de Alabanza';
+export interface Bloque { tipo: 'estrofa' | 'coro'; numero?: number | null; rotulo?: string | null; texto: string; }
 export interface CifraSegmento {
   texto: string;
   acorde?: string | null;
@@ -41,8 +41,14 @@ export interface MediaProvenance {
   notas?: string | null;
 }
 
+export interface HymnCollectionRef {
+  himnario: Himnario;
+  numero: number;
+}
+
 export interface Hymn {
   id: string; himnario: Himnario; numero: number; titulo: string; letra?: string;
+  colecciones?: HymnCollectionRef[];
   bloques?: Bloque[] | null; numero_equivalente?: number | null;
   himnario_equivalente?: string | null; estado?: string | null; fuente?: string | null;
 observacion?: string | null;
@@ -69,7 +75,7 @@ export interface AdminHymnChange {
   himnario: Himnario;
   numero: number;
   titulo: string;
-  action: 'update';
+  action: 'create' | 'update' | 'delete';
   changed_fields: string[];
   before: Partial<Hymn>;
   after: Partial<Hymn>;
@@ -93,16 +99,21 @@ const DEFAULT_CATEGORIES = [
   "Cielo - Gloriosa Esperanza",
   "Consagración",
   "Coros",
+  "Cumpleaños",
   "Despedida",
   "Escuela Dominical",
+  "Evangelismo",
   "Fe y Confianza",
+  "Funeral",
   "Gozo y Paz de los Creyentes",
   "Iglesia",
-  "Invitación",
+  "Invitación al Pecador",
   "Jesús Salvador y Amigo",
   "Navidad",
   "Oración - Culto",
   "Pascua",
+  "Presentación de Niños",
+  "Reunión de Obreros",
   "Sagradas Escrituras",
   "Sanidad Divina",
   "Sangre, Redención, Salvación",
@@ -113,7 +124,7 @@ const DEFAULT_CATEGORIES = [
 const DB_KEY = 'admfc_local_db_v1';
 const ADMIN_CHANGES_KEY = 'admfc_admin_changes_v1';
 const DB_DATA_VERSION_KEY = 'admfc_local_db_data_version';
-const DB_DATA_VERSION = '7';
+const DB_DATA_VERSION = '21';
 
 /*
  * ADMFC 7AA.44 — revisão da atualização remota de conteúdo.
@@ -161,11 +172,369 @@ function normalize(s: string) {
 async function loadDb(): Promise<LocalDb> {
   const raw = await kv.get(DB_KEY);
 const dataVersion = await kv.get(DB_DATA_VERSION_KEY);
+
+  /*
+   * ADMFC V18 — taxonomia oficial revisada.
+   *
+   * A classificação dos 710 registros foi revista semanticamente.
+   * Nesta migração específica, categorias da Base Mestre substituem
+   * a classificação local anterior.
+   *
+   * Depois de V18, `categorias` volta a ser preservado normalmente
+   * pelas próximas migrações, permitindo edição administrativa.
+   */
+  const applyCategoryTaxonomyV18 =
+    !dataVersion ||
+    (
+      Number.isFinite(Number(dataVersion)) &&
+      Number(dataVersion) < 18
+    );
 if (raw && dataVersion !== DB_DATA_VERSION) {
   try {
     const db = JSON.parse(raw) as LocalDb;
     const freshHymns = ((seed as any).himnos || []) as Hymn[];
-    db.hymns = freshHymns;
+
+    /*
+     * ADMFC 7AA.60 — migração editorial controlada V7 -> V8.
+     *
+     * O seed é autoridade para título, letra, bloques, tom,
+     * equivalências e fonte editorial.
+     *
+     * Do aparelho preservamos apenas metadados locais que não
+     * fazem parte da revisão editorial.
+     */
+    const currentById = new Map(
+      (Array.isArray(db.hymns) ? db.hymns : []).map(h => [h.id, h])
+    );
+
+    const localOnlyKeys: (keyof Hymn)[] = [
+      'categorias',
+      'estado',
+      'has_lyrics',
+      'cifra',
+      'cifra_bloques',
+      'cifra_url',
+      'audio_url',
+      'audio_local',
+      'audio_external_url',
+      'cifra_autorizada',
+      'cifra_procedencia',
+      'audio_autorizado',
+      'audio_procedencia',
+    ];
+
+    db.hymns = freshHymns.map(fresh => {
+      const current = currentById.get(fresh.id);
+
+      if (!current) {
+        return fresh;
+      }
+
+      const migrated: Hymn = {
+        ...fresh,
+      };
+
+      for (const key of localOnlyKeys) {
+        /*
+         * V18: somente nesta migração não preservamos `categorias`,
+         * porque a nova taxonomia revisada passa a ser a fonte oficial.
+         *
+         * A partir da V18 instalada, versões futuras voltam a preservar
+         * normalmente as edições administrativas de categorias.
+         */
+        if (
+          key === 'categorias' &&
+          applyCategoryTaxonomyV18
+        ) {
+          continue;
+        }
+
+        if (Object.prototype.hasOwnProperty.call(current, key)) {
+          (migrated as any)[key] = (current as any)[key];
+        }
+      }
+
+      return migrated;
+    });
+
+    if (!Array.isArray(db.categories)) {
+      db.categories = [];
+    }
+
+    if (applyCategoryTaxonomyV18) {
+      /*
+       * Mantém categorias administrativas personalizadas.
+       * Remove somente o nome oficial antigo "Invitación".
+       */
+      db.categories = db.categories.filter(
+        category =>
+          normalize(category.name) !== normalize('Invitación')
+      );
+
+      /*
+       * Garante que toda a nova taxonomia oficial exista no catálogo.
+       */
+      for (const name of DEFAULT_CATEGORIES) {
+        if (
+          !db.categories.some(
+            category =>
+              normalize(category.name) === normalize(name)
+          )
+        ) {
+          db.categories.push({
+            id: `default-${normalize(name).replace(/[^a-z0-9]+/g, '-')}`,
+            name,
+          });
+        }
+      }
+    }
+
+    /*
+     * ADMFC V21 — catálogo oficial de categorias.
+     *
+     * A partir desta versão, toda migração de dados garante que
+     * DEFAULT_CATEGORIES esteja presente no banco local.
+     *
+     * Isso permite introduzir novas categorias oficiais, como
+     * `Cumpleaños`, sem apagar categorias administrativas existentes.
+     */
+    for (const name of DEFAULT_CATEGORIES) {
+      if (
+        !db.categories.some(
+          category =>
+            normalize(category.name) === normalize(name)
+        )
+      ) {
+        db.categories.push({
+          id: `default-${normalize(name).replace(/[^a-z0-9]+/g, '-')}`,
+          name,
+        });
+      }
+    }
+
+    /*
+     * Favoritos, recientes e lista de culto vivem em chaves próprias.
+     * Mantemos IDs válidos e removemos somente referências órfãs,
+     * como antigos GT-330..GT-400.
+     */
+    const validIds = new Set(db.hymns.map(h => h.id));
+    const collectionKeys = [
+      'admfc_favorites',
+      'admfc_recents',
+      'admfc_playlist',
+    ];
+
+    for (const key of collectionKeys) {
+      const collectionRaw = await kv.get(key);
+
+      if (!collectionRaw) {
+        continue;
+      }
+
+      try {
+        const parsed = JSON.parse(collectionRaw);
+
+        if (!Array.isArray(parsed)) {
+          continue;
+        }
+
+        const cleaned = parsed.filter(
+          (id): id is string =>
+            typeof id === 'string' &&
+            validIds.has(id)
+        );
+
+        if (
+          cleaned.length !== parsed.length ||
+          cleaned.some((id, index) => id !== parsed[index])
+        ) {
+          await kv.set(key, JSON.stringify(cleaned));
+        }
+      } catch {
+        // Coleção inválida não impede a migração da Base Mestre.
+      }
+    }
+
+    /*
+     * ADMFC V18 — absorção das classificações administrativas antigas.
+     *
+     * A nova classificação semântica dos 710 registros já foi incorporada
+     * oficialmente à Base Mestre. Portanto removemos da fila pendente
+     * SOMENTE o campo `categorias`.
+     *
+     * Outros campos pendentes continuam preservados.
+     */
+    if (applyCategoryTaxonomyV18) {
+      const categoryChangesRaw = await kv.get(ADMIN_CHANGES_KEY);
+
+      if (categoryChangesRaw) {
+        try {
+          const parsedChanges = JSON.parse(categoryChangesRaw);
+
+          if (Array.isArray(parsedChanges)) {
+            const cleanedChanges = parsedChanges.flatMap(
+              (item: any) => {
+                if (
+                  item?.action !== 'update' ||
+                  !Array.isArray(item?.changed_fields) ||
+                  !item.changed_fields.includes('categorias')
+                ) {
+                  return [item];
+                }
+
+                const next = {
+                  ...item,
+                  changed_fields: item.changed_fields.filter(
+                    (field: string) => field !== 'categorias'
+                  ),
+                  before: { ...(item.before || {}) },
+                  after: { ...(item.after || {}) },
+                };
+
+                delete next.before.categorias;
+                delete next.after.categorias;
+
+                return next.changed_fields.length
+                  ? [next]
+                  : [];
+              }
+            );
+
+            await kv.set(
+              ADMIN_CHANGES_KEY,
+              JSON.stringify(cleanedChanges)
+            );
+          }
+        } catch {
+          // Pendência inválida não impede a migração oficial V18.
+        }
+      }
+    }
+
+    /*
+     * ADMFC 7AA.61 — limpeza cirúrgica da pendência de teste do GT-100.
+     *
+     * O administrador alterou temporariamente o título para
+     * "A LOS PIES DE JESUCRISTO VERIFICAR" apenas para validar
+     * o fluxo de Cambios pendientes. Removemos somente esse campo
+     * de teste; quaisquer outras correções permanecem intactas.
+     */
+    const adminChangesRaw = await kv.get(ADMIN_CHANGES_KEY);
+
+    if (adminChangesRaw) {
+      try {
+        const parsedChanges = JSON.parse(adminChangesRaw);
+
+        if (Array.isArray(parsedChanges)) {
+          const cleanedChanges = parsedChanges.flatMap((item: any) => {
+            const isGt100TitleTest =
+              item?.hymn_id === 'GT-100' &&
+              item?.action === 'update' &&
+              Array.isArray(item?.changed_fields) &&
+              item.changed_fields.includes('titulo') &&
+              item?.after?.titulo ===
+                'A LOS PIES DE JESUCRISTO VERIFICAR';
+
+            if (!isGt100TitleTest) {
+              return [item];
+            }
+
+            const next = {
+              ...item,
+              changed_fields: item.changed_fields.filter(
+                (field: string) => field !== 'titulo'
+              ),
+              before: { ...(item.before || {}) },
+              after: { ...(item.after || {}) },
+            };
+
+            delete next.before.titulo;
+            delete next.after.titulo;
+
+            return next.changed_fields.length ? [next] : [];
+          });
+
+          await kv.set(
+            ADMIN_CHANGES_KEY,
+            JSON.stringify(cleanedChanges)
+          );
+        }
+      } catch {
+        // A limpeza da pendência de teste nunca deve impedir a migração.
+      }
+    }
+
+    /*
+     * ADMFC V12 — DILO A CRISTO.
+     *
+     * GT-074 passa a trazer oficialmente na Base Mestre os quatro coros
+     * completos. A edição manual usada para validar essa apresentação já foi
+     * absorvida pela base; removemos SOMENTE o campo `bloques` pendente de
+     * GT-074. Qualquer outro campo ou qualquer outra correção permanece.
+     */
+    const gt74ChangesRaw = await kv.get(ADMIN_CHANGES_KEY);
+
+    if (gt74ChangesRaw) {
+      try {
+        const parsedChanges = JSON.parse(gt74ChangesRaw);
+
+        if (Array.isArray(parsedChanges)) {
+          const cleanedChanges = parsedChanges.flatMap((item: any) => {
+            const absorbedGt74Bloques =
+              item?.hymn_id === 'GT-074' &&
+              item?.action === 'update' &&
+              Array.isArray(item?.changed_fields) &&
+              item.changed_fields.includes('bloques');
+
+            if (!absorbedGt74Bloques) {
+              return [item];
+            }
+
+            const next = {
+              ...item,
+              changed_fields: item.changed_fields.filter(
+                (field: string) => field !== 'bloques'
+              ),
+              before: { ...(item.before || {}) },
+              after: { ...(item.after || {}) },
+            };
+
+            delete next.before.bloques;
+            delete next.after.bloques;
+
+            return next.changed_fields.length ? [next] : [];
+          });
+
+          await kv.set(
+            ADMIN_CHANGES_KEY,
+            JSON.stringify(cleanedChanges)
+          );
+        }
+      } catch {
+        // A absorção da pendência não pode impedir a migração V12.
+      }
+    }
+
+    /*
+     * ADMFC V19 — correção semântica de Bodas.
+     *
+     * Sión 214 e Sión 246 tratam das bodas do Cordeiro / preparação
+     * espiritual da Igreja, não de casamento entre pessoas.
+     *
+     * Removemos SOMENTE `Bodas` desses dois registros.
+     * Todas as demais categorias e alterações locais permanecem intactas.
+     */
+    for (const hymn of db.hymns) {
+      if (
+        hymn.id === 'SION-214' ||
+        hymn.id === 'SION-246'
+      ) {
+        hymn.categorias = (hymn.categorias || []).filter(
+          category => category !== 'Bodas'
+        );
+      }
+    }
+
     await saveDb(db);
     await kv.set(DB_DATA_VERSION_KEY, DB_DATA_VERSION);
     return db;
@@ -298,7 +667,108 @@ async function saveAdminChanges(changes: AdminHymnChange[]) {
   await kv.set(ADMIN_CHANGES_KEY, JSON.stringify(changes));
 }
 
+/*
+ * ADMFC 7AA.54A:
+ *
+ * Comparação semântica de valores administrativos.
+ *
+ * `bloques` pode ter a mesma letra/estrutura lógica proveniente de
+ * representações diferentes:
+ * - reconstrução da `letra` legada;
+ * - bloques persistidos pelo editor.
+ *
+ * Diferenças irrelevantes de CRLF/LF, espaços no fim das linhas ou
+ * representação do número não devem manter uma correção pendente.
+ */
+function normalizeBlockText(value: any): string {
+  return String(value ?? '')
+    .replace(/\r\n/g, '\n')
+    .replace(/\r/g, '\n')
+    .split('\n')
+    .map(line => line.trimEnd())
+    .join('\n')
+    .trim();
+}
+
+function normalizeBloquesForComparison(value: any): any {
+  if (!Array.isArray(value)) return value ?? null;
+
+  return value.map(block => {
+    const tipo =
+      block?.tipo === 'coro'
+        ? 'coro'
+        : 'estrofa';
+
+    let numero: number | null = null;
+
+    if (tipo === 'estrofa') {
+      const parsed = Number(block?.numero);
+
+      numero =
+        Number.isFinite(parsed) && parsed > 0
+          ? parsed
+          : null;
+    }
+
+    return {
+      tipo,
+      numero,
+      rotulo:
+        tipo === 'coro'
+          ? String(block?.rotulo || 'CORO').trim().toUpperCase()
+          : null,
+      texto: normalizeBlockText(block?.texto),
+    };
+  });
+}
+
 function sameValue(a: any, b: any) {
+  /*
+   * Somente `bloques` da LETRA devem passar pela normalização
+   * semântica abaixo.
+   *
+   * `cifra_bloques` também possui `tipo`, mas sua informação real
+   * está em lineas -> segmentos -> acorde/texto. Se tratarmos
+   * cifra_bloques como bloques da letra, alterações internas de
+   * acordes podem ser consideradas falsamente iguais.
+   */
+  const aLooksLikeLyricsBloques =
+    Array.isArray(a) &&
+    a.length > 0 &&
+    a.every(
+      item =>
+        item &&
+        typeof item === 'object' &&
+        Object.prototype.hasOwnProperty.call(
+          item,
+          'texto'
+        )
+    );
+
+  const bLooksLikeLyricsBloques =
+    Array.isArray(b) &&
+    b.length > 0 &&
+    b.every(
+      item =>
+        item &&
+        typeof item === 'object' &&
+        Object.prototype.hasOwnProperty.call(
+          item,
+          'texto'
+        )
+    );
+
+  if (
+    aLooksLikeLyricsBloques ||
+    bLooksLikeLyricsBloques
+  ) {
+    return JSON.stringify(
+      normalizeBloquesForComparison(a)
+    ) === JSON.stringify(
+      normalizeBloquesForComparison(b)
+    );
+  }
+
   return JSON.stringify(a ?? null) === JSON.stringify(b ?? null);
 }
 
@@ -314,9 +784,70 @@ async function registerHymnUpdate(
     )
   );
 
-  if (!changedFields.length) return;
-
   const changes = await loadAdminChanges();
+
+  /*
+   * ADMFC 7AA.54B:
+   *
+   * Antes de registrar novas alterações, reconciliamos qualquer
+   * pendência já existente deste hino com seu estado ATUAL.
+   *
+   * Isso é necessário porque um salvamento pode não produzir
+   * changedFields entre `before` e `after`, mas ainda assim o
+   * estado atual pode ter retornado ao BEFORE original guardado
+   * na fila administrativa.
+   *
+   * Exemplo:
+   * - edição A cria uma pendência em `bloques`;
+   * - posteriormente o administrador restaura o conteúdo;
+   * - se o último save não gerar diferença local nova, a antiga
+   *   implementação retornava antes de limpar a pendência.
+   *
+   * A reconciliação é feita campo por campo e preserva qualquer
+   * outra alteração realmente pendente.
+   */
+  const pending = changes.find(
+    item =>
+      item.hymn_id === after.id &&
+      item.action === 'update'
+  );
+
+  if (pending) {
+    for (const field of [...pending.changed_fields]) {
+      if (
+        Object.prototype.hasOwnProperty.call(
+          pending.before,
+          field
+        ) &&
+        sameValue(
+          (pending.before as any)[field],
+          (after as any)[field]
+        )
+      ) {
+        pending.changed_fields =
+          pending.changed_fields.filter(
+            currentField => currentField !== field
+          );
+
+        delete (pending.before as any)[field];
+        delete (pending.after as any)[field];
+      }
+    }
+
+    if (!pending.changed_fields.length) {
+      await saveAdminChanges(
+        changes.filter(item => item.id !== pending.id)
+      );
+    } else {
+      await saveAdminChanges(changes);
+    }
+  }
+
+  /*
+   * Se o save atual não produziu nenhuma diferença nova,
+   * a reconciliação acima já concluiu todo o trabalho necessário.
+   */
+  if (!changedFields.length) return;
 
   /*
    * ADMFC 7AA:
@@ -364,6 +895,10 @@ async function registerHymnUpdate(
             sec.kind === 'verse'
               ? sec.index ?? null
               : null,
+          rotulo:
+            sec.kind === 'chorus'
+              ? sec.label ?? 'CORO'
+              : undefined,
           texto: sec.text,
         }));
       } else {
@@ -417,6 +952,10 @@ async function registerHymnUpdate(
             sec.kind === 'verse'
               ? sec.index ?? null
               : null,
+          rotulo:
+            sec.kind === 'chorus'
+              ? sec.label ?? 'CORO'
+              : undefined,
           texto: sec.text,
         }));
       } else {
@@ -480,8 +1019,42 @@ async function registerHymnUpdate(
   await saveAdminChanges(changes);
 }
 
-function keyToName(k?: 'gt'|'sion') { return k === 'gt' ? 'Gloria y Triunfo' : k === 'sion' ? 'Himnos de Sión' : undefined; }
-function nameToKey(n?: string) { return n === 'Gloria y Triunfo' ? 'gt' : 'sion'; }
+type HimnarioKey = 'gt' | 'sion' | 'cant';
+function keyToName(k?: HimnarioKey) { return k === 'gt' ? 'Gloria y Triunfo' : k === 'sion' ? 'Himnos de Sión' : k === 'cant' ? 'Cánticos de Alabanza' : undefined; }
+function nameToKey(n?: string): HimnarioKey | undefined { return n === 'Gloria y Triunfo' ? 'gt' : n === 'Himnos de Sión' ? 'sion' : n === 'Cánticos de Alabanza' ? 'cant' : undefined; }
+
+function collectionNumber(
+  hymn: Hymn,
+  himnario: Himnario
+): number | null {
+  if (hymn.himnario === himnario) {
+    return hymn.numero;
+  }
+
+  const ref = (hymn.colecciones || []).find(
+    item => item.himnario === himnario
+  );
+
+  return ref?.numero ?? null;
+}
+
+function asCollectionView(
+  hymn: Hymn,
+  himnario: Himnario
+): Hymn {
+  const numero = collectionNumber(hymn, himnario);
+
+  if (numero == null) {
+    return hymn;
+  }
+
+  return {
+    ...hymn,
+    himnario,
+    numero,
+  };
+}
+
 function requireAuth() { if (!sessionToken) throw new Error('No autorizado'); }
 
 async function sha256(value: string): Promise<string> {
@@ -507,7 +1080,8 @@ async function sha256(value: string): Promise<string> {
 
 export interface ContentPatch {
   hymn_id: string;
-  fields: Partial<Hymn>;
+  operation?: 'update' | 'create' | 'delete';
+  fields?: Partial<Hymn>;
 }
 
 export interface ContentPatchPackage {
@@ -521,6 +1095,7 @@ const REMOTE_HYMN_FIELDS = new Set<keyof Hymn>([
   'numero',
   'titulo',
   'letra',
+  'colecciones',
   'bloques',
   'numero_equivalente',
   'himnario_equivalente',
@@ -561,7 +1136,7 @@ export function adminChangesToContentPackage(
   const patches: ContentPatch[] = changes.map(change => {
     if (
       !change ||
-      change.action !== 'update' ||
+      !['create', 'update', 'delete'].includes(change.action) ||
       typeof change.hymn_id !== 'string' ||
       !change.hymn_id.trim() ||
       !Array.isArray(change.changed_fields)
@@ -569,30 +1144,43 @@ export function adminChangesToContentPackage(
       throw new Error('Cambio administrativo inválido');
     }
 
-    const fields: Partial<Hymn> = {};
+    if (change.action === 'delete') {
+      return { hymn_id: change.hymn_id, operation: 'delete', fields: {} };
+    }
 
-    for (const field of change.changed_fields) {
-      if (
-        field === 'id' ||
-        field === 'audio_local' ||
-        !REMOTE_HYMN_FIELDS.has(field as keyof Hymn)
-      ) {
-        throw new Error(
-          `Campo no publicable: ${field}`
-        );
+    const fields: Partial<Hymn> = {};
+    const names =
+      change.action === 'create'
+        ? Object.keys(change.after || {})
+        : change.changed_fields;
+
+    for (const field of names) {
+      if (field === 'id' || field === 'audio_local') continue;
+
+      if (!REMOTE_HYMN_FIELDS.has(field as keyof Hymn)) {
+        if (change.action === 'update') {
+          throw new Error(`Campo no publicable: ${field}`);
+        }
+        continue;
       }
 
       if (!Object.prototype.hasOwnProperty.call(change.after, field)) {
-        throw new Error(
-          `Valor final ausente para: ${field}`
-        );
+        throw new Error(`Valor final ausente para: ${field}`);
       }
 
       (fields as any)[field] = (change.after as any)[field];
     }
 
+    if (
+      change.action === 'create' &&
+      (!fields.himnario || !fields.numero || !fields.titulo)
+    ) {
+      throw new Error(`Nuevo himno/cántico incompleto: ${change.hymn_id}`);
+    }
+
     return {
       hymn_id: change.hymn_id,
+      operation: change.action,
       fields,
     };
   });
@@ -628,11 +1216,6 @@ export async function applyContentPatchPackage(
 
   const currentRevision = await getContentRevision();
 
-  /*
-   * Revisões são monotônicas:
-   * - pacote já aplicado: não reaplica;
-   * - pacote antigo: não provoca regressão.
-   */
   if (pkg.revision <= currentRevision) {
     return {
       ok: true,
@@ -643,64 +1226,96 @@ export async function applyContentPatchPackage(
   }
 
   const db = await loadDb();
-
-  /*
-   * Trabalhamos sobre uma cópia profunda.
-   * Nada é persistido enquanto o pacote inteiro não for validado.
-   */
   const nextDb = JSON.parse(JSON.stringify(db)) as LocalDb;
 
   for (const patch of pkg.patches) {
     if (
       !patch ||
       typeof patch.hymn_id !== 'string' ||
-      !patch.hymn_id.trim() ||
-      !patch.fields ||
-      typeof patch.fields !== 'object' ||
-      Array.isArray(patch.fields)
+      !patch.hymn_id.trim()
     ) {
-      throw new Error('Corrección de himno inválida');
+      throw new Error('Corrección de himno/cántico inválida');
     }
 
-    const hymn = nextDb.hymns.find(h => h.id === patch.hymn_id);
+    const operation = patch.operation || 'update';
 
-    if (!hymn) {
-      throw new Error(`Himno desconocido: ${patch.hymn_id}`);
+    if (operation === 'delete') {
+      nextDb.hymns = nextDb.hymns.filter(h => h.id !== patch.hymn_id);
+      continue;
     }
 
-    for (const [field, value] of Object.entries(patch.fields)) {
+    const fields = patch.fields;
+
+    if (!fields || typeof fields !== 'object' || Array.isArray(fields)) {
+      throw new Error('Campos remotos inválidos');
+    }
+
+    const cleanFields: Partial<Hymn> = {};
+
+    for (const [field, value] of Object.entries(fields)) {
       if (
         field === 'id' ||
         field === 'audio_local' ||
         !REMOTE_HYMN_FIELDS.has(field as keyof Hymn)
       ) {
-        throw new Error(
-          `Campo remoto no permitido: ${field}`
-        );
+        throw new Error(`Campo remoto no permitido: ${field}`);
       }
 
-      (hymn as any)[field] = value;
+      (cleanFields as any)[field] = value;
     }
 
-    /*
-     * A identidade permanente deve continuar intacta.
-     */
-    if (hymn.id !== patch.hymn_id) {
-      throw new Error(
-        `Identidad de himno alterada: ${patch.hymn_id}`
-      );
+    if (operation === 'create') {
+      if (nextDb.hymns.some(h => h.id === patch.hymn_id)) {
+        throw new Error(`Identidad ya existente: ${patch.hymn_id}`);
+      }
+
+      if (
+        !cleanFields.himnario ||
+        !cleanFields.numero ||
+        !cleanFields.titulo
+      ) {
+        throw new Error(`Nuevo himno/cántico incompleto: ${patch.hymn_id}`);
+      }
+
+      nextDb.hymns.push({
+        ...cleanFields,
+        id: patch.hymn_id,
+      } as Hymn);
+
+      continue;
     }
+
+    const hymn = nextDb.hymns.find(h => h.id === patch.hymn_id);
+
+    if (!hymn) {
+      throw new Error(`Himno/cántico desconocido: ${patch.hymn_id}`);
+    }
+
+    Object.assign(hymn, cleanFields);
   }
 
-  /*
-   * Um único save depois da validação completa.
-   */
   await saveDb(nextDb);
 
-  /*
-   * A revisão só é registrada DEPOIS que a nova base foi salva.
-   * Um pacote inválido nunca avança a revisão local.
-   */
+  const validIds = new Set(nextDb.hymns.map(h => h.id));
+
+  for (const key of ['admfc_favorites', 'admfc_recents', 'admfc_playlist']) {
+    const raw = await kv.get(key);
+    if (!raw) continue;
+
+    try {
+      const parsed = JSON.parse(raw);
+      if (Array.isArray(parsed)) {
+        const cleaned = parsed.filter(
+          (id): id is string =>
+            typeof id === 'string' && validIds.has(id)
+        );
+        if (cleaned.length !== parsed.length) {
+          await kv.set(key, JSON.stringify(cleaned));
+        }
+      }
+    } catch {}
+  }
+
   await kv.set(CONTENT_REVISION_KEY, String(pkg.revision));
 
   return {
@@ -711,6 +1326,142 @@ export async function applyContentPatchPackage(
   };
 }
 
+
+/*
+ * ADMFC V19 — visualização lógica das categorias.
+ *
+ * Uma categoria representa cânticos, e não registros físicos duplicados.
+ *
+ * Prioridade de apresentação:
+ *   1. Gloria y Triunfo
+ *   2. Himnos de Sión
+ *   3. Cánticos de Alabanza
+ *
+ * Regras:
+ * - GT + Sión equivalentes aparecem somente como GT;
+ * - Cánticos de Alabanza que também pertencem a GT 330–392
+ *   aparecem como GT;
+ * - Sión exclusivo permanece;
+ * - CA exclusivo permanece;
+ * - a categoria pode estar vinculada a qualquer uma das versões
+ *   equivalentes: o resultado continua sendo apresentado pela visão
+ *   preferencial.
+ */
+function categoryPreferredItems(
+  hymns: Hymn[],
+  category: string
+): Hymn[] {
+  const matched = hymns.filter(
+    hymn => (hymn.categorias || []).includes(category)
+  );
+
+  const result = new Map<string, Hymn>();
+
+  for (const hymn of matched) {
+    /*
+     * O próprio registro possui numeração GT — incluindo os registros
+     * físicos CANT-xxx compartilhados com GT 330–392.
+     */
+    const ownGtNumber = collectionNumber(
+      hymn,
+      'Gloria y Triunfo'
+    );
+
+    if (ownGtNumber != null) {
+      const preferred = asCollectionView(
+        hymn,
+        'Gloria y Triunfo'
+      );
+
+      result.set(`gt:${preferred.numero}`, preferred);
+      continue;
+    }
+
+    /*
+     * O registro é Sión e possui equivalente em Gloria y Triunfo.
+     * Procuramos o master correspondente e mostramos a visão GT.
+     */
+    if (
+      hymn.himnario_equivalente === 'Gloria y Triunfo' &&
+      hymn.numero_equivalente != null
+    ) {
+      const gtMaster = hymns.find(
+        candidate =>
+          collectionNumber(
+            candidate,
+            'Gloria y Triunfo'
+          ) === hymn.numero_equivalente
+      );
+
+      if (gtMaster) {
+        const preferred = asCollectionView(
+          gtMaster,
+          'Gloria y Triunfo'
+        );
+
+        result.set(`gt:${preferred.numero}`, preferred);
+        continue;
+      }
+    }
+
+    /*
+     * Sión exclusivo.
+     */
+    const ownSionNumber = collectionNumber(
+      hymn,
+      'Himnos de Sión'
+    );
+
+    if (ownSionNumber != null) {
+      const preferred = asCollectionView(
+        hymn,
+        'Himnos de Sión'
+      );
+
+      result.set(`sion:${preferred.numero}`, preferred);
+      continue;
+    }
+
+    /*
+     * Cántico de Alabanza exclusivo.
+     */
+    const ownCantNumber = collectionNumber(
+      hymn,
+      'Cánticos de Alabanza'
+    );
+
+    if (ownCantNumber != null) {
+      const preferred = asCollectionView(
+        hymn,
+        'Cánticos de Alabanza'
+      );
+
+      result.set(`cant:${preferred.numero}`, preferred);
+      continue;
+    }
+
+    /*
+     * Fallback defensivo para eventual registro futuro.
+     */
+    result.set(`id:${hymn.id}`, hymn);
+  }
+
+  const priority = (hymn: Hymn) => {
+    if (hymn.himnario === 'Gloria y Triunfo') return 0;
+    if (hymn.himnario === 'Himnos de Sión') return 1;
+    return 2;
+  };
+
+  return [...result.values()].sort(
+    (a, b) =>
+      priority(a) - priority(b) ||
+      a.numero - b.numero ||
+      a.titulo.localeCompare(b.titulo, 'es', {
+        sensitivity: 'base',
+      })
+  );
+}
+
 export const api = {
   // ADMFC 7AA.44: entrada pública do motor de atualização de conteúdo.
   applyContentUpdates: async (pkg: ContentPatchPackage) =>
@@ -719,21 +1470,137 @@ export const api = {
   getContentRevision: async () =>
     getContentRevision(),
 
-  listHymns: async (p: { himnario?: 'gt'|'sion'; q?: string; category?: string } = {}) => {
-    const db = await loadDb(); let items = [...db.hymns]; const hn = keyToName(p.himnario);
-    if (hn) items = items.filter(h => h.himnario === hn);
-    if (p.category) items = items.filter(h => (h.categorias || []).includes(p.category!));
-    if (p.q) { const q = normalize(p.q); items = items.filter(h => String(h.numero) === p.q!.trim() || normalize(h.titulo).includes(q) || normalize(h.letra || '').includes(q)); }
-    items.sort((a,b) => a.himnario.localeCompare(b.himnario) || a.numero-b.numero);
+  listHymns: async (p: { himnario?: HimnarioKey; q?: string; category?: string } = {}) => {
+    const db = await loadDb();
+    let items = [...db.hymns];
+    const hn = keyToName(p.himnario);
+
+    if (hn) {
+      items = items
+        .filter(h => collectionNumber(h, hn) != null)
+        .map(h => asCollectionView(h, hn));
+    }
+
+    if (p.category) {
+      /*
+       * Categorias mostram cada cântico lógico uma única vez.
+       *
+       * Sem filtro explícito de hinário, usamos a prioridade:
+       * GT > Sión > Cánticos de Alabanza.
+       */
+      if (!hn) {
+        items = categoryPreferredItems(
+          db.hymns,
+          p.category
+        );
+      } else {
+        items = items.filter(
+          h => (h.categorias || []).includes(p.category!)
+        );
+      }
+    }
+
+    if (p.q) {
+      const q = normalize(p.q);
+      items = items.filter(
+        h =>
+          String(h.numero) === p.q!.trim() ||
+          normalize(h.titulo).includes(q) ||
+          normalize(h.letra || '').includes(q)
+      );
+    }
+
+    items.sort(
+      (a, b) =>
+        a.himnario.localeCompare(b.himnario) ||
+        a.numero - b.numero
+    );
+
     return { items, count: items.length };
   },
-  getHymn: async (id: string) => { const h=(await loadDb()).hymns.find(x=>x.id===id); if(!h) throw new Error('Himno no encontrado'); return h; },
-  getByNumber: async (himnario:'gt'|'sion', numero:number) => { const h=(await loadDb()).hymns.find(x=>x.himnario===keyToName(himnario)&&x.numero===numero); if(!h) throw new Error('Himno no encontrado'); return h; },
-  listCategories: async () => { const db=await loadDb(); return { items: db.categories.map(c=>({...c,count:db.hymns.filter(h=>(h.categorias||[]).includes(c.name)).length})) }; },
+
+  getHymn: async (id: string) => {
+    const h = (await loadDb()).hymns.find(x => x.id === id);
+    if (!h) throw new Error('Himno no encontrado');
+    return h;
+  },
+
+  getHymnView: async (
+    id: string,
+    himnario?: HimnarioKey
+  ) => {
+    const h = (await loadDb()).hymns.find(x => x.id === id);
+
+    if (!h) {
+      throw new Error('Himno no encontrado');
+    }
+
+    const hn = keyToName(himnario);
+
+    return hn
+      ? asCollectionView(h, hn)
+      : h;
+  },
+
+  getByNumber: async (
+    himnario: HimnarioKey,
+    numero: number
+  ) => {
+    const db = await loadDb();
+    const hn = keyToName(himnario);
+
+    if (!hn) {
+      throw new Error('Himnario no encontrado');
+    }
+
+    const h = db.hymns.find(
+      x => collectionNumber(x, hn) === numero
+    );
+
+    if (!h) {
+      throw new Error('Himno no encontrado');
+    }
+
+    return asCollectionView(h, hn);
+  },
+  listCategories: async () => {
+    const db = await loadDb();
+
+    return {
+      items: db.categories.map(category => ({
+        ...category,
+        count: categoryPreferredItems(
+          db.hymns,
+          category.name
+        ).length,
+      })),
+    };
+  },
   createCategory: async (name:string) => { requireAuth(); const db=await loadDb(); if(!db.categories.some(c=>normalize(c.name)===normalize(name))) db.categories.push({id:`cat-${Date.now()}`,name}); await saveDb(db); return {ok:true}; },
   renameCategory: async (id:string,name:string) => { requireAuth(); const db=await loadDb(); const c=db.categories.find(x=>x.id===id); if(!c) throw new Error('Categoría no encontrada'); const old=c.name; c.name=name; db.hymns.forEach(h=>{h.categorias=(h.categorias||[]).map(x=>x===old?name:x)}); await saveDb(db); return {ok:true}; },
   deleteCategory: async (id:string) => { requireAuth(); const db=await loadDb(); const c=db.categories.find(x=>x.id===id); if(c) db.hymns.forEach(h=>{h.categorias=(h.categorias||[]).filter(x=>x!==c.name)}); db.categories=db.categories.filter(x=>x.id!==id); await saveDb(db); return {ok:true}; },
-  stats: async () => { const hs=(await loadDb()).hymns; return {total:hs.length,gt:hs.filter(h=>h.himnario==='Gloria y Triunfo').length,sion:hs.filter(h=>h.himnario==='Himnos de Sión').length,equivalences:hs.filter(h=>h.numero_equivalente!=null).length,with_lyrics:hs.filter(h=>(h.letra||'').trim()).length}; },
+  stats: async () => {
+    const hs = (await loadDb()).hymns;
+
+    return {
+      total: hs.length,
+      gt: hs.filter(
+        h => collectionNumber(h, 'Gloria y Triunfo') != null
+      ).length,
+      sion: hs.filter(
+        h => collectionNumber(h, 'Himnos de Sión') != null
+      ).length,
+      canticos: hs.filter(
+        h => collectionNumber(h, 'Cánticos de Alabanza') != null
+      ).length,
+      equivalences: Math.floor(
+        hs.filter(h => h.numero_equivalente != null).length / 2
+      ),
+      with_lyrics: hs.filter(
+        h => (h.letra || '').trim()
+      ).length,
+    };
+  },
 
   // Administración local protegida por credencial fija.
   // La contraseña nunca se almacena en texto plano.
@@ -764,9 +1631,90 @@ export const api = {
   logout: async () => { adminSession.clear(); },
   isAuth: async () => !!adminSession.get(),
 
-  createHymn: async (payload:Partial<Hymn>) => { requireAuth(); const db=await loadDb(); const h={...payload,id:payload.id||`LOCAL-${Date.now()}`} as Hymn; db.hymns.push(h); await saveDb(db); return h; },
-  updateHymn: async (id:string,payload:Partial<Hymn>) => {
+  createHymn: async (payload:Partial<Hymn>) => {
     requireAuth();
+
+    const db = await loadDb();
+
+    if (!payload.himnario || !payload.numero || !payload.titulo?.trim()) {
+      throw new Error('Colección, número y título son obligatorios');
+    }
+
+    if (
+      db.hymns.some(
+        h =>
+          h.himnario === payload.himnario &&
+          h.numero === payload.numero
+      )
+    ) {
+      throw new Error('Ya existe un himno/cántico con ese número en la colección');
+    }
+
+    const prefix =
+      payload.himnario === 'Gloria y Triunfo'
+        ? 'GT'
+        : payload.himnario === 'Himnos de Sión'
+          ? 'SION'
+          : 'CANT';
+
+    const stableId =
+      payload.id ||
+      `${prefix}-${String(payload.numero).padStart(3, '0')}`;
+
+    if (db.hymns.some(h => h.id === stableId)) {
+      throw new Error(`Identidad ya existente: ${stableId}`);
+    }
+
+    const h = { ...payload, id: stableId } as Hymn;
+
+    db.hymns.push(h);
+    await saveDb(db);
+
+    const changes = await loadAdminChanges();
+
+    changes.unshift({
+      id: `change-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+      hymn_id: h.id,
+      himnario: h.himnario,
+      numero: h.numero,
+      titulo: h.titulo,
+      action: 'create',
+      changed_fields: Object.keys(h).filter(
+        field =>
+          field !== 'id' &&
+          field !== 'audio_local' &&
+          REMOTE_HYMN_FIELDS.has(field as keyof Hymn)
+      ),
+      before: {},
+      after: JSON.parse(JSON.stringify(h)),
+      created_at: new Date().toISOString(),
+      status: 'pending',
+      reviewed_at: null,
+    });
+
+    await saveAdminChanges(changes);
+    return h;
+  },
+  updateHymn: async (
+    id:string,
+    payload:Partial<Hymn> & {
+      __propagate_bloques_to_equivalent?: boolean;
+    }
+  ) => {
+    requireAuth();
+
+    /*
+     * ADMFC 7AA.53B:
+     * Esta flag é uma instrução transitória do editor.
+     * Não pertence ao Hymn e nunca deve ser persistida.
+     */
+    const propagateBloquesToEquivalent =
+      payload.__propagate_bloques_to_equivalent === true;
+
+    const {
+      __propagate_bloques_to_equivalent: _propagateBloquesFlag,
+      ...hymnPayload
+    } = payload;
 
     const db = await loadDb();
     const i = db.hymns.findIndex(h => h.id === id);
@@ -784,7 +1732,7 @@ export const api = {
      * os campos cujo valor realmente mudou.
      */
     const effectivePayload = Object.fromEntries(
-      Object.entries(payload).filter(
+      Object.entries(hymnPayload).filter(
         ([key, value]) =>
           !sameValue(
             (before as any)[key],
@@ -826,7 +1774,6 @@ export const api = {
           'cifra_bloques',
           'cifra_url',
           'audio_url',
-          'audio_local',
           'audio_external_url',
           'cifra_autorizada',
           'audio_autorizado',
@@ -849,6 +1796,86 @@ export const api = {
             (target as any)[key] =
               (effectivePayload as any)[key];
           }
+        }
+
+        /*
+         * ADMFC — regra musical:
+         *
+         * Se a cifra estruturada for alterada, o tom atual do hino
+         * de origem precisa acompanhar essa cifra no equivalente,
+         * mesmo quando o tom não foi alterado nesta edição.
+         *
+         * Isso evita situações como:
+         * GT com cifra + Tono F
+         * equivalente recebendo a cifra, mas permanecendo sem tom.
+         */
+        const cifraChanged =
+          Object.prototype.hasOwnProperty.call(
+            effectivePayload,
+            'cifra'
+          ) ||
+          Object.prototype.hasOwnProperty.call(
+            effectivePayload,
+            'cifra_bloques'
+          );
+
+        if (
+          cifraChanged &&
+          updated.tom != null &&
+          updated.tom !== '' &&
+          !sameValue(
+            target.tom ?? null,
+            updated.tom
+          )
+        ) {
+          equivalentPayload.tom = updated.tom;
+          target.tom = updated.tom;
+        }
+
+        /*
+         * ADMFC 7AA.53B:
+         *
+         * A letra permanece independente entre equivalentes.
+         * `bloques` NÃO entra nos sharedKeys automáticos.
+         *
+         * Somente quando o administrador marcar explicitamente
+         * a opção no editor, a estrutura/letra será copiada para
+         * o hino equivalente.
+         *
+         * equivalentPayload continua passando pelo mecanismo
+         * 7AA.35C e, portanto, gera sua própria correção
+         * administrativa para o hino equivalente.
+         */
+        /*
+         * ADMFC 7AA.53D:
+         *
+         * A propagação explícita da letra NÃO pode depender de
+         * effectivePayload.
+         *
+         * effectivePayload representa apenas o que mudou no hino
+         * de origem. Quando a letra já está salva na origem,
+         * `bloques` é corretamente removido dele pelo 7AA.35C.
+         *
+         * Entretanto, se o administrador marcou explicitamente
+         * "Aplicar también al himno equivalente", devemos comparar
+         * os bloques enviados pelo editor diretamente com o alvo.
+         */
+        if (
+          propagateBloquesToEquivalent &&
+          Object.prototype.hasOwnProperty.call(
+            hymnPayload,
+            'bloques'
+          ) &&
+          !sameValue(
+            target.bloques,
+            hymnPayload.bloques
+          )
+        ) {
+          equivalentPayload.bloques =
+            hymnPayload.bloques;
+
+          target.bloques =
+            hymnPayload.bloques;
         }
 
         if (Object.keys(equivalentPayload).length) {
@@ -1059,6 +2086,7 @@ export const api = {
         changes: reviewedItems.map(item => ({
           id: item.id,
           hymn_id: item.hymn_id,
+          action: item.action,
           changed_fields: [...item.changed_fields],
           after: { ...item.after },
         })),
@@ -1126,45 +2154,53 @@ export const api = {
           !change ||
           typeof change.hymn_id !== 'string' ||
           !change.hymn_id.trim() ||
+          !['create', 'update', 'delete'].includes(change.action)
+        ) {
+          throw new Error('Cambio preparado inválido');
+        }
+
+        if (change.action === 'delete') {
+          return {
+            hymn_id: change.hymn_id,
+            operation: 'delete',
+            fields: {},
+          };
+        }
+
+        if (
           !Array.isArray(change.changed_fields) ||
           !change.after ||
           typeof change.after !== 'object'
         ) {
-          throw new Error(
-            'Cambio preparado inválido'
-          );
+          throw new Error('Cambio preparado inválido');
         }
 
         const fields: Partial<Hymn> = {};
+        const names =
+          change.action === 'create'
+            ? Object.keys(change.after)
+            : change.changed_fields;
 
-        for (const field of change.changed_fields) {
-          if (
-            field === 'id' ||
-            field === 'audio_local' ||
-            !REMOTE_HYMN_FIELDS.has(field as keyof Hymn)
-          ) {
-            throw new Error(
-              `Campo no publicable: ${field}`
-            );
+        for (const field of names) {
+          if (field === 'id' || field === 'audio_local') continue;
+
+          if (!REMOTE_HYMN_FIELDS.has(field as keyof Hymn)) {
+            if (change.action === 'update') {
+              throw new Error(`Campo no publicable: ${field}`);
+            }
+            continue;
           }
 
-          if (
-            !Object.prototype.hasOwnProperty.call(
-              change.after,
-              field
-            )
-          ) {
-            throw new Error(
-              `Valor final ausente para: ${field}`
-            );
+          if (!Object.prototype.hasOwnProperty.call(change.after, field)) {
+            throw new Error(`Valor final ausente para: ${field}`);
           }
 
-          (fields as any)[field] =
-            change.after[field];
+          (fields as any)[field] = change.after[field];
         }
 
         return {
           hymn_id: change.hymn_id,
+          operation: change.action,
           fields,
         };
       });
@@ -1357,6 +2393,14 @@ export const api = {
         continue;
       }
 
+      if (current.action !== 'update') {
+        if (published.action === current.action) {
+          continue;
+        }
+        remainingItems.push(current);
+        continue;
+      }
+
       const nextChangedFields: string[] = [];
       const nextBefore: Partial<Hymn> = {};
       const nextAfter: Partial<Hymn> = {};
@@ -1477,6 +2521,7 @@ export const api = {
         changes: prepared.changes.map((change: any) => ({
           id: change.id,
           hymn_id: change.hymn_id,
+          action: change.action,
           changed_fields: Array.isArray(change.changed_fields)
             ? [...change.changed_fields]
             : [],
@@ -1577,7 +2622,51 @@ export const api = {
     };
   },
 
-  deleteHymn: async (id:string) => { requireAuth(); const db=await loadDb(); db.hymns=db.hymns.filter(h=>h.id!==id); await saveDb(db); return {ok:true}; },
+  deleteHymn: async (id:string) => {
+    requireAuth();
+
+    const db = await loadDb();
+    const hymn = db.hymns.find(h => h.id === id);
+
+    if (!hymn) {
+      throw new Error('Himno/cántico no encontrado');
+    }
+
+    db.hymns = db.hymns.filter(h => h.id !== id);
+    await saveDb(db);
+
+    const items = await loadAdminChanges();
+    const pendingCreate = items.find(
+      item => item.hymn_id === id && item.action === 'create'
+    );
+
+    if (pendingCreate) {
+      await saveAdminChanges(
+        items.filter(item => item.hymn_id !== id)
+      );
+      return { ok: true, cancelled_unpublished_create: true };
+    }
+
+    const remaining = items.filter(item => item.hymn_id !== id);
+
+    remaining.unshift({
+      id: `change-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+      hymn_id: hymn.id,
+      himnario: hymn.himnario,
+      numero: hymn.numero,
+      titulo: hymn.titulo,
+      action: 'delete',
+      changed_fields: [],
+      before: JSON.parse(JSON.stringify(hymn)),
+      after: {},
+      created_at: new Date().toISOString(),
+      status: 'pending',
+      reviewed_at: null,
+    });
+
+    await saveAdminChanges(remaining);
+    return { ok: true };
+  },
   setEquivalence: async (
     id:string,
     himnario:'gt'|'sion',
@@ -1610,7 +2699,6 @@ export const api = {
       'cifra_bloques',
       'cifra_url',
       'audio_url',
-      'audio_local',
       'audio_external_url',
       'cifra_procedencia',
       'audio_procedencia',
@@ -1790,6 +2878,6 @@ export const api = {
   // ADMFC 7AA.43: API legada de importação CSV/XLSX removida.
 };
 
-export interface Section { kind:'verse'|'chorus'; index?:number; text:string; }
-export function getSections(hymn:{bloques?:Bloque[]|null;letra?:string}):Section[]{ if(hymn.bloques?.length) return hymn.bloques.map(b=>({kind:b.tipo==='coro'?'chorus':'verse',index:b.numero??undefined,text:b.texto||''})); return parseLetra(hymn.letra||''); }
-export function parseLetra(letra:string):Section[]{ if(!letra)return[]; const lines=letra.replace(/\r\n/g,'\n').split('\n'); const out:Section[]=[]; let current:Section|null=null; const push=()=>{if(current&&current.text.trim())out.push(current);current=null}; for(const raw of lines){const line=raw.trimEnd(),trimmed=line.trim(),m=/^(\d+)\.?$/.exec(trimmed),chorus=/^\s*CORO\s*:?\s*$/i.test(trimmed); if(m){push();current={kind:'verse',index:parseInt(m[1],10),text:''};}else if(chorus){push();current={kind:'chorus',text:''};}else if(trimmed===''){if(current)current.text+='\n';}else{if(!current)current={kind:'verse',text:''};current.text+=(current.text?'\n':'')+line;}} push(); return out; }
+export interface Section { kind:'verse'|'chorus'; index?:number; label?:string; text:string; }
+export function getSections(hymn:{bloques?:Bloque[]|null;letra?:string}):Section[]{ if(hymn.bloques?.length) return hymn.bloques.map(b=>({kind:b.tipo==='coro'?'chorus':'verse',index:b.numero??undefined,label:b.tipo==='coro'?(b.rotulo||'CORO'):undefined,text:b.texto||''})); return parseLetra(hymn.letra||''); }
+export function parseLetra(letra:string):Section[]{ if(!letra)return[]; const lines=letra.replace(/\r\n/g,'\n').split('\n'); const out:Section[]=[]; let current:Section|null=null; const push=()=>{if(current&&current.text.trim())out.push(current);current=null}; for(const raw of lines){const line=raw.trimEnd(),trimmed=line.trim(),m=/^(\d+)\.?$/.exec(trimmed),chorus=/^\s*(CORO(?:\s+\d+[ºo])?)\s*:?\s*$/i.exec(trimmed); if(m){push();current={kind:'verse',index:parseInt(m[1],10),text:''};}else if(chorus){push();current={kind:'chorus',label:chorus[1].toUpperCase().replace(/(\d+)O$/,'$1º'),text:''};}else if(trimmed===''){if(current)current.text+='\n';}else{if(!current)current={kind:'verse',text:''};current.text+=(current.text?'\n':'')+line;}} push(); return out; }

@@ -17,6 +17,58 @@ type PreparedContentPublication = {
   total_changes: number;
 };
 
+function isMeaningfulCreatedValue(field: string, value: any): boolean {
+  if (field === 'himnario' || field === 'numero' || field === 'titulo') {
+    return true;
+  }
+
+  if (field === 'bloques') {
+    return Array.isArray(value) && value.length > 0;
+  }
+
+  if (value === undefined || value === null || value === '') {
+    return false;
+  }
+
+  if (typeof value === 'boolean') {
+    return value === true;
+  }
+
+  if (Array.isArray(value)) {
+    return value.length > 0;
+  }
+
+  if (typeof value === 'object') {
+    const entries = Object.entries(value);
+
+    if (!entries.length) {
+      return false;
+    }
+
+    return entries.some(([key, item]) => {
+      if (
+        item === undefined ||
+        item === null ||
+        item === '' ||
+        item === false
+      ) {
+        return false;
+      }
+
+      if (
+        key === 'tipo' &&
+        String(item).trim().toLowerCase() === 'desconocido'
+      ) {
+        return false;
+      }
+
+      return true;
+    });
+  }
+
+  return true;
+}
+
 function displayValue(value: any): string {
   if (value === undefined || value === null || value === '') {
     return '—';
@@ -951,7 +1003,11 @@ export default function AdminChanges() {
               <View style={styles.cardTop}>
                 <View style={styles.hymnIdentity}>
                   <Text style={[styles.hymnal, { color: c.brand }]}>
-                    {item.himnario === 'Gloria y Triunfo' ? 'GT' : 'SIÓN'}
+                    {item.himnario === 'Gloria y Triunfo'
+                      ? 'GT'
+                      : item.himnario === 'Himnos de Sión'
+                        ? 'SIÓN'
+                        : 'CA'}
                     {'  '}Nº {item.numero}
                   </Text>
 
@@ -969,7 +1025,11 @@ export default function AdminChanges() {
                   }
                   hitSlop={12}
                   accessibilityRole="button"
-                  accessibilityLabel={`Editar himno ${item.numero}`}
+                  accessibilityLabel={`Editar ${
+                    item.himnario === 'Cánticos de Alabanza'
+                      ? 'cántico'
+                      : 'himno'
+                  } ${item.numero}`}
                 >
                   <Feather name="edit-3" size={18} color={c.brand} />
                 </Pressable>
@@ -978,11 +1038,24 @@ export default function AdminChanges() {
               <View style={[styles.divider, { backgroundColor: c.divider }]} />
 
               <Text style={[styles.fieldsLabel, { color: c.muted }]}>
-                CAMPOS MODIFICADOS
+                {item.action === 'create'
+                  ? 'NUEVO REGISTRO'
+                  : item.action === 'delete'
+                    ? 'REGISTRO ELIMINADO'
+                    : 'CAMPOS MODIFICADOS'}
               </Text>
 
               <View style={styles.fields}>
-                {item.changed_fields.map((field) => (
+                {item.changed_fields
+                  .filter((field) =>
+                    item.action !== 'create'
+                      ? true
+                      : isMeaningfulCreatedValue(
+                          field,
+                          (item.after as any)?.[field]
+                        )
+                  )
+                  .map((field) => (
                   <View
                     key={field}
                     style={[

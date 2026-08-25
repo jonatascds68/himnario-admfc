@@ -272,10 +272,10 @@ const insets = useSafeAreaInsets();
             </View>
             <View style={styles.statRow}>
               <Stat label="Himnos de Sión" value={stats.sion} c={c} />
-              <Stat label="Equivalencias" value={stats.equivalences} c={c} />
+              <Stat label="Cánticos de Alabanza" value={stats.canticos ?? 0} c={c} />
             </View>
             <View style={styles.statRow}>
-              <Stat label="Con letra" value={stats.with_lyrics} c={c} />
+              <Stat label="Equivalencias" value={stats.equivalences} c={c} />
               <Stat label="Pendientes" value={stats.pendingChanges ?? 0} c={c} />
             </View>
           </View>
@@ -290,7 +290,7 @@ const insets = useSafeAreaInsets();
               Editor de la Base
             </Text>
             <Text style={[styles.sectionSubtitle, { color: c.muted }]}>
-              Administración y corrección del himnario
+              Administración y corrección de himnos y cánticos
             </Text>
           </View>
         </View>
@@ -298,8 +298,8 @@ const insets = useSafeAreaInsets();
           <ActionBtn
             c={c}
             icon="edit-3"
-            label="Editor de Himnos"
-            description="Título, letra, número, categorías y equivalencias"
+            label="Editor de Himnos y Cánticos"
+            description="Título, letra, número, categorías y demás datos"
             onPress={() => router.push('/admin/hymns' as any)}
             testID="admin-editor"
           />
@@ -374,9 +374,9 @@ const insets = useSafeAreaInsets();
         </View>
         <Text style={{ color: c.muted, fontSize: 13, lineHeight: 20 }}>
           {/* ADMFC 7AA.40: notas atualizadas ao estado real do painel administrativo. */}
-          • El Editor de Himnos permite corregir título, letra, número, equivalencias y demás datos administrables.{'\n'}
+          • El Editor de Himnos y Cánticos permite crear, corregir y administrar las colecciones disponibles.{'\n'}
           • Las modificaciones reales quedan registradas en Cambios pendientes para su revisión y exportación.{'\n'}
-          • El backup conserva los himnos, categorías y correcciones pendientes en formato JSON.
+          • El backup conserva los himnos, cánticos, categorías y correcciones pendientes en formato JSON.
         </Text>
       </ScrollView>
     </SafeAreaView>

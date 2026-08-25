@@ -60,17 +60,27 @@ const baseSize = 20 * fontScale;
           <Text style={[styles.title, { color: fg }]}>{hymn.titulo}</Text>
           <View style={[styles.divider, { backgroundColor: gold }]} />
           {sections.map((s, i) => (
-            <View key={i} style={{ marginBottom: SPACING.xl }}>
+            <View
+              key={i}
+              style={{
+                marginBottom:
+                  i === sections.length - 1
+                    ? 0
+                    : s.kind === 'chorus'
+                      ? SPACING.xxxl + SPACING.sm
+                      : SPACING.xxxl,
+              }}
+            >
 {s.kind === 'chorus' ? (
   <>
-    <Text style={{ color: gold, fontSize: 12, fontWeight: '800', letterSpacing: 1.5, marginBottom: SPACING.sm, textAlign: hymnAlign }}>CORO</Text>
+    <Text style={{ color: gold, fontSize: 12, fontWeight: '800', letterSpacing: 1.5, marginBottom: SPACING.sm, textAlign: hymnAlign }}>{s.label || 'CORO'}</Text>
     <View style={styles.chorusClean}>
 <Text
       style={{
         color: isDark ? '#D6C59A' : '#75612F',
         fontSize: baseSize,
         lineHeight: baseSize * 1.5,
-        fontFamily: 'MerriweatherItalic',
+        fontFamily: hymnFont,
         textAlign: hymnAlign,
       }}
     >
@@ -80,7 +90,7 @@ const baseSize = 20 * fontScale;
   </>
 ) : (
   <View style={{ flexDirection: 'row', alignItems: 'flex-start' }}>
-    <Text style={{ color: gold, width: 32, fontSize: 12, fontWeight: '800', marginTop: 5 }}>{`${s.index ?? i + 1}.`}</Text>
+    {hymn.himnario === 'Cánticos de Alabanza' && s.index == null ? null : (<Text style={{ color: gold, width: 32, fontSize: 12, fontWeight: '800', marginTop: 5 }}>{`${s.index ?? i + 1}.`}</Text>)}
     <Text style={{ flex: 1, color: fg, fontSize: baseSize, lineHeight: baseSize * 1.5, fontFamily: hymnFont, textAlign: hymnAlign }}>{s.text.replace(/\|+/g, '')}</Text>
   </View>
 )}
