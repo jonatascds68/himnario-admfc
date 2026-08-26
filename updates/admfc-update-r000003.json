@@ -1,0 +1,20 @@
+{
+  "schema_version": "admfc-content-patch-1",
+  "revision": 3,
+  "patches": [
+    {
+      "hymn_id": "GT-188",
+      "operation": "update",
+      "fields": {
+        "titulo": "BELLAS PALABRAS DE VIDA"
+      }
+    },
+    {
+      "hymn_id": "GT-100",
+      "operation": "update",
+      "fields": {
+        "titulo": "A LOS PIES DE JESUCRISTO"
+      }
+    }
+  ]
+}
