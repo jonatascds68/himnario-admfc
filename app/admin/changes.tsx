@@ -502,6 +502,51 @@ export default function AdminChanges() {
    * Não altera correções pendentes.
    * Não confirma publicação.
    */
+  const discardPreparedContentUpdate = async () => {
+    if (!preparedPublication || exporting) return;
+
+    Alert.alert(
+      'Descartar actualización preparada',
+      `¿Desea descartar solamente la actualización R${String(
+        preparedPublication.revision
+      ).padStart(6, '0')} preparada?\n\nLas correcciones pendientes serán preservadas.`,
+      [
+        {
+          text: 'Cancelar',
+          style: 'cancel',
+        },
+        {
+          text: 'Descartar',
+          style: 'destructive',
+          onPress: async () => {
+            try {
+              setExporting(true);
+
+              await api.discardPreparedContentPublication();
+
+              setPreparedPublication(null);
+
+              Alert.alert(
+                'Actualización descartada',
+                'La actualización preparada fue descartada. Las correcciones pendientes fueron preservadas.'
+              );
+
+              await loadChanges();
+            } catch (e: any) {
+              Alert.alert(
+                'Error',
+                e?.message ||
+                  'No se pudo descartar la actualización preparada'
+              );
+            } finally {
+              setExporting(false);
+            }
+          },
+        },
+      ]
+    );
+  };
+
   const savePreparedContentUpdate = async () => {
     if (!preparedPublication || exporting) return;
 
@@ -921,6 +966,35 @@ export default function AdminChanges() {
                   ).toLocaleString()}
                 </Text>
               ) : null}
+
+              <Pressable
+                onPress={discardPreparedContentUpdate}
+                disabled={exporting}
+                style={[
+                  styles.confirmPublicationButton,
+                  {
+                    backgroundColor: c.surface,
+                    borderWidth: 1.5,
+                    borderColor: c.border,
+                    opacity: exporting ? 0.65 : 1,
+                  },
+                ]}
+              >
+                <Feather
+                  name="trash-2"
+                  size={17}
+                  color={c.muted}
+                />
+
+                <Text
+                  style={[
+                    styles.confirmPublicationButtonText,
+                    { color: c.muted },
+                  ]}
+                >
+                  Descartar actualización preparada
+                </Text>
+              </Pressable>
 
               <Pressable
                 onPress={savePreparedContentUpdate}

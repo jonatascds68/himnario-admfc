@@ -159,6 +159,7 @@ export default function AdminHymns() {
       {loading ? <ActivityIndicator style={{ marginTop: SPACING.xl }} color={c.brand} /> : (
         <FlatList
           data={items}
+          keyboardShouldPersistTaps="handled"
           keyExtractor={(h) => h.id}
           contentContainerStyle={{ paddingHorizontal: SPACING.lg, paddingBottom: SPACING.xxxl }}
           ItemSeparatorComponent={() => <View style={{ height: StyleSheet.hairlineWidth, backgroundColor: c.divider }} />}

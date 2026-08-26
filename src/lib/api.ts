@@ -151,6 +151,47 @@ const PREPARED_CONTENT_PUBLICATION_KEY =
   'admfc_prepared_content_publication_v1';
 
 /*
+ * ADMFC — o GitHub passa a ser a autoridade oficial
+ * para a numeração das revisões de conteúdo.
+ */
+const CONTENT_MANIFEST_URL =
+  'https://raw.githubusercontent.com/jonatascds68/himnario-admfc/main/updates/manifest.json';
+
+async function getOfficialContentRevision(): Promise<number> {
+  const response = await fetch(
+    `${CONTENT_MANIFEST_URL}?t=${Date.now()}`,
+    {
+      headers: {
+        Accept: 'application/json',
+        'Cache-Control': 'no-cache',
+      },
+    }
+  );
+
+  if (!response.ok) {
+    throw new Error(
+      `No se pudo consultar la revisión oficial (${response.status})`
+    );
+  }
+
+  const manifest = await response.json();
+
+  if (
+    !manifest ||
+    manifest.schema_version !== 'admfc-content-manifest-1' ||
+    !Number.isInteger(manifest.latest_revision) ||
+    manifest.latest_revision < 0 ||
+    !Array.isArray(manifest.patches)
+  ) {
+    throw new Error(
+      'El manifiesto oficial de actualizaciones es inválido'
+    );
+  }
+
+  return manifest.latest_revision;
+}
+
+/*
  * ADMFC — histórico permanente das revisões de conteúdo
  * efetivamente confirmadas como publicadas.
  *
@@ -2054,13 +2095,25 @@ export const api = {
       item => item.status === 'reviewed'
     );
 
-    const raw = await kv.get(PUBLISHED_CONTENT_REVISION_KEY);
-    const storedRevision = Number(raw);
-
+    /*
+     * ADMFC — a próxima revisão não depende mais do aparelho.
+     *
+     * O manifesto oficial no GitHub é a única autoridade.
+     * Assim, reinstalação, troca de APK/AAB, limpeza de dados
+     * ou troca de dispositivo não reiniciam a numeração.
+     */
     const currentRevision =
-      Number.isInteger(storedRevision) && storedRevision >= 0
-        ? storedRevision
-        : 0;
+      await getOfficialContentRevision();
+
+    /*
+     * Mantemos o contador administrativo local alinhado ao
+     * estado oficial remoto para que a confirmação posterior
+     * continue respeitando a sequência correta.
+     */
+    await kv.set(
+      PUBLISHED_CONTENT_REVISION_KEY,
+      String(currentRevision)
+    );
 
     const nextRevision = currentRevision + 1;
 
@@ -2212,6 +2265,26 @@ export const api = {
     };
   },
 
+  discardPreparedContentPublication: async () => {
+    requireAuth();
+
+    /*
+     * ADMFC — descarta somente o snapshot da atualização preparada.
+     *
+     * Não remove correções administrativas.
+     * Não altera hinos.
+     * Não altera histórico.
+     * Não avança nem retrocede revisão publicada.
+     */
+    await kv.remove(
+      PREPARED_CONTENT_PUBLICATION_KEY
+    );
+
+    return {
+      ok: true,
+    };
+  },
+
   getPreparedContentPublication: async () => {
     requireAuth();
 
@@ -2287,13 +2360,26 @@ export const api = {
       throw new Error('Revisión publicada inválida');
     }
 
+    /*
+     * ADMFC — antes de confirmar, usamos o manifesto remoto
+     * como autoridade, não o contador local do aparelho.
+     *
+     * Se a revisão preparada já estiver no manifesto, isso
+     * significa que a publicação remota realmente ocorreu.
+     */
+    const officialRevision =
+      await getOfficialContentRevision();
+
     const raw = await kv.get(PUBLISHED_CONTENT_REVISION_KEY);
     const storedRevision = Number(raw);
 
-    const currentRevision =
+    const localRevision =
       Number.isInteger(storedRevision) && storedRevision >= 0
         ? storedRevision
         : 0;
+
+    const currentRevision =
+      Math.max(localRevision, officialRevision - 1);
 
     if (revision <= currentRevision) {
       return {
