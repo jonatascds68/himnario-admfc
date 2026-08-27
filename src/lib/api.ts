@@ -157,7 +157,13 @@ const PREPARED_CONTENT_PUBLICATION_KEY =
 const CONTENT_MANIFEST_URL =
   'https://raw.githubusercontent.com/jonatascds68/himnario-admfc/main/updates/manifest.json';
 
-async function getOfficialContentRevision(): Promise<number> {
+type OfficialContentManifest = {
+  schema_version: 'admfc-content-manifest-1';
+  latest_revision: number;
+  patches: string[];
+};
+
+async function getOfficialContentManifest(): Promise<OfficialContentManifest> {
   const response = await fetch(
     `${CONTENT_MANIFEST_URL}?t=${Date.now()}`,
     {
@@ -181,14 +187,64 @@ async function getOfficialContentRevision(): Promise<number> {
     manifest.schema_version !== 'admfc-content-manifest-1' ||
     !Number.isInteger(manifest.latest_revision) ||
     manifest.latest_revision < 0 ||
-    !Array.isArray(manifest.patches)
+    !Array.isArray(manifest.patches) ||
+    manifest.patches.some(
+      (item: any) => typeof item !== 'string' || !item.trim()
+    )
   ) {
     throw new Error(
       'El manifiesto oficial de actualizaciones es inválido'
     );
   }
 
+  return manifest as OfficialContentManifest;
+}
+
+async function getOfficialContentRevision(): Promise<number> {
+  const manifest = await getOfficialContentManifest();
   return manifest.latest_revision;
+}
+
+async function getOfficialContentPackage(
+  filename: string
+): Promise<ContentPatchPackage> {
+  const url = new URL(CONTENT_MANIFEST_URL);
+
+  url.pathname =
+    url.pathname.replace(/\/manifest\.json$/, '') +
+    '/' +
+    filename;
+
+  url.searchParams.set('t', String(Date.now()));
+
+  const response = await fetch(url.toString(), {
+    headers: {
+      Accept: 'application/json',
+      'Cache-Control': 'no-cache',
+    },
+  });
+
+  if (!response.ok) {
+    throw new Error(
+      `No se pudo consultar la actualización oficial (${response.status})`
+    );
+  }
+
+  const pkg = await response.json();
+
+  if (
+    !pkg ||
+    pkg.schema_version !== 'admfc-content-patch-1' ||
+    !Number.isInteger(pkg.revision) ||
+    pkg.revision < 1 ||
+    !Array.isArray(pkg.patches)
+  ) {
+    throw new Error(
+      'La actualización oficial es inválida'
+    );
+  }
+
+  return pkg as ContentPatchPackage;
 }
 
 /*
@@ -1503,6 +1559,382 @@ function categoryPreferredItems(
   );
 }
 
+
+/*
+ * ADMFC — reconciliação administrativa com a fonte oficial.
+ *
+ * O GitHub/manifest é a autoridade final sobre revisões publicadas.
+ * Cada instalação administrativa mantém sua fila local, porém converge
+ * automaticamente para o estado oficial sem apagar novas edições locais.
+ */
+let adminReconcilePromise: Promise<void> | null = null;
+
+async function doReconcileAdminPublicationState(): Promise<void> {
+  let manifest: OfficialContentManifest;
+
+  /*
+   * Reconciliação é best-effort.
+   * Falta de internet não deve impedir o uso local do Administrativo.
+   */
+  try {
+    manifest = await getOfficialContentManifest();
+  } catch {
+    return;
+  }
+
+  const officialRevision = manifest.latest_revision;
+
+  const storedRaw = await kv.get(
+    PUBLISHED_CONTENT_REVISION_KEY
+  );
+
+  const storedNumber = Number(storedRaw);
+
+  const localRevision =
+    Number.isInteger(storedNumber) && storedNumber >= 0
+      ? storedNumber
+      : 0;
+
+  /*
+   * Carrega o histórico local e elimina duplicatas por revisão,
+   * preservando o primeiro registro já existente.
+   */
+  const historyRaw = await kv.get(
+    CONTENT_PUBLICATION_HISTORY_KEY
+  );
+
+  let localHistory: any[] = [];
+
+  if (historyRaw) {
+    try {
+      const parsed = JSON.parse(historyRaw);
+      if (Array.isArray(parsed)) {
+        localHistory = parsed;
+      }
+    } catch {
+      localHistory = [];
+    }
+  }
+
+  const historyByRevision = new Map<number, any>();
+
+  for (const item of localHistory) {
+    const revision = Number(item?.revision);
+
+    if (
+      Number.isInteger(revision) &&
+      revision >= 1 &&
+      !historyByRevision.has(revision)
+    ) {
+      historyByRevision.set(revision, item);
+    }
+  }
+
+  /*
+   * Busca somente pacotes necessários:
+   * - revisões posteriores ao contador local, para rebase;
+   * - revisões ausentes no histórico, para auditoria.
+   */
+  const neededFiles = manifest.patches.filter(filename => {
+    const match = filename.match(/r(\d+)\.json$/i);
+
+    if (!match) {
+      return true;
+    }
+
+    const revision = Number(match[1]);
+
+    return (
+      revision > localRevision ||
+      !historyByRevision.has(revision)
+    );
+  });
+
+  const officialPackages: ContentPatchPackage[] = [];
+
+  for (const filename of neededFiles) {
+    try {
+      const pkg = await getOfficialContentPackage(filename);
+
+      if (pkg.revision <= officialRevision) {
+        officialPackages.push(pkg);
+      }
+    } catch {
+      /*
+       * Se um pacote individual não puder ser lido, não fazemos
+       * reconciliação parcial que possa apagar estado local.
+       */
+      return;
+    }
+  }
+
+  officialPackages.sort(
+    (a, b) => a.revision - b.revision
+  );
+
+  /*
+   * Completa o histórico local com revisões oficiais ausentes.
+   * Registros locais mais ricos são preservados.
+   */
+  for (const pkg of officialPackages) {
+    if (historyByRevision.has(pkg.revision)) {
+      continue;
+    }
+
+    historyByRevision.set(pkg.revision, {
+      revision: pkg.revision,
+      generated_at: null,
+      published_at: null,
+      synced_from_official: true,
+      changes: pkg.patches.map(
+        (patch, index) => {
+          const fields =
+            patch?.fields &&
+            typeof patch.fields === 'object'
+              ? patch.fields
+              : {};
+
+          return {
+            id:
+              `official-r${String(pkg.revision).padStart(6, '0')}-${index}`,
+            hymn_id: patch.hymn_id,
+            action: patch.operation || 'update',
+            changed_fields: Object.keys(fields),
+            after: { ...fields },
+          };
+        }
+      ),
+    });
+  }
+
+  /*
+   * Para a fila pendente, consideramos somente revisões oficiais
+   * posteriores ao último contador conhecido neste aparelho.
+   *
+   * Campos que já chegaram ao mesmo AFTER oficial deixam de ser
+   * pendentes. Se houve uma nova edição local depois, ela permanece
+   * pendente e o valor oficial vira seu novo BEFORE.
+   */
+  const officialByHymn = new Map<
+    string,
+    {
+      operation: 'update' | 'create' | 'delete';
+      fields: Record<string, any>;
+    }
+  >();
+
+  for (const pkg of officialPackages) {
+    if (pkg.revision <= localRevision) {
+      continue;
+    }
+
+    for (const patch of pkg.patches) {
+      const operation =
+        patch.operation || 'update';
+
+      const previous =
+        officialByHymn.get(patch.hymn_id);
+
+      if (operation === 'delete') {
+        officialByHymn.set(
+          patch.hymn_id,
+          {
+            operation: 'delete',
+            fields: {},
+          }
+        );
+        continue;
+      }
+
+      const fields =
+        patch.fields &&
+        typeof patch.fields === 'object'
+          ? patch.fields
+          : {};
+
+      officialByHymn.set(
+        patch.hymn_id,
+        {
+          operation,
+          fields: {
+            ...(previous?.operation !== 'delete'
+              ? previous?.fields || {}
+              : {}),
+            ...fields,
+          },
+        }
+      );
+    }
+  }
+
+  const currentItems = await loadAdminChanges();
+  const reconciledItems: AdminHymnChange[] = [];
+
+  for (const current of currentItems) {
+    const official =
+      officialByHymn.get(current.hymn_id);
+
+    if (!official) {
+      reconciledItems.push(current);
+      continue;
+    }
+
+    if (
+      current.action === 'delete' &&
+      official.operation === 'delete'
+    ) {
+      continue;
+    }
+
+    /*
+     * Create/delete divergentes são preservados conservadoramente.
+     * O rebase automático campo a campo é feito somente em update.
+     */
+    if (
+      current.action !== 'update' ||
+      official.operation === 'delete'
+    ) {
+      reconciledItems.push(current);
+      continue;
+    }
+
+    const nextChangedFields: string[] = [];
+    const nextBefore: Partial<Hymn> = {};
+    const nextAfter: Partial<Hymn> = {};
+    let rebased = false;
+
+    for (const field of current.changed_fields) {
+      const currentAfter =
+        (current.after as any)?.[field];
+
+      if (
+        !Object.prototype.hasOwnProperty.call(
+          official.fields,
+          field
+        )
+      ) {
+        nextChangedFields.push(field);
+        (nextBefore as any)[field] =
+          (current.before as any)?.[field];
+        (nextAfter as any)[field] =
+          currentAfter;
+        continue;
+      }
+
+      const officialValue =
+        official.fields[field];
+
+      rebased = true;
+
+      /*
+       * O valor pendente é exatamente o publicado:
+       * não existe mais diferença administrativa.
+       */
+      if (
+        sameValue(
+          currentAfter,
+          officialValue
+        )
+      ) {
+        continue;
+      }
+
+      /*
+       * Houve nova edição local depois da publicação oficial.
+       * Preserva a edição e usa o oficial como nova base.
+       */
+      nextChangedFields.push(field);
+      (nextBefore as any)[field] =
+        officialValue;
+      (nextAfter as any)[field] =
+        currentAfter;
+    }
+
+    if (!nextChangedFields.length) {
+      continue;
+    }
+
+    reconciledItems.push({
+      ...current,
+      changed_fields: nextChangedFields,
+      before: nextBefore,
+      after: nextAfter,
+      status:
+        rebased ? 'pending' : current.status,
+      reviewed_at:
+        rebased ? null : current.reviewed_at,
+    });
+  }
+
+  await saveAdminChanges(reconciledItems);
+
+  /*
+   * O contador administrativo converge para a revisão oficial.
+   */
+  await kv.set(
+    PUBLISHED_CONTENT_REVISION_KEY,
+    String(officialRevision)
+  );
+
+  /*
+   * Uma preparação local cuja revisão já existe oficialmente
+   * não deve continuar bloqueando o Administrativo.
+   *
+   * A fila de correções NÃO é apagada aqui; ela já foi reconciliada
+   * campo a campo acima.
+   */
+  const preparedRaw = await kv.get(
+    PREPARED_CONTENT_PUBLICATION_KEY
+  );
+
+  if (preparedRaw) {
+    try {
+      const prepared = JSON.parse(preparedRaw);
+
+      if (
+        prepared &&
+        Number.isInteger(prepared.revision) &&
+        prepared.revision <= officialRevision
+      ) {
+        await kv.remove(
+          PREPARED_CONTENT_PUBLICATION_KEY
+        );
+      }
+    } catch {
+      /*
+       * Snapshot inválido é preservado para diagnóstico manual.
+       */
+    }
+  }
+
+  const reconciledHistory =
+    [...historyByRevision.values()]
+      .sort(
+        (a, b) =>
+          Number(a?.revision || 0) -
+          Number(b?.revision || 0)
+      );
+
+  await kv.set(
+    CONTENT_PUBLICATION_HISTORY_KEY,
+    JSON.stringify(reconciledHistory)
+  );
+}
+
+async function reconcileAdminPublicationState(): Promise<void> {
+  if (adminReconcilePromise) {
+    return adminReconcilePromise;
+  }
+
+  adminReconcilePromise =
+    doReconcileAdminPublicationState()
+      .finally(() => {
+        adminReconcilePromise = null;
+      });
+
+  return adminReconcilePromise;
+}
+
 export const api = {
   // ADMFC 7AA.44: entrada pública do motor de atualização de conteúdo.
   applyContentUpdates: async (pkg: ContentPatchPackage) =>
@@ -1951,6 +2383,8 @@ export const api = {
   listAdminChanges: async () => {
     requireAuth();
 
+    await reconcileAdminPublicationState();
+
     const items = await loadAdminChanges();
     const db = await loadDb();
 
@@ -2014,12 +2448,17 @@ export const api = {
 
   adminChangesCount: async () => {
     requireAuth();
+
+    await reconcileAdminPublicationState();
+
     const items = await loadAdminChanges();
     return items.length;
   },
 
   exportContentUpdates: async () => {
     requireAuth();
+
+    await reconcileAdminPublicationState();
 
     /*
      * ADMFC — somente uma publicação pode ficar preparada
@@ -2288,6 +2727,8 @@ export const api = {
   getPreparedContentPublication: async () => {
     requireAuth();
 
+    await reconcileAdminPublicationState();
+
     const raw = await kv.get(
       PREPARED_CONTENT_PUBLICATION_KEY
     );
@@ -2322,6 +2763,8 @@ export const api = {
 
   getContentPublicationHistory: async () => {
     requireAuth();
+
+    await reconcileAdminPublicationState();
 
     const raw = await kv.get(
       CONTENT_PUBLICATION_HISTORY_KEY
@@ -2361,281 +2804,54 @@ export const api = {
     }
 
     /*
-     * ADMFC — antes de confirmar, usamos o manifesto remoto
-     * como autoridade, não o contador local do aparelho.
+     * ADMFC — proteção definitiva da confirmação administrativa.
      *
-     * Se a revisão preparada já estiver no manifesto, isso
-     * significa que a publicação remota realmente ocorreu.
+     * Antes de qualquer confirmação, o aparelho converge para
+     * o estado oficial. O manifesto do GitHub é a única autoridade
+     * para dizer qual revisão realmente está publicada.
      */
+    await reconcileAdminPublicationState();
+
     const officialRevision =
       await getOfficialContentRevision();
 
-    const raw = await kv.get(PUBLISHED_CONTENT_REVISION_KEY);
-    const storedRevision = Number(raw);
+    /*
+     * Uma revisão antiga nunca pode voltar a ser confirmada.
+     * Exemplo: aparelho local ainda mostra R000002,
+     * mas o oficial já está em R000004.
+     */
+    if (revision < officialRevision) {
+      throw new Error(
+        `La revisión R${String(revision).padStart(6, '0')} fue superada por la revisión oficial R${String(officialRevision).padStart(6, '0')}. El estado administrativo ya fue sincronizado.`
+      );
+    }
 
-    const localRevision =
-      Number.isInteger(storedRevision) && storedRevision >= 0
-        ? storedRevision
-        : 0;
+    /*
+     * Se é exatamente a revisão oficial, a publicação já existe
+     * remotamente. A reconciliação anterior já absorveu o estado
+     * local correspondente, portanto não repetimos o rebase.
+     */
+    if (revision === officialRevision) {
+      await kv.set(
+        PUBLISHED_CONTENT_REVISION_KEY,
+        String(officialRevision)
+      );
 
-    const currentRevision =
-      Math.max(localRevision, officialRevision - 1);
-
-    if (revision <= currentRevision) {
       return {
         ok: true,
-        revision: currentRevision,
+        revision: officialRevision,
         already_confirmed: true,
       };
     }
 
     /*
-     * Não permitimos saltos acidentais de revisão.
+     * Uma revisão futura ainda não existe no manifesto oficial.
+     * Gerar o pacote não equivale a publicá-lo.
      */
-    if (revision !== currentRevision + 1) {
-      throw new Error(
-        `Secuencia de revisión inválida: ${currentRevision} -> ${revision}`
-      );
-    }
-
-    /*
-     * Recupera o snapshot correspondente ao pacote preparado.
-     */
-    const preparedRaw = await kv.get(
-      PREPARED_CONTENT_PUBLICATION_KEY
+    throw new Error(
+      `La revisión R${String(revision).padStart(6, '0')} todavía no está publicada. La revisión oficial actual es R${String(officialRevision).padStart(6, '0')}.`
     );
 
-    if (!preparedRaw) {
-      throw new Error(
-        'No existe una actualización preparada para confirmar'
-      );
-    }
-
-    let prepared: any;
-
-    try {
-      prepared = JSON.parse(preparedRaw);
-    } catch {
-      throw new Error(
-        'La actualización preparada está dañada'
-      );
-    }
-
-    if (
-      !prepared ||
-      prepared.revision !== revision ||
-      !Array.isArray(prepared.changes)
-    ) {
-      throw new Error(
-        'La actualización preparada no corresponde a esta revisión'
-      );
-    }
-
-    const currentItems = await loadAdminChanges();
-
-    /*
-     * ADMFC — rebase campo a campo após publicação.
-     *
-     * O snapshot preparado representa exatamente o estado publicado.
-     *
-     * Para cada campo que entrou nessa revisão:
-     *
-     * 1. se o valor atual continua igual ao AFTER publicado,
-     *    o campo foi totalmente publicado e sai da fila;
-     *
-     * 2. se o campo foi novamente alterado depois da geração,
-     *    ele continua pendente, porém seu novo BEFORE passa a ser
-     *    o AFTER que acabou de ser publicado;
-     *
-     * 3. campos que não pertenciam ao pacote preparado permanecem
-     *    exatamente como estavam;
-     *
-     * 4. se nenhum campo continuar pendente, o registro inteiro sai.
-     *
-     * Exemplo:
-     *
-     * R000001 publica:
-     *   titulo  A -> B
-     *   bloques X -> Y
-     *
-     * Antes da confirmação, somente titulo muda novamente:
-     *   titulo B -> C
-     *
-     * Depois da confirmação:
-     *   titulo  B -> C continua pendente
-     *   bloques desaparece da fila, pois Y já foi publicado.
-     */
-    const remainingItems: AdminHymnChange[] = [];
-
-    for (const current of currentItems) {
-      const published = prepared.changes.find(
-        (candidate: any) =>
-          candidate.id === current.id &&
-          candidate.hymn_id === current.hymn_id
-      );
-
-      if (!published) {
-        remainingItems.push(current);
-        continue;
-      }
-
-      if (current.action !== 'update') {
-        if (published.action === current.action) {
-          continue;
-        }
-        remainingItems.push(current);
-        continue;
-      }
-
-      const nextChangedFields: string[] = [];
-      const nextBefore: Partial<Hymn> = {};
-      const nextAfter: Partial<Hymn> = {};
-
-      for (const field of current.changed_fields) {
-        const currentAfter = (current.after as any)?.[field];
-
-        const wasPublished =
-          Array.isArray(published.changed_fields) &&
-          published.changed_fields.includes(field);
-
-        /*
-         * Este campo não fazia parte da revisão confirmada.
-         * Portanto continua pendente sem qualquer rebase.
-         */
-        if (!wasPublished) {
-          nextChangedFields.push(field);
-          (nextBefore as any)[field] =
-            (current.before as any)?.[field];
-          (nextAfter as any)[field] = currentAfter;
-          continue;
-        }
-
-        const publishedAfter =
-          (published.after as any)?.[field];
-
-        /*
-         * O estado atual é exatamente o que foi publicado:
-         * não existe mais diferença pendente neste campo.
-         */
-        if (sameValue(currentAfter, publishedAfter)) {
-          continue;
-        }
-
-        /*
-         * Houve nova edição depois da geração do pacote.
-         * A revisão publicada passa a ser a nova base.
-         */
-        nextChangedFields.push(field);
-        (nextBefore as any)[field] = publishedAfter;
-        (nextAfter as any)[field] = currentAfter;
-      }
-
-      /*
-       * Se todos os campos deste registro foram absorvidos pela
-       * publicação, ele desaparece da fila administrativa.
-       */
-      if (!nextChangedFields.length) {
-        continue;
-      }
-
-      remainingItems.push({
-        ...current,
-        changed_fields: nextChangedFields,
-        before: nextBefore,
-        after: nextAfter,
-
-        /*
-         * Uma alteração sobrevivente ao rebase é uma nova pendência
-         * e precisa ser revisada novamente antes da próxima publicação.
-         */
-        status: 'pending',
-        reviewed_at: null,
-      });
-    }
-
-    /*
-     * Primeiro preservamos a fila resultante.
-     * Somente depois registramos a revisão como publicada.
-     */
-    await saveAdminChanges(remainingItems);
-
-    await kv.set(
-      PUBLISHED_CONTENT_REVISION_KEY,
-      String(revision)
-    );
-
-    /*
-     * A revisão já foi confirmada.
-     * Agora preservamos permanentemente o snapshot que estava
-     * preparado antes de removê-lo.
-     */
-    const historyRaw = await kv.get(
-      CONTENT_PUBLICATION_HISTORY_KEY
-    );
-
-    let history: any[] = [];
-
-    if (historyRaw) {
-      try {
-        const parsedHistory = JSON.parse(historyRaw);
-
-        if (Array.isArray(parsedHistory)) {
-          history = parsedHistory;
-        }
-      } catch {
-        history = [];
-      }
-    }
-
-    /*
-     * Proteção contra duplicação caso uma confirmação seja
-     * reexecutada por algum fluxo inesperado.
-     */
-    const alreadyInHistory = history.some(
-      item => item?.revision === revision
-    );
-
-    if (!alreadyInHistory) {
-      history.push({
-        revision,
-        generated_at:
-          typeof prepared.generated_at === 'string'
-            ? prepared.generated_at
-            : null,
-        published_at: new Date().toISOString(),
-
-        changes: prepared.changes.map((change: any) => ({
-          id: change.id,
-          hymn_id: change.hymn_id,
-          action: change.action,
-          changed_fields: Array.isArray(change.changed_fields)
-            ? [...change.changed_fields]
-            : [],
-          after:
-            change.after && typeof change.after === 'object'
-              ? { ...change.after }
-              : {},
-        })),
-      });
-
-      await kv.set(
-        CONTENT_PUBLICATION_HISTORY_KEY,
-        JSON.stringify(history)
-      );
-    }
-
-    await kv.remove(
-      PREPARED_CONTENT_PUBLICATION_KEY
-    );
-
-    return {
-      ok: true,
-      revision,
-      already_confirmed: false,
-      published_changes:
-        currentItems.length - remainingItems.length,
-      remaining_changes: remainingItems.length,
-    };
   },
 
   exportAdminChanges: async () => {
