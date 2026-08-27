@@ -1,9 +1,10 @@
 {
   "schema_version": "admfc-content-manifest-1",
-  "latest_revision": 3,
+  "latest_revision": 4,
   "patches": [
     "admfc-update-r000001.json",
     "admfc-update-r000002.json",
-    "admfc-update-r000003.json"
+    "admfc-update-r000003.json",
+    "admfc-update-r000004.json"
   ]
 }

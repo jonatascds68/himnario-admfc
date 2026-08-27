@@ -1,0 +1,13 @@
+{
+  "schema_version": "admfc-content-patch-1",
+  "revision": 4,
+  "patches": [
+    {
+      "operation": "update",
+      "fields": {
+        "titulo": "A LOS PIES DE JESUCRISTO"
+      },
+      "hymn_id": "SION-059"
+    }
+  ]
+}
