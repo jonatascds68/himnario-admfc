@@ -15,6 +15,18 @@ type FavoritesSortMode = 'alpha' | 'number' | 'added';
 
 const FAVORITES_SORT_KEY = 'admfc_favorites_sort_v1';
 
+/**
+ * Gera uma chave usada somente para ordenação alfabética.
+ * Pontuação e símbolos não influenciam a posição do título.
+ * O título original exibido ao usuário permanece intacto.
+ */
+function alphabeticKey(title: string): string {
+  return title
+    .replace(/[^A-Za-zÀ-ÖØ-öø-ÿ0-9\s]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 
 
 function ListScreen({
@@ -80,9 +92,13 @@ function ListScreen({
       ? (() => {
           if (favoritesSort === 'alpha') {
             return [...filteredItems].sort((a, b) =>
-              a.titulo.localeCompare(b.titulo, 'es', {
-                sensitivity: 'base',
-              }),
+              alphabeticKey(a.titulo).localeCompare(
+                alphabeticKey(b.titulo),
+                'es',
+                {
+                  sensitivity: 'base',
+                },
+              ),
             );
           }
 
