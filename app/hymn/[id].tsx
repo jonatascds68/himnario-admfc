@@ -10,6 +10,7 @@ import * as Haptics from 'expo-haptics';
 import { useAudioPlayer, useAudioPlayerStatus } from 'expo-audio';
 import { captureRef } from 'react-native-view-shot';
 import * as Sharing from 'expo-sharing';
+import { StatusBar } from 'expo-status-bar';
 import { useTheme } from '@/src/theme/ThemeContext';
 import { SPACING, RADIUS, GOLD } from '@/src/theme/tokens';
 import { api, Hymn, getSections } from '@/src/lib/api';
@@ -222,6 +223,7 @@ const insets = useSafeAreaInsets();
   const [shareOpen, setShareOpen] = useState(false);
   const [sharing, setSharing] = useState(false);
 const [contentMode, setContentMode] = useState<'lyrics' | 'chords' | 'audio'>('lyrics');
+const [isFullscreen, setIsFullscreen] = useState(false);
 
   // ADMFC_YOUTUBE_RETURN_TO_LYRICS
   // Ao voltar do YouTube/áudio externo para o app,
@@ -253,6 +255,11 @@ useFocusEffect(
     const subscription = BackHandler.addEventListener(
       'hardwareBackPress',
       () => {
+        if (isFullscreen) {
+          setIsFullscreen(false);
+          return true;
+        }
+
         if (contentMode !== 'lyrics') {
           setDragTime(null);
           setContentMode('lyrics');
@@ -264,7 +271,7 @@ useFocusEffect(
     );
 
     return () => subscription.remove();
-  }, [contentMode])
+  }, [contentMode, isFullscreen])
 );
 const [transposeSteps, setTransposeSteps] = useState(0);
 
@@ -507,8 +514,19 @@ hymnAlignStorage.get().then(setHymnAlign);
       : null;
 
   return (
-    <SafeAreaView style={[styles.container, { backgroundColor: c.surface }]} edges={['top']} testID="hymn-detail-screen">
-      <View style={styles.topBar}>
+    <SafeAreaView
+      style={[styles.container, { backgroundColor: c.surface }]}
+      edges={isFullscreen ? [] : ['top']}
+      testID="hymn-detail-screen"
+    >
+      <StatusBar hidden={isFullscreen} />
+
+      <View
+        style={[
+          styles.topBar,
+          isFullscreen && styles.hiddenChrome,
+        ]}
+      >
         <Pressable
           onPress={() => {
             if (contentMode !== 'lyrics') {
@@ -620,7 +638,12 @@ hymnAlignStorage.get().then(setHymnAlign);
         </Pressable>
       </View>
       <GestureDetector gesture={pinchGesture}>
-        <ScrollView contentContainerStyle={styles.scroll}>
+        <ScrollView
+          contentContainerStyle={[
+            styles.scroll,
+            isFullscreen && styles.fullscreenScroll,
+          ]}
+        >
         <Text style={[styles.himnario, { color: c.muted }]}>{hymn.himnario.toUpperCase()}</Text>
         <Text style={[styles.number, { color: c.brand }]}>Nº {hymn.numero}</Text>
 <Text style={[styles.title, { color: c.onSurface, textAlign: 'center' }]}>{hymn.titulo}</Text>
@@ -1406,6 +1429,7 @@ hymnAlignStorage.get().then(setHymnAlign);
 <View
   style={[
     styles.controlBar,
+    isFullscreen && styles.hiddenChrome,
     {
       backgroundColor: c.surface,
       borderTopColor: c.divider,
@@ -1423,8 +1447,49 @@ hymnAlignStorage.get().then(setHymnAlign);
           <Text style={{ color: c.onSurface, fontSize: 13, fontWeight: '600' }}>{inList ? 'En culto' : 'Culto'}</Text>
         </Pressable>
         <Pressable onPress={() => nav(1)} style={[styles.ctrl, { borderColor: c.border }]} testID="hymn-next"><Feather name="chevron-right" size={18} color={c.onSurface} /></Pressable>
-        <Pressable onPress={() => router.push(`/culto-mode?id=${hymn.id}` as any)} style={[styles.ctrl, { backgroundColor: c.brand, borderColor: c.brand }]} testID="hymn-open-culto"><Feather name="maximize" size={16} color={c.onSurfaceInverse} /></Pressable>
+        <Pressable
+          onPress={() => setIsFullscreen(true)}
+          style={[
+            styles.ctrl,
+            {
+              backgroundColor: c.brand,
+              borderColor: c.brand,
+            },
+          ]}
+          accessibilityRole="button"
+          accessibilityLabel="Pantalla completa"
+          testID="hymn-open-fullscreen"
+        >
+          <Feather
+            name="maximize"
+            size={16}
+            color={c.onSurfaceInverse}
+          />
+        </Pressable>
       </View>
+
+      {isFullscreen ? (
+        <Pressable
+          onPress={() => setIsFullscreen(false)}
+          hitSlop={12}
+          style={[
+            styles.fullscreenExit,
+            {
+              backgroundColor: c.surfaceSecondary,
+              borderColor: c.border,
+            },
+          ]}
+          accessibilityRole="button"
+          accessibilityLabel="Salir de pantalla completa"
+          testID="hymn-exit-fullscreen"
+        >
+          <Feather
+            name="minimize"
+            size={20}
+            color={c.onSurface}
+          />
+        </Pressable>
+      ) : null}
 
       {/* Share options modal */}
       <Modal visible={shareOpen} transparent animationType="fade" onRequestClose={() => setShareOpen(false)}>
@@ -1484,6 +1549,30 @@ const styles = StyleSheet.create({
     borderRadius: RADIUS.md,
   },
   scroll: { padding: SPACING.lg, paddingBottom: 140 },
+
+  fullscreenScroll: {
+    paddingHorizontal: SPACING.md,
+    paddingTop: SPACING.lg,
+    paddingBottom: SPACING.xxl,
+  },
+
+  hiddenChrome: {
+    display: 'none',
+  },
+
+  fullscreenExit: {
+    position: 'absolute',
+    top: 12,
+    right: 12,
+    width: 42,
+    height: 42,
+    borderRadius: RADIUS.pill,
+    borderWidth: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    zIndex: 20,
+    elevation: 8,
+  },
   himnario: { fontSize: 11, fontWeight: '800', letterSpacing: 2 },
   number: { fontSize: 27, fontWeight: '900', letterSpacing: 1, marginTop: 1 },
   title: {
