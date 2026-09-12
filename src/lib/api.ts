@@ -157,6 +157,142 @@ const PREPARED_CONTENT_PUBLICATION_KEY =
 const CONTENT_MANIFEST_URL =
   'https://raw.githubusercontent.com/jonatascds68/himnario-admfc/main/updates/manifest.json';
 
+const HINARIO_SERVICE_URL =
+  'https://admfc-services.jonatascds68.workers.dev';
+
+type HinarioPublicationSession = {
+  token: string;
+  token_type: string;
+  expires_in: number;
+};
+
+async function createHinarioPublicationSession(
+  password: string
+): Promise<HinarioPublicationSession> {
+  const cleanPassword = String(password ?? '').trim();
+
+  if (!cleanPassword) {
+    throw new Error('La contraseña administrativa es obligatoria');
+  }
+
+  const response = await fetch(
+    `${HINARIO_SERVICE_URL}/hinario/session`,
+    {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        password: cleanPassword,
+      }),
+    }
+  );
+
+  let data: any = null;
+
+  try {
+    data = await response.json();
+  } catch {
+    // La respuesta HTTP sigue siendo la autoridad.
+  }
+
+  if (!response.ok) {
+    if (response.status === 401) {
+      throw new Error('Contraseña administrativa incorrecta');
+    }
+
+    throw new Error(
+      data?.error
+        ? `No se pudo autenticar la publicación: ${data.error}`
+        : `No se pudo autenticar la publicación (${response.status})`
+    );
+  }
+
+  if (
+    !data ||
+    data.ok !== true ||
+    typeof data.token !== 'string' ||
+    !data.token.trim()
+  ) {
+    throw new Error(
+      'El servicio devolvió una sesión de publicación inválida'
+    );
+  }
+
+  return {
+    token: data.token,
+    token_type:
+      typeof data.token_type === 'string'
+        ? data.token_type
+        : 'Bearer',
+    expires_in:
+      Number.isFinite(Number(data.expires_in))
+        ? Number(data.expires_in)
+        : 0,
+  };
+}
+
+async function publishContentPackageToService(
+  pkg: ContentPatchPackage,
+  password: string
+): Promise<void> {
+  const session =
+    await createHinarioPublicationSession(password);
+
+  const response = await fetch(
+    `${HINARIO_SERVICE_URL}/hinario/publish`,
+    {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${session.token}`,
+      },
+      body: JSON.stringify(pkg),
+    }
+  );
+
+  let data: any = null;
+
+  try {
+    data = await response.json();
+  } catch {
+    // Não dependemos do formato da resposta de sucesso.
+  }
+
+  if (!response.ok) {
+    const code =
+      typeof data?.error === 'string'
+        ? data.error
+        : null;
+
+    if (code === 'unauthorized') {
+      throw new Error(
+        'La sesión de publicación fue rechazada por el servidor'
+      );
+    }
+
+    if (code === 'publication_disabled') {
+      throw new Error(
+        'La publicación remota está deshabilitada actualmente en el servicio ADMFC'
+      );
+    }
+
+    if (code === 'invalid_patch') {
+      throw new Error(
+        'El servidor rechazó el paquete de actualización como inválido'
+      );
+    }
+
+    throw new Error(
+      code
+        ? `No se pudo publicar la actualización: ${code}`
+        : `No se pudo publicar la actualización (${response.status})`
+    );
+  }
+}
+
 type OfficialContentManifest = {
   schema_version: 'admfc-content-manifest-1';
   latest_revision: number;
@@ -203,6 +339,38 @@ async function getOfficialContentManifest(): Promise<OfficialContentManifest> {
 async function getOfficialContentRevision(): Promise<number> {
   const manifest = await getOfficialContentManifest();
   return manifest.latest_revision;
+}
+
+async function waitForOfficialContentRevision(
+  expectedRevision: number,
+  attempts = 10,
+  delayMs = 1500
+): Promise<void> {
+  let lastRevision = -1;
+
+  for (let attempt = 1; attempt <= attempts; attempt += 1) {
+    lastRevision = await getOfficialContentRevision();
+
+    if (lastRevision === expectedRevision) {
+      return;
+    }
+
+    if (lastRevision > expectedRevision) {
+      throw new Error(
+        `La revisión oficial avanzó a R${String(lastRevision).padStart(6, '0')} antes de confirmar R${String(expectedRevision).padStart(6, '0')}`
+      );
+    }
+
+    if (attempt < attempts) {
+      await new Promise<void>((resolve) => {
+        setTimeout(resolve, delayMs);
+      });
+    }
+  }
+
+  throw new Error(
+    `La publicación fue enviada, pero GitHub todavía no confirma R${String(expectedRevision).padStart(6, '0')}. No se eliminó ninguna corrección.`
+  );
 }
 
 async function getOfficialContentPackage(
@@ -1936,6 +2104,56 @@ async function reconcileAdminPublicationState(): Promise<void> {
 }
 
 export const api = {
+  publishContentUpdate: async (
+    pkg: ContentPatchPackage,
+    password: string
+  ) => {
+    requireAuth();
+
+    if (
+      !pkg ||
+      pkg.schema_version !== 'admfc-content-patch-1' ||
+      !Number.isInteger(pkg.revision) ||
+      pkg.revision < 1 ||
+      !Array.isArray(pkg.patches) ||
+      pkg.patches.length === 0
+    ) {
+      throw new Error(
+        'La actualización preparada es inválida'
+      );
+    }
+
+    const officialRevision =
+      await getOfficialContentRevision();
+
+    if (officialRevision > pkg.revision) {
+      throw new Error(
+        `La revisión oficial ya avanzó a R${String(officialRevision).padStart(6, '0')}`
+      );
+    }
+
+    /*
+     * Publicação idempotente:
+     * se esta revisão já chegou ao GitHub em uma tentativa anterior,
+     * não enviamos o mesmo pacote novamente ao Worker.
+     */
+    if (officialRevision < pkg.revision) {
+      await publishContentPackageToService(
+        pkg,
+        password
+      );
+
+      await waitForOfficialContentRevision(
+        pkg.revision
+      );
+    }
+
+    return {
+      ok: true,
+      revision: pkg.revision,
+    };
+  },
+
   // ADMFC 7AA.44: entrada pública do motor de atualização de conteúdo.
   applyContentUpdates: async (pkg: ContentPatchPackage) =>
     applyContentPatchPackage(pkg),

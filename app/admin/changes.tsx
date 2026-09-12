@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react';
-import { View, Text, StyleSheet, Pressable, ScrollView, ActivityIndicator, Alert, Platform, Modal,
+import { View, Text, StyleSheet, Pressable, ScrollView, ActivityIndicator, Alert, Platform, Modal, TextInput,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
@@ -313,6 +313,8 @@ export default function AdminChanges() {
     useState(false);
   const [publicationTarget, setPublicationTarget] =
     useState<PreparedContentPublication | null>(null);
+  const [publicationPassword, setPublicationPassword] =
+    useState('');
   const [reviewTarget, setReviewTarget] =
     useState<AdminHymnChange | null>(null);
   const [reviewingId, setReviewingId] = useState<string | null>(null);
@@ -735,26 +737,52 @@ export default function AdminChanges() {
     if (!publicationTarget || confirmingPublication) return;
 
     const target = publicationTarget;
+    const password = publicationPassword.trim();
+
+    if (!password) {
+      Alert.alert(
+        'Contraseña requerida',
+        'Ingrese la contraseña administrativa para publicar.'
+      );
+      return;
+    }
 
     try {
       setConfirmingPublication(true);
 
-      const result = await api.confirmContentPublished(
-        target.revision
+      const pkg =
+        await api.exportPreparedContentUpdate();
+
+      if (pkg.revision !== target.revision) {
+        throw new Error(
+          'La revisión preparada cambió antes de la publicación'
+        );
+      }
+
+      await api.publishContentUpdate(
+        pkg,
+        password
       );
 
+      const result =
+        await api.confirmContentPublished(
+          target.revision
+        );
+
       setPublicationTarget(null);
+      setPublicationPassword('');
 
       await loadChanges();
 
       Alert.alert(
-        'Publicación confirmada',
-        `La revisión R${String(result.revision).padStart(6, '0')} fue confirmada correctamente.`
+        'Publicación completada',
+        `La revisión R${String(result.revision).padStart(6, '0')} fue publicada y confirmada correctamente.`
       );
     } catch (e: any) {
       Alert.alert(
         'Error',
-        e?.message || 'No se pudo confirmar la publicación'
+        e?.message ||
+          'No se pudo publicar la actualización'
       );
     } finally {
       setConfirmingPublication(false);
@@ -1033,9 +1061,10 @@ export default function AdminChanges() {
               </Pressable>
 
               <Pressable
-                onPress={() =>
-                  setPublicationTarget(preparedPublication)
-                }
+                onPress={() => {
+                  setPublicationPassword('');
+                  setPublicationTarget(preparedPublication);
+                }}
                 disabled={confirmingPublication}
                 style={[
                   styles.confirmPublicationButton,
@@ -1057,7 +1086,7 @@ export default function AdminChanges() {
                     { color: c.surface },
                   ]}
                 >
-                  Confirmar publicación
+                  Publicar actualización
                 </Text>
               </Pressable>
             </View>
@@ -1249,6 +1278,7 @@ export default function AdminChanges() {
       onRequestClose={() => {
         if (!confirmingPublication) {
           setPublicationTarget(null);
+          setPublicationPassword('');
         }
       }}
     >
@@ -1281,7 +1311,7 @@ export default function AdminChanges() {
               { color: c.onSurface },
             ]}
           >
-            Confirmar publicación
+            Publicar actualización
           </Text>
 
           {publicationTarget ? (
@@ -1301,9 +1331,33 @@ export default function AdminChanges() {
               { color: c.muted },
             ]}
           >
-            Confirme solamente después de que el archivo de
-            actualización haya sido publicado correctamente.
+            Ingrese la contraseña administrativa. La revisión
+            será enviada de forma segura al servicio ADMFC y
+            publicada directamente en GitHub.
           </Text>
+
+          <TextInput
+            value={publicationPassword}
+            onChangeText={setPublicationPassword}
+            placeholder="Contraseña administrativa"
+            placeholderTextColor={c.muted}
+            secureTextEntry
+            autoCapitalize="none"
+            autoCorrect={false}
+            editable={!confirmingPublication}
+            style={{
+              width: '100%',
+              minHeight: 48,
+              marginTop: SPACING.md,
+              marginBottom: SPACING.sm,
+              borderWidth: 1,
+              borderColor: c.border,
+              borderRadius: RADIUS.md,
+              paddingHorizontal: SPACING.md,
+              color: c.onSurface,
+              backgroundColor: c.surfaceSecondary,
+            }}
+          />
 
           <Text
             style={[
@@ -1319,7 +1373,10 @@ export default function AdminChanges() {
 
           <View style={styles.reviewActions}>
             <Pressable
-              onPress={() => setPublicationTarget(null)}
+              onPress={() => {
+                setPublicationTarget(null);
+                setPublicationPassword('');
+              }}
               disabled={confirmingPublication}
               style={[
                 styles.reviewModalButton,
@@ -1375,7 +1432,7 @@ export default function AdminChanges() {
                   { color: c.onSurfaceInverse },
                 ]}
               >
-                Confirmar
+                Publicar
               </Text>
             </Pressable>
           </View>
