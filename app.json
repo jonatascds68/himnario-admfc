@@ -2,7 +2,7 @@
   "expo": {
     "name": "Himnario ADMFC",
     "slug": "himnario-admfc",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "orientation": "default",
     "icon": "./assets/images/icon-admfc.png",
     "scheme": "himnarioadmfc",
