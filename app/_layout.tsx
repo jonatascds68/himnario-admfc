@@ -26,6 +26,7 @@ import { AtkinsonHyperlegible_400Regular } from '@expo-google-fonts/atkinson-hyp
 import { ThemeProvider } from '@/src/theme/ThemeContext';
 import { guideStorage } from '@/src/lib/storage';
 import { syncContentUpdates } from '@/src/lib/content-sync';
+import { checkForAppUpdate } from '@/src/lib/app-update';
 
 LogBox.ignoreAllLogs(true);
 SplashScreen.preventAutoHideAsync();
@@ -82,16 +83,55 @@ export default function RootLayout() {
     };
   }, []);
 
+  const ready =
+    (loaded || error) &&
+    (textFontsLoaded || textFontsError);
+
+  /*
+   * ADMFC — aviso de nova versão do aplicativo.
+   *
+   * - verifica depois da abertura visual do app;
+   * - volta a verificar quando o app retorna ao primeiro plano;
+   * - o helper limita a consulta normal a uma vez por 24 horas;
+   * - falhas de rede são silenciosas.
+   */
+  useEffect(() => {
+    if (!ready || introVisible) return;
+
+    let active = true;
+
+    const runCheck = () => {
+      if (!active) return;
+
+      checkForAppUpdate().catch(() => {
+        // Uma falha de rede nunca deve interromper o hinário.
+      });
+    };
+
+    const timer = setTimeout(runCheck, 900);
+
+    const subscription = AppState.addEventListener(
+      'change',
+      nextState => {
+        if (nextState === 'active') {
+          runCheck();
+        }
+      }
+    );
+
+    return () => {
+      active = false;
+      clearTimeout(timer);
+      subscription.remove();
+    };
+  }, [ready, introVisible]);
+
   // ADMFC — abertura clean
   const logoScale = useRef(new Animated.Value(0.58)).current;
   const logoOpacity = useRef(new Animated.Value(0)).current;
   const titleOpacity = useRef(new Animated.Value(0)).current;
   const titleTranslateY = useRef(new Animated.Value(8)).current;
   const introOpacity = useRef(new Animated.Value(1)).current;
-
-  const ready =
-    (loaded || error) &&
-    (textFontsLoaded || textFontsError);
 
   useEffect(() => {
     if (!ready) return;

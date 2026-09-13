@@ -1,0 +1,8 @@
+{
+  "schema_version": "admfc-app-version-1",
+  "latest_version": "1.0.2",
+  "minimum_version": "1.0.1",
+  "required": false,
+  "message": "Ya está disponible una nueva versión de Himnario ADMFC. Actualice la aplicación para recibir las últimas mejoras y correcciones.",
+  "play_store_url": "https://play.google.com/store/apps/details?id=org.admfc.himnario"
+}
