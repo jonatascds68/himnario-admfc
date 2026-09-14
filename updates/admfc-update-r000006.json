@@ -4,18 +4,11 @@
   "patches": [
     {
       "hymn_id": "CANT-067",
-      "operation": "update",
-      "fields": {
-        "titulo": "VEN CENAR (Harpa Cristiana N° 301)"
-      }
-    },
-    {
-      "hymn_id": "CANT-067",
       "operation": "create",
       "fields": {
         "himnario": "Cánticos de Alabanza",
         "numero": 67,
-        "titulo": "VEN CENAR (Harpa Cristiana 301)Cristo ya nos preparó, un manjar que nos compró, y ahora nos invita a cenar.\nCon celestial maná; Que cuál dádiva Dios da, ven hambriento a tu alma saciar.",
+        "titulo": "VEN CENAR (Harpa Cristiana N° 301)",
         "categorias": [
           "Cena del Señor",
           "HARPA CRISTIANA"
@@ -97,61 +90,6 @@
           }
         ],
         "titulo": "MÁS BLANCO QUE LA NIEVE (Harpa Cristiana N° 39)"
-      }
-    },
-    {
-      "hymn_id": "CANT-066",
-      "operation": "create",
-      "fields": {
-        "himnario": "Cánticos de Alabanza",
-        "numero": 66,
-        "titulo": "MÁS BLANCO QUE LA NIEVE (Harpa Cristiana 39)",
-        "categorias": [
-          "Cena del Señor",
-          "HARPA CRISTIANA"
-        ],
-        "bloques": [
-          {
-            "tipo": "estrofa",
-            "numero": 1,
-            "texto": "1-Bendito sea el cordero que en la cruz por nosotros sufrió.\n Bendito sea su sangre que por nosotros allí derramó.\nHe aquí en esa sangre lavados, con vestiduras tan blancas\nEstán, los pecadores redimidos que ante su Dios ya están.Más blanco que la nieve, más blanco que la nieve\nSi en esa sangre he lavado, más blanco que la nieve seré."
-          },
-          {
-            "tipo": "coro",
-            "numero": null,
-            "rotulo": "CORO",
-            "texto": "Más blanco que la nieve, más blanco que la nieve\nSi en esa sangre he lavado, más blanco que la nieve seré."
-          },
-          {
-            "tipo": "estrofa",
-            "numero": 2,
-            "texto": "2-Cuán espinosa la corona que Jesús por nosotros llevó\nOh cuán profundas las llagas que nos prueban cuánto el amor\nHe aquí en esas llagas pureza para el mayor pecador\nPues más blanco que la nieve tu sangre nos hace Señor."
-          },
-          {
-            "tipo": "estrofa",
-            "numero": 3,
-            "texto": "3-Si a ti nosotros confesamos y seguimos en tu luz,\nTú no solamente perdonas también purificas oh Jesús\nSi de todo pecado, que maravilla de amor,\nPues más blanco que la nieve tu sangre nos hace Señor."
-          }
-        ],
-        "cifra_bloques": [],
-        "tom": null,
-        "cifra_url": null,
-        "audio_url": null,
-        "audio_external_url": null,
-        "cifra_autorizada": false,
-        "audio_autorizado": false,
-        "cifra_procedencia": {
-          "fuente": null,
-          "tipo": "desconocido",
-          "autorizado": false,
-          "notas": null
-        },
-        "audio_procedencia": {
-          "fuente": null,
-          "tipo": "desconocido",
-          "autorizado": false,
-          "notas": null
-        }
       }
     }
   ]
