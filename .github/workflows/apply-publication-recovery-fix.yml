@@ -72,7 +72,7 @@ jobs:
 
       - name: TypeScript check
         run: |
-          npm ci
+          npm install --no-package-lock --ignore-scripts
           npx tsc --noEmit
 
       - name: Commit fix
