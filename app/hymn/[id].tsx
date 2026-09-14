@@ -642,6 +642,12 @@ hymnAlignStorage.get().then(setHymnAlign);
           contentContainerStyle={[
             styles.scroll,
             isFullscreen && styles.fullscreenScroll,
+            isFullscreen && {
+              paddingBottom: Math.max(
+                96,
+                insets.bottom + SPACING.xxl
+              ),
+            },
           ]}
         >
         <Text style={[styles.himnario, { color: c.muted }]}>{hymn.himnario.toUpperCase()}</Text>
