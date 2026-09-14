@@ -1,0 +1,40 @@
+{
+  "schema_version": "admfc-content-patch-1",
+  "revision": 7,
+  "patches": [
+    {
+      "hymn_id": "CANT-067",
+      "operation": "update",
+      "fields": {
+        "bloques": [
+          {
+            "tipo": "estrofa",
+            "numero": 1,
+            "texto": "Cristo ya nos preparó, un manjar que nos compró, y ahora nos invita a cenar.\nCon celestial maná; Que cuál dádiva Dios da, ven hambriento a tu alma saciar."
+          },
+          {
+            "tipo": "coro",
+            "numero": null,
+            "rotulo": "CORO",
+            "texto": "Ven cenar, Jesús te llama a cenar,\nHoy mismo te podrás saciar;\nPocos panes aumentó, agua en vino transformó;\nVen hambriento a Jesús, ven a cenar."
+          },
+          {
+            "tipo": "estrofa",
+            "numero": 2,
+            "texto": "Los discípulos al volver, sin los peces recoger,\nMas Jesús ordena otra vez partir; Al volver otra vez\nTiene al fuego pez y pan, es Jesús que los invita a cenar."
+          },
+          {
+            "tipo": "estrofa",
+            "numero": 3,
+            "texto": "Si con sed te encuentras hoy, ven a Cristo sin tardar,\nPues un vino no mezclado Él te da; Y también de vida el pan,\nQue nos trae consolación, pues que todo preparado ya está."
+          },
+          {
+            "tipo": "estrofa",
+            "numero": 4,
+            "texto": "Pronto Cristo volverá, y su novia llevará,\nsu lugar bien cerca del Señor tendrá; Quién el hambre soportó,\ny la sed ya padeció, en los cielos saciados estará"
+          }
+        ]
+      }
+    }
+  ]
+}

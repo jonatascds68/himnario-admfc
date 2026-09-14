@@ -1,12 +1,13 @@
 {
   "schema_version": "admfc-content-manifest-1",
-  "latest_revision": 6,
+  "latest_revision": 7,
   "patches": [
     "admfc-update-r000001.json",
     "admfc-update-r000002.json",
     "admfc-update-r000003.json",
     "admfc-update-r000004.json",
     "admfc-update-r000005.json",
-    "admfc-update-r000006.json"
+    "admfc-update-r000006.json",
+    "admfc-update-r000007.json"
   ]
 }
