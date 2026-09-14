@@ -236,7 +236,7 @@ async function createHinarioPublicationSession(
 async function publishContentPackageToService(
   pkg: ContentPatchPackage,
   password: string
-): Promise<void> {
+): Promise<'published' | 'revision_conflict'> {
   const session =
     await createHinarioPublicationSession(password);
 
@@ -285,12 +285,25 @@ async function publishContentPackageToService(
       );
     }
 
+    /*
+     * A publicação pode ter sido aceita pelo GitHub enquanto o
+     * aplicativo ainda enxerga um manifest anterior por cache/propagação.
+     * Nesse caso, uma segunda tentativa recebe revision_conflict.
+     * Não tratamos isso como sucesso ainda: devolvemos um estado explícito
+     * para que o chamador aguarde a revisão oficial e compare o pacote.
+     */
+    if (code === 'revision_conflict') {
+      return 'revision_conflict';
+    }
+
     throw new Error(
       code
         ? `No se pudo publicar la actualización: ${code}`
         : `No se pudo publicar la actualización (${response.status})`
     );
   }
+
+  return 'published';
 }
 
 type OfficialContentManifest = {
@@ -343,7 +356,7 @@ async function getOfficialContentRevision(): Promise<number> {
 
 async function waitForOfficialContentRevision(
   expectedRevision: number,
-  attempts = 10,
+  attempts = 40,
   delayMs = 1500
 ): Promise<void> {
   let lastRevision = -1;
@@ -413,6 +426,34 @@ async function getOfficialContentPackage(
   }
 
   return pkg as ContentPatchPackage;
+}
+
+async function assertOfficialContentPackageMatches(
+  pkg: ContentPatchPackage
+): Promise<void> {
+  const manifest = await getOfficialContentManifest();
+  const filename = manifest.patches.find((item) => {
+    const match = item.match(/r(\d+)\.json$/i);
+    return match && Number(match[1]) === pkg.revision;
+  });
+
+  if (!filename) {
+    throw new Error(
+      `GitHub confirma R${String(pkg.revision).padStart(6, '0')}, pero no se encontró su archivo oficial`
+    );
+  }
+
+  const officialPkg = await getOfficialContentPackage(filename);
+
+  if (
+    officialPkg.schema_version !== pkg.schema_version ||
+    officialPkg.revision !== pkg.revision ||
+    !sameValue(officialPkg.patches, pkg.patches)
+  ) {
+    throw new Error(
+      `La revisión R${String(pkg.revision).padStart(6, '0')} ya existe en GitHub con contenido diferente. No se eliminó ninguna corrección local.`
+    );
+  }
 }
 
 /*
@@ -2143,10 +2184,23 @@ export const api = {
         password
       );
 
+      /*
+       * Mesmo quando o Worker responde revision_conflict, aguardamos o
+       * manifest oficial convergir. Isso cobre a janela em que a revisão
+       * já foi gravada no GitHub, mas o raw.githubusercontent ainda serve
+       * a versão anterior.
+       */
       await waitForOfficialContentRevision(
         pkg.revision
       );
     }
+
+    /*
+     * Antes de confirmar localmente, a revisão oficial precisa ser
+     * exatamente o mesmo pacote preparado no aparelho. Assim a recuperação
+     * é idempotente sem transformar um conflito real em falso sucesso.
+     */
+    await assertOfficialContentPackageMatches(pkg);
 
     return {
       ok: true,
