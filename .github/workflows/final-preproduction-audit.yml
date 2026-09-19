@@ -1,0 +1,27 @@
+name: Final pre-production audit
+
+on:
+  push:
+    branches:
+      - fix/dynamic-category-refresh-20260913
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: yarn
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile --non-interactive
+      - name: TypeScript
+        run: npx tsc --noEmit
+      - name: ESLint
+        run: yarn lint
+      - name: Expo Doctor
+        run: npx expo-doctor
