@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import {
   View,
   Text,
@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
+import { useFocusEffect } from '@react-navigation/native';
 import { Feather, MaterialCommunityIcons } from '@expo/vector-icons';
 
 import { useTheme } from '@/src/theme/ThemeContext';
@@ -54,6 +55,8 @@ const CATEGORY_ICONS: Record<
 
   'Gozo y Paz de los Creyentes': 'weather-sunny',
 
+  'Harpa Cristã': 'book-music-outline',
+
   'Iglesia': 'church',
   'Invitación al Pecador': 'account-heart',
 
@@ -73,10 +76,66 @@ const CATEGORY_ICONS: Record<
   'Sufrimiento y Muerte de Jesús': 'cross-outline',
 };
 
+function normalizeCategoryName(name: string): string {
+  return String(name || '')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .trim();
+}
+
 function getCategoryIcon(
   name: string
 ): keyof typeof MaterialCommunityIcons.glyphMap {
-  return CATEGORY_ICONS[name] || 'bookmark-outline';
+  const exact = CATEGORY_ICONS[name];
+  if (exact) return exact;
+
+  const normalized = normalizeCategoryName(name);
+
+  /*
+   * Categorias criadas pelo administrador também recebem um ícone
+   * coerente, mesmo sem uma entrada fixa no mapa acima.
+   */
+  if (
+    normalized.includes('harpa') ||
+    normalized.includes('hinario') ||
+    normalized.includes('hymn')
+  ) {
+    return 'book-music-outline';
+  }
+
+  if (
+    normalized.includes('musica') ||
+    normalized.includes('alabanza') ||
+    normalized.includes('canto') ||
+    normalized.includes('coro')
+  ) {
+    return 'music-note';
+  }
+
+  if (
+    normalized.includes('biblia') ||
+    normalized.includes('escritura') ||
+    normalized.includes('palabra')
+  ) {
+    return 'book-open-page-variant';
+  }
+
+  if (
+    normalized.includes('oracion') ||
+    normalized.includes('consagracion')
+  ) {
+    return 'hands-pray';
+  }
+
+  if (
+    normalized.includes('evangel') ||
+    normalized.includes('mision')
+  ) {
+    return 'bullhorn';
+  }
+
+  return 'bookmark-outline';
 }
 
 export default function Categories() {
@@ -86,29 +145,40 @@ export default function Categories() {
   const [cats, setCats] = useState<CategoryItem[]>([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    (async () => {
-      try {
-        const r = await api.listCategories();
+  const loadCategories = useCallback(async () => {
+    setLoading(true);
 
-        const official = r.items.filter(
-          (item) => (item.count ?? 0) > 0
-        );
+    try {
+      const r = await api.listCategories();
 
-        const ordered = [...official].sort((a, b) =>
-          a.name.localeCompare(
-            b.name,
-            'es',
-            { sensitivity: 'base' }
-          )
-        );
+      const official = r.items.filter(
+        (item) => (item.count ?? 0) > 0
+      );
 
-        setCats(ordered);
-      } finally {
-        setLoading(false);
-      }
-    })();
+      const ordered = [...official].sort((a, b) =>
+        a.name.localeCompare(
+          b.name,
+          'es',
+          { sensitivity: 'base' }
+        )
+      );
+
+      setCats(ordered);
+    } finally {
+      setLoading(false);
+    }
   }, []);
+
+  /*
+   * A tela precisa recarregar sempre que volta ao foco.
+   * Categorias podem ser criadas, renomeadas ou receber hinos no
+   * Administrativo enquanto esta rota continua montada na navegação.
+   */
+  useFocusEffect(
+    useCallback(() => {
+      loadCategories();
+    }, [loadCategories])
+  );
 
   return (
     <SafeAreaView
