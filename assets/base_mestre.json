@@ -1,11 +1,11 @@
 {
   "schema_version": "1.0",
   "release": "1.4_INTEGRACAO",
-  "total": 712,
+  "total": 714,
   "himnarios": {
     "Gloria y Triunfo": 392,
     "Himnos de Sión": 318,
-    "Cánticos de Alabanza": 65
+    "Cánticos de Alabanza": 67
   },
   "himnos": [
     {
@@ -17969,7 +17969,7 @@
       "pdf_page_start": 2,
       "pdf_half_start": "L",
       "ocr_heading_raw": "2 LEJOS ALLENDE LOS MARES —'",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "estado": "VERIFICADA_PDF",
@@ -18012,7 +18012,7 @@
       "pdf_page_start": 2,
       "pdf_half_start": "R",
       "ocr_heading_raw": "3 CERCA DE TI, SENOR",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 16,
@@ -18064,7 +18064,7 @@
       "pdf_page_start": 3,
       "pdf_half_start": "L",
       "ocr_heading_raw": "4 EL APOSENTO ALTO .",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 1,
@@ -18116,7 +18116,7 @@
       "pdf_page_start": 3,
       "pdf_half_start": "R",
       "ocr_heading_raw": "5 LLUVIAS DE GRACIA ¿L",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 2,
@@ -18165,7 +18165,7 @@
       "pdf_page_start": 4,
       "pdf_half_start": "L",
       "ocr_heading_raw": "6 DULCE COMUNIÓN",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 4,
@@ -18213,7 +18213,7 @@
       "pdf_page_start": 4,
       "pdf_half_start": "R",
       "ocr_heading_raw": "7 LA SIEMBRA £",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "estado": "VERIFICADA_PDF",
@@ -18265,7 +18265,7 @@
       "pdf_page_start": 5,
       "pdf_half_start": "L",
       "ocr_heading_raw": "8 FIRMES Y ADELANTE",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 15,
@@ -18318,7 +18318,7 @@
       "pdf_page_start": 5,
       "pdf_half_start": "R",
       "ocr_heading_raw": "9 ¡OH, CUÁN DULCE!",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 25,
@@ -18365,7 +18365,7 @@
       "pdf_page_start": 6,
       "pdf_half_start": "L",
       "ocr_heading_raw": "2010 CUANDO ALLA SE PASE LISTA",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 20,
@@ -18418,7 +18418,7 @@
       "pdf_page_start": 6,
       "pdf_half_start": "R",
       "ocr_heading_raw": "11 TODO A CRISTO YO ME RINDO /",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 7,
@@ -18470,7 +18470,7 @@
       "pdf_page_start": 7,
       "pdf_half_start": "L",
       "ocr_heading_raw": "12 ALLI NO HABRA TRIBULACION",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 26,
@@ -18519,7 +18519,7 @@
       "pdf_page_start": 7,
       "pdf_half_start": "R",
       "ocr_heading_raw": "13 HAY PODER EN JESÚS 50",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "estado": "VERIFICADA_PDF_Y_GT",
@@ -18576,7 +18576,7 @@
       "pdf_page_start": 8,
       "pdf_half_start": "L",
       "ocr_heading_raw": "14 ¡PAZ! ¡PAZ! ¡CUAN DULCE PAZ! |",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 27,
@@ -18629,7 +18629,7 @@
       "pdf_page_start": 8,
       "pdf_half_start": "R",
       "ocr_heading_raw": "15 MAS DE JESUS",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 28,
@@ -18682,7 +18682,7 @@
       "pdf_page_start": 9,
       "pdf_half_start": "L",
       "ocr_heading_raw": "3316 GRANDE GOZO HAY EN MI ALMA",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 33,
@@ -18735,7 +18735,7 @@
       "pdf_page_start": 9,
       "pdf_half_start": "R",
       "ocr_heading_raw": "17 TENDRAS QUE RENACER",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 34,
@@ -18787,7 +18787,7 @@
       "pdf_page_start": 10,
       "pdf_half_start": "L",
       "ocr_heading_raw": "18 CANTARE LA MARAVILLA",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 35,
@@ -18845,7 +18845,7 @@
       "pdf_page_start": 10,
       "pdf_half_start": "R",
       "ocr_heading_raw": "19 ENTERA CONSAGRACIÓN 3,£",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 36,
@@ -18892,7 +18892,7 @@
       "pdf_page_start": 11,
       "pdf_half_start": "L",
       "ocr_heading_raw": "20 NO HAY MAS QUE UNO",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 235,
@@ -18945,7 +18945,7 @@
       "pdf_page_start": 12,
       "pdf_half_start": "L",
       "ocr_heading_raw": "21 YA TODO DEJE",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 44,
@@ -18992,7 +18992,7 @@
       "pdf_page_start": 12,
       "pdf_half_start": "R",
       "ocr_heading_raw": "22 EN LA VIÑA DEL sEñoR 19",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 49,
@@ -19046,7 +19046,7 @@
       "pdf_page_start": 13,
       "pdf_half_start": "L",
       "ocr_heading_raw": "23 TE LOAMOS, ¡OH, DIOS!",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 50,
@@ -19094,7 +19094,7 @@
       "pdf_page_start": 13,
       "pdf_half_start": "R",
       "ocr_heading_raw": "24 CRISTO LA ROCA",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 52,
@@ -19146,7 +19146,7 @@
       "pdf_page_start": 14,
       "pdf_half_start": "L",
       "ocr_heading_raw": "25 EN LA CRUZ",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 53,
@@ -19194,7 +19194,7 @@
       "pdf_page_start": 14,
       "pdf_half_start": "R",
       "ocr_heading_raw": "26 ¡0H! YO QUIERO ANDAR CON CRISTO!",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 56,
@@ -19247,7 +19247,7 @@
       "pdf_page_start": 15,
       "pdf_half_start": "L",
       "ocr_heading_raw": "27 GLORIA AL CORDERO |",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 57,
@@ -19300,7 +19300,7 @@
       "pdf_page_start": 15,
       "pdf_half_start": "R",
       "ocr_heading_raw": "28 HE DE VER A JESUS",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 58,
@@ -19353,7 +19353,7 @@
       "pdf_page_start": 16,
       "pdf_half_start": "L",
       "ocr_heading_raw": "29 ¡TE QUIERO, MI SENOR!",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 59,
@@ -19405,7 +19405,7 @@
       "pdf_page_start": 16,
       "pdf_half_start": "R",
       "ocr_heading_raw": "30 ¡SALUD! ¡SALUD!",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 66,
@@ -19505,7 +19505,7 @@
       "pdf_page_start": 18,
       "pdf_half_start": "L",
       "ocr_heading_raw": "32 LIBRE ESTOY",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 68,
@@ -19576,7 +19576,7 @@
       "pdf_page_start": 18,
       "pdf_half_start": "R",
       "ocr_heading_raw": "33 DILO A CRISTO",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 74,
@@ -19623,7 +19623,7 @@
       "pdf_page_start": 19,
       "pdf_half_start": "L",
       "ocr_heading_raw": "34 HAY QUIEN VIGILE",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 72,
@@ -19723,7 +19723,7 @@
       "pdf_page_start": 20,
       "pdf_half_start": "L",
       "ocr_heading_raw": "36 TUYO SOY, JESUS",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 75,
@@ -19776,7 +19776,7 @@
       "pdf_page_start": 20,
       "pdf_half_start": "R",
       "ocr_heading_raw": "37 ¡0H, VEN SIN TARDAR!",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 83,
@@ -19829,7 +19829,7 @@
       "pdf_page_start": 21,
       "pdf_half_start": "L",
       "ocr_heading_raw": "38 LA BANDERA DE LA CRUZ",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 81,
@@ -19882,7 +19882,7 @@
       "pdf_page_start": 21,
       "pdf_half_start": "R",
       "ocr_heading_raw": "39 NADA HAY QUE ME PUEDA APARTAR",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 61,
@@ -19930,7 +19930,7 @@
       "pdf_page_start": 22,
       "pdf_half_start": "L",
       "ocr_heading_raw": "40 SOY SOLDADO DE JESUS",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 84,
@@ -19983,7 +19983,7 @@
       "pdf_page_start": 22,
       "pdf_half_start": "R",
       "ocr_heading_raw": "41 YA SALVO SOY",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 91,
@@ -20030,7 +20030,7 @@
       "pdf_page_start": 23,
       "pdf_half_start": "L",
       "ocr_heading_raw": "42 MAS CUAL JESUS",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 95,
@@ -20088,7 +20088,7 @@
       "pdf_page_start": 23,
       "pdf_half_start": "R",
       "ocr_heading_raw": "43 CUANDO LEO EN LA BIBLIA",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 196,
@@ -20141,7 +20141,7 @@
       "pdf_page_start": 24,
       "pdf_half_start": "R",
       "ocr_heading_raw": "44 PODER PENTECOSTAL",
-      "titulo_match_score_mismo_numero": 97.0,
+      "titulo_match_score_mismo_numero": 97,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 102,
@@ -20288,7 +20288,7 @@
       "pdf_page_start": 26,
       "pdf_half_start": "L",
       "ocr_heading_raw": "47 HUBO QUIEN POR MIS CULPAS",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "estado": "VERIFICADA_GT_COTEJO_SION",
@@ -20341,7 +20341,7 @@
       "pdf_page_start": 26,
       "pdf_half_start": "R",
       "ocr_heading_raw": "48 EL NOMBRE DE JESUS",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 108,
@@ -20390,7 +20390,7 @@
       "pdf_page_start": 27,
       "pdf_half_start": "L",
       "ocr_heading_raw": ": 49 LLAMA PENTECOSTAL",
-      "titulo_match_score_mismo_numero": 97.0,
+      "titulo_match_score_mismo_numero": 97,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "estado": "VERIFICADA_GT_COTEJO_SION",
@@ -20438,7 +20438,7 @@
       "pdf_page_start": 27,
       "pdf_half_start": "R",
       "ocr_heading_raw": "50 HE CONSAGRADO A MI JESUS” ” -",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 110,
@@ -20492,7 +20492,7 @@
       "pdf_page_start": 28,
       "pdf_half_start": "L",
       "ocr_heading_raw": "111 51 LAS PISADAS DEL MAESTRO |",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 111,
@@ -20546,7 +20546,7 @@
       "pdf_page_start": 28,
       "pdf_half_start": "R",
       "ocr_heading_raw": "| 52 UN DIA CRISTO VOLVERA",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "estado": "VERIFICADA_GT_COTEJO_SION",
@@ -20598,7 +20598,7 @@
       "pdf_page_start": 29,
       "pdf_half_start": "L",
       "ocr_heading_raw": "53 DULCE PAZ",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 131,
@@ -20650,7 +20650,7 @@
       "pdf_page_start": 29,
       "pdf_half_start": "R",
       "ocr_heading_raw": "54 AMA El PASTOR SUS OVEJAS",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 117,
@@ -20697,7 +20697,7 @@
       "pdf_page_start": 30,
       "pdf_half_start": "R",
       "ocr_heading_raw": "55 El MUNDO NO ES MI HOGAR",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 118,
@@ -20749,7 +20749,7 @@
       "pdf_page_start": 31,
       "pdf_half_start": "L",
       "ocr_heading_raw": "56 EL MEJOR AMIGO",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 122,
@@ -20802,7 +20802,7 @@
       "pdf_page_start": 31,
       "pdf_half_start": "R",
       "ocr_heading_raw": "57 FUENTE ETERNAL HALLÉ — -> +",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 123,
@@ -20850,7 +20850,7 @@
       "pdf_page_start": 32,
       "pdf_half_start": "L",
       "ocr_heading_raw": "126 58 LAS PROMESAS DE JESUS",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 126,
@@ -20945,7 +20945,7 @@
       "pdf_page_start": 33,
       "pdf_half_start": "L",
       "ocr_heading_raw": "60 SOY SALVO",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 136,
@@ -20997,7 +20997,7 @@
       "pdf_page_start": 33,
       "pdf_half_start": "R",
       "ocr_heading_raw": "61 VIENE OTRA VEZ",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 141,
@@ -21102,7 +21102,7 @@
       "pdf_page_start": 34,
       "pdf_half_start": "R",
       "ocr_heading_raw": "63 LA FUENTE SANADORÁ '”",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 138,
@@ -21149,7 +21149,7 @@
       "pdf_page_start": 35,
       "pdf_half_start": "L",
       "ocr_heading_raw": "64 QUIERO VER MI PATRIA",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 139,
@@ -21191,7 +21191,7 @@
       "pdf_page_start": 35,
       "pdf_half_start": "R",
       "ocr_heading_raw": "65 MAS SANTIDAD DAME",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 140,
@@ -21234,7 +21234,7 @@
       "pdf_page_start": 36,
       "pdf_half_start": "L",
       "ocr_heading_raw": "66 FUENTE DE LA VIDA ETERNA",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 148,
@@ -21272,7 +21272,7 @@
       "pdf_page_start": 36,
       "pdf_half_start": "R",
       "ocr_heading_raw": "67 BAUTISMO",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 149,
@@ -21319,7 +21319,7 @@
       "pdf_page_start": 37,
       "pdf_half_start": "L",
       "ocr_heading_raw": "68 LA PATRIA DEL ALMA",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 159,
@@ -21374,7 +21374,7 @@
       "pdf_page_start": 37,
       "pdf_half_start": "R",
       "ocr_heading_raw": "69 BIENAVENTURADOS LOS DE",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "estado": "VERIFICADA_GT_COTEJO_SION",
@@ -21422,7 +21422,7 @@
       "pdf_page_start": 38,
       "pdf_half_start": "L",
       "ocr_heading_raw": "70 VEN, VEN Y YA CANTEMOS",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -21469,7 +21469,7 @@
       "pdf_page_start": 38,
       "pdf_half_start": "R",
       "ocr_heading_raw": "71 HAY UN MUNDO FELIZ",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 160,
@@ -21521,7 +21521,7 @@
       "pdf_page_start": 39,
       "pdf_half_start": "L",
       "ocr_heading_raw": "72 CARA A CARA",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 168,
@@ -21569,7 +21569,7 @@
       "pdf_page_start": 39,
       "pdf_half_start": "R",
       "ocr_heading_raw": "73 HAY UN LUGAR DO QUIERO ESTAR",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 169,
@@ -21617,7 +21617,7 @@
       "pdf_page_start": 40,
       "pdf_half_start": "L",
       "ocr_heading_raw": "74 ¡0H, CRISTO MIO!",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "estado": "VERIFICADA_GT_COTEJO_SION",
@@ -21675,7 +21675,7 @@
       "pdf_page_start": 40,
       "pdf_half_start": "R",
       "ocr_heading_raw": "75 LA PALABRA HOY SEMBRADA",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 170,
@@ -21723,7 +21723,7 @@
       "pdf_page_start": 41,
       "pdf_half_start": "L",
       "ocr_heading_raw": "76 HIMNO DE BODAS",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -21775,7 +21775,7 @@
       "pdf_page_start": 41,
       "pdf_half_start": "R",
       "ocr_heading_raw": "77 ¡SOY FELIZ!",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 71,
@@ -21822,7 +21822,7 @@
       "pdf_page_start": 42,
       "pdf_half_start": "L",
       "ocr_heading_raw": "78 MI ESPIRITU, ALMA Y CUERP(",
-      "titulo_match_score_mismo_numero": 98.0,
+      "titulo_match_score_mismo_numero": 98,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 178,
@@ -21879,7 +21879,7 @@
       "pdf_page_start": 42,
       "pdf_half_start": "R",
       "ocr_heading_raw": "de 79 GLORIA A TI, JESUS DIVINO",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 182,
@@ -21926,7 +21926,7 @@
       "pdf_page_start": 43,
       "pdf_half_start": "L",
       "ocr_heading_raw": "$0 ¡TRABAJAD! ¡TRABAJAD!",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 179,
@@ -21979,7 +21979,7 @@
       "pdf_page_start": 43,
       "pdf_half_start": "R",
       "ocr_heading_raw": "81 LAS SANTAS ESCRITURAS!",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 180,
@@ -22032,7 +22032,7 @@
       "pdf_page_start": 44,
       "pdf_half_start": "L",
       "ocr_heading_raw": "82 EN JESUS, MI SALVADOR",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 184,
@@ -22079,7 +22079,7 @@
       "pdf_page_start": 44,
       "pdf_half_start": "R",
       "ocr_heading_raw": "83 ¡OH, BONDAD TAN INFINITA!",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 185,
@@ -22131,7 +22131,7 @@
       "pdf_page_start": 45,
       "pdf_half_start": "L",
       "ocr_heading_raw": "84 YO GUIARE",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 187,
@@ -22183,7 +22183,7 @@
       "pdf_page_start": 45,
       "pdf_half_start": "R",
       "ocr_heading_raw": "85 DEJO EL MUNDO Y SIGO A CRISTO",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 192,
@@ -22226,7 +22226,7 @@
       "pdf_page_start": 46,
       "pdf_half_start": "L",
       "ocr_heading_raw": "86 IGLESIA DE CRISTO",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 193,
@@ -22275,7 +22275,7 @@
       "pdf_page_start": 46,
       "pdf_half_start": "L",
       "ocr_heading_raw": "87 GOZO LA SANTA PALABRA LEER",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "estado": "VERIFICADA_VISUAL_PDF",
@@ -22389,7 +22389,7 @@
       "pdf_page_start": 47,
       "pdf_half_start": "L",
       "ocr_heading_raw": "89 JESUS DE LOS CIELOS",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 198,
@@ -22443,7 +22443,7 @@
       "pdf_page_start": 48,
       "pdf_half_start": "L",
       "ocr_heading_raw": "90 NITIDO RAYO POR CRISTO",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 200,
@@ -22491,7 +22491,7 @@
       "pdf_page_start": 48,
       "pdf_half_start": "R",
       "ocr_heading_raw": "91 YA VENIMOS CUAL HERMANOS",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 216,
@@ -22543,7 +22543,7 @@
       "pdf_page_start": 49,
       "pdf_half_start": "L",
       "ocr_heading_raw": "92 BRILLANDO, BRILLANDO",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -22596,7 +22596,7 @@
       "pdf_page_start": 49,
       "pdf_half_start": "R",
       "ocr_heading_raw": "93 NIÑOS, JOYAS DE CRISTO",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 203,
@@ -22649,7 +22649,7 @@
       "pdf_page_start": 50,
       "pdf_half_start": "L",
       "ocr_heading_raw": "94 SUENEN DULCES HIMNOS",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 207,
@@ -22707,7 +22707,7 @@
       "pdf_page_start": 50,
       "pdf_half_start": "R",
       "ocr_heading_raw": "95 LUGAR PARA CRISTO",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 208,
@@ -22750,7 +22750,7 @@
       "pdf_page_start": 51,
       "pdf_half_start": "L",
       "ocr_heading_raw": "96 DIOS BENDIGA LAS ALMAS UNIDAS",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 219,
@@ -22797,7 +22797,7 @@
       "pdf_page_start": 51,
       "pdf_half_start": "R",
       "ocr_heading_raw": "97 SANTA BIBLIA",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 39,
@@ -22839,7 +22839,7 @@
       "pdf_page_start": 52,
       "pdf_half_start": "L",
       "ocr_heading_raw": "98 ROCA DE LA ETERNIDAD",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "estado": "VERIFICADA_GT_COTEJO_SION",
@@ -22887,7 +22887,7 @@
       "pdf_page_start": 52,
       "pdf_half_start": "R",
       "ocr_heading_raw": "99 LA SANTA CENA",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 217,
@@ -22934,7 +22934,7 @@
       "pdf_page_start": 53,
       "pdf_half_start": "L",
       "ocr_heading_raw": "100 ¿QUIEN A CRISTO QUIERE?",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 232,
@@ -22987,7 +22987,7 @@
       "pdf_page_start": 53,
       "pdf_half_start": "R",
       "ocr_heading_raw": "101 JUNTO A LA CRUZ",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 233,
@@ -23045,7 +23045,7 @@
       "pdf_page_start": 54,
       "pdf_half_start": "L",
       "ocr_heading_raw": "102 PON TU CARGA EN JESUS",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 293,
@@ -23197,7 +23197,7 @@
       "pdf_page_start": 55,
       "pdf_half_start": "R",
       "ocr_heading_raw": "105 SALVADOR, MI BIEN ETERNO",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 255,
@@ -23245,7 +23245,7 @@
       "pdf_page_start": 56,
       "pdf_half_start": "L",
       "ocr_heading_raw": "106 TEMPLO DE DIOS",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 257,
@@ -23297,7 +23297,7 @@
       "pdf_page_start": 56,
       "pdf_half_start": "R",
       "ocr_heading_raw": "107 GUARDA El CONTACTO",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 259,
@@ -23344,7 +23344,7 @@
       "pdf_page_start": 57,
       "pdf_half_start": "R",
       "ocr_heading_raw": "108 CREO EN LA BIBLIA",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 260,
@@ -23398,7 +23398,7 @@
       "pdf_page_start": 58,
       "pdf_half_start": "L",
       "ocr_heading_raw": "109 El QUE HA DE VENIR, VENDRA",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 262,
@@ -23445,7 +23445,7 @@
       "pdf_page_start": 58,
       "pdf_half_start": "R",
       "ocr_heading_raw": "110 MÁS CERCA DE CRISTO",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 267,
@@ -23492,7 +23492,7 @@
       "pdf_page_start": 59,
       "pdf_half_start": "L",
       "ocr_heading_raw": "111 DEL ALMA EL SOL, MI SALVADOR",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -23539,7 +23539,7 @@
       "pdf_page_start": 59,
       "pdf_half_start": "L",
       "ocr_heading_raw": "112 POR LA SANGRE",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 275,
@@ -23586,7 +23586,7 @@
       "pdf_page_start": 60,
       "pdf_half_start": "L",
       "ocr_heading_raw": "113 BIENVENIDOS",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -23633,7 +23633,7 @@
       "pdf_page_start": 60,
       "pdf_half_start": "R",
       "ocr_heading_raw": "114 SOLO CRISTO",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 290,
@@ -23686,7 +23686,7 @@
       "pdf_page_start": 61,
       "pdf_half_start": "L",
       "ocr_heading_raw": "115 LA GRACIA",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "estado": "VERIFICADA_GT_COTEJO_SION",
@@ -23733,7 +23733,7 @@
       "pdf_page_start": 61,
       "pdf_half_start": "R",
       "ocr_heading_raw": "116 JESUS PRONTO VOLVERA",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 295,
@@ -23790,7 +23790,7 @@
       "pdf_page_start": 62,
       "pdf_half_start": "L",
       "ocr_heading_raw": "117 COMPRADO CON SANGRE",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 296,
@@ -23838,7 +23838,7 @@
       "pdf_page_start": 62,
       "pdf_half_start": "R",
       "ocr_heading_raw": "118 ID A LA MIES",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 300,
@@ -23886,7 +23886,7 @@
       "pdf_page_start": 63,
       "pdf_half_start": "L",
       "ocr_heading_raw": "119 OIGO LA VOZ DEL BUEN PASTOR",
-      "titulo_match_score_mismo_numero": 39.0,
+      "titulo_match_score_mismo_numero": 39,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 301,
@@ -23986,7 +23986,7 @@
       "pdf_page_start": 64,
       "pdf_half_start": "L",
       "ocr_heading_raw": "121 JUBILOSAS NUESTRAS VOCES",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 306,
@@ -24039,7 +24039,7 @@
       "pdf_page_start": 64,
       "pdf_half_start": "R",
       "ocr_heading_raw": "122 ¡GLORIOSA PAZ!",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 307,
@@ -24145,7 +24145,7 @@
       "pdf_page_start": 65,
       "pdf_half_start": "R",
       "ocr_heading_raw": "124 LA PAZ QUE CRISTO DA",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 312,
@@ -24569,7 +24569,7 @@
       "pdf_page_start": 71,
       "pdf_half_start": "L",
       "ocr_heading_raw": "133 AVIVA TU OBRA, ¡OH, DIOS!",
-      "titulo_match_score_mismo_numero": 50.0,
+      "titulo_match_score_mismo_numero": 50,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 237,
@@ -24779,7 +24779,7 @@
       "pdf_page_start": 72,
       "pdf_half_start": "R",
       "ocr_heading_raw": "137 ALGUNA VEZ YA NO ESTARE",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -24831,7 +24831,7 @@
       "pdf_page_start": 73,
       "pdf_half_start": "L",
       "ocr_heading_raw": "138 YO TENGO FE SOLO EN JESUS",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -24883,7 +24883,7 @@
       "pdf_page_start": 73,
       "pdf_half_start": "R",
       "ocr_heading_raw": "139 CRISTO ME AYUDA POR El A VIVIR",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -24925,7 +24925,7 @@
       "pdf_page_start": 74,
       "pdf_half_start": "L",
       "ocr_heading_raw": "140 ¡AL MUNDO PAZ, NACIO JESUS!",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "estado": "VERIFICADA_VISUAL_PDF",
@@ -24977,7 +24977,7 @@
       "pdf_page_start": 74,
       "pdf_half_start": "R",
       "ocr_heading_raw": "141 VEN A CRISTO",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 309,
@@ -25024,7 +25024,7 @@
       "pdf_page_start": 75,
       "pdf_half_start": "L",
       "ocr_heading_raw": "142 BELLA HISTORIA DE AMOR",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -25077,7 +25077,7 @@
       "pdf_page_start": 75,
       "pdf_half_start": "R",
       "ocr_heading_raw": "143 YO VAGABA EN El PECADO",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -25129,7 +25129,7 @@
       "pdf_page_start": 76,
       "pdf_half_start": "L",
       "ocr_heading_raw": "144 VE Y VIVIRAS",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 319,
@@ -25187,7 +25187,7 @@
       "pdf_page_start": 76,
       "pdf_half_start": "R",
       "ocr_heading_raw": "145 ¿CONOCES A CRISTO?",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -25239,7 +25239,7 @@
       "pdf_page_start": 77,
       "pdf_half_start": "L",
       "ocr_heading_raw": "146 LA HISTORIA DE CRISTO DIREMOS",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -25287,7 +25287,7 @@
       "pdf_page_start": 77,
       "pdf_half_start": "R",
       "ocr_heading_raw": "147 OREMOS MAS",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -25334,7 +25334,7 @@
       "pdf_page_start": 78,
       "pdf_half_start": "L",
       "ocr_heading_raw": "148 SI CREYERE PUEDE A EL VENIR",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 116,
@@ -25386,7 +25386,7 @@
       "pdf_page_start": 78,
       "pdf_half_start": "R",
       "ocr_heading_raw": "149 SOLO UN POCO MAS DE LA",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -25488,7 +25488,7 @@
       "pdf_page_start": 79,
       "pdf_half_start": "R",
       "ocr_heading_raw": "151 USA MI VIDA",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -25621,7 +25621,7 @@
       "pdf_page_start": 81,
       "pdf_half_start": "L",
       "ocr_heading_raw": "154 DA LO MEJOR AL MAESTRO",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -25673,7 +25673,7 @@
       "pdf_page_start": 81,
       "pdf_half_start": "R",
       "ocr_heading_raw": "155 DEL TRONO EN DERREDOR",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -25725,7 +25725,7 @@
       "pdf_page_start": 82,
       "pdf_half_start": "L",
       "ocr_heading_raw": "156 LINDAS LAS MANITAS SON",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -25777,7 +25777,7 @@
       "pdf_page_start": 82,
       "pdf_half_start": "R",
       "ocr_heading_raw": "157 MARCHARE",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -25824,7 +25824,7 @@
       "pdf_page_start": 83,
       "pdf_half_start": "L",
       "ocr_heading_raw": "158 LA PUERTA ABRID A LOS NIÑOS",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -25877,7 +25877,7 @@
       "pdf_page_start": 83,
       "pdf_half_start": "R",
       "ocr_heading_raw": "159 GOZO DA SERVIR A CRISTO",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -25919,7 +25919,7 @@
       "pdf_page_start": 84,
       "pdf_half_start": "L",
       "ocr_heading_raw": "160 GLORIA A DIOS EN LAS ALTURAS",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 211,
@@ -25966,7 +25966,7 @@
       "pdf_page_start": 85,
       "pdf_half_start": "L",
       "ocr_heading_raw": "161 MAESTRO, SE ENCRESPAN LAS AGUAS",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -26019,7 +26019,7 @@
       "pdf_page_start": 85,
       "pdf_half_start": "R",
       "ocr_heading_raw": "162 PENTECOSTES PARA TODOS",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 48,
@@ -26071,7 +26071,7 @@
       "pdf_page_start": 86,
       "pdf_half_start": "L",
       "ocr_heading_raw": "163 COMO UN RIO FLUYE EL GOZO",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -26123,7 +26123,7 @@
       "pdf_page_start": 86,
       "pdf_half_start": "R",
       "ocr_heading_raw": "164 ¡0H, ¿POR QUE JESUS ME AMA?",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -26185,7 +26185,7 @@
       "pdf_page_start": 87,
       "pdf_half_start": "L",
       "ocr_heading_raw": "165 SANTO ESPIRITU DESCIENDE",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 167,
@@ -26227,7 +26227,7 @@
       "pdf_page_start": 88,
       "pdf_half_start": "L",
       "ocr_heading_raw": "166 DULCE ORACIÓN",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 13,
@@ -26269,7 +26269,7 @@
       "pdf_page_start": 88,
       "pdf_half_start": "R",
       "ocr_heading_raw": "167 ¡0H, QUE AMIGO!",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 14,
@@ -26419,7 +26419,7 @@
       "pdf_page_start": 89,
       "pdf_half_start": "L",
       "ocr_heading_raw": "170 VED El CAMPO",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -26482,7 +26482,7 @@
       "pdf_page_start": 89,
       "pdf_half_start": "R",
       "ocr_heading_raw": "171 El SEMBRADOR",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -26535,7 +26535,7 @@
       "pdf_page_start": 90,
       "pdf_half_start": "L",
       "ocr_heading_raw": "172 EN LOS CIELOS ENTRARAN",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -26583,7 +26583,7 @@
       "pdf_page_start": 90,
       "pdf_half_start": "R",
       "ocr_heading_raw": "173 PRONTO VENDRA JESUS",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -26630,7 +26630,7 @@
       "pdf_page_start": 91,
       "pdf_half_start": "L",
       "ocr_heading_raw": "174 EN JESUS ESTA MI GOZO",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -26693,7 +26693,7 @@
       "pdf_page_start": 91,
       "pdf_half_start": "R",
       "ocr_heading_raw": "175 DIOS NOS HA DADO PROMESAS",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -26746,7 +26746,7 @@
       "pdf_page_start": 92,
       "pdf_half_start": "R",
       "ocr_heading_raw": "176 ORO Y PLATA NO PUEDEN SALVAR",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -26794,7 +26794,7 @@
       "pdf_page_start": 93,
       "pdf_half_start": "L",
       "ocr_heading_raw": "177 ¡CUAN GRATO ES ENCONTRARNOS!",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -26847,7 +26847,7 @@
       "pdf_page_start": 93,
       "pdf_half_start": "R",
       "ocr_heading_raw": "178 RECIBID El DIVINO PODER",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -26895,7 +26895,7 @@
       "pdf_page_start": 94,
       "pdf_half_start": "L",
       "ocr_heading_raw": "179 El PROFUNDO RIO DEL AMOR",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -26947,7 +26947,7 @@
       "pdf_page_start": 94,
       "pdf_half_start": "R",
       "ocr_heading_raw": "180 El VERANO ACABO",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -26999,7 +26999,7 @@
       "pdf_page_start": 95,
       "pdf_half_start": "L",
       "ocr_heading_raw": "181 LA ROCA ETERNA",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -27067,7 +27067,7 @@
       "pdf_page_start": 95,
       "pdf_half_start": "R",
       "ocr_heading_raw": "182 ¿QUIERES TU SEGUIR A CRISTO?",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -27124,7 +27124,7 @@
       "pdf_page_start": 96,
       "pdf_half_start": "R",
       "ocr_heading_raw": "183 RESURGIO",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -27172,7 +27172,7 @@
       "pdf_page_start": 97,
       "pdf_half_start": "L",
       "ocr_heading_raw": "184 LA CRUZ MUY FIRME ESTA",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -27225,7 +27225,7 @@
       "pdf_page_start": 97,
       "pdf_half_start": "R",
       "ocr_heading_raw": "185 ¡OH, JUBILA, ALMA MIA!",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -27277,7 +27277,7 @@
       "pdf_page_start": 98,
       "pdf_half_start": "L",
       "ocr_heading_raw": "186 YO TENGO UN ANHELO",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -27310,7 +27310,7 @@
       "pdf_page_start": 98,
       "pdf_half_start": "R",
       "ocr_heading_raw": "187 El ME SOSTENDRA",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 292,
@@ -27362,7 +27362,7 @@
       "pdf_page_start": 98,
       "pdf_half_start": "R",
       "ocr_heading_raw": "188 MARAVILLOSO ES",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -27414,7 +27414,7 @@
       "pdf_page_start": 99,
       "pdf_half_start": "L",
       "ocr_heading_raw": "189 NI ORO NI PLATA",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -27461,7 +27461,7 @@
       "pdf_page_start": 100,
       "pdf_half_start": "L",
       "ocr_heading_raw": "190 TRAE TUS VASOS",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -27519,7 +27519,7 @@
       "pdf_page_start": 100,
       "pdf_half_start": "R",
       "ocr_heading_raw": "191 HE ENTRADO EN LA TIERRA",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -27571,7 +27571,7 @@
       "pdf_page_start": 101,
       "pdf_half_start": "L",
       "ocr_heading_raw": "192 CON JESUS QUIERO IR",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -27615,7 +27615,7 @@
       "pdf_page_start": 101,
       "pdf_half_start": "R",
       "ocr_heading_raw": "193 ARRIBA DEL FIRMAMENTO",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -27667,7 +27667,7 @@
       "pdf_page_start": 102,
       "pdf_half_start": "L",
       "ocr_heading_raw": "194 VOY ANDANDO PARA EL CIELO",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -27719,7 +27719,7 @@
       "pdf_page_start": 102,
       "pdf_half_start": "R",
       "ocr_heading_raw": "195 SUS PROMESAS",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -27766,7 +27766,7 @@
       "pdf_page_start": 103,
       "pdf_half_start": "L",
       "ocr_heading_raw": "196 ALGO POR Ti",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -27814,7 +27814,7 @@
       "pdf_page_start": 103,
       "pdf_half_start": "R",
       "ocr_heading_raw": "197 PRONTO LA NOCHE VIENE",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -27867,7 +27867,7 @@
       "pdf_page_start": 104,
       "pdf_half_start": "L",
       "ocr_heading_raw": "198 DEJA ENTRAR Al REY DE GLORIA",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -27925,7 +27925,7 @@
       "pdf_page_start": 104,
       "pdf_half_start": "R",
       "ocr_heading_raw": "199 CRISTO VIENE",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -28020,7 +28020,7 @@
       "pdf_page_start": 105,
       "pdf_half_start": "R",
       "ocr_heading_raw": "201 OH, SEÑOR, TE DAMOS GRACIAS",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -28073,7 +28073,7 @@
       "pdf_page_start": 106,
       "pdf_half_start": "R",
       "ocr_heading_raw": "202 CLAVADO EN CRUZ",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -28125,7 +28125,7 @@
       "pdf_page_start": 107,
       "pdf_half_start": "L",
       "ocr_heading_raw": "203 FUE CLAVADO EN LA CRUZ POR MI",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -28178,7 +28178,7 @@
       "pdf_page_start": 107,
       "pdf_half_start": "R",
       "ocr_heading_raw": "204 NUNCA PUEDO OLVIDAR",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -28230,7 +28230,7 @@
       "pdf_page_start": 108,
       "pdf_half_start": "L",
       "ocr_heading_raw": "205 VOY A MI HOGAR",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -28278,7 +28278,7 @@
       "pdf_page_start": 108,
       "pdf_half_start": "R",
       "ocr_heading_raw": "206 JESUS, YO HE PROMETIDO",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 172,
@@ -28330,7 +28330,7 @@
       "pdf_page_start": 109,
       "pdf_half_start": "L",
       "ocr_heading_raw": "207 YO TENGO GRANDE GOZO",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -28382,7 +28382,7 @@
       "pdf_page_start": 110,
       "pdf_half_start": "L",
       "ocr_heading_raw": "208 ¡OH, QUE FUENTE GLORIOSA!",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -28435,7 +28435,7 @@
       "pdf_page_start": 110,
       "pdf_half_start": "R",
       "ocr_heading_raw": "209 PEREGRINO, TU QUE VAS M3 *”",
-      "titulo_match_score_mismo_numero": 93.0,
+      "titulo_match_score_mismo_numero": 93,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -28482,7 +28482,7 @@
       "pdf_page_start": 111,
       "pdf_half_start": "L",
       "ocr_heading_raw": "210 0H, COMPAÑEROS",
-      "titulo_match_score_mismo_numero": 96.0,
+      "titulo_match_score_mismo_numero": 96,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -28530,7 +28530,7 @@
       "pdf_page_start": 111,
       "pdf_half_start": "R",
       "ocr_heading_raw": "211 CANTA DE JESUCRISTO",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -28572,7 +28572,7 @@
       "pdf_page_start": 112,
       "pdf_half_start": "R",
       "ocr_heading_raw": "212 CARINOSO SALVADOR",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 11,
@@ -28619,7 +28619,7 @@
       "pdf_page_start": 113,
       "pdf_half_start": "L",
       "ocr_heading_raw": "213 NIVEA BLANCURA TENDRE",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -28672,7 +28672,7 @@
       "pdf_page_start": 113,
       "pdf_half_start": "R",
       "ocr_heading_raw": "214 INVITACION A LAS BODAS",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -28722,7 +28722,7 @@
       "pdf_page_start": 114,
       "pdf_half_start": "L",
       "ocr_heading_raw": "215 NO HAY DOLOR EN MI HOGAR",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -28770,7 +28770,7 @@
       "pdf_page_start": 114,
       "pdf_half_start": "R",
       "ocr_heading_raw": "216 MI VIDA Di POR TI",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -28822,7 +28822,7 @@
       "pdf_page_start": 115,
       "pdf_half_start": "L",
       "ocr_heading_raw": "217 UN AÑO HA PASADO",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -28869,7 +28869,7 @@
       "pdf_page_start": 115,
       "pdf_half_start": "R",
       "ocr_heading_raw": "218 JUVENTUD El SENOR NECESITA",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -28922,7 +28922,7 @@
       "pdf_page_start": 116,
       "pdf_half_start": "R",
       "ocr_heading_raw": "219 OD, OID, LO QUE NOS MANDA",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -28976,7 +28976,7 @@
       "pdf_page_start": 117,
       "pdf_half_start": "L",
       "ocr_heading_raw": "220 DIME LA ANTIGUA HISTORIA",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -29018,7 +29018,7 @@
       "pdf_page_start": 118,
       "pdf_half_start": "L",
       "ocr_heading_raw": "221 ¡NOCHE DE PAZ!",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 212,
@@ -29065,7 +29065,7 @@
       "pdf_page_start": 118,
       "pdf_half_start": "L",
       "ocr_heading_raw": "222 Mi GRAN MALDAD TOMO JESUS",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -29112,7 +29112,7 @@
       "pdf_page_start": 118,
       "pdf_half_start": "R",
       "ocr_heading_raw": "223 DESEO ESTAR LISTO A PARTIR",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -29166,7 +29166,7 @@
       "pdf_page_start": 119,
       "pdf_half_start": "L",
       "ocr_heading_raw": "224 EN MI SENOR CREER YO QUIERO",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "estado": "VERIFICADA_VISUAL_PDF",
@@ -29218,7 +29218,7 @@
       "pdf_page_start": 119,
       "pdf_half_start": "R",
       "ocr_heading_raw": "225 NUNCA CRISTO DESAMPARA",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -29267,7 +29267,7 @@
       "pdf_page_start": 120,
       "pdf_half_start": "L",
       "ocr_heading_raw": "226 ESTOY DE VIAJE PARA EL CIELO",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -29315,7 +29315,7 @@
       "pdf_page_start": 120,
       "pdf_half_start": "R",
       "ocr_heading_raw": "227 LAS PROMESAS",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -29368,7 +29368,7 @@
       "pdf_page_start": 121,
       "pdf_half_start": "L",
       "ocr_heading_raw": "228 HABLA, DIOS",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -29420,7 +29420,7 @@
       "pdf_page_start": 121,
       "pdf_half_start": "R",
       "ocr_heading_raw": "229 HE AQUI QUE LA PUERTA ESTOY",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -29472,7 +29472,7 @@
       "pdf_page_start": 122,
       "pdf_half_start": "L",
       "ocr_heading_raw": "230 CRISTO RESUCITO",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -29519,7 +29519,7 @@
       "pdf_page_start": 122,
       "pdf_half_start": "R",
       "ocr_heading_raw": "231 JOVENES, SED VALIENTES",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -29571,7 +29571,7 @@
       "pdf_page_start": 123,
       "pdf_half_start": "L",
       "ocr_heading_raw": "232 ABUNDANTEMENTE CRISTO DA",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -29614,7 +29614,7 @@
       "pdf_page_start": 123,
       "pdf_half_start": "R",
       "ocr_heading_raw": "233 CASTILLO FUERTE",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -29725,7 +29725,7 @@
       "pdf_page_start": 124,
       "pdf_half_start": "R",
       "ocr_heading_raw": "235 CRISTO, El MEDICO DIVINO",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -29772,7 +29772,7 @@
       "pdf_page_start": 125,
       "pdf_half_start": "R",
       "ocr_heading_raw": "236 JAMAS SE DICE ADIOS ALLA",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 73,
@@ -29825,7 +29825,7 @@
       "pdf_page_start": 126,
       "pdf_half_start": "L",
       "ocr_heading_raw": "237 ALELUYA, SALVO SOY",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -29857,7 +29857,7 @@
       "pdf_page_start": 126,
       "pdf_half_start": "R",
       "ocr_heading_raw": "238 CRISTO SIEMPRE PERMANECE",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -29909,7 +29909,7 @@
       "pdf_page_start": 126,
       "pdf_half_start": "R",
       "ocr_heading_raw": "239 NOVENTA Y NUEVE OVEJAS SON",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "estado": "VERIFICADA_PDF",
@@ -29961,7 +29961,7 @@
       "pdf_page_start": 127,
       "pdf_half_start": "R",
       "ocr_heading_raw": "1 Jesús escucha la voz tiernita,",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -30009,7 +30009,7 @@
       "pdf_page_start": 128,
       "pdf_half_start": "L",
       "ocr_heading_raw": "241 SOMOS SOLDADOS DE LA CRUZ",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "estado": "VERIFICADA_PDF",
@@ -30052,7 +30052,7 @@
       "pdf_page_start": 128,
       "pdf_half_start": "R",
       "ocr_heading_raw": "242 AUNQUE SOY PEQUENO",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -30151,7 +30151,7 @@
       "pdf_page_start": 129,
       "pdf_half_start": "R",
       "ocr_heading_raw": "| 244 SI FUI MOTIVO DE DOLOR, SENOR",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -30199,7 +30199,7 @@
       "pdf_page_start": 130,
       "pdf_half_start": "L",
       "ocr_heading_raw": "245 JESUS ME AMA",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -30253,7 +30253,7 @@
       "pdf_page_start": 130,
       "pdf_half_start": "R",
       "ocr_heading_raw": "246 CRISTIANOS, TODOS A",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -30304,7 +30304,7 @@
       "pdf_page_start": 131,
       "pdf_half_start": "L",
       "ocr_heading_raw": "247 DIOS CUIDARA DE TI",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -30356,7 +30356,7 @@
       "pdf_page_start": 131,
       "pdf_half_start": "R",
       "ocr_heading_raw": "248 LA MULTITUD DE BLANCO",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "fuente_complementaria": "Imagem complementar enviada pelo usuário para o hino 248; usada para recuperar as linhas cortadas no PDF.",
@@ -30506,7 +30506,7 @@
       "pdf_page_start": 132,
       "pdf_half_start": "L",
       "ocr_heading_raw": "251 MI JESUS, ¡oH, GUARDANg",
-      "titulo_match_score_mismo_numero": 90.0,
+      "titulo_match_score_mismo_numero": 90,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -30553,7 +30553,7 @@
       "pdf_page_start": 132,
       "pdf_half_start": "R",
       "ocr_heading_raw": "252 YO SE DE UNA SENDA",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -30601,7 +30601,7 @@
       "pdf_page_start": 133,
       "pdf_half_start": "L",
       "ocr_heading_raw": "253 CUENTA LAS BENDICIONES",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -30644,7 +30644,7 @@
       "pdf_page_start": 133,
       "pdf_half_start": "R",
       "ocr_heading_raw": "254 AL COMIENZO DEL CULTO",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -30697,7 +30697,7 @@
       "pdf_page_start": 134,
       "pdf_half_start": "L",
       "ocr_heading_raw": "255 DIOS AMO DE TAL MANERA",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "estado": "VERIFICADA_PDF",
@@ -30746,7 +30746,7 @@
       "pdf_page_start": 134,
       "pdf_half_start": "R",
       "ocr_heading_raw": "256 GLORIA, GLORIA A DIOS",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "estado": "VERIFICADA_PDF",
@@ -30794,7 +30794,7 @@
       "pdf_page_start": 135,
       "pdf_half_start": "L",
       "ocr_heading_raw": "257 MANDA, 0H DIOS, UNA OLA",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -30846,7 +30846,7 @@
       "pdf_page_start": 135,
       "pdf_half_start": "R",
       "ocr_heading_raw": "258 HAY UN LUGAR DO QUIERO ESTAR",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -30894,7 +30894,7 @@
       "pdf_page_start": 136,
       "pdf_half_start": "R",
       "ocr_heading_raw": "259. JEHOVA ES MI PASTOR",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "fuente_complementaria": "Imagem complementar enviada pelo usuário para o hino 259; usada para recuperar as linhas cortadas na lombada.",
@@ -30948,7 +30948,7 @@
       "pdf_page_start": 137,
       "pdf_half_start": "L",
       "ocr_heading_raw": "260 PAZ CON DIOS",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -31054,7 +31054,7 @@
       "pdf_page_start": 138,
       "pdf_half_start": "L",
       "ocr_heading_raw": "262 ¡SOLDADOS, AVANZAD!",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -31101,7 +31101,7 @@
       "pdf_page_start": 138,
       "pdf_half_start": "R",
       "ocr_heading_raw": "263 CANTANDO ALELUYA A MI REY",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -31153,7 +31153,7 @@
       "pdf_page_start": 139,
       "pdf_half_start": "L",
       "ocr_heading_raw": "264 ALA CONGREGACIÓN",
-      "titulo_match_score_mismo_numero": 97.0,
+      "titulo_match_score_mismo_numero": 97,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -31200,7 +31200,7 @@
       "pdf_page_start": 139,
       "pdf_half_start": "R",
       "ocr_heading_raw": "265 VEN AL SEÑOR",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -31253,7 +31253,7 @@
       "pdf_page_start": 140,
       "pdf_half_start": "L",
       "ocr_heading_raw": "266 El FIEL CONSOLADOR",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 76,
@@ -31312,7 +31312,7 @@
       "pdf_page_start": 140,
       "pdf_half_start": "R",
       "ocr_heading_raw": "267 GLORIOSO GOLGOTA",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -31364,7 +31364,7 @@
       "pdf_page_start": 141,
       "pdf_half_start": "L",
       "ocr_heading_raw": "268 MUY PRONTO ROMPE LA AURORA",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -31418,7 +31418,7 @@
       "pdf_page_start": 141,
       "pdf_half_start": "R",
       "ocr_heading_raw": "269 El SANTO FUEGO",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -31470,7 +31470,7 @@
       "pdf_page_start": 142,
       "pdf_half_start": "L",
       "ocr_heading_raw": "270 CUANDO CRISTO DEL CIELO VOLVERA",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -31517,7 +31517,7 @@
       "pdf_page_start": 142,
       "pdf_half_start": "R",
       "ocr_heading_raw": "271 EL JARDIN DE ORACIÓN",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -31570,7 +31570,7 @@
       "pdf_page_start": 143,
       "pdf_half_start": "L",
       "ocr_heading_raw": "272 DE LA NOCHE OSCURA",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "estado": "VERIFICADA_PDF",
@@ -31613,7 +31613,7 @@
       "pdf_page_start": 143,
       "pdf_half_start": "R",
       "ocr_heading_raw": "273 ¿QUIEN SERA DE CRISTO?",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -31670,7 +31670,7 @@
       "pdf_page_start": 144,
       "pdf_half_start": "L",
       "ocr_heading_raw": "274 DANOS FUEGO, SANTO FUEGO",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -31728,7 +31728,7 @@
       "pdf_page_start": 145,
       "pdf_half_start": "L",
       "ocr_heading_raw": "275 HE ANDADO CON CRISTO",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -31776,7 +31776,7 @@
       "pdf_page_start": 145,
       "pdf_half_start": "R",
       "ocr_heading_raw": "276 CRISTO, ¿Qué PUEDO DARTE?",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -31833,7 +31833,7 @@
       "pdf_page_start": 146,
       "pdf_half_start": "L",
       "ocr_heading_raw": "277 UN CORTO TIEMPO MÁS",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -31887,7 +31887,7 @@
       "pdf_page_start": 146,
       "pdf_half_start": "R",
       "ocr_heading_raw": "278 PRECIOSO ES JESUS",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "estado": "VERIFICADA_PDF",
@@ -31940,7 +31940,7 @@
       "pdf_page_start": 147,
       "pdf_half_start": "L",
       "ocr_heading_raw": "279 EL ALBA",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -31988,7 +31988,7 @@
       "pdf_page_start": 147,
       "pdf_half_start": "R",
       "ocr_heading_raw": "280 ES PORQUE YO OTRA VEZ NACI",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -32040,7 +32040,7 @@
       "pdf_page_start": 148,
       "pdf_half_start": "L",
       "ocr_heading_raw": "281 ¡SANTO, SANTO, SANTO!",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 96,
@@ -32087,7 +32087,7 @@
       "pdf_page_start": 148,
       "pdf_half_start": "R",
       "ocr_heading_raw": "282 PEREGRINO SOY EN El MUNDO",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -32139,7 +32139,7 @@
       "pdf_page_start": 149,
       "pdf_half_start": "L",
       "ocr_heading_raw": "283 HALLARE ALGUNA ESTRELLA",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -32187,7 +32187,7 @@
       "pdf_page_start": 149,
       "pdf_half_start": "R",
       "ocr_heading_raw": "284 EL ME SALVO",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -32235,7 +32235,7 @@
       "pdf_page_start": 150,
       "pdf_half_start": "L",
       "ocr_heading_raw": "225 EN LA NOCHE OSCURA",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -32288,7 +32288,7 @@
       "pdf_page_start": 150,
       "pdf_half_start": "R",
       "ocr_heading_raw": "286 EL AMOR TAN GRANDE",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -32393,7 +32393,7 @@
       "pdf_page_start": 152,
       "pdf_half_start": "L",
       "ocr_heading_raw": "288 ¿SABES DONDE HAY UNA FUENTE?",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -32440,7 +32440,7 @@
       "pdf_page_start": 152,
       "pdf_half_start": "R",
       "ocr_heading_raw": "289 El CRISTO EN LA CRUZ",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -32487,7 +32487,7 @@
       "pdf_page_start": 153,
       "pdf_half_start": "L",
       "ocr_heading_raw": "290 TODO AQUEL QUE OYE",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -32535,7 +32535,7 @@
       "pdf_page_start": 153,
       "pdf_half_start": "R",
       "ocr_heading_raw": "291 SEGUID AL MAESTRO",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -32592,7 +32592,7 @@
       "pdf_page_start": 154,
       "pdf_half_start": "L",
       "ocr_heading_raw": "292 Mi NUEVO HOGAR",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -32640,7 +32640,7 @@
       "pdf_page_start": 154,
       "pdf_half_start": "R",
       "ocr_heading_raw": "293 EN SU PROFUNDO AMOR",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -32720,7 +32720,7 @@
       "pdf_page_start": 155,
       "pdf_half_start": "R",
       "ocr_heading_raw": "295 YO QUIERO SER CUAL MI JESUS",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -32752,7 +32752,7 @@
       "pdf_page_start": 155,
       "pdf_half_start": "R",
       "ocr_heading_raw": "296 CADA DIA CON CRISTO",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -32799,7 +32799,7 @@
       "pdf_page_start": 156,
       "pdf_half_start": "L",
       "ocr_heading_raw": "297 El MÉDICO DEL ALMA",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -32832,7 +32832,7 @@
       "pdf_page_start": 156,
       "pdf_half_start": "L",
       "ocr_heading_raw": "298 UNA MANANA",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -32879,7 +32879,7 @@
       "pdf_page_start": 156,
       "pdf_half_start": "R",
       "ocr_heading_raw": "299 PRONTO JESUS LLEGARÁ",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -32911,7 +32911,7 @@
       "pdf_page_start": 157,
       "pdf_half_start": "L",
       "ocr_heading_raw": "300 SIGUIENDO A CRISTO",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -32958,7 +32958,7 @@
       "pdf_page_start": 157,
       "pdf_half_start": "L",
       "ocr_heading_raw": "301 ADELANTE CRISTIANA JUVENTUD",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -32990,7 +32990,7 @@
       "pdf_page_start": 157,
       "pdf_half_start": "R",
       "ocr_heading_raw": "302 UNA PUERTA HAY",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -33037,7 +33037,7 @@
       "pdf_page_start": 157,
       "pdf_half_start": "R",
       "ocr_heading_raw": "303 VIENE YA",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -33074,7 +33074,7 @@
       "pdf_page_start": 158,
       "pdf_half_start": "R",
       "ocr_heading_raw": "304 TEN MI MANO, SENOR",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -33163,7 +33163,7 @@
       "pdf_page_start": 159,
       "pdf_half_start": "R",
       "ocr_heading_raw": "306 UN AMIGO MAS QUE HERMANO",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 213,
@@ -33215,7 +33215,7 @@
       "pdf_page_start": 160,
       "pdf_half_start": "L",
       "ocr_heading_raw": "307 VIVO POR CRISTO",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -33248,7 +33248,7 @@
       "pdf_page_start": 160,
       "pdf_half_start": "R",
       "ocr_heading_raw": "308 ¡AVIVANOS, SEÑOR!",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -33290,7 +33290,7 @@
       "pdf_page_start": 160,
       "pdf_half_start": "R",
       "ocr_heading_raw": "309 Mi REY SOBERANO",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 289,
@@ -33343,7 +33343,7 @@
       "pdf_page_start": 161,
       "pdf_half_start": "L",
       "ocr_heading_raw": "310 YO CREO, SI",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -33390,7 +33390,7 @@
       "pdf_page_start": 161,
       "pdf_half_start": "R",
       "ocr_heading_raw": "311 EN LAS NUBES El VENDRA",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": 93,
@@ -33442,7 +33442,7 @@
       "pdf_page_start": 162,
       "pdf_half_start": "L",
       "ocr_heading_raw": "312 ANGELES BLANCOS",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -33494,7 +33494,7 @@
       "pdf_page_start": 162,
       "pdf_half_start": "R",
       "ocr_heading_raw": "313 El EVANGELIO",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -33548,7 +33548,7 @@
       "pdf_page_start": 163,
       "pdf_half_start": "L",
       "ocr_heading_raw": "314 LA VENIDA DE CRISTO",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -33605,7 +33605,7 @@
       "pdf_page_start": 163,
       "pdf_half_start": "R",
       "ocr_heading_raw": "315 UNA FUENTE YO HALLE",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -33653,7 +33653,7 @@
       "pdf_page_start": 164,
       "pdf_half_start": "L",
       "ocr_heading_raw": "316 JESUS A CADA NINO",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -33707,7 +33707,7 @@
       "pdf_page_start": 164,
       "pdf_half_start": "R",
       "ocr_heading_raw": "317 ADELANTE, VAMOS",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -33740,7 +33740,7 @@
       "pdf_page_start": 165,
       "pdf_half_start": "L",
       "ocr_heading_raw": "318 LA DOXOLOGIA",
-      "titulo_match_score_mismo_numero": 100.0,
+      "titulo_match_score_mismo_numero": 100,
       "fuente_sha256": "19bd6cc6ea47c924831c02b959a96c79bba0c5f230867169a7ee40a59e88491d",
       "autoridad_editorial": "PDF_OFICIAL_ATUAL",
       "numero_equivalente": null,
@@ -34427,740 +34427,6 @@
         "tipo": "enlace_externo",
         "autorizado": false,
         "notas": "Fuente externa auditada individualmente. La letra/título fueron comparados con el Cántico de Alabanza correspondiente antes de vincular."
-      }
-    },
-    {
-      "id": "CANT-046",
-      "himnario": "Cánticos de Alabanza",
-      "numero": 46,
-      "titulo": "CELEBRAD A CRISTO",
-      "tom": "F",
-      "letra": "//Celebrad a Cristo, celebrad\nCelebrad a Cristo, celebrad//\n\nResucitó, resucitó\nY por siempre él vivirá, reinará\nResucitó, resucitó\n///Vamos a celebrad///\nNuestro Señor, resucitó.\n\nÉl vive, él vive\nY por siempre, él vivirá.\n///Vamos a Celebrad///\nNuestro Señor, resucitó\n\nCelebrad a Cristo...",
-      "bloques": [
-        {
-          "tipo": "estrofa",
-          "numero": null,
-          "texto": "//Celebrad a Cristo, celebrad\nCelebrad a Cristo, celebrad//\n\nResucitó, resucitó\nY por siempre él vivirá, reinará\nResucitó, resucitó\n///Vamos a celebrad///\nNuestro Señor, resucitó.\n\nÉl vive, él vive\nY por siempre, él vivirá.\n///Vamos a Celebrad///\nNuestro Señor, resucitó\n\nCelebrad a Cristo..."
-        }
-      ],
-      "numero_equivalente": null,
-      "himnario_equivalente": null,
-      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
-      "observacion": "Transcrito visualmente de la página 6 del PDF fuente.",
-      "categorias": [
-        "Pascua"
-      ],
-      "has_lyrics": true,
-      "autor_impreso": "Gary Oliver",
-      "colecciones": [
-        {
-          "himnario": "Cánticos de Alabanza",
-          "numero": 46
-        },
-        {
-          "himnario": "Gloria y Triunfo",
-          "numero": 375
-        }
-      ],
-      "cifra_url": "https://www.cifraclub.com/danilo-montero/celebrad-a-cristo/",
-      "cifra_autorizada": false,
-      "cifra_procedencia": {
-        "fuente": "https://www.cifraclub.com/danilo-montero/celebrad-a-cristo/",
-        "tipo": "enlace_externo",
-        "autorizado": false,
-        "notas": "Fuente externa auditada individualmente. La letra/título fueron comparados con el Cántico de Alabanza correspondiente antes de vincular."
-      }
-    },
-    {
-      "id": "CANT-047",
-      "himnario": "Cánticos de Alabanza",
-      "numero": 47,
-      "titulo": "HAY VICTORIA",
-      "tom": "Em",
-      "letra": "Hay victoria, hay victoria\nHay victoria en la sangre de Jesús,\nHay victoria, hay victoria\n\nHay victoria en la sangre de Jesús.\nNo podrá el enemigo\nVencer a nuestras almas,\n//Porque hay victoria, porque hay victoria\nPorque hay victoria en la sangre de Jesús.//",
-      "bloques": [
-        {
-          "tipo": "estrofa",
-          "numero": null,
-          "texto": "Hay victoria, hay victoria\nHay victoria en la sangre de Jesús,\nHay victoria, hay victoria\n\nHay victoria en la sangre de Jesús.\nNo podrá el enemigo\nVencer a nuestras almas,\n//Porque hay victoria, porque hay victoria\nPorque hay victoria en la sangre de Jesús.//"
-        }
-      ],
-      "numero_equivalente": null,
-      "himnario_equivalente": null,
-      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
-      "observacion": "Transcrito visualmente de la página 6 del PDF fuente.",
-      "categorias": [
-        "Sangre, Redención, Salvación"
-      ],
-      "has_lyrics": true,
-      "colecciones": [
-        {
-          "himnario": "Cánticos de Alabanza",
-          "numero": 47
-        },
-        {
-          "himnario": "Gloria y Triunfo",
-          "numero": 376
-        }
-      ]
-    },
-    {
-      "id": "CANT-048",
-      "himnario": "Cánticos de Alabanza",
-      "numero": 48,
-      "titulo": "CON TODAS MI FUERZAS",
-      "tom": "Em",
-      "letra": "Con todas mi fuerzas yo te amo\nYo te amo mi Dios,\nPorque eres lo que más quiero\nTe necesito cada día más.\n\nCada célula de mi ser\nTe anhela mi Señor\nPorque eres el sustento\nQue necesito para vivir.\n\nMás unción quiere mi ser,\nDel Espíritu Santo lléname,\nEn Espíritu te adoraré,\nCon danzas te alabaré,\nEn tu presencia me gozaré\nSolo en ti me alegraré.",
-      "bloques": [
-        {
-          "tipo": "estrofa",
-          "numero": null,
-          "texto": "Con todas mi fuerzas yo te amo\nYo te amo mi Dios,\nPorque eres lo que más quiero\nTe necesito cada día más.\n\nCada célula de mi ser\nTe anhela mi Señor\nPorque eres el sustento\nQue necesito para vivir.\n\nMás unción quiere mi ser,\nDel Espíritu Santo lléname,\nEn Espíritu te adoraré,\nCon danzas te alabaré,\nEn tu presencia me gozaré\nSolo en ti me alegraré."
-        }
-      ],
-      "numero_equivalente": null,
-      "himnario_equivalente": null,
-      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
-      "observacion": "Transcrito visualmente de la página 7 del PDF fuente.",
-      "categorias": [
-        "Alabanza a Dios"
-      ],
-      "has_lyrics": true,
-      "autor_impreso": "José Alfredo Arismendi",
-      "colecciones": [
-        {
-          "himnario": "Cánticos de Alabanza",
-          "numero": 48
-        },
-        {
-          "himnario": "Gloria y Triunfo",
-          "numero": 377
-        }
-      ],
-      "cifra_url": "https://www.cifraclub.com/comando-gaf/con-todas-mis-fuerzas/",
-      "cifra_autorizada": false,
-      "cifra_procedencia": {
-        "fuente": "https://www.cifraclub.com/comando-gaf/con-todas-mis-fuerzas/",
-        "tipo": "enlace_externo",
-        "autorizado": false,
-        "notas": "Fuente externa auditada individualmente. La letra/título fueron comparados con el Cántico de Alabanza correspondiente antes de vincular."
-      },
-      "audio_external_url": "https://www.youtube.com/watch?v=gUGlaXgaTaI",
-      "audio_autorizado": false,
-      "audio_procedencia": {
-        "fuente": "https://www.youtube.com/watch?v=gUGlaXgaTaI",
-        "tipo": "enlace_externo",
-        "autorizado": false,
-        "notas": "Grabación o vídeo externo auditado individualmente. No implica autorización para almacenar el audio dentro de la aplicación."
-      }
-    },
-    {
-      "id": "CANT-049",
-      "himnario": "Cánticos de Alabanza",
-      "numero": 49,
-      "titulo": "BUENO ES ALABAR",
-      "tom": "G",
-      "letra": "Bueno es alabar ¡oh Señor!, tu nombre\nDarte gloria, honra y honor por siempre,\nBueno es alabarte Jesús\nY gozarme en tu poder.\n\nPorque grande eres Tú,\nGrandes son tus obras,\nPorque grande eres Tú,\nGrande es tu amor,\nGrande es tu gloria.",
-      "bloques": [
-        {
-          "tipo": "estrofa",
-          "numero": null,
-          "texto": "Bueno es alabar ¡oh Señor!, tu nombre\nDarte gloria, honra y honor por siempre,\nBueno es alabarte Jesús\nY gozarme en tu poder.\n\nPorque grande eres Tú,\nGrandes son tus obras,\nPorque grande eres Tú,\nGrande es tu amor,\nGrande es tu gloria."
-        }
-      ],
-      "numero_equivalente": null,
-      "himnario_equivalente": null,
-      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
-      "observacion": "Transcrito visualmente de la página 7 del PDF fuente.",
-      "categorias": [
-        "Alabanza a Dios"
-      ],
-      "has_lyrics": true,
-      "autor_impreso": "Fernando Soto",
-      "colecciones": [
-        {
-          "himnario": "Cánticos de Alabanza",
-          "numero": 49
-        },
-        {
-          "himnario": "Gloria y Triunfo",
-          "numero": 378
-        }
-      ]
-    },
-    {
-      "id": "CANT-050",
-      "himnario": "Cánticos de Alabanza",
-      "numero": 50,
-      "titulo": "ERES TODOPODEROSO",
-      "tom": "Bm",
-      "letra": "La única razón de mi adoración,\nEres tú mi Jesús.\nMi único motivo para vivir,\nEres tú mi Señor.\n\nMi única verdad está en ti\nEres mi luz y mi salvación;\nMi único amor eres Tú Señor\nY por siempre te alabaré.\n\nTú eres Todopoderoso\nEres grande y majestuoso\nEres fuerte, invencible,\nY no hay nadie como Tú.",
-      "bloques": [
-        {
-          "tipo": "estrofa",
-          "numero": null,
-          "texto": "La única razón de mi adoración,\nEres tú mi Jesús.\nMi único motivo para vivir,\nEres tú mi Señor.\n\nMi única verdad está en ti\nEres mi luz y mi salvación;\nMi único amor eres Tú Señor\nY por siempre te alabaré.\n\nTú eres Todopoderoso\nEres grande y majestuoso\nEres fuerte, invencible,\nY no hay nadie como Tú."
-        }
-      ],
-      "numero_equivalente": null,
-      "himnario_equivalente": null,
-      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
-      "observacion": "Transcrito visualmente de la página 7 del PDF fuente.",
-      "categorias": [
-        "Alabanza a Dios"
-      ],
-      "has_lyrics": true,
-      "autor_impreso": "Juan Salinas",
-      "colecciones": [
-        {
-          "himnario": "Cánticos de Alabanza",
-          "numero": 50
-        },
-        {
-          "himnario": "Gloria y Triunfo",
-          "numero": 379
-        }
-      ],
-      "cifra_url": "https://www.cifraclub.com/danilo-montero/eres-todopoderoso/",
-      "cifra_autorizada": false,
-      "cifra_procedencia": {
-        "fuente": "https://www.cifraclub.com/danilo-montero/eres-todopoderoso/",
-        "tipo": "enlace_externo",
-        "autorizado": false,
-        "notas": "Fuente externa auditada individualmente. La letra/título fueron comparados con el Cántico de Alabanza correspondiente antes de vincular."
-      },
-      "audio_external_url": "https://www.youtube.com/watch?v=Urvys69pFdk",
-      "audio_autorizado": false,
-      "audio_procedencia": {
-        "fuente": "https://www.youtube.com/watch?v=Urvys69pFdk",
-        "tipo": "enlace_externo",
-        "autorizado": false,
-        "notas": "Grabación o vídeo externo auditado individualmente. No implica autorización para almacenar el audio dentro de la aplicación."
-      }
-    },
-    {
-      "id": "CANT-051",
-      "himnario": "Cánticos de Alabanza",
-      "numero": 51,
-      "titulo": "SOMOS EL PUEBLO DE DIOS",
-      "tom": "G",
-      "letra": "Somos el Pueblo de Dios\nSomos un pueblo especial\nLlamados para anunciar\nLas virtudes de aquel\nQue nos llamó a su luz.\n\nSomos el Pueblo de Dios\nSu sangre nos redimió\nY su Espíritu dió\nPara darnos poder\nY ser testigos de Él.\n\nY llevaremos su Gloria\nA cada pueblo y nación,\nTrayéndoles esperanza\nY nuevas de salvación.\n\nSu Amor nos impulsa\nNo nos podemos callar\nAnunciaremos al mundo\nDe su Amor y Verdad.",
-      "bloques": [
-        {
-          "tipo": "estrofa",
-          "numero": null,
-          "texto": "Somos el Pueblo de Dios\nSomos un pueblo especial\nLlamados para anunciar\nLas virtudes de aquel\nQue nos llamó a su luz.\n\nSomos el Pueblo de Dios\nSu sangre nos redimió\nY su Espíritu dió\nPara darnos poder\nY ser testigos de Él.\n\nY llevaremos su Gloria\nA cada pueblo y nación,\nTrayéndoles esperanza\nY nuevas de salvación.\n\nSu Amor nos impulsa\nNo nos podemos callar\nAnunciaremos al mundo\nDe su Amor y Verdad."
-        }
-      ],
-      "numero_equivalente": null,
-      "himnario_equivalente": null,
-      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
-      "observacion": "Transcrito visualmente de la página 7 del PDF fuente.",
-      "categorias": [
-        "Evangelismo",
-        "Iglesia"
-      ],
-      "has_lyrics": true,
-      "autor_impreso": "Marcos Witt",
-      "colecciones": [
-        {
-          "himnario": "Cánticos de Alabanza",
-          "numero": 51
-        },
-        {
-          "himnario": "Gloria y Triunfo",
-          "numero": 380
-        }
-      ],
-      "cifra_url": "https://www.cifraclub.com/marcos-witt/somos-el-pueblo-de-dios/",
-      "cifra_autorizada": false,
-      "cifra_procedencia": {
-        "fuente": "https://www.cifraclub.com/marcos-witt/somos-el-pueblo-de-dios/",
-        "tipo": "enlace_externo",
-        "autorizado": false,
-        "notas": "Fuente externa auditada individualmente. La letra/título fueron comparados con el Cántico de Alabanza correspondiente antes de vincular."
-      },
-      "audio_external_url": "https://www.youtube.com/watch?v=GCnyax1nCPc",
-      "audio_autorizado": false,
-      "audio_procedencia": {
-        "fuente": "https://www.youtube.com/watch?v=GCnyax1nCPc",
-        "tipo": "enlace_externo",
-        "autorizado": false,
-        "notas": "Grabación o vídeo externo auditado individualmente. No implica autorización para almacenar el audio dentro de la aplicación."
-      }
-    },
-    {
-      "id": "CANT-052",
-      "himnario": "Cánticos de Alabanza",
-      "numero": 52,
-      "titulo": "QUE DULCE ES ESTAR",
-      "tom": "D",
-      "letra": "Que dulce es estar en tu presencia\nContemplando la hermosura de tu Santidad.\nY reconociendo que tú eres Señor,\nTodopoderoso y el gran \"Yo soy\". (Bis)\n\n//Santo, Saaanto, mi corazón\nSe une a la melodía angelical.//",
-      "bloques": [
-        {
-          "tipo": "estrofa",
-          "numero": null,
-          "texto": "Que dulce es estar en tu presencia\nContemplando la hermosura de tu Santidad.\nY reconociendo que tú eres Señor,\nTodopoderoso y el gran \"Yo soy\". (Bis)\n\n//Santo, Saaanto, mi corazón\nSe une a la melodía angelical.//"
-        }
-      ],
-      "numero_equivalente": null,
-      "himnario_equivalente": null,
-      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
-      "observacion": "Transcrito visualmente de la página 8 del PDF fuente.",
-      "categorias": [
-        "Alabanza a Dios"
-      ],
-      "has_lyrics": true,
-      "autor_impreso": "Fermín García",
-      "colecciones": [
-        {
-          "himnario": "Cánticos de Alabanza",
-          "numero": 52
-        },
-        {
-          "himnario": "Gloria y Triunfo",
-          "numero": 381
-        }
-      ],
-      "cifra_url": "https://www.cifraclub.com/danilo-montero/que-dulce/original.html",
-      "cifra_autorizada": false,
-      "cifra_procedencia": {
-        "fuente": "https://www.cifraclub.com/danilo-montero/que-dulce/original.html",
-        "tipo": "enlace_externo",
-        "autorizado": false,
-        "notas": "Fuente externa auditada individualmente. La letra/título fueron comparados con el Cántico de Alabanza correspondiente antes de vincular."
-      }
-    },
-    {
-      "id": "CANT-053",
-      "himnario": "Cánticos de Alabanza",
-      "numero": 53,
-      "titulo": "TU FIDELIDAD",
-      "tom": "D",
-      "letra": "Tu fidelidad es grande\nTu fidelidad incomparable es\nNadie como tú, bendito Dios\nGrande es tu fidelidad. (Bis)",
-      "bloques": [
-        {
-          "tipo": "estrofa",
-          "numero": null,
-          "texto": "Tu fidelidad es grande\nTu fidelidad incomparable es\nNadie como tú, bendito Dios\nGrande es tu fidelidad. (Bis)"
-        }
-      ],
-      "numero_equivalente": null,
-      "himnario_equivalente": null,
-      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
-      "observacion": "Transcrito visualmente de la página 8 del PDF fuente.",
-      "categorias": [
-        "Alabanza a Dios",
-        "Fe y Confianza"
-      ],
-      "has_lyrics": true,
-      "colecciones": [
-        {
-          "himnario": "Cánticos de Alabanza",
-          "numero": 53
-        },
-        {
-          "himnario": "Gloria y Triunfo",
-          "numero": 382
-        }
-      ],
-      "cifra_url": "https://www.cifraclub.com/marcos-witt/tu-fidelidad/",
-      "cifra_autorizada": false,
-      "cifra_procedencia": {
-        "fuente": "https://www.cifraclub.com/marcos-witt/tu-fidelidad/",
-        "tipo": "enlace_externo",
-        "autorizado": false,
-        "notas": "Fuente externa auditada individualmente. La letra/título fueron comparados con el Cántico de Alabanza correspondiente antes de vincular."
-      },
-      "audio_external_url": "https://www.youtube.com/watch?v=ibZ1NgRdIZc",
-      "audio_autorizado": false,
-      "audio_procedencia": {
-        "fuente": "https://www.youtube.com/watch?v=ibZ1NgRdIZc",
-        "tipo": "enlace_externo",
-        "autorizado": false,
-        "notas": "Grabación o vídeo externo auditado individualmente. No implica autorización para almacenar el audio dentro de la aplicación."
-      }
-    },
-    {
-      "id": "CANT-054",
-      "himnario": "Cánticos de Alabanza",
-      "numero": 54,
-      "titulo": "QUIERO DERRAMAR MI CORAZÓN",
-      "tom": "D",
-      "letra": "Quiero derramar mi corazon\nDelante de ti hoy quiero estar\nLevantar mis manos para alabarte\nY adorarte a ti, mi Creador.\nTú eres Jesús mi Dios mi Rey\nSoy una muestra de tu amor\nUn nuevo ser para alabarte\nY adorarte a ti mi Creador.\n//A   le   lu   ya\nA   le   lu   ya//\nGloria a Jesús, él es mi Rey\nA   le   lu   ya.",
-      "bloques": [
-        {
-          "tipo": "estrofa",
-          "numero": null,
-          "texto": "Quiero derramar mi corazon\nDelante de ti hoy quiero estar\nLevantar mis manos para alabarte\nY adorarte a ti, mi Creador.\nTú eres Jesús mi Dios mi Rey\nSoy una muestra de tu amor\nUn nuevo ser para alabarte\nY adorarte a ti mi Creador.\n//A   le   lu   ya\nA   le   lu   ya//\nGloria a Jesús, él es mi Rey\nA   le   lu   ya."
-        }
-      ],
-      "numero_equivalente": null,
-      "himnario_equivalente": null,
-      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
-      "observacion": "Transcrito visualmente de la página 8 del PDF fuente.",
-      "categorias": [
-        "Alabanza a Dios"
-      ],
-      "has_lyrics": true,
-      "colecciones": [
-        {
-          "himnario": "Cánticos de Alabanza",
-          "numero": 54
-        },
-        {
-          "himnario": "Gloria y Triunfo",
-          "numero": 383
-        }
-      ],
-      "cifra_url": "https://www.cifraclub.com/elim/quiero-derramar-mi-corazon/",
-      "cifra_autorizada": false,
-      "cifra_procedencia": {
-        "fuente": "https://www.cifraclub.com/elim/quiero-derramar-mi-corazon/",
-        "tipo": "enlace_externo",
-        "autorizado": false,
-        "notas": "Fuente externa auditada individualmente. La letra/título fueron comparados con el Cántico de Alabanza correspondiente antes de vincular."
-      }
-    },
-    {
-      "id": "CANT-055",
-      "himnario": "Cánticos de Alabanza",
-      "numero": 55,
-      "titulo": "TE AMO SEÑOR",
-      "tom": "D",
-      "letra": "//Te amo Señor, fortaleza mía\nRoca mía, y castillo mío,\nY mi libertador,\nDios mío, en ti confiaré\nMi escudo eres tú\nY la fuerza de mi salvación.//\n//A   le   lu   ya\nA   le   lu   ya\nGloria a Jesús, él es mi Rey\nA...leluya.",
-      "bloques": [
-        {
-          "tipo": "estrofa",
-          "numero": null,
-          "texto": "//Te amo Señor, fortaleza mía\nRoca mía, y castillo mío,\nY mi libertador,\nDios mío, en ti confiaré\nMi escudo eres tú\nY la fuerza de mi salvación.//\n//A   le   lu   ya\nA   le   lu   ya\nGloria a Jesús, él es mi Rey\nA...leluya."
-        }
-      ],
-      "numero_equivalente": null,
-      "himnario_equivalente": null,
-      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
-      "observacion": "Transcrito visualmente de la página 8 del PDF fuente.",
-      "categorias": [
-        "Fe y Confianza"
-      ],
-      "has_lyrics": true,
-      "colecciones": [
-        {
-          "himnario": "Cánticos de Alabanza",
-          "numero": 55
-        },
-        {
-          "himnario": "Gloria y Triunfo",
-          "numero": 384
-        }
-      ]
-    },
-    {
-      "id": "CANT-056",
-      "himnario": "Cánticos de Alabanza",
-      "numero": 56,
-      "titulo": "SEAS EXALTADO, OH DIOS",
-      "tom": "D",
-      "letra": "//Seas exaltado Dios\nSobre los cielos\nSobre la tierra\nTu gloria esté.//\n//Te exaltamos, te exaltamos\nTe exaltamos, oh Señor.//",
-      "bloques": [
-        {
-          "tipo": "estrofa",
-          "numero": null,
-          "texto": "//Seas exaltado Dios\nSobre los cielos\nSobre la tierra\nTu gloria esté.//\n//Te exaltamos, te exaltamos\nTe exaltamos, oh Señor.//"
-        }
-      ],
-      "numero_equivalente": null,
-      "himnario_equivalente": null,
-      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
-      "observacion": "Transcrito visualmente de la página 9 del PDF fuente.",
-      "categorias": [
-        "Alabanza a Dios"
-      ],
-      "has_lyrics": true,
-      "colecciones": [
-        {
-          "himnario": "Cánticos de Alabanza",
-          "numero": 56
-        },
-        {
-          "himnario": "Gloria y Triunfo",
-          "numero": 385
-        }
-      ]
-    },
-    {
-      "id": "CANT-057",
-      "himnario": "Cánticos de Alabanza",
-      "numero": 57,
-      "titulo": "RENUÉVAME",
-      "tom": "D",
-      "letra": "//Renuévame Señor Jesús\nYa no quiero ser igual;\nRenuévame Señor Jesús\nPon en mi tu corazón.\n\nPorque todo lo que hay\nDentro de mi\nNecesita ser cambiado, Señor.\n\nPorque todo lo que hay\nDentro de mi corazón\nNecesita más de ti.",
-      "bloques": [
-        {
-          "tipo": "estrofa",
-          "numero": null,
-          "texto": "//Renuévame Señor Jesús\nYa no quiero ser igual;\nRenuévame Señor Jesús\nPon en mi tu corazón.\n\nPorque todo lo que hay\nDentro de mi\nNecesita ser cambiado, Señor.\n\nPorque todo lo que hay\nDentro de mi corazón\nNecesita más de ti."
-        }
-      ],
-      "numero_equivalente": null,
-      "himnario_equivalente": null,
-      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
-      "observacion": "Transcrito visualmente de la página 9 del PDF fuente.",
-      "categorias": [
-        "Consagración"
-      ],
-      "has_lyrics": true,
-      "colecciones": [
-        {
-          "himnario": "Cánticos de Alabanza",
-          "numero": 57
-        },
-        {
-          "himnario": "Gloria y Triunfo",
-          "numero": 386
-        }
-      ],
-      "cifra_url": "https://www.cifraclub.com/marcos-witt/renuevame/",
-      "cifra_autorizada": false,
-      "cifra_procedencia": {
-        "fuente": "https://www.cifraclub.com/marcos-witt/renuevame/",
-        "tipo": "enlace_externo",
-        "autorizado": false,
-        "notas": "Fuente externa auditada individualmente. La letra/título fueron comparados con el Cántico de Alabanza correspondiente antes de vincular."
-      }
-    },
-    {
-      "id": "CANT-058",
-      "himnario": "Cánticos de Alabanza",
-      "numero": 58,
-      "titulo": "TU MISERICORDIA",
-      "tom": "D",
-      "letra": "Tu misericordia es mejor que la vida\nTu misericordia es mejor que la vida\nMis labios te alabarán, y así te bendeciré;\n\nAlzaré mis manos en tu nombre Señor.\n//Alzaré mis manos en tu nombre Señor.//\nMis labios te alabarán y así te bendeciré\nAlzaré mis manos en tu nombre Señor.",
-      "bloques": [
-        {
-          "tipo": "estrofa",
-          "numero": null,
-          "texto": "Tu misericordia es mejor que la vida\nTu misericordia es mejor que la vida\nMis labios te alabarán, y así te bendeciré;\n\nAlzaré mis manos en tu nombre Señor.\n//Alzaré mis manos en tu nombre Señor.//\nMis labios te alabarán y así te bendeciré\nAlzaré mis manos en tu nombre Señor."
-        }
-      ],
-      "numero_equivalente": null,
-      "himnario_equivalente": null,
-      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
-      "observacion": "Transcrito visualmente de la página 9 del PDF fuente.",
-      "categorias": [
-        "Amor y Gracia de Dios"
-      ],
-      "has_lyrics": true,
-      "colecciones": [
-        {
-          "himnario": "Cánticos de Alabanza",
-          "numero": 58
-        },
-        {
-          "himnario": "Gloria y Triunfo",
-          "numero": 387
-        }
-      ]
-    },
-    {
-      "id": "CANT-059",
-      "himnario": "Cánticos de Alabanza",
-      "numero": 59,
-      "titulo": "DE GLORIA EN GLORIA",
-      "tom": "D",
-      "letra": "De gloria en gloria te veo,\nCuanto más te conozco\nQuiero saber más de ti.\nMi Dios cual buen alfarero,\nQuebrántame, transfórmame\nMoldéame a tu imagen, Señor.\n\n//Quiero ser más como tú,\nVer la vida como tú\nSatúrame de tu Espíritu\nY reflejar al mundo, tu amor.//\n\nDe gloria en ...\n\nMi Dios cual ...\n\n//Quiero ser más ...//\n//Reflejar al mundo, tu amor.//",
-      "bloques": [
-        {
-          "tipo": "estrofa",
-          "numero": null,
-          "texto": "De gloria en gloria te veo,\nCuanto más te conozco\nQuiero saber más de ti.\nMi Dios cual buen alfarero,\nQuebrántame, transfórmame\nMoldéame a tu imagen, Señor.\n\n//Quiero ser más como tú,\nVer la vida como tú\nSatúrame de tu Espíritu\nY reflejar al mundo, tu amor.//\n\nDe gloria en ...\n\nMi Dios cual ...\n\n//Quiero ser más ...//\n//Reflejar al mundo, tu amor.//"
-        }
-      ],
-      "numero_equivalente": null,
-      "himnario_equivalente": null,
-      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
-      "observacion": "Transcrito visualmente de la página 9 del PDF fuente.",
-      "categorias": [
-        "Amor y Gracia de Dios"
-      ],
-      "has_lyrics": true,
-      "autor_impreso": "Sergio Gonzales",
-      "colecciones": [
-        {
-          "himnario": "Cánticos de Alabanza",
-          "numero": 59
-        },
-        {
-          "himnario": "Gloria y Triunfo",
-          "numero": 388
-        }
-      ],
-      "cifra_url": "https://www.cifraclub.com/marcos-witt/de-gloria-en-gloria/",
-      "cifra_autorizada": false,
-      "cifra_procedencia": {
-        "fuente": "https://www.cifraclub.com/marcos-witt/de-gloria-en-gloria/",
-        "tipo": "enlace_externo",
-        "autorizado": false,
-        "notas": "Fuente externa auditada individualmente. La letra/título fueron comparados con el Cántico de Alabanza correspondiente antes de vincular."
-      }
-    },
-    {
-      "id": "CANT-060",
-      "himnario": "Cánticos de Alabanza",
-      "numero": 60,
-      "titulo": "GRACIAS CRISTO",
-      "tom": "D",
-      "letra": "Gracias Cristo, gracias Cristo,\nGracias Cristo, gracias Cristo.\n\nLevantemos nuestras manos,\nEn señal de gratitud\nGracias Cristo, gracias Cristo.",
-      "bloques": [
-        {
-          "tipo": "estrofa",
-          "numero": null,
-          "texto": "Gracias Cristo, gracias Cristo,\nGracias Cristo, gracias Cristo.\n\nLevantemos nuestras manos,\nEn señal de gratitud\nGracias Cristo, gracias Cristo."
-        }
-      ],
-      "numero_equivalente": null,
-      "himnario_equivalente": null,
-      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
-      "observacion": "Transcrito visualmente de la página 10 del PDF fuente.",
-      "categorias": [
-        "Alabanza a Dios"
-      ],
-      "has_lyrics": true,
-      "colecciones": [
-        {
-          "himnario": "Cánticos de Alabanza",
-          "numero": 60
-        },
-        {
-          "himnario": "Gloria y Triunfo",
-          "numero": 389
-        }
-      ],
-      "audio_external_url": "https://www.youtube.com/watch?v=g4PKgEfdHj8",
-      "audio_autorizado": false,
-      "audio_procedencia": {
-        "fuente": "https://www.youtube.com/watch?v=g4PKgEfdHj8",
-        "tipo": "enlace_externo",
-        "autorizado": false,
-        "notas": "Grabación o vídeo externo auditado individualmente. No implica autorización para almacenar el audio dentro de la aplicación."
-      }
-    },
-    {
-      "id": "CANT-061",
-      "himnario": "Cánticos de Alabanza",
-      "numero": 61,
-      "titulo": "DE TAL MANERA",
-      "tom": "C",
-      "letra": "De tal manera me amó\nQue su vida no escatimó\nHasta el final Él se entregó\nY a la muerte fue porque em amó\n\nDe tal manera me amó\nQue no hay forma en que podré pagar\nEl precio de su grande amor\nPero toda mi alma quiero dar\n\nPor su amor yo viviré\nDe su amor yo cantaré\nCon mi Jesús caminaré\nPorque Él me amó a mí\nPor su amor yo viviré\nDe su amor yo cantaré\nCon mi Jesús caminaré\nPorque el murió por mi\nLe seguire.",
-      "bloques": [
-        {
-          "tipo": "estrofa",
-          "numero": null,
-          "texto": "De tal manera me amó\nQue su vida no escatimó\nHasta el final Él se entregó\nY a la muerte fue porque em amó\n\nDe tal manera me amó\nQue no hay forma en que podré pagar\nEl precio de su grande amor\nPero toda mi alma quiero dar\n\nPor su amor yo viviré\nDe su amor yo cantaré\nCon mi Jesús caminaré\nPorque Él me amó a mí\nPor su amor yo viviré\nDe su amor yo cantaré\nCon mi Jesús caminaré\nPorque el murió por mi\nLe seguire."
-        }
-      ],
-      "numero_equivalente": null,
-      "himnario_equivalente": null,
-      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
-      "observacion": "Transcrito visualmente de la página 10 del PDF fuente.",
-      "categorias": [
-        "Amor y Gracia de Dios"
-      ],
-      "has_lyrics": true,
-      "autor_impreso": "Abel Zabala",
-      "colecciones": [
-        {
-          "himnario": "Cánticos de Alabanza",
-          "numero": 61
-        },
-        {
-          "himnario": "Gloria y Triunfo",
-          "numero": 390
-        }
-      ],
-      "cifra_url": "https://www.cifraclub.com/abel-zavala/de-tal-manera/",
-      "cifra_autorizada": false,
-      "cifra_procedencia": {
-        "fuente": "https://www.cifraclub.com/abel-zavala/de-tal-manera/",
-        "tipo": "enlace_externo",
-        "autorizado": false,
-        "notas": "Fuente externa auditada individualmente. La letra/título fueron comparados con el Cántico de Alabanza correspondiente antes de vincular."
-      }
-    },
-    {
-      "id": "CANT-062",
-      "himnario": "Cánticos de Alabanza",
-      "numero": 62,
-      "titulo": "YO TE ALABARÉ",
-      "tom": "C",
-      "letra": "//Yo te alabaré con todo mi ser\nCantándote salmos así viviré //\n\nTu paz y tu amor hoy puedo sentir\nSaber que tú estás muy cerca de mí.\n\nMe gozo en el tiempo que paso contigo\nSintiendo tu aliento, escuchando tu voz.\n\nNo importa el problema, no importa el dolor\nSe olvidan las penas cuando hay amor.\n\n//Yo te alabaré ...//\n\nNo quiero que tú te alejes de mí\nNo quiero jamás dejarte, Señor.\nTu carga es liviana yo la llevaré\nDonde tú me guíes allí yo iré.\n\n// Yo te alabaré ...//",
-      "bloques": [
-        {
-          "tipo": "estrofa",
-          "numero": null,
-          "texto": "//Yo te alabaré con todo mi ser\nCantándote salmos así viviré //\n\nTu paz y tu amor hoy puedo sentir\nSaber que tú estás muy cerca de mí.\n\nMe gozo en el tiempo que paso contigo\nSintiendo tu aliento, escuchando tu voz.\n\nNo importa el problema, no importa el dolor\nSe olvidan las penas cuando hay amor.\n\n//Yo te alabaré ...//\n\nNo quiero que tú te alejes de mí\nNo quiero jamás dejarte, Señor.\nTu carga es liviana yo la llevaré\nDonde tú me guíes allí yo iré.\n\n// Yo te alabaré ...//"
-        }
-      ],
-      "numero_equivalente": null,
-      "himnario_equivalente": null,
-      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
-      "observacion": "Transcrito visualmente de la página 10 del PDF fuente.",
-      "categorias": [
-        "Alabanza a Dios"
-      ],
-      "has_lyrics": true,
-      "autor_impreso": "Yesid Benavides",
-      "colecciones": [
-        {
-          "himnario": "Cánticos de Alabanza",
-          "numero": 62
-        },
-        {
-          "himnario": "Gloria y Triunfo",
-          "numero": 391
-        }
-      ]
-    },
-    {
-      "id": "CANT-063",
-      "himnario": "Cánticos de Alabanza",
-      "numero": 63,
-      "titulo": "EL ME LEVANTARÁ",
-      "tom": "D",
-      "letra": "//El me levantará, él me levantará\nEl me levantará, así es el Señor.//\n\n//El me levantará....a, él me levantará.....a\nEn sus manos me sostendrá.....a\nÉl me levantará....a//\nAsí es el Señor\nMe fortalecerá ...",
-      "bloques": [
-        {
-          "tipo": "estrofa",
-          "numero": null,
-          "texto": "//El me levantará, él me levantará\nEl me levantará, así es el Señor.//\n\n//El me levantará....a, él me levantará.....a\nEn sus manos me sostendrá.....a\nÉl me levantará....a//\nAsí es el Señor\nMe fortalecerá ..."
-        }
-      ],
-      "numero_equivalente": null,
-      "himnario_equivalente": null,
-      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
-      "observacion": "Transcrito visualmente de la página 10 del PDF fuente.",
-      "categorias": [
-        "Fe y Confianza"
-      ],
-      "has_lyrics": true,
-      "autor_impreso": "Tony Pérez",
-      "colecciones": [
-        {
-          "himnario": "Cánticos de Alabanza",
-          "numero": 63
-        },
-        {
-          "himnario": "Gloria y Triunfo",
-          "numero": 392
-        }
-      ],
-      "audio_external_url": "https://www.youtube.com/watch?v=J1XnzpLqbG8",
-      "audio_autorizado": false,
-      "audio_procedencia": {
-        "fuente": "https://www.youtube.com/watch?v=J1XnzpLqbG8",
-        "tipo": "enlace_externo",
-        "autorizado": false,
-        "notas": "Grabación o vídeo externo auditado individualmente. No implica autorización para almacenar el audio dentro de la aplicación."
       }
     },
     {
@@ -35951,6 +35217,740 @@
       }
     },
     {
+      "id": "CANT-046",
+      "himnario": "Cánticos de Alabanza",
+      "numero": 46,
+      "titulo": "CELEBRAD A CRISTO",
+      "tom": "F",
+      "letra": "//Celebrad a Cristo, celebrad\nCelebrad a Cristo, celebrad//\n\nResucitó, resucitó\nY por siempre él vivirá, reinará\nResucitó, resucitó\n///Vamos a celebrad///\nNuestro Señor, resucitó.\n\nÉl vive, él vive\nY por siempre, él vivirá.\n///Vamos a Celebrad///\nNuestro Señor, resucitó\n\nCelebrad a Cristo...",
+      "bloques": [
+        {
+          "tipo": "estrofa",
+          "numero": null,
+          "texto": "//Celebrad a Cristo, celebrad\nCelebrad a Cristo, celebrad//\n\nResucitó, resucitó\nY por siempre él vivirá, reinará\nResucitó, resucitó\n///Vamos a celebrad///\nNuestro Señor, resucitó.\n\nÉl vive, él vive\nY por siempre, él vivirá.\n///Vamos a Celebrad///\nNuestro Señor, resucitó\n\nCelebrad a Cristo..."
+        }
+      ],
+      "numero_equivalente": null,
+      "himnario_equivalente": null,
+      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
+      "observacion": "Transcrito visualmente de la página 6 del PDF fuente.",
+      "categorias": [
+        "Pascua"
+      ],
+      "has_lyrics": true,
+      "autor_impreso": "Gary Oliver",
+      "colecciones": [
+        {
+          "himnario": "Cánticos de Alabanza",
+          "numero": 46
+        },
+        {
+          "himnario": "Gloria y Triunfo",
+          "numero": 375
+        }
+      ],
+      "cifra_url": "https://www.cifraclub.com/danilo-montero/celebrad-a-cristo/",
+      "cifra_autorizada": false,
+      "cifra_procedencia": {
+        "fuente": "https://www.cifraclub.com/danilo-montero/celebrad-a-cristo/",
+        "tipo": "enlace_externo",
+        "autorizado": false,
+        "notas": "Fuente externa auditada individualmente. La letra/título fueron comparados con el Cántico de Alabanza correspondiente antes de vincular."
+      }
+    },
+    {
+      "id": "CANT-047",
+      "himnario": "Cánticos de Alabanza",
+      "numero": 47,
+      "titulo": "HAY VICTORIA",
+      "tom": "Em",
+      "letra": "Hay victoria, hay victoria\nHay victoria en la sangre de Jesús,\nHay victoria, hay victoria\n\nHay victoria en la sangre de Jesús.\nNo podrá el enemigo\nVencer a nuestras almas,\n//Porque hay victoria, porque hay victoria\nPorque hay victoria en la sangre de Jesús.//",
+      "bloques": [
+        {
+          "tipo": "estrofa",
+          "numero": null,
+          "texto": "Hay victoria, hay victoria\nHay victoria en la sangre de Jesús,\nHay victoria, hay victoria\n\nHay victoria en la sangre de Jesús.\nNo podrá el enemigo\nVencer a nuestras almas,\n//Porque hay victoria, porque hay victoria\nPorque hay victoria en la sangre de Jesús.//"
+        }
+      ],
+      "numero_equivalente": null,
+      "himnario_equivalente": null,
+      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
+      "observacion": "Transcrito visualmente de la página 6 del PDF fuente.",
+      "categorias": [
+        "Sangre, Redención, Salvación"
+      ],
+      "has_lyrics": true,
+      "colecciones": [
+        {
+          "himnario": "Cánticos de Alabanza",
+          "numero": 47
+        },
+        {
+          "himnario": "Gloria y Triunfo",
+          "numero": 376
+        }
+      ]
+    },
+    {
+      "id": "CANT-048",
+      "himnario": "Cánticos de Alabanza",
+      "numero": 48,
+      "titulo": "CON TODAS MI FUERZAS",
+      "tom": "Em",
+      "letra": "Con todas mi fuerzas yo te amo\nYo te amo mi Dios,\nPorque eres lo que más quiero\nTe necesito cada día más.\n\nCada célula de mi ser\nTe anhela mi Señor\nPorque eres el sustento\nQue necesito para vivir.\n\nMás unción quiere mi ser,\nDel Espíritu Santo lléname,\nEn Espíritu te adoraré,\nCon danzas te alabaré,\nEn tu presencia me gozaré\nSolo en ti me alegraré.",
+      "bloques": [
+        {
+          "tipo": "estrofa",
+          "numero": null,
+          "texto": "Con todas mi fuerzas yo te amo\nYo te amo mi Dios,\nPorque eres lo que más quiero\nTe necesito cada día más.\n\nCada célula de mi ser\nTe anhela mi Señor\nPorque eres el sustento\nQue necesito para vivir.\n\nMás unción quiere mi ser,\nDel Espíritu Santo lléname,\nEn Espíritu te adoraré,\nCon danzas te alabaré,\nEn tu presencia me gozaré\nSolo en ti me alegraré."
+        }
+      ],
+      "numero_equivalente": null,
+      "himnario_equivalente": null,
+      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
+      "observacion": "Transcrito visualmente de la página 7 del PDF fuente.",
+      "categorias": [
+        "Alabanza a Dios"
+      ],
+      "has_lyrics": true,
+      "autor_impreso": "José Alfredo Arismendi",
+      "colecciones": [
+        {
+          "himnario": "Cánticos de Alabanza",
+          "numero": 48
+        },
+        {
+          "himnario": "Gloria y Triunfo",
+          "numero": 377
+        }
+      ],
+      "cifra_url": "https://www.cifraclub.com/comando-gaf/con-todas-mis-fuerzas/",
+      "cifra_autorizada": false,
+      "cifra_procedencia": {
+        "fuente": "https://www.cifraclub.com/comando-gaf/con-todas-mis-fuerzas/",
+        "tipo": "enlace_externo",
+        "autorizado": false,
+        "notas": "Fuente externa auditada individualmente. La letra/título fueron comparados con el Cántico de Alabanza correspondiente antes de vincular."
+      },
+      "audio_external_url": "https://www.youtube.com/watch?v=gUGlaXgaTaI",
+      "audio_autorizado": false,
+      "audio_procedencia": {
+        "fuente": "https://www.youtube.com/watch?v=gUGlaXgaTaI",
+        "tipo": "enlace_externo",
+        "autorizado": false,
+        "notas": "Grabación o vídeo externo auditado individualmente. No implica autorización para almacenar el audio dentro de la aplicación."
+      }
+    },
+    {
+      "id": "CANT-049",
+      "himnario": "Cánticos de Alabanza",
+      "numero": 49,
+      "titulo": "BUENO ES ALABAR",
+      "tom": "G",
+      "letra": "Bueno es alabar ¡oh Señor!, tu nombre\nDarte gloria, honra y honor por siempre,\nBueno es alabarte Jesús\nY gozarme en tu poder.\n\nPorque grande eres Tú,\nGrandes son tus obras,\nPorque grande eres Tú,\nGrande es tu amor,\nGrande es tu gloria.",
+      "bloques": [
+        {
+          "tipo": "estrofa",
+          "numero": null,
+          "texto": "Bueno es alabar ¡oh Señor!, tu nombre\nDarte gloria, honra y honor por siempre,\nBueno es alabarte Jesús\nY gozarme en tu poder.\n\nPorque grande eres Tú,\nGrandes son tus obras,\nPorque grande eres Tú,\nGrande es tu amor,\nGrande es tu gloria."
+        }
+      ],
+      "numero_equivalente": null,
+      "himnario_equivalente": null,
+      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
+      "observacion": "Transcrito visualmente de la página 7 del PDF fuente.",
+      "categorias": [
+        "Alabanza a Dios"
+      ],
+      "has_lyrics": true,
+      "autor_impreso": "Fernando Soto",
+      "colecciones": [
+        {
+          "himnario": "Cánticos de Alabanza",
+          "numero": 49
+        },
+        {
+          "himnario": "Gloria y Triunfo",
+          "numero": 378
+        }
+      ]
+    },
+    {
+      "id": "CANT-050",
+      "himnario": "Cánticos de Alabanza",
+      "numero": 50,
+      "titulo": "ERES TODOPODEROSO",
+      "tom": "Bm",
+      "letra": "La única razón de mi adoración,\nEres tú mi Jesús.\nMi único motivo para vivir,\nEres tú mi Señor.\n\nMi única verdad está en ti\nEres mi luz y mi salvación;\nMi único amor eres Tú Señor\nY por siempre te alabaré.\n\nTú eres Todopoderoso\nEres grande y majestuoso\nEres fuerte, invencible,\nY no hay nadie como Tú.",
+      "bloques": [
+        {
+          "tipo": "estrofa",
+          "numero": null,
+          "texto": "La única razón de mi adoración,\nEres tú mi Jesús.\nMi único motivo para vivir,\nEres tú mi Señor.\n\nMi única verdad está en ti\nEres mi luz y mi salvación;\nMi único amor eres Tú Señor\nY por siempre te alabaré.\n\nTú eres Todopoderoso\nEres grande y majestuoso\nEres fuerte, invencible,\nY no hay nadie como Tú."
+        }
+      ],
+      "numero_equivalente": null,
+      "himnario_equivalente": null,
+      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
+      "observacion": "Transcrito visualmente de la página 7 del PDF fuente.",
+      "categorias": [
+        "Alabanza a Dios"
+      ],
+      "has_lyrics": true,
+      "autor_impreso": "Juan Salinas",
+      "colecciones": [
+        {
+          "himnario": "Cánticos de Alabanza",
+          "numero": 50
+        },
+        {
+          "himnario": "Gloria y Triunfo",
+          "numero": 379
+        }
+      ],
+      "cifra_url": "https://www.cifraclub.com/danilo-montero/eres-todopoderoso/",
+      "cifra_autorizada": false,
+      "cifra_procedencia": {
+        "fuente": "https://www.cifraclub.com/danilo-montero/eres-todopoderoso/",
+        "tipo": "enlace_externo",
+        "autorizado": false,
+        "notas": "Fuente externa auditada individualmente. La letra/título fueron comparados con el Cántico de Alabanza correspondiente antes de vincular."
+      },
+      "audio_external_url": "https://www.youtube.com/watch?v=Urvys69pFdk",
+      "audio_autorizado": false,
+      "audio_procedencia": {
+        "fuente": "https://www.youtube.com/watch?v=Urvys69pFdk",
+        "tipo": "enlace_externo",
+        "autorizado": false,
+        "notas": "Grabación o vídeo externo auditado individualmente. No implica autorización para almacenar el audio dentro de la aplicación."
+      }
+    },
+    {
+      "id": "CANT-051",
+      "himnario": "Cánticos de Alabanza",
+      "numero": 51,
+      "titulo": "SOMOS EL PUEBLO DE DIOS",
+      "tom": "G",
+      "letra": "Somos el Pueblo de Dios\nSomos un pueblo especial\nLlamados para anunciar\nLas virtudes de aquel\nQue nos llamó a su luz.\n\nSomos el Pueblo de Dios\nSu sangre nos redimió\nY su Espíritu dió\nPara darnos poder\nY ser testigos de Él.\n\nY llevaremos su Gloria\nA cada pueblo y nación,\nTrayéndoles esperanza\nY nuevas de salvación.\n\nSu Amor nos impulsa\nNo nos podemos callar\nAnunciaremos al mundo\nDe su Amor y Verdad.",
+      "bloques": [
+        {
+          "tipo": "estrofa",
+          "numero": null,
+          "texto": "Somos el Pueblo de Dios\nSomos un pueblo especial\nLlamados para anunciar\nLas virtudes de aquel\nQue nos llamó a su luz.\n\nSomos el Pueblo de Dios\nSu sangre nos redimió\nY su Espíritu dió\nPara darnos poder\nY ser testigos de Él.\n\nY llevaremos su Gloria\nA cada pueblo y nación,\nTrayéndoles esperanza\nY nuevas de salvación.\n\nSu Amor nos impulsa\nNo nos podemos callar\nAnunciaremos al mundo\nDe su Amor y Verdad."
+        }
+      ],
+      "numero_equivalente": null,
+      "himnario_equivalente": null,
+      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
+      "observacion": "Transcrito visualmente de la página 7 del PDF fuente.",
+      "categorias": [
+        "Evangelismo",
+        "Iglesia"
+      ],
+      "has_lyrics": true,
+      "autor_impreso": "Marcos Witt",
+      "colecciones": [
+        {
+          "himnario": "Cánticos de Alabanza",
+          "numero": 51
+        },
+        {
+          "himnario": "Gloria y Triunfo",
+          "numero": 380
+        }
+      ],
+      "cifra_url": "https://www.cifraclub.com/marcos-witt/somos-el-pueblo-de-dios/",
+      "cifra_autorizada": false,
+      "cifra_procedencia": {
+        "fuente": "https://www.cifraclub.com/marcos-witt/somos-el-pueblo-de-dios/",
+        "tipo": "enlace_externo",
+        "autorizado": false,
+        "notas": "Fuente externa auditada individualmente. La letra/título fueron comparados con el Cántico de Alabanza correspondiente antes de vincular."
+      },
+      "audio_external_url": "https://www.youtube.com/watch?v=GCnyax1nCPc",
+      "audio_autorizado": false,
+      "audio_procedencia": {
+        "fuente": "https://www.youtube.com/watch?v=GCnyax1nCPc",
+        "tipo": "enlace_externo",
+        "autorizado": false,
+        "notas": "Grabación o vídeo externo auditado individualmente. No implica autorización para almacenar el audio dentro de la aplicación."
+      }
+    },
+    {
+      "id": "CANT-052",
+      "himnario": "Cánticos de Alabanza",
+      "numero": 52,
+      "titulo": "QUE DULCE ES ESTAR",
+      "tom": "D",
+      "letra": "Que dulce es estar en tu presencia\nContemplando la hermosura de tu Santidad.\nY reconociendo que tú eres Señor,\nTodopoderoso y el gran \"Yo soy\". (Bis)\n\n//Santo, Saaanto, mi corazón\nSe une a la melodía angelical.//",
+      "bloques": [
+        {
+          "tipo": "estrofa",
+          "numero": null,
+          "texto": "Que dulce es estar en tu presencia\nContemplando la hermosura de tu Santidad.\nY reconociendo que tú eres Señor,\nTodopoderoso y el gran \"Yo soy\". (Bis)\n\n//Santo, Saaanto, mi corazón\nSe une a la melodía angelical.//"
+        }
+      ],
+      "numero_equivalente": null,
+      "himnario_equivalente": null,
+      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
+      "observacion": "Transcrito visualmente de la página 8 del PDF fuente.",
+      "categorias": [
+        "Alabanza a Dios"
+      ],
+      "has_lyrics": true,
+      "autor_impreso": "Fermín García",
+      "colecciones": [
+        {
+          "himnario": "Cánticos de Alabanza",
+          "numero": 52
+        },
+        {
+          "himnario": "Gloria y Triunfo",
+          "numero": 381
+        }
+      ],
+      "cifra_url": "https://www.cifraclub.com/danilo-montero/que-dulce/original.html",
+      "cifra_autorizada": false,
+      "cifra_procedencia": {
+        "fuente": "https://www.cifraclub.com/danilo-montero/que-dulce/original.html",
+        "tipo": "enlace_externo",
+        "autorizado": false,
+        "notas": "Fuente externa auditada individualmente. La letra/título fueron comparados con el Cántico de Alabanza correspondiente antes de vincular."
+      }
+    },
+    {
+      "id": "CANT-053",
+      "himnario": "Cánticos de Alabanza",
+      "numero": 53,
+      "titulo": "TU FIDELIDAD",
+      "tom": "D",
+      "letra": "Tu fidelidad es grande\nTu fidelidad incomparable es\nNadie como tú, bendito Dios\nGrande es tu fidelidad. (Bis)",
+      "bloques": [
+        {
+          "tipo": "estrofa",
+          "numero": null,
+          "texto": "Tu fidelidad es grande\nTu fidelidad incomparable es\nNadie como tú, bendito Dios\nGrande es tu fidelidad. (Bis)"
+        }
+      ],
+      "numero_equivalente": null,
+      "himnario_equivalente": null,
+      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
+      "observacion": "Transcrito visualmente de la página 8 del PDF fuente.",
+      "categorias": [
+        "Alabanza a Dios",
+        "Fe y Confianza"
+      ],
+      "has_lyrics": true,
+      "colecciones": [
+        {
+          "himnario": "Cánticos de Alabanza",
+          "numero": 53
+        },
+        {
+          "himnario": "Gloria y Triunfo",
+          "numero": 382
+        }
+      ],
+      "cifra_url": "https://www.cifraclub.com/marcos-witt/tu-fidelidad/",
+      "cifra_autorizada": false,
+      "cifra_procedencia": {
+        "fuente": "https://www.cifraclub.com/marcos-witt/tu-fidelidad/",
+        "tipo": "enlace_externo",
+        "autorizado": false,
+        "notas": "Fuente externa auditada individualmente. La letra/título fueron comparados con el Cántico de Alabanza correspondiente antes de vincular."
+      },
+      "audio_external_url": "https://www.youtube.com/watch?v=ibZ1NgRdIZc",
+      "audio_autorizado": false,
+      "audio_procedencia": {
+        "fuente": "https://www.youtube.com/watch?v=ibZ1NgRdIZc",
+        "tipo": "enlace_externo",
+        "autorizado": false,
+        "notas": "Grabación o vídeo externo auditado individualmente. No implica autorización para almacenar el audio dentro de la aplicación."
+      }
+    },
+    {
+      "id": "CANT-054",
+      "himnario": "Cánticos de Alabanza",
+      "numero": 54,
+      "titulo": "QUIERO DERRAMAR MI CORAZÓN",
+      "tom": "D",
+      "letra": "Quiero derramar mi corazon\nDelante de ti hoy quiero estar\nLevantar mis manos para alabarte\nY adorarte a ti, mi Creador.\nTú eres Jesús mi Dios mi Rey\nSoy una muestra de tu amor\nUn nuevo ser para alabarte\nY adorarte a ti mi Creador.\n//A   le   lu   ya\nA   le   lu   ya//\nGloria a Jesús, él es mi Rey\nA   le   lu   ya.",
+      "bloques": [
+        {
+          "tipo": "estrofa",
+          "numero": null,
+          "texto": "Quiero derramar mi corazon\nDelante de ti hoy quiero estar\nLevantar mis manos para alabarte\nY adorarte a ti, mi Creador.\nTú eres Jesús mi Dios mi Rey\nSoy una muestra de tu amor\nUn nuevo ser para alabarte\nY adorarte a ti mi Creador.\n//A   le   lu   ya\nA   le   lu   ya//\nGloria a Jesús, él es mi Rey\nA   le   lu   ya."
+        }
+      ],
+      "numero_equivalente": null,
+      "himnario_equivalente": null,
+      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
+      "observacion": "Transcrito visualmente de la página 8 del PDF fuente.",
+      "categorias": [
+        "Alabanza a Dios"
+      ],
+      "has_lyrics": true,
+      "colecciones": [
+        {
+          "himnario": "Cánticos de Alabanza",
+          "numero": 54
+        },
+        {
+          "himnario": "Gloria y Triunfo",
+          "numero": 383
+        }
+      ],
+      "cifra_url": "https://www.cifraclub.com/elim/quiero-derramar-mi-corazon/",
+      "cifra_autorizada": false,
+      "cifra_procedencia": {
+        "fuente": "https://www.cifraclub.com/elim/quiero-derramar-mi-corazon/",
+        "tipo": "enlace_externo",
+        "autorizado": false,
+        "notas": "Fuente externa auditada individualmente. La letra/título fueron comparados con el Cántico de Alabanza correspondiente antes de vincular."
+      }
+    },
+    {
+      "id": "CANT-055",
+      "himnario": "Cánticos de Alabanza",
+      "numero": 55,
+      "titulo": "TE AMO SEÑOR",
+      "tom": "D",
+      "letra": "//Te amo Señor, fortaleza mía\nRoca mía, y castillo mío,\nY mi libertador,\nDios mío, en ti confiaré\nMi escudo eres tú\nY la fuerza de mi salvación.//\n//A   le   lu   ya\nA   le   lu   ya\nGloria a Jesús, él es mi Rey\nA...leluya.",
+      "bloques": [
+        {
+          "tipo": "estrofa",
+          "numero": null,
+          "texto": "//Te amo Señor, fortaleza mía\nRoca mía, y castillo mío,\nY mi libertador,\nDios mío, en ti confiaré\nMi escudo eres tú\nY la fuerza de mi salvación.//\n//A   le   lu   ya\nA   le   lu   ya\nGloria a Jesús, él es mi Rey\nA...leluya."
+        }
+      ],
+      "numero_equivalente": null,
+      "himnario_equivalente": null,
+      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
+      "observacion": "Transcrito visualmente de la página 8 del PDF fuente.",
+      "categorias": [
+        "Fe y Confianza"
+      ],
+      "has_lyrics": true,
+      "colecciones": [
+        {
+          "himnario": "Cánticos de Alabanza",
+          "numero": 55
+        },
+        {
+          "himnario": "Gloria y Triunfo",
+          "numero": 384
+        }
+      ]
+    },
+    {
+      "id": "CANT-056",
+      "himnario": "Cánticos de Alabanza",
+      "numero": 56,
+      "titulo": "SEAS EXALTADO, OH DIOS",
+      "tom": "D",
+      "letra": "//Seas exaltado Dios\nSobre los cielos\nSobre la tierra\nTu gloria esté.//\n//Te exaltamos, te exaltamos\nTe exaltamos, oh Señor.//",
+      "bloques": [
+        {
+          "tipo": "estrofa",
+          "numero": null,
+          "texto": "//Seas exaltado Dios\nSobre los cielos\nSobre la tierra\nTu gloria esté.//\n//Te exaltamos, te exaltamos\nTe exaltamos, oh Señor.//"
+        }
+      ],
+      "numero_equivalente": null,
+      "himnario_equivalente": null,
+      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
+      "observacion": "Transcrito visualmente de la página 9 del PDF fuente.",
+      "categorias": [
+        "Alabanza a Dios"
+      ],
+      "has_lyrics": true,
+      "colecciones": [
+        {
+          "himnario": "Cánticos de Alabanza",
+          "numero": 56
+        },
+        {
+          "himnario": "Gloria y Triunfo",
+          "numero": 385
+        }
+      ]
+    },
+    {
+      "id": "CANT-057",
+      "himnario": "Cánticos de Alabanza",
+      "numero": 57,
+      "titulo": "RENUÉVAME",
+      "tom": "D",
+      "letra": "//Renuévame Señor Jesús\nYa no quiero ser igual;\nRenuévame Señor Jesús\nPon en mi tu corazón.\n\nPorque todo lo que hay\nDentro de mi\nNecesita ser cambiado, Señor.\n\nPorque todo lo que hay\nDentro de mi corazón\nNecesita más de ti.",
+      "bloques": [
+        {
+          "tipo": "estrofa",
+          "numero": null,
+          "texto": "//Renuévame Señor Jesús\nYa no quiero ser igual;\nRenuévame Señor Jesús\nPon en mi tu corazón.\n\nPorque todo lo que hay\nDentro de mi\nNecesita ser cambiado, Señor.\n\nPorque todo lo que hay\nDentro de mi corazón\nNecesita más de ti."
+        }
+      ],
+      "numero_equivalente": null,
+      "himnario_equivalente": null,
+      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
+      "observacion": "Transcrito visualmente de la página 9 del PDF fuente.",
+      "categorias": [
+        "Consagración"
+      ],
+      "has_lyrics": true,
+      "colecciones": [
+        {
+          "himnario": "Cánticos de Alabanza",
+          "numero": 57
+        },
+        {
+          "himnario": "Gloria y Triunfo",
+          "numero": 386
+        }
+      ],
+      "cifra_url": "https://www.cifraclub.com/marcos-witt/renuevame/",
+      "cifra_autorizada": false,
+      "cifra_procedencia": {
+        "fuente": "https://www.cifraclub.com/marcos-witt/renuevame/",
+        "tipo": "enlace_externo",
+        "autorizado": false,
+        "notas": "Fuente externa auditada individualmente. La letra/título fueron comparados con el Cántico de Alabanza correspondiente antes de vincular."
+      }
+    },
+    {
+      "id": "CANT-058",
+      "himnario": "Cánticos de Alabanza",
+      "numero": 58,
+      "titulo": "TU MISERICORDIA",
+      "tom": "D",
+      "letra": "Tu misericordia es mejor que la vida\nTu misericordia es mejor que la vida\nMis labios te alabarán, y así te bendeciré;\n\nAlzaré mis manos en tu nombre Señor.\n//Alzaré mis manos en tu nombre Señor.//\nMis labios te alabarán y así te bendeciré\nAlzaré mis manos en tu nombre Señor.",
+      "bloques": [
+        {
+          "tipo": "estrofa",
+          "numero": null,
+          "texto": "Tu misericordia es mejor que la vida\nTu misericordia es mejor que la vida\nMis labios te alabarán, y así te bendeciré;\n\nAlzaré mis manos en tu nombre Señor.\n//Alzaré mis manos en tu nombre Señor.//\nMis labios te alabarán y así te bendeciré\nAlzaré mis manos en tu nombre Señor."
+        }
+      ],
+      "numero_equivalente": null,
+      "himnario_equivalente": null,
+      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
+      "observacion": "Transcrito visualmente de la página 9 del PDF fuente.",
+      "categorias": [
+        "Amor y Gracia de Dios"
+      ],
+      "has_lyrics": true,
+      "colecciones": [
+        {
+          "himnario": "Cánticos de Alabanza",
+          "numero": 58
+        },
+        {
+          "himnario": "Gloria y Triunfo",
+          "numero": 387
+        }
+      ]
+    },
+    {
+      "id": "CANT-059",
+      "himnario": "Cánticos de Alabanza",
+      "numero": 59,
+      "titulo": "DE GLORIA EN GLORIA",
+      "tom": "D",
+      "letra": "De gloria en gloria te veo,\nCuanto más te conozco\nQuiero saber más de ti.\nMi Dios cual buen alfarero,\nQuebrántame, transfórmame\nMoldéame a tu imagen, Señor.\n\n//Quiero ser más como tú,\nVer la vida como tú\nSatúrame de tu Espíritu\nY reflejar al mundo, tu amor.//\n\nDe gloria en ...\n\nMi Dios cual ...\n\n//Quiero ser más ...//\n//Reflejar al mundo, tu amor.//",
+      "bloques": [
+        {
+          "tipo": "estrofa",
+          "numero": null,
+          "texto": "De gloria en gloria te veo,\nCuanto más te conozco\nQuiero saber más de ti.\nMi Dios cual buen alfarero,\nQuebrántame, transfórmame\nMoldéame a tu imagen, Señor.\n\n//Quiero ser más como tú,\nVer la vida como tú\nSatúrame de tu Espíritu\nY reflejar al mundo, tu amor.//\n\nDe gloria en ...\n\nMi Dios cual ...\n\n//Quiero ser más ...//\n//Reflejar al mundo, tu amor.//"
+        }
+      ],
+      "numero_equivalente": null,
+      "himnario_equivalente": null,
+      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
+      "observacion": "Transcrito visualmente de la página 9 del PDF fuente.",
+      "categorias": [
+        "Amor y Gracia de Dios"
+      ],
+      "has_lyrics": true,
+      "autor_impreso": "Sergio Gonzales",
+      "colecciones": [
+        {
+          "himnario": "Cánticos de Alabanza",
+          "numero": 59
+        },
+        {
+          "himnario": "Gloria y Triunfo",
+          "numero": 388
+        }
+      ],
+      "cifra_url": "https://www.cifraclub.com/marcos-witt/de-gloria-en-gloria/",
+      "cifra_autorizada": false,
+      "cifra_procedencia": {
+        "fuente": "https://www.cifraclub.com/marcos-witt/de-gloria-en-gloria/",
+        "tipo": "enlace_externo",
+        "autorizado": false,
+        "notas": "Fuente externa auditada individualmente. La letra/título fueron comparados con el Cántico de Alabanza correspondiente antes de vincular."
+      }
+    },
+    {
+      "id": "CANT-060",
+      "himnario": "Cánticos de Alabanza",
+      "numero": 60,
+      "titulo": "GRACIAS CRISTO",
+      "tom": "D",
+      "letra": "Gracias Cristo, gracias Cristo,\nGracias Cristo, gracias Cristo.\n\nLevantemos nuestras manos,\nEn señal de gratitud\nGracias Cristo, gracias Cristo.",
+      "bloques": [
+        {
+          "tipo": "estrofa",
+          "numero": null,
+          "texto": "Gracias Cristo, gracias Cristo,\nGracias Cristo, gracias Cristo.\n\nLevantemos nuestras manos,\nEn señal de gratitud\nGracias Cristo, gracias Cristo."
+        }
+      ],
+      "numero_equivalente": null,
+      "himnario_equivalente": null,
+      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
+      "observacion": "Transcrito visualmente de la página 10 del PDF fuente.",
+      "categorias": [
+        "Alabanza a Dios"
+      ],
+      "has_lyrics": true,
+      "colecciones": [
+        {
+          "himnario": "Cánticos de Alabanza",
+          "numero": 60
+        },
+        {
+          "himnario": "Gloria y Triunfo",
+          "numero": 389
+        }
+      ],
+      "audio_external_url": "https://www.youtube.com/watch?v=g4PKgEfdHj8",
+      "audio_autorizado": false,
+      "audio_procedencia": {
+        "fuente": "https://www.youtube.com/watch?v=g4PKgEfdHj8",
+        "tipo": "enlace_externo",
+        "autorizado": false,
+        "notas": "Grabación o vídeo externo auditado individualmente. No implica autorización para almacenar el audio dentro de la aplicación."
+      }
+    },
+    {
+      "id": "CANT-061",
+      "himnario": "Cánticos de Alabanza",
+      "numero": 61,
+      "titulo": "DE TAL MANERA",
+      "tom": "C",
+      "letra": "De tal manera me amó\nQue su vida no escatimó\nHasta el final Él se entregó\nY a la muerte fue porque em amó\n\nDe tal manera me amó\nQue no hay forma en que podré pagar\nEl precio de su grande amor\nPero toda mi alma quiero dar\n\nPor su amor yo viviré\nDe su amor yo cantaré\nCon mi Jesús caminaré\nPorque Él me amó a mí\nPor su amor yo viviré\nDe su amor yo cantaré\nCon mi Jesús caminaré\nPorque el murió por mi\nLe seguire.",
+      "bloques": [
+        {
+          "tipo": "estrofa",
+          "numero": null,
+          "texto": "De tal manera me amó\nQue su vida no escatimó\nHasta el final Él se entregó\nY a la muerte fue porque em amó\n\nDe tal manera me amó\nQue no hay forma en que podré pagar\nEl precio de su grande amor\nPero toda mi alma quiero dar\n\nPor su amor yo viviré\nDe su amor yo cantaré\nCon mi Jesús caminaré\nPorque Él me amó a mí\nPor su amor yo viviré\nDe su amor yo cantaré\nCon mi Jesús caminaré\nPorque el murió por mi\nLe seguire."
+        }
+      ],
+      "numero_equivalente": null,
+      "himnario_equivalente": null,
+      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
+      "observacion": "Transcrito visualmente de la página 10 del PDF fuente.",
+      "categorias": [
+        "Amor y Gracia de Dios"
+      ],
+      "has_lyrics": true,
+      "autor_impreso": "Abel Zabala",
+      "colecciones": [
+        {
+          "himnario": "Cánticos de Alabanza",
+          "numero": 61
+        },
+        {
+          "himnario": "Gloria y Triunfo",
+          "numero": 390
+        }
+      ],
+      "cifra_url": "https://www.cifraclub.com/abel-zavala/de-tal-manera/",
+      "cifra_autorizada": false,
+      "cifra_procedencia": {
+        "fuente": "https://www.cifraclub.com/abel-zavala/de-tal-manera/",
+        "tipo": "enlace_externo",
+        "autorizado": false,
+        "notas": "Fuente externa auditada individualmente. La letra/título fueron comparados con el Cántico de Alabanza correspondiente antes de vincular."
+      }
+    },
+    {
+      "id": "CANT-062",
+      "himnario": "Cánticos de Alabanza",
+      "numero": 62,
+      "titulo": "YO TE ALABARÉ",
+      "tom": "C",
+      "letra": "//Yo te alabaré con todo mi ser\nCantándote salmos así viviré //\n\nTu paz y tu amor hoy puedo sentir\nSaber que tú estás muy cerca de mí.\n\nMe gozo en el tiempo que paso contigo\nSintiendo tu aliento, escuchando tu voz.\n\nNo importa el problema, no importa el dolor\nSe olvidan las penas cuando hay amor.\n\n//Yo te alabaré ...//\n\nNo quiero que tú te alejes de mí\nNo quiero jamás dejarte, Señor.\nTu carga es liviana yo la llevaré\nDonde tú me guíes allí yo iré.\n\n// Yo te alabaré ...//",
+      "bloques": [
+        {
+          "tipo": "estrofa",
+          "numero": null,
+          "texto": "//Yo te alabaré con todo mi ser\nCantándote salmos así viviré //\n\nTu paz y tu amor hoy puedo sentir\nSaber que tú estás muy cerca de mí.\n\nMe gozo en el tiempo que paso contigo\nSintiendo tu aliento, escuchando tu voz.\n\nNo importa el problema, no importa el dolor\nSe olvidan las penas cuando hay amor.\n\n//Yo te alabaré ...//\n\nNo quiero que tú te alejes de mí\nNo quiero jamás dejarte, Señor.\nTu carga es liviana yo la llevaré\nDonde tú me guíes allí yo iré.\n\n// Yo te alabaré ...//"
+        }
+      ],
+      "numero_equivalente": null,
+      "himnario_equivalente": null,
+      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
+      "observacion": "Transcrito visualmente de la página 10 del PDF fuente.",
+      "categorias": [
+        "Alabanza a Dios"
+      ],
+      "has_lyrics": true,
+      "autor_impreso": "Yesid Benavides",
+      "colecciones": [
+        {
+          "himnario": "Cánticos de Alabanza",
+          "numero": 62
+        },
+        {
+          "himnario": "Gloria y Triunfo",
+          "numero": 391
+        }
+      ]
+    },
+    {
+      "id": "CANT-063",
+      "himnario": "Cánticos de Alabanza",
+      "numero": 63,
+      "titulo": "EL ME LEVANTARÁ",
+      "tom": "D",
+      "letra": "//El me levantará, él me levantará\nEl me levantará, así es el Señor.//\n\n//El me levantará....a, él me levantará.....a\nEn sus manos me sostendrá.....a\nÉl me levantará....a//\nAsí es el Señor\nMe fortalecerá ...",
+      "bloques": [
+        {
+          "tipo": "estrofa",
+          "numero": null,
+          "texto": "//El me levantará, él me levantará\nEl me levantará, así es el Señor.//\n\n//El me levantará....a, él me levantará.....a\nEn sus manos me sostendrá.....a\nÉl me levantará....a//\nAsí es el Señor\nMe fortalecerá ..."
+        }
+      ],
+      "numero_equivalente": null,
+      "himnario_equivalente": null,
+      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
+      "observacion": "Transcrito visualmente de la página 10 del PDF fuente.",
+      "categorias": [
+        "Fe y Confianza"
+      ],
+      "has_lyrics": true,
+      "autor_impreso": "Tony Pérez",
+      "colecciones": [
+        {
+          "himnario": "Cánticos de Alabanza",
+          "numero": 63
+        },
+        {
+          "himnario": "Gloria y Triunfo",
+          "numero": 392
+        }
+      ],
+      "audio_external_url": "https://www.youtube.com/watch?v=J1XnzpLqbG8",
+      "audio_autorizado": false,
+      "audio_procedencia": {
+        "fuente": "https://www.youtube.com/watch?v=J1XnzpLqbG8",
+        "tipo": "enlace_externo",
+        "autorizado": false,
+        "notas": "Grabación o vídeo externo auditado individualmente. No implica autorización para almacenar el audio dentro de la aplicación."
+      }
+    },
+    {
       "id": "CANT-064",
       "himnario": "Cánticos de Alabanza",
       "numero": 64,
@@ -36015,6 +36015,115 @@
           "numero": 65
         }
       ]
+    },
+    {
+      "id": "CANT-066",
+      "himnario": "Cánticos de Alabanza",
+      "numero": 66,
+      "titulo": "MÁS BLANCO QUE LA NIEVE (Harpa Cristiana N° 39)",
+      "categorias": [
+        "Cena del Señor",
+        "HARPA CRISTIANA"
+      ],
+      "bloques": [
+        {
+          "tipo": "estrofa",
+          "numero": 1,
+          "texto": "Bendito sea el cordero que en la cruz por nosotros sufrió.\n Bendito sea su sangre que por nosotros allí derramó.\nHe aquí en esa sangre lavados, con vestiduras tan blancas\nEstán, los pecadores redimidos que ante su Dios ya están.Más blanco que la nieve, más blanco que la nieve\nSi en esa sangre he lavado, más blanco que la nieve seré."
+        },
+        {
+          "tipo": "coro",
+          "numero": null,
+          "rotulo": "CORO",
+          "texto": "Más blanco que la nieve, más blanco que la nieve\nSi en esa sangre he lavado, más blanco que la nieve seré."
+        },
+        {
+          "tipo": "estrofa",
+          "numero": 2,
+          "texto": "Cuán espinosa la corona que Jesús por nosotros llevó\nOh cuán profundas las llagas que nos prueban cuánto el amor\nHe aquí en esas llagas pureza para el mayor pecador\nPues más blanco que la nieve tu sangre nos hace Señor."
+        },
+        {
+          "tipo": "estrofa",
+          "numero": 3,
+          "texto": "Si a ti nosotros confesamos y seguimos en tu luz,\nTú no solamente perdonas también purificas oh Jesús\nSi de todo pecado, que maravilla de amor,\nPues más blanco que la nieve tu sangre nos hace Señor."
+        }
+      ],
+      "cifra_bloques": [],
+      "tom": null,
+      "cifra_url": null,
+      "audio_url": null,
+      "audio_external_url": null,
+      "cifra_autorizada": false,
+      "audio_autorizado": false,
+      "cifra_procedencia": {
+        "fuente": null,
+        "tipo": "desconocido",
+        "autorizado": false,
+        "notas": null
+      },
+      "audio_procedencia": {
+        "fuente": null,
+        "tipo": "desconocido",
+        "autorizado": false,
+        "notas": null
+      }
+    },
+    {
+      "id": "CANT-067",
+      "himnario": "Cánticos de Alabanza",
+      "numero": 67,
+      "titulo": "VEN CENAR (Harpa Cristiana N° 301)",
+      "categorias": [
+        "Cena del Señor",
+        "HARPA CRISTIANA"
+      ],
+      "bloques": [
+        {
+          "tipo": "estrofa",
+          "numero": 1,
+          "texto": "Cristo ya nos preparó, un manjar que nos compró, y ahora nos invita a cenar.\nCon celestial maná; Que cuál dádiva Dios da, ven hambriento a tu alma saciar."
+        },
+        {
+          "tipo": "coro",
+          "numero": null,
+          "rotulo": "CORO",
+          "texto": "Ven cenar, Jesús te llama a cenar,\nHoy mismo te podrás saciar;\nPocos panes aumentó, agua en vino transformó;\nVen hambriento a Jesús, ven a cenar."
+        },
+        {
+          "tipo": "estrofa",
+          "numero": 2,
+          "texto": "Los discípulos al volver, sin los peces recoger,\nMas Jesús ordena otra vez partir; Al volver otra vez\nTiene al fuego pez y pan, es Jesús que los invita a cenar."
+        },
+        {
+          "tipo": "estrofa",
+          "numero": 3,
+          "texto": "Si con sed te encuentras hoy, ven a Cristo sin tardar,\nPues un vino no mezclado Él te da; Y también de vida el pan,\nQue nos trae consolación, pues que todo preparado ya está."
+        },
+        {
+          "tipo": "estrofa",
+          "numero": 4,
+          "texto": "Pronto Cristo volverá, y su novia llevará,\nsu lugar bien cerca del Señor tendrá; Quién el hambre soportó,\ny la sed ya padeció, en los cielos saciados estará"
+        }
+      ],
+      "cifra_bloques": [],
+      "tom": null,
+      "cifra_url": null,
+      "audio_url": null,
+      "audio_external_url": null,
+      "cifra_autorizada": false,
+      "audio_autorizado": false,
+      "cifra_procedencia": {
+        "fuente": null,
+        "tipo": "desconocido",
+        "autorizado": false,
+        "notas": null
+      },
+      "audio_procedencia": {
+        "fuente": null,
+        "tipo": "desconocido",
+        "autorizado": false,
+        "notas": null
+      }
     }
   ]
 }
