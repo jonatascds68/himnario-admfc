@@ -98,12 +98,6 @@ for (const pkg of pending) {
   base.content_revision = pkg.revision;
 }
 
-base.himnos.sort((a, b) => {
-  const order = { 'Gloria y Triunfo': 1, 'Himnos de Sión': 2, 'Cánticos de Alabanza': 3 };
-  return (order[a.himnario] ?? 99) - (order[b.himnario] ?? 99)
-    || Number(a.numero ?? 0) - Number(b.numero ?? 0)
-    || String(a.id).localeCompare(String(b.id));
-});
 base.total = base.himnos.length;
 
 const next = stable(base);
