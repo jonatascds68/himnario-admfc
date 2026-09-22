@@ -9,7 +9,9 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "lint": "expo lint"
+    "lint": "expo lint",
+    "canonical:sync": "node scripts/sync-canonical-base.mjs",
+    "canonical:check": "node scripts/sync-canonical-base.mjs --check"
   },
   "dependencies": {
     "@expo-google-fonts/atkinson-hyperlegible": "0.4.1",
