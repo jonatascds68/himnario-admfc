@@ -1,11 +1,12 @@
 {
   "schema_version": "1.0",
   "release": "1.4_INTEGRACAO",
-  "total": 712,
+  "total": 714,
+  "content_revision": 7,
   "himnarios": {
     "Gloria y Triunfo": 392,
     "Himnos de Sión": 318,
-    "Cánticos de Alabanza": 65
+    "Cánticos de Alabanza": 67
   },
   "himnos": [
     {
@@ -36015,6 +36016,115 @@
           "numero": 65
         }
       ]
+    },
+    {
+      "id": "CANT-066",
+      "himnario": "Cánticos de Alabanza",
+      "numero": 66,
+      "titulo": "MÁS BLANCO QUE LA NIEVE (Harpa Cristiana N° 39)",
+      "categorias": [
+        "Cena del Señor",
+        "HARPA CRISTIANA"
+      ],
+      "bloques": [
+        {
+          "tipo": "estrofa",
+          "numero": 1,
+          "texto": "Bendito sea el cordero que en la cruz por nosotros sufrió.\n Bendito sea su sangre que por nosotros allí derramó.\nHe aquí en esa sangre lavados, con vestiduras tan blancas\nEstán, los pecadores redimidos que ante su Dios ya están.Más blanco que la nieve, más blanco que la nieve\nSi en esa sangre he lavado, más blanco que la nieve seré."
+        },
+        {
+          "tipo": "coro",
+          "numero": null,
+          "rotulo": "CORO",
+          "texto": "Más blanco que la nieve, más blanco que la nieve\nSi en esa sangre he lavado, más blanco que la nieve seré."
+        },
+        {
+          "tipo": "estrofa",
+          "numero": 2,
+          "texto": "Cuán espinosa la corona que Jesús por nosotros llevó\nOh cuán profundas las llagas que nos prueban cuánto el amor\nHe aquí en esas llagas pureza para el mayor pecador\nPues más blanco que la nieve tu sangre nos hace Señor."
+        },
+        {
+          "tipo": "estrofa",
+          "numero": 3,
+          "texto": "Si a ti nosotros confesamos y seguimos en tu luz,\nTú no solamente perdonas también purificas oh Jesús\nSi de todo pecado, que maravilla de amor,\nPues más blanco que la nieve tu sangre nos hace Señor."
+        }
+      ],
+      "cifra_bloques": [],
+      "tom": null,
+      "cifra_url": null,
+      "audio_url": null,
+      "audio_external_url": null,
+      "cifra_autorizada": false,
+      "audio_autorizado": false,
+      "cifra_procedencia": {
+        "fuente": null,
+        "tipo": "desconocido",
+        "autorizado": false,
+        "notas": null
+      },
+      "audio_procedencia": {
+        "fuente": null,
+        "tipo": "desconocido",
+        "autorizado": false,
+        "notas": null
+      }
+    },
+    {
+      "id": "CANT-067",
+      "himnario": "Cánticos de Alabanza",
+      "numero": 67,
+      "titulo": "VEN CENAR (Harpa Cristiana N° 301)",
+      "categorias": [
+        "Cena del Señor",
+        "HARPA CRISTIANA"
+      ],
+      "bloques": [
+        {
+          "tipo": "estrofa",
+          "numero": 1,
+          "texto": "Cristo ya nos preparó, un manjar que nos compró, y ahora nos invita a cenar.\nCon celestial maná; Que cuál dádiva Dios da, ven hambriento a tu alma saciar."
+        },
+        {
+          "tipo": "coro",
+          "numero": null,
+          "rotulo": "CORO",
+          "texto": "Ven cenar, Jesús te llama a cenar,\nHoy mismo te podrás saciar;\nPocos panes aumentó, agua en vino transformó;\nVen hambriento a Jesús, ven a cenar."
+        },
+        {
+          "tipo": "estrofa",
+          "numero": 2,
+          "texto": "Los discípulos al volver, sin los peces recoger,\nMas Jesús ordena otra vez partir; Al volver otra vez\nTiene al fuego pez y pan, es Jesús que los invita a cenar."
+        },
+        {
+          "tipo": "estrofa",
+          "numero": 3,
+          "texto": "Si con sed te encuentras hoy, ven a Cristo sin tardar,\nPues un vino no mezclado Él te da; Y también de vida el pan,\nQue nos trae consolación, pues que todo preparado ya está."
+        },
+        {
+          "tipo": "estrofa",
+          "numero": 4,
+          "texto": "Pronto Cristo volverá, y su novia llevará,\nsu lugar bien cerca del Señor tendrá; Quién el hambre soportó,\ny la sed ya padeció, en los cielos saciados estará"
+        }
+      ],
+      "cifra_bloques": [],
+      "tom": null,
+      "cifra_url": null,
+      "audio_url": null,
+      "audio_external_url": null,
+      "cifra_autorizada": false,
+      "audio_autorizado": false,
+      "cifra_procedencia": {
+        "fuente": null,
+        "tipo": "desconocido",
+        "autorizado": false,
+        "notas": null
+      },
+      "audio_procedencia": {
+        "fuente": null,
+        "tipo": "desconocido",
+        "autorizado": false,
+        "notas": null
+      }
     }
   ]
 }
