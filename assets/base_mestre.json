@@ -34430,6 +34430,740 @@
       }
     },
     {
+      "id": "CANT-046",
+      "himnario": "Cánticos de Alabanza",
+      "numero": 46,
+      "titulo": "CELEBRAD A CRISTO",
+      "tom": "F",
+      "letra": "//Celebrad a Cristo, celebrad\nCelebrad a Cristo, celebrad//\n\nResucitó, resucitó\nY por siempre él vivirá, reinará\nResucitó, resucitó\n///Vamos a celebrad///\nNuestro Señor, resucitó.\n\nÉl vive, él vive\nY por siempre, él vivirá.\n///Vamos a Celebrad///\nNuestro Señor, resucitó\n\nCelebrad a Cristo...",
+      "bloques": [
+        {
+          "tipo": "estrofa",
+          "numero": null,
+          "texto": "//Celebrad a Cristo, celebrad\nCelebrad a Cristo, celebrad//\n\nResucitó, resucitó\nY por siempre él vivirá, reinará\nResucitó, resucitó\n///Vamos a celebrad///\nNuestro Señor, resucitó.\n\nÉl vive, él vive\nY por siempre, él vivirá.\n///Vamos a Celebrad///\nNuestro Señor, resucitó\n\nCelebrad a Cristo..."
+        }
+      ],
+      "numero_equivalente": null,
+      "himnario_equivalente": null,
+      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
+      "observacion": "Transcrito visualmente de la página 6 del PDF fuente.",
+      "categorias": [
+        "Pascua"
+      ],
+      "has_lyrics": true,
+      "autor_impreso": "Gary Oliver",
+      "colecciones": [
+        {
+          "himnario": "Cánticos de Alabanza",
+          "numero": 46
+        },
+        {
+          "himnario": "Gloria y Triunfo",
+          "numero": 375
+        }
+      ],
+      "cifra_url": "https://www.cifraclub.com/danilo-montero/celebrad-a-cristo/",
+      "cifra_autorizada": false,
+      "cifra_procedencia": {
+        "fuente": "https://www.cifraclub.com/danilo-montero/celebrad-a-cristo/",
+        "tipo": "enlace_externo",
+        "autorizado": false,
+        "notas": "Fuente externa auditada individualmente. La letra/título fueron comparados con el Cántico de Alabanza correspondiente antes de vincular."
+      }
+    },
+    {
+      "id": "CANT-047",
+      "himnario": "Cánticos de Alabanza",
+      "numero": 47,
+      "titulo": "HAY VICTORIA",
+      "tom": "Em",
+      "letra": "Hay victoria, hay victoria\nHay victoria en la sangre de Jesús,\nHay victoria, hay victoria\n\nHay victoria en la sangre de Jesús.\nNo podrá el enemigo\nVencer a nuestras almas,\n//Porque hay victoria, porque hay victoria\nPorque hay victoria en la sangre de Jesús.//",
+      "bloques": [
+        {
+          "tipo": "estrofa",
+          "numero": null,
+          "texto": "Hay victoria, hay victoria\nHay victoria en la sangre de Jesús,\nHay victoria, hay victoria\n\nHay victoria en la sangre de Jesús.\nNo podrá el enemigo\nVencer a nuestras almas,\n//Porque hay victoria, porque hay victoria\nPorque hay victoria en la sangre de Jesús.//"
+        }
+      ],
+      "numero_equivalente": null,
+      "himnario_equivalente": null,
+      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
+      "observacion": "Transcrito visualmente de la página 6 del PDF fuente.",
+      "categorias": [
+        "Sangre, Redención, Salvación"
+      ],
+      "has_lyrics": true,
+      "colecciones": [
+        {
+          "himnario": "Cánticos de Alabanza",
+          "numero": 47
+        },
+        {
+          "himnario": "Gloria y Triunfo",
+          "numero": 376
+        }
+      ]
+    },
+    {
+      "id": "CANT-048",
+      "himnario": "Cánticos de Alabanza",
+      "numero": 48,
+      "titulo": "CON TODAS MI FUERZAS",
+      "tom": "Em",
+      "letra": "Con todas mi fuerzas yo te amo\nYo te amo mi Dios,\nPorque eres lo que más quiero\nTe necesito cada día más.\n\nCada célula de mi ser\nTe anhela mi Señor\nPorque eres el sustento\nQue necesito para vivir.\n\nMás unción quiere mi ser,\nDel Espíritu Santo lléname,\nEn Espíritu te adoraré,\nCon danzas te alabaré,\nEn tu presencia me gozaré\nSolo en ti me alegraré.",
+      "bloques": [
+        {
+          "tipo": "estrofa",
+          "numero": null,
+          "texto": "Con todas mi fuerzas yo te amo\nYo te amo mi Dios,\nPorque eres lo que más quiero\nTe necesito cada día más.\n\nCada célula de mi ser\nTe anhela mi Señor\nPorque eres el sustento\nQue necesito para vivir.\n\nMás unción quiere mi ser,\nDel Espíritu Santo lléname,\nEn Espíritu te adoraré,\nCon danzas te alabaré,\nEn tu presencia me gozaré\nSolo en ti me alegraré."
+        }
+      ],
+      "numero_equivalente": null,
+      "himnario_equivalente": null,
+      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
+      "observacion": "Transcrito visualmente de la página 7 del PDF fuente.",
+      "categorias": [
+        "Alabanza a Dios"
+      ],
+      "has_lyrics": true,
+      "autor_impreso": "José Alfredo Arismendi",
+      "colecciones": [
+        {
+          "himnario": "Cánticos de Alabanza",
+          "numero": 48
+        },
+        {
+          "himnario": "Gloria y Triunfo",
+          "numero": 377
+        }
+      ],
+      "cifra_url": "https://www.cifraclub.com/comando-gaf/con-todas-mis-fuerzas/",
+      "cifra_autorizada": false,
+      "cifra_procedencia": {
+        "fuente": "https://www.cifraclub.com/comando-gaf/con-todas-mis-fuerzas/",
+        "tipo": "enlace_externo",
+        "autorizado": false,
+        "notas": "Fuente externa auditada individualmente. La letra/título fueron comparados con el Cántico de Alabanza correspondiente antes de vincular."
+      },
+      "audio_external_url": "https://www.youtube.com/watch?v=gUGlaXgaTaI",
+      "audio_autorizado": false,
+      "audio_procedencia": {
+        "fuente": "https://www.youtube.com/watch?v=gUGlaXgaTaI",
+        "tipo": "enlace_externo",
+        "autorizado": false,
+        "notas": "Grabación o vídeo externo auditado individualmente. No implica autorización para almacenar el audio dentro de la aplicación."
+      }
+    },
+    {
+      "id": "CANT-049",
+      "himnario": "Cánticos de Alabanza",
+      "numero": 49,
+      "titulo": "BUENO ES ALABAR",
+      "tom": "G",
+      "letra": "Bueno es alabar ¡oh Señor!, tu nombre\nDarte gloria, honra y honor por siempre,\nBueno es alabarte Jesús\nY gozarme en tu poder.\n\nPorque grande eres Tú,\nGrandes son tus obras,\nPorque grande eres Tú,\nGrande es tu amor,\nGrande es tu gloria.",
+      "bloques": [
+        {
+          "tipo": "estrofa",
+          "numero": null,
+          "texto": "Bueno es alabar ¡oh Señor!, tu nombre\nDarte gloria, honra y honor por siempre,\nBueno es alabarte Jesús\nY gozarme en tu poder.\n\nPorque grande eres Tú,\nGrandes son tus obras,\nPorque grande eres Tú,\nGrande es tu amor,\nGrande es tu gloria."
+        }
+      ],
+      "numero_equivalente": null,
+      "himnario_equivalente": null,
+      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
+      "observacion": "Transcrito visualmente de la página 7 del PDF fuente.",
+      "categorias": [
+        "Alabanza a Dios"
+      ],
+      "has_lyrics": true,
+      "autor_impreso": "Fernando Soto",
+      "colecciones": [
+        {
+          "himnario": "Cánticos de Alabanza",
+          "numero": 49
+        },
+        {
+          "himnario": "Gloria y Triunfo",
+          "numero": 378
+        }
+      ]
+    },
+    {
+      "id": "CANT-050",
+      "himnario": "Cánticos de Alabanza",
+      "numero": 50,
+      "titulo": "ERES TODOPODEROSO",
+      "tom": "Bm",
+      "letra": "La única razón de mi adoración,\nEres tú mi Jesús.\nMi único motivo para vivir,\nEres tú mi Señor.\n\nMi única verdad está en ti\nEres mi luz y mi salvación;\nMi único amor eres Tú Señor\nY por siempre te alabaré.\n\nTú eres Todopoderoso\nEres grande y majestuoso\nEres fuerte, invencible,\nY no hay nadie como Tú.",
+      "bloques": [
+        {
+          "tipo": "estrofa",
+          "numero": null,
+          "texto": "La única razón de mi adoración,\nEres tú mi Jesús.\nMi único motivo para vivir,\nEres tú mi Señor.\n\nMi única verdad está en ti\nEres mi luz y mi salvación;\nMi único amor eres Tú Señor\nY por siempre te alabaré.\n\nTú eres Todopoderoso\nEres grande y majestuoso\nEres fuerte, invencible,\nY no hay nadie como Tú."
+        }
+      ],
+      "numero_equivalente": null,
+      "himnario_equivalente": null,
+      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
+      "observacion": "Transcrito visualmente de la página 7 del PDF fuente.",
+      "categorias": [
+        "Alabanza a Dios"
+      ],
+      "has_lyrics": true,
+      "autor_impreso": "Juan Salinas",
+      "colecciones": [
+        {
+          "himnario": "Cánticos de Alabanza",
+          "numero": 50
+        },
+        {
+          "himnario": "Gloria y Triunfo",
+          "numero": 379
+        }
+      ],
+      "cifra_url": "https://www.cifraclub.com/danilo-montero/eres-todopoderoso/",
+      "cifra_autorizada": false,
+      "cifra_procedencia": {
+        "fuente": "https://www.cifraclub.com/danilo-montero/eres-todopoderoso/",
+        "tipo": "enlace_externo",
+        "autorizado": false,
+        "notas": "Fuente externa auditada individualmente. La letra/título fueron comparados con el Cántico de Alabanza correspondiente antes de vincular."
+      },
+      "audio_external_url": "https://www.youtube.com/watch?v=Urvys69pFdk",
+      "audio_autorizado": false,
+      "audio_procedencia": {
+        "fuente": "https://www.youtube.com/watch?v=Urvys69pFdk",
+        "tipo": "enlace_externo",
+        "autorizado": false,
+        "notas": "Grabación o vídeo externo auditado individualmente. No implica autorización para almacenar el audio dentro de la aplicación."
+      }
+    },
+    {
+      "id": "CANT-051",
+      "himnario": "Cánticos de Alabanza",
+      "numero": 51,
+      "titulo": "SOMOS EL PUEBLO DE DIOS",
+      "tom": "G",
+      "letra": "Somos el Pueblo de Dios\nSomos un pueblo especial\nLlamados para anunciar\nLas virtudes de aquel\nQue nos llamó a su luz.\n\nSomos el Pueblo de Dios\nSu sangre nos redimió\nY su Espíritu dió\nPara darnos poder\nY ser testigos de Él.\n\nY llevaremos su Gloria\nA cada pueblo y nación,\nTrayéndoles esperanza\nY nuevas de salvación.\n\nSu Amor nos impulsa\nNo nos podemos callar\nAnunciaremos al mundo\nDe su Amor y Verdad.",
+      "bloques": [
+        {
+          "tipo": "estrofa",
+          "numero": null,
+          "texto": "Somos el Pueblo de Dios\nSomos un pueblo especial\nLlamados para anunciar\nLas virtudes de aquel\nQue nos llamó a su luz.\n\nSomos el Pueblo de Dios\nSu sangre nos redimió\nY su Espíritu dió\nPara darnos poder\nY ser testigos de Él.\n\nY llevaremos su Gloria\nA cada pueblo y nación,\nTrayéndoles esperanza\nY nuevas de salvación.\n\nSu Amor nos impulsa\nNo nos podemos callar\nAnunciaremos al mundo\nDe su Amor y Verdad."
+        }
+      ],
+      "numero_equivalente": null,
+      "himnario_equivalente": null,
+      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
+      "observacion": "Transcrito visualmente de la página 7 del PDF fuente.",
+      "categorias": [
+        "Evangelismo",
+        "Iglesia"
+      ],
+      "has_lyrics": true,
+      "autor_impreso": "Marcos Witt",
+      "colecciones": [
+        {
+          "himnario": "Cánticos de Alabanza",
+          "numero": 51
+        },
+        {
+          "himnario": "Gloria y Triunfo",
+          "numero": 380
+        }
+      ],
+      "cifra_url": "https://www.cifraclub.com/marcos-witt/somos-el-pueblo-de-dios/",
+      "cifra_autorizada": false,
+      "cifra_procedencia": {
+        "fuente": "https://www.cifraclub.com/marcos-witt/somos-el-pueblo-de-dios/",
+        "tipo": "enlace_externo",
+        "autorizado": false,
+        "notas": "Fuente externa auditada individualmente. La letra/título fueron comparados con el Cántico de Alabanza correspondiente antes de vincular."
+      },
+      "audio_external_url": "https://www.youtube.com/watch?v=GCnyax1nCPc",
+      "audio_autorizado": false,
+      "audio_procedencia": {
+        "fuente": "https://www.youtube.com/watch?v=GCnyax1nCPc",
+        "tipo": "enlace_externo",
+        "autorizado": false,
+        "notas": "Grabación o vídeo externo auditado individualmente. No implica autorización para almacenar el audio dentro de la aplicación."
+      }
+    },
+    {
+      "id": "CANT-052",
+      "himnario": "Cánticos de Alabanza",
+      "numero": 52,
+      "titulo": "QUE DULCE ES ESTAR",
+      "tom": "D",
+      "letra": "Que dulce es estar en tu presencia\nContemplando la hermosura de tu Santidad.\nY reconociendo que tú eres Señor,\nTodopoderoso y el gran \"Yo soy\". (Bis)\n\n//Santo, Saaanto, mi corazón\nSe une a la melodía angelical.//",
+      "bloques": [
+        {
+          "tipo": "estrofa",
+          "numero": null,
+          "texto": "Que dulce es estar en tu presencia\nContemplando la hermosura de tu Santidad.\nY reconociendo que tú eres Señor,\nTodopoderoso y el gran \"Yo soy\". (Bis)\n\n//Santo, Saaanto, mi corazón\nSe une a la melodía angelical.//"
+        }
+      ],
+      "numero_equivalente": null,
+      "himnario_equivalente": null,
+      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
+      "observacion": "Transcrito visualmente de la página 8 del PDF fuente.",
+      "categorias": [
+        "Alabanza a Dios"
+      ],
+      "has_lyrics": true,
+      "autor_impreso": "Fermín García",
+      "colecciones": [
+        {
+          "himnario": "Cánticos de Alabanza",
+          "numero": 52
+        },
+        {
+          "himnario": "Gloria y Triunfo",
+          "numero": 381
+        }
+      ],
+      "cifra_url": "https://www.cifraclub.com/danilo-montero/que-dulce/original.html",
+      "cifra_autorizada": false,
+      "cifra_procedencia": {
+        "fuente": "https://www.cifraclub.com/danilo-montero/que-dulce/original.html",
+        "tipo": "enlace_externo",
+        "autorizado": false,
+        "notas": "Fuente externa auditada individualmente. La letra/título fueron comparados con el Cántico de Alabanza correspondiente antes de vincular."
+      }
+    },
+    {
+      "id": "CANT-053",
+      "himnario": "Cánticos de Alabanza",
+      "numero": 53,
+      "titulo": "TU FIDELIDAD",
+      "tom": "D",
+      "letra": "Tu fidelidad es grande\nTu fidelidad incomparable es\nNadie como tú, bendito Dios\nGrande es tu fidelidad. (Bis)",
+      "bloques": [
+        {
+          "tipo": "estrofa",
+          "numero": null,
+          "texto": "Tu fidelidad es grande\nTu fidelidad incomparable es\nNadie como tú, bendito Dios\nGrande es tu fidelidad. (Bis)"
+        }
+      ],
+      "numero_equivalente": null,
+      "himnario_equivalente": null,
+      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
+      "observacion": "Transcrito visualmente de la página 8 del PDF fuente.",
+      "categorias": [
+        "Alabanza a Dios",
+        "Fe y Confianza"
+      ],
+      "has_lyrics": true,
+      "colecciones": [
+        {
+          "himnario": "Cánticos de Alabanza",
+          "numero": 53
+        },
+        {
+          "himnario": "Gloria y Triunfo",
+          "numero": 382
+        }
+      ],
+      "cifra_url": "https://www.cifraclub.com/marcos-witt/tu-fidelidad/",
+      "cifra_autorizada": false,
+      "cifra_procedencia": {
+        "fuente": "https://www.cifraclub.com/marcos-witt/tu-fidelidad/",
+        "tipo": "enlace_externo",
+        "autorizado": false,
+        "notas": "Fuente externa auditada individualmente. La letra/título fueron comparados con el Cántico de Alabanza correspondiente antes de vincular."
+      },
+      "audio_external_url": "https://www.youtube.com/watch?v=ibZ1NgRdIZc",
+      "audio_autorizado": false,
+      "audio_procedencia": {
+        "fuente": "https://www.youtube.com/watch?v=ibZ1NgRdIZc",
+        "tipo": "enlace_externo",
+        "autorizado": false,
+        "notas": "Grabación o vídeo externo auditado individualmente. No implica autorización para almacenar el audio dentro de la aplicación."
+      }
+    },
+    {
+      "id": "CANT-054",
+      "himnario": "Cánticos de Alabanza",
+      "numero": 54,
+      "titulo": "QUIERO DERRAMAR MI CORAZÓN",
+      "tom": "D",
+      "letra": "Quiero derramar mi corazon\nDelante de ti hoy quiero estar\nLevantar mis manos para alabarte\nY adorarte a ti, mi Creador.\nTú eres Jesús mi Dios mi Rey\nSoy una muestra de tu amor\nUn nuevo ser para alabarte\nY adorarte a ti mi Creador.\n//A   le   lu   ya\nA   le   lu   ya//\nGloria a Jesús, él es mi Rey\nA   le   lu   ya.",
+      "bloques": [
+        {
+          "tipo": "estrofa",
+          "numero": null,
+          "texto": "Quiero derramar mi corazon\nDelante de ti hoy quiero estar\nLevantar mis manos para alabarte\nY adorarte a ti, mi Creador.\nTú eres Jesús mi Dios mi Rey\nSoy una muestra de tu amor\nUn nuevo ser para alabarte\nY adorarte a ti mi Creador.\n//A   le   lu   ya\nA   le   lu   ya//\nGloria a Jesús, él es mi Rey\nA   le   lu   ya."
+        }
+      ],
+      "numero_equivalente": null,
+      "himnario_equivalente": null,
+      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
+      "observacion": "Transcrito visualmente de la página 8 del PDF fuente.",
+      "categorias": [
+        "Alabanza a Dios"
+      ],
+      "has_lyrics": true,
+      "colecciones": [
+        {
+          "himnario": "Cánticos de Alabanza",
+          "numero": 54
+        },
+        {
+          "himnario": "Gloria y Triunfo",
+          "numero": 383
+        }
+      ],
+      "cifra_url": "https://www.cifraclub.com/elim/quiero-derramar-mi-corazon/",
+      "cifra_autorizada": false,
+      "cifra_procedencia": {
+        "fuente": "https://www.cifraclub.com/elim/quiero-derramar-mi-corazon/",
+        "tipo": "enlace_externo",
+        "autorizado": false,
+        "notas": "Fuente externa auditada individualmente. La letra/título fueron comparados con el Cántico de Alabanza correspondiente antes de vincular."
+      }
+    },
+    {
+      "id": "CANT-055",
+      "himnario": "Cánticos de Alabanza",
+      "numero": 55,
+      "titulo": "TE AMO SEÑOR",
+      "tom": "D",
+      "letra": "//Te amo Señor, fortaleza mía\nRoca mía, y castillo mío,\nY mi libertador,\nDios mío, en ti confiaré\nMi escudo eres tú\nY la fuerza de mi salvación.//\n//A   le   lu   ya\nA   le   lu   ya\nGloria a Jesús, él es mi Rey\nA...leluya.",
+      "bloques": [
+        {
+          "tipo": "estrofa",
+          "numero": null,
+          "texto": "//Te amo Señor, fortaleza mía\nRoca mía, y castillo mío,\nY mi libertador,\nDios mío, en ti confiaré\nMi escudo eres tú\nY la fuerza de mi salvación.//\n//A   le   lu   ya\nA   le   lu   ya\nGloria a Jesús, él es mi Rey\nA...leluya."
+        }
+      ],
+      "numero_equivalente": null,
+      "himnario_equivalente": null,
+      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
+      "observacion": "Transcrito visualmente de la página 8 del PDF fuente.",
+      "categorias": [
+        "Fe y Confianza"
+      ],
+      "has_lyrics": true,
+      "colecciones": [
+        {
+          "himnario": "Cánticos de Alabanza",
+          "numero": 55
+        },
+        {
+          "himnario": "Gloria y Triunfo",
+          "numero": 384
+        }
+      ]
+    },
+    {
+      "id": "CANT-056",
+      "himnario": "Cánticos de Alabanza",
+      "numero": 56,
+      "titulo": "SEAS EXALTADO, OH DIOS",
+      "tom": "D",
+      "letra": "//Seas exaltado Dios\nSobre los cielos\nSobre la tierra\nTu gloria esté.//\n//Te exaltamos, te exaltamos\nTe exaltamos, oh Señor.//",
+      "bloques": [
+        {
+          "tipo": "estrofa",
+          "numero": null,
+          "texto": "//Seas exaltado Dios\nSobre los cielos\nSobre la tierra\nTu gloria esté.//\n//Te exaltamos, te exaltamos\nTe exaltamos, oh Señor.//"
+        }
+      ],
+      "numero_equivalente": null,
+      "himnario_equivalente": null,
+      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
+      "observacion": "Transcrito visualmente de la página 9 del PDF fuente.",
+      "categorias": [
+        "Alabanza a Dios"
+      ],
+      "has_lyrics": true,
+      "colecciones": [
+        {
+          "himnario": "Cánticos de Alabanza",
+          "numero": 56
+        },
+        {
+          "himnario": "Gloria y Triunfo",
+          "numero": 385
+        }
+      ]
+    },
+    {
+      "id": "CANT-057",
+      "himnario": "Cánticos de Alabanza",
+      "numero": 57,
+      "titulo": "RENUÉVAME",
+      "tom": "D",
+      "letra": "//Renuévame Señor Jesús\nYa no quiero ser igual;\nRenuévame Señor Jesús\nPon en mi tu corazón.\n\nPorque todo lo que hay\nDentro de mi\nNecesita ser cambiado, Señor.\n\nPorque todo lo que hay\nDentro de mi corazón\nNecesita más de ti.",
+      "bloques": [
+        {
+          "tipo": "estrofa",
+          "numero": null,
+          "texto": "//Renuévame Señor Jesús\nYa no quiero ser igual;\nRenuévame Señor Jesús\nPon en mi tu corazón.\n\nPorque todo lo que hay\nDentro de mi\nNecesita ser cambiado, Señor.\n\nPorque todo lo que hay\nDentro de mi corazón\nNecesita más de ti."
+        }
+      ],
+      "numero_equivalente": null,
+      "himnario_equivalente": null,
+      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
+      "observacion": "Transcrito visualmente de la página 9 del PDF fuente.",
+      "categorias": [
+        "Consagración"
+      ],
+      "has_lyrics": true,
+      "colecciones": [
+        {
+          "himnario": "Cánticos de Alabanza",
+          "numero": 57
+        },
+        {
+          "himnario": "Gloria y Triunfo",
+          "numero": 386
+        }
+      ],
+      "cifra_url": "https://www.cifraclub.com/marcos-witt/renuevame/",
+      "cifra_autorizada": false,
+      "cifra_procedencia": {
+        "fuente": "https://www.cifraclub.com/marcos-witt/renuevame/",
+        "tipo": "enlace_externo",
+        "autorizado": false,
+        "notas": "Fuente externa auditada individualmente. La letra/título fueron comparados con el Cántico de Alabanza correspondiente antes de vincular."
+      }
+    },
+    {
+      "id": "CANT-058",
+      "himnario": "Cánticos de Alabanza",
+      "numero": 58,
+      "titulo": "TU MISERICORDIA",
+      "tom": "D",
+      "letra": "Tu misericordia es mejor que la vida\nTu misericordia es mejor que la vida\nMis labios te alabarán, y así te bendeciré;\n\nAlzaré mis manos en tu nombre Señor.\n//Alzaré mis manos en tu nombre Señor.//\nMis labios te alabarán y así te bendeciré\nAlzaré mis manos en tu nombre Señor.",
+      "bloques": [
+        {
+          "tipo": "estrofa",
+          "numero": null,
+          "texto": "Tu misericordia es mejor que la vida\nTu misericordia es mejor que la vida\nMis labios te alabarán, y así te bendeciré;\n\nAlzaré mis manos en tu nombre Señor.\n//Alzaré mis manos en tu nombre Señor.//\nMis labios te alabarán y así te bendeciré\nAlzaré mis manos en tu nombre Señor."
+        }
+      ],
+      "numero_equivalente": null,
+      "himnario_equivalente": null,
+      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
+      "observacion": "Transcrito visualmente de la página 9 del PDF fuente.",
+      "categorias": [
+        "Amor y Gracia de Dios"
+      ],
+      "has_lyrics": true,
+      "colecciones": [
+        {
+          "himnario": "Cánticos de Alabanza",
+          "numero": 58
+        },
+        {
+          "himnario": "Gloria y Triunfo",
+          "numero": 387
+        }
+      ]
+    },
+    {
+      "id": "CANT-059",
+      "himnario": "Cánticos de Alabanza",
+      "numero": 59,
+      "titulo": "DE GLORIA EN GLORIA",
+      "tom": "D",
+      "letra": "De gloria en gloria te veo,\nCuanto más te conozco\nQuiero saber más de ti.\nMi Dios cual buen alfarero,\nQuebrántame, transfórmame\nMoldéame a tu imagen, Señor.\n\n//Quiero ser más como tú,\nVer la vida como tú\nSatúrame de tu Espíritu\nY reflejar al mundo, tu amor.//\n\nDe gloria en ...\n\nMi Dios cual ...\n\n//Quiero ser más ...//\n//Reflejar al mundo, tu amor.//",
+      "bloques": [
+        {
+          "tipo": "estrofa",
+          "numero": null,
+          "texto": "De gloria en gloria te veo,\nCuanto más te conozco\nQuiero saber más de ti.\nMi Dios cual buen alfarero,\nQuebrántame, transfórmame\nMoldéame a tu imagen, Señor.\n\n//Quiero ser más como tú,\nVer la vida como tú\nSatúrame de tu Espíritu\nY reflejar al mundo, tu amor.//\n\nDe gloria en ...\n\nMi Dios cual ...\n\n//Quiero ser más ...//\n//Reflejar al mundo, tu amor.//"
+        }
+      ],
+      "numero_equivalente": null,
+      "himnario_equivalente": null,
+      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
+      "observacion": "Transcrito visualmente de la página 9 del PDF fuente.",
+      "categorias": [
+        "Amor y Gracia de Dios"
+      ],
+      "has_lyrics": true,
+      "autor_impreso": "Sergio Gonzales",
+      "colecciones": [
+        {
+          "himnario": "Cánticos de Alabanza",
+          "numero": 59
+        },
+        {
+          "himnario": "Gloria y Triunfo",
+          "numero": 388
+        }
+      ],
+      "cifra_url": "https://www.cifraclub.com/marcos-witt/de-gloria-en-gloria/",
+      "cifra_autorizada": false,
+      "cifra_procedencia": {
+        "fuente": "https://www.cifraclub.com/marcos-witt/de-gloria-en-gloria/",
+        "tipo": "enlace_externo",
+        "autorizado": false,
+        "notas": "Fuente externa auditada individualmente. La letra/título fueron comparados con el Cántico de Alabanza correspondiente antes de vincular."
+      }
+    },
+    {
+      "id": "CANT-060",
+      "himnario": "Cánticos de Alabanza",
+      "numero": 60,
+      "titulo": "GRACIAS CRISTO",
+      "tom": "D",
+      "letra": "Gracias Cristo, gracias Cristo,\nGracias Cristo, gracias Cristo.\n\nLevantemos nuestras manos,\nEn señal de gratitud\nGracias Cristo, gracias Cristo.",
+      "bloques": [
+        {
+          "tipo": "estrofa",
+          "numero": null,
+          "texto": "Gracias Cristo, gracias Cristo,\nGracias Cristo, gracias Cristo.\n\nLevantemos nuestras manos,\nEn señal de gratitud\nGracias Cristo, gracias Cristo."
+        }
+      ],
+      "numero_equivalente": null,
+      "himnario_equivalente": null,
+      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
+      "observacion": "Transcrito visualmente de la página 10 del PDF fuente.",
+      "categorias": [
+        "Alabanza a Dios"
+      ],
+      "has_lyrics": true,
+      "colecciones": [
+        {
+          "himnario": "Cánticos de Alabanza",
+          "numero": 60
+        },
+        {
+          "himnario": "Gloria y Triunfo",
+          "numero": 389
+        }
+      ],
+      "audio_external_url": "https://www.youtube.com/watch?v=g4PKgEfdHj8",
+      "audio_autorizado": false,
+      "audio_procedencia": {
+        "fuente": "https://www.youtube.com/watch?v=g4PKgEfdHj8",
+        "tipo": "enlace_externo",
+        "autorizado": false,
+        "notas": "Grabación o vídeo externo auditado individualmente. No implica autorización para almacenar el audio dentro de la aplicación."
+      }
+    },
+    {
+      "id": "CANT-061",
+      "himnario": "Cánticos de Alabanza",
+      "numero": 61,
+      "titulo": "DE TAL MANERA",
+      "tom": "C",
+      "letra": "De tal manera me amó\nQue su vida no escatimó\nHasta el final Él se entregó\nY a la muerte fue porque em amó\n\nDe tal manera me amó\nQue no hay forma en que podré pagar\nEl precio de su grande amor\nPero toda mi alma quiero dar\n\nPor su amor yo viviré\nDe su amor yo cantaré\nCon mi Jesús caminaré\nPorque Él me amó a mí\nPor su amor yo viviré\nDe su amor yo cantaré\nCon mi Jesús caminaré\nPorque el murió por mi\nLe seguire.",
+      "bloques": [
+        {
+          "tipo": "estrofa",
+          "numero": null,
+          "texto": "De tal manera me amó\nQue su vida no escatimó\nHasta el final Él se entregó\nY a la muerte fue porque em amó\n\nDe tal manera me amó\nQue no hay forma en que podré pagar\nEl precio de su grande amor\nPero toda mi alma quiero dar\n\nPor su amor yo viviré\nDe su amor yo cantaré\nCon mi Jesús caminaré\nPorque Él me amó a mí\nPor su amor yo viviré\nDe su amor yo cantaré\nCon mi Jesús caminaré\nPorque el murió por mi\nLe seguire."
+        }
+      ],
+      "numero_equivalente": null,
+      "himnario_equivalente": null,
+      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
+      "observacion": "Transcrito visualmente de la página 10 del PDF fuente.",
+      "categorias": [
+        "Amor y Gracia de Dios"
+      ],
+      "has_lyrics": true,
+      "autor_impreso": "Abel Zabala",
+      "colecciones": [
+        {
+          "himnario": "Cánticos de Alabanza",
+          "numero": 61
+        },
+        {
+          "himnario": "Gloria y Triunfo",
+          "numero": 390
+        }
+      ],
+      "cifra_url": "https://www.cifraclub.com/abel-zavala/de-tal-manera/",
+      "cifra_autorizada": false,
+      "cifra_procedencia": {
+        "fuente": "https://www.cifraclub.com/abel-zavala/de-tal-manera/",
+        "tipo": "enlace_externo",
+        "autorizado": false,
+        "notas": "Fuente externa auditada individualmente. La letra/título fueron comparados con el Cántico de Alabanza correspondiente antes de vincular."
+      }
+    },
+    {
+      "id": "CANT-062",
+      "himnario": "Cánticos de Alabanza",
+      "numero": 62,
+      "titulo": "YO TE ALABARÉ",
+      "tom": "C",
+      "letra": "//Yo te alabaré con todo mi ser\nCantándote salmos así viviré //\n\nTu paz y tu amor hoy puedo sentir\nSaber que tú estás muy cerca de mí.\n\nMe gozo en el tiempo que paso contigo\nSintiendo tu aliento, escuchando tu voz.\n\nNo importa el problema, no importa el dolor\nSe olvidan las penas cuando hay amor.\n\n//Yo te alabaré ...//\n\nNo quiero que tú te alejes de mí\nNo quiero jamás dejarte, Señor.\nTu carga es liviana yo la llevaré\nDonde tú me guíes allí yo iré.\n\n// Yo te alabaré ...//",
+      "bloques": [
+        {
+          "tipo": "estrofa",
+          "numero": null,
+          "texto": "//Yo te alabaré con todo mi ser\nCantándote salmos así viviré //\n\nTu paz y tu amor hoy puedo sentir\nSaber que tú estás muy cerca de mí.\n\nMe gozo en el tiempo que paso contigo\nSintiendo tu aliento, escuchando tu voz.\n\nNo importa el problema, no importa el dolor\nSe olvidan las penas cuando hay amor.\n\n//Yo te alabaré ...//\n\nNo quiero que tú te alejes de mí\nNo quiero jamás dejarte, Señor.\nTu carga es liviana yo la llevaré\nDonde tú me guíes allí yo iré.\n\n// Yo te alabaré ...//"
+        }
+      ],
+      "numero_equivalente": null,
+      "himnario_equivalente": null,
+      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
+      "observacion": "Transcrito visualmente de la página 10 del PDF fuente.",
+      "categorias": [
+        "Alabanza a Dios"
+      ],
+      "has_lyrics": true,
+      "autor_impreso": "Yesid Benavides",
+      "colecciones": [
+        {
+          "himnario": "Cánticos de Alabanza",
+          "numero": 62
+        },
+        {
+          "himnario": "Gloria y Triunfo",
+          "numero": 391
+        }
+      ]
+    },
+    {
+      "id": "CANT-063",
+      "himnario": "Cánticos de Alabanza",
+      "numero": 63,
+      "titulo": "EL ME LEVANTARÁ",
+      "tom": "D",
+      "letra": "//El me levantará, él me levantará\nEl me levantará, así es el Señor.//\n\n//El me levantará....a, él me levantará.....a\nEn sus manos me sostendrá.....a\nÉl me levantará....a//\nAsí es el Señor\nMe fortalecerá ...",
+      "bloques": [
+        {
+          "tipo": "estrofa",
+          "numero": null,
+          "texto": "//El me levantará, él me levantará\nEl me levantará, así es el Señor.//\n\n//El me levantará....a, él me levantará.....a\nEn sus manos me sostendrá.....a\nÉl me levantará....a//\nAsí es el Señor\nMe fortalecerá ..."
+        }
+      ],
+      "numero_equivalente": null,
+      "himnario_equivalente": null,
+      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
+      "observacion": "Transcrito visualmente de la página 10 del PDF fuente.",
+      "categorias": [
+        "Fe y Confianza"
+      ],
+      "has_lyrics": true,
+      "autor_impreso": "Tony Pérez",
+      "colecciones": [
+        {
+          "himnario": "Cánticos de Alabanza",
+          "numero": 63
+        },
+        {
+          "himnario": "Gloria y Triunfo",
+          "numero": 392
+        }
+      ],
+      "audio_external_url": "https://www.youtube.com/watch?v=J1XnzpLqbG8",
+      "audio_autorizado": false,
+      "audio_procedencia": {
+        "fuente": "https://www.youtube.com/watch?v=J1XnzpLqbG8",
+        "tipo": "enlace_externo",
+        "autorizado": false,
+        "notas": "Grabación o vídeo externo auditado individualmente. No implica autorización para almacenar el audio dentro de la aplicación."
+      }
+    },
+    {
       "id": "CANT-020",
       "himnario": "Cánticos de Alabanza",
       "numero": 20,
@@ -35214,740 +35948,6 @@
         "tipo": "enlace_externo",
         "autorizado": false,
         "notas": "Fuente externa auditada individualmente. La letra/título fueron comparados con el Cántico de Alabanza correspondiente antes de vincular."
-      }
-    },
-    {
-      "id": "CANT-046",
-      "himnario": "Cánticos de Alabanza",
-      "numero": 46,
-      "titulo": "CELEBRAD A CRISTO",
-      "tom": "F",
-      "letra": "//Celebrad a Cristo, celebrad\nCelebrad a Cristo, celebrad//\n\nResucitó, resucitó\nY por siempre él vivirá, reinará\nResucitó, resucitó\n///Vamos a celebrad///\nNuestro Señor, resucitó.\n\nÉl vive, él vive\nY por siempre, él vivirá.\n///Vamos a Celebrad///\nNuestro Señor, resucitó\n\nCelebrad a Cristo...",
-      "bloques": [
-        {
-          "tipo": "estrofa",
-          "numero": null,
-          "texto": "//Celebrad a Cristo, celebrad\nCelebrad a Cristo, celebrad//\n\nResucitó, resucitó\nY por siempre él vivirá, reinará\nResucitó, resucitó\n///Vamos a celebrad///\nNuestro Señor, resucitó.\n\nÉl vive, él vive\nY por siempre, él vivirá.\n///Vamos a Celebrad///\nNuestro Señor, resucitó\n\nCelebrad a Cristo..."
-        }
-      ],
-      "numero_equivalente": null,
-      "himnario_equivalente": null,
-      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
-      "observacion": "Transcrito visualmente de la página 6 del PDF fuente.",
-      "categorias": [
-        "Pascua"
-      ],
-      "has_lyrics": true,
-      "autor_impreso": "Gary Oliver",
-      "colecciones": [
-        {
-          "himnario": "Cánticos de Alabanza",
-          "numero": 46
-        },
-        {
-          "himnario": "Gloria y Triunfo",
-          "numero": 375
-        }
-      ],
-      "cifra_url": "https://www.cifraclub.com/danilo-montero/celebrad-a-cristo/",
-      "cifra_autorizada": false,
-      "cifra_procedencia": {
-        "fuente": "https://www.cifraclub.com/danilo-montero/celebrad-a-cristo/",
-        "tipo": "enlace_externo",
-        "autorizado": false,
-        "notas": "Fuente externa auditada individualmente. La letra/título fueron comparados con el Cántico de Alabanza correspondiente antes de vincular."
-      }
-    },
-    {
-      "id": "CANT-047",
-      "himnario": "Cánticos de Alabanza",
-      "numero": 47,
-      "titulo": "HAY VICTORIA",
-      "tom": "Em",
-      "letra": "Hay victoria, hay victoria\nHay victoria en la sangre de Jesús,\nHay victoria, hay victoria\n\nHay victoria en la sangre de Jesús.\nNo podrá el enemigo\nVencer a nuestras almas,\n//Porque hay victoria, porque hay victoria\nPorque hay victoria en la sangre de Jesús.//",
-      "bloques": [
-        {
-          "tipo": "estrofa",
-          "numero": null,
-          "texto": "Hay victoria, hay victoria\nHay victoria en la sangre de Jesús,\nHay victoria, hay victoria\n\nHay victoria en la sangre de Jesús.\nNo podrá el enemigo\nVencer a nuestras almas,\n//Porque hay victoria, porque hay victoria\nPorque hay victoria en la sangre de Jesús.//"
-        }
-      ],
-      "numero_equivalente": null,
-      "himnario_equivalente": null,
-      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
-      "observacion": "Transcrito visualmente de la página 6 del PDF fuente.",
-      "categorias": [
-        "Sangre, Redención, Salvación"
-      ],
-      "has_lyrics": true,
-      "colecciones": [
-        {
-          "himnario": "Cánticos de Alabanza",
-          "numero": 47
-        },
-        {
-          "himnario": "Gloria y Triunfo",
-          "numero": 376
-        }
-      ]
-    },
-    {
-      "id": "CANT-048",
-      "himnario": "Cánticos de Alabanza",
-      "numero": 48,
-      "titulo": "CON TODAS MI FUERZAS",
-      "tom": "Em",
-      "letra": "Con todas mi fuerzas yo te amo\nYo te amo mi Dios,\nPorque eres lo que más quiero\nTe necesito cada día más.\n\nCada célula de mi ser\nTe anhela mi Señor\nPorque eres el sustento\nQue necesito para vivir.\n\nMás unción quiere mi ser,\nDel Espíritu Santo lléname,\nEn Espíritu te adoraré,\nCon danzas te alabaré,\nEn tu presencia me gozaré\nSolo en ti me alegraré.",
-      "bloques": [
-        {
-          "tipo": "estrofa",
-          "numero": null,
-          "texto": "Con todas mi fuerzas yo te amo\nYo te amo mi Dios,\nPorque eres lo que más quiero\nTe necesito cada día más.\n\nCada célula de mi ser\nTe anhela mi Señor\nPorque eres el sustento\nQue necesito para vivir.\n\nMás unción quiere mi ser,\nDel Espíritu Santo lléname,\nEn Espíritu te adoraré,\nCon danzas te alabaré,\nEn tu presencia me gozaré\nSolo en ti me alegraré."
-        }
-      ],
-      "numero_equivalente": null,
-      "himnario_equivalente": null,
-      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
-      "observacion": "Transcrito visualmente de la página 7 del PDF fuente.",
-      "categorias": [
-        "Alabanza a Dios"
-      ],
-      "has_lyrics": true,
-      "autor_impreso": "José Alfredo Arismendi",
-      "colecciones": [
-        {
-          "himnario": "Cánticos de Alabanza",
-          "numero": 48
-        },
-        {
-          "himnario": "Gloria y Triunfo",
-          "numero": 377
-        }
-      ],
-      "cifra_url": "https://www.cifraclub.com/comando-gaf/con-todas-mis-fuerzas/",
-      "cifra_autorizada": false,
-      "cifra_procedencia": {
-        "fuente": "https://www.cifraclub.com/comando-gaf/con-todas-mis-fuerzas/",
-        "tipo": "enlace_externo",
-        "autorizado": false,
-        "notas": "Fuente externa auditada individualmente. La letra/título fueron comparados con el Cántico de Alabanza correspondiente antes de vincular."
-      },
-      "audio_external_url": "https://www.youtube.com/watch?v=gUGlaXgaTaI",
-      "audio_autorizado": false,
-      "audio_procedencia": {
-        "fuente": "https://www.youtube.com/watch?v=gUGlaXgaTaI",
-        "tipo": "enlace_externo",
-        "autorizado": false,
-        "notas": "Grabación o vídeo externo auditado individualmente. No implica autorización para almacenar el audio dentro de la aplicación."
-      }
-    },
-    {
-      "id": "CANT-049",
-      "himnario": "Cánticos de Alabanza",
-      "numero": 49,
-      "titulo": "BUENO ES ALABAR",
-      "tom": "G",
-      "letra": "Bueno es alabar ¡oh Señor!, tu nombre\nDarte gloria, honra y honor por siempre,\nBueno es alabarte Jesús\nY gozarme en tu poder.\n\nPorque grande eres Tú,\nGrandes son tus obras,\nPorque grande eres Tú,\nGrande es tu amor,\nGrande es tu gloria.",
-      "bloques": [
-        {
-          "tipo": "estrofa",
-          "numero": null,
-          "texto": "Bueno es alabar ¡oh Señor!, tu nombre\nDarte gloria, honra y honor por siempre,\nBueno es alabarte Jesús\nY gozarme en tu poder.\n\nPorque grande eres Tú,\nGrandes son tus obras,\nPorque grande eres Tú,\nGrande es tu amor,\nGrande es tu gloria."
-        }
-      ],
-      "numero_equivalente": null,
-      "himnario_equivalente": null,
-      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
-      "observacion": "Transcrito visualmente de la página 7 del PDF fuente.",
-      "categorias": [
-        "Alabanza a Dios"
-      ],
-      "has_lyrics": true,
-      "autor_impreso": "Fernando Soto",
-      "colecciones": [
-        {
-          "himnario": "Cánticos de Alabanza",
-          "numero": 49
-        },
-        {
-          "himnario": "Gloria y Triunfo",
-          "numero": 378
-        }
-      ]
-    },
-    {
-      "id": "CANT-050",
-      "himnario": "Cánticos de Alabanza",
-      "numero": 50,
-      "titulo": "ERES TODOPODEROSO",
-      "tom": "Bm",
-      "letra": "La única razón de mi adoración,\nEres tú mi Jesús.\nMi único motivo para vivir,\nEres tú mi Señor.\n\nMi única verdad está en ti\nEres mi luz y mi salvación;\nMi único amor eres Tú Señor\nY por siempre te alabaré.\n\nTú eres Todopoderoso\nEres grande y majestuoso\nEres fuerte, invencible,\nY no hay nadie como Tú.",
-      "bloques": [
-        {
-          "tipo": "estrofa",
-          "numero": null,
-          "texto": "La única razón de mi adoración,\nEres tú mi Jesús.\nMi único motivo para vivir,\nEres tú mi Señor.\n\nMi única verdad está en ti\nEres mi luz y mi salvación;\nMi único amor eres Tú Señor\nY por siempre te alabaré.\n\nTú eres Todopoderoso\nEres grande y majestuoso\nEres fuerte, invencible,\nY no hay nadie como Tú."
-        }
-      ],
-      "numero_equivalente": null,
-      "himnario_equivalente": null,
-      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
-      "observacion": "Transcrito visualmente de la página 7 del PDF fuente.",
-      "categorias": [
-        "Alabanza a Dios"
-      ],
-      "has_lyrics": true,
-      "autor_impreso": "Juan Salinas",
-      "colecciones": [
-        {
-          "himnario": "Cánticos de Alabanza",
-          "numero": 50
-        },
-        {
-          "himnario": "Gloria y Triunfo",
-          "numero": 379
-        }
-      ],
-      "cifra_url": "https://www.cifraclub.com/danilo-montero/eres-todopoderoso/",
-      "cifra_autorizada": false,
-      "cifra_procedencia": {
-        "fuente": "https://www.cifraclub.com/danilo-montero/eres-todopoderoso/",
-        "tipo": "enlace_externo",
-        "autorizado": false,
-        "notas": "Fuente externa auditada individualmente. La letra/título fueron comparados con el Cántico de Alabanza correspondiente antes de vincular."
-      },
-      "audio_external_url": "https://www.youtube.com/watch?v=Urvys69pFdk",
-      "audio_autorizado": false,
-      "audio_procedencia": {
-        "fuente": "https://www.youtube.com/watch?v=Urvys69pFdk",
-        "tipo": "enlace_externo",
-        "autorizado": false,
-        "notas": "Grabación o vídeo externo auditado individualmente. No implica autorización para almacenar el audio dentro de la aplicación."
-      }
-    },
-    {
-      "id": "CANT-051",
-      "himnario": "Cánticos de Alabanza",
-      "numero": 51,
-      "titulo": "SOMOS EL PUEBLO DE DIOS",
-      "tom": "G",
-      "letra": "Somos el Pueblo de Dios\nSomos un pueblo especial\nLlamados para anunciar\nLas virtudes de aquel\nQue nos llamó a su luz.\n\nSomos el Pueblo de Dios\nSu sangre nos redimió\nY su Espíritu dió\nPara darnos poder\nY ser testigos de Él.\n\nY llevaremos su Gloria\nA cada pueblo y nación,\nTrayéndoles esperanza\nY nuevas de salvación.\n\nSu Amor nos impulsa\nNo nos podemos callar\nAnunciaremos al mundo\nDe su Amor y Verdad.",
-      "bloques": [
-        {
-          "tipo": "estrofa",
-          "numero": null,
-          "texto": "Somos el Pueblo de Dios\nSomos un pueblo especial\nLlamados para anunciar\nLas virtudes de aquel\nQue nos llamó a su luz.\n\nSomos el Pueblo de Dios\nSu sangre nos redimió\nY su Espíritu dió\nPara darnos poder\nY ser testigos de Él.\n\nY llevaremos su Gloria\nA cada pueblo y nación,\nTrayéndoles esperanza\nY nuevas de salvación.\n\nSu Amor nos impulsa\nNo nos podemos callar\nAnunciaremos al mundo\nDe su Amor y Verdad."
-        }
-      ],
-      "numero_equivalente": null,
-      "himnario_equivalente": null,
-      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
-      "observacion": "Transcrito visualmente de la página 7 del PDF fuente.",
-      "categorias": [
-        "Evangelismo",
-        "Iglesia"
-      ],
-      "has_lyrics": true,
-      "autor_impreso": "Marcos Witt",
-      "colecciones": [
-        {
-          "himnario": "Cánticos de Alabanza",
-          "numero": 51
-        },
-        {
-          "himnario": "Gloria y Triunfo",
-          "numero": 380
-        }
-      ],
-      "cifra_url": "https://www.cifraclub.com/marcos-witt/somos-el-pueblo-de-dios/",
-      "cifra_autorizada": false,
-      "cifra_procedencia": {
-        "fuente": "https://www.cifraclub.com/marcos-witt/somos-el-pueblo-de-dios/",
-        "tipo": "enlace_externo",
-        "autorizado": false,
-        "notas": "Fuente externa auditada individualmente. La letra/título fueron comparados con el Cántico de Alabanza correspondiente antes de vincular."
-      },
-      "audio_external_url": "https://www.youtube.com/watch?v=GCnyax1nCPc",
-      "audio_autorizado": false,
-      "audio_procedencia": {
-        "fuente": "https://www.youtube.com/watch?v=GCnyax1nCPc",
-        "tipo": "enlace_externo",
-        "autorizado": false,
-        "notas": "Grabación o vídeo externo auditado individualmente. No implica autorización para almacenar el audio dentro de la aplicación."
-      }
-    },
-    {
-      "id": "CANT-052",
-      "himnario": "Cánticos de Alabanza",
-      "numero": 52,
-      "titulo": "QUE DULCE ES ESTAR",
-      "tom": "D",
-      "letra": "Que dulce es estar en tu presencia\nContemplando la hermosura de tu Santidad.\nY reconociendo que tú eres Señor,\nTodopoderoso y el gran \"Yo soy\". (Bis)\n\n//Santo, Saaanto, mi corazón\nSe une a la melodía angelical.//",
-      "bloques": [
-        {
-          "tipo": "estrofa",
-          "numero": null,
-          "texto": "Que dulce es estar en tu presencia\nContemplando la hermosura de tu Santidad.\nY reconociendo que tú eres Señor,\nTodopoderoso y el gran \"Yo soy\". (Bis)\n\n//Santo, Saaanto, mi corazón\nSe une a la melodía angelical.//"
-        }
-      ],
-      "numero_equivalente": null,
-      "himnario_equivalente": null,
-      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
-      "observacion": "Transcrito visualmente de la página 8 del PDF fuente.",
-      "categorias": [
-        "Alabanza a Dios"
-      ],
-      "has_lyrics": true,
-      "autor_impreso": "Fermín García",
-      "colecciones": [
-        {
-          "himnario": "Cánticos de Alabanza",
-          "numero": 52
-        },
-        {
-          "himnario": "Gloria y Triunfo",
-          "numero": 381
-        }
-      ],
-      "cifra_url": "https://www.cifraclub.com/danilo-montero/que-dulce/original.html",
-      "cifra_autorizada": false,
-      "cifra_procedencia": {
-        "fuente": "https://www.cifraclub.com/danilo-montero/que-dulce/original.html",
-        "tipo": "enlace_externo",
-        "autorizado": false,
-        "notas": "Fuente externa auditada individualmente. La letra/título fueron comparados con el Cántico de Alabanza correspondiente antes de vincular."
-      }
-    },
-    {
-      "id": "CANT-053",
-      "himnario": "Cánticos de Alabanza",
-      "numero": 53,
-      "titulo": "TU FIDELIDAD",
-      "tom": "D",
-      "letra": "Tu fidelidad es grande\nTu fidelidad incomparable es\nNadie como tú, bendito Dios\nGrande es tu fidelidad. (Bis)",
-      "bloques": [
-        {
-          "tipo": "estrofa",
-          "numero": null,
-          "texto": "Tu fidelidad es grande\nTu fidelidad incomparable es\nNadie como tú, bendito Dios\nGrande es tu fidelidad. (Bis)"
-        }
-      ],
-      "numero_equivalente": null,
-      "himnario_equivalente": null,
-      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
-      "observacion": "Transcrito visualmente de la página 8 del PDF fuente.",
-      "categorias": [
-        "Alabanza a Dios",
-        "Fe y Confianza"
-      ],
-      "has_lyrics": true,
-      "colecciones": [
-        {
-          "himnario": "Cánticos de Alabanza",
-          "numero": 53
-        },
-        {
-          "himnario": "Gloria y Triunfo",
-          "numero": 382
-        }
-      ],
-      "cifra_url": "https://www.cifraclub.com/marcos-witt/tu-fidelidad/",
-      "cifra_autorizada": false,
-      "cifra_procedencia": {
-        "fuente": "https://www.cifraclub.com/marcos-witt/tu-fidelidad/",
-        "tipo": "enlace_externo",
-        "autorizado": false,
-        "notas": "Fuente externa auditada individualmente. La letra/título fueron comparados con el Cántico de Alabanza correspondiente antes de vincular."
-      },
-      "audio_external_url": "https://www.youtube.com/watch?v=ibZ1NgRdIZc",
-      "audio_autorizado": false,
-      "audio_procedencia": {
-        "fuente": "https://www.youtube.com/watch?v=ibZ1NgRdIZc",
-        "tipo": "enlace_externo",
-        "autorizado": false,
-        "notas": "Grabación o vídeo externo auditado individualmente. No implica autorización para almacenar el audio dentro de la aplicación."
-      }
-    },
-    {
-      "id": "CANT-054",
-      "himnario": "Cánticos de Alabanza",
-      "numero": 54,
-      "titulo": "QUIERO DERRAMAR MI CORAZÓN",
-      "tom": "D",
-      "letra": "Quiero derramar mi corazon\nDelante de ti hoy quiero estar\nLevantar mis manos para alabarte\nY adorarte a ti, mi Creador.\nTú eres Jesús mi Dios mi Rey\nSoy una muestra de tu amor\nUn nuevo ser para alabarte\nY adorarte a ti mi Creador.\n//A   le   lu   ya\nA   le   lu   ya//\nGloria a Jesús, él es mi Rey\nA   le   lu   ya.",
-      "bloques": [
-        {
-          "tipo": "estrofa",
-          "numero": null,
-          "texto": "Quiero derramar mi corazon\nDelante de ti hoy quiero estar\nLevantar mis manos para alabarte\nY adorarte a ti, mi Creador.\nTú eres Jesús mi Dios mi Rey\nSoy una muestra de tu amor\nUn nuevo ser para alabarte\nY adorarte a ti mi Creador.\n//A   le   lu   ya\nA   le   lu   ya//\nGloria a Jesús, él es mi Rey\nA   le   lu   ya."
-        }
-      ],
-      "numero_equivalente": null,
-      "himnario_equivalente": null,
-      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
-      "observacion": "Transcrito visualmente de la página 8 del PDF fuente.",
-      "categorias": [
-        "Alabanza a Dios"
-      ],
-      "has_lyrics": true,
-      "colecciones": [
-        {
-          "himnario": "Cánticos de Alabanza",
-          "numero": 54
-        },
-        {
-          "himnario": "Gloria y Triunfo",
-          "numero": 383
-        }
-      ],
-      "cifra_url": "https://www.cifraclub.com/elim/quiero-derramar-mi-corazon/",
-      "cifra_autorizada": false,
-      "cifra_procedencia": {
-        "fuente": "https://www.cifraclub.com/elim/quiero-derramar-mi-corazon/",
-        "tipo": "enlace_externo",
-        "autorizado": false,
-        "notas": "Fuente externa auditada individualmente. La letra/título fueron comparados con el Cántico de Alabanza correspondiente antes de vincular."
-      }
-    },
-    {
-      "id": "CANT-055",
-      "himnario": "Cánticos de Alabanza",
-      "numero": 55,
-      "titulo": "TE AMO SEÑOR",
-      "tom": "D",
-      "letra": "//Te amo Señor, fortaleza mía\nRoca mía, y castillo mío,\nY mi libertador,\nDios mío, en ti confiaré\nMi escudo eres tú\nY la fuerza de mi salvación.//\n//A   le   lu   ya\nA   le   lu   ya\nGloria a Jesús, él es mi Rey\nA...leluya.",
-      "bloques": [
-        {
-          "tipo": "estrofa",
-          "numero": null,
-          "texto": "//Te amo Señor, fortaleza mía\nRoca mía, y castillo mío,\nY mi libertador,\nDios mío, en ti confiaré\nMi escudo eres tú\nY la fuerza de mi salvación.//\n//A   le   lu   ya\nA   le   lu   ya\nGloria a Jesús, él es mi Rey\nA...leluya."
-        }
-      ],
-      "numero_equivalente": null,
-      "himnario_equivalente": null,
-      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
-      "observacion": "Transcrito visualmente de la página 8 del PDF fuente.",
-      "categorias": [
-        "Fe y Confianza"
-      ],
-      "has_lyrics": true,
-      "colecciones": [
-        {
-          "himnario": "Cánticos de Alabanza",
-          "numero": 55
-        },
-        {
-          "himnario": "Gloria y Triunfo",
-          "numero": 384
-        }
-      ]
-    },
-    {
-      "id": "CANT-056",
-      "himnario": "Cánticos de Alabanza",
-      "numero": 56,
-      "titulo": "SEAS EXALTADO, OH DIOS",
-      "tom": "D",
-      "letra": "//Seas exaltado Dios\nSobre los cielos\nSobre la tierra\nTu gloria esté.//\n//Te exaltamos, te exaltamos\nTe exaltamos, oh Señor.//",
-      "bloques": [
-        {
-          "tipo": "estrofa",
-          "numero": null,
-          "texto": "//Seas exaltado Dios\nSobre los cielos\nSobre la tierra\nTu gloria esté.//\n//Te exaltamos, te exaltamos\nTe exaltamos, oh Señor.//"
-        }
-      ],
-      "numero_equivalente": null,
-      "himnario_equivalente": null,
-      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
-      "observacion": "Transcrito visualmente de la página 9 del PDF fuente.",
-      "categorias": [
-        "Alabanza a Dios"
-      ],
-      "has_lyrics": true,
-      "colecciones": [
-        {
-          "himnario": "Cánticos de Alabanza",
-          "numero": 56
-        },
-        {
-          "himnario": "Gloria y Triunfo",
-          "numero": 385
-        }
-      ]
-    },
-    {
-      "id": "CANT-057",
-      "himnario": "Cánticos de Alabanza",
-      "numero": 57,
-      "titulo": "RENUÉVAME",
-      "tom": "D",
-      "letra": "//Renuévame Señor Jesús\nYa no quiero ser igual;\nRenuévame Señor Jesús\nPon en mi tu corazón.\n\nPorque todo lo que hay\nDentro de mi\nNecesita ser cambiado, Señor.\n\nPorque todo lo que hay\nDentro de mi corazón\nNecesita más de ti.",
-      "bloques": [
-        {
-          "tipo": "estrofa",
-          "numero": null,
-          "texto": "//Renuévame Señor Jesús\nYa no quiero ser igual;\nRenuévame Señor Jesús\nPon en mi tu corazón.\n\nPorque todo lo que hay\nDentro de mi\nNecesita ser cambiado, Señor.\n\nPorque todo lo que hay\nDentro de mi corazón\nNecesita más de ti."
-        }
-      ],
-      "numero_equivalente": null,
-      "himnario_equivalente": null,
-      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
-      "observacion": "Transcrito visualmente de la página 9 del PDF fuente.",
-      "categorias": [
-        "Consagración"
-      ],
-      "has_lyrics": true,
-      "colecciones": [
-        {
-          "himnario": "Cánticos de Alabanza",
-          "numero": 57
-        },
-        {
-          "himnario": "Gloria y Triunfo",
-          "numero": 386
-        }
-      ],
-      "cifra_url": "https://www.cifraclub.com/marcos-witt/renuevame/",
-      "cifra_autorizada": false,
-      "cifra_procedencia": {
-        "fuente": "https://www.cifraclub.com/marcos-witt/renuevame/",
-        "tipo": "enlace_externo",
-        "autorizado": false,
-        "notas": "Fuente externa auditada individualmente. La letra/título fueron comparados con el Cántico de Alabanza correspondiente antes de vincular."
-      }
-    },
-    {
-      "id": "CANT-058",
-      "himnario": "Cánticos de Alabanza",
-      "numero": 58,
-      "titulo": "TU MISERICORDIA",
-      "tom": "D",
-      "letra": "Tu misericordia es mejor que la vida\nTu misericordia es mejor que la vida\nMis labios te alabarán, y así te bendeciré;\n\nAlzaré mis manos en tu nombre Señor.\n//Alzaré mis manos en tu nombre Señor.//\nMis labios te alabarán y así te bendeciré\nAlzaré mis manos en tu nombre Señor.",
-      "bloques": [
-        {
-          "tipo": "estrofa",
-          "numero": null,
-          "texto": "Tu misericordia es mejor que la vida\nTu misericordia es mejor que la vida\nMis labios te alabarán, y así te bendeciré;\n\nAlzaré mis manos en tu nombre Señor.\n//Alzaré mis manos en tu nombre Señor.//\nMis labios te alabarán y así te bendeciré\nAlzaré mis manos en tu nombre Señor."
-        }
-      ],
-      "numero_equivalente": null,
-      "himnario_equivalente": null,
-      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
-      "observacion": "Transcrito visualmente de la página 9 del PDF fuente.",
-      "categorias": [
-        "Amor y Gracia de Dios"
-      ],
-      "has_lyrics": true,
-      "colecciones": [
-        {
-          "himnario": "Cánticos de Alabanza",
-          "numero": 58
-        },
-        {
-          "himnario": "Gloria y Triunfo",
-          "numero": 387
-        }
-      ]
-    },
-    {
-      "id": "CANT-059",
-      "himnario": "Cánticos de Alabanza",
-      "numero": 59,
-      "titulo": "DE GLORIA EN GLORIA",
-      "tom": "D",
-      "letra": "De gloria en gloria te veo,\nCuanto más te conozco\nQuiero saber más de ti.\nMi Dios cual buen alfarero,\nQuebrántame, transfórmame\nMoldéame a tu imagen, Señor.\n\n//Quiero ser más como tú,\nVer la vida como tú\nSatúrame de tu Espíritu\nY reflejar al mundo, tu amor.//\n\nDe gloria en ...\n\nMi Dios cual ...\n\n//Quiero ser más ...//\n//Reflejar al mundo, tu amor.//",
-      "bloques": [
-        {
-          "tipo": "estrofa",
-          "numero": null,
-          "texto": "De gloria en gloria te veo,\nCuanto más te conozco\nQuiero saber más de ti.\nMi Dios cual buen alfarero,\nQuebrántame, transfórmame\nMoldéame a tu imagen, Señor.\n\n//Quiero ser más como tú,\nVer la vida como tú\nSatúrame de tu Espíritu\nY reflejar al mundo, tu amor.//\n\nDe gloria en ...\n\nMi Dios cual ...\n\n//Quiero ser más ...//\n//Reflejar al mundo, tu amor.//"
-        }
-      ],
-      "numero_equivalente": null,
-      "himnario_equivalente": null,
-      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
-      "observacion": "Transcrito visualmente de la página 9 del PDF fuente.",
-      "categorias": [
-        "Amor y Gracia de Dios"
-      ],
-      "has_lyrics": true,
-      "autor_impreso": "Sergio Gonzales",
-      "colecciones": [
-        {
-          "himnario": "Cánticos de Alabanza",
-          "numero": 59
-        },
-        {
-          "himnario": "Gloria y Triunfo",
-          "numero": 388
-        }
-      ],
-      "cifra_url": "https://www.cifraclub.com/marcos-witt/de-gloria-en-gloria/",
-      "cifra_autorizada": false,
-      "cifra_procedencia": {
-        "fuente": "https://www.cifraclub.com/marcos-witt/de-gloria-en-gloria/",
-        "tipo": "enlace_externo",
-        "autorizado": false,
-        "notas": "Fuente externa auditada individualmente. La letra/título fueron comparados con el Cántico de Alabanza correspondiente antes de vincular."
-      }
-    },
-    {
-      "id": "CANT-060",
-      "himnario": "Cánticos de Alabanza",
-      "numero": 60,
-      "titulo": "GRACIAS CRISTO",
-      "tom": "D",
-      "letra": "Gracias Cristo, gracias Cristo,\nGracias Cristo, gracias Cristo.\n\nLevantemos nuestras manos,\nEn señal de gratitud\nGracias Cristo, gracias Cristo.",
-      "bloques": [
-        {
-          "tipo": "estrofa",
-          "numero": null,
-          "texto": "Gracias Cristo, gracias Cristo,\nGracias Cristo, gracias Cristo.\n\nLevantemos nuestras manos,\nEn señal de gratitud\nGracias Cristo, gracias Cristo."
-        }
-      ],
-      "numero_equivalente": null,
-      "himnario_equivalente": null,
-      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
-      "observacion": "Transcrito visualmente de la página 10 del PDF fuente.",
-      "categorias": [
-        "Alabanza a Dios"
-      ],
-      "has_lyrics": true,
-      "colecciones": [
-        {
-          "himnario": "Cánticos de Alabanza",
-          "numero": 60
-        },
-        {
-          "himnario": "Gloria y Triunfo",
-          "numero": 389
-        }
-      ],
-      "audio_external_url": "https://www.youtube.com/watch?v=g4PKgEfdHj8",
-      "audio_autorizado": false,
-      "audio_procedencia": {
-        "fuente": "https://www.youtube.com/watch?v=g4PKgEfdHj8",
-        "tipo": "enlace_externo",
-        "autorizado": false,
-        "notas": "Grabación o vídeo externo auditado individualmente. No implica autorización para almacenar el audio dentro de la aplicación."
-      }
-    },
-    {
-      "id": "CANT-061",
-      "himnario": "Cánticos de Alabanza",
-      "numero": 61,
-      "titulo": "DE TAL MANERA",
-      "tom": "C",
-      "letra": "De tal manera me amó\nQue su vida no escatimó\nHasta el final Él se entregó\nY a la muerte fue porque em amó\n\nDe tal manera me amó\nQue no hay forma en que podré pagar\nEl precio de su grande amor\nPero toda mi alma quiero dar\n\nPor su amor yo viviré\nDe su amor yo cantaré\nCon mi Jesús caminaré\nPorque Él me amó a mí\nPor su amor yo viviré\nDe su amor yo cantaré\nCon mi Jesús caminaré\nPorque el murió por mi\nLe seguire.",
-      "bloques": [
-        {
-          "tipo": "estrofa",
-          "numero": null,
-          "texto": "De tal manera me amó\nQue su vida no escatimó\nHasta el final Él se entregó\nY a la muerte fue porque em amó\n\nDe tal manera me amó\nQue no hay forma en que podré pagar\nEl precio de su grande amor\nPero toda mi alma quiero dar\n\nPor su amor yo viviré\nDe su amor yo cantaré\nCon mi Jesús caminaré\nPorque Él me amó a mí\nPor su amor yo viviré\nDe su amor yo cantaré\nCon mi Jesús caminaré\nPorque el murió por mi\nLe seguire."
-        }
-      ],
-      "numero_equivalente": null,
-      "himnario_equivalente": null,
-      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
-      "observacion": "Transcrito visualmente de la página 10 del PDF fuente.",
-      "categorias": [
-        "Amor y Gracia de Dios"
-      ],
-      "has_lyrics": true,
-      "autor_impreso": "Abel Zabala",
-      "colecciones": [
-        {
-          "himnario": "Cánticos de Alabanza",
-          "numero": 61
-        },
-        {
-          "himnario": "Gloria y Triunfo",
-          "numero": 390
-        }
-      ],
-      "cifra_url": "https://www.cifraclub.com/abel-zavala/de-tal-manera/",
-      "cifra_autorizada": false,
-      "cifra_procedencia": {
-        "fuente": "https://www.cifraclub.com/abel-zavala/de-tal-manera/",
-        "tipo": "enlace_externo",
-        "autorizado": false,
-        "notas": "Fuente externa auditada individualmente. La letra/título fueron comparados con el Cántico de Alabanza correspondiente antes de vincular."
-      }
-    },
-    {
-      "id": "CANT-062",
-      "himnario": "Cánticos de Alabanza",
-      "numero": 62,
-      "titulo": "YO TE ALABARÉ",
-      "tom": "C",
-      "letra": "//Yo te alabaré con todo mi ser\nCantándote salmos así viviré //\n\nTu paz y tu amor hoy puedo sentir\nSaber que tú estás muy cerca de mí.\n\nMe gozo en el tiempo que paso contigo\nSintiendo tu aliento, escuchando tu voz.\n\nNo importa el problema, no importa el dolor\nSe olvidan las penas cuando hay amor.\n\n//Yo te alabaré ...//\n\nNo quiero que tú te alejes de mí\nNo quiero jamás dejarte, Señor.\nTu carga es liviana yo la llevaré\nDonde tú me guíes allí yo iré.\n\n// Yo te alabaré ...//",
-      "bloques": [
-        {
-          "tipo": "estrofa",
-          "numero": null,
-          "texto": "//Yo te alabaré con todo mi ser\nCantándote salmos así viviré //\n\nTu paz y tu amor hoy puedo sentir\nSaber que tú estás muy cerca de mí.\n\nMe gozo en el tiempo que paso contigo\nSintiendo tu aliento, escuchando tu voz.\n\nNo importa el problema, no importa el dolor\nSe olvidan las penas cuando hay amor.\n\n//Yo te alabaré ...//\n\nNo quiero que tú te alejes de mí\nNo quiero jamás dejarte, Señor.\nTu carga es liviana yo la llevaré\nDonde tú me guíes allí yo iré.\n\n// Yo te alabaré ...//"
-        }
-      ],
-      "numero_equivalente": null,
-      "himnario_equivalente": null,
-      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
-      "observacion": "Transcrito visualmente de la página 10 del PDF fuente.",
-      "categorias": [
-        "Alabanza a Dios"
-      ],
-      "has_lyrics": true,
-      "autor_impreso": "Yesid Benavides",
-      "colecciones": [
-        {
-          "himnario": "Cánticos de Alabanza",
-          "numero": 62
-        },
-        {
-          "himnario": "Gloria y Triunfo",
-          "numero": 391
-        }
-      ]
-    },
-    {
-      "id": "CANT-063",
-      "himnario": "Cánticos de Alabanza",
-      "numero": 63,
-      "titulo": "EL ME LEVANTARÁ",
-      "tom": "D",
-      "letra": "//El me levantará, él me levantará\nEl me levantará, así es el Señor.//\n\n//El me levantará....a, él me levantará.....a\nEn sus manos me sostendrá.....a\nÉl me levantará....a//\nAsí es el Señor\nMe fortalecerá ...",
-      "bloques": [
-        {
-          "tipo": "estrofa",
-          "numero": null,
-          "texto": "//El me levantará, él me levantará\nEl me levantará, así es el Señor.//\n\n//El me levantará....a, él me levantará.....a\nEn sus manos me sostendrá.....a\nÉl me levantará....a//\nAsí es el Señor\nMe fortalecerá ..."
-        }
-      ],
-      "numero_equivalente": null,
-      "himnario_equivalente": null,
-      "fuente": "CANTICOS DE ALABANZA (INCOMPLETO).pdf",
-      "observacion": "Transcrito visualmente de la página 10 del PDF fuente.",
-      "categorias": [
-        "Fe y Confianza"
-      ],
-      "has_lyrics": true,
-      "autor_impreso": "Tony Pérez",
-      "colecciones": [
-        {
-          "himnario": "Cánticos de Alabanza",
-          "numero": 63
-        },
-        {
-          "himnario": "Gloria y Triunfo",
-          "numero": 392
-        }
-      ],
-      "audio_external_url": "https://www.youtube.com/watch?v=J1XnzpLqbG8",
-      "audio_autorizado": false,
-      "audio_procedencia": {
-        "fuente": "https://www.youtube.com/watch?v=J1XnzpLqbG8",
-        "tipo": "enlace_externo",
-        "autorizado": false,
-        "notas": "Grabación o vídeo externo auditado individualmente. No implica autorización para almacenar el audio dentro de la aplicación."
       }
     },
     {
