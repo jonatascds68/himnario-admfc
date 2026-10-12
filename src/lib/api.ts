@@ -1150,6 +1150,55 @@ async function registerHymnUpdate(
    * A reconciliação é feita campo por campo e preserva qualquer
    * outra alteração realmente pendente.
    */
+  /*
+   * ADMFC — criação ainda não publicada é uma única alteração lógica.
+   *
+   * Se o administrador cria um cântico e depois o edita antes da
+   * publicação (por exemplo, adiciona uma categoria), essa edição deve
+   * ser absorvida pelo CREATE pendente. Nunca devemos manter
+   * CREATE + UPDATE separados para a mesma identidade ainda inédita,
+   * pois um aparelho receptor não pode aplicar UPDATE antes de CREATE.
+   */
+  const pendingCreate = changes.find(
+    item =>
+      item.hymn_id === after.id &&
+      item.action === 'create'
+  );
+
+  if (pendingCreate) {
+    pendingCreate.after =
+      JSON.parse(JSON.stringify(after));
+
+    pendingCreate.himnario = after.himnario;
+    pendingCreate.numero = after.numero;
+    pendingCreate.titulo = after.titulo;
+    pendingCreate.changed_fields =
+      Object.keys(pendingCreate.after).filter(
+        field =>
+          field !== 'id' &&
+          field !== 'audio_local' &&
+          REMOTE_HYMN_FIELDS.has(field as keyof Hymn)
+      );
+    pendingCreate.created_at =
+      new Date().toISOString();
+    pendingCreate.status = 'pending';
+    pendingCreate.reviewed_at = null;
+
+    /*
+     * Remove eventual UPDATE legado do mesmo hino. Isso também saneia
+     * filas antigas produzidas antes desta regra.
+     */
+    await saveAdminChanges(
+      changes.filter(
+        item =>
+          item.hymn_id !== after.id ||
+          item.action !== 'update'
+      )
+    );
+
+    return;
+  }
+
   const pending = changes.find(
     item =>
       item.hymn_id === after.id &&
@@ -2041,8 +2090,103 @@ async function doReconcileAdminPublicationState(): Promise<void> {
     }
 
     /*
-     * Create/delete divergentes são preservados conservadoramente.
-     * O rebase automático campo a campo é feito somente em update.
+     * CREATE publicado:
+     *
+     * Um cântico recém-criado pode ter sido mantido na fila local mesmo
+     * depois de a revisão oficial ter chegado ao GitHub. Se a revisão
+     * oficial contém o mesmo CREATE e todos os campos publicáveis do
+     * estado local coincidem, não existe mais pendência administrativa.
+     *
+     * Se houver divergência real posterior à publicação, preservamos o
+     * item para não apagar uma edição local válida.
+     */
+    if (
+      current.action === 'create' &&
+      official.operation === 'create'
+    ) {
+      /*
+       * Compatibilidade com filas antigas que registraram:
+       *   CREATE CANT-xxx
+       *   UPDATE CANT-xxx
+       * para o mesmo cântico antes da primeira publicação.
+       *
+       * Para decidir se o CREATE já foi integralmente publicado,
+       * reconstruímos seu estado líquido aplicando os AFTER dos UPDATEs
+       * irmãos sobre o AFTER original do CREATE.
+       */
+      const effectiveLocalCreate: Record<string, any> = {
+        ...(
+          current.after &&
+          typeof current.after === 'object'
+            ? current.after
+            : {}
+        ),
+      };
+
+      for (const sibling of currentItems) {
+        if (
+          sibling === current ||
+          sibling.hymn_id !== current.hymn_id ||
+          sibling.action !== 'update' ||
+          !Array.isArray(sibling.changed_fields)
+        ) {
+          continue;
+        }
+
+        for (const field of sibling.changed_fields) {
+          if (
+            field === 'id' ||
+            field === 'audio_local' ||
+            !REMOTE_HYMN_FIELDS.has(field as keyof Hymn)
+          ) {
+            continue;
+          }
+
+          if (
+            Object.prototype.hasOwnProperty.call(
+              sibling.after || {},
+              field
+            )
+          ) {
+            effectiveLocalCreate[field] =
+              (sibling.after as any)[field];
+          }
+        }
+      }
+
+      const localCreateFields =
+        Object.entries(effectiveLocalCreate).filter(
+          ([field]) =>
+            field !== 'id' &&
+            field !== 'audio_local' &&
+            REMOTE_HYMN_FIELDS.has(field as keyof Hymn)
+        );
+
+      const matchesOfficialCreate =
+        localCreateFields.every(
+          ([field, value]) =>
+            Object.prototype.hasOwnProperty.call(
+              official.fields,
+              field
+            ) &&
+            sameValue(
+              value,
+              official.fields[field]
+            )
+        );
+
+      if (matchesOfficialCreate) {
+        continue;
+      }
+
+      reconciledItems.push(current);
+      continue;
+    }
+
+    /*
+     * Delete divergente é preservado conservadoramente.
+     * Updates continuam sendo reconciliados campo a campo, inclusive
+     * quando a revisão oficial correspondente nasceu como CREATE.
      */
     if (
       current.action !== 'update' ||
