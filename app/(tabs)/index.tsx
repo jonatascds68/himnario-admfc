@@ -97,6 +97,7 @@ const { c, isDark } = useTheme();
 
   const [hymnalCounts, setHymnalCounts] = useState({
     total: 0,
+    uniqueTotal: 0,
     gt: 0,
     sion: 0,
     canticos: 0,
@@ -119,7 +120,11 @@ const { c, isDark } = useTheme();
 
       setCategories(categoryResult.items);
       setHymnalCounts({
-        total: stats.total,
+        total:
+          stats.collection_total ??
+          stats.gt + stats.sion + stats.canticos,
+        uniqueTotal:
+          stats.unique_total ?? stats.total,
         gt: stats.gt,
         sion: stats.sion,
         canticos: stats.canticos,
@@ -128,6 +133,7 @@ const { c, isDark } = useTheme();
       setCategories([]);
       setHymnalCounts({
         total: 0,
+        uniqueTotal: 0,
         gt: 0,
         sion: 0,
         canticos: 0,
@@ -631,7 +637,7 @@ backgroundColor:
                 },
               ]}
             >
-              {hymnalCounts.total} himnos y cánticos disponibles
+              {hymnalCounts.total} himnos y cánticos en las colecciones
             </Text>
           </View>
 
