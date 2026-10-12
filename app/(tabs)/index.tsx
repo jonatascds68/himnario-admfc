@@ -119,7 +119,9 @@ const { c, isDark } = useTheme();
 
       setCategories(categoryResult.items);
       setHymnalCounts({
-        total: stats.total,
+        total:
+          stats.collection_total ??
+          stats.gt + stats.sion + (stats.canticos ?? 0),
         gt: stats.gt,
         sion: stats.sion,
         canticos: stats.canticos,
@@ -631,7 +633,7 @@ backgroundColor:
                 },
               ]}
             >
-              {hymnalCounts.total} himnos y cánticos disponibles
+              {hymnalCounts.total} himnos y cánticos en las colecciones
             </Text>
           </View>
 

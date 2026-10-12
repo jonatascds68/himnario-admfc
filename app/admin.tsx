@@ -267,7 +267,14 @@ const insets = useSafeAreaInsets();
         {stats ? (
           <View style={[styles.statCard, { borderColor: c.border, backgroundColor: c.surfaceSecondary }]}>
             <View style={styles.statRow}>
-              <Stat label="Total" value={stats.total} c={c} />
+              <Stat
+                label="Total en colecciones"
+                value={
+                  stats.collection_total ??
+                  stats.gt + stats.sion + (stats.canticos ?? 0)
+                }
+                c={c}
+              />
               <Stat label="Gloria y Triunfo" value={stats.gt} c={c} />
             </View>
             <View style={styles.statRow}>

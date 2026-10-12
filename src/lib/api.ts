@@ -1948,7 +1948,7 @@ async function doReconcileAdminPublicationState(): Promise<void> {
     const revision = Number(match[1]);
 
     return (
-      revision > localRevision ||
+      revision >= localRevision ||
       !historyByRevision.has(revision)
     );
   });
@@ -2027,7 +2027,16 @@ async function doReconcileAdminPublicationState(): Promise<void> {
   >();
 
   for (const pkg of officialPackages) {
-    if (pkg.revision <= localRevision) {
+    /*
+     * A revisão IGUAL ao contador local também precisa ser considerada.
+     *
+     * Depois que uma publicação é confirmada, o aparelho administrativo
+     * já pode ter avançado PUBLISHED_CONTENT_REVISION_KEY para essa mesma
+     * revisão antes de a fila local ter sido totalmente reconciliada.
+     * Ignorar a revisão atual deixava resíduos como CREATE + UPDATE da
+     * R000008 presos para sempre em "Cambios pendientes".
+     */
+    if (pkg.revision < localRevision) {
       continue;
     }
 
@@ -2635,17 +2644,38 @@ export const api = {
   stats: async () => {
     const hs = (await loadDb()).hymns;
 
+    /*
+     * Há duas métricas legítimas:
+     *
+     * - total / unique_total: registros canônicos únicos da Base Mestre;
+     * - collection_total: soma das entradas visíveis nas três coleções.
+     *
+     * Um mesmo registro canônico pode aparecer em mais de uma coleção
+     * através de colecciones/equivalências. Por isso 392 + 318 + 68 pode
+     * ser maior que hs.length sem representar erro de dados.
+     *
+     * collection_total é sempre recalculado a partir da base local atual;
+     * nunca é um número fixo.
+     */
+    const gt = hs.filter(
+      h => collectionNumber(h, 'Gloria y Triunfo') != null
+    ).length;
+
+    const sion = hs.filter(
+      h => collectionNumber(h, 'Himnos de Sión') != null
+    ).length;
+
+    const canticos = hs.filter(
+      h => collectionNumber(h, 'Cánticos de Alabanza') != null
+    ).length;
+
     return {
       total: hs.length,
-      gt: hs.filter(
-        h => collectionNumber(h, 'Gloria y Triunfo') != null
-      ).length,
-      sion: hs.filter(
-        h => collectionNumber(h, 'Himnos de Sión') != null
-      ).length,
-      canticos: hs.filter(
-        h => collectionNumber(h, 'Cánticos de Alabanza') != null
-      ).length,
+      unique_total: hs.length,
+      collection_total: gt + sion + canticos,
+      gt,
+      sion,
+      canticos,
       equivalences: Math.floor(
         hs.filter(h => h.numero_equivalente != null).length / 2
       ),
