@@ -2104,16 +2104,63 @@ async function doReconcileAdminPublicationState(): Promise<void> {
       current.action === 'create' &&
       official.operation === 'create'
     ) {
-      const localCreateFields =
-        current.after &&
-        typeof current.after === 'object'
-          ? Object.entries(current.after).filter(
-              ([field]) =>
-                field !== 'id' &&
-                field !== 'audio_local' &&
-                REMOTE_HYMN_FIELDS.has(field as keyof Hymn)
+      /*
+       * Compatibilidade com filas antigas que registraram:
+       *   CREATE CANT-xxx
+       *   UPDATE CANT-xxx
+       * para o mesmo cântico antes da primeira publicação.
+       *
+       * Para decidir se o CREATE já foi integralmente publicado,
+       * reconstruímos seu estado líquido aplicando os AFTER dos UPDATEs
+       * irmãos sobre o AFTER original do CREATE.
+       */
+      const effectiveLocalCreate: Record<string, any> = {
+        ...(
+          current.after &&
+          typeof current.after === 'object'
+            ? current.after
+            : {}
+        ),
+      };
+
+      for (const sibling of currentItems) {
+        if (
+          sibling === current ||
+          sibling.hymn_id !== current.hymn_id ||
+          sibling.action !== 'update' ||
+          !Array.isArray(sibling.changed_fields)
+        ) {
+          continue;
+        }
+
+        for (const field of sibling.changed_fields) {
+          if (
+            field === 'id' ||
+            field === 'audio_local' ||
+            !REMOTE_HYMN_FIELDS.has(field as keyof Hymn)
+          ) {
+            continue;
+          }
+
+          if (
+            Object.prototype.hasOwnProperty.call(
+              sibling.after || {},
+              field
             )
-          : [];
+          ) {
+            effectiveLocalCreate[field] =
+              (sibling.after as any)[field];
+          }
+        }
+      }
+
+      const localCreateFields =
+        Object.entries(effectiveLocalCreate).filter(
+          ([field]) =>
+            field !== 'id' &&
+            field !== 'audio_local' &&
+            REMOTE_HYMN_FIELDS.has(field as keyof Hymn)
+        );
 
       const matchesOfficialCreate =
         localCreateFields.every(
