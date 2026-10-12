@@ -1,0 +1,55 @@
+name: Build Himnario ADMFC R8 AAB
+
+on:
+  push:
+    branches:
+      - ops/build-r8-aab-20261012
+    paths:
+      - .github/workflows/build-r8-aab-20261012.yml
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+    steps:
+      - name: Verify Expo authentication
+        shell: bash
+        run: |
+          if [ -z "$EXPO_TOKEN" ]; then
+            echo "::error::Repository secret EXPO_TOKEN is not configured."
+            exit 1
+          fi
+
+      - name: Checkout merged production code
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: yarn
+
+      - name: Activate Yarn 1
+        run: |
+          corepack enable
+          corepack prepare yarn@1.22.22 --activate
+          yarn --version
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile --non-interactive
+
+      - name: Expo Doctor
+        run: npx expo-doctor
+
+      - name: Build production Android AAB with R8
+        run: >
+          npx -y eas-cli@latest build
+          --platform android
+          --profile production
+          --non-interactive
+          --wait
