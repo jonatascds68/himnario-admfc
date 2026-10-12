@@ -4,21 +4,14 @@
   "patches": [
     {
       "hymn_id": "CANT-068",
-      "operation": "update",
-      "fields": {
-        "categorias": [
-          "Alabanza a Dios"
-        ]
-      }
-    },
-    {
-      "hymn_id": "CANT-068",
       "operation": "create",
       "fields": {
         "himnario": "Cánticos de Alabanza",
         "numero": 68,
         "titulo": "El Cristo Que Yo Predico",
-        "categorias": [],
+        "categorias": [
+          "Alabanza a Dios"
+        ],
         "bloques": [
           {
             "tipo": "estrofa",
