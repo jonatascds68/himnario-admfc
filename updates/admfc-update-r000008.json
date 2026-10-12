@@ -1,0 +1,68 @@
+{
+  "schema_version": "admfc-content-patch-1",
+  "revision": 8,
+  "patches": [
+    {
+      "hymn_id": "CANT-068",
+      "operation": "update",
+      "fields": {
+        "categorias": [
+          "Alabanza a Dios"
+        ]
+      }
+    },
+    {
+      "hymn_id": "CANT-068",
+      "operation": "create",
+      "fields": {
+        "himnario": "Cánticos de Alabanza",
+        "numero": 68,
+        "titulo": "El Cristo Que Yo Predico",
+        "categorias": [],
+        "bloques": [
+          {
+            "tipo": "estrofa",
+            "numero": 1,
+            "texto": "Kova Ñandejara, che amõmbe'uva, ñachekane 'õi amombe'u hagua.\nOmõnguera hasyva ipuaka añare, ojoko ama ha yvytu avei."
+          },
+          {
+            "tipo": "coro",
+            "numero": null,
+            "rotulo": "CORO",
+            "texto": "Coro.\n//Ha che aguerohoryva 3x \nÑandejara tuichaha. //"
+          },
+          {
+            "tipo": "estrofa",
+            "numero": 2,
+            "texto": "Este es el Cristo\nQue yo predico\nY no me canso de predicar\nSana a los enfermos\nReprende a los demonios\nY calma la lluvia y la tempestad\n"
+          },
+          {
+            "tipo": "coro",
+            "numero": null,
+            "rotulo": "CORO",
+            "texto": "Y yo le alabaré\nY yo le alabaré\nY yo le alabaré\nDiciendo Gloria a Dios\n\nY yo le alabaré\nY yo le alabaré\nY yo le alabaré\nDiciendo Gloria a Dios"
+          }
+        ],
+        "cifra_bloques": [],
+        "tom": null,
+        "cifra_url": null,
+        "audio_url": null,
+        "audio_external_url": "https://www.facebook.com/share/v/1LnxPcFSGp/",
+        "cifra_autorizada": false,
+        "audio_autorizado": false,
+        "cifra_procedencia": {
+          "fuente": null,
+          "tipo": "desconocido",
+          "autorizado": false,
+          "notas": null
+        },
+        "audio_procedencia": {
+          "fuente": null,
+          "tipo": "desconocido",
+          "autorizado": false,
+          "notas": null
+        }
+      }
+    }
+  ]
+}
