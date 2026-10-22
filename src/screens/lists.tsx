@@ -339,7 +339,7 @@ function ListScreen({
       ) : (
         <FlatList
           data={visibleItems}
-          keyExtractor={(h) => h.id}
+          keyExtractor={(h) => `${h.id}:${h.himnario}`}
           contentContainerStyle={{
             paddingHorizontal: SPACING.lg,
             paddingTop: SPACING.sm,
@@ -352,7 +352,15 @@ function ListScreen({
           renderItem={({ item }) => (
             <HymnRow
               hymn={item}
-              onPress={() => router.push(`/hymn/${item.id}`)}
+              onPress={() =>
+                router.push({
+                  pathname: '/hymn/[id]',
+                  params: {
+                    id: item.id,
+                    view: item.himnario === 'Gloria y Triunfo' ? 'gt' : item.himnario === 'Himnos de Sión' ? 'sion' : 'cant',
+                  },
+                })
+              }
             />
           )}
           ListEmptyComponent={
@@ -394,10 +402,20 @@ function ListScreen({
 
 export function FavoritesScreen() {
   const load = useCallback(async () => {
-    const ids = await favorites.list();
+    const ids = await favorites.reconcile();
     if (ids.length === 0) return [];
     const items = await Promise.all(ids.map((id) => api.getHymn(id).catch(() => null)));
-    return items.filter(Boolean) as Hymn[];
+    const expanded: Hymn[] = [];
+    for (const item of items) {
+      if (!item) continue;
+      const collections = [item.himnario, ...(item.colecciones || []).map(ref => ref.himnario)];
+      for (const collection of new Set(collections)) {
+        const view = collection === 'Gloria y Triunfo' ? 'gt' : collection === 'Himnos de Sión' ? 'sion' : 'cant';
+        const hymn = await api.getHymnView(item.id, view);
+        if (!expanded.some(existing => existing.id === hymn.id && existing.himnario === hymn.himnario)) expanded.push(hymn);
+      }
+    }
+    return expanded;
   }, []);
   return (
     <ListScreen
